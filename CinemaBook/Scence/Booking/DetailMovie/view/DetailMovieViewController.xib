@@ -20,6 +20,7 @@
                 <outlet property="lblheight" destination="jyM-aX-o1z" id="yL0-CF-3gW"/>
                 <outlet property="poster" destination="2Vb-aw-q2K" id="h2M-JU-eth"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_video" destination="KFj-4n-Drl" id="gx9-W1-hP0"/>
                 <outlet property="viewheight" destination="8KZ-97-Oz6" id="YOK-Yh-rQT"/>
             </connections>
         </placeholder>
@@ -83,12 +84,13 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tiw-Rp-Zxv">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h3" translatesAutoresizingMaskIntoConstraints="NO" id="izj-tb-CC1">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-4n-Drl">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="200" id="eOJ-L2-Uau"/>
+                                                                <constraint firstAttribute="height" constant="200" id="zdx-JF-TjG"/>
                                                             </constraints>
-                                                        </imageView>
+                                                        </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h3" translatesAutoresizingMaskIntoConstraints="NO" id="2Vb-aw-q2K">
                                                             <rect key="frame" x="10" y="130" width="120" height="150"/>
                                                             <constraints>
@@ -247,15 +249,15 @@
                                                         <constraint firstItem="mRb-55-07Y" firstAttribute="leading" secondItem="2Vb-aw-q2K" secondAttribute="trailing" constant="8" id="9F7-a4-o4m"/>
                                                         <constraint firstItem="WgZ-cq-7VT" firstAttribute="leading" secondItem="2Vb-aw-q2K" secondAttribute="trailing" id="JvW-Vt-HcE"/>
                                                         <constraint firstItem="2Vb-aw-q2K" firstAttribute="top" secondItem="Tiw-Rp-Zxv" secondAttribute="top" constant="130" id="Muj-tm-QA8"/>
+                                                        <constraint firstItem="KFj-4n-Drl" firstAttribute="top" secondItem="Tiw-Rp-Zxv" secondAttribute="top" id="Nov-dW-ZLT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KFj-4n-Drl" secondAttribute="trailing" id="O1x-Ws-1Vt"/>
                                                         <constraint firstItem="2Vb-aw-q2K" firstAttribute="leading" secondItem="Tiw-Rp-Zxv" secondAttribute="leading" constant="10" id="S3W-K3-LAb"/>
-                                                        <constraint firstAttribute="trailing" secondItem="izj-tb-CC1" secondAttribute="trailing" id="Udq-0Y-lQn"/>
-                                                        <constraint firstItem="izj-tb-CC1" firstAttribute="top" secondItem="Tiw-Rp-Zxv" secondAttribute="top" id="Wkl-oO-fwf"/>
                                                         <constraint firstAttribute="trailing" secondItem="aM6-fs-xja" secondAttribute="trailing" id="eQp-Eq-UXS"/>
-                                                        <constraint firstItem="aM6-fs-xja" firstAttribute="top" secondItem="izj-tb-CC1" secondAttribute="bottom" id="fYc-tF-IRe"/>
+                                                        <constraint firstItem="KFj-4n-Drl" firstAttribute="leading" secondItem="Tiw-Rp-Zxv" secondAttribute="leading" id="m4M-9p-7MS"/>
                                                         <constraint firstAttribute="trailing" secondItem="WgZ-cq-7VT" secondAttribute="trailing" id="na3-r4-0kG"/>
-                                                        <constraint firstItem="izj-tb-CC1" firstAttribute="leading" secondItem="Tiw-Rp-Zxv" secondAttribute="leading" id="pgT-i3-NgY"/>
                                                         <constraint firstItem="mRb-55-07Y" firstAttribute="top" secondItem="Tiw-Rp-Zxv" secondAttribute="top" constant="171" id="rA2-aM-Ooh"/>
                                                         <constraint firstItem="WgZ-cq-7VT" firstAttribute="top" secondItem="aM6-fs-xja" secondAttribute="bottom" id="tQv-dA-Iy3"/>
+                                                        <constraint firstItem="aM6-fs-xja" firstAttribute="top" secondItem="KFj-4n-Drl" secondAttribute="bottom" id="z8O-jA-Jga"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raz-av-kwT">

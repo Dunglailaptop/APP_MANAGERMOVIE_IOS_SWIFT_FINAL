@@ -23,6 +23,7 @@ extension DetailMovieViewController {
                     self.lbl_namemovie.text = data.namemovie
                     self.lbl_author.text = data.author
                     self.lbl_text.text = data.describes
+                    self.setupvideo(url: data.videofile)
                     self.poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
                 }
             }

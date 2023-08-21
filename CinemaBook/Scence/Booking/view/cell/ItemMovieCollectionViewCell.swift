@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+
 class ItemMovieCollectionViewCell: UICollectionViewCell {
 
     
@@ -32,6 +33,8 @@ class ItemMovieCollectionViewCell: UICollectionViewCell {
         }
     }
     
+  
+    
     var viewModel:BookingViewModel? = nil{
         didSet{
             
@@ -41,4 +44,8 @@ class ItemMovieCollectionViewCell: UICollectionViewCell {
     @IBAction func btn_makeToDetailViewController(_ sender: Any) {
         viewModel?.makeToDetailMovieViewController(id: data!.movieID)
     }
+}
+
+extension ItemMovieCollectionViewCell {
+   
 }

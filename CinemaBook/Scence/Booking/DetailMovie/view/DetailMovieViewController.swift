@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DetailMovieViewController: BaseViewController {
 
     var viewModel = DetailMovieviewModel()
     var router = DetailMovieRouter()
+    
+    @IBOutlet weak var view_video: UIView!
     
     @IBOutlet weak var poster: UIImageView!
     
@@ -91,4 +94,16 @@ class DetailMovieViewController: BaseViewController {
         viewModel.makeToBookingChairViewController()
     }
     
+}
+
+extension DetailMovieViewController {
+    func setupvideo(url:String) {
+           let videoUrl = URL(string: "http://localhost:5062" + url)
+           let player = AVPlayer(url: videoUrl!)
+           let playerplay = AVPlayerLayer(player: player)
+        playerplay.frame = self.view.bounds
+        playerplay.videoGravity = .resizeAspectFill
+        self.view.layer.addSublayer(playerplay)
+        player.play()
+         }
 }
