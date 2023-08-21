@@ -32,12 +32,10 @@ class AccountViewController: BaseViewController {
 
     @IBAction func btn_actionlogout(_ sender: Any) {
     
-//        self.remove()
+
         self.logout()
-//        let view = LoginViewController();
-//        self.navigationController?.pushViewController(view, animated: true)
-//        self.logout()
-//        self.viewModel.maketoLoginViewController()
+        
+
     }
     
     func setup(){
