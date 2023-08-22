@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import youtube_ios_player_helper
 
 class DetailMovieViewController: BaseViewController {
 
@@ -35,6 +36,7 @@ class DetailMovieViewController: BaseViewController {
     
     @IBOutlet weak var lbl_text: UILabel!
     @IBOutlet weak var btn_readmore: UIButton!
+    @IBOutlet var playerview: YTPlayerView!
     
     var islabelatMaxHeight = true
     
@@ -98,12 +100,13 @@ class DetailMovieViewController: BaseViewController {
 
 extension DetailMovieViewController {
     func setupvideo(url:String) {
-           let videoUrl = URL(string: "http://localhost:5062" + url)
+           let videoUrl = URL(string:url)
            let player = AVPlayer(url: videoUrl!)
            let playerplay = AVPlayerLayer(player: player)
-        playerplay.frame = self.view.bounds
+        playerplay.frame = self.view_video.bounds
         playerplay.videoGravity = .resizeAspectFill
-        self.view.layer.addSublayer(playerplay)
+        self.view_video.layer.addSublayer(playerplay)
         player.play()
          }
+   
 }
