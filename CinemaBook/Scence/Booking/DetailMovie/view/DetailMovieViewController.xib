@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailMovieViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="btn_readmore" destination="bFc-SW-K0q" id="4dI-oC-bQy"/>
+                <outlet property="image_poster" destination="T23-uV-gF6" id="Pne-yb-Tvd"/>
                 <outlet property="lbl_author" destination="M2V-KD-2YL" id="RjJ-bi-Tib"/>
                 <outlet property="lbl_category" destination="S5m-9m-Is1" id="IOL-Qv-hLF"/>
                 <outlet property="lbl_namemovie" destination="mRb-55-07Y" id="MeH-WX-a9e"/>
@@ -86,8 +87,30 @@
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFj-4n-Drl">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h1" translatesAutoresizingMaskIntoConstraints="NO" id="T23-uV-gF6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqZ-wV-3D3">
+                                                                    <rect key="frame" x="182" y="75" width="50" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="62h-2h-d4V"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="xHL-zI-sVI"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="icon-youtube-red"/>
+                                                                    <connections>
+                                                                        <action selector="btn_makevideo:" destination="-1" eventType="touchUpInside" id="f3j-3O-ndr"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                             <constraints>
+                                                                <constraint firstItem="XqZ-wV-3D3" firstAttribute="centerY" secondItem="KFj-4n-Drl" secondAttribute="centerY" id="2vr-Ys-VKz"/>
+                                                                <constraint firstItem="T23-uV-gF6" firstAttribute="top" secondItem="KFj-4n-Drl" secondAttribute="top" id="EUa-0t-WlG"/>
+                                                                <constraint firstItem="T23-uV-gF6" firstAttribute="leading" secondItem="KFj-4n-Drl" secondAttribute="leading" id="KY6-hq-fcZ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="T23-uV-gF6" secondAttribute="bottom" id="Muj-oR-D58"/>
+                                                                <constraint firstAttribute="trailing" secondItem="T23-uV-gF6" secondAttribute="trailing" id="dky-Tk-D78"/>
+                                                                <constraint firstItem="XqZ-wV-3D3" firstAttribute="centerX" secondItem="KFj-4n-Drl" secondAttribute="centerX" id="o1P-Mn-8mK"/>
                                                                 <constraint firstAttribute="height" constant="200" id="zdx-JF-TjG"/>
                                                             </constraints>
                                                         </view>
@@ -632,11 +655,13 @@
         </view>
     </objects>
     <resources>
+        <image name="h1" width="144" height="180"/>
         <image name="h3" width="2048" height="2048"/>
         <image name="icon-calendar" width="24" height="24"/>
         <image name="icon-heart" width="24" height="24"/>
         <image name="icon-messgae" width="50" height="50"/>
         <image name="icon-time" width="50" height="50"/>
+        <image name="icon-youtube-red" width="49" height="49"/>
         <image name="icon_back" width="48" height="48"/>
     </resources>
 </document>

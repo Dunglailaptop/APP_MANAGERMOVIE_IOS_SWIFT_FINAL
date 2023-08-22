@@ -11,7 +11,7 @@ import youtube_ios_player_helper
 
 class VideoViewController: UIViewController {
 
-    
+    @IBOutlet var playerview: YTPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

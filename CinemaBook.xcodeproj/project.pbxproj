@@ -626,7 +626,6 @@
 		FE5893712A8A6D9C00058864 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				FEEF09522A9500A400756BC8 /* videoView */,
 				FE5893732A8A6DD600058864 /* DetailMovieViewController.swift */,
 				FE5893742A8A6DD600058864 /* DetailMovieViewController.xib */,
 			);
@@ -880,6 +879,7 @@
 		FEAC96C52A5A561700B49C80 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
+				FEEF09522A9500A400756BC8 /* videoView */,
 				FE53B8122A7FE14F00976628 /* Booking */,
 				FE4FFD952A77F15E00983304 /* BaseController */,
 				FE5096502A7652E600F5A457 /* SplachScreen */,

@@ -29,7 +29,7 @@ class ItemMovieCollectionViewCell: UICollectionViewCell {
         didSet {
             view_avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
             lbl_name_movie.text = data?.namemovie
-            lbl_timeall.text = String(data!.timeall)
+        
         }
     }
     

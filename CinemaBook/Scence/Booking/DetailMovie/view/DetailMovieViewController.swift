@@ -33,10 +33,12 @@ class DetailMovieViewController: BaseViewController {
     
     @IBOutlet weak var lblheight: NSLayoutConstraint!
     
+    @IBOutlet weak var image_poster: UIImageView!
     
     @IBOutlet weak var lbl_text: UILabel!
     @IBOutlet weak var btn_readmore: UIButton!
-    @IBOutlet var playerview: YTPlayerView!
+    
+   
     
     var islabelatMaxHeight = true
     
@@ -96,6 +98,10 @@ class DetailMovieViewController: BaseViewController {
         viewModel.makeToBookingChairViewController()
     }
     
+    @IBAction func btn_makevideo(_ sender: Any) {
+        let viewvideo = VideoViewController()
+            self.navigationController?.pushViewController(viewvideo, animated: true)
+    }
 }
 
 extension DetailMovieViewController {

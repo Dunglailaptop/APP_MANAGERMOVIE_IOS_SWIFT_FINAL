@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="playerview" destination="kmP-qA-C4d" id="crL-dY-rUU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,7 +46,7 @@
                         <constraint firstItem="OrO-dj-Id7" firstAttribute="centerX" secondItem="bAl-Lg-ggi" secondAttribute="centerX" id="udk-qH-SFu"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-qA-C4d">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-qA-C4d" customClass="YTPlayerView">
                     <rect key="frame" x="0.0" y="94" width="414" height="200"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
