@@ -36,13 +36,28 @@
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGw-ym-1mU">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Nl8-f6-9rT"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="btn_makePopToViewController:" destination="-1" eventType="touchUpInside" id="pLn-jD-cBl"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="3iF-qC-SJk"/>
                         <constraint firstItem="OrO-dj-Id7" firstAttribute="centerY" secondItem="bAl-Lg-ggi" secondAttribute="centerY" id="56b-By-sr7"/>
+                        <constraint firstAttribute="bottom" secondItem="FGw-ym-1mU" secondAttribute="bottom" id="F3c-L3-kkU"/>
                         <constraint firstItem="JWj-7p-TXn" firstAttribute="centerY" secondItem="bAl-Lg-ggi" secondAttribute="centerY" id="Frh-bX-7V8"/>
+                        <constraint firstItem="FGw-ym-1mU" firstAttribute="leading" secondItem="bAl-Lg-ggi" secondAttribute="leading" id="MdY-rF-RFs"/>
                         <constraint firstItem="JWj-7p-TXn" firstAttribute="leading" secondItem="bAl-Lg-ggi" secondAttribute="leading" constant="20" id="R1H-UN-edJ"/>
+                        <constraint firstItem="FGw-ym-1mU" firstAttribute="top" secondItem="bAl-Lg-ggi" secondAttribute="top" id="RNZ-Cw-jto"/>
                         <constraint firstItem="OrO-dj-Id7" firstAttribute="centerX" secondItem="bAl-Lg-ggi" secondAttribute="centerX" id="udk-qH-SFu"/>
                     </constraints>
                 </view>

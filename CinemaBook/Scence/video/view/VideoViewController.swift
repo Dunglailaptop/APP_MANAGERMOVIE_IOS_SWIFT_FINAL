@@ -10,11 +10,15 @@ import UIKit
 import youtube_ios_player_helper
 
 class VideoViewController: UIViewController {
+    
+    var viewModel = videoViewModel()
+    var router = videoRouter()
 
     @IBOutlet var playerview: YTPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.bind(view: self,router: router)
       self.setupVideoyoutube(url: "TcMBFSGVi1c")
         // Do any additional setup after loading the view.
     }
@@ -23,4 +27,7 @@ class VideoViewController: UIViewController {
            playerview.load(withVideoId: url)
        }
 
+    @IBAction func btn_makePopToViewController(_ sender: Any) {
+        viewModel.makePopToViewController()
+    }
 }
