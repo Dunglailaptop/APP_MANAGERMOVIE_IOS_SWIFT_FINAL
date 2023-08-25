@@ -10,9 +10,10 @@ import UIKit
 
 class ItemChairCollectionViewCell: UICollectionViewCell {
 
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      
     }
 
 }
