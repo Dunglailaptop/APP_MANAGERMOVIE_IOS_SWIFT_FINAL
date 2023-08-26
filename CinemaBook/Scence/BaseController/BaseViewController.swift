@@ -36,7 +36,7 @@ class BaseViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
                 
-        view.backgroundColor = ColorUtils.white()
+        view.backgroundColor = .white
         
         setNeedsStatusBarAppearanceUpdate()
         

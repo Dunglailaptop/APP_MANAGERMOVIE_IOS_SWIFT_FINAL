@@ -298,7 +298,7 @@ class ColorUtils{
         return hexStringToUIColor(hex: "FFFFFF")
     }
     static func gray_6()->UIColor{
-        return hexStringToUIColor(hex: "F2F2F7")
+        return hexStringToUIColor(hex: "F5F6FA")
     }
     
     static func gray_200() -> UIColor{

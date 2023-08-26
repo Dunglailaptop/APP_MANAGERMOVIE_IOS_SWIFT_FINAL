@@ -80,8 +80,10 @@ class CustomTabBarViewController: UITabBarController {
             alpha: 1.0 // The alpha value is set to 1.0 (fully opaque) by default
         )
         tabBar.isHidden = false
-        tabBar.barTintColor = tabBarColor
+        tabBar.barTintColor = .blue
+        tabBar.layer.shadowRadius = 5.0
         tabBar.layer.cornerRadius = 20
+        
         tabBar.layer.masksToBounds = true
         customTabBar.translatesAutoresizingMaskIntoConstraints = false
         
