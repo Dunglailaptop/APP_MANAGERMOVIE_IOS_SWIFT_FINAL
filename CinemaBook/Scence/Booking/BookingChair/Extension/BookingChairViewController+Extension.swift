@@ -15,15 +15,22 @@ extension BookingChairViewController {
     static let rxbag = DisposeBag()
     
     func resgisterCollection(){
-        let bannertableviewcell = UINib(nibName: "ItemChairCollectionViewCell", bundle: .main)
-        view_collection.register(bannertableviewcell, forCellWithReuseIdentifier: "ItemChairCollectionViewCell")
+        let movietableviewcell = UINib(nibName: "headerTableViewCell", bundle: .main)
+        tableView.register(movietableviewcell, forCellReuseIdentifier: "headerTableViewCell")
+        let ListchairBooking = UINib(nibName: "ListChairBookiingTableViewCell", bundle: .main)
+        tableView.register(ListchairBooking, forCellReuseIdentifier: "ListChairBookiingTableViewCell")
+        tableView.rx.setDelegate(self).disposed(by:rxbag)
+       
+        
+        
+        
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
-        self.scroll_view_zoom.addGestureRecognizer(pinchGesture)
+        self.tableView.addGestureRecognizer(pinchGesture)
 
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
-        self.scroll_view_zoom.addGestureRecognizer(panGesture)
-        
-      setupCollectionView(rows: 20, columns: 20,itemSize: 50)
+        self.tableView.addGestureRecognizer(panGesture)
+//
+//      setupCollectionView(rows: 20, columns: 20,itemSize: 50)
     }
     
 //    @objc private func didPinch(_ gesture: UIPinchGestureRecognizer) {
@@ -41,9 +48,48 @@ extension BookingChairViewController {
 //        }
 //    }
 
- @objc private func didPinch(_ gesture: UIPinchGestureRecognizer) {
+// @objc private func didPinch(_ gesture: UIPinchGestureRecognizer) {
+//        if gesture.state == .changed {
+//            let currentScale = tableView.transform.a
+//            let newScale = currentScale * gesture.scale
+//
+//            // Set a minimum and maximum scale to limit zooming
+//            let minScale: CGFloat = 0.5
+//            let maxScale: CGFloat = 3.0
+//            let scaledValue = min(max(newScale, minScale), maxScale)
+//
+//            tableView.transform = CGAffineTransform(scaleX: scaledValue, y: scaledValue)
+//
+//            // Calculate the new width and height based on the scaled value
+//            let newWidth = originalCollectionViewSize.width * scaledValue
+//            let newHeight = originalCollectionViewSize.height * scaledValue
+//
+//            // Calculate the x and y translation needed to keep it centered
+//            let xOffset = (originalCollectionViewSize.width - newWidth) / 2.0
+//            let yOffset = (originalCollectionViewSize.height - newHeight) / 2.0
+//
+//            // Update the frame and transform of the UICollectionView
+//            tableView.frame = CGRect(x: scroll_view_zoom.frame.origin.x + xOffset, y: scroll_view_zoom.frame.origin.y + yOffset, width: newWidth, height: newHeight)
+//
+//            gesture.scale = 1.0
+//        }
+//    }
+//
+//
+//
+//
+//
+//    @objc private func didPan(_ gesture: UIPanGestureRecognizer) {
+//        if gesture.state == .changed {
+//            let translation = gesture.translation(in: tableView)
+//            tableView.transform = tableView.transform.translatedBy(x: translation.x, y: translation.y)
+//            gesture.setTranslation(CGPoint.zero, in: tableView)
+//        }
+//    }
+    
+    @objc private func didPinch(_ gesture: UIPinchGestureRecognizer) {
         if gesture.state == .changed {
-            let currentScale = view_collection.transform.a
+            let currentScale = tableView.transform.a
             let newScale = currentScale * gesture.scale
 
             // Set a minimum and maximum scale to limit zooming
@@ -51,34 +97,21 @@ extension BookingChairViewController {
             let maxScale: CGFloat = 3.0
             let scaledValue = min(max(newScale, minScale), maxScale)
 
-            view_collection.transform = CGAffineTransform(scaleX: scaledValue, y: scaledValue)
+            tableView.transform = CGAffineTransform(scaleX: scaledValue, y: scaledValue)
             
-            // Calculate the new width and height based on the scaled value
-            let newWidth = originalCollectionViewSize.width * scaledValue
-            let newHeight = originalCollectionViewSize.height * scaledValue
-            
-            // Calculate the x and y translation needed to keep it centered
-            let xOffset = (originalCollectionViewSize.width - newWidth) / 2.0
-            let yOffset = (originalCollectionViewSize.height - newHeight) / 2.0
-            
-            // Update the frame and transform of the UICollectionView
-            view_collection.frame = CGRect(x: scroll_view_zoom.frame.origin.x + xOffset, y: scroll_view_zoom.frame.origin.y + yOffset, width: newWidth, height: newHeight)
-            
+            // Reset the gesture's scale to avoid compounding the scaling effect
             gesture.scale = 1.0
         }
     }
-    
-
-
-    
 
     @objc private func didPan(_ gesture: UIPanGestureRecognizer) {
         if gesture.state == .changed {
-            let translation = gesture.translation(in: view_collection)
-            view_collection.transform = view_collection.transform.translatedBy(x: translation.x, y: translation.y)
-            gesture.setTranslation(CGPoint.zero, in: view_collection)
+            let translation = gesture.translation(in: tableView)
+            tableView.transform = tableView.transform.translatedBy(x: translation.x, y: translation.y)
+            gesture.setTranslation(CGPoint.zero, in: tableView)
         }
     }
+
     
     
       func setupCollectionView(rows: Int, columns: Int, itemSize: CGFloat) {
@@ -101,7 +134,7 @@ extension BookingChairViewController {
           // Cập nhật kích thước của UICollectionView và contentSize của scrollView
           view_collection.frame.size = CGSize(width: collectionViewWidth, height: collectionViewHeight)
         
-        view_collection.backgroundColor = .clear
+        view_collection.backgroundColor = .gray
           scroll_view_zoom.contentSize = CGSize(width: collectionViewWidth, height: collectionViewHeight)
 
           // Đảm bảo scrollView có thể cuộn ngang
@@ -142,12 +175,53 @@ extension BookingChairViewController {
 //
 //    }
     
+//    func binđDataTableCollectionView(){
+//        viewModel.dataArray.bind(to: view_collection.rx.items(cellIdentifier: "ItemChairCollectionViewCell", cellType: ItemChairCollectionViewCell.self)) { (index, element, cell) in
+//
+//
+//
+//
+//            }.disposed(by: BookingChairViewController.rxbag)
+//
+//    }
     func binđDataTableCollectionView(){
-        viewModel.dataArray.bind(to: view_collection.rx.items(cellIdentifier: "ItemChairCollectionViewCell", cellType: ItemChairCollectionViewCell.self)) { (index, element, cell) in
-            
-            
-            
-            
-            }.disposed(by: BookingChairViewController.rxbag)
-    }
+             
+        viewModel.listtable.bind(to: tableView.rx.items)
+                     { [self] (table, index, employee) -> UITableViewCell in
+                         let indexPath = IndexPath(row: index, section: 0)
+                         switch index {
+                         case 0:
+                          let cell = self.tableView.dequeueReusableCell(withIdentifier: "headerTableViewCell", for: indexPath) as! headerTableViewCell
+                            
+                             return cell
+                         case 1:
+                           let cell = self.tableView.dequeueReusableCell(withIdentifier: "ListChairBookiingTableViewCell", for: indexPath) as! ListChairBookiingTableViewCell
+                                cell.viewModel = self.viewModel
+                             
+                             return cell
+                         default:
+                           let cell = self.tableView.dequeueReusableCell(withIdentifier: "ListChairBookiingTableViewCell", for: indexPath) as! ListChairBookiingTableViewCell
+             
+                            
+                             return cell
+                         }
+             
+             
+                         }.disposed(by: rxbag)
+                 
+            }
+}
+
+extension BookingChairViewController: UITableViewDelegate {
+       func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            switch indexPath.row {
+            case 0:
+                return 100
+            case 1:
+                return 800
+            default:
+                return 800
+            }
+    
+        }
 }

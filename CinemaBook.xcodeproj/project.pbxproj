@@ -38,6 +38,10 @@
 		FE440CBA2A5A9ADA00E12C8B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE971B482A5A7EEF00FD6637 /* LoginViewModel.swift */; };
 		FE4FFD972A77F16F00983304 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FFD962A77F16F00983304 /* BaseViewController.swift */; };
 		FE4FFD992A77F36800983304 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FFD982A77F36800983304 /* BaseViewModel.swift */; };
+		FE503B3D2A9A09C100CA9F10 /* headerCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE503B3B2A9A09C100CA9F10 /* headerCollectionReusableView.swift */; };
+		FE503B3E2A9A09C100CA9F10 /* headerCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE503B3C2A9A09C100CA9F10 /* headerCollectionReusableView.xib */; };
+		FE503B412A9A0C5700CA9F10 /* headerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE503B3F2A9A0C5700CA9F10 /* headerCollectionViewCell.swift */; };
+		FE503B422A9A0C5700CA9F10 /* headerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE503B402A9A0C5700CA9F10 /* headerCollectionViewCell.xib */; };
 		FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50964E2A764FDA00F5A457 /* SceneDelegate.swift */; };
 		FE5096562A76534800F5A457 /* SplachScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5096542A76534800F5A457 /* SplachScreenViewController.swift */; };
 		FE5096572A76534800F5A457 /* SplachScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5096552A76534800F5A457 /* SplachScreenViewController.xib */; };
@@ -51,6 +55,10 @@
 		FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE519E742A88CB9A007E131E /* BookingTicketViewController.xib */; };
 		FE519E782A88CBAD007E131E /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE519E772A88CBAD007E131E /* BookingViewModel.swift */; };
 		FE519E7A2A88CC01007E131E /* BookingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE519E792A88CC01007E131E /* BookingRouter.swift */; };
+		FE51B88E2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51B88C2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.swift */; };
+		FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE51B88D2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib */; };
+		FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51B8902A9A5DA400A1495D /* headerTableViewCell.swift */; };
+		FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE51B8912A9A5DA400A1495D /* headerTableViewCell.xib */; };
 		FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5276E52A8D067300252843 /* BookingChairViewController.swift */; };
 		FE5276E82A8D067300252843 /* BookingChairViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5276E62A8D067300252843 /* BookingChairViewController.xib */; };
 		FE5276EA2A8D07D900252843 /* BookingChairRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5276E92A8D07D900252843 /* BookingChairRouter.swift */; };
@@ -82,6 +90,8 @@
 		FE6E0A402A77FED200DC628F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E0A3E2A77FED200DC628F /* LoginViewController.xib */; };
 		FE6E5CB72A7A985E00467358 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6E5CB52A7A985E00467358 /* HomeViewController.swift */; };
 		FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E5CB62A7A985E00467358 /* HomeViewController.xib */; };
+		FE6EE71B2A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6EE7192A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift */; };
+		FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6EE71A2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib */; };
 		FE745FF32A7EAFF60091C0FA /* TicketViewController+Extension+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE745FF22A7EAFF60091C0FA /* TicketViewController+Extension+API.swift */; };
 		FE745FF52A7EB00E0091C0FA /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE745FF42A7EB00E0091C0FA /* TicketViewModel.swift */; };
 		FE745FF72A7EB0210091C0FA /* TicketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE745FF62A7EB0210091C0FA /* TicketRouter.swift */; };
@@ -169,6 +179,10 @@
 		FE4137E92A6398820038E7B6 /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
 		FE4FFD962A77F16F00983304 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FE4FFD982A77F36800983304 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		FE503B3B2A9A09C100CA9F10 /* headerCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCollectionReusableView.swift; sourceTree = "<group>"; };
+		FE503B3C2A9A09C100CA9F10 /* headerCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerCollectionReusableView.xib; sourceTree = "<group>"; };
+		FE503B3F2A9A0C5700CA9F10 /* headerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE503B402A9A0C5700CA9F10 /* headerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE50964E2A764FDA00F5A457 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FE5096542A76534800F5A457 /* SplachScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplachScreenViewController.swift; sourceTree = "<group>"; };
 		FE5096552A76534800F5A457 /* SplachScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplachScreenViewController.xib; sourceTree = "<group>"; };
@@ -182,6 +196,10 @@
 		FE519E742A88CB9A007E131E /* BookingTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingTicketViewController.xib; sourceTree = "<group>"; };
 		FE519E772A88CBAD007E131E /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		FE519E792A88CC01007E131E /* BookingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingRouter.swift; sourceTree = "<group>"; };
+		FE51B88C2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListChairBookiingTableViewCell.swift; sourceTree = "<group>"; };
+		FE51B88D2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListChairBookiingTableViewCell.xib; sourceTree = "<group>"; };
+		FE51B8902A9A5DA400A1495D /* headerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
+		FE51B8912A9A5DA400A1495D /* headerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerTableViewCell.xib; sourceTree = "<group>"; };
 		FE5276E52A8D067300252843 /* BookingChairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingChairViewController.swift; sourceTree = "<group>"; };
 		FE5276E62A8D067300252843 /* BookingChairViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingChairViewController.xib; sourceTree = "<group>"; };
 		FE5276E92A8D07D900252843 /* BookingChairRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingChairRouter.swift; sourceTree = "<group>"; };
@@ -213,6 +231,8 @@
 		FE6E0A3E2A77FED200DC628F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		FE6E5CB52A7A985E00467358 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FE6E5CB62A7A985E00467358 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FE6EE7192A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderChairCollectionReusableView.swift; sourceTree = "<group>"; };
+		FE6EE71A2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderChairCollectionReusableView.xib; sourceTree = "<group>"; };
 		FE745FF22A7EAFF60091C0FA /* TicketViewController+Extension+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TicketViewController+Extension+API.swift"; sourceTree = "<group>"; };
 		FE745FF42A7EB00E0091C0FA /* TicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
 		FE745FF62A7EB0210091C0FA /* TicketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRouter.swift; sourceTree = "<group>"; };
@@ -575,6 +595,12 @@
 			children = (
 				FE5276F12A8D115600252843 /* ItemChairCollectionViewCell.swift */,
 				FE5276F22A8D115600252843 /* ItemChairCollectionViewCell.xib */,
+				FE6EE7192A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift */,
+				FE6EE71A2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib */,
+				FE51B88C2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.swift */,
+				FE51B88D2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib */,
+				FE51B8902A9A5DA400A1495D /* headerTableViewCell.swift */,
+				FE51B8912A9A5DA400A1495D /* headerTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -832,6 +858,10 @@
 				FE6A8D7E2A6422F800BEC7BE /* MovieDetailTableViewCell.xib */,
 				FE6A8D812A642CDF00BEC7BE /* FlimsCollectionViewCell.swift */,
 				FE6A8D822A642CDF00BEC7BE /* FlimsCollectionViewCell.xib */,
+				FE503B3B2A9A09C100CA9F10 /* headerCollectionReusableView.swift */,
+				FE503B3C2A9A09C100CA9F10 /* headerCollectionReusableView.xib */,
+				FE503B3F2A9A0C5700CA9F10 /* headerCollectionViewCell.swift */,
+				FE503B402A9A0C5700CA9F10 /* headerCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1134,11 +1164,14 @@
 				FE5276E82A8D067300252843 /* BookingChairViewController.xib in Resources */,
 				FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
+				FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */,
 				FE6A8D802A6422F800BEC7BE /* MovieDetailTableViewCell.xib in Resources */,
 				FE7BA9952A5AFE2700344EFB /* AccountViewController.xib in Resources */,
 				FE6E0A402A77FED200DC628F /* LoginViewController.xib in Resources */,
+				FE503B3E2A9A09C100CA9F10 /* headerCollectionReusableView.xib in Resources */,
 				FE7BA98D2A5AFDF300344EFB /* MapViewController.xib in Resources */,
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
+				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
 				FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */,
 				FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */,
 				FE7BA9892A5AFDE500344EFB /* SalesViewController.xib in Resources */,
@@ -1149,7 +1182,9 @@
 				FE7460062A7EB8B00091C0FA /* MovieItemTableViewCell.xib in Resources */,
 				FE5276F42A8D115600252843 /* ItemChairCollectionViewCell.xib in Resources */,
 				FE6A8D842A642CDF00BEC7BE /* FlimsCollectionViewCell.xib in Resources */,
+				FE503B422A9A0C5700CA9F10 /* headerCollectionViewCell.xib in Resources */,
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
+				FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */,
 				FE7BA9A02A5B038A00344EFB /* MovieTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1218,6 +1253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE58937A2A8A6FF700058864 /* DetailMovieviewModel.swift in Sources */,
+				FE51B88E2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.swift in Sources */,
 				FE5DFFA32A76A5D200E2E345 /* CustomTabBar.swift in Sources */,
 				FE6A8D832A642CDF00BEC7BE /* FlimsCollectionViewCell.swift in Sources */,
 				FE4137EA2A6398820038E7B6 /* BannerTableViewCell.swift in Sources */,
@@ -1249,10 +1285,12 @@
 				FE33F3982A6CC77500A396A1 /* JHProgressHUD.swift in Sources */,
 				FE5893752A8A6DD600058864 /* DetailMovieViewController.swift in Sources */,
 				FE5096592A76538A00F5A457 /* SplachScreenRouter.swift in Sources */,
+				FE6EE71B2A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift in Sources */,
 				FE7BA9882A5AFDE500344EFB /* SalesViewController.swift in Sources */,
 				FEEF09552A9500C900756BC8 /* VideoViewController.swift in Sources */,
 				FE7BA98C2A5AFDF300344EFB /* MapViewController.swift in Sources */,
 				FED6A4552A761003000E1BCD /* Config.swift in Sources */,
+				FE503B3D2A9A09C100CA9F10 /* headerCollectionReusableView.swift in Sources */,
 				FE5276EA2A8D07D900252843 /* BookingChairRouter.swift in Sources */,
 				FE33F38F2A6CC76B00A396A1 /* Toast.swift in Sources */,
 				FE639D5C2A96422E003F618F /* videoViewModel.swift in Sources */,
@@ -1286,6 +1324,7 @@
 				FE519E752A88CB9A007E131E /* BookingTicketViewController.swift in Sources */,
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
+				FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */,
 				FE745FF52A7EB00E0091C0FA /* TicketViewModel.swift in Sources */,
 				FE50965B2A76544400F5A457 /* MenuRouter.swift in Sources */,
 				FE33F3972A6CC77500A396A1 /* LTActivityIndicatorView.swift in Sources */,
@@ -1296,6 +1335,7 @@
 				FE745FF72A7EB0210091C0FA /* TicketRouter.swift in Sources */,
 				FE74CE132A91C46F0069259C /* Users.swift in Sources */,
 				FE4FFD992A77F36800983304 /* BaseViewModel.swift in Sources */,
+				FE503B412A9A0C5700CA9F10 /* headerCollectionViewCell.swift in Sources */,
 				FE440CBA2A5A9ADA00E12C8B /* LoginViewModel.swift in Sources */,
 				FE5893782A8A6FDC00058864 /* DetailMovieRouter.swift in Sources */,
 				FE6A8D7F2A6422F800BEC7BE /* MovieDetailTableViewCell.swift in Sources */,

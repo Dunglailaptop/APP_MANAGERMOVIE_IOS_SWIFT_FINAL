@@ -17,8 +17,11 @@ class BookingChairViewController: BaseViewController {
     var safeAreaInsets: UIEdgeInsets = .zero
      var originalCollectionViewSize: CGSize = .zero
  
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var view_collection: UICollectionView!
     
+    @IBOutlet weak var view_of_collectionview: UIView!
     @IBOutlet weak var view_of_collection: UIView!
     
     @IBOutlet weak var scroll_view_zoom: UIScrollView!
@@ -26,15 +29,15 @@ class BookingChairViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self,router: router)
-//        scroll_view_zoom.delegate = self
-        originalCollectionViewSize = view_collection.frame.size
-        view_collection.contentSize = CGSize(width: 100, height: 100)
-        NSLayoutConstraint.activate([
-            view_collection.topAnchor.constraint(equalTo: scroll_view_zoom.topAnchor, constant: 150),
-                 view_collection.leadingAnchor.constraint(equalTo: scroll_view_zoom.leadingAnchor,constant: 150),
-                 view_collection.trailingAnchor.constraint(equalTo: scroll_view_zoom.trailingAnchor,constant: 150),
-                 view_collection.bottomAnchor.constraint(equalTo: scroll_view_zoom.bottomAnchor,constant: 150)
-             ])
+        scroll_view_zoom.delegate = self
+//        originalCollectionViewSize = view_collection.frame.size
+//        view_collection.contentSize = CGSize(width: 100, height: 100)
+//        NSLayoutConstraint.activate([
+//            view_collection.topAnchor.constraint(equalTo: scroll_view_zoom.topAnchor, constant: 0),
+//                 view_collection.leadingAnchor.constraint(equalTo: scroll_view_zoom.leadingAnchor,constant: 0),
+//                 view_collection.trailingAnchor.constraint(equalTo: scroll_view_zoom.trailingAnchor,constant: 0),
+//                 view_collection.bottomAnchor.constraint(equalTo: scroll_view_zoom.bottomAnchor,constant: 0)
+//             ])
         
       resgisterCollection()
         binđDataTableCollectionView()
@@ -47,9 +50,9 @@ class BookingChairViewController: BaseViewController {
         viewModel.makePopToViewController()
     }
 }
-//extension BookingChairViewController: UIScrollViewDelegate {
-//    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-//        return view_collection
-//    }
-//
-//}
+extension BookingChairViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return view_collection
+    }
+
+}
