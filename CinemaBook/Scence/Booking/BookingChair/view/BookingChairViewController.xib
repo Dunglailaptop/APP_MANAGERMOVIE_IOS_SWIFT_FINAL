@@ -160,14 +160,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kjd-lg-jSe">
-                                            <rect key="frame" x="-193" y="-56" width="800" height="800"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <rect key="frame" x="-193" y="-106" width="800" height="900"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="800" id="2HG-i9-K4P"/>
-                                                <constraint firstAttribute="height" constant="800" id="8nX-KM-Xs3"/>
+                                                <constraint firstAttribute="height" constant="900" id="8nX-KM-Xs3"/>
                                             </constraints>
                                         </tableView>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Kjd-lg-jSe" firstAttribute="centerX" secondItem="PUK-IX-Q9E" secondAttribute="centerX" id="5FR-yJ-9Pt"/>
                                         <constraint firstItem="Kjd-lg-jSe" firstAttribute="centerX" secondItem="kdR-wv-YPR" secondAttribute="centerX" id="9RI-Fr-RAE"/>
@@ -178,7 +179,7 @@
                                     <viewLayoutGuide key="frameLayoutGuide" id="6ap-WM-ZDC"/>
                                 </scrollView>
                             </subviews>
-                            <color key="backgroundColor" red="0.16078431372549018" green="0.16078431372549018" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="kdR-wv-YPR" firstAttribute="leading" secondItem="Ynr-MH-DBd" secondAttribute="leading" id="6r8-FK-P6D"/>
                                 <constraint firstAttribute="bottom" secondItem="kdR-wv-YPR" secondAttribute="bottom" id="ASz-4y-11p"/>

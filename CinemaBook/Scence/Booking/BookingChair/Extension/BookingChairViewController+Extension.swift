@@ -19,8 +19,9 @@ extension BookingChairViewController {
         tableView.register(movietableviewcell, forCellReuseIdentifier: "headerTableViewCell")
         let ListchairBooking = UINib(nibName: "ListChairBookiingTableViewCell", bundle: .main)
         tableView.register(ListchairBooking, forCellReuseIdentifier: "ListChairBookiingTableViewCell")
-        tableView.rx.setDelegate(self).disposed(by:rxbag)
-       
+       let ListCategoryChair = UINib(nibName: "ListCategoryChairTableViewCell", bundle: .main)
+             tableView.register(ListCategoryChair, forCellReuseIdentifier: "ListCategoryChairTableViewCell")
+              tableView.rx.setDelegate(self).disposed(by:rxbag)
         
         
         
@@ -192,7 +193,7 @@ extension BookingChairViewController {
                          switch index {
                          case 0:
                           let cell = self.tableView.dequeueReusableCell(withIdentifier: "headerTableViewCell", for: indexPath) as! headerTableViewCell
-                            
+                               cell.viewModel = self.viewModel
                              return cell
                          case 1:
                            let cell = self.tableView.dequeueReusableCell(withIdentifier: "ListChairBookiingTableViewCell", for: indexPath) as! ListChairBookiingTableViewCell
@@ -200,8 +201,9 @@ extension BookingChairViewController {
                              
                              return cell
                          default:
-                           let cell = self.tableView.dequeueReusableCell(withIdentifier: "ListChairBookiingTableViewCell", for: indexPath) as! ListChairBookiingTableViewCell
-             
+                            let cell = self.tableView.dequeueReusableCell(withIdentifier: "headerTableViewCell", for: indexPath) as! headerTableViewCell
+                                                     
+                                                    
                             
                              return cell
                          }
@@ -220,7 +222,7 @@ extension BookingChairViewController: UITableViewDelegate {
             case 1:
                 return 800
             default:
-                return 800
+                return 100
             }
     
         }

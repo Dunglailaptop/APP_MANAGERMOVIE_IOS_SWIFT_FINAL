@@ -29,6 +29,7 @@ class BookingChairViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self,router: router)
+        view_of_collectionview.backgroundColor = ColorUtils.backgroudcolor()
         scroll_view_zoom.delegate = self
 //        originalCollectionViewSize = view_collection.frame.size
 //        view_collection.contentSize = CGSize(width: 100, height: 100)

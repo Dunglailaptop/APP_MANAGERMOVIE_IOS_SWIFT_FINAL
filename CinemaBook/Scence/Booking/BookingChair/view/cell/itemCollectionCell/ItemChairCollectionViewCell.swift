@@ -11,9 +11,17 @@ import UIKit
 class ItemChairCollectionViewCell: UICollectionViewCell {
 
 
+    @IBOutlet weak var lbl_numberChair: UILabel!
+    var number:Int = 0 {
+        didSet {
+             lbl_numberChair.text = String(number)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-      
+       
     }
 
+    
 }
