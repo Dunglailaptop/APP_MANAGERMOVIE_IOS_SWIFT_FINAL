@@ -31,7 +31,7 @@ class  DetailMovieRouter
     }
     
     func navigationMakeToBookingChairViewController(){
-        let bookingchairViewController = BookingChairRouter().viewController
+        let bookingchairViewController = TimeShowRouter().viewController
         sourceView?.navigationController?.pushViewController(bookingchairViewController, animated: true)
     }
 }

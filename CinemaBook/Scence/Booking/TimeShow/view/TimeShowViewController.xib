@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeShowViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="T5y-Yu-QqE" id="YoT-D4-WsM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -93,12 +94,20 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T5y-Yu-QqE">
+                            <rect key="frame" x="0.0" y="50" width="414" height="768"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="4pd-o5-JZf" firstAttribute="top" secondItem="CfD-mt-fKj" secondAttribute="top" id="NUH-mj-wPt"/>
                         <constraint firstItem="4pd-o5-JZf" firstAttribute="leading" secondItem="CfD-mt-fKj" secondAttribute="leading" id="Pqh-eO-JuO"/>
                         <constraint firstAttribute="trailing" secondItem="4pd-o5-JZf" secondAttribute="trailing" id="XKK-sS-ajh"/>
+                        <constraint firstItem="T5y-Yu-QqE" firstAttribute="leading" secondItem="CfD-mt-fKj" secondAttribute="leading" id="s8l-sY-hY7"/>
+                        <constraint firstAttribute="trailing" secondItem="T5y-Yu-QqE" secondAttribute="trailing" id="tDT-8l-F7E"/>
+                        <constraint firstAttribute="bottom" secondItem="T5y-Yu-QqE" secondAttribute="bottom" id="u1J-gk-HFp"/>
+                        <constraint firstItem="T5y-Yu-QqE" firstAttribute="top" secondItem="4pd-o5-JZf" secondAttribute="bottom" id="z9j-uN-aZ1"/>
                     </constraints>
                 </view>
             </subviews>
@@ -110,7 +119,7 @@
                 <constraint firstItem="CfD-mt-fKj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ntO-C4-ocI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="132" y="89"/>
+            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
         </view>
     </objects>
     <resources>

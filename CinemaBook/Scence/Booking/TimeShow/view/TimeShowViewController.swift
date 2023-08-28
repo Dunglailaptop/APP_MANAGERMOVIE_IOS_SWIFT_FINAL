@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import QVRWeekView
+import FSCalendar
 
 class TimeShowViewController: BaseViewController {
 
+  var viewModel = TimeShowViewModel()
+  var router = TimeShowRouter()
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        viewModel.bind(view: self, router: router)
+          register()
+        bindingtableviewcell()
+      
     }
-
+    
 
     
 

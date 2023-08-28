@@ -20,6 +20,6 @@ pod 'SnapKit'
 pod 'SKPhotoBrowser'
 pod 'Kingfisher', '5.15.0'
 pod 'youtube-ios-player-helper'
-
-
+pod "QVRWeekView"
+pod 'FSCalendar'
 end
