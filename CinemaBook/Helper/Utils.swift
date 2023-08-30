@@ -27,4 +27,15 @@ class Utils: NSObject {
         dLog(("http://localhost:5062/" + string).encodeUrl()!)
         return ("http://localhost:5062/" + string).encodeUrl()!
     }
+    static func getCurrentDateString() -> String{
+           let date = Date()
+           let calendar = Calendar.current
+           let components = calendar.dateComponents([.year, .month, .day], from: date)
+           
+           let year:Int =  components.year ?? 2022
+           let month:Int = components.month ?? 01
+           let day:Int = components.day ?? 01
+           
+           return String(format: "%02d/%02d/%d", day, month, year)
+       }
 }

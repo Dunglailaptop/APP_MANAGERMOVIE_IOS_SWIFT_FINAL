@@ -121,6 +121,8 @@
 		FE7BA9952A5AFE2700344EFB /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7BA9932A5AFE2700344EFB /* AccountViewController.xib */; };
 		FE7BA99F2A5B038A00344EFB /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7BA99D2A5B038A00344EFB /* MovieTableViewCell.swift */; };
 		FE7BA9A02A5B038A00344EFB /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7BA99E2A5B038A00344EFB /* MovieTableViewCell.xib */; };
+		FE7D516F2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D516D2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift */; };
+		FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7D516E2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib */; };
 		FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97D89D2A76C2B600D223C9 /* ViewExtension.swift */; };
 		FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97D89F2A76C2C900D223C9 /* UIView+ToastKit.swift */; };
 		FE97D8A22A76C7AD00D223C9 /* ExUIViewController(1).swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97D8A12A76C7AD00D223C9 /* ExUIViewController(1).swift */; };
@@ -141,6 +143,8 @@
 		FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5CA572A62F62D00299EA6 /* HomeViewModel.swift */; };
 		FEEF09552A9500C900756BC8 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF09532A9500C900756BC8 /* VideoViewController.swift */; };
 		FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEEF09542A9500C900756BC8 /* VideoViewController.xib */; };
+		FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBFB6E2A9F75BA00A85879 /* itemTimeCollectionViewCell.swift */; };
+		FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFBFB6F2A9F75BA00A85879 /* itemTimeCollectionViewCell.xib */; };
 		FEFCF4392A76B7E90023B4D1 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCF4382A76B7E90023B4D1 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -277,6 +281,8 @@
 		FE7BA9932A5AFE2700344EFB /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		FE7BA99D2A5B038A00344EFB /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		FE7BA99E2A5B038A00344EFB /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		FE7D516D2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCinemaTableViewCell.swift; sourceTree = "<group>"; };
+		FE7D516E2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCinemaTableViewCell.xib; sourceTree = "<group>"; };
 		FE971B482A5A7EEF00FD6637 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FE97D89D2A76C2B600D223C9 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		FE97D89F2A76C2C900D223C9 /* UIView+ToastKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ToastKit.swift"; sourceTree = "<group>"; };
@@ -304,6 +310,8 @@
 		FEE5CA572A62F62D00299EA6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FEEF09532A9500C900756BC8 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		FEEF09542A9500C900756BC8 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
+		FEFBFB6E2A9F75BA00A85879 /* itemTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FEFBFB6F2A9F75BA00A85879 /* itemTimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemTimeCollectionViewCell.xib; sourceTree = "<group>"; };
 		FEFCF4382A76B7E90023B4D1 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -464,6 +472,7 @@
 		FE4EE4502A9CF278008E7F1D /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				FE7D516C2A9E3C330089EDFB /* cellitem */,
 				FE4EE4512A9CF297008E7F1D /* DatePickerRowTableViewCell.swift */,
 				FE4EE4522A9CF297008E7F1D /* DatePickerRowTableViewCell.xib */,
 				FE4EE4552A9CF40A008E7F1D /* ListCinemaTableViewCell.swift */,
@@ -967,6 +976,16 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		FE7D516C2A9E3C330089EDFB /* cellitem */ = {
+			isa = PBXGroup;
+			children = (
+				FEFBFB6D2A9F759900A85879 /* celltime */,
+				FE7D516D2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift */,
+				FE7D516E2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib */,
+			);
+			path = cellitem;
+			sourceTree = "<group>";
+		};
 		FE97D89C2A76C2A300D223C9 /* Extension+tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1154,6 +1173,15 @@
 			path = video;
 			sourceTree = "<group>";
 		};
+		FEFBFB6D2A9F759900A85879 /* celltime */ = {
+			isa = PBXGroup;
+			children = (
+				FEFBFB6E2A9F75BA00A85879 /* itemTimeCollectionViewCell.swift */,
+				FEFBFB6F2A9F75BA00A85879 /* itemTimeCollectionViewCell.xib */,
+			);
+			path = celltime;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1267,6 +1295,7 @@
 				FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
 				FE4EE4542A9CF297008E7F1D /* DatePickerRowTableViewCell.xib in Resources */,
+				FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */,
 				FE502C942A9BA41E00779055 /* TimeShowViewController.xib in Resources */,
 				FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */,
 				FE6A8D802A6422F800BEC7BE /* MovieDetailTableViewCell.xib in Resources */,
@@ -1277,6 +1306,7 @@
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
 				FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */,
+				FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */,
 				FE7BA9892A5AFDE500344EFB /* SalesViewController.xib in Resources */,
@@ -1416,6 +1446,7 @@
 				FE6E5CB72A7A985E00467358 /* HomeViewController.swift in Sources */,
 				FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */,
 				FE745FF92A7EB30D0091C0FA /* Movie.swift in Sources */,
+				FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */,
 				FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */,
 				FE2172A72A76A7F0000C0C17 /* CustomTabItem.swift in Sources */,
 				FE33F3992A6CC77500A396A1 /* RRHTTPStatusCode.swift in Sources */,
@@ -1454,6 +1485,7 @@
 				FE503B412A9A0C5700CA9F10 /* headerCollectionViewCell.swift in Sources */,
 				FE440CBA2A5A9ADA00E12C8B /* LoginViewModel.swift in Sources */,
 				FE5893782A8A6FDC00058864 /* DetailMovieRouter.swift in Sources */,
+				FE7D516F2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift in Sources */,
 				FE6A8D7F2A6422F800BEC7BE /* MovieDetailTableViewCell.swift in Sources */,
 				FE33F37A2A6CC68E00A396A1 /* Struct.swift in Sources */,
 				FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */,

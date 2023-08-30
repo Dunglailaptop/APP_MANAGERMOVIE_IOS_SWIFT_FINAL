@@ -16,8 +16,23 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZS6-BE-rQj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZS6-BE-rQj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="51N-1l-m3r"/>
+                    <constraint firstItem="ZS6-BE-rQj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Phh-dG-Cl5"/>
+                    <constraint firstAttribute="bottom" secondItem="ZS6-BE-rQj" secondAttribute="bottom" id="kar-t3-tpu"/>
+                    <constraint firstAttribute="trailing" secondItem="ZS6-BE-rQj" secondAttribute="trailing" id="zHI-VU-fdA"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="tableView" destination="ZS6-BE-rQj" id="k7g-O5-9bZ"/>
+            </connections>
             <point key="canvasLocation" x="132" y="89"/>
         </tableViewCell>
     </objects>

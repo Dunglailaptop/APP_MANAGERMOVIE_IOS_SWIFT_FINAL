@@ -20,35 +20,74 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PM2-Y3-EG2" customClass="FSCalendar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-j8-JXW">
-                                <rect key="frame" x="139" y="100" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWn-2T-Skp">
+                                <rect key="frame" x="136" y="120" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="mCI-j8-JXW" firstAttribute="top" secondItem="PM2-Y3-EG2" secondAttribute="top" constant="100" id="Uwd-u4-2l3"/>
-                            <constraint firstItem="mCI-j8-JXW" firstAttribute="centerX" secondItem="PM2-Y3-EG2" secondAttribute="centerX" id="nzX-OU-Nxa"/>
+                            <constraint firstItem="SWn-2T-Skp" firstAttribute="top" secondItem="PM2-Y3-EG2" secondAttribute="top" constant="120" id="5ba-xd-b0e"/>
+                            <constraint firstItem="SWn-2T-Skp" firstAttribute="centerX" secondItem="PM2-Y3-EG2" secondAttribute="centerX" id="zg4-AQ-oVE"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
                                 <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="headerMinimumDissolvedAlpha">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
+                                <real key="value" value="40"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                                <real key="value" value="40"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="titleTextSize">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                <real key="value" value="80"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
+                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="PM2-Y3-EG2" secondAttribute="trailing" id="Idc-Sh-0WD"/>
-                    <constraint firstAttribute="bottom" secondItem="PM2-Y3-EG2" secondAttribute="bottom" id="PcE-57-bGk"/>
-                    <constraint firstItem="PM2-Y3-EG2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nOj-ud-6XU"/>
-                    <constraint firstItem="PM2-Y3-EG2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oEC-hw-eJg"/>
+                    <constraint firstAttribute="bottom" secondItem="PM2-Y3-EG2" secondAttribute="bottom" id="Gz7-2C-qlW"/>
+                    <constraint firstItem="PM2-Y3-EG2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cIS-zH-ruX"/>
+                    <constraint firstAttribute="trailing" secondItem="PM2-Y3-EG2" secondAttribute="trailing" id="qJA-Bt-157"/>
+                    <constraint firstItem="PM2-Y3-EG2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uuN-12-3KP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="lbl_selectedDate" destination="mCI-j8-JXW" id="TXE-q4-3sQ"/>
+                <outlet property="lbl_selectedDate" destination="SWn-2T-Skp" id="uzs-2j-Tb7"/>
                 <outlet property="view_calender" destination="PM2-Y3-EG2" id="xCD-0E-2nd"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="107.14285714285714"/>

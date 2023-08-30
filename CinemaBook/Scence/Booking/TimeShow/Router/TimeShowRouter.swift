@@ -24,4 +24,13 @@ class TimeShowRouter {
            guard let view = sourceView else {fatalError("Error")}
            self.sourceView = view
        }
+    
+    func navigationToBookingChairViewController() {
+        let bookingchairview = BookingChairRouter().viewController as! BookingChairViewController
+        sourceView?.navigationController?.pushViewController(bookingchairview, animated: true)
+    }
+    
+    func makepopToViewController() {
+        sourceView?.navigationController?.popViewController(animated: true)
+    }
 }

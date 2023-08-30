@@ -17,37 +17,42 @@ class DatePickerRowTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        lbl_selectedDate.text = Utils.getCurrentDateString()
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
             view_calender.locale = Locale(identifier: "vi_VN")
             view_calender.scope = .week
-            view_calender.delegate = self
-            view_calender.dataSource = self
+        view_calender.delegate = self
     }
     
 }
 extension DatePickerRowTableViewCell: FSCalendarDelegate, FSCalendarDataSource {
-    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillSelectionColorFor date: Date) -> UIColor? {
-           return UIColor.red // Customize the color as desired
-       }
-    
-     func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
-           let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "dd"
-           return dateFormatter.string(from: date)
-       }
+//    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillSelectionColorFor date: Date) -> UIColor? {
+//           return UIColor.red // Customize the color as desired
+//       }
+//
+//     func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
+//           let dateFormatter = DateFormatter()
+//           dateFormatter.dateFormat = "dd"
+//           return dateFormatter.string(from: date)
+//       }
+    func calendar(_ calendar: FSCalendar, heightForFooterInSection section: Int) -> CGFloat {
+        return 40
+    }
+
        
-       func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-           let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "EEEE"
-           
-           let englishDayName = dateFormatter.string(from: date)
-           let vietnameseDayName = convertToVietnameseDayName(englishDayName)
-           
-           return vietnameseDayName
-       }
+//       func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+//           let dateFormatter = DateFormatter()
+//           dateFormatter.dateFormat = "EEEE"
+//
+//           let englishDayName = dateFormatter.string(from: date)
+//           let vietnameseDayName = convertToVietnameseDayName(englishDayName)
+//
+//           return vietnameseDayName
+//       }
        
        func convertToVietnameseDayName(_ englishDayName: String) -> String {
            switch englishDayName {

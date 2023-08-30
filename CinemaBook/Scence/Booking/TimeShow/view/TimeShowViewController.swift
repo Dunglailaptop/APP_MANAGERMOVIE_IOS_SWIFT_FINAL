@@ -27,5 +27,8 @@ class TimeShowViewController: BaseViewController {
     
 
     
-
+    @IBAction func btn_popToViewController(_ sender: Any) {
+        viewModel.navigationPopToViewController()
+    }
+    
 }
