@@ -135,6 +135,11 @@
 		FEAC96B82A5A55CD00B49C80 /* CinemaBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAC96B72A5A55CD00B49C80 /* CinemaBookUITests.swift */; };
 		FEC1E3F02A9CD481005A9F16 /* TimeShowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1E3EE2A9CD477005A9F16 /* TimeShowRouter.swift */; };
 		FEC1E3F22A9CD4F8005A9F16 /* TimeShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1E3F12A9CD4F8005A9F16 /* TimeShowViewModel.swift */; };
+		FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD092E2A9F9CD400D97711 /* ListMovieShowNowViewController.swift */; };
+		FECD09312A9F9CD400D97711 /* ListMovieShowNowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECD092F2A9F9CD400D97711 /* ListMovieShowNowViewController.xib */; };
+		FECD09372A9F9DD400D97711 /* ListMovieShowNowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD09362A9F9DD400D97711 /* ListMovieShowNowViewController+Extension.swift */; };
+		FECD093C2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD093B2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift */; };
+		FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD093D2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift */; };
 		FED6A4552A761003000E1BCD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6A4532A761000000E1BCD /* Config.swift */; };
 		FED6A4572A7614FF000E1BCD /* EmployeeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6A4562A7614FF000E1BCD /* EmployeeInfo.swift */; };
 		FEDC3F482A6CD9FE004D3789 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDC3F472A6CD9FE004D3789 /* Account.swift */; };
@@ -145,6 +150,8 @@
 		FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEEF09542A9500C900756BC8 /* VideoViewController.xib */; };
 		FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBFB6E2A9F75BA00A85879 /* itemTimeCollectionViewCell.swift */; };
 		FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFBFB6F2A9F75BA00A85879 /* itemTimeCollectionViewCell.xib */; };
+		FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFBFB722A9F93A800A85879 /* itemMovieTableViewCell.swift */; };
+		FEFBFB752A9F93A800A85879 /* itemMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEFBFB732A9F93A800A85879 /* itemMovieTableViewCell.xib */; };
 		FEFCF4392A76B7E90023B4D1 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCF4382A76B7E90023B4D1 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -302,6 +309,11 @@
 		FEAC96B92A5A55CD00B49C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEC1E3EE2A9CD477005A9F16 /* TimeShowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeShowRouter.swift; sourceTree = "<group>"; };
 		FEC1E3F12A9CD4F8005A9F16 /* TimeShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeShowViewModel.swift; sourceTree = "<group>"; };
+		FECD092E2A9F9CD400D97711 /* ListMovieShowNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieShowNowViewController.swift; sourceTree = "<group>"; };
+		FECD092F2A9F9CD400D97711 /* ListMovieShowNowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListMovieShowNowViewController.xib; sourceTree = "<group>"; };
+		FECD09362A9F9DD400D97711 /* ListMovieShowNowViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListMovieShowNowViewController+Extension.swift"; sourceTree = "<group>"; };
+		FECD093B2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieShowNowRouter.swift; sourceTree = "<group>"; };
+		FECD093D2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMovieShowNowViewModel.swift; sourceTree = "<group>"; };
 		FED6A4532A761000000E1BCD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FED6A4562A7614FF000E1BCD /* EmployeeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeInfo.swift; sourceTree = "<group>"; };
 		FEDC3F472A6CD9FE004D3789 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -312,6 +324,8 @@
 		FEEF09542A9500C900756BC8 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		FEFBFB6E2A9F75BA00A85879 /* itemTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		FEFBFB6F2A9F75BA00A85879 /* itemTimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemTimeCollectionViewCell.xib; sourceTree = "<group>"; };
+		FEFBFB722A9F93A800A85879 /* itemMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemMovieTableViewCell.swift; sourceTree = "<group>"; };
+		FEFBFB732A9F93A800A85879 /* itemMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemMovieTableViewCell.xib; sourceTree = "<group>"; };
 		FEFCF4382A76B7E90023B4D1 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -702,6 +716,7 @@
 		FE53B8122A7FE14F00976628 /* Booking */ = {
 			isa = PBXGroup;
 			children = (
+				FECD092D2A9F9CAC00D97711 /* ListMovieShowNow */,
 				FE502C8D2A9BA3E800779055 /* TimeShow */,
 				FE5276E02A8D061200252843 /* BookingChair */,
 				FE58936E2A8A6D6D00058864 /* DetailMovie */,
@@ -827,8 +842,6 @@
 		FE6775F12A8920730007A659 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				FE6775F22A8920A10007A659 /* ItemMovieCollectionViewCell.swift */,
-				FE6775F32A8920A10007A659 /* ItemMovieCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1139,6 +1152,62 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FECD092D2A9F9CAC00D97711 /* ListMovieShowNow */ = {
+			isa = PBXGroup;
+			children = (
+				FECD093A2A9F9EC700D97711 /* Router */,
+				FECD09352A9F9DA000D97711 /* Extension */,
+				FECD09342A9F9D9D00D97711 /* viewModel */,
+				FECD09322A9F9D4300D97711 /* view */,
+			);
+			path = ListMovieShowNow;
+			sourceTree = "<group>";
+		};
+		FECD09322A9F9D4300D97711 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FECD09332A9F9D5200D97711 /* cell */,
+				FECD092E2A9F9CD400D97711 /* ListMovieShowNowViewController.swift */,
+				FECD092F2A9F9CD400D97711 /* ListMovieShowNowViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FECD09332A9F9D5200D97711 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE6775F22A8920A10007A659 /* ItemMovieCollectionViewCell.swift */,
+				FE6775F32A8920A10007A659 /* ItemMovieCollectionViewCell.xib */,
+				FEFBFB722A9F93A800A85879 /* itemMovieTableViewCell.swift */,
+				FEFBFB732A9F93A800A85879 /* itemMovieTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		FECD09342A9F9D9D00D97711 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FECD093D2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FECD09352A9F9DA000D97711 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FECD09362A9F9DD400D97711 /* ListMovieShowNowViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FECD093A2A9F9EC700D97711 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FECD093B2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FEDC3F4B2A6CE109004D3789 /* Response */ = {
 			isa = PBXGroup;
 			children = (
@@ -1290,6 +1359,7 @@
 			files = (
 				FE5096572A76534800F5A457 /* SplachScreenViewController.xib in Resources */,
 				FEAC96A22A5A55CD00B49C80 /* LaunchScreen.storyboard in Resources */,
+				FECD09312A9F9CD400D97711 /* ListMovieShowNowViewController.xib in Resources */,
 				FE5276E82A8D067300252843 /* BookingChairViewController.xib in Resources */,
 				FE585F8B2A9AFD2100775B27 /* ListCategoryChairTableViewCell.xib in Resources */,
 				FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */,
@@ -1305,6 +1375,7 @@
 				FE7BA98D2A5AFDF300344EFB /* MapViewController.xib in Resources */,
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
+				FEFBFB752A9F93A800A85879 /* itemMovieTableViewCell.xib in Resources */,
 				FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */,
 				FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
@@ -1406,6 +1477,7 @@
 				FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */,
 				FE33F3902A6CC76B00A396A1 /* Observable+Extension.swift in Sources */,
 				FE33F3832A6CC73600A396A1 /* ManageCacheObject.swift in Sources */,
+				FECD09372A9F9DD400D97711 /* ListMovieShowNowViewController+Extension.swift in Sources */,
 				FE2172AB2A76A8C4000C0C17 /* TicketViewController.swift in Sources */,
 				FE502C8B2A9B9A9800779055 /* itemchaircategorylistCollectionViewCell.swift in Sources */,
 				FED6A4572A7614FF000E1BCD /* EmployeeInfo.swift in Sources */,
@@ -1462,10 +1534,14 @@
 				FE5096562A76534800F5A457 /* SplachScreenViewController.swift in Sources */,
 				FE50965D2A7654AA00F5A457 /* MenuViewModel.swift in Sources */,
 				FE5276F32A8D115600252843 /* ItemChairCollectionViewCell.swift in Sources */,
+				FECD093C2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift in Sources */,
 				FE5276EC2A8D08AB00252843 /* BookingChairViewModel.swift in Sources */,
 				FE519E782A88CBAD007E131E /* BookingViewModel.swift in Sources */,
 				FE519E752A88CB9A007E131E /* BookingTicketViewController.swift in Sources */,
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
+				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,
+				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
+				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				FE4EE4532A9CF297008E7F1D /* DatePickerRowTableViewCell.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
 				FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */,

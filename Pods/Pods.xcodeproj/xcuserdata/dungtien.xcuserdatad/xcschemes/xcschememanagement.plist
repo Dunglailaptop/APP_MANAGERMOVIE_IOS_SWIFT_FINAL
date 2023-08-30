@@ -11,117 +11,124 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>FSCalendar.xcscheme</key>
+		<key>BmoViewPager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>IQKeyboardManager.xcscheme</key>
+		<key>FSCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>JonAlert.xcscheme</key>
+		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Kingfisher.xcscheme</key>
+		<key>JonAlert.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Moya.xcscheme</key>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>ObjectMapper.xcscheme</key>
+		<key>Moya.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>Pods-CinemaBook.xcscheme</key>
+		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>QVRWeekView.xcscheme</key>
+		<key>Pods-CinemaBook.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>Result.xcscheme</key>
+		<key>QVRWeekView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>RxCocoa.xcscheme</key>
+		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
-		<key>RxGesture.xcscheme</key>
+		<key>RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
-		<key>RxSwift.xcscheme</key>
+		<key>RxGesture.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
-		<key>SKPhotoBrowser.xcscheme</key>
+		<key>RxSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>SnapKit.xcscheme</key>
+		<key>SKPhotoBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>youtube-ios-player-helper-Assets.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>youtube-ios-player-helper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>16</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

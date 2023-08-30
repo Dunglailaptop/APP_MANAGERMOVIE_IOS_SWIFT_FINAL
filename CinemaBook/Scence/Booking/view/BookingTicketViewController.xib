@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingTicketViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
-                <outlet property="collectionviewcell" destination="DNe-we-lz8" id="Ypc-xf-REf"/>
+                <outlet property="_navigationbar" destination="mb0-7K-gt7" id="1A5-KS-P7o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewCollection" destination="sFi-Vn-ZAB" id="jhG-xJ-iw4"/>
+                <outlet property="viewPager" destination="0F1-W2-kXw" id="i3W-8t-uvv"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,35 +23,27 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B0-gr-GtE">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFi-Vn-ZAB">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                            <subviews>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DNe-we-lz8">
-                                    <rect key="frame" x="0.0" y="10" width="414" height="808"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yFY-O5-o5z">
-                                        <size key="itemSize" width="50" height="50"/>
-                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </collectionViewFlowLayout>
-                                </collectionView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mb0-7K-gt7" customClass="BmoViewPagerNavigationBar" customModule="BmoViewPager">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="DNe-we-lz8" secondAttribute="trailing" id="7ST-Xx-1ao"/>
-                                <constraint firstAttribute="bottom" secondItem="DNe-we-lz8" secondAttribute="bottom" id="EfC-jY-gGH"/>
-                                <constraint firstItem="DNe-we-lz8" firstAttribute="leading" secondItem="sFi-Vn-ZAB" secondAttribute="leading" id="aua-MZ-GG7"/>
-                                <constraint firstItem="DNe-we-lz8" firstAttribute="top" secondItem="sFi-Vn-ZAB" secondAttribute="top" constant="10" id="siz-Dw-Ty4"/>
+                                <constraint firstAttribute="height" constant="50" id="wmu-3V-e43"/>
                             </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0F1-W2-kXw" customClass="BmoViewPager" customModule="BmoViewPager">
+                            <rect key="frame" x="0.0" y="50" width="414" height="768"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="sFi-Vn-ZAB" secondAttribute="bottom" id="TdU-n2-Gxu"/>
-                        <constraint firstItem="sFi-Vn-ZAB" firstAttribute="top" secondItem="3B0-gr-GtE" secondAttribute="top" id="hC7-as-j5u"/>
-                        <constraint firstAttribute="trailing" secondItem="sFi-Vn-ZAB" secondAttribute="trailing" id="t5U-sh-cUm"/>
-                        <constraint firstItem="sFi-Vn-ZAB" firstAttribute="leading" secondItem="3B0-gr-GtE" secondAttribute="leading" id="voF-SX-vQH"/>
+                        <constraint firstItem="0F1-W2-kXw" firstAttribute="leading" secondItem="3B0-gr-GtE" secondAttribute="leading" id="Dpu-fM-Bxr"/>
+                        <constraint firstAttribute="bottom" secondItem="0F1-W2-kXw" secondAttribute="bottom" id="UzP-GZ-1mL"/>
+                        <constraint firstAttribute="trailing" secondItem="mb0-7K-gt7" secondAttribute="trailing" id="YEV-gA-tHk"/>
+                        <constraint firstItem="0F1-W2-kXw" firstAttribute="top" secondItem="mb0-7K-gt7" secondAttribute="bottom" id="bbb-rs-V6J"/>
+                        <constraint firstAttribute="trailing" secondItem="0F1-W2-kXw" secondAttribute="trailing" id="eie-Vk-WKX"/>
+                        <constraint firstItem="mb0-7K-gt7" firstAttribute="leading" secondItem="3B0-gr-GtE" secondAttribute="leading" id="fet-iv-eXB"/>
+                        <constraint firstItem="mb0-7K-gt7" firstAttribute="top" secondItem="3B0-gr-GtE" secondAttribute="top" id="lNf-dd-vjL"/>
                     </constraints>
                 </view>
             </subviews>
