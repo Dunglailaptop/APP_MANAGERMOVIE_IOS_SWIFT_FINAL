@@ -77,7 +77,7 @@ final class CustomItemView: UIView {
     
     private func setupProperties() {
         nameLabel.configureWith(text: item.name,
-                                color: .white,
+                                color: ColorUtils.gray_400(),
                                 alignment: .center,
                                 size: 11,
                                 weight: .semibold)
@@ -90,7 +90,7 @@ final class CustomItemView: UIView {
         UIView.animate(withDuration: 0.4) { [unowned self] in
             self.nameLabel.alpha = self.isSelected ? 0.0 : 1.0
             self.underlineView.alpha = self.isSelected ? 1.0 : 0.0
-               self.underlineView.backgroundColor = self.isSelected ? UIColor.red : .clear
+            self.underlineView.backgroundColor = self.isSelected ? ColorUtils.buttonGreen() : .clear
             self.iconImageView.image = self.isSelected ? self.item.selectedIcon : self.item.icon
         }
      

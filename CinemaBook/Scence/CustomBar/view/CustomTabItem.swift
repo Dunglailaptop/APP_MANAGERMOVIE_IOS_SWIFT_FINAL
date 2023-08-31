@@ -54,11 +54,11 @@ extension CustomTabItem {
     var icon: UIImage? {
         switch self {
         case .Home:
-            return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.gray_300(), alpha: CGFloat(1))
+            return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
         case .Ticket:
-            return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.gray_300(), alpha: CGFloat(1))
+            return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
         case .newFeed:
-            return UIImage(named: "icon-newfees")?.withTintColor(ColorUtils.gray_300(), alpha: CGFloat(1))
+            return UIImage(named: "icon-newfees")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
             
             //           case .fee:
             //               return UIImage(named: "icon-fee-tabbar")?.withTintColor(.white.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
@@ -66,11 +66,11 @@ extension CustomTabItem {
         case .NotificationApp:
             
            
-                return UIImage(named: "icon-bell")?.withTintColor(ColorUtils.gray_300(), alpha: CGFloat(1))
+                return UIImage(named: "icon-bell")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
             
             
         case .SettingAccount:
-            return UIImage(named: "icon-user")?.withTintColor(ColorUtils.gray_300(), alpha: CGFloat(1))
+            return UIImage(named: "icon-user")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
         }
     }
     
@@ -78,21 +78,21 @@ extension CustomTabItem {
     var selectedIcon: UIImage? {
         switch self {
         case .Home:
-            return UIImage(named: "icon-homes")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
             
         case .Ticket:
-            return UIImage(named: "icon-tickets")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
         case .newFeed:
-            return UIImage(named: "icon-newfees")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-newfees")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
        
             //           case .fee:
             //               return UIImage(named: "icon-fee-tabbar")?.withTintColor(.white, renderingMode: .alwaysOriginal)
             
         case .NotificationApp:
-            return UIImage(named: "icon-bell")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-bell")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
            
         case .SettingAccount:
-            return UIImage(named: "icon-users")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-user")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
         }
     }
     

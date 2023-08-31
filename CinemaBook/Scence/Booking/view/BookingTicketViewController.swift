@@ -30,7 +30,7 @@ class BookingTicketViewController: BaseViewController  {
         self.viewPager.presentedPageIndex = 0
         self.viewPager.dataSource = self
         self.viewPager.delegate = self
-        _navigationbar.backgroundColor = .blue
+        _navigationbar.backgroundColor = ColorUtils.gray_6()
 //        resgisterCollection()
 //        binđDataTableCollectionView()
 //
@@ -77,7 +77,7 @@ extension BookingTicketViewController: BmoViewPagerDelegate, BmoViewPagerDataSou
     func bmoViewPagerDataSourceNaviagtionBarItemNormalAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]? {
         return [
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 12.0),
-            NSAttributedString.Key.foregroundColor : ColorUtils.white()
+            NSAttributedString.Key.foregroundColor : ColorUtils.blackBackGroundColor()
         ]
     }
     

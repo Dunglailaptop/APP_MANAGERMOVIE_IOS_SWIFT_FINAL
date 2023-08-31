@@ -17,6 +17,7 @@ class AccountViewController: BaseViewController {
     
     @IBOutlet weak var avatar: UIImageView!
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lbl_name: UILabel!
     
     var viewModel = AccountViewModel()
@@ -25,7 +26,10 @@ class AccountViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self,router: router)
+        register()
+        bindingtableview()
         setup()
+        
         // Do any additional setup after loading the view.
     }
 

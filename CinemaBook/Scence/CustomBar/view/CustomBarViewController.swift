@@ -44,7 +44,7 @@ class CustomTabBarViewController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+//        navigationController?.isNavigationBarHidden = true
         
         if(!ManageCacheObject.isLogin()){
             dLog("Not Login...........")
@@ -69,26 +69,37 @@ class CustomTabBarViewController: UITabBarController {
     }
     
     private func setupProperties() {
-        let redValue: CGFloat = 33.0 / 255.0 // Replace with your desired red value (0-255)
-        let greenValue: CGFloat = 36.0 / 255.0 // Replace with your desired green value (0-255)
-        let blueValue: CGFloat = 44.0 / 255.0 // Replace with your desired blue value (0-255)
-        
-        let tabBarColor = UIColor(
-            red: redValue,
-            green: greenValue,
-            blue: blueValue,
-            alpha: 1.0 // The alpha value is set to 1.0 (fully opaque) by default
-        )
-        tabBar.isHidden = false
-        tabBar.barTintColor = .blue
-        tabBar.layer.shadowRadius = 5.0
-        tabBar.layer.cornerRadius = 20
-        
-        tabBar.layer.masksToBounds = true
+//        let redValue: CGFloat = 255.0 / 255.0 // Replace with your desired red value (0-255)
+//        let greenValue: CGFloat = 255.0 / 255.0 // Replace with your desired green value (0-255)
+//        let blueValue: CGFloat = 255.0 / 255.0 // Replace with your desired blue value (0-255)
+//
+//        let tabBarColor = UIColor(
+//            red: redValue,
+//            green: greenValue,
+//            blue: blueValue,
+//            alpha: 1.0 // The alpha value is set to 1.0 (fully opaque) by default
+//        )
+//        tabBar.isHidden = false
+//        tabBar.barTintColor = .white
+//        tabBar.layer.shadowRadius = 5.0
+//        tabBar.layer.shadowColor =
+//        tabBar.layer.cornerRadius = 10
+      
+       tabBar.isHidden = false
+        tabBar.barTintColor = .white
+        tabBar.layer.shadowRadius = 10
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOpacity = 0.5 // Use a valid value between 0 and 1
+        tabBar.layer.shadowOffset = CGSize(width: 10, height: 10)
+        tabBar.layer.shadowPath = UIBezierPath(roundedRect: tabBar.bounds, cornerRadius: 15).cgPath // Use roundedRect with corner radius
+        tabBar.layer.cornerRadius = 15
+        tabBar.clipsToBounds = true
+
+        tabBar.layer.masksToBounds = false // Set this to false
         customTabBar.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+
         selectedIndex = 0
+
         let controllers = CustomTabItem.allCases.map { $0.viewController }
         setViewControllers(controllers, animated: true)
     }

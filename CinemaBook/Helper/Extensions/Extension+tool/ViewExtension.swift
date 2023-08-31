@@ -203,7 +203,7 @@ extension UIView {
     ///   - color: the border color
     ///   - margins: the left and right margin
     ///   - borderLineSize: the size of the border
-    func addBottomBorder(color: UIColor = ColorUtils.blueButton(), margins: CGFloat = 1, borderLineSize: CGFloat = 1) {
+    func addBottomBorder(color: UIColor = ColorUtils.red_color(), margins: CGFloat = 1, borderLineSize: CGFloat = 1) {
         let border = UIView()
         border.backgroundColor = color
         border.translatesAutoresizingMaskIntoConstraints = false

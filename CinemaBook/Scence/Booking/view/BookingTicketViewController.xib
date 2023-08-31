@@ -31,7 +31,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0F1-W2-kXw" customClass="BmoViewPager" customModule="BmoViewPager">
-                            <rect key="frame" x="0.0" y="50" width="414" height="768"/>
+                            <rect key="frame" x="0.0" y="58" width="414" height="760"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                     </subviews>
@@ -40,7 +40,7 @@
                         <constraint firstItem="0F1-W2-kXw" firstAttribute="leading" secondItem="3B0-gr-GtE" secondAttribute="leading" id="Dpu-fM-Bxr"/>
                         <constraint firstAttribute="bottom" secondItem="0F1-W2-kXw" secondAttribute="bottom" id="UzP-GZ-1mL"/>
                         <constraint firstAttribute="trailing" secondItem="mb0-7K-gt7" secondAttribute="trailing" id="YEV-gA-tHk"/>
-                        <constraint firstItem="0F1-W2-kXw" firstAttribute="top" secondItem="mb0-7K-gt7" secondAttribute="bottom" id="bbb-rs-V6J"/>
+                        <constraint firstItem="0F1-W2-kXw" firstAttribute="top" secondItem="mb0-7K-gt7" secondAttribute="bottom" constant="8" id="bbb-rs-V6J"/>
                         <constraint firstAttribute="trailing" secondItem="0F1-W2-kXw" secondAttribute="trailing" id="eie-Vk-WKX"/>
                         <constraint firstItem="mb0-7K-gt7" firstAttribute="leading" secondItem="3B0-gr-GtE" secondAttribute="leading" id="fet-iv-eXB"/>
                         <constraint firstItem="mb0-7K-gt7" firstAttribute="top" secondItem="3B0-gr-GtE" secondAttribute="top" id="lNf-dd-vjL"/>
