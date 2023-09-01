@@ -91,6 +91,16 @@
 		FE5893782A8A6FDC00058864 /* DetailMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5893772A8A6FDC00058864 /* DetailMovieRouter.swift */; };
 		FE58937A2A8A6FF700058864 /* DetailMovieviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5893792A8A6FF700058864 /* DetailMovieviewModel.swift */; };
 		FE58937E2A8A725000058864 /* BookingTicketViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58937C2A8A724D00058864 /* BookingTicketViewController+Extension.swift */; };
+		FE5D081E2AA22019004FA3D9 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */; };
+		FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */; };
+		FE5D08232AA2337E004FA3D9 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08222AA2337E004FA3D9 /* MovieViewModel.swift */; };
+		FE5D08252AA233C8004FA3D9 /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08242AA233C8004FA3D9 /* MovieRouter.swift */; };
+		FE5D082A2AA23676004FA3D9 /* videoShortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08282AA23676004FA3D9 /* videoShortViewController.swift */; };
+		FE5D082B2AA23676004FA3D9 /* videoShortViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D08292AA23676004FA3D9 /* videoShortViewController.xib */; };
+		FE5D08302AA23691004FA3D9 /* TraillerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D082E2AA23691004FA3D9 /* TraillerViewController.swift */; };
+		FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D082F2AA23691004FA3D9 /* TraillerViewController.xib */; };
+		FE5D08352AA236C2004FA3D9 /* AllVideoandMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08332AA236C2004FA3D9 /* AllVideoandMovieViewController.swift */; };
+		FE5D08362AA236C2004FA3D9 /* AllVideoandMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D08342AA236C2004FA3D9 /* AllVideoandMovieViewController.xib */; };
 		FE5DFF9D2A76A21500E2E345 /* CustomBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFF9C2A76A21500E2E345 /* CustomBarViewController.swift */; };
 		FE5DFF9F2A76A4F500E2E345 /* CustomBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFF9E2A76A4F500E2E345 /* CustomBarRouter.swift */; };
 		FE5DFFA12A76A53E00E2E345 /* CustomBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFFA02A76A53E00E2E345 /* CustomBarViewModel.swift */; };
@@ -265,6 +275,16 @@
 		FE5893772A8A6FDC00058864 /* DetailMovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieRouter.swift; sourceTree = "<group>"; };
 		FE5893792A8A6FF700058864 /* DetailMovieviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieviewModel.swift; sourceTree = "<group>"; };
 		FE58937C2A8A724D00058864 /* BookingTicketViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookingTicketViewController+Extension.swift"; sourceTree = "<group>"; };
+		FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
+		FE5D08222AA2337E004FA3D9 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		FE5D08242AA233C8004FA3D9 /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
+		FE5D08282AA23676004FA3D9 /* videoShortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoShortViewController.swift; sourceTree = "<group>"; };
+		FE5D08292AA23676004FA3D9 /* videoShortViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = videoShortViewController.xib; sourceTree = "<group>"; };
+		FE5D082E2AA23691004FA3D9 /* TraillerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraillerViewController.swift; sourceTree = "<group>"; };
+		FE5D082F2AA23691004FA3D9 /* TraillerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TraillerViewController.xib; sourceTree = "<group>"; };
+		FE5D08332AA236C2004FA3D9 /* AllVideoandMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoandMovieViewController.swift; sourceTree = "<group>"; };
+		FE5D08342AA236C2004FA3D9 /* AllVideoandMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoandMovieViewController.xib; sourceTree = "<group>"; };
 		FE5DFF9C2A76A21500E2E345 /* CustomBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarViewController.swift; sourceTree = "<group>"; };
 		FE5DFF9E2A76A4F500E2E345 /* CustomBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarRouter.swift; sourceTree = "<group>"; };
 		FE5DFFA02A76A53E00E2E345 /* CustomBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarViewModel.swift; sourceTree = "<group>"; };
@@ -836,6 +856,106 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FE5D08182AA21FE2004FA3D9 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08212AA2335F004FA3D9 /* viewModel */,
+				FE5D08202AA23358004FA3D9 /* Router */,
+				FE5D08192AA21FED004FA3D9 /* view */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		FE5D08192AA21FED004FA3D9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */,
+				FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FE5D081A2AA21FF1004FA3D9 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FE5D081B2AA21FF4004FA3D9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE5D08202AA23358004FA3D9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08242AA233C8004FA3D9 /* MovieRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE5D08212AA2335F004FA3D9 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08222AA2337E004FA3D9 /* MovieViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FE5D08262AA2365A004FA3D9 /* videoShort */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08272AA23666004FA3D9 /* view */,
+			);
+			path = videoShort;
+			sourceTree = "<group>";
+		};
+		FE5D08272AA23666004FA3D9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08282AA23676004FA3D9 /* videoShortViewController.swift */,
+				FE5D08292AA23676004FA3D9 /* videoShortViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FE5D082C2AA2367A004FA3D9 /* Trailler */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D082D2AA23685004FA3D9 /* view */,
+			);
+			path = Trailler;
+			sourceTree = "<group>";
+		};
+		FE5D082D2AA23685004FA3D9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D082E2AA23691004FA3D9 /* TraillerViewController.swift */,
+				FE5D082F2AA23691004FA3D9 /* TraillerViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FE5D08322AA23696004FA3D9 /* AllVideoandMovie */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08372AA236C6004FA3D9 /* view */,
+			);
+			path = AllVideoandMovie;
+			sourceTree = "<group>";
+		};
+		FE5D08372AA236C6004FA3D9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08332AA236C2004FA3D9 /* AllVideoandMovieViewController.swift */,
+				FE5D08342AA236C2004FA3D9 /* AllVideoandMovieViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		FE5DFF9B2A76A19400E2E345 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -956,6 +1076,12 @@
 		FE7BA9832A5AFD8900344EFB /* NewFeed */ = {
 			isa = PBXGroup;
 			children = (
+				FE5D08322AA23696004FA3D9 /* AllVideoandMovie */,
+				FE5D082C2AA2367A004FA3D9 /* Trailler */,
+				FE5D08262AA2365A004FA3D9 /* videoShort */,
+				FE5D081A2AA21FF1004FA3D9 /* viewModel */,
+				FE5D081B2AA21FF4004FA3D9 /* Router */,
+				FE5D08182AA21FE2004FA3D9 /* Movie */,
 				FE7BA98E2A5AFDF900344EFB /* view */,
 			);
 			path = NewFeed;
@@ -1426,9 +1552,12 @@
 				FEFBFB752A9F93A800A85879 /* itemMovieTableViewCell.xib in Resources */,
 				FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */,
 				FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */,
+				FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */,
+				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
 				FE7BA9892A5AFDE500344EFB /* SalesViewController.xib in Resources */,
+				FE5D08362AA236C2004FA3D9 /* AllVideoandMovieViewController.xib in Resources */,
 				FE4137EB2A6398820038E7B6 /* BannerTableViewCell.xib in Resources */,
 				FEAC969D2A5A55CC00B49C80 /* Main.storyboard in Resources */,
 				FE0F290C2A5AF4DC008C62CD /* MenuViewController.xib in Resources */,
@@ -1436,6 +1565,7 @@
 				FE7460062A7EB8B00091C0FA /* MovieItemTableViewCell.xib in Resources */,
 				FE502C8C2A9B9A9800779055 /* itemchaircategorylistCollectionViewCell.xib in Resources */,
 				FE5276F42A8D115600252843 /* ItemChairCollectionViewCell.xib in Resources */,
+				FE5D082B2AA23676004FA3D9 /* videoShortViewController.xib in Resources */,
 				FE6A8D842A642CDF00BEC7BE /* FlimsCollectionViewCell.xib in Resources */,
 				FE503B422A9A0C5700CA9F10 /* headerCollectionViewCell.xib in Resources */,
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
@@ -1533,6 +1663,7 @@
 				FED6A4572A7614FF000E1BCD /* EmployeeInfo.swift in Sources */,
 				FE5276EF2A8D10F900252843 /* BookingChairViewController+Extension.swift in Sources */,
 				FE53B8162A7FF28F00976628 /* AccountViewModel.swift in Sources */,
+				FE5D08252AA233C8004FA3D9 /* MovieRouter.swift in Sources */,
 				FE53B8182A7FF2B700976628 /* AccountRouter.swift in Sources */,
 				FE519E7A2A88CC01007E131E /* BookingRouter.swift in Sources */,
 				FE33F38E2A6CC76B00A396A1 /* StringExtension.swift in Sources */,
@@ -1540,11 +1671,13 @@
 				FE7BA99F2A5B038A00344EFB /* MovieTableViewCell.swift in Sources */,
 				FEE5CA562A62EB8200299EA6 /* HomeViewController+Extensions.swift in Sources */,
 				FE2172AE2A76B299000C0C17 /* UIImage+Extension.swift in Sources */,
+				FE5D081E2AA22019004FA3D9 /* MovieViewController.swift in Sources */,
 				FE2172B52A76B606000C0C17 /* CustomViewController.swift in Sources */,
 				FE5096612A76578C00F5A457 /* SplachScreenViewModel.swift in Sources */,
 				FE491EE42AA0F87800BCA4D1 /* AccountViewController+Extension.swift in Sources */,
 				FE7BA97F2A5AFCEE00344EFB /* MenuViewController+Extensions.swift in Sources */,
 				FE33F3982A6CC77500A396A1 /* JHProgressHUD.swift in Sources */,
+				FE5D082A2AA23676004FA3D9 /* videoShortViewController.swift in Sources */,
 				FE5893752A8A6DD600058864 /* DetailMovieViewController.swift in Sources */,
 				FE5096592A76538A00F5A457 /* SplachScreenRouter.swift in Sources */,
 				FE6EE71B2A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift in Sources */,
@@ -1564,6 +1697,7 @@
 				FE5DFF9F2A76A4F500E2E345 /* CustomBarRouter.swift in Sources */,
 				FE6775F42A8920A10007A659 /* ItemMovieCollectionViewCell.swift in Sources */,
 				FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */,
+				FE5D08302AA23691004FA3D9 /* TraillerViewController.swift in Sources */,
 				FE7BA9942A5AFE2700344EFB /* AccountViewController.swift in Sources */,
 				FE6E5CB72A7A985E00467358 /* HomeViewController.swift in Sources */,
 				FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */,
@@ -1582,8 +1716,10 @@
 				FE33F3962A6CC77500A396A1 /* InternetTouchView.swift in Sources */,
 				FE69A8A52AA1909F0017D891 /* DialogViewController.swift in Sources */,
 				FE33F3852A6CC73900A396A1 /* Utils.swift in Sources */,
+				FE5D08232AA2337E004FA3D9 /* MovieViewModel.swift in Sources */,
 				FE58937E2A8A725000058864 /* BookingTicketViewController+Extension.swift in Sources */,
 				FE5096562A76534800F5A457 /* SplachScreenViewController.swift in Sources */,
+				FE5D08352AA236C2004FA3D9 /* AllVideoandMovieViewController.swift in Sources */,
 				FE50965D2A7654AA00F5A457 /* MenuViewModel.swift in Sources */,
 				FE5276F32A8D115600252843 /* ItemChairCollectionViewCell.swift in Sources */,
 				FECD093C2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift in Sources */,

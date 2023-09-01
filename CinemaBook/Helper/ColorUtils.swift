@@ -301,6 +301,10 @@ class ColorUtils{
         return hexStringToUIColor(hex: "F5F6FA")
     }
     
+    static func blue_textbutton()->UIColor{
+           return hexStringToUIColor(hex: "E3ECF5")
+       }
+    
     static func gray_200() -> UIColor{
         return hexStringToUIColor(hex: "F1F2F5")
     }

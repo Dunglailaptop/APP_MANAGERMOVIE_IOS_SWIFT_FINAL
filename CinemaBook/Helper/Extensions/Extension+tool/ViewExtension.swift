@@ -442,3 +442,22 @@ extension UIView {
     }
 
 }
+extension UIViewController {
+    func addTopCustomViewController(_ child: UIViewController,addTopCustom: Int) {
+         addChild(child)
+         // Add Child View as Subview
+         self.view.addSubview(child.view)
+         child.view.translatesAutoresizingMaskIntoConstraints = false
+         
+         NSLayoutConstraint.activate([
+             child.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: CGFloat(addTopCustom)),
+             child.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+             child.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+             child.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+         ])
+         
+         child.didMove(toParent: self)
+        
+         
+     }
+}
