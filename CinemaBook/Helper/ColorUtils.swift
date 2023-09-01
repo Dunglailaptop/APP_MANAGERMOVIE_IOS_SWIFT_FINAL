@@ -67,7 +67,7 @@ class ColorUtils{
         return hexStringToUIColor(hex: "#418bca")
     }
     static func blueButton()->UIColor{
-        return hexStringToUIColor(hex: "#0072bc")
+        return hexStringToUIColor(hex: "#C7D9EC")
     }
     
     static func lightBlueButton()->UIColor{

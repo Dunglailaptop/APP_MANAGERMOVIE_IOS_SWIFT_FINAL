@@ -6,13 +6,15 @@
 //  Copyright © 2023 dungtien. All rights reserved.
 //
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MovieViewModel: BaseViewModel
 {
     private(set) weak var view: MovieViewController?
     private var router: MovieRouter?
     
-    
+    var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2,3,4,5,6,7,8,9,10])
     
     func bind(view: MovieViewController, router: MovieRouter)
     {

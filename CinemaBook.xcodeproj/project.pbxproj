@@ -101,6 +101,8 @@
 		FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D082F2AA23691004FA3D9 /* TraillerViewController.xib */; };
 		FE5D08352AA236C2004FA3D9 /* AllVideoandMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08332AA236C2004FA3D9 /* AllVideoandMovieViewController.swift */; };
 		FE5D08362AA236C2004FA3D9 /* AllVideoandMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D08342AA236C2004FA3D9 /* AllVideoandMovieViewController.xib */; };
+		FE5D083B2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08392AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift */; };
+		FE5D083C2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D083A2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.xib */; };
 		FE5DFF9D2A76A21500E2E345 /* CustomBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFF9C2A76A21500E2E345 /* CustomBarViewController.swift */; };
 		FE5DFF9F2A76A4F500E2E345 /* CustomBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFF9E2A76A4F500E2E345 /* CustomBarRouter.swift */; };
 		FE5DFFA12A76A53E00E2E345 /* CustomBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFFA02A76A53E00E2E345 /* CustomBarViewModel.swift */; };
@@ -285,6 +287,8 @@
 		FE5D082F2AA23691004FA3D9 /* TraillerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TraillerViewController.xib; sourceTree = "<group>"; };
 		FE5D08332AA236C2004FA3D9 /* AllVideoandMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVideoandMovieViewController.swift; sourceTree = "<group>"; };
 		FE5D08342AA236C2004FA3D9 /* AllVideoandMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllVideoandMovieViewController.xib; sourceTree = "<group>"; };
+		FE5D08392AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE5D083A2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE5DFF9C2A76A21500E2E345 /* CustomBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarViewController.swift; sourceTree = "<group>"; };
 		FE5DFF9E2A76A4F500E2E345 /* CustomBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarRouter.swift; sourceTree = "<group>"; };
 		FE5DFFA02A76A53E00E2E345 /* CustomBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarViewModel.swift; sourceTree = "<group>"; };
@@ -869,6 +873,7 @@
 		FE5D08192AA21FED004FA3D9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FE5D08382AA24D5C004FA3D9 /* cell */,
 				FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */,
 				FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */,
 			);
@@ -954,6 +959,15 @@
 				FE5D08342AA236C2004FA3D9 /* AllVideoandMovieViewController.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		FE5D08382AA24D5C004FA3D9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE5D08392AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift */,
+				FE5D083A2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		FE5DFF9B2A76A19400E2E345 /* view */ = {
@@ -1546,6 +1560,7 @@
 				FE7BA9952A5AFE2700344EFB /* AccountViewController.xib in Resources */,
 				FE6E0A402A77FED200DC628F /* LoginViewController.xib in Resources */,
 				FE503B3E2A9A09C100CA9F10 /* headerCollectionReusableView.xib in Resources */,
+				FE5D083C2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.xib in Resources */,
 				FE491ED82AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.xib in Resources */,
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
@@ -1750,6 +1765,7 @@
 				FE440CBA2A5A9ADA00E12C8B /* LoginViewModel.swift in Sources */,
 				FE5893782A8A6FDC00058864 /* DetailMovieRouter.swift in Sources */,
 				FE7D516F2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift in Sources */,
+				FE5D083B2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift in Sources */,
 				FE6A8D7F2A6422F800BEC7BE /* MovieDetailTableViewCell.swift in Sources */,
 				FE33F37A2A6CC68E00A396A1 /* Struct.swift in Sources */,
 				FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */,

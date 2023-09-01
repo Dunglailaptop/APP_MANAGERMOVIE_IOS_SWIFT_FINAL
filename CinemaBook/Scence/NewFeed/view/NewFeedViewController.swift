@@ -19,32 +19,39 @@ class NewFeedViewController: BaseViewController {
     var title_name = ["Tất cả","Phim","Video short","Trailler"]
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.BmoNavigation.viewPager = BmoViewplayer
-                self.BmoNavigation.layer.masksToBounds = true
-                self.BmoViewplayer.presentedPageIndex = 0
-                self.BmoViewplayer.dataSource = self
-                self.BmoViewplayer.delegate = self
-                BmoNavigation.backgroundColor = ColorUtils.gray_6()
-        //        resgisterCollection()
-        //        binđDataTableCollectionView()
-        //
-             
-                BmoViewplayer.reloadData()
-                // Do any additional setup after loading the view.
+        setupBmo()
+         
     
     }
+  
+    func setupBmo() {
+        // Assuming BmoNavigation is your navigation controller and BmoViewplayer is your custom view
+        // Make sure these objects are defined and instantiated correctly
 
+        // Customize the navigation bar appearance using the UINavigationBar appearance proxy
+         self.BmoNavigation.viewPager = BmoViewplayer
+        BmoNavigation.backgroundColor = ColorUtils.gray_6()
+        
+        // Set up BmoViewplayer
+        BmoViewplayer.presentedPageIndex = 0
+        BmoViewplayer.dataSource = self
+        BmoViewplayer.delegate = self
+        BmoViewplayer.reloadData()
+
+    }
      
 }
 extension NewFeedViewController: BmoViewPagerDataSource,BmoViewPagerDelegate {
     func bmoViewPagerDataSourceNumberOfPage(in viewPager: BmoViewPager) -> Int {
            return self.title_name.count
        }
+    
+    
        
        func bmoViewPagerDataSource(_ viewPager: BmoViewPager, viewControllerForPageAt page: Int) -> UIViewController {
            if(page == 0){
-            let pendingOrderManagementViewController = AllVideoandMovieViewController()
-               return pendingOrderManagementViewController
+           let pendingOrderManagementViewController = MovieRouter().viewController
+            return pendingOrderManagementViewController
            }else if(page == 1){
                 let pendingOrderManagementViewController = MovieRouter().viewController
                          return pendingOrderManagementViewController
@@ -70,7 +77,7 @@ extension NewFeedViewController: BmoViewPagerDataSource,BmoViewPagerDelegate {
        func bmoViewPagerDataSourceNaviagtionBarItemHighlightedAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]? {
            return [
                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 12.0),
-               NSAttributedString.Key.foregroundColor : ColorUtils.red_color()
+               NSAttributedString.Key.foregroundColor : ColorUtils.white()
            ]
        }
        
@@ -92,7 +99,7 @@ extension NewFeedViewController: BmoViewPagerDataSource,BmoViewPagerDelegate {
        
        func bmoViewPagerDataSourceNaviagtionBarItemHighlightedBackgroundView(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> UIView? {
            let view = UIView()
-
+            
            // Set the corner radius
               view.layer.cornerRadius = 8.0 // Adjust the value to your desired corner radius
               
@@ -101,7 +108,41 @@ extension NewFeedViewController: BmoViewPagerDataSource,BmoViewPagerDelegate {
               view.frame = CGRect(x: spacing, y: 0, width: navigationBar.bounds.width - (2 * spacing), height: navigationBar.bounds.height)
               
               // Set a background color if needed
-        view.backgroundColor = ColorUtils.blue()
+        view.backgroundColor = UIColor.blue
            return view
        }
+    func bmoViewPagerDataSourceNaviagtionBarItemNormalBackgroundView(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> UIView? {
+        let view = UIView()
+        
+           // Set the corner radius
+         view.layer.cornerRadius = 8.0 // Adjust the value to your desired corner radius
+         
+         // Add spacing around the view by adjusting its frame
+         let spacing: CGFloat = 10.0 // Adjust the value to your desired spacing
+         view.frame = CGRect(x: spacing, y: 0, width: navigationBar.bounds.width - (2 * spacing), height: navigationBar.bounds.height)
+         
+        
+        // Set the background color for the item when it's not selected
+        switch page {
+        case 0:
+            view.backgroundColor = UIColor.white
+        view.layer.borderColor = UIColor.black.cgColor // Background color for item 0 when not selected
+        case 1:
+            view.backgroundColor = UIColor.white
+        view.layer.borderColor = UIColor.black.cgColor // Background color for item 1 when not selected
+        case 2:
+            view.backgroundColor = UIColor.white
+        view.layer.borderColor = UIColor.black.cgColor // Background color for item 2 when not selected
+        case 3:
+            view.backgroundColor = UIColor.white
+        view.layer.borderColor = UIColor.black.cgColor // Background color for item 3 when not selected
+        default:
+            view.backgroundColor = UIColor.white
+            view.layer.borderColor = UIColor.black.cgColor // Background color for other items when not selected
+        }
+        view.layer.borderWidth = 1
+        return view
+    }
+
+    
 }
