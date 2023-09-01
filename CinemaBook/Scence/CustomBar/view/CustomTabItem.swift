@@ -28,7 +28,7 @@ extension CustomTabItem {
             
             return view
         case .newFeed:
-            let view = MapViewController(nibName: "MapViewController", bundle: Bundle.main)
+            let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)
             
             return view
             

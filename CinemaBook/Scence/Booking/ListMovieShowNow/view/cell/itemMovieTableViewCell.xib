@@ -21,25 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h1" translatesAutoresizingMaskIntoConstraints="NO" id="VhR-Ru-NJW">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="149"/>
+                                <rect key="frame" x="10" y="0.0" width="150" height="149"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="YDK-yt-eD4"/>
+                                    <constraint firstAttribute="width" constant="150" id="YDK-yt-eD4"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ten phim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCZ-Lo-NDb">
-                                <rect key="frame" x="110" y="20" width="85" height="24"/>
+                                <rect key="frame" x="170" y="20" width="85" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 thang 8 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mw2-wN-bBi">
-                                <rect key="frame" x="110" y="52" width="115" height="18"/>
+                                <rect key="frame" x="170" y="52" width="115" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 gio 30 phut1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOK-JR-xSB">
-                                <rect key="frame" x="110" y="70" width="96.5" height="18"/>
+                                <rect key="frame" x="170" y="70" width="96.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="BOK-JR-xSB" firstAttribute="top" secondItem="Mw2-wN-bBi" secondAttribute="bottom" id="HJV-Fv-GwC"/>
                             <constraint firstItem="Mw2-wN-bBi" firstAttribute="leading" secondItem="XCZ-Lo-NDb" secondAttribute="leading" id="OTa-p5-Eks"/>
                             <constraint firstItem="fMe-tq-2fE" firstAttribute="centerY" secondItem="4yg-Rz-uGa" secondAttribute="centerY" id="X9E-K3-v4A"/>
-                            <constraint firstItem="VhR-Ru-NJW" firstAttribute="leading" secondItem="4yg-Rz-uGa" secondAttribute="leading" id="Xla-f5-4GR"/>
+                            <constraint firstItem="VhR-Ru-NJW" firstAttribute="leading" secondItem="4yg-Rz-uGa" secondAttribute="leading" constant="10" id="Xla-f5-4GR"/>
                             <constraint firstAttribute="trailing" secondItem="fMe-tq-2fE" secondAttribute="trailing" constant="10" id="Zeh-yZ-DFZ"/>
                             <constraint firstItem="XCZ-Lo-NDb" firstAttribute="top" secondItem="4yg-Rz-uGa" secondAttribute="top" constant="20" id="aNe-wu-aqd"/>
                             <constraint firstItem="XCZ-Lo-NDb" firstAttribute="leading" secondItem="VhR-Ru-NJW" secondAttribute="trailing" constant="10" id="cWz-bN-pRz"/>

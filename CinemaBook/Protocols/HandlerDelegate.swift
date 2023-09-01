@@ -11,3 +11,7 @@ import Foundation
 protocol ChooseCityDelegate {
     func callbackchoosecity(city: String)
 }
+
+protocol  LogoutConfirm {
+    func callbackAccessConfirm()
+}

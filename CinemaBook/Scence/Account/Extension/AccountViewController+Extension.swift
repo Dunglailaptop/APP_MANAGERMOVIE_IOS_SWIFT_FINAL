@@ -11,8 +11,8 @@ import RxSwift
 
 extension AccountViewController {
     func register() {
-        let settingaccountview = UINib(nibName: "SettingforAccountCustomerTableViewCell", bundle: .main)
-        tableView.register(settingaccountview, forCellReuseIdentifier: "SettingforAccountCustomerTableViewCell")
+        let SettingforAccountCustomerTableViewCell = UINib(nibName: "SettingforAccountCustomerTableViewCell", bundle: .main)
+        tableView.register(SettingforAccountCustomerTableViewCell, forCellReuseIdentifier: "SettingforAccountCustomerTableViewCell")
         let LogoutTableViewCell = UINib(nibName: "LogoutTableViewCell", bundle: .main)
                tableView.register(LogoutTableViewCell, forCellReuseIdentifier: "LogoutTableViewCell")
         self.tableView.estimatedRowHeight = 80
@@ -32,7 +32,7 @@ extension AccountViewController {
             case 1:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
                 cell.btn_logout.rx.tap.asDriver().drive(onNext: { [weak self]  in
-                    self?.logout()
+                    self?.presentModalLogout()
                 }).disposed(by: self.rxbag)
                 
                 return cell
@@ -54,4 +54,36 @@ extension AccountViewController: UITableViewDelegate {
             return 0
         }
     }
+}
+extension AccountViewController: LogoutConfirm {
+    func callbackAccessConfirm() {
+        self.logout()
+    }
+    
+    func presentModalLogout() {
+          let logoutview = DialogViewController()
+          logoutview.delegate = self
+        logoutview.view.backgroundColor = ColorUtils.blackTransparent()
+
+              let nav = UINavigationController(rootViewController: logoutview)
+              // 1
+              nav.modalPresentationStyle = .overCurrentContext
+
+////              
+//              // 2
+//              if #available(iOS 15.0, *) {
+//                if let sheet = nav.sheetPresentationController as! UISheet {
+//
+//                      // 3
+//                      sheet.detents = [.large()]
+//
+//                  }
+//              } else {
+//                  // Fallback on earlier versions
+//              }
+//              // 4
+////             
+              present(nav, animated: true, completion: nil)
+
+          }
 }
