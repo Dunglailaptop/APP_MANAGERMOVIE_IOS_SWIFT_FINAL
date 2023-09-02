@@ -23,4 +23,5 @@ pod 'youtube-ios-player-helper'
 pod "QVRWeekView"
 pod 'FSCalendar'
 pod 'BmoViewPager'
+pod 'CHTCollectionViewWaterfallLayout'
 end

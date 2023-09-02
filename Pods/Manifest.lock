@@ -1,6 +1,9 @@
 PODS:
   - Alamofire (4.9.1)
   - BmoViewPager (5.2.0)
+  - CHTCollectionViewWaterfallLayout (0.9.10):
+    - CHTCollectionViewWaterfallLayout/Swift (= 0.9.10)
+  - CHTCollectionViewWaterfallLayout/Swift (0.9.10)
   - FSCalendar (2.8.4)
   - IQKeyboardManager (6.5.12)
   - JonAlert (1.0.0)
@@ -31,6 +34,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - BmoViewPager
+  - CHTCollectionViewWaterfallLayout
   - FSCalendar
   - IQKeyboardManager
   - JonAlert
@@ -50,6 +54,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BmoViewPager
+    - CHTCollectionViewWaterfallLayout
     - FSCalendar
     - IQKeyboardManager
     - JonAlert
@@ -68,6 +73,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BmoViewPager: f06da0dd20d115e2ced117268465230d922624b7
+  CHTCollectionViewWaterfallLayout: b989a459788d7657ac010e03bc0f7eedca95a420
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   IQKeyboardManager: b1fd66ccf7a79095bdcc4a2735231586f744216e
   JonAlert: a83b374ccbf1a14aeb25537d5a3cbe957aac1c2b
@@ -83,6 +89,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 76d0d8d5cb9b681c2acbcfba22274d00e19f2e7f
+PODFILE CHECKSUM: 5067a20052294387140354384b0618134687f408
 
 COCOAPODS: 1.12.1

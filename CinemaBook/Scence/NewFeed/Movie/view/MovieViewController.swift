@@ -13,7 +13,11 @@ import RxSwift
 class MovieViewController: BaseViewController {
 
     @IBOutlet weak var collectionViews: UICollectionView!
+    @IBOutlet weak var height_view_search: NSLayoutConstraint!
     
+    @IBOutlet weak var view_search: UIView!
+    @IBOutlet weak var txt_searchs: UITextField!
+  
     var viewModel = MovieViewModel()
     var router = MovieRouter()
     override func viewDidLoad() {
@@ -25,8 +29,17 @@ class MovieViewController: BaseViewController {
     }
 
 
-   
+    @IBAction func btn_stopsearch(_ sender: Any) {
+        height_view_search.constant = 0
+        txt_searchs.text = ""
+        view_search.isHidden = true
+    }
+    
 
+    @IBAction func btn_search(_ sender: Any) {
+        height_view_search.constant = 250
+        view_search.isHidden = false
+    }
 }
 
 extension MovieViewController {
@@ -40,8 +53,9 @@ extension MovieViewController {
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical
             layout.itemSize = CGSize(width: view.frame.width/2.3, height: 250)
-            layout.minimumLineSpacing = 5
+            layout.minimumLineSpacing = 10
             collectionViews.collectionViewLayout = layout
+            collectionViews.backgroundColor = ColorUtils.gray_6()
             collectionViews.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
             collectionViews.translatesAutoresizingMaskIntoConstraints = false
         }
