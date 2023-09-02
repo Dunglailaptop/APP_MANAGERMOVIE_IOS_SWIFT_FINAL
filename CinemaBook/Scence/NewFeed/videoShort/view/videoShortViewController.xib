@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iXA-5s-jro">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <rect key="frame" x="0.0" y="10" width="414" height="808"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="br6-RB-qzt">
                                 <size key="itemSize" width="128" height="128"/>
@@ -39,7 +39,7 @@
                         <constraint firstAttribute="bottom" secondItem="iXA-5s-jro" secondAttribute="bottom" id="5gU-Lz-xmO"/>
                         <constraint firstAttribute="trailing" secondItem="iXA-5s-jro" secondAttribute="trailing" id="VCQ-nJ-xNr"/>
                         <constraint firstItem="iXA-5s-jro" firstAttribute="leading" secondItem="Bw7-JA-DDt" secondAttribute="leading" id="k4g-Wm-FvQ"/>
-                        <constraint firstItem="iXA-5s-jro" firstAttribute="top" secondItem="Bw7-JA-DDt" secondAttribute="top" id="oZE-ZB-rT9"/>
+                        <constraint firstItem="iXA-5s-jro" firstAttribute="top" secondItem="Bw7-JA-DDt" secondAttribute="top" constant="10" id="oZE-ZB-rT9"/>
                     </constraints>
                 </view>
             </subviews>

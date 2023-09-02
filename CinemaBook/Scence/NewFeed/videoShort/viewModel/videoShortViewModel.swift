@@ -24,6 +24,8 @@ class videoShortViewModel: BaseViewModel
         self.router?.setSourceView(self.view!)
     }
     
- 
+    func makeToDetailVideoShortViewController() {
+        router?.navigationToDetailVideoShortViewController()
+    }
    
 }

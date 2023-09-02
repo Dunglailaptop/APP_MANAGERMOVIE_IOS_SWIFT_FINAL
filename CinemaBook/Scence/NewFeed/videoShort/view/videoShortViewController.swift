@@ -9,7 +9,7 @@
 import UIKit
 
 
-class videoShortViewController: UIViewController {
+class videoShortViewController: BaseViewController {
 
  var viewModel = videoShortViewModel()
     var router = videoShortRouter()

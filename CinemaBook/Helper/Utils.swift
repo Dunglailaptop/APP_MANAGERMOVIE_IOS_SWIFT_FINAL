@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class Utils: NSObject {
     static func getUDID() -> String {
@@ -37,5 +38,21 @@ class Utils: NSObject {
            let day:Int = components.day ?? 01
            
            return String(format: "%02d/%02d/%d", day, month, year)
+       }
+    
+    func setupvideo(url:String,type:Int,view:UIView!) {
+      
+           let videoUrl = URL(string:url)
+                   let player = AVPlayer(url: videoUrl!)
+                   let playerplay = AVPlayerLayer(player: player)
+                playerplay.frame = view.bounds
+           playerplay.videoGravity = .resizeAspectFill
+                view.layer.addSublayer(playerplay)
+           if type == 0 {
+                player.pause()
+           } else {
+               player.play()
+           }
+               
        }
 }

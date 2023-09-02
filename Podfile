@@ -26,5 +26,6 @@ pod 'BmoViewPager'
 pod 'CHTCollectionViewWaterfallLayout'
 pod 'CollectionViewSlantedLayout', '~> 3.1'
 pod 'SquareFlowLayout'
-
+ pod 'FSPagerView'
+pod 'PagingCollectionViewLayout'
 end

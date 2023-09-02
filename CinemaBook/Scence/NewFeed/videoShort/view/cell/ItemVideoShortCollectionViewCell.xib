@@ -11,15 +11,38 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ItemVideoShortCollectionViewCell" customModule="CinemaBook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="625-Vz-PeY">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-youtube-red" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-D1-Cmx">
+                                <rect key="frame" x="85" y="85" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qaq-hy-hbg"/>
+                                    <constraint firstAttribute="width" constant="30" id="zBt-vW-wOd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zze-Pu-5FE">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fJo-D1-Cmx" firstAttribute="centerX" secondItem="625-Vz-PeY" secondAttribute="centerX" id="6RD-B3-Qnm"/>
+                            <constraint firstAttribute="bottom" secondItem="Zze-Pu-5FE" secondAttribute="bottom" id="Iyq-sI-mSO"/>
+                            <constraint firstItem="fJo-D1-Cmx" firstAttribute="centerY" secondItem="625-Vz-PeY" secondAttribute="centerY" id="KjI-yW-PRS"/>
+                            <constraint firstItem="Zze-Pu-5FE" firstAttribute="top" secondItem="625-Vz-PeY" secondAttribute="top" id="Qq3-i5-mje"/>
+                            <constraint firstAttribute="trailing" secondItem="Zze-Pu-5FE" secondAttribute="trailing" id="cOa-Nr-pHg"/>
+                            <constraint firstItem="Zze-Pu-5FE" firstAttribute="leading" secondItem="625-Vz-PeY" secondAttribute="leading" id="fpL-hG-hgz"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -31,9 +54,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
+                <outlet property="btn_makeToDetailVideoShortViewController" destination="Zze-Pu-5FE" id="A9O-io-PsB"/>
                 <outlet property="playview" destination="625-Vz-PeY" id="tJJ-KR-T2p"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="icon-youtube-red" width="49" height="49"/>
+    </resources>
 </document>

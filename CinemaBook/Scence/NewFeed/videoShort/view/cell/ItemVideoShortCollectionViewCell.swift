@@ -12,23 +12,15 @@ import AVFoundation
 
 class ItemVideoShortCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var btn_makeToDetailVideoShortViewController: UIButton!
     @IBOutlet weak var playview: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       setupvideo()
+        Utils().setupvideo(url: "http://localhost:5062/Uploads/Movie/videotest.mp4/videotest.mp4", type: 0,view: playview)
     }
     
-    func setupvideo() {
    
-        let videoUrl = URL(string:"http://localhost:5062/Uploads/Movie/videotest.mp4/videotest.mp4")
-                let player = AVPlayer(url: videoUrl!)
-                let playerplay = AVPlayerLayer(player: player)
-             playerplay.frame = self.playview.bounds
-        playerplay.videoGravity = .resizeAspectFill
-             self.playview.layer.addSublayer(playerplay)
-             player.pause()
-    }
 
     var data:String = "" {
         didSet {

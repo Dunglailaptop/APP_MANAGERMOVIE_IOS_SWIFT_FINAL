@@ -6,6 +6,7 @@ PODS:
   - CHTCollectionViewWaterfallLayout/Swift (0.9.10)
   - CollectionViewSlantedLayout (3.1.1)
   - FSCalendar (2.8.4)
+  - FSPagerView (0.8.3)
   - IQKeyboardManager (6.5.12)
   - JonAlert (1.0.0)
   - Kingfisher (5.15.0):
@@ -20,6 +21,7 @@ PODS:
     - Moya/Core
     - RxSwift (~> 4.0)
   - ObjectMapper (4.2.0)
+  - PagingCollectionViewLayout (0.0.4)
   - QVRWeekView (0.14.1)
   - Result (4.1.0)
   - RxCocoa (4.5.0):
@@ -39,12 +41,14 @@ DEPENDENCIES:
   - CHTCollectionViewWaterfallLayout
   - CollectionViewSlantedLayout (~> 3.1)
   - FSCalendar
+  - FSPagerView
   - IQKeyboardManager
   - JonAlert
   - Kingfisher (= 5.15.0)
   - Moya
   - Moya/RxSwift
   - ObjectMapper
+  - PagingCollectionViewLayout
   - QVRWeekView
   - RxCocoa (= 4.5)
   - RxGesture
@@ -61,11 +65,13 @@ SPEC REPOS:
     - CHTCollectionViewWaterfallLayout
     - CollectionViewSlantedLayout
     - FSCalendar
+    - FSPagerView
     - IQKeyboardManager
     - JonAlert
     - Kingfisher
     - Moya
     - ObjectMapper
+    - PagingCollectionViewLayout
     - QVRWeekView
     - Result
     - RxCocoa
@@ -82,11 +88,13 @@ SPEC CHECKSUMS:
   CHTCollectionViewWaterfallLayout: b989a459788d7657ac010e03bc0f7eedca95a420
   CollectionViewSlantedLayout: 24397455acd2461960bc45d394e0ef99c17d03ce
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   IQKeyboardManager: b1fd66ccf7a79095bdcc4a2735231586f744216e
   JonAlert: a83b374ccbf1a14aeb25537d5a3cbe957aac1c2b
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PagingCollectionViewLayout: a75339d9fe45affc116b6770f37c884a8a5e9cd9
   QVRWeekView: 8b68e870e17bd970f44a5a2017e0bd031c825af3
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
@@ -97,6 +105,6 @@ SPEC CHECKSUMS:
   SquareFlowLayout: cde3486d3086fb7f95b303d9b90bb86aa9dd98b5
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: d3da7ff41b639b95c7a0dc4903f8393b2c6b94c6
+PODFILE CHECKSUM: 40430c0966f509e4862d922c68ae80a5dd00f1d5
 
 COCOAPODS: 1.12.1

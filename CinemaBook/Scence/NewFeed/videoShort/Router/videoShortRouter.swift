@@ -26,6 +26,9 @@ class videoShortRouter {
     }
     
    
-     
+    func navigationToDetailVideoShortViewController() {
+        let DetailVideoShortViewController = DetailVideoShortRouter().viewController
+        sourceView?.navigationController?.pushViewController(DetailVideoShortViewController, animated: true)
+    }
   
 }
