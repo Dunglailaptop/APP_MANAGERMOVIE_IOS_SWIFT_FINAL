@@ -15,7 +15,7 @@ extension videoShortViewController {
     func register() {
         let itemvideoCollectionViewCell = UINib(nibName: "ItemVideoShortCollectionViewCell", bundle: .main)
         collectionView.register(itemvideoCollectionViewCell,forCellWithReuseIdentifier: "ItemVideoShortCollectionViewCell")
-//        collectionView.rx.setDelegate(self).disposed(by: rxbag)
+       
         setupCollectionView()
     }
     
@@ -31,8 +31,11 @@ extension videoShortViewController {
     
     func bindingCollectionViewCell() {
         viewModel.dataArray.bind(to: collectionView.rx.items(cellIdentifier: "ItemVideoShortCollectionViewCell", cellType: ItemVideoShortCollectionViewCell.self)) { (index,data,cell) in
-            
+          
             
         }
     }
+}
+extension videoShortViewController: UICollectionViewDelegate {
+   
 }
