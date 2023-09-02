@@ -835,8 +835,8 @@
             filePath = "CinemaBook/Scence/NewFeed/videoShort/Extension/videoShortViewController+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "bindingCollectionViewCell()"
             landmarkType = "7">
             <Locations>

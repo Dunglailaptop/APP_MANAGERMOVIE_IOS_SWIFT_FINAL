@@ -9,7 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
-import CHTCollectionViewWaterfallLayout
+import SquareFlowLayout
 
 extension videoShortViewController {
     func register() {
@@ -21,15 +21,12 @@ extension videoShortViewController {
     
     func setupCollectionView() {
            // Create a waterfall layout
-                let layout = CHTCollectionViewWaterfallLayout()
-
-                // Change individual layout attributes for the spacing between cells
-                layout.minimumColumnSpacing = 3.0
-                layout.minimumInteritemSpacing = 3.0
-
+                let layout = SquareFlowLayout()
+       
+            
                 // Set the waterfall layout to your collection view
                 self.collectionView.collectionViewLayout = layout
-          collectionView.delegate = self
+         
     }
     
     func bindingCollectionViewCell() {
@@ -37,14 +34,5 @@ extension videoShortViewController {
             
             
         }
-    }
-}
-extension videoShortViewController: UICollectionViewDelegate, CHTCollectionViewDelegateWaterfallLayout {
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         
-        return CGSize(width: view.frame.size.width/2, height: CGFloat.random(in: 300...600))
-      }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, columnCountFor section: Int) -> Int {
-        return 2
     }
 }

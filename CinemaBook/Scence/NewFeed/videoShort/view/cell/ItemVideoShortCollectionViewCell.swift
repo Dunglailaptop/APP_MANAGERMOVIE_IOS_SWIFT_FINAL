@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class ItemVideoShortCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var playview: YTPlayerView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setupvideo(url:String) {
+        playview.loadVideo(byURL: "", startSeconds: 3)
     }
 
 }

@@ -24,4 +24,7 @@ pod "QVRWeekView"
 pod 'FSCalendar'
 pod 'BmoViewPager'
 pod 'CHTCollectionViewWaterfallLayout'
+pod 'CollectionViewSlantedLayout', '~> 3.1'
+pod 'SquareFlowLayout'
+
 end

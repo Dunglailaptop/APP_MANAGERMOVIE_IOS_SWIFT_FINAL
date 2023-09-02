@@ -17,22 +17,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h2" translatesAutoresizingMaskIntoConstraints="NO" id="fv3-t9-FE1">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="625-Vz-PeY" customClass="YTPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                    </imageView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fv3-t9-FE1" secondAttribute="bottom" id="OVY-3t-v3f"/>
-                <constraint firstItem="fv3-t9-FE1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XGb-Ln-6ej"/>
-                <constraint firstItem="fv3-t9-FE1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mlr-iP-DxF"/>
-                <constraint firstAttribute="trailing" secondItem="fv3-t9-FE1" secondAttribute="trailing" id="zyB-6V-5nx"/>
+                <constraint firstAttribute="trailing" secondItem="625-Vz-PeY" secondAttribute="trailing" id="5hM-rF-ysQ"/>
+                <constraint firstItem="625-Vz-PeY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Lt7-ge-tk1"/>
+                <constraint firstItem="625-Vz-PeY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bxv-U2-Ubb"/>
+                <constraint firstAttribute="bottom" secondItem="625-Vz-PeY" secondAttribute="bottom" id="xDo-wf-TSB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="playview" destination="625-Vz-PeY" id="YKH-ff-FQg"/>
+            </connections>
             <point key="canvasLocation" x="132" y="110"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="h2" width="132" height="179"/>
-    </resources>
 </document>

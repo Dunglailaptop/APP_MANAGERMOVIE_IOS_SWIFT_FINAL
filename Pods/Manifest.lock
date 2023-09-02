@@ -4,6 +4,7 @@ PODS:
   - CHTCollectionViewWaterfallLayout (0.9.10):
     - CHTCollectionViewWaterfallLayout/Swift (= 0.9.10)
   - CHTCollectionViewWaterfallLayout/Swift (0.9.10)
+  - CollectionViewSlantedLayout (3.1.1)
   - FSCalendar (2.8.4)
   - IQKeyboardManager (6.5.12)
   - JonAlert (1.0.0)
@@ -29,12 +30,14 @@ PODS:
   - RxSwift (4.5.0)
   - SKPhotoBrowser (7.1.0)
   - SnapKit (5.6.0)
+  - SquareFlowLayout (0.0.1)
   - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
   - BmoViewPager
   - CHTCollectionViewWaterfallLayout
+  - CollectionViewSlantedLayout (~> 3.1)
   - FSCalendar
   - IQKeyboardManager
   - JonAlert
@@ -48,6 +51,7 @@ DEPENDENCIES:
   - RxSwift (= 4.5)
   - SKPhotoBrowser
   - SnapKit
+  - SquareFlowLayout
   - youtube-ios-player-helper
 
 SPEC REPOS:
@@ -55,6 +59,7 @@ SPEC REPOS:
     - Alamofire
     - BmoViewPager
     - CHTCollectionViewWaterfallLayout
+    - CollectionViewSlantedLayout
     - FSCalendar
     - IQKeyboardManager
     - JonAlert
@@ -68,12 +73,14 @@ SPEC REPOS:
     - RxSwift
     - SKPhotoBrowser
     - SnapKit
+    - SquareFlowLayout
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BmoViewPager: f06da0dd20d115e2ced117268465230d922624b7
   CHTCollectionViewWaterfallLayout: b989a459788d7657ac010e03bc0f7eedca95a420
+  CollectionViewSlantedLayout: 24397455acd2461960bc45d394e0ef99c17d03ce
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   IQKeyboardManager: b1fd66ccf7a79095bdcc4a2735231586f744216e
   JonAlert: a83b374ccbf1a14aeb25537d5a3cbe957aac1c2b
@@ -87,8 +94,9 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SKPhotoBrowser: cd95b95a6f352fc2a50992721299f75ead77f9ab
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SquareFlowLayout: cde3486d3086fb7f95b303d9b90bb86aa9dd98b5
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 5067a20052294387140354384b0618134687f408
+PODFILE CHECKSUM: d3da7ff41b639b95c7a0dc4903f8393b2c6b94c6
 
 COCOAPODS: 1.12.1
