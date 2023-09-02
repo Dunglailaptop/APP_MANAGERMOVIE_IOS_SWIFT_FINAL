@@ -28,4 +28,5 @@ pod 'CollectionViewSlantedLayout', '~> 3.1'
 pod 'SquareFlowLayout'
  pod 'FSPagerView'
 pod 'PagingCollectionViewLayout'
+pod "MWPhotoBrowser"
 end

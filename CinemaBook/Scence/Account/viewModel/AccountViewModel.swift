@@ -19,5 +19,8 @@ class AccountViewModel{
     func maketoLoginViewController() {
         router?.navigationToLoginViewController()
     }
+    func makeToAccountInfoViewController() {
+        router?.navigationToAccountInfoViewController()
+    }
 }
 

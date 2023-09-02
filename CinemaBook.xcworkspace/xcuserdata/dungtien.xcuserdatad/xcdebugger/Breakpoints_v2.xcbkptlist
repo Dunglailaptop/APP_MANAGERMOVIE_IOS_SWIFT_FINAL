@@ -477,23 +477,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D50C3D7B-E592-41ED-BA68-A8D84B37F8B1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CinemaBook/Scence/Account/view/AccountViewController.swift"
-            timestampString = "714205939.257215"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "btn_actionlogout(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4B80948C-8F3C-4E26-9F88-62D46F477DC2"
             shouldBeEnabled = "No"
             ignoreCount = "0"

@@ -33,20 +33,13 @@ class AccountViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
-
-    @IBAction func btn_actionlogout(_ sender: Any) {
-    
-//        self.remove()
-        self.logout()
-//        let view = LoginViewController();
-//        self.navigationController?.pushViewController(view, animated: true)
-//        self.logout()
-//        self.viewModel.maketoLoginViewController()
-    }
     
     func setup(){
         lbl_name.text = ManageCacheObject.getCurrentUserInfo().fullname
         avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: ManageCacheObject.getCurrentUserInfo().avatar)), placeholder:  UIImage(named: "image_defauft_medium"))
     }
     
+    @IBAction func bnt_makeToAccountinfoviewcontroller(_ sender: Any) {
+        viewModel.makeToAccountInfoViewController()
+    }
 }

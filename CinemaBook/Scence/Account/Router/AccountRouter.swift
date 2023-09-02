@@ -26,6 +26,10 @@ class AccountRouter {
         sourceView?.navigationController?.pushViewController(LoginViewController, animated: true)
     }
     
+    func navigationToAccountInfoViewController() {
+        let accountinfoview = AccountInfoRouter().viewController
+        sourceView?.navigationController?.pushViewController(accountinfoview, animated: true)
+    }
     
 }
 
