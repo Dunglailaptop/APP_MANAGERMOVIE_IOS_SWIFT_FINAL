@@ -825,5 +825,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5287BB2E-10FD-41A7-AD3F-8E1C5516314B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/NewFeed/videoShort/Extension/videoShortViewController+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "bindingCollectionViewCell()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5287BB2E-10FD-41A7-AD3F-8E1C5516314B - f595ea02d550eea8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.videoShortViewController.bindingCollectionViewCell() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dungtien/Desktop/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook_branch/CinemaBook/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook/Scence/NewFeed/videoShort/Extension/videoShortViewController+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "955">
+               </Location>
+               <Location
+                  uuid = "5287BB2E-10FD-41A7-AD3F-8E1C5516314B - 8987b3680505a92b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, Swift.Int, CinemaBook.ItemVideoShortCollectionViewCell) -&gt; () in CinemaBook.videoShortViewController.bindingCollectionViewCell() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dungtien/Desktop/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook_branch/CinemaBook/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook/Scence/NewFeed/videoShort/Extension/videoShortViewController+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

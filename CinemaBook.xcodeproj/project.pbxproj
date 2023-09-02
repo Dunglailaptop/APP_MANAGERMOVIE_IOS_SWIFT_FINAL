@@ -91,6 +91,11 @@
 		FE5893782A8A6FDC00058864 /* DetailMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5893772A8A6FDC00058864 /* DetailMovieRouter.swift */; };
 		FE58937A2A8A6FF700058864 /* DetailMovieviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5893792A8A6FF700058864 /* DetailMovieviewModel.swift */; };
 		FE58937E2A8A725000058864 /* BookingTicketViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58937C2A8A724D00058864 /* BookingTicketViewController+Extension.swift */; };
+		FE5C1D202AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D1E2AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.swift */; };
+		FE5C1D212AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5C1D1F2AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib */; };
+		FE5C1D242AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D232AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift */; };
+		FE5C1D272AA2E11600F9B3E5 /* videoShortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D262AA2E11600F9B3E5 /* videoShortViewModel.swift */; };
+		FE5C1D2A2AA2E15300F9B3E5 /* videoShortRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */; };
 		FE5D081E2AA22019004FA3D9 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */; };
 		FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */; };
 		FE5D08232AA2337E004FA3D9 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08222AA2337E004FA3D9 /* MovieViewModel.swift */; };
@@ -277,6 +282,11 @@
 		FE5893772A8A6FDC00058864 /* DetailMovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieRouter.swift; sourceTree = "<group>"; };
 		FE5893792A8A6FF700058864 /* DetailMovieviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieviewModel.swift; sourceTree = "<group>"; };
 		FE58937C2A8A724D00058864 /* BookingTicketViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookingTicketViewController+Extension.swift"; sourceTree = "<group>"; };
+		FE5C1D1E2AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVideoShortCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE5C1D1F2AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemVideoShortCollectionViewCell.xib; sourceTree = "<group>"; };
+		FE5C1D232AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "videoShortViewController+Extension.swift"; sourceTree = "<group>"; };
+		FE5C1D262AA2E11600F9B3E5 /* videoShortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoShortViewModel.swift; sourceTree = "<group>"; };
+		FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoShortRouter.swift; sourceTree = "<group>"; };
 		FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		FE5D08222AA2337E004FA3D9 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
@@ -860,6 +870,39 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FE5C1D1D2AA2DE6E00F9B3E5 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C1D1E2AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.swift */,
+				FE5C1D1F2AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		FE5C1D222AA2DFAE00F9B3E5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C1D232AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FE5C1D252AA2E10000F9B3E5 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C1D262AA2E11600F9B3E5 /* videoShortViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FE5C1D282AA2E14100F9B3E5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FE5D08182AA21FE2004FA3D9 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +956,9 @@
 		FE5D08262AA2365A004FA3D9 /* videoShort */ = {
 			isa = PBXGroup;
 			children = (
+				FE5C1D282AA2E14100F9B3E5 /* Router */,
+				FE5C1D252AA2E10000F9B3E5 /* viewModel */,
+				FE5C1D222AA2DFAE00F9B3E5 /* Extension */,
 				FE5D08272AA23666004FA3D9 /* view */,
 			);
 			path = videoShort;
@@ -921,6 +967,7 @@
 		FE5D08272AA23666004FA3D9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FE5C1D1D2AA2DE6E00F9B3E5 /* cell */,
 				FE5D08282AA23676004FA3D9 /* videoShortViewController.swift */,
 				FE5D08292AA23676004FA3D9 /* videoShortViewController.xib */,
 			);
@@ -1552,6 +1599,7 @@
 				FE69A8AA2AA1A2C90017D891 /* NewFeedViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
 				FE69A8A62AA1909F0017D891 /* DialogViewController.xib in Resources */,
+				FE5C1D212AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib in Resources */,
 				FE4EE4542A9CF297008E7F1D /* DatePickerRowTableViewCell.xib in Resources */,
 				FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */,
 				FE502C942A9BA41E00779055 /* TimeShowViewController.xib in Resources */,
@@ -1697,9 +1745,11 @@
 				FE5096592A76538A00F5A457 /* SplachScreenRouter.swift in Sources */,
 				FE6EE71B2A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift in Sources */,
 				FE7BA9882A5AFDE500344EFB /* SalesViewController.swift in Sources */,
+				FE5C1D242AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift in Sources */,
 				FEEF09552A9500C900756BC8 /* VideoViewController.swift in Sources */,
 				FED6A4552A761003000E1BCD /* Config.swift in Sources */,
 				FE503B3D2A9A09C100CA9F10 /* headerCollectionReusableView.swift in Sources */,
+				FE5C1D2A2AA2E15300F9B3E5 /* videoShortRouter.swift in Sources */,
 				FE5276EA2A8D07D900252843 /* BookingChairRouter.swift in Sources */,
 				FE33F38F2A6CC76B00A396A1 /* Toast.swift in Sources */,
 				FE639D5C2A96422E003F618F /* videoViewModel.swift in Sources */,
@@ -1707,6 +1757,7 @@
 				FE51042C2A9312BB000D9CCD /* DetailMovieViewController+Extension.swift in Sources */,
 				FE4EE4602A9CF8A2008E7F1D /* TimeShowViewController+Extension.swift in Sources */,
 				FE639D5A2A9641DE003F618F /* videoRouter.swift in Sources */,
+				FE5C1D272AA2E11600F9B3E5 /* videoShortViewModel.swift in Sources */,
 				FE33F38D2A6CC76B00A396A1 /* Observable+ObjectMapper.swift in Sources */,
 				FE97D8A22A76C7AD00D223C9 /* ExUIViewController(1).swift in Sources */,
 				FE5DFF9F2A76A4F500E2E345 /* CustomBarRouter.swift in Sources */,
@@ -1755,6 +1806,7 @@
 				FE33F3972A6CC77500A396A1 /* LTActivityIndicatorView.swift in Sources */,
 				FE33F3812A6CC73300A396A1 /* ColorUtils.swift in Sources */,
 				FEFCF4392A76B7E90023B4D1 /* UIImageView+Extension.swift in Sources */,
+				FE5C1D202AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.swift in Sources */,
 				FEAC96982A5A55CC00B49C80 /* AppDelegate.swift in Sources */,
 				FE7460052A7EB8B00091C0FA /* MovieItemTableViewCell.swift in Sources */,
 				FE745FF72A7EB0210091C0FA /* TicketRouter.swift in Sources */,

@@ -56,7 +56,7 @@ extension NewFeedViewController: BmoViewPagerDataSource,BmoViewPagerDelegate {
                 let pendingOrderManagementViewController = MovieRouter().viewController
                          return pendingOrderManagementViewController
            }else if(page == 2){
-                let pendingOrderManagementViewController = videoShortViewController()
+            let pendingOrderManagementViewController = videoShortRouter().viewController
                          return pendingOrderManagementViewController
            }else if(page == 3){
             let pendingOrderManagementViewController = TraillerViewController()
