@@ -13,7 +13,7 @@ target 'CinemaBook' do
    pod 'JonAlert'
   pod 'IQKeyboardManager'
   pod 'Moya/RxSwift'
- pod 'Alamofire' 
+  pod 'Alamofire' 
 pod 'Moya'
 pod 'RxGesture'
 pod 'SnapKit'

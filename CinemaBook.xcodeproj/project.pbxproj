@@ -107,6 +107,7 @@
 		FE5C1D242AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D232AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift */; };
 		FE5C1D272AA2E11600F9B3E5 /* videoShortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D262AA2E11600F9B3E5 /* videoShortViewModel.swift */; };
 		FE5C1D2A2AA2E15300F9B3E5 /* videoShortRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */; };
+		FE5C6B892AA4D09000852DBE /* Medias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C6B882AA4D09000852DBE /* Medias.swift */; };
 		FE5C9E372AA4231C00FA235D /* AccountInfoViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E362AA4231C00FA235D /* AccountInfoViewController+Extension.swift */; };
 		FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E542AA427BA00FA235D /* SambagYearPickerViewController.swift */; };
 		FE5C9E612AA427BB00FA235D /* SambagYearPickerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E552AA427BA00FA235D /* SambagYearPickerResult.swift */; };
@@ -340,6 +341,7 @@
 		FE5C1D232AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "videoShortViewController+Extension.swift"; sourceTree = "<group>"; };
 		FE5C1D262AA2E11600F9B3E5 /* videoShortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoShortViewModel.swift; sourceTree = "<group>"; };
 		FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoShortRouter.swift; sourceTree = "<group>"; };
+		FE5C6B882AA4D09000852DBE /* Medias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medias.swift; sourceTree = "<group>"; };
 		FE5C9E362AA4231C00FA235D /* AccountInfoViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountInfoViewController+Extension.swift"; sourceTree = "<group>"; };
 		FE5C9E542AA427BA00FA235D /* SambagYearPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagYearPickerViewController.swift; sourceTree = "<group>"; };
 		FE5C9E552AA427BA00FA235D /* SambagYearPickerResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagYearPickerResult.swift; sourceTree = "<group>"; };
@@ -1558,6 +1560,7 @@
 				FED6A4562A7614FF000E1BCD /* EmployeeInfo.swift */,
 				FE745FF82A7EB30D0091C0FA /* Movie.swift */,
 				FE74CE122A91C46F0069259C /* Users.swift */,
+				FE5C6B882AA4D09000852DBE /* Medias.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2064,6 +2067,7 @@
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
 				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
+				FE5C6B892AA4D09000852DBE /* Medias.swift in Sources */,
 				FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */,
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				FE4EE4532A9CF297008E7F1D /* DatePickerRowTableViewCell.swift in Sources */,

@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 import AVFoundation
+import AVKit
+import Photos
 
 class Utils: NSObject {
     static func getUDID() -> String {
@@ -25,8 +27,8 @@ class Utils: NSObject {
         return 0
     }
     static func getFullMediaLink(string:String) -> String {
-        dLog(("http://localhost:5062/" + string).encodeUrl()!)
-        return ("http://localhost:5062/" + string).encodeUrl()!
+        dLog(("http://localhost:5062/Uploads/Movie/" + string).encodeUrl()!)
+        return ("http://localhost:5062/Uploads/Movie/" + string).encodeUrl()!
     }
     static func getCurrentDateString() -> String{
            let date = Date()
@@ -55,4 +57,41 @@ class Utils: NSObject {
            }
                
        }
+    /// Lấy tên nguyên bản trên thiết bị của ảnh
+       static func getImageFullName(asset: PHAsset) -> String {
+           let resources = PHAssetResource.assetResources(for: asset)
+           
+           if let resource = resources.first {
+               let fullName = resource.originalFilename
+               return fullName
+           }
+           
+           return ""
+       }
+   func fetchAsset(for filename: String, completion: @escaping (PHAsset?) -> Void) {
+       let fetchOptions = PHFetchOptions()
+       fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+       
+       let fetchResult = PHAsset.fetchAssets(with: fetchOptions)
+       
+       for index in 0..<fetchResult.count {
+           let asset = fetchResult.object(at: index)
+           if let resources = PHAssetResource.assetResources(for: asset).first,
+              resources.originalFilename == filename {
+               completion(asset)
+               return
+           }
+       }
+       
+       completion(nil)
+   }
+
+
+    func getImageData(for asset: PHAsset) -> Data? {
+        var imageData: Data?
+        PHImageManager.default().requestImageData(for: asset, options: nil) { (data, _, _, _) in
+            imageData = data
+        }
+        return imageData
+    }
 }

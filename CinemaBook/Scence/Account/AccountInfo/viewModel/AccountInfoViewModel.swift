@@ -29,3 +29,14 @@ class AccountInfoViewModel: BaseViewModel{
     }
   
 }
+extension AccountInfoViewModel {
+   
+         func postUpdateAccount() -> Observable<APIResponse> {
+            return appServiceProvider.rx.request(.UpdateAccount(iduser: dataArray.value.idusers, Fullname: dataArray.value.fullname, Email: dataArray.value.email, Phone: dataArray.value.phone, Birthday: dataArray.value.birthday, avatar: dataArray.value.avatar))
+                   .filterSuccessfulStatusCodes()
+                   .mapJSON().asObservable()
+                   .showAPIErrorToast()
+                   .mapObject(type: APIResponse.self)
+           }
+    
+}

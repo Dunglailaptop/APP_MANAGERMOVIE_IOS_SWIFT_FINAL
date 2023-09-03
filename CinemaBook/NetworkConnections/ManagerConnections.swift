@@ -17,6 +17,7 @@ enum ManagerConnections {
     case config(username:String)
     case Moive(page:Int,limit:Int)
     case MovieDetail(idmovie:Int)
+    case UpdateAccount(iduser:Int,Fullname:String,Email:String,Phone:String,Birthday:String,avatar:String)
 }
 
 extension ManagerConnections: TargetType {
@@ -39,6 +40,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlMovie
         case .MovieDetail(let idmovie):
              return APIEndPoint.Name.urlDetail
+        case .UpdateAccount(_,_,_,_,_,_):
+            return APIEndPoint.Name.urlUpdateAccount
         }
     
     }
@@ -52,6 +55,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .MovieDetail(_):
             return .get
+        case .UpdateAccount(_,_,_,_,_,_):
+            return .post
         }
 
         
@@ -87,8 +92,10 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .Moive(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-            case .MovieDetail(_):
-                    return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .MovieDetail(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .UpdateAccount(_,_,_,_,_,_):
+                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -106,6 +113,15 @@ extension ManagerConnections: TargetType {
             ]
         case .MovieDetail(let idmovie):
             return ["Idmovie":idmovie]
+        case .UpdateAccount(let iduser,let Fullname,let Email,let Phone, let Birthday,let avatar):
+            return [
+              "Idusers": iduser,
+              "Fullname": Fullname,
+              "Email": Email,
+              "Phone": Phone,
+              "Birthday": Birthday,
+              "avatar": avatar
+            ]
         }
     }
     private func encoding(_ httpMethod: HTTPMethod) ->
@@ -125,8 +141,10 @@ extension ManagerConnections: TargetType {
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .Moive(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-            case .MovieDetail(_):
-                       return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .MovieDetail(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .UpdateAccount(_,_,_,_,_,_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

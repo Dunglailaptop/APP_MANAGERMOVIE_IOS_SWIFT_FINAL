@@ -15,7 +15,9 @@ class AccountInfoViewController: BaseViewController {
     var viewModel = AccountInfoViewModel()
     var router = AccountInfoRouter()
     var userinfo = Users()
-    
+    var imagecover = [UIImage]()
+     var selectedAssets = [PHAsset]()
+    var nameImage: [String] = []
     
     @IBOutlet weak var txt_email: UITextField!
     @IBOutlet weak var txt_username: UITextField!
@@ -42,5 +44,14 @@ class AccountInfoViewController: BaseViewController {
 
     @IBAction func btn_makePopToViewController(_ sender: Any) {
         viewModel.makePopToViewController()
+    }
+    
+    @IBAction func btn_updateAccount(_ sender: Any) {
+        if imagecover.count > 0 {
+            self.postUpdateWithAvatar()
+        }else {
+              self.postUpdateAccount()
+        }
+      
     }
 }
