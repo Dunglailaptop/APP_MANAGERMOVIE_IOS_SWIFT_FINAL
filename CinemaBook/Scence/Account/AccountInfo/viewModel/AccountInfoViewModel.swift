@@ -15,13 +15,17 @@ class AccountInfoViewModel: BaseViewModel{
     private(set) weak var view: AccountInfoViewController?
     private var router: AccountInfoRouter?
     
-    public var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1])
+    public var dataArray: BehaviorRelay<Users> = BehaviorRelay(value: Users())
+    
+    
     
     func bind(view: AccountInfoViewController, router: AccountInfoRouter){
         self.view = view
         self.router = router
         self.router?.setSourceView(self.view)
     }
-    
+    func makePopToViewController() {
+        router?.navigationPopToViewController()
+    }
   
 }

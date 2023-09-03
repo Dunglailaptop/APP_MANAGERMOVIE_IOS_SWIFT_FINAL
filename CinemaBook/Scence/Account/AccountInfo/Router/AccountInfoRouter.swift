@@ -24,7 +24,9 @@ class AccountInfoRouter {
         self.sourceView = view
     }
     
-    
+    func navigationPopToViewController() {
+        sourceView?.navigationController?.popViewController(animated: true)
+    }
   
     
 }

@@ -107,6 +107,37 @@
 		FE5C1D242AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D232AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift */; };
 		FE5C1D272AA2E11600F9B3E5 /* videoShortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D262AA2E11600F9B3E5 /* videoShortViewModel.swift */; };
 		FE5C1D2A2AA2E15300F9B3E5 /* videoShortRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */; };
+		FE5C9E372AA4231C00FA235D /* AccountInfoViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E362AA4231C00FA235D /* AccountInfoViewController+Extension.swift */; };
+		FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E542AA427BA00FA235D /* SambagYearPickerViewController.swift */; };
+		FE5C9E612AA427BB00FA235D /* SambagYearPickerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E552AA427BA00FA235D /* SambagYearPickerResult.swift */; };
+		FE5C9E622AA427BB00FA235D /* SambagMonthYearPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E562AA427BA00FA235D /* SambagMonthYearPickerViewController.swift */; };
+		FE5C9E632AA427BB00FA235D /* AlphaTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E572AA427BA00FA235D /* AlphaTransitioning.swift */; };
+		FE5C9E642AA427BB00FA235D /* SambagTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E582AA427BA00FA235D /* SambagTimePickerViewController.swift */; };
+		FE5C9E652AA427BB00FA235D /* WheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E592AA427BB00FA235D /* WheelViewController.swift */; };
+		FE5C9E662AA427BB00FA235D /* SambagTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E5A2AA427BB00FA235D /* SambagTheme.swift */; };
+		FE5C9E672AA427BB00FA235D /* SambagMonthYearPickerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E5B2AA427BB00FA235D /* SambagMonthYearPickerResult.swift */; };
+		FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E5C2AA427BB00FA235D /* SambagSelectionLimit.swift */; };
+		FE5C9E692AA427BB00FA235D /* TimeMeridian.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E5D2AA427BB00FA235D /* TimeMeridian.swift */; };
+		FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E5E2AA427BB00FA235D /* SambagTimePickerResult.swift */; };
+		FE5C9E6B2AA427BB00FA235D /* SambagDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E5F2AA427BB00FA235D /* SambagDatePickerViewController.swift */; };
+		FE5C9E6D2AA428CC00FA235D /* SambagDatePickerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E6C2AA428CC00FA235D /* SambagDatePickerResult.swift */; };
+		FE5C9E6F2AA42B6A00FA235D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C9E6E2AA42B6A00FA235D /* UIColorExtension.swift */; };
+		FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E712AA42BE300FA235D /* Roboto-Medium.ttf */; };
+		FE5C9E822AA42BE300FA235D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E722AA42BE300FA235D /* Roboto-Light.ttf */; };
+		FE5C9E832AA42BE300FA235D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E732AA42BE300FA235D /* Roboto-Regular.ttf */; };
+		FE5C9E842AA42BE300FA235D /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E742AA42BE300FA235D /* Roboto-MediumItalic.ttf */; };
+		FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E752AA42BE300FA235D /* Roboto-BoldCondensed.ttf */; };
+		FE5C9E862AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E762AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf */; };
+		FE5C9E872AA42BE300FA235D /* Roboto-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E772AA42BE300FA235D /* Roboto-Condensed.ttf */; };
+		FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E782AA42BE300FA235D /* Roboto-ThinItalic.ttf */; };
+		FE5C9E892AA42BE300FA235D /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E792AA42BE300FA235D /* Roboto-BoldItalic.ttf */; };
+		FE5C9E8A2AA42BE300FA235D /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E7A2AA42BE300FA235D /* Roboto-LightItalic.ttf */; };
+		FE5C9E8B2AA42BE300FA235D /* Roboto-CondensedItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E7B2AA42BE300FA235D /* Roboto-CondensedItalic.ttf */; };
+		FE5C9E8C2AA42BE300FA235D /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E7C2AA42BE300FA235D /* Roboto-Italic.ttf */; };
+		FE5C9E8D2AA42BE300FA235D /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E7D2AA42BE300FA235D /* Roboto-BlackItalic.ttf */; };
+		FE5C9E8E2AA42BE300FA235D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E7E2AA42BE300FA235D /* Roboto-Bold.ttf */; };
+		FE5C9E8F2AA42BE300FA235D /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E7F2AA42BE300FA235D /* Roboto-Thin.ttf */; };
+		FE5C9E902AA42BE300FA235D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE5C9E802AA42BE300FA235D /* Roboto-Black.ttf */; };
 		FE5D081E2AA22019004FA3D9 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */; };
 		FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */; };
 		FE5D08232AA2337E004FA3D9 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D08222AA2337E004FA3D9 /* MovieViewModel.swift */; };
@@ -309,6 +340,37 @@
 		FE5C1D232AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "videoShortViewController+Extension.swift"; sourceTree = "<group>"; };
 		FE5C1D262AA2E11600F9B3E5 /* videoShortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoShortViewModel.swift; sourceTree = "<group>"; };
 		FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoShortRouter.swift; sourceTree = "<group>"; };
+		FE5C9E362AA4231C00FA235D /* AccountInfoViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountInfoViewController+Extension.swift"; sourceTree = "<group>"; };
+		FE5C9E542AA427BA00FA235D /* SambagYearPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagYearPickerViewController.swift; sourceTree = "<group>"; };
+		FE5C9E552AA427BA00FA235D /* SambagYearPickerResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagYearPickerResult.swift; sourceTree = "<group>"; };
+		FE5C9E562AA427BA00FA235D /* SambagMonthYearPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagMonthYearPickerViewController.swift; sourceTree = "<group>"; };
+		FE5C9E572AA427BA00FA235D /* AlphaTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaTransitioning.swift; sourceTree = "<group>"; };
+		FE5C9E582AA427BA00FA235D /* SambagTimePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagTimePickerViewController.swift; sourceTree = "<group>"; };
+		FE5C9E592AA427BB00FA235D /* WheelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelViewController.swift; sourceTree = "<group>"; };
+		FE5C9E5A2AA427BB00FA235D /* SambagTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagTheme.swift; sourceTree = "<group>"; };
+		FE5C9E5B2AA427BB00FA235D /* SambagMonthYearPickerResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagMonthYearPickerResult.swift; sourceTree = "<group>"; };
+		FE5C9E5C2AA427BB00FA235D /* SambagSelectionLimit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagSelectionLimit.swift; sourceTree = "<group>"; };
+		FE5C9E5D2AA427BB00FA235D /* TimeMeridian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeMeridian.swift; sourceTree = "<group>"; };
+		FE5C9E5E2AA427BB00FA235D /* SambagTimePickerResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagTimePickerResult.swift; sourceTree = "<group>"; };
+		FE5C9E5F2AA427BB00FA235D /* SambagDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagDatePickerViewController.swift; sourceTree = "<group>"; };
+		FE5C9E6C2AA428CC00FA235D /* SambagDatePickerResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SambagDatePickerResult.swift; sourceTree = "<group>"; };
+		FE5C9E6E2AA42B6A00FA235D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FE5C9E712AA42BE300FA235D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		FE5C9E722AA42BE300FA235D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		FE5C9E732AA42BE300FA235D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		FE5C9E742AA42BE300FA235D /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FE5C9E752AA42BE300FA235D /* Roboto-BoldCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensed.ttf"; sourceTree = "<group>"; };
+		FE5C9E762AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensedItalic.ttf"; sourceTree = "<group>"; };
+		FE5C9E772AA42BE300FA235D /* Roboto-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Condensed.ttf"; sourceTree = "<group>"; };
+		FE5C9E782AA42BE300FA235D /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FE5C9E792AA42BE300FA235D /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FE5C9E7A2AA42BE300FA235D /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		FE5C9E7B2AA42BE300FA235D /* Roboto-CondensedItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-CondensedItalic.ttf"; sourceTree = "<group>"; };
+		FE5C9E7C2AA42BE300FA235D /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		FE5C9E7D2AA42BE300FA235D /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FE5C9E7E2AA42BE300FA235D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		FE5C9E7F2AA42BE300FA235D /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		FE5C9E802AA42BE300FA235D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		FE5D081C2AA22019004FA3D9 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		FE5D081D2AA22019004FA3D9 /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
 		FE5D08222AA2337E004FA3D9 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
@@ -500,6 +562,7 @@
 		FE33F3762A6CC67300A396A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE5C9E702AA42BE300FA235D /* fonts */,
 				FE33F3772A6CC68E00A396A1 /* Constans.swift */,
 				FE33F3782A6CC68E00A396A1 /* Struct.swift */,
 			);
@@ -509,6 +572,7 @@
 		FE33F37F2A6CC72800A396A1 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FE5C9E532AA427BA00FA235D /* SambagDateTimePicker */,
 				FE33F3872A6CC74500A396A1 /* Extensions */,
 				FE33F3862A6CC74300A396A1 /* JHProgressHUD */,
 				FE33F3842A6CC73900A396A1 /* Utils.swift */,
@@ -960,6 +1024,7 @@
 		FE59CF3A2AA3991500A6ADAA /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FE5C9E362AA4231C00FA235D /* AccountInfoViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1020,6 +1085,49 @@
 				FE5C1D292AA2E15300F9B3E5 /* videoShortRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		FE5C9E532AA427BA00FA235D /* SambagDateTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C9E6C2AA428CC00FA235D /* SambagDatePickerResult.swift */,
+				FE5C9E542AA427BA00FA235D /* SambagYearPickerViewController.swift */,
+				FE5C9E552AA427BA00FA235D /* SambagYearPickerResult.swift */,
+				FE5C9E562AA427BA00FA235D /* SambagMonthYearPickerViewController.swift */,
+				FE5C9E572AA427BA00FA235D /* AlphaTransitioning.swift */,
+				FE5C9E582AA427BA00FA235D /* SambagTimePickerViewController.swift */,
+				FE5C9E592AA427BB00FA235D /* WheelViewController.swift */,
+				FE5C9E5A2AA427BB00FA235D /* SambagTheme.swift */,
+				FE5C9E5B2AA427BB00FA235D /* SambagMonthYearPickerResult.swift */,
+				FE5C9E5C2AA427BB00FA235D /* SambagSelectionLimit.swift */,
+				FE5C9E5D2AA427BB00FA235D /* TimeMeridian.swift */,
+				FE5C9E5E2AA427BB00FA235D /* SambagTimePickerResult.swift */,
+				FE5C9E5F2AA427BB00FA235D /* SambagDatePickerViewController.swift */,
+			);
+			path = SambagDateTimePicker;
+			sourceTree = "<group>";
+		};
+		FE5C9E702AA42BE300FA235D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C9E712AA42BE300FA235D /* Roboto-Medium.ttf */,
+				FE5C9E722AA42BE300FA235D /* Roboto-Light.ttf */,
+				FE5C9E732AA42BE300FA235D /* Roboto-Regular.ttf */,
+				FE5C9E742AA42BE300FA235D /* Roboto-MediumItalic.ttf */,
+				FE5C9E752AA42BE300FA235D /* Roboto-BoldCondensed.ttf */,
+				FE5C9E762AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf */,
+				FE5C9E772AA42BE300FA235D /* Roboto-Condensed.ttf */,
+				FE5C9E782AA42BE300FA235D /* Roboto-ThinItalic.ttf */,
+				FE5C9E792AA42BE300FA235D /* Roboto-BoldItalic.ttf */,
+				FE5C9E7A2AA42BE300FA235D /* Roboto-LightItalic.ttf */,
+				FE5C9E7B2AA42BE300FA235D /* Roboto-CondensedItalic.ttf */,
+				FE5C9E7C2AA42BE300FA235D /* Roboto-Italic.ttf */,
+				FE5C9E7D2AA42BE300FA235D /* Roboto-BlackItalic.ttf */,
+				FE5C9E7E2AA42BE300FA235D /* Roboto-Bold.ttf */,
+				FE5C9E7F2AA42BE300FA235D /* Roboto-Thin.ttf */,
+				FE5C9E802AA42BE300FA235D /* Roboto-Black.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		FE5D08182AA21FE2004FA3D9 /* Movie */ = {
@@ -1354,6 +1462,7 @@
 		FE97D89C2A76C2A300D223C9 /* Extension+tool */ = {
 			isa = PBXGroup;
 			children = (
+				FE5C9E6E2AA42B6A00FA235D /* UIColorExtension.swift */,
 				FE97D8A12A76C7AD00D223C9 /* ExUIViewController(1).swift */,
 				FE97D89F2A76C2C900D223C9 /* UIView+ToastKit.swift */,
 				FE97D89D2A76C2B600D223C9 /* ViewExtension.swift */,
@@ -1710,6 +1819,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE5C9E8F2AA42BE300FA235D /* Roboto-Thin.ttf in Resources */,
 				FE5096572A76534800F5A457 /* SplachScreenViewController.xib in Resources */,
 				FEAC96A22A5A55CD00B49C80 /* LaunchScreen.storyboard in Resources */,
 				FECD09312A9F9CD400D97711 /* ListMovieShowNowViewController.xib in Resources */,
@@ -1720,29 +1830,42 @@
 				FE69A8AA2AA1A2C90017D891 /* NewFeedViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
 				FE59CF412AA3994300A6ADAA /* AccountInfoViewController.xib in Resources */,
+				FE5C9E832AA42BE300FA235D /* Roboto-Regular.ttf in Resources */,
 				FE69A8A62AA1909F0017D891 /* DialogViewController.xib in Resources */,
 				FE5C1D212AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib in Resources */,
+				FE5C9E872AA42BE300FA235D /* Roboto-Condensed.ttf in Resources */,
+				FE5C9E8E2AA42BE300FA235D /* Roboto-Bold.ttf in Resources */,
 				FE59CF382AA36DCA00A6ADAA /* ItemDetailVideoShortCollectionViewCell.xib in Resources */,
 				FE4EE4542A9CF297008E7F1D /* DatePickerRowTableViewCell.xib in Resources */,
 				FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */,
 				FE502C942A9BA41E00779055 /* TimeShowViewController.xib in Resources */,
 				FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */,
+				FE5C9E8D2AA42BE300FA235D /* Roboto-BlackItalic.ttf in Resources */,
+				FE5C9E902AA42BE300FA235D /* Roboto-Black.ttf in Resources */,
 				FE6A8D802A6422F800BEC7BE /* MovieDetailTableViewCell.xib in Resources */,
 				FE7BA9952A5AFE2700344EFB /* AccountViewController.xib in Resources */,
+				FE5C9E8C2AA42BE300FA235D /* Roboto-Italic.ttf in Resources */,
 				FE59CF2B2AA36BDF00A6ADAA /* DetailVideoShortViewController.xib in Resources */,
 				FE6E0A402A77FED200DC628F /* LoginViewController.xib in Resources */,
 				FE503B3E2A9A09C100CA9F10 /* headerCollectionReusableView.xib in Resources */,
 				FE5D083C2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.xib in Resources */,
+				FE5C9E8B2AA42BE300FA235D /* Roboto-CondensedItalic.ttf in Resources */,
 				FE491ED82AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.xib in Resources */,
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
 				FEFBFB752A9F93A800A85879 /* itemMovieTableViewCell.xib in Resources */,
 				FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */,
+				FE5C9E842AA42BE300FA235D /* Roboto-MediumItalic.ttf in Resources */,
 				FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */,
+				FE5C9E822AA42BE300FA235D /* Roboto-Light.ttf in Resources */,
+				FE5C9E8A2AA42BE300FA235D /* Roboto-LightItalic.ttf in Resources */,
 				FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */,
+				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
+				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
+				FE5C9E862AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				FE7BA9892A5AFDE500344EFB /* SalesViewController.xib in Resources */,
 				FE5D08362AA236C2004FA3D9 /* AllVideoandMovieViewController.xib in Resources */,
 				FE4137EB2A6398820038E7B6 /* BannerTableViewCell.xib in Resources */,
@@ -1751,12 +1874,14 @@
 				FE5893762A8A6DD600058864 /* DetailMovieViewController.xib in Resources */,
 				FE7460062A7EB8B00091C0FA /* MovieItemTableViewCell.xib in Resources */,
 				FE502C8C2A9B9A9800779055 /* itemchaircategorylistCollectionViewCell.xib in Resources */,
+				FE5C9E892AA42BE300FA235D /* Roboto-BoldItalic.ttf in Resources */,
 				FE5276F42A8D115600252843 /* ItemChairCollectionViewCell.xib in Resources */,
 				FE5D082B2AA23676004FA3D9 /* videoShortViewController.xib in Resources */,
 				FE6A8D842A642CDF00BEC7BE /* FlimsCollectionViewCell.xib in Resources */,
 				FE503B422A9A0C5700CA9F10 /* headerCollectionViewCell.xib in Resources */,
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
 				FE4EE4582A9CF40A008E7F1D /* ListCinemaTableViewCell.xib in Resources */,
+				FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */,
 				FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */,
 				FE7BA9A02A5B038A00344EFB /* MovieTableViewCell.xib in Resources */,
 			);
@@ -1835,21 +1960,25 @@
 				FE59CF372AA36DCA00A6ADAA /* ItemDetailVideoShortCollectionViewCell.swift in Sources */,
 				FE33F3792A6CC68E00A396A1 /* Constans.swift in Sources */,
 				FE745FF32A7EAFF60091C0FA /* TicketViewController+Extension+API.swift in Sources */,
+				FE5C9E662AA427BB00FA235D /* SambagTheme.swift in Sources */,
 				FE5DFF9D2A76A21500E2E345 /* CustomBarViewController.swift in Sources */,
 				FEAC969A2A5A55CC00B49C80 /* ViewController.swift in Sources */,
 				FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */,
 				FEDC3F4D2A6CE11D004D3789 /* APIResponse.swift in Sources */,
 				FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */,
+				FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */,
 				FE2172B12A76B55C000C0C17 /* CustomItemView.swift in Sources */,
 				FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */,
 				FE33F3902A6CC76B00A396A1 /* Observable+Extension.swift in Sources */,
 				FE33F3832A6CC73600A396A1 /* ManageCacheObject.swift in Sources */,
 				FECD09372A9F9DD400D97711 /* ListMovieShowNowViewController+Extension.swift in Sources */,
 				FE69A8A92AA1A2C90017D891 /* NewFeedViewController.swift in Sources */,
+				FE5C9E6B2AA427BB00FA235D /* SambagDatePickerViewController.swift in Sources */,
 				FE2172AB2A76A8C4000C0C17 /* TicketViewController.swift in Sources */,
 				FE502C8B2A9B9A9800779055 /* itemchaircategorylistCollectionViewCell.swift in Sources */,
 				FED6A4572A7614FF000E1BCD /* EmployeeInfo.swift in Sources */,
 				FE5276EF2A8D10F900252843 /* BookingChairViewController+Extension.swift in Sources */,
+				FE5C9E622AA427BB00FA235D /* SambagMonthYearPickerViewController.swift in Sources */,
 				FE59CF2A2AA36BDF00A6ADAA /* DetailVideoShortViewController.swift in Sources */,
 				FE53B8162A7FF28F00976628 /* AccountViewModel.swift in Sources */,
 				FE5D08252AA233C8004FA3D9 /* MovieRouter.swift in Sources */,
@@ -1865,6 +1994,8 @@
 				FE2172B52A76B606000C0C17 /* CustomViewController.swift in Sources */,
 				FE5096612A76578C00F5A457 /* SplachScreenViewModel.swift in Sources */,
 				FE491EE42AA0F87800BCA4D1 /* AccountViewController+Extension.swift in Sources */,
+				FE5C9E372AA4231C00FA235D /* AccountInfoViewController+Extension.swift in Sources */,
+				FE5C9E632AA427BB00FA235D /* AlphaTransitioning.swift in Sources */,
 				FE7BA97F2A5AFCEE00344EFB /* MenuViewController+Extensions.swift in Sources */,
 				FE33F3982A6CC77500A396A1 /* JHProgressHUD.swift in Sources */,
 				FE5D082A2AA23676004FA3D9 /* videoShortViewController.swift in Sources */,
@@ -1878,6 +2009,7 @@
 				FE503B3D2A9A09C100CA9F10 /* headerCollectionReusableView.swift in Sources */,
 				FE5C1D2A2AA2E15300F9B3E5 /* videoShortRouter.swift in Sources */,
 				FE5276EA2A8D07D900252843 /* BookingChairRouter.swift in Sources */,
+				FE5C9E6F2AA42B6A00FA235D /* UIColorExtension.swift in Sources */,
 				FE33F38F2A6CC76B00A396A1 /* Toast.swift in Sources */,
 				FE639D5C2A96422E003F618F /* videoViewModel.swift in Sources */,
 				FE33F3912A6CC76B00A396A1 /* dLog.swift in Sources */,
@@ -1891,16 +2023,20 @@
 				FE6775F42A8920A10007A659 /* ItemMovieCollectionViewCell.swift in Sources */,
 				FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */,
 				FE5D08302AA23691004FA3D9 /* TraillerViewController.swift in Sources */,
+				FE5C9E642AA427BB00FA235D /* SambagTimePickerViewController.swift in Sources */,
 				FE7BA9942A5AFE2700344EFB /* AccountViewController.swift in Sources */,
 				FE6E5CB72A7A985E00467358 /* HomeViewController.swift in Sources */,
 				FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */,
 				FE745FF92A7EB30D0091C0FA /* Movie.swift in Sources */,
 				FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */,
+				FE5C9E6D2AA428CC00FA235D /* SambagDatePickerResult.swift in Sources */,
 				FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */,
+				FE5C9E692AA427BB00FA235D /* TimeMeridian.swift in Sources */,
 				FE491ED72AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.swift in Sources */,
 				FE2172A72A76A7F0000C0C17 /* CustomTabItem.swift in Sources */,
 				FE33F3992A6CC77500A396A1 /* RRHTTPStatusCode.swift in Sources */,
 				FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */,
+				FE5C9E652AA427BB00FA235D /* WheelViewController.swift in Sources */,
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
 				FE59CF432AA39D8100A6ADAA /* AccountInfoRouter.swift in Sources */,
 				FE585F8A2A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift in Sources */,
@@ -1909,6 +2045,7 @@
 				FE59CF312AA36CD800A6ADAA /* DetailVideoShortRouter.swift in Sources */,
 				FE5DFFA12A76A53E00E2E345 /* CustomBarViewModel.swift in Sources */,
 				FE33F3962A6CC77500A396A1 /* InternetTouchView.swift in Sources */,
+				FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */,
 				FE59CF402AA3994300A6ADAA /* AccountInfoViewController.swift in Sources */,
 				FE69A8A52AA1909F0017D891 /* DialogViewController.swift in Sources */,
 				FE33F3852A6CC73900A396A1 /* Utils.swift in Sources */,
@@ -1927,6 +2064,7 @@
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
 				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
+				FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */,
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				FE4EE4532A9CF297008E7F1D /* DatePickerRowTableViewCell.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
@@ -1949,8 +2087,10 @@
 				FE440CBA2A5A9ADA00E12C8B /* LoginViewModel.swift in Sources */,
 				FE5893782A8A6FDC00058864 /* DetailMovieRouter.swift in Sources */,
 				FE7D516F2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift in Sources */,
+				FE5C9E672AA427BB00FA235D /* SambagMonthYearPickerResult.swift in Sources */,
 				FE5D083B2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift in Sources */,
 				FE6A8D7F2A6422F800BEC7BE /* MovieDetailTableViewCell.swift in Sources */,
+				FE5C9E612AA427BB00FA235D /* SambagYearPickerResult.swift in Sources */,
 				FE33F37A2A6CC68E00A396A1 /* Struct.swift in Sources */,
 				FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */,
 				FE4FFD972A77F16F00983304 /* BaseViewController.swift in Sources */,

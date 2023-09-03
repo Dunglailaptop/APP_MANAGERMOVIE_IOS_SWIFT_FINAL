@@ -11,6 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountInfoViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="avatar" destination="yzf-co-QKR" id="eTS-4L-ynT"/>
+                <outlet property="txt_birthday" destination="0Z9-j0-X3Z" id="lNt-j7-Dbc"/>
+                <outlet property="txt_email" destination="HzR-Oy-UfC" id="VYl-g1-w2R"/>
+                <outlet property="txt_phone" destination="1f6-4T-Ddj" id="7cZ-Uk-T1m"/>
+                <outlet property="txt_username" destination="S1a-VE-GsV" id="ujF-lg-yJo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,11 +42,25 @@
                                     <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhJ-Lb-poN">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="49"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="EB0-8Z-LfJ"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btn_makePopToViewController:" destination="-1" eventType="touchUpInside" id="etf-2Q-Wp3"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="ZhJ-Lb-poN" firstAttribute="leading" secondItem="kvP-Z5-A0u" secondAttribute="leading" id="0HW-lB-j4Q"/>
+                                <constraint firstItem="ZhJ-Lb-poN" firstAttribute="top" secondItem="kvP-Z5-A0u" secondAttribute="top" id="7he-fH-qO6"/>
                                 <constraint firstItem="gPb-MC-Otc" firstAttribute="leading" secondItem="kvP-Z5-A0u" secondAttribute="leading" constant="20" id="Bmh-zI-Wzr"/>
                                 <constraint firstItem="oDc-cY-I7p" firstAttribute="centerX" secondItem="kvP-Z5-A0u" secondAttribute="centerX" id="Tr1-HF-0gv"/>
+                                <constraint firstAttribute="bottom" secondItem="ZhJ-Lb-poN" secondAttribute="bottom" id="TyX-oa-aTQ"/>
                                 <constraint firstItem="oDc-cY-I7p" firstAttribute="centerY" secondItem="kvP-Z5-A0u" secondAttribute="centerY" id="VLv-xo-sq6"/>
                                 <constraint firstItem="gPb-MC-Otc" firstAttribute="centerY" secondItem="kvP-Z5-A0u" secondAttribute="centerY" id="bEF-s9-tDS"/>
                             </constraints>
@@ -268,7 +286,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vui lòng chọn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-j0-X3Z">
+                                                        <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vui lòng chọn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-j0-X3Z">
                                                             <rect key="frame" x="16" y="24.5" width="342" height="32"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -280,6 +298,17 @@
                                                                 <constraint firstAttribute="width" constant="22" id="ZKO-xe-P2q"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5S-kZ-KcO">
+                                                            <rect key="frame" x="324" y="0.0" width="50" height="56.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="R3N-aU-VFS"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="btn_chooseBrithday:" destination="-1" eventType="touchUpInside" id="els-Ie-NVD"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -287,10 +316,13 @@
                                                         <constraint firstItem="Dpg-KC-t7L" firstAttribute="centerY" secondItem="T7x-rZ-L0W" secondAttribute="centerY" id="JZL-dC-hjV"/>
                                                         <constraint firstAttribute="trailing" secondItem="0Z9-j0-X3Z" secondAttribute="trailing" constant="16" id="KlV-aH-9wq"/>
                                                         <constraint firstAttribute="bottom" secondItem="0Z9-j0-X3Z" secondAttribute="bottom" id="MDw-1N-6CC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="D5S-kZ-KcO" secondAttribute="trailing" id="Tnc-f1-UQ2"/>
+                                                        <constraint firstItem="D5S-kZ-KcO" firstAttribute="top" secondItem="T7x-rZ-L0W" secondAttribute="top" id="X6O-ak-xaE"/>
                                                         <constraint firstItem="0Z9-j0-X3Z" firstAttribute="leading" secondItem="Hyq-M7-2oC" secondAttribute="leading" id="ZRp-96-rDW"/>
                                                         <constraint firstItem="Hyq-M7-2oC" firstAttribute="leading" secondItem="T7x-rZ-L0W" secondAttribute="leading" constant="16" id="a72-KP-Cie"/>
                                                         <constraint firstAttribute="trailing" secondItem="Dpg-KC-t7L" secondAttribute="trailing" constant="20" id="fU3-lw-Nv2"/>
                                                         <constraint firstItem="Hyq-M7-2oC" firstAttribute="top" secondItem="T7x-rZ-L0W" secondAttribute="top" constant="10" id="mDH-eq-3pO"/>
+                                                        <constraint firstAttribute="bottom" secondItem="D5S-kZ-KcO" secondAttribute="bottom" id="mLv-6T-FWb"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -307,13 +339,13 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9h-Xi-01z">
                                                     <rect key="frame" x="0.0" y="361.5" width="374" height="56"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ĐỊA CHỈ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofb-qc-HsW">
-                                                            <rect key="frame" x="16" y="10" width="45.5" height="14.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofb-qc-HsW">
+                                                            <rect key="frame" x="16" y="10" width="31.5" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vui lòng chọn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HzR-Oy-UfC">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Vui lòng nhap" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HzR-Oy-UfC">
                                                             <rect key="frame" x="16" y="24.5" width="342" height="31.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -412,6 +444,29 @@
                                     <state key="normal" title="CẬP NHẬT">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="0.0" height="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -432,13 +487,13 @@
                                     <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                    <real key="value" value="1"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="1"/>
+                                    <real key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                    <size key="value" width="1" height="1"/>
+                                    <size key="value" width="1" height="10"/>
                                 </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                     <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -471,7 +526,7 @@
                 <constraint firstItem="evq-45-Faw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yc7-5W-GoM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="132" y="93"/>
+            <point key="canvasLocation" x="131.8840579710145" y="92.410714285714278"/>
         </view>
     </objects>
     <resources>
