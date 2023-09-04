@@ -15,7 +15,7 @@ enum ManagerConnections {
     
     case Login(username:String,password:String)
     case config(username:String)
-    case Moive(page:Int,limit:Int)
+    case Moive(page:Int,limit:Int,status:Int)
     case MovieDetail(idmovie:Int)
     case UpdateAccount(iduser:Int,Fullname:String,Email:String,Phone:String,Birthday:String,avatar:String)
     case getInfoAccount(id:Int)
@@ -37,7 +37,7 @@ extension ManagerConnections: TargetType {
             return  APIEndPoint.Name.urlLogin
         case .config(let username):
             return APIEndPoint.Name.urlConfig
-        case .Moive(let page,let limit):
+        case .Moive(let page,let limit,let status):
             return APIEndPoint.Name.urlMovie
         case .MovieDetail(let idmovie):
              return APIEndPoint.Name.urlDetail
@@ -54,7 +54,7 @@ extension ManagerConnections: TargetType {
             return .get
         case .config(_):
             return .get
-        case .Moive(_,_):
+        case .Moive(_,_,_):
             return .get
         case .MovieDetail(_):
             return .get
@@ -95,7 +95,7 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .config(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .Moive(_,_):
+        case .Moive(_,_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .MovieDetail(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
@@ -114,9 +114,10 @@ extension ManagerConnections: TargetType {
             ]
         case .config(let username):
             return ["username":username]
-        case .Moive(let page, let limit):
+        case .Moive(let page, let limit, let status):
             return ["offset_value":page,
-                    "page_size":limit
+                    "page_size":limit,
+                    "status": status
             ]
         case .MovieDetail(let idmovie):
             return ["Idmovie":idmovie]
@@ -151,7 +152,7 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .config(_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .Moive(_,_):
+        case .Moive(_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .MovieDetail(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))

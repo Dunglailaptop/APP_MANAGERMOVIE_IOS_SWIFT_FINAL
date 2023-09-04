@@ -35,7 +35,7 @@ class ListMovieShowNowViewModel: BaseViewModel
 
 extension ListMovieShowNowViewModel {
     func getListMovieShow() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.Moive(page: 0, limit: 20))
+        return appServiceProvider.rx.request(.Moive(page: 0, limit: 20,status: 1))
              .filterSuccessfulStatusCodes()
              .mapJSON().asObservable()
              .showAPIErrorToast()
