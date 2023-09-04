@@ -28,6 +28,7 @@ public struct APIEndPoint {
         static let urlMovie = "/Movie/ListMovie"
         static let urlDetail = "/Movie/DetailMovie"
         static let urlUpdateAccount = "/Account/UpdateAccount"
+        static let urlGetInfoAccount = "/Account/getInfoAccount"
     }
     
 }

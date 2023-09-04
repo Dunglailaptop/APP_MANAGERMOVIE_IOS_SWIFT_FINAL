@@ -22,6 +22,11 @@ class AccountInfoViewController: BaseViewController {
     @IBOutlet weak var txt_email: UITextField!
     @IBOutlet weak var txt_username: UITextField!
     
+    @IBOutlet weak var txt_idUser: UITextField!
+    
+   
+    @IBOutlet weak var txt_role: UITextField!
+    
     @IBOutlet weak var txt_phone: UITextField!
     
     @IBOutlet weak var txt_birthday: UITextField!
@@ -31,6 +36,15 @@ class AccountInfoViewController: BaseViewController {
         checkvaliad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        var id = viewModel.dataArray.value
+               id.idusers = ManageCacheObject.getCurrentUserInfo().idusers
+               viewModel.dataArray.accept(id)
+        getInfoAccount()
+    }
+    
 
     @IBAction func btn_chooseavatar(_ sender: Any) {
        openPhotoLibrary()

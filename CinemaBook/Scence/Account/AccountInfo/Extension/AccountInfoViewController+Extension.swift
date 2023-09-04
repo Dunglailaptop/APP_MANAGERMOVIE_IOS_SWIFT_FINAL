@@ -10,12 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 import JonAlert
+import ObjectMapper
 
 extension AccountInfoViewController {
     
     func postUpdateWithAvatar(){
         var medias = [Medias]()
         var medias_request = Medias()
+        var dataImage = viewModel.dataArray.value
         medias_request.image = imagecover[0]
         dLog(nameImage)
         
@@ -23,6 +25,11 @@ extension AccountInfoViewController {
         medias.append(medias_request)
         viewModel.media_request.accept(medias)
         viewModel.uploadImage()
+        let connectImage = nameImage[0] + "/" + nameImage[0];
+         dataImage.avatar = connectImage
+        viewModel.dataArray.accept(dataImage)
+     
+        postUpdateAccount()
     }
     
     
@@ -36,13 +43,30 @@ extension AccountInfoViewController {
             }
         }).disposed(by: rxbag)
     }
+    func getInfoAccount() {
+        viewModel.getInfoAccount().subscribe(onNext: { (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let dataAccount = Mapper<Users>().map(JSONObject: response.data) {
+                    self.txt_idUser.text = String(dataAccount.idusers)
+                    self.txt_username.text = dataAccount.fullname
+                    self.txt_email.text = dataAccount.email
+                    self.txt_phone.text = dataAccount.phone
+                    self.txt_birthday.text = dataAccount.birthday
+                    self.txt_role.text = dataAccount.idroleName
+                    self.avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: dataAccount.avatar)), placeholder:  UIImage(named: "image_defauft_medium"))
+                }
+            }else {
+                 JonAlert.show(message: response.message ?? "Có lỗi trong quá trình kết nối xin vui lòng kiểm tra lại")
+            }
+            
+        }).disposed(by: rxbag)
+    }
+    
 }
 
 extension AccountInfoViewController {
     func checkvaliad() {
-        var id = viewModel.dataArray.value
-        id.idusers = 1
-        viewModel.dataArray.accept(id)
+       
         _ = txt_username.rx.text.map{String($0!.prefix(50))}.map({ (str) -> Users in
             self.txt_username.text = str
             var clonedata = self.viewModel.dataArray.value

@@ -22,7 +22,7 @@ class BaseViewModel {
     // Dispose Bag
     let disposeBag = DisposeBag()
     public var media_request: BehaviorRelay<[Medias]> = BehaviorRelay(value: [])
-    
+    public var image_request: BehaviorRelay<String> = BehaviorRelay(value: "")
  
     
     let serverUrl = URL(string: "http://localhost:5062/Phim/UploadImage")!
@@ -41,9 +41,9 @@ class BaseViewModel {
 extension BaseViewModel{
 
 
-  func uploadImage() {
+  func uploadImage(){
       let dataImage = media_request.value
-
+      
       Alamofire.upload(
           multipartFormData: { multipartFormData in
               for i in 0..<dataImage.count {
@@ -70,6 +70,9 @@ extension BaseViewModel{
                           // You can parse 'value' if it contains JSON data
                           if let json = value as? [String: Any], let message = json["message"] as? String {
                               dLog("Response message: \(message)")
+                            self.image_request.accept(message)
+                           
+                           
                               // You can use the 'message' here
                           }
                       } else {
@@ -94,6 +97,7 @@ extension BaseViewModel{
       }
 
       }
+  
   }
 
 

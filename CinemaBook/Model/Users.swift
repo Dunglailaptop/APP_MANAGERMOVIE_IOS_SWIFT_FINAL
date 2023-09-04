@@ -19,7 +19,7 @@ struct Users: Mappable {
     var birthday = ""
     var idrole = 0
     var avatar = ""
-    
+    var idroleName = ""
     
     init() {
         
@@ -37,6 +37,7 @@ struct Users: Mappable {
         birthday <- map["birthday"]
         idrole <- map["idrole"]
         avatar <- map["avatar"]
+        idroleName <- map["idrolename"]
     }
     
 }

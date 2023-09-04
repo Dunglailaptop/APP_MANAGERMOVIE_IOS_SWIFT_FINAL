@@ -10,10 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountInfoViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
-                <outlet property="avatar" destination="yzf-co-QKR" id="eTS-4L-ynT"/>
+                <outlet property="avatar" destination="yzf-co-QKR" id="c4Z-wf-Scp"/>
                 <outlet property="txt_birthday" destination="0Z9-j0-X3Z" id="lNt-j7-Dbc"/>
                 <outlet property="txt_email" destination="HzR-Oy-UfC" id="VYl-g1-w2R"/>
+                <outlet property="txt_idUser" destination="jvL-CA-cuj" id="KR0-E3-9XP"/>
                 <outlet property="txt_phone" destination="1f6-4T-Ddj" id="7cZ-Uk-T1m"/>
+                <outlet property="txt_role" destination="USz-Au-7E5" id="n0T-T2-AAC"/>
                 <outlet property="txt_username" destination="S1a-VE-GsV" id="ujF-lg-yJo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

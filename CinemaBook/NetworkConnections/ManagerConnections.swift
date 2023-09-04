@@ -18,6 +18,7 @@ enum ManagerConnections {
     case Moive(page:Int,limit:Int)
     case MovieDetail(idmovie:Int)
     case UpdateAccount(iduser:Int,Fullname:String,Email:String,Phone:String,Birthday:String,avatar:String)
+    case getInfoAccount(id:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -42,6 +43,8 @@ extension ManagerConnections: TargetType {
              return APIEndPoint.Name.urlDetail
         case .UpdateAccount(_,_,_,_,_,_):
             return APIEndPoint.Name.urlUpdateAccount
+        case .getInfoAccount(let id):
+            return APIEndPoint.Name.urlGetInfoAccount
         }
     
     }
@@ -57,6 +60,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .UpdateAccount(_,_,_,_,_,_):
             return .post
+        case .getInfoAccount(_):
+            return .get
         }
 
         
@@ -96,6 +101,8 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .UpdateAccount(_,_,_,_,_,_):
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getInfoAccount(_):
+              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -122,7 +129,12 @@ extension ManagerConnections: TargetType {
               "Birthday": Birthday,
               "avatar": avatar
             ]
+            case .getInfoAccount(let id):
+                   return [
+                      "id":id
+                   ]
         }
+       
     }
     private func encoding(_ httpMethod: HTTPMethod) ->
         ParameterEncoding{
@@ -145,6 +157,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .UpdateAccount(_,_,_,_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getInfoAccount(_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 
