@@ -32,6 +32,9 @@ class DetailMovieviewModel {
         router?.navigationMakeToBookingChairViewController()
     }
     
+    func makeToVideoYoutuebViewController(videoId:String) {
+        router?.navigationMakeVideoYoutubeViewController(videoid:videoId)
+    }
     
     
 }

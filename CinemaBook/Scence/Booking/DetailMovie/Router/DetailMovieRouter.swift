@@ -34,4 +34,10 @@ class  DetailMovieRouter
         let bookingchairViewController = TimeShowRouter().viewController
         sourceView?.navigationController?.pushViewController(bookingchairViewController, animated: true)
     }
+    
+    func navigationMakeVideoYoutubeViewController(videoid:String) {
+        let viewvideo = videoRouter().viewController as! VideoViewController
+        viewvideo.videoId = videoid
+        sourceView?.navigationController?.pushViewController(viewvideo, animated: true)
+    }
 }

@@ -99,8 +99,7 @@ class DetailMovieViewController: BaseViewController {
     }
     
     @IBAction func btn_makevideo(_ sender: Any) {
-        let viewvideo = VideoViewController()
-            self.navigationController?.pushViewController(viewvideo, animated: true)
+        viewModel.makeToVideoYoutuebViewController(videoId: viewModel.data.value.videofile)
     }
 }
 

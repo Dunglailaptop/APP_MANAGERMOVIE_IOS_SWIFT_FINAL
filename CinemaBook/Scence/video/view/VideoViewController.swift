@@ -13,13 +13,14 @@ class VideoViewController: UIViewController {
     
     var viewModel = videoViewModel()
     var router = videoRouter()
+    var videoId = ""
 
     @IBOutlet var playerview: YTPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self,router: router)
-      self.setupVideoyoutube(url: "TcMBFSGVi1c")
+      self.setupVideoyoutube(url: videoId)
         // Do any additional setup after loading the view.
     }
 
