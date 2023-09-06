@@ -60,17 +60,17 @@ extension BookingTicketViewController: BmoViewPagerDelegate, BmoViewPagerDataSou
     
     func bmoViewPagerDataSource(_ viewPager: BmoViewPager, viewControllerForPageAt page: Int) -> UIViewController {
         if(page == 0){
-            let pendingOrderManagementViewController = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
-            return pendingOrderManagementViewController
+            let ListMovieShowNowRouters = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
+            ListMovieShowNowRouters.status = 1
+            return ListMovieShowNowRouters
         }else if(page == 1){
-             let pendingOrderManagementViewController = HomeViewController()
-                      return pendingOrderManagementViewController
-        }else if(page == 2){
-             let pendingOrderManagementViewController = HomeViewController()
-                      return pendingOrderManagementViewController
+           let ListMovieShowNowRouters = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
+            ListMovieShowNowRouters.status = 0
+             return ListMovieShowNowRouters
         }else {
-            let pendingOrderManagementViewController = HomeViewController()
-                      return pendingOrderManagementViewController
+        let ListMovieShowNowRouters = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
+            ListMovieShowNowRouters.status = 1
+            return ListMovieShowNowRouters
         }
     }
     
