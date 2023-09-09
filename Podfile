@@ -29,4 +29,8 @@ pod 'SquareFlowLayout'
  pod 'FSPagerView'
 pod 'PagingCollectionViewLayout'
 pod "MWPhotoBrowser"
+pod 'GravitySliderFlowLayout'
+pod 'LNICoverFlowLayout'
+ pod 'MarqueeLabel'
+ 
 end

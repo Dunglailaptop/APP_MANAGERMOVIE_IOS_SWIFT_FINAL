@@ -19,6 +19,8 @@ enum ManagerConnections {
     case MovieDetail(idmovie:Int)
     case UpdateAccount(iduser:Int,Fullname:String,Email:String,Phone:String,Birthday:String,avatar:String)
     case getInfoAccount(id:Int)
+    case getListVoucher
+    case getListTrailler
 }
 
 extension ManagerConnections: TargetType {
@@ -45,6 +47,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlUpdateAccount
         case .getInfoAccount(let id):
             return APIEndPoint.Name.urlGetInfoAccount
+        case .getListVoucher:
+            return APIEndPoint.Name.urlGetVoucher
+        case .getListTrailler:
+            return APIEndPoint.Name.urlGetTrailler
         }
     
     }
@@ -61,6 +67,10 @@ extension ManagerConnections: TargetType {
         case .UpdateAccount(_,_,_,_,_,_):
             return .post
         case .getInfoAccount(_):
+            return .get
+        case .getListVoucher:
+            return .get
+        case .getListTrailler:
             return .get
         }
 
@@ -103,6 +113,10 @@ extension ManagerConnections: TargetType {
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getInfoAccount(_):
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListVoucher:
+                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListTrailler:
+              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -134,6 +148,10 @@ extension ManagerConnections: TargetType {
                    return [
                       "id":id
                    ]
+        case .getListVoucher:
+            return [:]
+        case .getListTrailler:
+            return [:]
         }
        
     }
@@ -160,6 +178,10 @@ extension ManagerConnections: TargetType {
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getInfoAccount(_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListVoucher:
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListTrailler:
+              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

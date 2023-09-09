@@ -57,6 +57,12 @@ class Utils: NSObject {
            }
                
        }
+    func setupvideoyoutube(url:String,type:Int,view:UIView!) {
+         
+          
+                    
+                  
+          }
     /// Lấy tên nguyên bản trên thiết bị của ảnh
        static func getImageFullName(asset: PHAsset) -> String {
            let resources = PHAssetResource.assetResources(for: asset)

@@ -10,8 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
-                <outlet property="collection_view" destination="a4B-XN-W0Z" id="C9b-YB-uDy"/>
+                <outlet property="lbl_movie_coming" destination="lfz-sa-RWN" id="cBX-Aw-EQh"/>
+                <outlet property="lbl_movie_now" destination="Jt4-rL-Nmu" id="trU-p8-U5V"/>
+                <outlet property="tableView" destination="vVx-X6-bnx" id="iUk-Fg-iLI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_movie_coming" destination="OBJ-zA-lP4" id="NIm-IY-Yce"/>
+                <outlet property="view_movienow" destination="rGd-xQ-ujb" id="Dc8-cD-xVB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,23 +26,96 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vec-iT-mKk">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="a4B-XN-W0Z">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vVx-X6-bnx">
+                            <rect key="frame" x="0.0" y="40" width="414" height="778"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2wG-r6-BED">
-                                <size key="itemSize" width="128" height="128"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFw-QF-IUD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="D0c-y0-15X">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGd-xQ-ujb">
+                                            <rect key="frame" x="0.0" y="0.0" width="206.5" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHIM DANG CHIEU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jt4-rL-Nmu">
+                                                    <rect key="frame" x="29.5" y="10" width="147.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHk-5h-T3L">
+                                                    <rect key="frame" x="0.0" y="0.0" width="206.5" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="btn_movienow:" destination="-1" eventType="touchUpInside" id="kKa-sE-r0c"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="Jt4-rL-Nmu" firstAttribute="centerY" secondItem="rGd-xQ-ujb" secondAttribute="centerY" id="8UE-DL-aXp"/>
+                                                <constraint firstAttribute="trailing" secondItem="jHk-5h-T3L" secondAttribute="trailing" id="ARZ-IJ-ri7"/>
+                                                <constraint firstItem="Jt4-rL-Nmu" firstAttribute="centerX" secondItem="rGd-xQ-ujb" secondAttribute="centerX" id="ILy-jf-HBh"/>
+                                                <constraint firstItem="jHk-5h-T3L" firstAttribute="top" secondItem="rGd-xQ-ujb" secondAttribute="top" id="Pvb-kY-utD"/>
+                                                <constraint firstAttribute="bottom" secondItem="jHk-5h-T3L" secondAttribute="bottom" id="SxT-ju-4Cu"/>
+                                                <constraint firstItem="jHk-5h-T3L" firstAttribute="leading" secondItem="rGd-xQ-ujb" secondAttribute="leading" id="kjn-MA-BAy"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBJ-zA-lP4">
+                                            <rect key="frame" x="207.5" y="0.0" width="206.5" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHIM SAP CHIEU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfz-sa-RWN">
+                                                    <rect key="frame" x="37" y="10" width="132.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyk-fs-4LX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="206.5" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="btn_moviecoming:" destination="-1" eventType="touchUpInside" id="aXD-Xu-vXj"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="wyk-fs-4LX" firstAttribute="top" secondItem="OBJ-zA-lP4" secondAttribute="top" id="8qW-3g-J9h"/>
+                                                <constraint firstAttribute="trailing" secondItem="wyk-fs-4LX" secondAttribute="trailing" id="BN5-qf-OQO"/>
+                                                <constraint firstItem="lfz-sa-RWN" firstAttribute="centerY" secondItem="OBJ-zA-lP4" secondAttribute="centerY" id="Hhh-Nt-5VQ"/>
+                                                <constraint firstItem="lfz-sa-RWN" firstAttribute="centerX" secondItem="OBJ-zA-lP4" secondAttribute="centerX" id="Sy6-xZ-acw"/>
+                                                <constraint firstItem="wyk-fs-4LX" firstAttribute="leading" secondItem="OBJ-zA-lP4" secondAttribute="leading" id="Wb1-2P-8F3"/>
+                                                <constraint firstAttribute="bottom" secondItem="wyk-fs-4LX" secondAttribute="bottom" id="whL-MW-Jnf"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="D0c-y0-15X" secondAttribute="trailing" id="JV7-wP-z3X"/>
+                                <constraint firstItem="D0c-y0-15X" firstAttribute="top" secondItem="cFw-QF-IUD" secondAttribute="top" id="SgX-ff-fiu"/>
+                                <constraint firstItem="D0c-y0-15X" firstAttribute="leading" secondItem="cFw-QF-IUD" secondAttribute="leading" id="U5N-n4-Q6P"/>
+                                <constraint firstAttribute="height" constant="40" id="bN9-Tl-cyb"/>
+                                <constraint firstAttribute="bottom" secondItem="D0c-y0-15X" secondAttribute="bottom" id="jNS-X8-Dea"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="a4B-XN-W0Z" firstAttribute="leading" secondItem="vec-iT-mKk" secondAttribute="leading" id="4Ie-HP-rJb"/>
-                        <constraint firstAttribute="trailing" secondItem="a4B-XN-W0Z" secondAttribute="trailing" id="4d3-l1-XVh"/>
-                        <constraint firstAttribute="bottom" secondItem="a4B-XN-W0Z" secondAttribute="bottom" id="IyY-VD-maf"/>
-                        <constraint firstItem="a4B-XN-W0Z" firstAttribute="top" secondItem="vec-iT-mKk" secondAttribute="top" id="R7N-8I-FF2"/>
+                        <constraint firstAttribute="bottom" secondItem="vVx-X6-bnx" secondAttribute="bottom" id="GJe-2W-fQd"/>
+                        <constraint firstAttribute="trailing" secondItem="cFw-QF-IUD" secondAttribute="trailing" id="bd9-sm-P2t"/>
+                        <constraint firstAttribute="trailing" secondItem="vVx-X6-bnx" secondAttribute="trailing" id="c0U-9O-lL5"/>
+                        <constraint firstItem="vVx-X6-bnx" firstAttribute="top" secondItem="cFw-QF-IUD" secondAttribute="bottom" id="pYl-pW-rrg"/>
+                        <constraint firstItem="cFw-QF-IUD" firstAttribute="leading" secondItem="vec-iT-mKk" secondAttribute="leading" id="qTd-zX-HCr"/>
+                        <constraint firstItem="vVx-X6-bnx" firstAttribute="leading" secondItem="vec-iT-mKk" secondAttribute="leading" id="wIS-hX-T5e"/>
+                        <constraint firstItem="cFw-QF-IUD" firstAttribute="top" secondItem="vec-iT-mKk" secondAttribute="top" id="xUi-Om-tEN"/>
                     </constraints>
                 </view>
             </subviews>
@@ -50,7 +127,7 @@
                 <constraint firstItem="vec-iT-mKk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wNh-xg-Fnx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="132" y="110"/>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </view>
     </objects>
 </document>

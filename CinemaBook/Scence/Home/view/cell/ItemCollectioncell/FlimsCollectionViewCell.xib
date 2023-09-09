@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FlimsCollectionViewCell" customModule="CinemaBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQa-Ff-GdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h2" translatesAutoresizingMaskIntoConstraints="NO" id="oad-O2-WsO">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="USa-Qv-ed0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09i-53-omh">
+                                <rect key="frame" x="0.0" y="280" width="300" height="20"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yph-TG-Wgy">
+                                <rect key="frame" x="200" y="280" width="100" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="hKD-rA-SrJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="r19-lg-EnB"/>
+                                </constraints>
+                                <state key="normal" title="DAT VE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yph-TG-Wgy" secondAttribute="trailing" id="1xE-7U-L2X"/>
+                            <constraint firstItem="oad-O2-WsO" firstAttribute="leading" secondItem="XQa-Ff-GdQ" secondAttribute="leading" id="3jv-oy-WJ8"/>
+                            <constraint firstItem="oad-O2-WsO" firstAttribute="top" secondItem="XQa-Ff-GdQ" secondAttribute="top" id="6x9-hn-vAM"/>
+                            <constraint firstAttribute="trailing" secondItem="09i-53-omh" secondAttribute="trailing" id="A6w-rL-cav"/>
+                            <constraint firstItem="09i-53-omh" firstAttribute="top" secondItem="oad-O2-WsO" secondAttribute="bottom" id="BQX-cn-l3B"/>
+                            <constraint firstAttribute="bottom" secondItem="09i-53-omh" secondAttribute="bottom" id="Qvp-cS-MCn"/>
+                            <constraint firstAttribute="trailing" secondItem="oad-O2-WsO" secondAttribute="trailing" id="Zrw-Ot-H6x"/>
+                            <constraint firstAttribute="bottom" secondItem="Yph-TG-Wgy" secondAttribute="bottom" id="kBo-Bv-lrJ"/>
+                            <constraint firstItem="09i-53-omh" firstAttribute="leading" secondItem="XQa-Ff-GdQ" secondAttribute="leading" id="lqH-YT-L8c"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XQa-Ff-GdQ" secondAttribute="bottom" id="5yD-QF-3UL"/>
+                <constraint firstItem="XQa-Ff-GdQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JSA-8c-hr3"/>
+                <constraint firstItem="XQa-Ff-GdQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rUA-Ab-ywt"/>
+                <constraint firstAttribute="trailing" secondItem="XQa-Ff-GdQ" secondAttribute="trailing" id="vEs-aL-ehQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="232" height="164"/>
+            <connections>
+                <outlet property="image_poster" destination="oad-O2-WsO" id="bXw-rF-lt7"/>
+                <outlet property="lbl_title" destination="09i-53-omh" id="St6-8O-r0f"/>
+            </connections>
+            <point key="canvasLocation" x="263.768115942029" y="146.65178571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="h2" width="132" height="179"/>
+    </resources>
+</document>

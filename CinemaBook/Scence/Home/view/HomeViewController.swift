@@ -9,99 +9,70 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import LNICoverFlowLayout
 
 class HomeViewController: BaseViewController {
    
-  
+    @IBOutlet weak var tableView: UITableView!
+    
    var viewModel = HomeViewModel()
     
     
+    @IBOutlet weak var lbl_movie_coming: UILabel!
+    @IBOutlet weak var view_movie_coming: UIView!
+    @IBOutlet weak var lbl_movie_now: UILabel!
+    @IBOutlet weak var view_movienow: UIView!
     @IBOutlet weak var collection_view: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-      
-       
-        
-        
-        
+        Register()
+        bindingtable()
+//         getListMovieShowBanner()
+      view_movie_coming.backgroundColor = .white
+            lbl_movie_coming.textColor = .blue
+            view_movienow.backgroundColor = .blue
+            lbl_movie_now.textColor = .white
+        var data = viewModel.pagigation.value
+               data.status = 1
+               viewModel.pagigation.accept(data)
+              
+         getListTraillerShowBanner()
+          getListVoucherShowBanner()
+
     }
-
-   
-   
     
-     
-      
-
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+               
+                 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       self.getListMovieShowBanner()
+  
+    }
+    
+    @IBAction func btn_movienow(_ sender: Any) {
+        view_movie_coming.backgroundColor = .white
+        lbl_movie_coming.textColor = .blue
+        view_movienow.backgroundColor = .blue
+        lbl_movie_now.textColor = .white
+        var data = viewModel.pagigation.value
+        data.status = 1
+        viewModel.pagigation.accept(data)
+        self.getListMovieShowBanner()
+    }
+    
+    @IBAction func btn_moviecoming(_ sender: Any) {
+        view_movienow.backgroundColor = .white
+        lbl_movie_now.textColor = .blue
+        view_movie_coming.backgroundColor = .blue
+        lbl_movie_coming.textColor = .white
+        var data = viewModel.pagigation.value
+        data.status = 0
+        viewModel.pagigation.accept(data)
+        self.getListMovieShowBanner()
+    }
 }
-//extension HomeViewController {
-    
-//    func resgister() {
-//         let bannertableviewcell = UINib(nibName: "FlimsCollectionViewCell", bundle: .main)
-//             collection_view.register(bannertableviewcell, forCellWithReuseIdentifier: "FlimsCollectionViewCell")
-//       let bannertableviewcell2 = UINib(nibName: "headerCollectionViewCell", bundle: .main)
-//                 collection_view.register(bannertableviewcell2, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderReuseIdentifier")
-//
-//        setupCollectionView()
-//    }
-//
-//        func setupCollectionView() {
-//            let layout = UICollectionViewFlowLayout()
-//            layout.scrollDirection = .vertical
-//    //        layout.scrollDirection = .horizontal
-//            layout.itemSize = CGSize(width: view.frame.width/2.2, height: view.frame.width/2.2)
-//
-//            collection_view.collectionViewLayout = layout
-//            collection_view.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//            collection_view.translatesAutoresizingMaskIntoConstraints = false
-//
-//
-//
-//        }
-//
-//    func binđDataTableCollectionView(){
-//
-//                   viewModel.listtablecell.bind(to: collection_view.rx.items)
-//                   { [self] (table, index, employee) -> UICollectionViewCell in
-//                       let indexPath = IndexPath(row: index, section: 0)
-//                       switch index {
-//                       case 0:
-//                        let cell = self.collection_view.dequeueReusableCell(withReuseIdentifier: "headerCollectionViewCell", for: indexPath) as! headerCollectionViewCell
-//
-//
-//                           return cell
-//                       case 1:
-//                        let cell = self.collection_view.dequeueReusableCell(withReuseIdentifier: "FlimsCollectionViewCell", for: indexPath) as! FlimsCollectionViewCell
-//
-//
-//                           return cell
-//                       default:
-//                        let cell = self.collection_view.dequeueReusableCell(withReuseIdentifier: "headerCollectionViewCell", for: indexPath) as! headerCollectionViewCell
-//
-//
-//                           return cell
-//                       }
-//
-//
-//                       }.disposed(by: rxbag)
-//
-//          }
-       
-
-//extension HomeViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        // Return the size for the header view
-//        return CGSize(width: collectionView.frame.width, height: 100) // Adjust height as needed
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        if kind == UICollectionView.elementKindSectionHeader {
-//            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerCollectionReusableView", for: indexPath) as! headerCollectionReusableView
-//            // Configure header view if needed
-//            return headerView
-//        }
-//        fatalError("Unexpected element kind")
-//    }
-//
-//}
