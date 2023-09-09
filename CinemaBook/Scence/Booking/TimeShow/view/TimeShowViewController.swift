@@ -22,9 +22,15 @@ class TimeShowViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
           register()
         bindingtableviewcell()
-      
+   getListInterestCinema()
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         
+          
+    }
 
     
     @IBAction func btn_popToViewController(_ sender: Any) {

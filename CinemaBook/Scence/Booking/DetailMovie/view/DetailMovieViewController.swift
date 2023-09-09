@@ -9,8 +9,9 @@
 import UIKit
 import AVFoundation
 import youtube_ios_player_helper
+import FSPagerView
 
-class DetailMovieViewController: BaseViewController {
+class DetailMovieViewController: BaseViewController, FSPagerViewDataSource, FSPagerViewDelegate {
 
     var viewModel = DetailMovieviewModel()
     var router = DetailMovieRouter()
@@ -38,7 +39,8 @@ class DetailMovieViewController: BaseViewController {
     @IBOutlet weak var lbl_text: UILabel!
     @IBOutlet weak var btn_readmore: UIButton!
     
-   
+    @IBOutlet weak var bannerVoucher: FSPagerView!
+    
     
     var islabelatMaxHeight = true
     
@@ -48,14 +50,25 @@ class DetailMovieViewController: BaseViewController {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
         readMore()
+        reaload()
+        bannerVoucher.cornerRadius = 20
+        bannerVoucher.transformer = FSPagerViewTransformer(type: .cubic)
+        bannerVoucher.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCell")
+        bannerVoucher.automaticSlidingInterval = 5
+        bannerVoucher.interitemSpacing = 100
+        bannerVoucher.alwaysBounceHorizontal = true
+        bannerVoucher.dataSource = self
+        bannerVoucher.delegate = self
+        bannerVoucher.isInfinite = true
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+         getListVoucher()
         viewModel.idmovie.accept(idmovie)
         getDetailMovie()
-        
+    
     }
 
     @IBAction func btn_makePopToViewController(_ sender: Any) {
@@ -101,6 +114,56 @@ class DetailMovieViewController: BaseViewController {
     @IBAction func btn_makevideo(_ sender: Any) {
         viewModel.makeToVideoYoutuebViewController(videoId: viewModel.data.value.videofile)
     }
+    
+    
+     
+    //     public func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int){
+    //           if let viewModel = viewModel{
+    //               switch viewModel.dataArrayProduct.value[index].type_url{
+    //                   case 0:
+    //                       /*
+    //                               Banner được chọn là kho bia
+    //                               => chuyển tới trang chi tiết kho bia
+    //                           */
+    //                       viewModel.makeBeerStoreDetailViewController(beerId: viewModel.bannerArray.value[index].restaurant_brand_id)
+    //                       break
+    //                   case 1:
+    //                       /*
+    //                            Banner được chọn là loại quà tặng => thì check membershipCard nếu đã là thành viên thì chuyển tới trang chi tiết quà tặng,
+    //                            ngược lại thì chuyển tới trang chi tiết nhà hàng
+    //                           */
+    //                       viewModel.brandId.accept(viewModel.bannerArray.value[index].restaurant_brand_id)
+    //                       checkReadyMemberShipCard(giftId: viewModel.bannerArray.value[index].restaurant_gift_id)
+    //                       break
+    //                   case 2: // => chuyển tới landing_page
+    //                       guard let url = URL(string: viewModel.bannerArray.value[index].landing_page_url) else { return }
+    //                       UIApplication.shared.open(url)
+    //                       break
+    //
+    //                   default:
+    //                       return
+    //               }
+    //
+    //           }
+    //       }
+           
+           public func numberOfItems(in pagerView: FSPagerView) -> Int {
+               
+                return viewModel.dataArrayVoucher.value.count
+             
+              
+           }
+               
+           public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+               
+             let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "FSPagerViewCell", at: index)
+                cell.imageView?.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: viewModel.dataArrayVoucher.value[index].poster) ), placeholder: UIImage(named: "image_defauft_medium"))
+                   return cell
+              
+               return pagerView.dequeueReusableCell(withReuseIdentifier: "FSPagerViewCell", at: index)
+           }
+          
+    
 }
 
 extension DetailMovieViewController {
@@ -113,5 +176,5 @@ extension DetailMovieViewController {
         self.view_video.layer.addSublayer(playerplay)
         player.play()
          }
-   
+    
 }

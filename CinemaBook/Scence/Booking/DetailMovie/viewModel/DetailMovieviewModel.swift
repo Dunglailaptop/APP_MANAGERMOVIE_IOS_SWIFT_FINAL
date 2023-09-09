@@ -16,7 +16,7 @@ class DetailMovieviewModel {
     
     var idmovie: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     var data: BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
-    
+    var dataArrayVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
     
     func bind(view: DetailMovieViewController,router: DetailMovieRouter){
         self.view = view
@@ -47,4 +47,11 @@ extension DetailMovieviewModel {
                .showAPIErrorToast()
                .mapObject(type: APIResponse.self)
        }
+    func getListVoucher() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListVoucher)
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
 }

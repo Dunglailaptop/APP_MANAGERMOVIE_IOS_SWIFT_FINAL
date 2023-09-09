@@ -16,9 +16,10 @@ class TimeShowViewModel:BaseViewModel {
       
       public var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1])
     
-    public var dataListCinema: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14])
-    public var listTime:BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2,3,4,5,6,7,8,9,10])
+    public var dataListCinema: BehaviorRelay<[InterestMovie]> = BehaviorRelay(value: [])
+    public var listTime:BehaviorRelay<[InterestMovie]> = BehaviorRelay(value: [])
     public var heightforcell: BehaviorRelay<Int> = BehaviorRelay(value: 80)
+    public var pagation: BehaviorRelay<(date:String,idmovie:Int)> = BehaviorRelay(value: (date:"2023-09-09",idmovie:1))
       
       func bind(view: TimeShowViewController, router: TimeShowRouter)
       {
@@ -33,4 +34,20 @@ class TimeShowViewModel:BaseViewModel {
     func navigationPopToViewController() {
         router?.makepopToViewController()
     }
+}
+extension TimeShowViewModel {
+      func getInterestMovie() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListInterestMovie(dateshow: pagation.value.date, idmovie: pagation.value.idmovie))
+                 .filterSuccessfulStatusCodes()
+                 .mapJSON().asObservable()
+                 .showAPIErrorToast()
+                 .mapObject(type: APIResponse.self)
+         }
+    func getListCinema() -> Observable<APIResponse> {
+           return appServiceProvider.rx.request(.getListInterestCinema(dateshow: pagation.value.date, idmovie: pagation.value.idmovie))
+                    .filterSuccessfulStatusCodes()
+                    .mapJSON().asObservable()
+                    .showAPIErrorToast()
+                    .mapObject(type: APIResponse.self)
+            }
 }

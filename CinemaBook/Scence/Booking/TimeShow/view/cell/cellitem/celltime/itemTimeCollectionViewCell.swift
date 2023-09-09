@@ -10,10 +10,17 @@ import UIKit
 
 class itemTimeCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lbl_time: UILabel!
     @IBOutlet weak var btn_makeToBookingChairViewController: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    var data: InterestMovie? = nil {
+        didSet {
+            lbl_time.text = data?.times
+        }
+    }
+    
 }

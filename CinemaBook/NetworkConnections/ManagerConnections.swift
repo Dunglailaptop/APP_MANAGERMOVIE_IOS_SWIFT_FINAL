@@ -21,6 +21,9 @@ enum ManagerConnections {
     case getInfoAccount(id:Int)
     case getListVoucher
     case getListTrailler
+    case getListCinema
+    case getListInterestMovie(dateshow:String,idmovie:Int)
+    case getListInterestCinema(dateshow:String,idmovie:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -51,6 +54,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetVoucher
         case .getListTrailler:
             return APIEndPoint.Name.urlGetTrailler
+        case .getListCinema:
+            return APIEndPoint.Name.urlGetListCinema
+        case .getListInterestMovie(let dateshow,let idmovie):
+            return APIEndPoint.Name.urlGetInterestMovie
+        case .getListInterestCinema(let dateshow,let idmovie):
+            return APIEndPoint.Name.urlGetListCinemaofInterest
         }
     
     }
@@ -71,6 +80,12 @@ extension ManagerConnections: TargetType {
         case .getListVoucher:
             return .get
         case .getListTrailler:
+            return .get
+        case .getListCinema:
+            return .get
+        case .getListInterestMovie(_,_):
+            return .get
+        case .getListInterestCinema(_,_):
             return .get
         }
 
@@ -117,6 +132,12 @@ extension ManagerConnections: TargetType {
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListTrailler:
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListCinema:
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListInterestMovie(_,_):
+                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListInterestCinema(_,_):
+                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -152,6 +173,14 @@ extension ManagerConnections: TargetType {
             return [:]
         case .getListTrailler:
             return [:]
+        case .getListCinema:
+            return [:]
+        case .getListInterestMovie(let dateshow,let idmovie):
+            return ["date" : dateshow,
+                    "Idmovie" : idmovie]
+        case .getListInterestCinema(let dateshow,let idmovie):
+        return ["date" : dateshow,
+                "Idmovie" : idmovie]
         }
        
     }
@@ -182,6 +211,12 @@ extension ManagerConnections: TargetType {
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListTrailler:
               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListCinema:
+                return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListInterestMovie(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListInterestCinema(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

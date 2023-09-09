@@ -52,30 +52,24 @@
                             <constraint firstItem="qTA-5M-fYd" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="uTK-Wd-zAe"/>
                         </constraints>
                     </view>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-A2-RgO">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-pd-3zZ" customClass="FSPagerView" customModule="FSPagerView">
                         <rect key="frame" x="0.0" y="40" width="300" height="260"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ppk-aC-kMy">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                    </collectionView>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6tS-A2-RgO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ftn-CI-pdJ"/>
-                    <constraint firstItem="6tS-A2-RgO" firstAttribute="top" secondItem="eRp-Qa-UjT" secondAttribute="bottom" id="l7g-N1-uqf"/>
+                    <constraint firstItem="c7g-pd-3zZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="At5-by-cOw"/>
+                    <constraint firstAttribute="bottom" secondItem="c7g-pd-3zZ" secondAttribute="bottom" id="QXM-zr-9zG"/>
+                    <constraint firstAttribute="trailing" secondItem="c7g-pd-3zZ" secondAttribute="trailing" id="aPF-dg-MBV"/>
                     <constraint firstAttribute="trailing" secondItem="eRp-Qa-UjT" secondAttribute="trailing" id="m9y-bR-uOd"/>
+                    <constraint firstItem="c7g-pd-3zZ" firstAttribute="top" secondItem="eRp-Qa-UjT" secondAttribute="bottom" id="mH8-bj-RnM"/>
                     <constraint firstItem="eRp-Qa-UjT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nxP-sL-CTE"/>
-                    <constraint firstAttribute="trailing" secondItem="6tS-A2-RgO" secondAttribute="trailing" id="qPC-z4-ZED"/>
-                    <constraint firstAttribute="bottom" secondItem="6tS-A2-RgO" secondAttribute="bottom" id="uXT-dR-1im"/>
                     <constraint firstItem="eRp-Qa-UjT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zaC-ie-U1z"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="collection_view" destination="6tS-A2-RgO" id="psk-LV-EUc"/>
+                <outlet property="BANNER" destination="c7g-pd-3zZ" id="jjA-cv-sVZ"/>
             </connections>
             <point key="canvasLocation" x="132" y="110"/>
         </tableViewCell>

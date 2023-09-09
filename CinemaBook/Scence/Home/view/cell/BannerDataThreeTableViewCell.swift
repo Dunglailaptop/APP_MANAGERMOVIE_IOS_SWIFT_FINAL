@@ -16,7 +16,7 @@ class BannerDataThreeTableViewCell: UITableViewCell {
     @IBOutlet weak var tableView: UITableView!
     override func awakeFromNib() {
         super.awakeFromNib()
-          register()
+          
         // Initialization code
     }
 
@@ -28,8 +28,8 @@ class BannerDataThreeTableViewCell: UITableViewCell {
     
     var viewModel: HomeViewModel? {
         didSet{
-          
-            bindingtable()
+          register()
+          bindingtable()
         }
     }
     
@@ -45,7 +45,7 @@ extension BannerDataThreeTableViewCell {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
     }
       func bindingtable() {
-          viewModel?.dataArrayProduct.bind(to: tableView.rx.items)
+          viewModel?.listcell.bind(to: tableView.rx.items)
           { [self]  (tableView, index, element) -> UITableViewCell in
               let indexPath = IndexPath(row: index, section: 0)
               switch index {

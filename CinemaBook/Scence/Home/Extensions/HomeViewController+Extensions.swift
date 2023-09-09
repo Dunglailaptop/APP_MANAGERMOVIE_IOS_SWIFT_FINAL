@@ -13,6 +13,22 @@ import ObjectMapper
 
 // CALL API
 extension HomeViewController {
+    
+    func setup() {
+        view_movie_coming.backgroundColor = .white
+            lbl_movie_coming.textColor = .blue
+            view_movienow.backgroundColor = .blue
+            lbl_movie_now.textColor = .white
+        var data = viewModel.pagigation.value
+                data.status = 1
+            viewModel.pagigation.accept(data)
+        getListTraillerShowBanner()
+        getListVoucherShowBanner()
+        getListCinemaBanner()
+      
+        }
+    
+    
     func getListMovieShowBanner() {
         viewModel.getListMovieShowBanner().subscribe(onNext: { [weak self] (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
@@ -54,6 +70,19 @@ extension HomeViewController {
             
             }).disposed(by: rxbag)
     }
+    func getListCinemaBanner() {
+        viewModel.getListCinema().subscribe(onNext: { [weak self] (response) in
+             if response.code == RRHTTPStatusCode.ok.rawValue {
+                 if let dataMap = Mapper<Cinema>().mapArray(JSONObject: response.data) {
+                     self?.viewModel.cleardata()
+                     self?.viewModel.dataArrayProduct.accept(dataMap)
+                 }
+             }else {
+                 JonAlert.show(message: "Co loi xay ra trong qua trinh ket noi")
+             }
+             
+             }).disposed(by: rxbag)
+     }
 }
 
 
@@ -113,7 +142,7 @@ extension HomeViewController:UITableViewDelegate{
         case 0:
             return 400
         case 1:
-            return CGFloat(viewModel.dataArrayProduct.value.count * 200)
+            return CGFloat(viewModel.listcell.value.count * 200)
         default:
             return 200
         }

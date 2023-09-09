@@ -7,55 +7,63 @@
 //
 
 import UIKit
+import  RxCocoa
+import RxSwift
+import ObjectMapper
+
+extension TimeShowViewController {
+ //call api
+ func getListInterestCinema() {
+    viewModel.getListCinema().subscribe(onNext: { (response) in
+                 if (response.code == RRHTTPStatusCode.ok.rawValue){
+                     if let movies = Mapper<InterestMovie>().mapArray(JSONObject: response.data)
+                     {
+                        self.viewModel.dataListCinema.accept(movies)
+                        self.getListInterestMovie()
+                      dLog(response.data)
+                     }
+                 }
+
+                 }).disposed(by: rxbag)
+  }
+    func getListInterestMovie() {
+         viewModel.getInterestMovie().subscribe(onNext: { (response) in
+                   if (response.code == RRHTTPStatusCode.ok.rawValue){
+                       if let movies = Mapper<InterestMovie>().mapArray(JSONObject: response.data)
+                       {
+                           self.viewModel.listTime.accept(movies)
+
+                       }
+                   }
+
+                   }).disposed(by: rxbag)
+    }
+}
 
 extension TimeShowViewController{
     func register() {
         let DatePickerRowView = UINib(nibName: "DatePickerRowTableViewCell", bundle: .main)
         tableView.register(DatePickerRowView, forCellReuseIdentifier: "DatePickerRowTableViewCell")
-        let ListcinemaView = UINib(nibName: "ListCinemaTableViewCell", bundle: .main)
-        tableView.register(ListcinemaView, forCellReuseIdentifier: "ListCinemaTableViewCell")
+        let ListcinemaView = UINib(nibName: "ItemCinemaTableViewCell", bundle: .main)
+        tableView.register(ListcinemaView, forCellReuseIdentifier: "ItemCinemaTableViewCell")
         self.tableView.estimatedRowHeight = 80
                self.tableView.rowHeight = UITableView.automaticDimension
                tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.rx.setDelegate(self).disposed(by: rxbag)
     }
     func bindingtableviewcell() {
-        viewModel.dataArray.bind(to: tableView.rx.items){ [self] (table, index, employee) -> UITableViewCell in
-                let indexPath = IndexPath(row: index, section: 0)
-                    switch index {
-                              case 0:
-                               let cell = self.tableView.dequeueReusableCell(withIdentifier: "DatePickerRowTableViewCell", for: indexPath) as! DatePickerRowTableViewCell
-                                    
-                                  return cell
-                              case 1:
-                                let cell = self.tableView.dequeueReusableCell(withIdentifier: "ListCinemaTableViewCell", for: indexPath) as! ListCinemaTableViewCell
-                                cell.viewModel = self.viewModel
-                                  
-                                  return cell
-                              default:
-                                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "ListCinemaTableViewCell", for: indexPath) as! ListCinemaTableViewCell
-                                                          
-                                                         
-                                 
-                                  return cell
-                              }
+        viewModel.dataListCinema.bind(to: tableView.rx.items(cellIdentifier: "ItemCinemaTableViewCell", cellType:  ItemCinemaTableViewCell.self)){ (row,data,cell) in
+            cell.viewModel = self.viewModel
+            cell.data = data
                   
-                  
-                              }.disposed(by: rxbag)
+                }.disposed(by: rxbag)
                       
-                 }
+        }
 }
     
 extension TimeShowViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-             switch indexPath.row {
-             case 0:
-                 return 150
-             case 1:
-                return CGFloat(viewModel.dataListCinema.value.count * 80)
-             default:
-                 return 200
-             }
+             return 80
  
          }
 }

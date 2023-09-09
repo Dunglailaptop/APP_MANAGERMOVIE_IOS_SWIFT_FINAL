@@ -10,6 +10,7 @@ import UIKit
 
 class FlimsCollectionViewCell: UICollectionViewCell {
 
+    
     @IBOutlet weak var lbl_title: UILabel!
     @IBOutlet weak var image_poster: UIImageView!
     override func awakeFromNib() {
@@ -28,6 +29,11 @@ class FlimsCollectionViewCell: UICollectionViewCell {
             lbl_title.text = data?.namemovie
             self.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
         }
+    }
+    
+    
+    @IBAction func btn_makeToDetailViewController(_ sender: Any) {
+        self.viewModel?.maketoDetailViewContrller(idmovie: data!.movieID)
     }
     
 }

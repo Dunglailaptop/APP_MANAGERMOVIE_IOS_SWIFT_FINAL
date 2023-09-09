@@ -31,6 +31,9 @@ public struct APIEndPoint {
         static let urlGetInfoAccount = "/Account/getInfoAccount"
         static let urlGetVoucher = "/voucher/getlistvoucher"
         static let urlGetTrailler = "/videoUser/getlistvideoTrailler"
+        static let urlGetListCinema = "/Cinema/getListCinema"
+        static let urlGetInterestMovie = "/interestMovie/getListInterestCinema"
+        static let urlGetListCinemaofInterest = "/interestMovie/getlistcinema"
     }
     
 }

@@ -50,6 +50,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="btn_makeToBookingChairViewController" destination="XPM-ih-XgV" id="gye-Ur-mZI"/>
+                <outlet property="lbl_time" destination="eyD-Jn-4yF" id="rKL-Nr-K92"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
         </collectionViewCell>

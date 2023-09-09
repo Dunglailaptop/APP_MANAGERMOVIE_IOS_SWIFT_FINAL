@@ -73,6 +73,8 @@ extension BannerMovieTableViewCell {
         func bindingcollectionviewcell() {
             viewModel?.dataArrayMovie.bind(to: (collection_view.rx.items(cellIdentifier: "FlimsCollectionViewCell", cellType: FlimsCollectionViewCell.self))) { [weak self] (row,data,cell) in
                 cell.data = data
+                
+                
                 cell.viewModel = self?.viewModel
        
             }.disposed(by: disposeBag)

@@ -103,6 +103,7 @@
             <connections>
                 <outlet property="btn_show_all" destination="bsb-Iq-pNB" id="3FT-Ic-zvR"/>
                 <outlet property="icon_dropdown" destination="4h4-7G-kQL" id="vtk-Y9-urh"/>
+                <outlet property="lbl_namecinema" destination="Yqs-Ao-o8s" id="m7H-5e-lWo"/>
                 <outlet property="view_collection" destination="s5k-OH-ffV" id="Q7R-lX-aP3"/>
                 <outlet property="view_height" destination="DUo-Lz-jS1" id="LPB-SB-Lkt"/>
                 <outlet property="view_of_collection" destination="3aw-AN-ta1" id="Ct8-MP-UgH"/>

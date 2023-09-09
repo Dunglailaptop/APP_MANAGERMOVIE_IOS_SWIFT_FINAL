@@ -18,6 +18,7 @@ class ItemCinemaTableViewCell: UITableViewCell {
     @IBOutlet weak var view_of_collection: UIView!
     @IBOutlet weak var view_collection: UICollectionView!
     
+    @IBOutlet weak var lbl_namecinema: UILabel!
     @IBOutlet weak var icon_dropdown: UIImageView!
     
     var rxbag = DisposeBag()
@@ -31,6 +32,13 @@ class ItemCinemaTableViewCell: UITableViewCell {
 
      
     }
+    
+    var data: InterestMovie? = nil {
+        didSet {
+            lbl_namecinema.text = data?.namecinema
+        }
+    }
+    
     var viewModel: TimeShowViewModel? = nil {
         didSet{
             register()
@@ -59,6 +67,7 @@ extension ItemCinemaTableViewCell {
     
     func bindingCollectionViewCell() {
         viewModel?.listTime.bind(to: view_collection.rx.items(cellIdentifier: "itemTimeCollectionViewCell", cellType: itemTimeCollectionViewCell.self)) { (index, data, cell) in
+            cell.data = data
             cell.btn_makeToBookingChairViewController.rx.tap.asDriver().drive(onNext: {[weak self] in
                 self?.viewModel?.navigationToBookingChairViewController()
             }).disposed(by: self.rxbag)

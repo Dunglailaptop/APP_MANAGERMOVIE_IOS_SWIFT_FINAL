@@ -16,8 +16,10 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
    var viewModel = HomeViewModel()
+    var router = HomeRouter()
+    @IBOutlet weak var avatar: UIImageView!
     
-    
+  
     @IBOutlet weak var lbl_movie_coming: UILabel!
     @IBOutlet weak var view_movie_coming: UIView!
     @IBOutlet weak var lbl_movie_now: UILabel!
@@ -26,20 +28,11 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.bind(view: self, router: router)
         Register()
         bindingtable()
-//         getListMovieShowBanner()
-      view_movie_coming.backgroundColor = .white
-            lbl_movie_coming.textColor = .blue
-            view_movienow.backgroundColor = .blue
-            lbl_movie_now.textColor = .white
-        var data = viewModel.pagigation.value
-               data.status = 1
-               viewModel.pagigation.accept(data)
-              
-         getListTraillerShowBanner()
-          getListVoucherShowBanner()
-
+        setup()
+     
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -51,7 +44,7 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        self.getListMovieShowBanner()
-  
+       
     }
     
     @IBAction func btn_movienow(_ sender: Any) {
