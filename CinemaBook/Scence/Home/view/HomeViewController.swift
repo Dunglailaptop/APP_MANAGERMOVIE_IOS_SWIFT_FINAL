@@ -31,7 +31,7 @@ class HomeViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
         Register()
         bindingtable()
-        setup()
+       setupView()
      
     }
     

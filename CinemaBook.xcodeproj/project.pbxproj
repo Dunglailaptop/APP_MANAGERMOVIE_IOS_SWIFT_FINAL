@@ -15,10 +15,6 @@
 		FE11FA792AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE11FA772AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib */; };
 		FE11FA7C2AAB5F770016CC6A /* BannerProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11FA7A2AAB5F770016CC6A /* BannerProductTableViewCell.swift */; };
 		FE11FA7D2AAB5F770016CC6A /* BannerProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE11FA7B2AAB5F770016CC6A /* BannerProductTableViewCell.xib */; };
-		FE11FA802AAB5F890016CC6A /* itemProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11FA7E2AAB5F890016CC6A /* itemProductCollectionViewCell.swift */; };
-		FE11FA812AAB5F890016CC6A /* itemProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE11FA7F2AAB5F890016CC6A /* itemProductCollectionViewCell.xib */; };
-		FE11FA862AAB78410016CC6A /* BannerDataThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE11FA842AAB78410016CC6A /* BannerDataThreeTableViewCell.swift */; };
-		FE11FA872AAB78410016CC6A /* BannerDataThreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE11FA852AAB78410016CC6A /* BannerDataThreeTableViewCell.xib */; };
 		FE2172A72A76A7F0000C0C17 /* CustomTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2172A62A76A7F0000C0C17 /* CustomTabItem.swift */; };
 		FE2172AB2A76A8C4000C0C17 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2172A92A76A8C4000C0C17 /* TicketViewController.swift */; };
 		FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2172AA2A76A8C4000C0C17 /* TicketViewController.xib */; };
@@ -261,10 +257,6 @@
 		FE11FA772AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemVoucherCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE11FA7A2AAB5F770016CC6A /* BannerProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerProductTableViewCell.swift; sourceTree = "<group>"; };
 		FE11FA7B2AAB5F770016CC6A /* BannerProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerProductTableViewCell.xib; sourceTree = "<group>"; };
-		FE11FA7E2AAB5F890016CC6A /* itemProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		FE11FA7F2AAB5F890016CC6A /* itemProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemProductCollectionViewCell.xib; sourceTree = "<group>"; };
-		FE11FA842AAB78410016CC6A /* BannerDataThreeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDataThreeTableViewCell.swift; sourceTree = "<group>"; };
-		FE11FA852AAB78410016CC6A /* BannerDataThreeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerDataThreeTableViewCell.xib; sourceTree = "<group>"; };
 		FE2172A62A76A7F0000C0C17 /* CustomTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabItem.swift; sourceTree = "<group>"; };
 		FE2172A92A76A8C4000C0C17 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 		FE2172AA2A76A8C4000C0C17 /* TicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
@@ -1322,8 +1314,6 @@
 				FE65338E2AAA21A400C0739B /* itemTraillerCollectionViewCell.xib */,
 				FE11FA762AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.swift */,
 				FE11FA772AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib */,
-				FE11FA7E2AAB5F890016CC6A /* itemProductCollectionViewCell.swift */,
-				FE11FA7F2AAB5F890016CC6A /* itemProductCollectionViewCell.xib */,
 			);
 			path = ItemCollectioncell;
 			sourceTree = "<group>";
@@ -1490,8 +1480,6 @@
 				FE65338A2AAA173600C0739B /* BannerVoucherTableViewCell.xib */,
 				FE11FA7A2AAB5F770016CC6A /* BannerProductTableViewCell.swift */,
 				FE11FA7B2AAB5F770016CC6A /* BannerProductTableViewCell.xib */,
-				FE11FA842AAB78410016CC6A /* BannerDataThreeTableViewCell.swift */,
-				FE11FA852AAB78410016CC6A /* BannerDataThreeTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1883,7 +1871,6 @@
 				FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */,
 				FE69A8AA2AA1A2C90017D891 /* NewFeedViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
-				FE11FA872AAB78410016CC6A /* BannerDataThreeTableViewCell.xib in Resources */,
 				FE59CF412AA3994300A6ADAA /* AccountInfoViewController.xib in Resources */,
 				FE5C9E832AA42BE300FA235D /* Roboto-Regular.ttf in Resources */,
 				FE69A8A62AA1909F0017D891 /* DialogViewController.xib in Resources */,
@@ -1898,7 +1885,6 @@
 				FE11FA7D2AAB5F770016CC6A /* BannerProductTableViewCell.xib in Resources */,
 				FE5C9E8D2AA42BE300FA235D /* Roboto-BlackItalic.ttf in Resources */,
 				FE5C9E902AA42BE300FA235D /* Roboto-Black.ttf in Resources */,
-				FE11FA812AAB5F890016CC6A /* itemProductCollectionViewCell.xib in Resources */,
 				FE7BA9952A5AFE2700344EFB /* AccountViewController.xib in Resources */,
 				FE11FA792AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib in Resources */,
 				FE5C9E8C2AA42BE300FA235D /* Roboto-Italic.ttf in Resources */,
@@ -2025,7 +2011,6 @@
 				FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */,
 				FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */,
 				FE6533832AAA16AA00C0739B /* BannerMovieTableViewCell.swift in Sources */,
-				FE11FA802AAB5F890016CC6A /* itemProductCollectionViewCell.swift in Sources */,
 				FE2172B12A76B55C000C0C17 /* CustomItemView.swift in Sources */,
 				FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */,
 				FE33F3902A6CC76B00A396A1 /* Observable+Extension.swift in Sources */,
@@ -2046,7 +2031,6 @@
 				FE519E7A2A88CC01007E131E /* BookingRouter.swift in Sources */,
 				FE33F38E2A6CC76B00A396A1 /* StringExtension.swift in Sources */,
 				FE33F39E2A6CC82800A396A1 /* HandlerDelegate.swift in Sources */,
-				FE11FA862AAB78410016CC6A /* BannerDataThreeTableViewCell.swift in Sources */,
 				FEE5CA562A62EB8200299EA6 /* HomeViewController+Extensions.swift in Sources */,
 				FE2172AE2A76B299000C0C17 /* UIImage+Extension.swift in Sources */,
 				FE5D081E2AA22019004FA3D9 /* MovieViewController.swift in Sources */,

@@ -23,21 +23,17 @@ class TimeShowViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
           register()
         bindingtableviewcell()
-   getListInterestCinema()
-        calender.scope = .week
-        calender.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            calender.topAnchor.constraint(equalTo: calender.topAnchor),
-            calender.leadingAnchor.constraint(equalTo: calender.leadingAnchor),
-            calender.trailingAnchor.constraint(equalTo: calender.trailingAnchor),
-            calender.bottomAnchor.constraint(equalTo: calender.bottomAnchor)
-        ])
-        FSCalendar.appearance().rowHeight = 100 // Điều chỉnh chiều cao của
-        
-        calender.backgroundColor = .darkGray
+        getListInterestCinema()
+       setup()
     // Điều chỉnh chiều cao của phần header (tháng và năm)
-       
-
+    
+    }
+    
+    func setup() {
+               calender.scope = .week
+               FSCalendar.appearance().rowHeight = 100
+               calender.backgroundColor = .darkGray
+        calender.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,4 +47,16 @@ class TimeShowViewController: BaseViewController {
         viewModel.navigationPopToViewController()
     }
     
+}
+extension TimeShowViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+             // Update the selectedDateLabel with the selected date in the format "dd/MM/yyyy"
+        var dateget =  Utils().convertFormartDateyearMMdd(date: date)
+        var dataDate = viewModel.pagation.value
+        dataDate.date = dateget
+        viewModel.pagation.accept(dataDate)
+      getListInterestCinema()
+    }
+    
+   
 }

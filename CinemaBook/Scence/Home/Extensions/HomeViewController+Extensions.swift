@@ -14,18 +14,18 @@ import ObjectMapper
 // CALL API
 extension HomeViewController {
     
-    func setup() {
-        view_movie_coming.backgroundColor = .white
-            lbl_movie_coming.textColor = .blue
-            view_movienow.backgroundColor = .blue
-            lbl_movie_now.textColor = .white
+    func setupView() {
+//        view_movie_coming.backgroundColor = .white
+//            lbl_movie_coming.textColor = .blue
+//            view_movienow.backgroundColor = .blue
+//            lbl_movie_now.textColor = .white
         var data = viewModel.pagigation.value
                 data.status = 1
             viewModel.pagigation.accept(data)
         getListTraillerShowBanner()
         getListVoucherShowBanner()
         getListCinemaBanner()
-      
+
         }
     
     
@@ -100,9 +100,10 @@ extension HomeViewController {
         let BannerProductTable = UINib(nibName: "BannerProductTableViewCell", bundle: .main)
               tableView.register(BannerProductTable, forCellReuseIdentifier: "BannerProductTableViewCell")
           
-        tableView.rx.setDelegate(self).disposed(by: rxbag)
-//        tableView.rowHeight = UITableView.automaticDimension
-//        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+      
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+          tableView.rx.setDelegate(self).disposed(by: rxbag)
     
     }
    
@@ -112,17 +113,17 @@ extension HomeViewController {
             let indexPath = IndexPath(row: index, section: 0)
             switch index {
             case 0:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerMovieTableViewCell", for: indexPath) as! BannerMovieTableViewCell
-                                            
-                cell.viewModel = self.viewModel
-                cell.selectionStyle = .none
+               let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerProductTableViewCell", for: indexPath) as! BannerProductTableViewCell
+                              cell.viewModel = self.viewModel
+                          cell.selectionStyle = .none
                 
                 return cell
             case 1:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerVoucherTableViewCell", for: indexPath) as! BannerVoucherTableViewCell
-                cell.viewModel = self.viewModel
-                                            cell.selectionStyle = .none
-                
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerMovieTableViewCell", for: indexPath) as! BannerMovieTableViewCell
+                                                           
+                    cell.viewModel = self.viewModel
+                               
+                    cell.selectionStyle = .none
                 return cell
             case 2:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerTraillerVideoTableViewCell", for: indexPath) as! BannerTraillerVideoTableViewCell
@@ -131,15 +132,16 @@ extension HomeViewController {
                            
                            return cell
             case 3:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerProductTableViewCell", for: indexPath) as! BannerProductTableViewCell
-                    cell.viewModel = self.viewModel
-                cell.selectionStyle = .none
+           let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerVoucherTableViewCell", for: indexPath) as! BannerVoucherTableViewCell
+                          cell.viewModel = self.viewModel
+                          cell.selectionStyle = .none
                            
                     return cell
             default:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerDataThreeTableViewCell", for: indexPath) as! BannerDataThreeTableViewCell
-                 
-                cell.selectionStyle = .none
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerVoucherTableViewCell", for: indexPath) as! BannerVoucherTableViewCell
+                    cell.viewModel = self.viewModel
+                    cell.selectionStyle = .none
+                                          
                 return cell
             }
 
@@ -152,9 +154,9 @@ extension HomeViewController:UITableViewDelegate{
 
         switch indexPath.row {
         case 0:
-            return 400
-        case 1:
             return 200
+        case 1:
+            return 400
         case 2:
             return 200
         case 3:

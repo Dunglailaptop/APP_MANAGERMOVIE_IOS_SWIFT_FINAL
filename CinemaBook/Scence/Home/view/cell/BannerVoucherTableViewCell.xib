@@ -53,7 +53,7 @@
                             <constraint firstItem="C4N-Wt-UHk" firstAttribute="leading" secondItem="C2L-KQ-r9N" secondAttribute="leading" constant="20" id="zAS-fo-eG6"/>
                         </constraints>
                     </view>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-sd-y5e">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-sd-y5e">
                         <rect key="frame" x="0.0" y="40" width="300" height="260"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="awh-Vw-dUN">

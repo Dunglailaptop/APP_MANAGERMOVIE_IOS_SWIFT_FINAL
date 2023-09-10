@@ -100,4 +100,12 @@ class Utils: NSObject {
         }
         return imageData
     }
+    
+    
+    func convertFormartDateyearMMdd(date:Date) -> String{
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "yyyy-MM-dd"
+           var dateformart = dateFormatter.string(from: date)
+           return dateformart
+       }
 }

@@ -20,36 +20,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRp-Qa-UjT">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAP CHIEU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTA-5M-fYd">
-                                <rect key="frame" x="10" y="10" width="91.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HE THONG RAP CHIEU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTA-5M-fYd">
+                                <rect key="frame" x="58" y="10" width="184.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOz-iS-THg">
-                                <rect key="frame" x="230" y="5" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="hDJ-yQ-Bb2"/>
-                                    <constraint firstAttribute="height" constant="30" id="hjx-Md-YyM"/>
-                                </constraints>
-                                <state key="normal" title="Tất cả"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qTA-5M-fYd" firstAttribute="leading" secondItem="eRp-Qa-UjT" secondAttribute="leading" constant="10" id="1bN-mC-B7F"/>
-                            <constraint firstItem="zOz-iS-THg" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="7J7-4D-DYu"/>
-                            <constraint firstAttribute="trailing" secondItem="zOz-iS-THg" secondAttribute="trailing" constant="20" id="bjA-ZB-Igh"/>
+                            <constraint firstItem="qTA-5M-fYd" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="A9b-Bp-S3C"/>
+                            <constraint firstItem="qTA-5M-fYd" firstAttribute="centerX" secondItem="eRp-Qa-UjT" secondAttribute="centerX" id="VN8-kX-r3N"/>
                             <constraint firstAttribute="height" constant="40" id="i3B-QD-FC1"/>
-                            <constraint firstItem="qTA-5M-fYd" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="uTK-Wd-zAe"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-pd-3zZ" customClass="FSPagerView" customModule="FSPagerView">
