@@ -18,6 +18,8 @@ class BannerTraillerVideoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         register()
+        collection_view.dataSource = self
+        collection_view.delegate = self
         // Initialization code
     }
 
@@ -29,13 +31,16 @@ class BannerTraillerVideoTableViewCell: UITableViewCell {
     
     var viewModel: HomeViewModel? {
         didSet {
+            viewModel?.dataArrayTrailler.subscribe(onNext: {
+                [self] data in
+                self.collection_view.reloadData()
+            })
             
-            bindingcollectionviewCell()
         }
     }
     
 }
-extension BannerTraillerVideoTableViewCell {
+extension BannerTraillerVideoTableViewCell: UICollectionViewDelegate,UICollectionViewDataSource {
     func register() {
         let Collectioncell = UINib(nibName: "itemTraillerCollectionViewCell", bundle: .main)
         collection_view.register(Collectioncell, forCellWithReuseIdentifier: "itemTraillerCollectionViewCell")
@@ -49,11 +54,22 @@ extension BannerTraillerVideoTableViewCell {
         layout.itemSize = CGSize(width: 200, height: 150)
         collection_view.collectionViewLayout = layout
     }
-    
-    func bindingcollectionviewCell() {
-        viewModel?.dataArrayTrailler.bind(to: (collection_view.rx.items(cellIdentifier: "itemTraillerCollectionViewCell", cellType: itemTraillerCollectionViewCell.self))) { [weak self] (row,data,cell) in
-            cell.data = data
-            
-        }.disposed(by: disposeBag)
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (viewModel?.dataArrayTrailler.value.count)!
     }
+    
+   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemTraillerCollectionViewCell", for: indexPath) as! itemTraillerCollectionViewCell
+          cell.lbl_tittle.text = viewModel?.dataArrayTrailler.value[indexPath.item].titlevideo
+    if viewModel?.dataArrayTrailler.value[indexPath.item].types == 0 {
+        cell.video.load(withVideoId: (viewModel?.dataArrayTrailler.value[indexPath.item].videofile)!)
+
+        }else {
+                       
+        }
+        // Configure the cell
+
+        return cell
+    }
+
 }

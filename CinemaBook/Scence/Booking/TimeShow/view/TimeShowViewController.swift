@@ -12,7 +12,8 @@ import FSCalendar
 
 class TimeShowViewController: BaseViewController {
 
-  var viewModel = TimeShowViewModel()
+    @IBOutlet weak var calender: FSCalendar!
+    var viewModel = TimeShowViewModel()
   var router = TimeShowRouter()
     
     
@@ -23,7 +24,20 @@ class TimeShowViewController: BaseViewController {
           register()
         bindingtableviewcell()
    getListInterestCinema()
+        calender.scope = .week
+        calender.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            calender.topAnchor.constraint(equalTo: calender.topAnchor),
+            calender.leadingAnchor.constraint(equalTo: calender.leadingAnchor),
+            calender.trailingAnchor.constraint(equalTo: calender.trailingAnchor),
+            calender.bottomAnchor.constraint(equalTo: calender.bottomAnchor)
+        ])
+        FSCalendar.appearance().rowHeight = 100 // Điều chỉnh chiều cao của
         
+        calender.backgroundColor = .darkGray
+    // Điều chỉnh chiều cao của phần header (tháng và năm)
+       
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

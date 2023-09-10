@@ -26,8 +26,7 @@ class FlimsCollectionViewCell: UICollectionViewCell {
     
     var data: Movie? = nil {
         didSet {
-            lbl_title.text = data?.namemovie
-            self.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
+       
         }
     }
     

@@ -28,7 +28,7 @@ class HomeViewModel: BaseViewModel {
         dataArrayMovie.accept([])
     }
      var listcell:BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2])
-    var listtablecell:BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1])
+    var listtablecell:BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2,3])
     var dataArrayMovie:BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
     var dataArrayTrailler:BehaviorRelay<[Trailler]> = BehaviorRelay(value: [])
     var dataArrayVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])

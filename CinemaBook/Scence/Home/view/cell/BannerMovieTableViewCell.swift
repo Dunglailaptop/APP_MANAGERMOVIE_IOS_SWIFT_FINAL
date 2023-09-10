@@ -20,7 +20,8 @@ class BannerMovieTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
           register()
-  
+        collection_view.delegate = self
+        collection_view.dataSource = self
         // Initialization code
     }
 
@@ -33,7 +34,10 @@ class BannerMovieTableViewCell: UITableViewCell {
     var viewModel: HomeViewModel? {
         didSet {
           
-            bindingcollectionviewcell()
+            viewModel?.dataArrayMovie.subscribe(onNext: {
+                [self] data in
+                self.collection_view.reloadData()
+            })
         
         }
     }
@@ -48,7 +52,7 @@ class BannerMovieTableViewCell: UITableViewCell {
     
     
 }
-extension BannerMovieTableViewCell {
+extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate {
         func register() {
             let viewcollectioncell = UINib(nibName: "FlimsCollectionViewCell", bundle: .main)
             collection_view.register(viewcollectioncell, forCellWithReuseIdentifier: "FlimsCollectionViewCell")
@@ -69,15 +73,16 @@ extension BannerMovieTableViewCell {
             collection_view.isPagingEnabled = false
    
         }
-        
-        func bindingcollectionviewcell() {
-            viewModel?.dataArrayMovie.bind(to: (collection_view.rx.items(cellIdentifier: "FlimsCollectionViewCell", cellType: FlimsCollectionViewCell.self))) { [weak self] (row,data,cell) in
-                cell.data = data
-                
-                
-                cell.viewModel = self?.viewModel
-       
-            }.disposed(by: disposeBag)
-        }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (viewModel?.dataArrayMovie.value.count)!
+    }
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlimsCollectionViewCell", for: indexPath) as! FlimsCollectionViewCell
+        cell.lbl_title.text = viewModel?.dataArrayMovie.value[indexPath.item].namemovie
+        cell.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.item].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
+          // Configure the cell
+
+          return cell
+       }
 }
 

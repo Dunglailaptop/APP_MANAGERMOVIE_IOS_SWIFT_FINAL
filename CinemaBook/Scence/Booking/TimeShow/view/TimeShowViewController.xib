@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeShowViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="calender" destination="wlZ-Nd-bQr" id="yKn-kb-Dzm"/>
                 <outlet property="tableView" destination="T5y-Yu-QqE" id="YoT-D4-WsM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -97,10 +98,6 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T5y-Yu-QqE">
-                            <rect key="frame" x="0.0" y="50" width="414" height="708"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VD4-DH-Yze">
                             <rect key="frame" x="0.0" y="758" width="414" height="60"/>
                             <subviews>
@@ -168,19 +165,54 @@
                                 <constraint firstAttribute="trailing" secondItem="YAk-P5-woO" secondAttribute="trailing" id="xN4-C5-MCf"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlZ-Nd-bQr" customClass="FSCalendar">
+                            <rect key="frame" x="0.0" y="50" width="414" height="258"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                    <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                    <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                    <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                    <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="titleTodayColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="subtitleDefaultColor">
+                                    <color key="value" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="subtitleTodayColor">
+                                    <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T5y-Yu-QqE">
+                            <rect key="frame" x="0.0" y="150" width="414" height="608"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="T5y-Yu-QqE" firstAttribute="leading" secondItem="CfD-mt-fKj" secondAttribute="leading" id="82f-eH-fp5"/>
+                        <constraint firstItem="VD4-DH-Yze" firstAttribute="top" secondItem="T5y-Yu-QqE" secondAttribute="bottom" id="2fG-mE-nM7"/>
+                        <constraint firstAttribute="trailing" secondItem="wlZ-Nd-bQr" secondAttribute="trailing" id="5c5-aS-LrD"/>
+                        <constraint firstItem="T5y-Yu-QqE" firstAttribute="leading" secondItem="CfD-mt-fKj" secondAttribute="leading" id="AIa-e3-hhs"/>
                         <constraint firstAttribute="bottom" secondItem="VD4-DH-Yze" secondAttribute="bottom" id="JdF-HG-kcp"/>
                         <constraint firstItem="4pd-o5-JZf" firstAttribute="top" secondItem="CfD-mt-fKj" secondAttribute="top" id="NUH-mj-wPt"/>
                         <constraint firstItem="4pd-o5-JZf" firstAttribute="leading" secondItem="CfD-mt-fKj" secondAttribute="leading" id="Pqh-eO-JuO"/>
                         <constraint firstAttribute="trailing" secondItem="4pd-o5-JZf" secondAttribute="trailing" id="XKK-sS-ajh"/>
-                        <constraint firstAttribute="trailing" secondItem="T5y-Yu-QqE" secondAttribute="trailing" id="eK4-92-nHQ"/>
+                        <constraint firstItem="wlZ-Nd-bQr" firstAttribute="leading" secondItem="CfD-mt-fKj" secondAttribute="leading" id="ZVh-Zo-hi4"/>
+                        <constraint firstItem="T5y-Yu-QqE" firstAttribute="top" secondItem="4pd-o5-JZf" secondAttribute="bottom" constant="100" id="cCs-QS-7Mf"/>
                         <constraint firstAttribute="trailing" secondItem="VD4-DH-Yze" secondAttribute="trailing" id="gg6-Kz-3id"/>
                         <constraint firstItem="VD4-DH-Yze" firstAttribute="leading" secondItem="CfD-mt-fKj" secondAttribute="leading" id="msg-4o-H48"/>
-                        <constraint firstItem="T5y-Yu-QqE" firstAttribute="top" secondItem="4pd-o5-JZf" secondAttribute="bottom" id="qmt-lP-92r"/>
-                        <constraint firstItem="VD4-DH-Yze" firstAttribute="top" secondItem="T5y-Yu-QqE" secondAttribute="bottom" id="zJw-Pb-qJy"/>
+                        <constraint firstAttribute="trailing" secondItem="T5y-Yu-QqE" secondAttribute="trailing" id="pJB-7d-jdM"/>
+                        <constraint firstItem="VD4-DH-Yze" firstAttribute="top" secondItem="wlZ-Nd-bQr" secondAttribute="bottom" constant="450" id="rpy-d2-vVn"/>
+                        <constraint firstItem="wlZ-Nd-bQr" firstAttribute="top" secondItem="4pd-o5-JZf" secondAttribute="bottom" id="weV-EV-3ba"/>
                     </constraints>
                 </view>
             </subviews>

@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 
-class ItemCinemaTableViewCell: UITableViewCell {
+class ItemCinemaTableViewCell: UITableViewCell, UICollectionViewDataSource {
 
     @IBOutlet weak var view_height: NSLayoutConstraint!
     @IBOutlet weak var btn_show_all: UIButton!
@@ -24,6 +24,11 @@ class ItemCinemaTableViewCell: UITableViewCell {
     var rxbag = DisposeBag()
     override func awakeFromNib() {
         super.awakeFromNib()
+        let collectionview = UINib(nibName: "itemTimeCollectionViewCell", bundle: .main)
+        view_collection.register(collectionview, forCellWithReuseIdentifier: "itemTimeCollectionViewCell")
+        self.view_collection.delegate = self
+        self.view_collection.dataSource = self
+        self.setupCollectionView()
         // Initialization code
     }
 
@@ -41,20 +46,15 @@ class ItemCinemaTableViewCell: UITableViewCell {
     
     var viewModel: TimeShowViewModel? = nil {
         didSet{
-            register()
-            bindingCollectionViewCell()
+          
+            viewModel?.listTime.subscribe(onNext: {
+                [self] data in
+               
+               
+                self.view_collection.reloadData()
+            })
         }
     }
-    
-}
-
-extension ItemCinemaTableViewCell {
-    func register() {
-        let itemTimeCollectionviewcell = UINib(nibName: "itemTimeCollectionViewCell", bundle: .main)
-        view_collection.register(itemTimeCollectionviewcell, forCellWithReuseIdentifier: "itemTimeCollectionViewCell")
-        setupCollectionView()
-    }
-    
     func setupCollectionView() {
           let layout = UICollectionViewFlowLayout()
           layout.scrollDirection = .horizontal
@@ -64,14 +64,23 @@ extension ItemCinemaTableViewCell {
           view_collection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
           view_collection.translatesAutoresizingMaskIntoConstraints = false
       }
-    
-    func bindingCollectionViewCell() {
-        viewModel?.listTime.bind(to: view_collection.rx.items(cellIdentifier: "itemTimeCollectionViewCell", cellType: itemTimeCollectionViewCell.self)) { (index, data, cell) in
-            cell.data = data
-            cell.btn_makeToBookingChairViewController.rx.tap.asDriver().drive(onNext: {[weak self] in
-                self?.viewModel?.navigationToBookingChairViewController()
-            }).disposed(by: self.rxbag)
-            
-        }.disposed(by: rxbag)
-    }
+
+}
+
+extension ItemCinemaTableViewCell: UICollectionViewDelegate {
+func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return (viewModel?.listTime.value.count)!
+}
+
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemTimeCollectionViewCell", for: indexPath) as! itemTimeCollectionViewCell
+    cell.lbl_time.text = String((viewModel?.listTime.value[indexPath.item].times)!)
+    dLog(viewModel?.listTime.value[indexPath.item].times)
+    cell.btn_makeToBookingChairViewController.rx.tap.asDriver().drive(onNext: {
+        [self] in
+        self.viewModel?.navigationToBookingChairViewController()
+    })
+    return cell
+}
+
 }

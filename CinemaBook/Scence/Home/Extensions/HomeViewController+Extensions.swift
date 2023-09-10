@@ -97,8 +97,8 @@ extension HomeViewController {
         tableView.register(BannerVoucherTable, forCellReuseIdentifier: "BannerVoucherTableViewCell")
         let BannerTraillerTable = UINib(nibName: "BannerTraillerVideoTableViewCell", bundle: .main)
         tableView.register(BannerTraillerTable, forCellReuseIdentifier: "BannerTraillerVideoTableViewCell")
-        let BannerProductTable = UINib(nibName: "BannerDataThreeTableViewCell", bundle: .main)
-              tableView.register(BannerProductTable, forCellReuseIdentifier: "BannerDataThreeTableViewCell")
+        let BannerProductTable = UINib(nibName: "BannerProductTableViewCell", bundle: .main)
+              tableView.register(BannerProductTable, forCellReuseIdentifier: "BannerProductTableViewCell")
           
         tableView.rx.setDelegate(self).disposed(by: rxbag)
 //        tableView.rowHeight = UITableView.automaticDimension
@@ -119,11 +119,23 @@ extension HomeViewController {
                 
                 return cell
             case 1:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerDataThreeTableViewCell", for: indexPath) as! BannerDataThreeTableViewCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerVoucherTableViewCell", for: indexPath) as! BannerVoucherTableViewCell
                 cell.viewModel = self.viewModel
                                             cell.selectionStyle = .none
                 
                 return cell
+            case 2:
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerTraillerVideoTableViewCell", for: indexPath) as! BannerTraillerVideoTableViewCell
+                           cell.viewModel = self.viewModel
+                    cell.selectionStyle = .none
+                           
+                           return cell
+            case 3:
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerProductTableViewCell", for: indexPath) as! BannerProductTableViewCell
+                    cell.viewModel = self.viewModel
+                cell.selectionStyle = .none
+                           
+                    return cell
             default:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerDataThreeTableViewCell", for: indexPath) as! BannerDataThreeTableViewCell
                  
@@ -142,7 +154,11 @@ extension HomeViewController:UITableViewDelegate{
         case 0:
             return 400
         case 1:
-            return CGFloat(viewModel.listcell.value.count * 200)
+            return 200
+        case 2:
+            return 200
+        case 3:
+            return 200
         default:
             return 200
         }

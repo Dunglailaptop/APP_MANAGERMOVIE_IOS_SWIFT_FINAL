@@ -21,13 +21,7 @@ class itemTraillerCollectionViewCell: UICollectionViewCell {
     
     var data: Trailler? = nil {
         didSet {
-            lbl_tittle.text = data?.titlevideo
-            if data?.types == 0 {
-                video.load(withVideoId: data!.videofile)
-
-            }else {
-                
-            }
+           
         }
     }
 

@@ -946,8 +946,8 @@
             filePath = "CinemaBook/Scence/Home/Extensions/HomeViewController+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "bindingtable()"
             landmarkType = "7">
          </BreakpointContent>
@@ -978,8 +978,8 @@
             filePath = "CinemaBook/Scence/Home/view/cell/BannerTraillerVideoTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "register()"
             landmarkType = "7">
          </BreakpointContent>
