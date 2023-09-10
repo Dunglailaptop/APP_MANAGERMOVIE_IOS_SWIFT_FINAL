@@ -156,6 +156,10 @@
 		FE5EA0E72AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5EA0E52AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.xib */; };
 		FE5EA0EB2AAE19740039DEC3 /* NewFeedViewContrller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5EA0EA2AAE19740039DEC3 /* NewFeedViewContrller+Extension.swift */; };
 		FE5EA0ED2AAE1A700039DEC3 /* NewFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5EA0EC2AAE1A700039DEC3 /* NewFeedViewModel.swift */; };
+		FE5EA0F62AAE218D0039DEC3 /* HomeReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5EA0F42AAE218D0039DEC3 /* HomeReportViewController.swift */; };
+		FE5EA0F72AAE218D0039DEC3 /* HomeReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5EA0F52AAE218D0039DEC3 /* HomeReportViewController.xib */; };
+		FE5EA0FF2AAE21E10039DEC3 /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5EA0FD2AAE21E10039DEC3 /* ManagementViewController.swift */; };
+		FE5EA1002AAE21E10039DEC3 /* ManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5EA0FE2AAE21E10039DEC3 /* ManagementViewController.xib */; };
 		FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE60BD872A76BCA7006EB219 /* tittleLable+Extension.swift */; };
 		FE624F712AACB95900AA93FA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE624F702AACB95900AA93FA /* HomeRouter.swift */; };
 		FE624F732AACCD3700AA93FA /* InterestMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE624F722AACCD3700AA93FA /* InterestMovie.swift */; };
@@ -398,6 +402,10 @@
 		FE5EA0E52AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoItemShowinnewfeedTableViewCell.xib; sourceTree = "<group>"; };
 		FE5EA0EA2AAE19740039DEC3 /* NewFeedViewContrller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewFeedViewContrller+Extension.swift"; sourceTree = "<group>"; };
 		FE5EA0EC2AAE1A700039DEC3 /* NewFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedViewModel.swift; sourceTree = "<group>"; };
+		FE5EA0F42AAE218D0039DEC3 /* HomeReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReportViewController.swift; sourceTree = "<group>"; };
+		FE5EA0F52AAE218D0039DEC3 /* HomeReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeReportViewController.xib; sourceTree = "<group>"; };
+		FE5EA0FD2AAE21E10039DEC3 /* ManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
+		FE5EA0FE2AAE21E10039DEC3 /* ManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementViewController.xib; sourceTree = "<group>"; };
 		FE60BD872A76BCA7006EB219 /* tittleLable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tittleLable+Extension.swift"; sourceTree = "<group>"; };
 		FE624F702AACB95900AA93FA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		FE624F722AACCD3700AA93FA /* InterestMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestMovie.swift; sourceTree = "<group>"; };
@@ -1299,6 +1307,97 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FE5EA0EE2AAE212B0039DEC3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FE5EA0F82AAE21A20039DEC3 /* Management */,
+				FE5EA0EF2AAE213C0039DEC3 /* HomeReportManager */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FE5EA0EF2AAE213C0039DEC3 /* HomeReportManager */ = {
+			isa = PBXGroup;
+			children = (
+				FE5EA0F32AAE21570039DEC3 /* view */,
+				FE5EA0F22AAE21550039DEC3 /* viewModel */,
+				FE5EA0F12AAE21520039DEC3 /* Router */,
+				FE5EA0F02AAE214F0039DEC3 /* Extensions */,
+			);
+			path = HomeReportManager;
+			sourceTree = "<group>";
+		};
+		FE5EA0F02AAE214F0039DEC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE5EA0F12AAE21520039DEC3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE5EA0F22AAE21550039DEC3 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FE5EA0F32AAE21570039DEC3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE5EA0F42AAE218D0039DEC3 /* HomeReportViewController.swift */,
+				FE5EA0F52AAE218D0039DEC3 /* HomeReportViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FE5EA0F82AAE21A20039DEC3 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				FE5EA0FC2AAE21BD0039DEC3 /* Extensions */,
+				FE5EA0FB2AAE21BA0039DEC3 /* viewModel */,
+				FE5EA0FA2AAE21B70039DEC3 /* view */,
+				FE5EA0F92AAE21B40039DEC3 /* Router */,
+			);
+			path = Management;
+			sourceTree = "<group>";
+		};
+		FE5EA0F92AAE21B40039DEC3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE5EA0FA2AAE21B70039DEC3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE5EA0FD2AAE21E10039DEC3 /* ManagementViewController.swift */,
+				FE5EA0FE2AAE21E10039DEC3 /* ManagementViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FE5EA0FB2AAE21BA0039DEC3 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FE5EA0FC2AAE21BD0039DEC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FE624F6F2AACB92E00AA93FA /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1593,6 +1692,7 @@
 		FEAC96C52A5A561700B49C80 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
+				FE5EA0EE2AAE212B0039DEC3 /* Manager */,
 				FE69A8A22AA190220017D891 /* DialogShow */,
 				FEEF09522A9500A400756BC8 /* video */,
 				FE53B8122A7FE14F00976628 /* Booking */,
@@ -1893,6 +1993,7 @@
 				FE65338C2AAA173600C0739B /* BannerVoucherTableViewCell.xib in Resources */,
 				FE5276E82A8D067300252843 /* BookingChairViewController.xib in Resources */,
 				FE491EDC2AA0F78B00BCA4D1 /* LogoutTableViewCell.xib in Resources */,
+				FE5EA0F72AAE218D0039DEC3 /* HomeReportViewController.xib in Resources */,
 				FE585F8B2A9AFD2100775B27 /* ListCategoryChairTableViewCell.xib in Resources */,
 				FE6533902AAA21A400C0739B /* itemTraillerCollectionViewCell.xib in Resources */,
 				FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */,
@@ -1908,6 +2009,7 @@
 				FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */,
 				FE502C942A9BA41E00779055 /* TimeShowViewController.xib in Resources */,
 				FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */,
+				FE5EA1002AAE21E10039DEC3 /* ManagementViewController.xib in Resources */,
 				FE5EA0E72AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.xib in Resources */,
 				FE11FA7D2AAB5F770016CC6A /* BannerProductTableViewCell.xib in Resources */,
 				FE5C9E8D2AA42BE300FA235D /* Roboto-BlackItalic.ttf in Resources */,
@@ -2091,6 +2193,7 @@
 				FE33F38D2A6CC76B00A396A1 /* Observable+ObjectMapper.swift in Sources */,
 				FE97D8A22A76C7AD00D223C9 /* ExUIViewController(1).swift in Sources */,
 				FE5DFF9F2A76A4F500E2E345 /* CustomBarRouter.swift in Sources */,
+				FE5EA0FF2AAE21E10039DEC3 /* ManagementViewController.swift in Sources */,
 				FE6775F42A8920A10007A659 /* ItemMovieCollectionViewCell.swift in Sources */,
 				FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */,
 				FE5D08302AA23691004FA3D9 /* TraillerViewController.swift in Sources */,
@@ -2110,6 +2213,7 @@
 				FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */,
 				FE5C9E652AA427BB00FA235D /* WheelViewController.swift in Sources */,
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
+				FE5EA0F62AAE218D0039DEC3 /* HomeReportViewController.swift in Sources */,
 				FE59CF432AA39D8100A6ADAA /* AccountInfoRouter.swift in Sources */,
 				FE585F8A2A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift in Sources */,
 				FE5EA0E22AAE09350039DEC3 /* chair.swift in Sources */,

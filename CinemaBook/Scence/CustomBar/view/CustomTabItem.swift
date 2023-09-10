@@ -21,12 +21,23 @@ extension CustomTabItem {
     var viewController: UIViewController {
         switch self {
         case .Home:
-            let view = HomeViewController(nibName: "HomeViewController", bundle: Bundle.main)
-            return view
-        case .Ticket:
-            let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                let view = HomeReportViewController(nibName: "HomeReportViewController", bundle: Bundle.main)
+                return view
+            }else  {
+                let view = HomeViewController(nibName: "HomeViewController", bundle: Bundle.main)
+                return view
+            }
             
-            return view
+        case .Ticket:
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                let view = ManagementViewController(nibName: "ManagementViewController", bundle: Bundle.main)
+                return view
+            }else {
+                let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
+                return view
+            }
+           
         case .newFeed:
             let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)
             
