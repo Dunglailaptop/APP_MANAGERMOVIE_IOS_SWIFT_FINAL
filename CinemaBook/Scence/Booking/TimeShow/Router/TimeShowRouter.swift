@@ -25,8 +25,11 @@ class TimeShowRouter {
            self.sourceView = view
        }
     
-    func navigationToBookingChairViewController() {
+    func navigationToBookingChairViewController(idcinema:Int,idroom:Int,idinterest:Int) {
         let bookingchairview = BookingChairRouter().viewController as! BookingChairViewController
+        bookingchairview.idcinema = idcinema
+        bookingchairview.idroom = idroom
+        bookingchairview.idinterest = idinterest
         sourceView?.navigationController?.pushViewController(bookingchairview, animated: true)
     }
     

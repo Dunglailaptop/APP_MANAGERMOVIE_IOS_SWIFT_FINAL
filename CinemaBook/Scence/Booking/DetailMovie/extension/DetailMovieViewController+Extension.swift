@@ -20,7 +20,7 @@ extension DetailMovieViewController {
             if (response.code == RRHTTPStatusCode.ok.rawValue) {
                 if let data = Mapper<Movie>().map(JSONObject: response.data)
                 {
-                    self.viewModel.data.accept(data)
+                    self.viewModel.dataArray.accept(data)
                     self.lbl_namemovie.text = data.namemovie
                     self.lbl_author.text = data.author
                     self.lbl_text.text = data.describes

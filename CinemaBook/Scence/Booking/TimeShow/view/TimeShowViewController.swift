@@ -17,7 +17,7 @@ class TimeShowViewController: BaseViewController {
     @IBOutlet weak var calender: FSCalendar!
     var viewModel = TimeShowViewModel()
   var router = TimeShowRouter()
-    
+    var idmovie = 0
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -25,11 +25,13 @@ class TimeShowViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
           register()
         bindingtableviewcell()
-        getListInterestCinema()
+       
        setup()
     // Điều chỉnh chiều cao của phần header (tháng và năm)
     
     }
+    
+    
     
     func setup() {
                calender.scope = .week
@@ -42,7 +44,10 @@ class TimeShowViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         
+        var data = viewModel.pagation.value
+        data.idmovie = idmovie
+        viewModel.pagation.accept(data)
+         getListInterestCinema()
           
     }
 

@@ -23,6 +23,12 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYh-la-E8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                    </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-sub-button" translatesAutoresizingMaskIntoConstraints="NO" id="M02-2b-sOQ">
                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                     </imageView>
@@ -30,18 +36,23 @@
             </view>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="nYh-la-E8Z" secondAttribute="bottom" id="0Wr-Bs-fkc"/>
                 <constraint firstItem="M02-2b-sOQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8AX-bF-WU0"/>
                 <constraint firstAttribute="bottom" secondItem="M02-2b-sOQ" secondAttribute="bottom" id="Ap3-X7-oo4"/>
                 <constraint firstAttribute="trailing" secondItem="fQV-HL-GfL" secondAttribute="trailing" id="D4y-Bc-rdb"/>
                 <constraint firstItem="fQV-HL-GfL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Dme-OG-OcQ"/>
                 <constraint firstItem="fQV-HL-GfL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QSK-4F-yrb"/>
                 <constraint firstAttribute="bottom" secondItem="fQV-HL-GfL" secondAttribute="bottom" id="RKL-Tz-cwB"/>
+                <constraint firstItem="nYh-la-E8Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Sxo-5e-d4J"/>
                 <constraint firstAttribute="trailing" secondItem="M02-2b-sOQ" secondAttribute="trailing" id="fZB-Vo-E9Q"/>
+                <constraint firstAttribute="trailing" secondItem="nYh-la-E8Z" secondAttribute="trailing" id="hQ2-n4-zFm"/>
+                <constraint firstItem="nYh-la-E8Z" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hYR-MR-C4N"/>
                 <constraint firstItem="M02-2b-sOQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vTZ-Bd-5Pn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="30" height="35"/>
             <connections>
+                <outlet property="btn_choose_chair" destination="nYh-la-E8Z" id="TpY-Ft-jwQ"/>
                 <outlet property="lbl_numberChair" destination="fQV-HL-GfL" id="Xae-B7-hEj"/>
             </connections>
             <point key="canvasLocation" x="139.13043478260872" y="114.50892857142857"/>

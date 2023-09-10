@@ -15,7 +15,7 @@ class DetailMovieviewModel {
     private var router: DetailMovieRouter?
     
     var idmovie: BehaviorRelay<Int> = BehaviorRelay(value: 0)
-    var data: BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
+    var dataArray: BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
     var dataArrayVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
     
     func bind(view: DetailMovieViewController,router: DetailMovieRouter){
@@ -28,8 +28,8 @@ class DetailMovieviewModel {
         self.router?.makePopToViewController()
     }
     
-    func makeToBookingChairViewController(){
-        router?.navigationMakeToBookingChairViewController()
+    func makeToBookingChairViewController(idmovie:Int){
+        router?.navigationMakeToBookingChairViewController(idmovie:idmovie)
     }
     
     func makeToVideoYoutuebViewController(videoId:String) {

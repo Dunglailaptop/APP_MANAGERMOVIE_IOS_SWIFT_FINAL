@@ -9,6 +9,21 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import ObjectMapper
+
+//CALL API
+extension BookingChairViewController {
+    func getListchair() {
+        viewModel.getListchair().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<chair>().mapArray(JSONObject: response.data) {
+                    self.viewModel.dataArray.accept(data)
+                }
+            }
+            }).disposed(by: rxbag)
+    }
+}
 
 extension BookingChairViewController {
     

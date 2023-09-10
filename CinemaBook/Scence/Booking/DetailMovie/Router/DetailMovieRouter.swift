@@ -30,8 +30,9 @@ class  DetailMovieRouter
         sourceView?.navigationController?.popViewController(animated: true)
     }
     
-    func navigationMakeToBookingChairViewController(){
-        let bookingchairViewController = TimeShowRouter().viewController
+    func navigationMakeToBookingChairViewController(idmovie:Int){
+        let bookingchairViewController = TimeShowRouter().viewController as! TimeShowViewController
+        bookingchairViewController.idmovie = idmovie
         sourceView?.navigationController?.pushViewController(bookingchairViewController, animated: true)
     }
     

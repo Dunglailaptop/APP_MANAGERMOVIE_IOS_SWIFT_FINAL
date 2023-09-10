@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JonAlert
 
 class ListChairBookiingTableViewCell: UITableViewCell {
 
@@ -98,17 +99,23 @@ extension ListChairBookiingTableViewCell {
 
     func bindingCollectionviewcell() {
         viewModel!.dataArray.bind(to: viewCollection.rx.items(cellIdentifier: "ItemChairCollectionViewCell", cellType: ItemChairCollectionViewCell.self)) { (index, data, cell) in
+            dLog(data)
+
             
-//            // Tính chỉ số hàng và chỉ số cột từ vị trí index
-//                  let row = index / 10
-//                  let col = index % 10
-//
-//                  // Tính chỉ số của phần tử từ chỉ số của cell
-//                  let itemIndex = row * 10 + col
-//            dLog(index)
-//            dLog(cell)
-//            dLog(data)
-            cell.number = data
+            cell.btn_choose_chair.rx.tap.asDriver().drive(onNext: {
+                [self] in
+                
+               if cell.contentView.backgroundColor == .blue
+               {
+                cell.contentView.backgroundColor = .darkGray
+               }else if cell.contentView.backgroundColor == .red {
+                JonAlert.show(message: "Ghe da duoc dat vui long chon ghe khac")
+               }
+               else {
+                cell.contentView.backgroundColor = .blue
+                }
+            })
+            cell.data = data
         
         
         

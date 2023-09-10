@@ -75,6 +75,9 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemTimeCollectionViewCell", for: indexPath) as! itemTimeCollectionViewCell
     cell.viewModel = self.viewModel
+    cell.idcinema = viewModel?.listTime.value[indexPath.item].idcinema as! Int
+    cell.idroom = viewModel?.listTime.value[indexPath.item].idroom as! Int
+    cell.idinterest = viewModel?.listTime.value[indexPath.item].idinterest as! Int
     cell.lbl_time.text = String((viewModel?.listTime.value[indexPath.item].times)!)
     dLog(viewModel?.listTime.value[indexPath.item].times)
     

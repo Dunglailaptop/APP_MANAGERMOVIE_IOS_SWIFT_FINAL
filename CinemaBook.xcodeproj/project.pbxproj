@@ -151,6 +151,7 @@
 		FE5DFF9F2A76A4F500E2E345 /* CustomBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFF9E2A76A4F500E2E345 /* CustomBarRouter.swift */; };
 		FE5DFFA12A76A53E00E2E345 /* CustomBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFFA02A76A53E00E2E345 /* CustomBarViewModel.swift */; };
 		FE5DFFA32A76A5D200E2E345 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DFFA22A76A5D200E2E345 /* CustomTabBar.swift */; };
+		FE5EA0E22AAE09350039DEC3 /* chair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5EA0E12AAE09350039DEC3 /* chair.swift */; };
 		FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE60BD872A76BCA7006EB219 /* tittleLable+Extension.swift */; };
 		FE624F712AACB95900AA93FA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE624F702AACB95900AA93FA /* HomeRouter.swift */; };
 		FE624F732AACCD3700AA93FA /* InterestMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE624F722AACCD3700AA93FA /* InterestMovie.swift */; };
@@ -388,6 +389,7 @@
 		FE5DFF9E2A76A4F500E2E345 /* CustomBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarRouter.swift; sourceTree = "<group>"; };
 		FE5DFFA02A76A53E00E2E345 /* CustomBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBarViewModel.swift; sourceTree = "<group>"; };
 		FE5DFFA22A76A5D200E2E345 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		FE5EA0E12AAE09350039DEC3 /* chair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chair.swift; sourceTree = "<group>"; };
 		FE60BD872A76BCA7006EB219 /* tittleLable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tittleLable+Extension.swift"; sourceTree = "<group>"; };
 		FE624F702AACB95900AA93FA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		FE624F722AACCD3700AA93FA /* InterestMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestMovie.swift; sourceTree = "<group>"; };
@@ -1586,6 +1588,7 @@
 				FE53AE482AAC2AA10082B8FC /* Trailler.swift */,
 				FE6B14692AAC7FFC009ADA30 /* Cinema.swift */,
 				FE624F722AACCD3700AA93FA /* InterestMovie.swift */,
+				FE5EA0E12AAE09350039DEC3 /* chair.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2070,6 +2073,7 @@
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
 				FE59CF432AA39D8100A6ADAA /* AccountInfoRouter.swift in Sources */,
 				FE585F8A2A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift in Sources */,
+				FE5EA0E22AAE09350039DEC3 /* chair.swift in Sources */,
 				FE65338B2AAA173600C0739B /* BannerVoucherTableViewCell.swift in Sources */,
 				FEDC3F482A6CD9FE004D3789 /* Account.swift in Sources */,
 				FE502C932A9BA41E00779055 /* TimeShowViewController.swift in Sources */,

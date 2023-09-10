@@ -108,11 +108,12 @@ class DetailMovieViewController: BaseViewController, FSPagerViewDataSource, FSPa
     
     
     @IBAction func btn_maketoBookingChairViewController(_ sender: Any) {
-        viewModel.makeToBookingChairViewController()
+        dLog(viewModel.dataArray.value.movieID)
+        viewModel.makeToBookingChairViewController(idmovie: viewModel.dataArray.value.movieID)
     }
     
     @IBAction func btn_makevideo(_ sender: Any) {
-        viewModel.makeToVideoYoutuebViewController(videoId: viewModel.data.value.videofile)
+        viewModel.makeToVideoYoutuebViewController(videoId: viewModel.dataArray.value.videofile)
     }
     
     

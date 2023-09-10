@@ -16,6 +16,10 @@ class BookingChairViewController: BaseViewController {
     var currentScale: CGFloat = 1.0
     var safeAreaInsets: UIEdgeInsets = .zero
      var originalCollectionViewSize: CGSize = .zero
+    
+    var idcinema = 0
+    var idroom = 0
+    var idinterest = 0
  
     @IBOutlet weak var tableView: UITableView!
     
@@ -42,10 +46,19 @@ class BookingChairViewController: BaseViewController {
         
       resgisterCollection()
         binđDataTableCollectionView()
+       
         // Do any additional setup after loading the view.
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        var data = viewModel.pagition.value
+        data.idroom = idroom
+        data.idinterest = idinterest
+        data.idcinema = idcinema
+        viewModel.pagition.accept(data)
+        getListchair()
+    }
    
     @IBAction func btn_makePopToViewController(_ sender: Any) {
         viewModel.makePopToViewController()

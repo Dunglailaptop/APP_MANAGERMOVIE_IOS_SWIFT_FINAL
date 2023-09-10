@@ -10,6 +10,10 @@ import UIKit
 
 class itemTimeCollectionViewCell: UICollectionViewCell {
 
+    var idcinema = 0
+    var idroom = 0
+    var idinterest = 0
+    
     @IBOutlet weak var lbl_time: UILabel!
     @IBOutlet weak var btn_makeToBookingChairViewController: UIButton!
     override func awakeFromNib() {
@@ -30,7 +34,8 @@ class itemTimeCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func btn_makeToChairBookingViewController(_ sender: Any) {
-        self.viewModel?.navigationToBookingChairViewController()
+        dLog(idcinema)
+        self.viewModel?.navigationToBookingChairViewController(idcinema: idcinema, idroom: idroom, idinterest: idinterest)
     }
     
 }
