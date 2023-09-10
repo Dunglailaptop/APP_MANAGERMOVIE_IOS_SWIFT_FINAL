@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeShowViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="calender" destination="wlZ-Nd-bQr" id="yKn-kb-Dzm"/>
+                <outlet property="lbl_ALL_CINAME" destination="s6Q-tF-nT0" id="qfa-Yf-jeN"/>
+                <outlet property="lbl_Cinema_Foryou" destination="qzQ-sx-N1a" id="r7U-fU-8Mw"/>
                 <outlet property="tableView" destination="T5y-Yu-QqE" id="YoT-D4-WsM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

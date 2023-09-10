@@ -43,10 +43,6 @@
 		FE491EDB2AA0F78B00BCA4D1 /* LogoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE491ED92AA0F78B00BCA4D1 /* LogoutTableViewCell.swift */; };
 		FE491EDC2AA0F78B00BCA4D1 /* LogoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE491EDA2AA0F78B00BCA4D1 /* LogoutTableViewCell.xib */; };
 		FE491EE42AA0F87800BCA4D1 /* AccountViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE491EE22AA0F87500BCA4D1 /* AccountViewController+Extension.swift */; };
-		FE4EE4532A9CF297008E7F1D /* DatePickerRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EE4512A9CF297008E7F1D /* DatePickerRowTableViewCell.swift */; };
-		FE4EE4542A9CF297008E7F1D /* DatePickerRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE4522A9CF297008E7F1D /* DatePickerRowTableViewCell.xib */; };
-		FE4EE4572A9CF40A008E7F1D /* ListCinemaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EE4552A9CF40A008E7F1D /* ListCinemaTableViewCell.swift */; };
-		FE4EE4582A9CF40A008E7F1D /* ListCinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4EE4562A9CF40A008E7F1D /* ListCinemaTableViewCell.xib */; };
 		FE4EE4602A9CF8A2008E7F1D /* TimeShowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EE45E2A9CF8A0008E7F1D /* TimeShowViewController+Extension.swift */; };
 		FE4FFD972A77F16F00983304 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FFD962A77F16F00983304 /* BaseViewController.swift */; };
 		FE4FFD992A77F36800983304 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FFD982A77F36800983304 /* BaseViewModel.swift */; };
@@ -284,10 +280,6 @@
 		FE491ED92AA0F78B00BCA4D1 /* LogoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutTableViewCell.swift; sourceTree = "<group>"; };
 		FE491EDA2AA0F78B00BCA4D1 /* LogoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoutTableViewCell.xib; sourceTree = "<group>"; };
 		FE491EE22AA0F87500BCA4D1 /* AccountViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountViewController+Extension.swift"; sourceTree = "<group>"; };
-		FE4EE4512A9CF297008E7F1D /* DatePickerRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerRowTableViewCell.swift; sourceTree = "<group>"; };
-		FE4EE4522A9CF297008E7F1D /* DatePickerRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerRowTableViewCell.xib; sourceTree = "<group>"; };
-		FE4EE4552A9CF40A008E7F1D /* ListCinemaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCinemaTableViewCell.swift; sourceTree = "<group>"; };
-		FE4EE4562A9CF40A008E7F1D /* ListCinemaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCinemaTableViewCell.xib; sourceTree = "<group>"; };
 		FE4EE45E2A9CF8A0008E7F1D /* TimeShowViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeShowViewController+Extension.swift"; sourceTree = "<group>"; };
 		FE4FFD962A77F16F00983304 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FE4FFD982A77F36800983304 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -656,10 +648,6 @@
 			isa = PBXGroup;
 			children = (
 				FE7D516C2A9E3C330089EDFB /* cellitem */,
-				FE4EE4512A9CF297008E7F1D /* DatePickerRowTableViewCell.swift */,
-				FE4EE4522A9CF297008E7F1D /* DatePickerRowTableViewCell.xib */,
-				FE4EE4552A9CF40A008E7F1D /* ListCinemaTableViewCell.swift */,
-				FE4EE4562A9CF40A008E7F1D /* ListCinemaTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1878,7 +1866,6 @@
 				FE5C9E872AA42BE300FA235D /* Roboto-Condensed.ttf in Resources */,
 				FE5C9E8E2AA42BE300FA235D /* Roboto-Bold.ttf in Resources */,
 				FE59CF382AA36DCA00A6ADAA /* ItemDetailVideoShortCollectionViewCell.xib in Resources */,
-				FE4EE4542A9CF297008E7F1D /* DatePickerRowTableViewCell.xib in Resources */,
 				FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */,
 				FE502C942A9BA41E00779055 /* TimeShowViewController.xib in Resources */,
 				FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */,
@@ -1922,7 +1909,6 @@
 				FE5D082B2AA23676004FA3D9 /* videoShortViewController.xib in Resources */,
 				FE6A8D842A642CDF00BEC7BE /* FlimsCollectionViewCell.xib in Resources */,
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
-				FE4EE4582A9CF40A008E7F1D /* ListCinemaTableViewCell.xib in Resources */,
 				FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */,
 				FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */,
 			);
@@ -2113,10 +2099,8 @@
 				FE5C6B892AA4D09000852DBE /* Medias.swift in Sources */,
 				FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */,
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
-				FE4EE4532A9CF297008E7F1D /* DatePickerRowTableViewCell.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
 				FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */,
-				FE4EE4572A9CF40A008E7F1D /* ListCinemaTableViewCell.swift in Sources */,
 				FE745FF52A7EB00E0091C0FA /* TicketViewModel.swift in Sources */,
 				FEC1E3F22A9CD4F8005A9F16 /* TimeShowViewModel.swift in Sources */,
 				FE50965B2A76544400F5A457 /* MenuRouter.swift in Sources */,

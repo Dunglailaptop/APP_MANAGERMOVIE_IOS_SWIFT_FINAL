@@ -84,7 +84,7 @@ extension BookingTicketViewController: BmoViewPagerDelegate, BmoViewPagerDataSou
     func bmoViewPagerDataSourceNaviagtionBarItemHighlightedAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]? {
         return [
             NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 12.0),
-            NSAttributedString.Key.foregroundColor : ColorUtils.red_color()
+            NSAttributedString.Key.foregroundColor : ColorUtils.blue_color()
         ]
     }
     

@@ -23,4 +23,14 @@ class itemTimeCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var viewModel: TimeShowViewModel? = nil {
+        didSet {
+            
+        }
+    }
+    
+    @IBAction func btn_makeToChairBookingViewController(_ sender: Any) {
+        self.viewModel?.navigationToBookingChairViewController()
+    }
+    
 }

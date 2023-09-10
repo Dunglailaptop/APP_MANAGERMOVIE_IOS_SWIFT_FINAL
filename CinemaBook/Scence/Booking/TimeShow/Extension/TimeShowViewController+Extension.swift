@@ -19,6 +19,8 @@ extension TimeShowViewController {
                      if let movies = Mapper<InterestMovie>().mapArray(JSONObject: response.data)
                      {
                         self.viewModel.dataListCinema.accept(movies)
+                        self.lbl_ALL_CINAME.text = String(self.viewModel.dataListCinema.value.count)
+                        self.lbl_Cinema_Foryou.text = String(self.viewModel.dataListCinema.value.count) 
                         self.getListInterestMovie()
                       dLog(response.data)
                      }

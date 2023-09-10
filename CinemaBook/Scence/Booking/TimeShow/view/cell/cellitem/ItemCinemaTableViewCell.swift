@@ -74,12 +74,10 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
 
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemTimeCollectionViewCell", for: indexPath) as! itemTimeCollectionViewCell
+    cell.viewModel = self.viewModel
     cell.lbl_time.text = String((viewModel?.listTime.value[indexPath.item].times)!)
     dLog(viewModel?.listTime.value[indexPath.item].times)
-    cell.btn_makeToBookingChairViewController.rx.tap.asDriver().drive(onNext: {
-        [self] in
-        self.viewModel?.navigationToBookingChairViewController()
-    })
+    
     return cell
 }
 

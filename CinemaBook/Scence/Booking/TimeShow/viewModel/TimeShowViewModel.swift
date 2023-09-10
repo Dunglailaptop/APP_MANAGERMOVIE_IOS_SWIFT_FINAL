@@ -19,7 +19,7 @@ class TimeShowViewModel:BaseViewModel {
     public var dataListCinema: BehaviorRelay<[InterestMovie]> = BehaviorRelay(value: [])
     public var listTime:BehaviorRelay<[InterestMovie]> = BehaviorRelay(value: [])
     public var heightforcell: BehaviorRelay<Int> = BehaviorRelay(value: 80)
-    public var pagation: BehaviorRelay<(date:String,idmovie:Int)> = BehaviorRelay(value: (date:"2023-09-09",idmovie:1))
+    public var pagation: BehaviorRelay<(date:String,idmovie:Int)> = BehaviorRelay(value: (date: Utils().convertFormartDateyearMMdd(date: Date()) ,idmovie:1))
       
       func bind(view: TimeShowViewController, router: TimeShowRouter)
       {
