@@ -152,6 +152,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="500" id="biD-VT-vmh"/>
                                             </constraints>
@@ -169,7 +170,7 @@
                                     <viewLayoutGuide key="frameLayoutGuide" id="j7l-4r-3vb"/>
                                 </scrollView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="P91-CG-aYd" firstAttribute="leading" secondItem="Bkq-1f-43k" secondAttribute="leading" id="IIK-O7-IER"/>
                                 <constraint firstItem="P91-CG-aYd" firstAttribute="top" secondItem="Bkq-1f-43k" secondAttribute="top" id="IPp-ih-ML2"/>
@@ -182,13 +183,13 @@
                             <rect key="frame" x="0.0" y="40" width="414" height="778"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nIL-mr-F7Y">
-                                    <rect key="frame" x="0.0" y="3" width="414" height="775"/>
+                                    <rect key="frame" x="0.0" y="8" width="414" height="770"/>
                                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="nIL-mr-F7Y" firstAttribute="top" secondItem="YCG-Dm-PDw" secondAttribute="top" constant="3" id="QBM-HS-FCC"/>
+                                <constraint firstItem="nIL-mr-F7Y" firstAttribute="top" secondItem="YCG-Dm-PDw" secondAttribute="top" constant="8" id="QBM-HS-FCC"/>
                                 <constraint firstAttribute="trailing" secondItem="nIL-mr-F7Y" secondAttribute="trailing" id="ap5-Sg-xHl"/>
                                 <constraint firstAttribute="bottom" secondItem="nIL-mr-F7Y" secondAttribute="bottom" id="vJv-kv-Y71"/>
                                 <constraint firstItem="nIL-mr-F7Y" firstAttribute="leading" secondItem="YCG-Dm-PDw" secondAttribute="leading" id="ycJ-Yb-83s"/>

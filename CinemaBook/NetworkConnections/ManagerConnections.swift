@@ -25,6 +25,7 @@ enum ManagerConnections {
     case getListInterestMovie(dateshow:String,idmovie:Int)
     case getListInterestCinema(dateshow:String,idmovie:Int)
     case getListChair(idroom:Int,Idcinema:Int,idinterest:Int)
+    case getListEmployee(iduser:Int,keysearch:String,idcinema:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -63,6 +64,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListCinemaofInterest
         case .getListChair(let idroom,let Idcinema,let idinterest):
             return APIEndPoint.Name.urlGetListChair
+        case .getListEmployee(let iduser,let keysearch,let idcinema):
+            return APIEndPoint.Name.urlGetListEmployee
         }
     
     }
@@ -91,6 +94,8 @@ extension ManagerConnections: TargetType {
         case .getListInterestCinema(_,_):
             return .get
         case .getListChair(_,_,_):
+            return .get
+        case .getListEmployee(_,_,_):
             return .get
         }
 
@@ -145,6 +150,8 @@ extension ManagerConnections: TargetType {
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListChair(_,_,_):
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListEmployee(_,_,_):
+                       return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -193,6 +200,11 @@ extension ManagerConnections: TargetType {
                 "idcinema":Idcinema,
                 "idinterest":idinterest
             ]
+        case .getListEmployee(let iduser,let keysearch,let idcinema):
+            return ["iduser":iduser,
+            "keysearch":keysearch,
+            "idcinema":idcinema
+            ]
         }
        
     }
@@ -231,6 +243,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListChair(_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListEmployee(_,_,_):
+        return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

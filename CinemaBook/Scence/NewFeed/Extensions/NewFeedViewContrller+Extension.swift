@@ -32,6 +32,8 @@ extension NewFeedViewController {
     func resgiter() {
         let Videotableviewcell = UINib(nibName: "VideoItemShowinnewfeedTableViewCell", bundle: .main)
         tableView.register(Videotableviewcell, forCellReuseIdentifier: "VideoItemShowinnewfeedTableViewCell")
+        tableView.rowHeight = UITableView.automaticDimension
+               tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
         tableView.rx.setDelegate(self)
     }
     func bindingtableviewcell() {

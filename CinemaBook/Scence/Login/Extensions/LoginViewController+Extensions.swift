@@ -35,8 +35,9 @@ extension LoginViewController {
          (response) in
         
             if let account = Mapper<Users>().map(JSONObject: response.data) {
-                self.viewModel.makeToMenuViewController()
+               
                 ManageCacheObject.saveCurrentUserInfo(account)
+                 self.viewModel.makeToMenuViewController()
                 dLog(account)
             }
         }).disposed(by: LoginViewController.rxbag)

@@ -35,13 +35,14 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-pd-3zZ" customClass="FSPagerView" customModule="FSPagerView">
-                        <rect key="frame" x="0.0" y="40" width="300" height="260"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <rect key="frame" x="0.0" y="40" width="300" height="252"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="c7g-pd-3zZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="At5-by-cOw"/>
-                    <constraint firstAttribute="bottom" secondItem="c7g-pd-3zZ" secondAttribute="bottom" id="QXM-zr-9zG"/>
+                    <constraint firstAttribute="bottom" secondItem="c7g-pd-3zZ" secondAttribute="bottom" constant="8" id="QXM-zr-9zG"/>
                     <constraint firstAttribute="trailing" secondItem="c7g-pd-3zZ" secondAttribute="trailing" id="aPF-dg-MBV"/>
                     <constraint firstAttribute="trailing" secondItem="eRp-Qa-UjT" secondAttribute="trailing" id="m9y-bR-uOd"/>
                     <constraint firstItem="c7g-pd-3zZ" firstAttribute="top" secondItem="eRp-Qa-UjT" secondAttribute="bottom" id="mH8-bj-RnM"/>
@@ -49,6 +50,7 @@
                     <constraint firstItem="eRp-Qa-UjT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zaC-ie-U1z"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="BANNER" destination="c7g-pd-3zZ" id="jjA-cv-sVZ"/>

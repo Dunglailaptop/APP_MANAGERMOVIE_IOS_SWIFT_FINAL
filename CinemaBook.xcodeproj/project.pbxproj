@@ -67,6 +67,13 @@
 		FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE51B88D2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib */; };
 		FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51B8902A9A5DA400A1495D /* headerTableViewCell.swift */; };
 		FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE51B8912A9A5DA400A1495D /* headerTableViewCell.xib */; };
+		FE5252312AAF780600296246 /* ManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5252302AAF780600296246 /* ManagementViewModel.swift */; };
+		FE5252332AAF787400296246 /* ManagementRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5252322AAF787400296246 /* ManagementRouter.swift */; };
+		FE52523B2AAF79CC00296246 /* ManagementEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5252392AAF79CC00296246 /* ManagementEmployeeViewController.swift */; };
+		FE52523C2AAF79CC00296246 /* ManagementEmployeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE52523A2AAF79CC00296246 /* ManagementEmployeeViewController.xib */; };
+		FE52523E2AAF79EE00296246 /* ManagementEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52523D2AAF79EE00296246 /* ManagementEmployeeViewModel.swift */; };
+		FE5252402AAF7A0600296246 /* ManagementEmployeeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE52523F2AAF7A0600296246 /* ManagementEmployeeRouter.swift */; };
+		FE5252422AAF7CA500296246 /* ManagementEmployee+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5252412AAF7CA500296246 /* ManagementEmployee+Extensions.swift */; };
 		FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5276E52A8D067300252843 /* BookingChairViewController.swift */; };
 		FE5276E82A8D067300252843 /* BookingChairViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5276E62A8D067300252843 /* BookingChairViewController.xib */; };
 		FE5276EA2A8D07D900252843 /* BookingChairRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5276E92A8D07D900252843 /* BookingChairRouter.swift */; };
@@ -313,6 +320,13 @@
 		FE51B88D2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListChairBookiingTableViewCell.xib; sourceTree = "<group>"; };
 		FE51B8902A9A5DA400A1495D /* headerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerTableViewCell.swift; sourceTree = "<group>"; };
 		FE51B8912A9A5DA400A1495D /* headerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerTableViewCell.xib; sourceTree = "<group>"; };
+		FE5252302AAF780600296246 /* ManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementViewModel.swift; sourceTree = "<group>"; };
+		FE5252322AAF787400296246 /* ManagementRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementRouter.swift; sourceTree = "<group>"; };
+		FE5252392AAF79CC00296246 /* ManagementEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeViewController.swift; sourceTree = "<group>"; };
+		FE52523A2AAF79CC00296246 /* ManagementEmployeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementEmployeeViewController.xib; sourceTree = "<group>"; };
+		FE52523D2AAF79EE00296246 /* ManagementEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeViewModel.swift; sourceTree = "<group>"; };
+		FE52523F2AAF7A0600296246 /* ManagementEmployeeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementEmployeeRouter.swift; sourceTree = "<group>"; };
+		FE5252412AAF7CA500296246 /* ManagementEmployee+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementEmployee+Extensions.swift"; sourceTree = "<group>"; };
 		FE5276E52A8D067300252843 /* BookingChairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingChairViewController.swift; sourceTree = "<group>"; };
 		FE5276E62A8D067300252843 /* BookingChairViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingChairViewController.xib; sourceTree = "<group>"; };
 		FE5276E92A8D07D900252843 /* BookingChairRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingChairRouter.swift; sourceTree = "<group>"; };
@@ -827,6 +841,50 @@
 				FE519E772A88CBAD007E131E /* BookingViewModel.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FE5252342AAF798E00296246 /* ManagementEmployee */ = {
+			isa = PBXGroup;
+			children = (
+				FE5252382AAF79A600296246 /* Extensions */,
+				FE5252372AAF79A200296246 /* viewModel */,
+				FE5252362AAF799F00296246 /* view */,
+				FE5252352AAF799C00296246 /* router */,
+			);
+			path = ManagementEmployee;
+			sourceTree = "<group>";
+		};
+		FE5252352AAF799C00296246 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				FE52523F2AAF7A0600296246 /* ManagementEmployeeRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		FE5252362AAF799F00296246 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE5252392AAF79CC00296246 /* ManagementEmployeeViewController.swift */,
+				FE52523A2AAF79CC00296246 /* ManagementEmployeeViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FE5252372AAF79A200296246 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FE52523D2AAF79EE00296246 /* ManagementEmployeeViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		FE5252382AAF79A600296246 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE5252412AAF7CA500296246 /* ManagementEmployee+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FE5276E02A8D061200252843 /* BookingChair */ = {
@@ -1360,6 +1418,7 @@
 		FE5EA0F82AAE21A20039DEC3 /* Management */ = {
 			isa = PBXGroup;
 			children = (
+				FE5252342AAF798E00296246 /* ManagementEmployee */,
 				FE5EA0FC2AAE21BD0039DEC3 /* Extensions */,
 				FE5EA0FB2AAE21BA0039DEC3 /* viewModel */,
 				FE5EA0FA2AAE21B70039DEC3 /* view */,
@@ -1371,6 +1430,7 @@
 		FE5EA0F92AAE21B40039DEC3 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				FE5252322AAF787400296246 /* ManagementRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1387,6 +1447,7 @@
 		FE5EA0FB2AAE21BA0039DEC3 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FE5252302AAF780600296246 /* ManagementViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -2011,6 +2072,7 @@
 				FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */,
 				FE5EA1002AAE21E10039DEC3 /* ManagementViewController.xib in Resources */,
 				FE5EA0E72AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.xib in Resources */,
+				FE52523C2AAF79CC00296246 /* ManagementEmployeeViewController.xib in Resources */,
 				FE11FA7D2AAB5F770016CC6A /* BannerProductTableViewCell.xib in Resources */,
 				FE5C9E8D2AA42BE300FA235D /* Roboto-BlackItalic.ttf in Resources */,
 				FE5C9E902AA42BE300FA235D /* Roboto-Black.ttf in Resources */,
@@ -2138,9 +2200,11 @@
 				FE11FA7C2AAB5F770016CC6A /* BannerProductTableViewCell.swift in Sources */,
 				FE5EA0ED2AAE1A700039DEC3 /* NewFeedViewModel.swift in Sources */,
 				FEDC3F4D2A6CE11D004D3789 /* APIResponse.swift in Sources */,
+				FE5252332AAF787400296246 /* ManagementRouter.swift in Sources */,
 				FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */,
 				FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */,
 				FE6533832AAA16AA00C0739B /* BannerMovieTableViewCell.swift in Sources */,
+				FE52523B2AAF79CC00296246 /* ManagementEmployeeViewController.swift in Sources */,
 				FE2172B12A76B55C000C0C17 /* CustomItemView.swift in Sources */,
 				FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */,
 				FE33F3902A6CC76B00A396A1 /* Observable+Extension.swift in Sources */,
@@ -2217,6 +2281,7 @@
 				FE59CF432AA39D8100A6ADAA /* AccountInfoRouter.swift in Sources */,
 				FE585F8A2A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift in Sources */,
 				FE5EA0E22AAE09350039DEC3 /* chair.swift in Sources */,
+				FE5252422AAF7CA500296246 /* ManagementEmployee+Extensions.swift in Sources */,
 				FE65338B2AAA173600C0739B /* BannerVoucherTableViewCell.swift in Sources */,
 				FEDC3F482A6CD9FE004D3789 /* Account.swift in Sources */,
 				FE502C932A9BA41E00779055 /* TimeShowViewController.swift in Sources */,
@@ -2232,6 +2297,7 @@
 				FE59CF2F2AA36CA800A6ADAA /* DetailVideoShortViewModel.swift in Sources */,
 				FE58937E2A8A725000058864 /* BookingTicketViewController+Extension.swift in Sources */,
 				FE5096562A76534800F5A457 /* SplachScreenViewController.swift in Sources */,
+				FE5252312AAF780600296246 /* ManagementViewModel.swift in Sources */,
 				FE5D08352AA236C2004FA3D9 /* AllVideoandMovieViewController.swift in Sources */,
 				FE50965D2A7654AA00F5A457 /* MenuViewModel.swift in Sources */,
 				FE5276F32A8D115600252843 /* ItemChairCollectionViewCell.swift in Sources */,
@@ -2267,12 +2333,14 @@
 				FE11FA782AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.swift in Sources */,
 				FE5893782A8A6FDC00058864 /* DetailMovieRouter.swift in Sources */,
 				FE7D516F2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift in Sources */,
+				FE5252402AAF7A0600296246 /* ManagementEmployeeRouter.swift in Sources */,
 				FE5C9E672AA427BB00FA235D /* SambagMonthYearPickerResult.swift in Sources */,
 				FE53AE492AAC2AA10082B8FC /* Trailler.swift in Sources */,
 				FE5D083B2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift in Sources */,
 				FE5C9E612AA427BB00FA235D /* SambagYearPickerResult.swift in Sources */,
 				FE33F37A2A6CC68E00A396A1 /* Struct.swift in Sources */,
 				FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */,
+				FE52523E2AAF79EE00296246 /* ManagementEmployeeViewModel.swift in Sources */,
 				FE4FFD972A77F16F00983304 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -120,7 +120,7 @@ extension BaseViewController{
         
        var user = Users()
         user.idusers = 0
-        
+        user.idrole = 0
        
         ManageCacheObject.setConfig(Config())
         ManageCacheObject.saveCurrentUserInfo(user)

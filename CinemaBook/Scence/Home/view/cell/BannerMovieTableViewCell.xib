@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="es5-gs-gvf">
-                        <rect key="frame" x="0.0" y="20" width="320" height="280"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="272"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="upM-Fv-ApC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="272"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="owh-Sw-m48">
                                     <size key="itemSize" width="128" height="128"/>
@@ -31,7 +31,7 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="upM-Fv-ApC" firstAttribute="top" secondItem="es5-gs-gvf" secondAttribute="top" id="E4K-0T-Oia"/>
                             <constraint firstAttribute="trailing" secondItem="upM-Fv-ApC" secondAttribute="trailing" id="rY0-rS-YRq"/>
@@ -71,16 +71,18 @@
                         </constraints>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="Qo6-7c-VPV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2ob-JF-cqV"/>
                     <constraint firstItem="es5-gs-gvf" firstAttribute="top" secondItem="Qo6-7c-VPV" secondAttribute="bottom" id="5kb-gF-aPb"/>
                     <constraint firstAttribute="trailing" secondItem="Qo6-7c-VPV" secondAttribute="trailing" id="Ngi-y8-5UV"/>
                     <constraint firstAttribute="trailing" secondItem="es5-gs-gvf" secondAttribute="trailing" id="ZJm-X2-r37"/>
                     <constraint firstItem="es5-gs-gvf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dBh-y1-VQc"/>
-                    <constraint firstAttribute="bottom" secondItem="es5-gs-gvf" secondAttribute="bottom" id="wPC-66-8J0"/>
+                    <constraint firstAttribute="bottom" secondItem="es5-gs-gvf" secondAttribute="bottom" constant="8" id="wPC-66-8J0"/>
                     <constraint firstItem="Qo6-7c-VPV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yMz-VP-JOv"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collection_view" destination="upM-Fv-ApC" id="Roi-rD-TpY"/>

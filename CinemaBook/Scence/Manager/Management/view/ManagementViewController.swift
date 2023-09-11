@@ -8,23 +8,21 @@
 
 import UIKit
 
-class ManagementViewController: UIViewController {
+class ManagementViewController: BaseViewController {
 
+    var viewModel = ManagementViewModel()
+    var router = ManagementRouter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.bind(view: self, router: router)
         // Do any additional setup after loading the view.
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btn_makeToManageEmployeeViewContrller(_ sender: Any) {
+        viewModel.navigationToManagementEmployee()
     }
-    */
+   
 
 }

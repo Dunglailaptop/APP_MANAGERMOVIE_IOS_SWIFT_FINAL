@@ -21,6 +21,7 @@ extension CustomTabItem {
     var viewController: UIViewController {
         switch self {
         case .Home:
+            dLog(ManageCacheObject.getCurrentUserInfo().idrole)
             if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
                 let view = HomeReportViewController(nibName: "HomeReportViewController", bundle: Bundle.main)
                 return view
@@ -65,9 +66,19 @@ extension CustomTabItem {
     var icon: UIImage? {
         switch self {
         case .Home:
-            return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                    return UIImage(named: "icon-report")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }else {
+                    return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }
+        
         case .Ticket:
-            return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                 return UIImage(named: "icon-manager")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }else {
+                 return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }
+           
         case .newFeed:
             return UIImage(named: "icon-newfees")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
             
@@ -89,10 +100,20 @@ extension CustomTabItem {
     var selectedIcon: UIImage? {
         switch self {
         case .Home:
-            return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                    return UIImage(named: "icon-report")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }else {
+                    return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }
+        
             
         case .Ticket:
-            return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                 return UIImage(named: "icon-manager")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }else {
+                 return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }
+           
         case .newFeed:
             return UIImage(named: "icon-newfees")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
        
