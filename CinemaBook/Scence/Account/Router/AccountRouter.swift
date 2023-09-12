@@ -27,7 +27,8 @@ class AccountRouter {
     }
     
     func navigationToAccountInfoViewController() {
-        let accountinfoview = AccountInfoRouter().viewController
+        let accountinfoview = AccountInfoRouter().viewController as! AccountInfoViewController
+        accountinfoview.type_dy = "ACCOUNT"
         sourceView?.navigationController?.pushViewController(accountinfoview, animated: true)
     }
     

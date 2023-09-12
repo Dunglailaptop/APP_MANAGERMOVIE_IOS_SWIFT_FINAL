@@ -54,6 +54,7 @@ extension AccountInfoViewController {
                     self.txt_birthday.text = dataAccount.birthday
                     self.txt_role.text = dataAccount.idroleName
                     self.avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: dataAccount.avatar)), placeholder:  UIImage(named: "image_defauft_medium"))
+                    self.setup(data: dataAccount)
                 }
             }else {
                  JonAlert.show(message: response.message ?? "Có lỗi trong quá trình kết nối xin vui lòng kiểm tra lại")
@@ -61,32 +62,20 @@ extension AccountInfoViewController {
             
         }).disposed(by: rxbag)
     }
-    
+    func setup(data:Users) {
+        var datas = viewModel.dataArray.value
+        datas.fullname = data.fullname
+        datas.email = data.email
+        datas.phone = data.phone
+        datas.birthday = Utils().convertDateToString(inputDateString: data.birthday, inputFormat: "MM/dd/yyyy HH:mm:ss", outputFormat: "yyyy-MM-dd") ?? Utils().convertFormartDateyearMMdd(date: Date())
+        datas.avatar = data.avatar
+        datas.gender = data.gender
+        viewModel.dataArray.accept(datas)
+    }
 }
 
 extension AccountInfoViewController {
-    func checkvaliad() {
-       
-        _ = txt_username.rx.text.map{String($0!.prefix(50))}.map({ (str) -> Users in
-            self.txt_username.text = str
-            var clonedata = self.viewModel.dataArray.value
-            clonedata.fullname = str
-            return clonedata
-        }).bind(to: viewModel.dataArray)
-        _ = txt_phone.rx.text.map{String($0!.prefix(10))}.map({(str) -> Users in
-            self.txt_phone.text = str
-            var clonedata = self.viewModel.dataArray.value
-            clonedata.phone = str
-            return clonedata
-        }).bind(to: viewModel.dataArray)
-        _ = txt_email.rx.text.map{String($0!.prefix(20))}.map({(str) -> Users in
-            self.txt_email.text = str
-            var clonedata = self.viewModel.dataArray.value
-            clonedata.email = str
-            return clonedata
-        }).bind(to: viewModel.dataArray)
-        
-    }
+   
     
 }
 extension AccountInfoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

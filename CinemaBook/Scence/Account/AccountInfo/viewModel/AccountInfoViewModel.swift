@@ -15,8 +15,8 @@ class AccountInfoViewModel: BaseViewModel{
     private(set) weak var view: AccountInfoViewController?
     private var router: AccountInfoRouter?
     
-    public var dataArray: BehaviorRelay<Users> = BehaviorRelay(value: Users())
-    
+    public var dataArray = BehaviorRelay<Users>(value: Users())
+    public var fullname = BehaviorRelay<String>(value: "")
     
     
     func bind(view: AccountInfoViewController, router: AccountInfoRouter){

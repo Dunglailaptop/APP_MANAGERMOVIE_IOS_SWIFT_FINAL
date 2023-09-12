@@ -108,4 +108,18 @@ class Utils: NSObject {
            var dateformart = dateFormatter.string(from: date)
            return dateformart
        }
+    
+    func convertDateToString(inputDateString: String, inputFormat: String, outputFormat: String) -> String? {
+        let dateFormatterInput = DateFormatter()
+        dateFormatterInput.dateFormat = inputFormat
+        
+        let dateFormatterOutput = DateFormatter()
+        dateFormatterOutput.dateFormat = outputFormat
+        
+        if let date = dateFormatterInput.date(from: inputDateString) {
+            return dateFormatterOutput.string(from: date)
+        }
+        
+        return nil
+    }
 }

@@ -23,8 +23,12 @@ class ManagementEmployeeViewModel: BaseViewModel{
         self.router = router
         self.router?.setSourceView(self.view)
     }
-    
-  
+    func makeToAccountinfo(iduser:Int) {
+        router?.navigationtoAccountInfoViewController(iduser:iduser)
+    }
+    func makePopTovViewController() {
+        router!.navigationPoptoview()
+    }
     
 }
 extension ManagementEmployeeViewModel {
