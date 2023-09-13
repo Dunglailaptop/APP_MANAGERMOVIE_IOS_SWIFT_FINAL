@@ -16,19 +16,23 @@ class ManagementEmployeeViewModel: BaseViewModel{
     
     public var dataArray: BehaviorRelay<[Users]> = BehaviorRelay(value: [])
     
-    public var pagation: BehaviorRelay<(iduser:Int,keysearch:String,idcinema:Int)> = BehaviorRelay(value: (iduser:1,keysearch:"n",idcinema:1))
+    public var pagation: BehaviorRelay<(iduser:Int,keysearch:String,idcinema:Int)> = BehaviorRelay(value: (iduser:1,keysearch:"",idcinema:1))
     
     func bind(view: ManagementEmployeeViewController, router: ManagementEmployeeRouter){
         self.view = view
         self.router = router
         self.router?.setSourceView(self.view)
     }
-    func makeToAccountinfo(iduser:Int) {
-        router?.navigationtoAccountInfoViewController(iduser:iduser)
+    func makeToAccountinfo(iduser:Int,note:String) {
+        router?.navigationtoAccountInfoViewController(iduser:iduser, note: note)
     }
     func makePopTovViewController() {
         router!.navigationPoptoview()
     }
+    func cleardata() {
+        dataArray.accept([])
+    }
+    
     
 }
 extension ManagementEmployeeViewModel {

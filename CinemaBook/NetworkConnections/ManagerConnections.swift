@@ -17,7 +17,7 @@ enum ManagerConnections {
     case config(username:String)
     case Moive(page:Int,limit:Int,status:Int)
     case MovieDetail(idmovie:Int)
-    case UpdateAccount(iduser:Int,Fullname:String,Email:String,Phone:String,Birthday:String,avatar:String)
+    case UpdateAccount(iduser:Int,Fullname:String,Email:String,Phone:String,Birthday:String,avatar:String,Idrole:Int,address:String,gender:Int)
     case getInfoAccount(id:Int)
     case getListVoucher
     case getListTrailler
@@ -26,6 +26,8 @@ enum ManagerConnections {
     case getListInterestCinema(dateshow:String,idmovie:Int)
     case getListChair(idroom:Int,Idcinema:Int,idinterest:Int)
     case getListEmployee(iduser:Int,keysearch:String,idcinema:Int)
+    case getListRole
+    case postCreateNewEmployee(newUser:Users)
 }
 
 extension ManagerConnections: TargetType {
@@ -48,7 +50,7 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlMovie
         case .MovieDetail(let idmovie):
              return APIEndPoint.Name.urlDetail
-        case .UpdateAccount(_,_,_,_,_,_):
+        case .UpdateAccount(_,_,_,_,_,_,_,_,_):
             return APIEndPoint.Name.urlUpdateAccount
         case .getInfoAccount(let id):
             return APIEndPoint.Name.urlGetInfoAccount
@@ -66,6 +68,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListChair
         case .getListEmployee(let iduser,let keysearch,let idcinema):
             return APIEndPoint.Name.urlGetListEmployee
+        case .getListRole:
+            return APIEndPoint.Name.urlGetListRole
+        case .postCreateNewEmployee(_):
+            return APIEndPoint.Name.urlCreateNewEmployee
         }
     
     }
@@ -79,7 +85,7 @@ extension ManagerConnections: TargetType {
             return .get
         case .MovieDetail(_):
             return .get
-        case .UpdateAccount(_,_,_,_,_,_):
+        case .UpdateAccount(_,_,_,_,_,_,_,_,_):
             return .post
         case .getInfoAccount(_):
             return .get
@@ -97,6 +103,10 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListEmployee(_,_,_):
             return .get
+        case .getListRole:
+            return .get
+        case .postCreateNewEmployee(_):
+            return .post
         }
 
         
@@ -134,7 +144,7 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .MovieDetail(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .UpdateAccount(_,_,_,_,_,_):
+        case .UpdateAccount(_,_,_,_,_,_,_,_,_):
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getInfoAccount(_):
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
@@ -152,6 +162,10 @@ extension ManagerConnections: TargetType {
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListEmployee(_,_,_):
                        return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListRole:
+             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+            case .postCreateNewEmployee(_):
+                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -170,14 +184,17 @@ extension ManagerConnections: TargetType {
             ]
         case .MovieDetail(let idmovie):
             return ["Idmovie":idmovie]
-        case .UpdateAccount(let iduser,let Fullname,let Email,let Phone, let Birthday,let avatar):
+        case .UpdateAccount(let iduser,let Fullname,let Email,let Phone, let Birthday,let avatar,let Idrole,let address, let gender):
             return [
               "Idusers": iduser,
               "Fullname": Fullname,
               "Email": Email,
               "Phone": Phone,
               "Birthday": Birthday,
-              "avatar": avatar
+              "avatar": avatar,
+              "gender":gender,
+              "address":address,
+              "Idrole": Idrole
             ]
             case .getInfoAccount(let id):
                    return [
@@ -205,6 +222,21 @@ extension ManagerConnections: TargetType {
             "keysearch":keysearch,
             "idcinema":idcinema
             ]
+        case .getListRole:
+           return [:]
+        case .postCreateNewEmployee(let newUser):
+            return [
+                "fullname": newUser.fullname,
+                "email": newUser.email,
+                "phone": newUser.phone,
+                "birthday": newUser.birthday,
+                "avatar": newUser.avatar,
+                "gender": newUser.gender,
+                "idrole": newUser.idrole,
+                "idcinema": newUser.idcinema,
+                "statuss": newUser.statuss,
+                "address": newUser.address
+            ]
         }
        
     }
@@ -227,7 +259,7 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .MovieDetail(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .UpdateAccount(_,_,_,_,_,_):
+        case .UpdateAccount(_,_,_,_,_,_,_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getInfoAccount(_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
@@ -245,6 +277,10 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListEmployee(_,_,_):
         return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListRole:
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .postCreateNewEmployee(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

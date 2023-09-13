@@ -15,3 +15,7 @@ protocol ChooseCityDelegate {
 protocol  LogoutConfirm {
     func callbackAccessConfirm()
 }
+
+protocol DialogAccessEmployee {
+    func callbackDialogAccess(id:Int)
+}

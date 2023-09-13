@@ -25,14 +25,15 @@ class ManagementEmployeeRouter {
         self.sourceView = view
     }
     
-    func navigationtoAccountInfoViewController(iduser:Int) {
+    func navigationtoAccountInfoViewController(iduser:Int,note:String) {
         let viewcontrolleracc = AccountInfoRouter().viewController as! AccountInfoViewController
-        viewcontrolleracc.type_dy = "CREATE"
+        viewcontrolleracc.type_dy = note
         viewcontrolleracc.idUser = iduser
         sourceView?.navigationController?.pushViewController(viewcontrolleracc, animated: true)
     }
     func navigationPoptoview() {
         sourceView?.navigationController?.popViewController(animated: true)
     }
+    
     
 }

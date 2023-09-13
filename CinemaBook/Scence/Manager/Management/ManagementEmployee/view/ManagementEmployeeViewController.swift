@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import ObjectMapper
 
 class ManagementEmployeeViewController: BaseViewController {
 
+    @IBOutlet weak var textfield_search: UITextField!
     @IBOutlet weak var tableView: UITableView!
     var viewModel = ManagementEmployeeViewModel()
     var router = ManagementEmployeeRouter()
@@ -19,6 +23,18 @@ class ManagementEmployeeViewController: BaseViewController {
         viewModel.bind(view: self,router: router)
         register()
         bindingtablecell()
+       
+        textfield_search.rx.controlEvent(.editingChanged)
+                      .withLatestFrom(textfield_search.rx.text)
+                   .subscribe(onNext:{ [self]  query in
+                    self.viewModel.cleardata()
+                    var data = self.viewModel.pagation.value
+                    data.keysearch = query!
+                    self.viewModel.pagation.accept(data)
+                       
+                    self.getlistEmployee()
+                       
+        }).disposed(by: rxbag)
         // Do any additional setup after loading the view.
     }
 
@@ -27,7 +43,7 @@ class ManagementEmployeeViewController: BaseViewController {
         getlistEmployee()
     }
     @IBAction func btn_makeToAccountinfoViewController(_ sender: Any) {
-        viewModel.makeToAccountinfo(iduser: 0)
+        viewModel.makeToAccountinfo(iduser: 0,note: "CREATE")
     }
     
     @IBAction func btn_makePopToViewController(_ sender: Any) {

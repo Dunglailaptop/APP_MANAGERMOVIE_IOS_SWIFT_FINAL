@@ -32,5 +32,5 @@ pod "MWPhotoBrowser"
 pod 'GravitySliderFlowLayout'
 pod 'LNICoverFlowLayout'
  pod 'MarqueeLabel'
- 
+  pod 'iOSDropDown'
 end

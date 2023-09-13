@@ -9,6 +9,7 @@ PODS:
   - FSCalendar (2.8.4)
   - FSPagerView (0.8.3)
   - GravitySliderFlowLayout (1.0)
+  - iOSDropDown (0.4.0)
   - IQKeyboardManager (6.5.12)
   - JonAlert (1.0.0)
   - Kingfisher (5.15.0):
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - FSCalendar
   - FSPagerView
   - GravitySliderFlowLayout
+  - iOSDropDown
   - IQKeyboardManager
   - JonAlert
   - Kingfisher (= 5.15.0)
@@ -84,6 +86,7 @@ SPEC REPOS:
     - FSCalendar
     - FSPagerView
     - GravitySliderFlowLayout
+    - iOSDropDown
     - IQKeyboardManager
     - JonAlert
     - Kingfisher
@@ -114,6 +117,7 @@ SPEC CHECKSUMS:
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   GravitySliderFlowLayout: bb9ae6a302b85821c9e0271c00533fae8091143b
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   IQKeyboardManager: b1fd66ccf7a79095bdcc4a2735231586f744216e
   JonAlert: a83b374ccbf1a14aeb25537d5a3cbe957aac1c2b
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
@@ -135,6 +139,6 @@ SPEC CHECKSUMS:
   SquareFlowLayout: cde3486d3086fb7f95b303d9b90bb86aa9dd98b5
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 57c99d677f5fa04bf18ae1e9d7aa1b50f0954dfa
+PODFILE CHECKSUM: b7bb5bb6f2a92654bbe8f17774a387df4dd70be5
 
 COCOAPODS: 1.12.1

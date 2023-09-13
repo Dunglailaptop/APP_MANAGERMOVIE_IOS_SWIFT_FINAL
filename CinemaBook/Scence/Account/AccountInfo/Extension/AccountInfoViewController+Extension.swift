@@ -29,7 +29,13 @@ extension AccountInfoViewController {
          dataImage.avatar = connectImage
         viewModel.dataArray.accept(dataImage)
      
-        postUpdateAccount()
+       
+        if  type_dy == "CREATE" {
+            postCreateEmployee()
+        } else  {
+                postUpdateAccount()
+        }
+    
     }
     
     
@@ -43,6 +49,18 @@ extension AccountInfoViewController {
             }
         }).disposed(by: rxbag)
     }
+    
+    func postCreateEmployee() {
+        viewModel.CreateNewEmployee().subscribe(onNext: { (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                JonAlert.show(message: "Tao Nhan vien thanh cong !!!!!")
+                self.viewModel.makePopToViewController()
+            }else {
+                JonAlert.show(message: response.message ?? "Có lỗi trong quá trình kết nối xin vui lòng kiểm tra lại")
+            }
+        }).disposed(by: rxbag)
+    }
+    
     func getInfoAccount() {
         viewModel.getInfoAccount().subscribe(onNext: { (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
@@ -52,7 +70,9 @@ extension AccountInfoViewController {
                     self.txt_email.text = dataAccount.email
                     self.txt_phone.text = dataAccount.phone
                     self.txt_birthday.text = dataAccount.birthday
-                    self.txt_role.text = dataAccount.idroleName
+                    self.txt_drop_down.text = dataAccount.idroleName
+                    self.setupmaleAndFemale(type: dataAccount.gender)
+                    self.txt_address.text = dataAccount.address
                     self.avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: dataAccount.avatar)), placeholder:  UIImage(named: "image_defauft_medium"))
                     self.setup(data: dataAccount)
                 }
@@ -62,6 +82,21 @@ extension AccountInfoViewController {
             
         }).disposed(by: rxbag)
     }
+    
+    func getListRole() {
+        viewModel.getListRole().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let dataRole = Mapper<Role>().mapArray(JSONObject: response.data) {
+                    self.viewModel.dataArrayRole.accept(dataRole)
+                    self.txt_drop_down.optionArray = self.viewModel.dataArrayRole.value.map{$0.idName}
+                    self.txt_drop_down.optionIds = self.viewModel.dataArrayRole.value.map{$0.idrole}
+                }
+            }
+        })
+    }
+    
+    
     func setup(data:Users) {
         var datas = viewModel.dataArray.value
         datas.fullname = data.fullname
@@ -70,6 +105,7 @@ extension AccountInfoViewController {
         datas.birthday = Utils().convertDateToString(inputDateString: data.birthday, inputFormat: "MM/dd/yyyy HH:mm:ss", outputFormat: "yyyy-MM-dd") ?? Utils().convertFormartDateyearMMdd(date: Date())
         datas.avatar = data.avatar
         datas.gender = data.gender
+        datas.idrole = data.idrole
         viewModel.dataArray.accept(datas)
     }
 }

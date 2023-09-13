@@ -211,6 +211,9 @@
 		FE7BA9952A5AFE2700344EFB /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7BA9932A5AFE2700344EFB /* AccountViewController.xib */; };
 		FE7D516F2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7D516D2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift */; };
 		FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7D516E2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib */; };
+		FE7E6CBD2AB1F3EE0051E985 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E6CBC2AB1F3EE0051E985 /* Role.swift */; };
+		FE7E6CC12AB219850051E985 /* DialogAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7E6CBF2AB219850051E985 /* DialogAccessViewController.swift */; };
+		FE7E6CC22AB219850051E985 /* DialogAccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7E6CC02AB219850051E985 /* DialogAccessViewController.xib */; };
 		FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97D89D2A76C2B600D223C9 /* ViewExtension.swift */; };
 		FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97D89F2A76C2C900D223C9 /* UIView+ToastKit.swift */; };
 		FE97D8A22A76C7AD00D223C9 /* ExUIViewController(1).swift in Sources */ = {isa = PBXBuildFile; fileRef = FE97D8A12A76C7AD00D223C9 /* ExUIViewController(1).swift */; };
@@ -466,6 +469,9 @@
 		FE7BA9932A5AFE2700344EFB /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		FE7D516D2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCinemaTableViewCell.swift; sourceTree = "<group>"; };
 		FE7D516E2A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCinemaTableViewCell.xib; sourceTree = "<group>"; };
+		FE7E6CBC2AB1F3EE0051E985 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		FE7E6CBF2AB219850051E985 /* DialogAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAccessViewController.swift; sourceTree = "<group>"; };
+		FE7E6CC02AB219850051E985 /* DialogAccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogAccessViewController.xib; sourceTree = "<group>"; };
 		FE971B482A5A7EEF00FD6637 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FE97D89D2A76C2B600D223C9 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		FE97D89F2A76C2C900D223C9 /* UIView+ToastKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ToastKit.swift"; sourceTree = "<group>"; };
@@ -1529,6 +1535,7 @@
 		FE69A8A22AA190220017D891 /* DialogShow */ = {
 			isa = PBXGroup;
 			children = (
+				FE7E6CBE2AB219680051E985 /* DialogAccess */,
 				FE69A8A32AA1909F0017D891 /* DialogViewController.swift */,
 				FE69A8A42AA1909F0017D891 /* DialogViewController.xib */,
 			);
@@ -1694,6 +1701,15 @@
 			path = cellitem;
 			sourceTree = "<group>";
 		};
+		FE7E6CBE2AB219680051E985 /* DialogAccess */ = {
+			isa = PBXGroup;
+			children = (
+				FE7E6CBF2AB219850051E985 /* DialogAccessViewController.swift */,
+				FE7E6CC02AB219850051E985 /* DialogAccessViewController.xib */,
+			);
+			path = DialogAccess;
+			sourceTree = "<group>";
+		};
 		FE97D89C2A76C2A300D223C9 /* Extension+tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1800,6 +1816,7 @@
 				FE6B14692AAC7FFC009ADA30 /* Cinema.swift */,
 				FE624F722AACCD3700AA93FA /* InterestMovie.swift */,
 				FE5EA0E12AAE09350039DEC3 /* chair.swift */,
+				FE7E6CBC2AB1F3EE0051E985 /* Role.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2115,6 +2132,7 @@
 				FE6533842AAA16AA00C0739B /* BannerMovieTableViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
 				FE5C9E862AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf in Resources */,
+				FE7E6CC22AB219850051E985 /* DialogAccessViewController.xib in Resources */,
 				FE7BA9892A5AFDE500344EFB /* SalesViewController.xib in Resources */,
 				FE5D08362AA236C2004FA3D9 /* AllVideoandMovieViewController.xib in Resources */,
 				FEAC969D2A5A55CC00B49C80 /* Main.storyboard in Resources */,
@@ -2275,6 +2293,7 @@
 				FE5EA0FF2AAE21E10039DEC3 /* ManagementViewController.swift in Sources */,
 				FE6775F42A8920A10007A659 /* ItemMovieCollectionViewCell.swift in Sources */,
 				FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */,
+				FE7E6CBD2AB1F3EE0051E985 /* Role.swift in Sources */,
 				FE5D08302AA23691004FA3D9 /* TraillerViewController.swift in Sources */,
 				FE5C9E642AA427BB00FA235D /* SambagTimePickerViewController.swift in Sources */,
 				FE7BA9942A5AFE2700344EFB /* AccountViewController.swift in Sources */,
@@ -2327,6 +2346,7 @@
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
 				FE5C6B892AA4D09000852DBE /* Medias.swift in Sources */,
 				FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */,
+				FE7E6CC12AB219850051E985 /* DialogAccessViewController.swift in Sources */,
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
 				FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */,

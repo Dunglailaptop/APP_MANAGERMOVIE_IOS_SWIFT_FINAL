@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagementEmployeeViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="Rue-on-HV8" id="Rrb-e3-4Y2"/>
+                <outlet property="textfield_search" destination="CRN-gB-gus" id="zXF-HG-znI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

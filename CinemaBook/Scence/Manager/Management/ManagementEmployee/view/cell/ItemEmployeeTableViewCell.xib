@@ -46,7 +46,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yYB-TZ-AsY" secondAttribute="trailing" id="He0-3T-6UK"/>
                             <constraint firstAttribute="height" constant="46" id="OCC-3f-jTm"/>
@@ -102,24 +102,62 @@
                             <constraint firstAttribute="height" constant="1" id="LjJ-3u-oXq"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv6-ja-iQP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="btn_makeToAccountinfoViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JR8-O8-Zem"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldJ-UZ-ep8">
+                        <rect key="frame" x="315" y="13" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="wPa-dq-9TS"/>
+                            <constraint firstAttribute="height" constant="40" id="zUq-Eu-OCL"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2to-9c-PIX">
+                        <rect key="frame" x="255" y="13" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="XnE-nG-iUO"/>
+                            <constraint firstAttribute="width" constant="40" id="eCt-3o-buC"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="YFQ-0U-uZY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3XD-bJ-eNe"/>
+                    <constraint firstAttribute="trailing" secondItem="vv6-ja-iQP" secondAttribute="trailing" id="9eK-Ur-6R7"/>
                     <constraint firstAttribute="trailing" secondItem="uUz-Tr-s9h" secondAttribute="trailing" id="Aeg-5F-ldF"/>
                     <constraint firstItem="45V-dK-lhU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BkK-wh-2AC"/>
+                    <constraint firstItem="ldJ-UZ-ep8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Bv6-Zv-0TJ"/>
+                    <constraint firstItem="9dU-8Z-fgy" firstAttribute="leading" secondItem="2to-9c-PIX" secondAttribute="trailing" constant="20" id="JP1-hc-EB7"/>
                     <constraint firstItem="45V-dK-lhU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QWE-Hz-Sa8"/>
                     <constraint firstItem="9dU-8Z-fgy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UXJ-P4-Kva"/>
+                    <constraint firstItem="vv6-ja-iQP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XTo-Os-SeK"/>
                     <constraint firstItem="9dU-8Z-fgy" firstAttribute="leading" secondItem="YFQ-0U-uZY" secondAttribute="trailing" constant="20" id="Zsk-IY-trP"/>
                     <constraint firstItem="uUz-Tr-s9h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bmf-hF-dc5"/>
                     <constraint firstAttribute="bottom" secondItem="uUz-Tr-s9h" secondAttribute="bottom" id="cD6-Dd-DqS"/>
                     <constraint firstAttribute="trailing" secondItem="9dU-8Z-fgy" secondAttribute="trailing" constant="20" id="hIm-OY-0Af"/>
                     <constraint firstItem="ipm-0l-OvW" firstAttribute="leading" secondItem="45V-dK-lhU" secondAttribute="trailing" constant="8" id="jeA-Lq-1n3"/>
+                    <constraint firstAttribute="trailing" secondItem="ldJ-UZ-ep8" secondAttribute="trailing" constant="20" id="lR4-ys-d5w"/>
+                    <constraint firstItem="uUz-Tr-s9h" firstAttribute="top" secondItem="vv6-ja-iQP" secondAttribute="bottom" id="oGW-Ff-PgR"/>
+                    <constraint firstItem="2to-9c-PIX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="r6g-xu-1bh"/>
                     <constraint firstItem="ipm-0l-OvW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sqh-FG-bfm"/>
+                    <constraint firstItem="vv6-ja-iQP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="z1y-Tn-FCS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatar" destination="yYB-TZ-AsY" id="o0w-5B-V6C"/>
+                <outlet property="btn_lockAccount" destination="ldJ-UZ-ep8" id="zaK-Lw-CDe"/>
+                <outlet property="btn_resetpassword" destination="2to-9c-PIX" id="iyI-fq-qld"/>
+                <outlet property="icon_lock" destination="9dU-8Z-fgy" id="nP8-zl-3cB"/>
+                <outlet property="icon_resetpassword" destination="YFQ-0U-uZY" id="oSj-Y9-esO"/>
                 <outlet property="lbl_name" destination="hkZ-sY-Je2" id="8oh-Tk-wLJ"/>
                 <outlet property="lbl_phone" destination="v5v-kt-upo" id="uld-s3-rca"/>
             </connections>

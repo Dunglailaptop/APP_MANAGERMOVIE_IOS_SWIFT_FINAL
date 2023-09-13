@@ -12,6 +12,11 @@ class ItemEmployeeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatar: UIImageView!
     
+    @IBOutlet weak var icon_lock: UIImageView!
+    
+    @IBOutlet weak var icon_resetpassword: UIImageView!
+    @IBOutlet weak var btn_resetpassword: UIButton!
+    @IBOutlet weak var btn_lockAccount: UIButton!
     @IBOutlet weak var lbl_name: UILabel!
     
     @IBOutlet weak var lbl_phone: UILabel!
@@ -30,7 +35,26 @@ class ItemEmployeeTableViewCell: UITableViewCell {
         didSet {
             avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.avatar)), placeholder:  UIImage(named: "image_defauft_medium"))
             lbl_name.text = data!.fullname + " "
+            if data?.statuss == 1 {
+                contentView.backgroundColor = ColorUtils.gray_400()
+                btn_resetpassword.isHidden = true
+                icon_resetpassword.isHidden = true
+                icon_lock.image = UIImage(named: "icon-unlock")
+            }else {
+                btn_resetpassword.isHidden = false
+                icon_resetpassword.isHidden = false
+                icon_lock.image = UIImage(named: "icon-lock")
+            }
         }
     }
     
+    var viewModel: ManagementEmployeeViewModel? = nil {
+        didSet{
+           
+        }
+    }
+    
+    @IBAction func btn_makeToAccountinfoViewController(_ sender: Any) {
+        self.viewModel!.makeToAccountinfo(iduser: data!.idusers,note: "UPDATE")
+    }
 }

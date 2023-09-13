@@ -11,15 +11,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountInfoViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="avatar" destination="yzf-co-QKR" id="c4Z-wf-Scp"/>
+                <outlet property="btn_dropdown" destination="Jsy-Wl-WaN" id="yw7-as-5t6"/>
                 <outlet property="female" destination="UA2-ol-6d5" id="Bqu-IK-pKy"/>
                 <outlet property="lbl_btn_title" destination="vDl-vK-K8F" id="qas-Na-ugC"/>
                 <outlet property="lbl_title" destination="oDc-cY-I7p" id="Aqj-4T-G1W"/>
                 <outlet property="male" destination="uoW-j1-0TS" id="b3f-9S-G2T"/>
+                <outlet property="txt_address" destination="hrP-4v-qdN" id="dFP-S5-Okm"/>
                 <outlet property="txt_birthday" destination="0Z9-j0-X3Z" id="lNt-j7-Dbc"/>
+                <outlet property="txt_drop_down" destination="USz-Au-7E5" id="0q3-gF-ReZ"/>
                 <outlet property="txt_email" destination="HzR-Oy-UfC" id="VYl-g1-w2R"/>
                 <outlet property="txt_idUser" destination="jvL-CA-cuj" id="KR0-E3-9XP"/>
                 <outlet property="txt_phone" destination="1f6-4T-Ddj" id="7cZ-Uk-T1m"/>
-                <outlet property="txt_role" destination="USz-Au-7E5" id="n0T-T2-AAC"/>
                 <outlet property="txt_username" destination="S1a-VE-GsV" id="ujF-lg-yJo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -184,20 +186,38 @@
                                                             <color key="textColor" red="0.49019607843137253" green="0.49411764705882355" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="KHÁCH HÀNG" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USz-Au-7E5">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="KHÁCH HÀNG" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USz-Au-7E5" customClass="JRDropDown">
                                                             <rect key="frame" x="16" y="24.5" width="342" height="33.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="3Tv-J2-2x6">
+                                                            <rect key="frame" x="332" y="18" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="22" id="Fh7-kG-5bX"/>
+                                                                <constraint firstAttribute="width" constant="22" id="dvg-Xd-MZl"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-Wl-WaN">
+                                                            <rect key="frame" x="88.5" y="0.0" width="285.5" height="58"/>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Jsy-Wl-WaN" secondAttribute="bottom" id="7Mf-ve-SQj"/>
                                                         <constraint firstItem="hOo-Kj-jA9" firstAttribute="leading" secondItem="nfM-8p-ebM" secondAttribute="leading" constant="16" id="7w8-EO-WRb"/>
                                                         <constraint firstItem="hOo-Kj-jA9" firstAttribute="top" secondItem="nfM-8p-ebM" secondAttribute="top" constant="10" id="9Bl-Hs-7l9"/>
                                                         <constraint firstAttribute="trailing" secondItem="USz-Au-7E5" secondAttribute="trailing" constant="16" id="CqK-WE-Dy3"/>
+                                                        <constraint firstItem="Jsy-Wl-WaN" firstAttribute="leading" secondItem="hOo-Kj-jA9" secondAttribute="trailing" id="FMn-HM-e4f"/>
                                                         <constraint firstItem="USz-Au-7E5" firstAttribute="top" secondItem="hOo-Kj-jA9" secondAttribute="bottom" id="TJg-kd-Z8f"/>
                                                         <constraint firstItem="USz-Au-7E5" firstAttribute="leading" secondItem="hOo-Kj-jA9" secondAttribute="leading" id="bJc-Ct-mSu"/>
                                                         <constraint firstAttribute="bottom" secondItem="USz-Au-7E5" secondAttribute="bottom" id="de1-Nd-X49"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Jsy-Wl-WaN" secondAttribute="trailing" id="ePg-Ce-R9h"/>
+                                                        <constraint firstItem="3Tv-J2-2x6" firstAttribute="centerY" secondItem="nfM-8p-ebM" secondAttribute="centerY" id="fD8-74-BEd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3Tv-J2-2x6" secondAttribute="trailing" constant="20" id="lFI-9Z-YoT"/>
+                                                        <constraint firstItem="Jsy-Wl-WaN" firstAttribute="top" secondItem="nfM-8p-ebM" secondAttribute="top" id="myd-aG-ni7"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -477,6 +497,7 @@
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Vui long nhap.." translatesAutoresizingMaskIntoConstraints="NO" id="hrP-4v-qdN">
                                                             <rect key="frame" x="16" y="30.5" width="342" height="149.5"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -664,6 +685,7 @@
         <image name="icon-back-blue" width="9" height="18"/>
         <image name="icon-calendar" width="24" height="24"/>
         <image name="icon-choose-avatar" width="30" height="30"/>
+        <image name="icon-dropdown" width="24" height="24"/>
         <image name="icon-radio-checked" width="20" height="20"/>
         <image name="icon-radio-uncheck" width="20" height="20"/>
     </resources>

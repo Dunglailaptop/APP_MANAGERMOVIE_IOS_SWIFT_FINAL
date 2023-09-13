@@ -8,11 +8,14 @@
 
 import UIKit
 import MWPhotoBrowser
+import iOSDropDown
 
 class AccountInfoViewController: BaseViewController {
 
     var type_dy = ""
     
+    @IBOutlet weak var txt_drop_down: DropDown!
+    @IBOutlet weak var btn_dropdown: UIButton!
     @IBOutlet weak var lbl_title: UILabel!
     @IBOutlet weak var male: UIImageView!
     
@@ -33,7 +36,8 @@ class AccountInfoViewController: BaseViewController {
     @IBOutlet weak var txt_idUser: UITextField!
     
    
-    @IBOutlet weak var txt_role: UITextField!
+    @IBOutlet weak var txt_address: UITextView!
+    
     
     @IBOutlet weak var txt_phone: UITextField!
     
@@ -42,7 +46,7 @@ class AccountInfoViewController: BaseViewController {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
         checkvaliad()
-      
+        self.getListRole()
         // Do any additional setup after loading the view.
     }
     
@@ -65,6 +69,25 @@ class AccountInfoViewController: BaseViewController {
                               clonedata.email = str
                               return clonedata
                           }).bind(to: viewModel.dataArray)
+        _ = txt_address.rx.text.map{String($0!.prefix(255))}.map({(str) -> Users in
+                            self.txt_address.text = str
+                            var clonedata = self.viewModel.dataArray.value
+                            clonedata.address = str
+                            return clonedata
+                }).bind(to: viewModel.dataArray)
+        
+        _ = btn_dropdown.rx.tap.asDriver().drive(onNext: {
+            [self]  in
+            self.txt_drop_down.showList()
+            }).disposed(by: rxbag)
+
+        txt_drop_down.didSelect{ [self](selectedText , index ,id) in
+            var cloneItem = self.viewModel.dataArray.value
+            cloneItem.idrole =  id
+            self.viewModel.dataArray.accept(cloneItem)
+            self.txt_drop_down.text = selectedText
+            self.txt_drop_down.selectedIndex = index
+                  }
         
            
        }
@@ -85,6 +108,7 @@ class AccountInfoViewController: BaseViewController {
                             viewModel.dataArray.accept(id)
                             lbl_title.text = "CẬP NHẬT NHÂN VIÊN"
                             lbl_btn_title.text = "CẬP NHẬT"
+                            getInfoAccount()
                             return
                         case "ACCOUNT":
                             var id = viewModel.dataArray.value
@@ -121,19 +145,34 @@ class AccountInfoViewController: BaseViewController {
         if imagecover.count > 0 {
             self.postUpdateWithAvatar()
         }else {
-              self.postUpdateAccount()
+            type_dy == "CREATE"  ? self.postCreateEmployee():self.postUpdateAccount()
         }
       
     }
     
     @IBAction func btn_male(_ sender: Any) {
-        male.image = UIImage(named: "icon-radio-checked")
-        female.image = UIImage(named: "icon-radio-uncheck")
+       setupmaleAndFemale(type: 1)
     }
     
     @IBAction func btn_female(_ sender: Any) {
-        male.image = UIImage(named: "icon-radio-uncheck")
-              female.image = UIImage(named: "icon-radio-checked")
+         setupmaleAndFemale(type: 0)
     }
+    
+    func setupmaleAndFemale(type:Int){
+        if type == 1 {
+            male.image = UIImage(named: "icon-radio-checked")
+                   female.image = UIImage(named: "icon-radio-uncheck")
+                   var data = viewModel.dataArray.value
+                   data.gender = 1
+                   viewModel.dataArray.accept(data)
+        }else {
+            male.image = UIImage(named: "icon-radio-uncheck")
+                         female.image = UIImage(named: "icon-radio-checked")
+                   var data = viewModel.dataArray.value
+                   data.gender = 0
+                   viewModel.dataArray.accept(data)
+        }
+    }
+    
     
 }
