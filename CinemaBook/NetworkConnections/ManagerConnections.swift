@@ -28,6 +28,9 @@ enum ManagerConnections {
     case getListEmployee(iduser:Int,keysearch:String,idcinema:Int)
     case getListRole
     case postCreateNewEmployee(newUser:Users)
+    case lockEmployee(id:Int,status:Int)
+    case resetPasswordEmployee(id:Int)
+    case getInfoUserCinema(iduser:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -72,6 +75,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListRole
         case .postCreateNewEmployee(_):
             return APIEndPoint.Name.urlCreateNewEmployee
+        case .lockEmployee(let id ,let status):
+            return APIEndPoint.Name.urlLockemployee
+        case .resetPasswordEmployee(let id):
+            return APIEndPoint.Name.urlResetPassword
+        case .getInfoUserCinema(let iduser):
+            return APIEndPoint.Name.urlGetInfoUserCinema
         }
     
     }
@@ -107,6 +116,12 @@ extension ManagerConnections: TargetType {
             return .get
         case .postCreateNewEmployee(_):
             return .post
+        case .lockEmployee(_,_):
+            return .get
+        case .resetPasswordEmployee(_):
+            return .get
+        case .getInfoUserCinema(_):
+            return .get
         }
 
         
@@ -166,6 +181,12 @@ extension ManagerConnections: TargetType {
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
             case .postCreateNewEmployee(_):
                  return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .lockEmployee(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .resetPasswordEmployee(_):
+                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getInfoUserCinema(_):
+                     return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -237,6 +258,14 @@ extension ManagerConnections: TargetType {
                 "statuss": newUser.statuss,
                 "address": newUser.address
             ]
+        case .lockEmployee(let id,let  status):
+           return ["idemployee":id,
+             "statuss":status
+            ]
+        case .resetPasswordEmployee(let id):
+            return ["idemployee":id]
+        case .getInfoUserCinema(let iduser):
+            return ["iduser":iduser]
         }
        
     }
@@ -281,6 +310,12 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .postCreateNewEmployee(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .lockEmployee(_,_):
+               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .resetPasswordEmployee(_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getInfoUserCinema(_):
+                   return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

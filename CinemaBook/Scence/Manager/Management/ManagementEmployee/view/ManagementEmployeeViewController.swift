@@ -40,6 +40,10 @@ class ManagementEmployeeViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        var data = viewModel.pagation.value
+        data.idcinema = ManageCacheObject.getCurrentCinema().idcinema
+        viewModel.pagation.accept(data)
+        viewModel.cleardata()
         getlistEmployee()
     }
     @IBAction func btn_makeToAccountinfoViewController(_ sender: Any) {

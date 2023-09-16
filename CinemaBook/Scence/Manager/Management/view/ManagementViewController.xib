@@ -212,13 +212,25 @@
                                                                                 <constraint firstAttribute="trailing" secondItem="Ppu-KJ-kPR" secondAttribute="trailing" constant="8" id="phf-Me-gaI"/>
                                                                             </constraints>
                                                                         </view>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-Fv-m4g">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="142"/>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="btn_makeToManagementInterestMovie:" destination="-1" eventType="touchUpInside" id="XHb-VH-WQa"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
+                                                                        <constraint firstItem="vZy-Fv-m4g" firstAttribute="leading" secondItem="RvM-is-fbt" secondAttribute="leading" id="3jy-6c-oMY"/>
                                                                         <constraint firstAttribute="trailing" secondItem="WN3-9w-LZV" secondAttribute="trailing" constant="18.5" id="ERr-kn-6Lr"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="vZy-Fv-m4g" secondAttribute="bottom" id="Fds-gf-7ed"/>
                                                                         <constraint firstItem="WN3-9w-LZV" firstAttribute="leading" secondItem="RvM-is-fbt" secondAttribute="leading" constant="18.5" id="QnH-Hw-nZd"/>
                                                                         <constraint firstItem="WN3-9w-LZV" firstAttribute="top" secondItem="RvM-is-fbt" secondAttribute="top" constant="14" id="VDy-P6-w8Y"/>
+                                                                        <constraint firstItem="vZy-Fv-m4g" firstAttribute="top" secondItem="RvM-is-fbt" secondAttribute="top" id="hrz-0o-ATi"/>
                                                                         <constraint firstAttribute="bottom" secondItem="WN3-9w-LZV" secondAttribute="bottom" constant="14" id="kaA-Yz-VAq"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="vZy-Fv-m4g" secondAttribute="trailing" id="xqH-Ox-glB"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -371,10 +383,22 @@
                                                                                 <constraint firstItem="bMp-E6-dxE" firstAttribute="top" secondItem="bGd-Qk-Amu" secondAttribute="bottom" id="tNW-ob-mQg"/>
                                                                             </constraints>
                                                                         </view>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZO-5b-qzo">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="142"/>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="btn_makeToManagemnetMovieViewController:" destination="-1" eventType="touchUpInside" id="tka-Qm-IGe"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
                                                                         <constraint firstItem="XbD-h0-R3p" firstAttribute="leading" secondItem="kUL-3M-cbU" secondAttribute="leading" constant="18.5" id="Csw-cE-GbF"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="KZO-5b-qzo" secondAttribute="trailing" id="Ngx-mK-Ce2"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="KZO-5b-qzo" secondAttribute="bottom" id="OO0-R4-beB"/>
+                                                                        <constraint firstItem="KZO-5b-qzo" firstAttribute="top" secondItem="kUL-3M-cbU" secondAttribute="top" id="Ofu-nb-vID"/>
+                                                                        <constraint firstItem="KZO-5b-qzo" firstAttribute="leading" secondItem="kUL-3M-cbU" secondAttribute="leading" id="W3b-sY-63T"/>
                                                                         <constraint firstAttribute="trailing" secondItem="XbD-h0-R3p" secondAttribute="trailing" constant="18.5" id="WiG-Kq-b6U"/>
                                                                         <constraint firstAttribute="bottom" secondItem="XbD-h0-R3p" secondAttribute="bottom" constant="14" id="oeQ-it-xDH"/>
                                                                         <constraint firstItem="XbD-h0-R3p" firstAttribute="top" secondItem="kUL-3M-cbU" secondAttribute="top" constant="14" id="onB-ZC-g3x"/>

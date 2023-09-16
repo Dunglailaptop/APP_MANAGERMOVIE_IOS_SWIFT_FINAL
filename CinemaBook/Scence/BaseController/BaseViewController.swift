@@ -46,6 +46,10 @@ class BaseViewController: UIViewController {
         
         
         self.navigationController?.isNavigationBarHidden = true
+        
+        
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                 UIViewController.attemptRotationToDeviceOrientation()
 
       
     }
@@ -92,7 +96,17 @@ class BaseViewController: UIViewController {
         
     }
    
-    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
    
     
     // MARK: - Memory Release -

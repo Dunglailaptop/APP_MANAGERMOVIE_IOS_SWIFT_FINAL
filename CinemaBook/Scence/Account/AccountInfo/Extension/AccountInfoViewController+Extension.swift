@@ -145,22 +145,12 @@ extension AccountInfoViewController: UIImagePickerControllerDelegate, UINavigati
 }
 extension AccountInfoViewController: SambagDatePickerViewControllerDelegate {
     
-    func convertdatetime(string: String) -> String {
-        let dateFormatterInput = DateFormatter()
-        dateFormatterInput.dateFormat = "dd/MM/yyyy"
-
-        let dateFormatterOutput = DateFormatter()
-        dateFormatterOutput.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatterInput.date(from: string)!
-            let formattedDate = dateFormatterOutput.string(from: date)
-           return formattedDate
-        
-    }
+  
     
     func sambagDatePickerDidSet(_ viewController: SambagDatePickerViewController, result: SambagDatePickerResult){
         txt_birthday.text = result.description
         var birthday = viewModel.dataArray.value
-        birthday.birthday = convertdatetime(string: result.description)
+        birthday.birthday = Utils().convertdatetime(string: result.description)
         viewModel.dataArray.accept(birthday)
         viewController.dismiss(animated: true, completion: nil)
      }

@@ -17,5 +17,5 @@ protocol  LogoutConfirm {
 }
 
 protocol DialogAccessEmployee {
-    func callbackDialogAccess(id:Int)
+    func callbackDialogAccess(id:Int,status:Int)
 }

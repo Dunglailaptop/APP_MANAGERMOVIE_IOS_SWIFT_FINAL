@@ -24,5 +24,11 @@ class ManagementViewController: BaseViewController {
         viewModel.navigationToManagementEmployee()
     }
    
-
+    @IBAction func btn_makeToManagemnetMovieViewController(_ sender: Any) {
+        viewModel.navigationToManagementMovie()
+    }
+    
+    @IBAction func btn_makeToManagementInterestMovie(_ sender: Any) {
+        viewModel.navigationToManagementMovieInterest()
+    }
 }

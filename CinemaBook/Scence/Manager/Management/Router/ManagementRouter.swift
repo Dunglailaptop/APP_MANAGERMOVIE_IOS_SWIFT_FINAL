@@ -30,10 +30,14 @@ class ManagementRouter {
         let managementemployee = ManagementEmployeeRouter().viewController
         sourceView?.navigationController?.pushViewController(managementemployee, animated: true)
     }
-//    
-//    func navigationToAccountInfoViewController() {
-//        let accountinfoview = AccountInfoRouter().viewController
-//        sourceView?.navigationController?.pushViewController(accountinfoview, animated: true)
-//    }
+    
+    func navigationToManagementMovie() {
+           let ManagementMovieViewRouters = ManagementMovieRouter().viewController
+           sourceView?.navigationController?.pushViewController(ManagementMovieViewRouters, animated: true)
+       }
+    func navigationToManagementInterestMovie() {
+        let ManagementInterestMovieView = ManagementInterestMovieRouter().viewController
+                  sourceView?.navigationController?.pushViewController(ManagementInterestMovieView, animated: true)
+    }
     
 }

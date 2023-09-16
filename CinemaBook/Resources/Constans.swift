@@ -32,6 +32,7 @@ struct Constans {
         static let key_config = "KEY_CONFIG"
         static let KEY_PUSH_TOKEN = "KEY_PUSH_TOKEN"
         static let KEY_PHONE = "KEY_PHONE"
+        
     }
     
     struct KEY_LOGIN_REQUID {

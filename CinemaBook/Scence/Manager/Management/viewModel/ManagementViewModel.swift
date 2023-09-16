@@ -24,7 +24,13 @@ class ManagementViewModel: BaseViewModel{
     func navigationToManagementEmployee() {
         router?.navigationToManagementEmployee()
     }
+    func navigationToManagementMovie() {
+         router?.navigationToManagementMovie()
+     }
     
+    func navigationToManagementMovieInterest() {
+            router?.navigationToManagementInterestMovie()
+        }
 }
 
 

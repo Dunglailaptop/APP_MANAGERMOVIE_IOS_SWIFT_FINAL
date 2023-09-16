@@ -14,6 +14,7 @@ class ItemEmployeeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var icon_lock: UIImageView!
     
+    @IBOutlet weak var btn_unlock: UIButton!
     @IBOutlet weak var icon_resetpassword: UIImageView!
     @IBOutlet weak var btn_resetpassword: UIButton!
     @IBOutlet weak var btn_lockAccount: UIButton!
@@ -40,10 +41,15 @@ class ItemEmployeeTableViewCell: UITableViewCell {
                 btn_resetpassword.isHidden = true
                 icon_resetpassword.isHidden = true
                 icon_lock.image = UIImage(named: "icon-unlock")
+                btn_lockAccount.isHidden = true
+                btn_unlock.isHidden = false
             }else {
+                contentView.backgroundColor = .white
                 btn_resetpassword.isHidden = false
                 icon_resetpassword.isHidden = false
                 icon_lock.image = UIImage(named: "icon-lock")
+                btn_unlock.isHidden = true
+                btn_lockAccount.isHidden = false
             }
         }
     }

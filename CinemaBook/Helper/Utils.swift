@@ -122,4 +122,46 @@ class Utils: NSObject {
         
         return nil
     }
+    // hàm lấy danh sách các ngày trong tuần
+    func getListOfDates(startDate: Date, endDate: Date) -> [Date] {
+        var currentDate = startDate
+        var dates = [Date]()
+
+        while currentDate <= endDate {
+            dates.append(currentDate)
+            currentDate = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
+        }
+
+        return dates
+    }
+    
+    func getCurrentDay(date: Date) -> Int {
+          let dateformat = DateFormatter()
+          dateformat.dateFormat = "dd"
+          
+          
+          let dateString = dateformat.string(from: date as Date)
+          //println(dateString)
+          return Int(dateString)!
+      }
+   func getDayOfWeek(today: String) -> Int? {
+          let formatter  = DateFormatter()
+          formatter.dateFormat = "yyyy-MM-dd"
+          guard let todayDate = formatter.date(from: today) else { return nil }
+          let myCalendar = Calendar(identifier: .gregorian)
+          let weekDay = myCalendar.component(.weekday, from: todayDate)
+          return weekDay
+      }
+    
+    func convertdatetime(string: String) -> String {
+          let dateFormatterInput = DateFormatter()
+          dateFormatterInput.dateFormat = "dd/MM/yyyy"
+
+          let dateFormatterOutput = DateFormatter()
+          dateFormatterOutput.dateFormat = "yyyy-MM-dd"
+          let date = dateFormatterInput.date(from: string)!
+              let formattedDate = dateFormatterOutput.string(from: date)
+             return formattedDate
+          
+      }
 }

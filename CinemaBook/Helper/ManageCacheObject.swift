@@ -84,6 +84,20 @@ class  ManageCacheObject{
         
     }
     
+    // lay thong tin cinema
+       static func getCurrentCinema() -> Cinema {
+           if let user = UserDefaults.standard.object(forKey: Constans.KEY_DEFAULT_STORAGE.KEY_PHONE){
+               return Mapper<Cinema>().map(JSONObject: user)!
+           }else{
+               return Cinema.init()
+           }
+       }
+       static func saveCurrentCinema(_ cinema : Cinema) {
+           UserDefaults.standard.set(Mapper<Cinema>().toJSON(cinema), forKey:
+               Constans.KEY_DEFAULT_STORAGE.KEY_PHONE)
+           
+       }
+    
     static func isLogin()->Bool{
         let account = ManageCacheObject.getCurrentUserInfo()
         if(account.idusers == 0){

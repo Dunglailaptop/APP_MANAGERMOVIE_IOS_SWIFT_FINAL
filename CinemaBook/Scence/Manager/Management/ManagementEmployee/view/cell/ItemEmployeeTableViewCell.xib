@@ -128,8 +128,18 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckG-dJ-CWJ">
+                        <rect key="frame" x="315" y="13" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="GCJ-09-JUI"/>
+                            <constraint firstAttribute="width" constant="40" id="II9-gS-Zco"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ckG-dJ-CWJ" secondAttribute="trailing" constant="20" id="1Xp-f4-iNk"/>
                     <constraint firstItem="YFQ-0U-uZY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3XD-bJ-eNe"/>
                     <constraint firstAttribute="trailing" secondItem="vv6-ja-iQP" secondAttribute="trailing" id="9eK-Ur-6R7"/>
                     <constraint firstAttribute="trailing" secondItem="uUz-Tr-s9h" secondAttribute="trailing" id="Aeg-5F-ldF"/>
@@ -145,6 +155,7 @@
                     <constraint firstAttribute="trailing" secondItem="9dU-8Z-fgy" secondAttribute="trailing" constant="20" id="hIm-OY-0Af"/>
                     <constraint firstItem="ipm-0l-OvW" firstAttribute="leading" secondItem="45V-dK-lhU" secondAttribute="trailing" constant="8" id="jeA-Lq-1n3"/>
                     <constraint firstAttribute="trailing" secondItem="ldJ-UZ-ep8" secondAttribute="trailing" constant="20" id="lR4-ys-d5w"/>
+                    <constraint firstItem="ckG-dJ-CWJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mIe-FP-vL9"/>
                     <constraint firstItem="uUz-Tr-s9h" firstAttribute="top" secondItem="vv6-ja-iQP" secondAttribute="bottom" id="oGW-Ff-PgR"/>
                     <constraint firstItem="2to-9c-PIX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="r6g-xu-1bh"/>
                     <constraint firstItem="ipm-0l-OvW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sqh-FG-bfm"/>
@@ -156,6 +167,7 @@
                 <outlet property="avatar" destination="yYB-TZ-AsY" id="o0w-5B-V6C"/>
                 <outlet property="btn_lockAccount" destination="ldJ-UZ-ep8" id="zaK-Lw-CDe"/>
                 <outlet property="btn_resetpassword" destination="2to-9c-PIX" id="iyI-fq-qld"/>
+                <outlet property="btn_unlock" destination="ckG-dJ-CWJ" id="M7w-Up-65Z"/>
                 <outlet property="icon_lock" destination="9dU-8Z-fgy" id="nP8-zl-3cB"/>
                 <outlet property="icon_resetpassword" destination="YFQ-0U-uZY" id="oSj-Y9-esO"/>
                 <outlet property="lbl_name" destination="hkZ-sY-Je2" id="8oh-Tk-wLJ"/>

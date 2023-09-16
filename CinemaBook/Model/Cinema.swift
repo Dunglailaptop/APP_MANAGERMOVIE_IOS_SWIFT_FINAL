@@ -19,6 +19,10 @@ struct  Cinema:Mappable {
   var   rooms = ""
   var  userofcinemas = ""
     
+    init(){
+        
+    }
+    
     init?(map: Map) {
         
     }

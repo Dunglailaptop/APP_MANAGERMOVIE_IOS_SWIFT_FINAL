@@ -38,6 +38,9 @@ public struct APIEndPoint {
         static let urlGetListEmployee = "/Employee/getlistemployee"
         static let urlGetListRole = "/Account/getrole"
         static let urlCreateNewEmployee = "/Employee/Createnewemployee"
+        static let urlLockemployee = "/Employee/Lockemployee"
+        static let urlResetPassword = "/Employee/resetpasswordemployee"
+        static let urlGetInfoUserCinema = "/Cinema/getInfoUserCinema"
     }
     
 }

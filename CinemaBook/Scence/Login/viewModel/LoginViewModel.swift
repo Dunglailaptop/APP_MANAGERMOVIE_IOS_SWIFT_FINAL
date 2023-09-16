@@ -32,7 +32,7 @@ class LoginViewModel {
     
    var username = BehaviorRelay<String>(value: "")
     var password = BehaviorRelay<String>(value: "")
-
+   var iduser = BehaviorRelay<Int>(value: 0)
 
 }
 extension LoginViewModel{
@@ -51,4 +51,11 @@ extension LoginViewModel{
         .showAPIErrorToast()
         .mapObject(type: APIResponse.self)
     }
+     func getInfoCinema() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getInfoUserCinema(iduser: iduser.value ))
+           .filterSuccessfulStatusCodes()
+           .mapJSON().asObservable()
+           .showAPIErrorToast()
+           .mapObject(type: APIResponse.self)
+       }
 }

@@ -33,4 +33,5 @@ pod 'GravitySliderFlowLayout'
 pod 'LNICoverFlowLayout'
  pod 'MarqueeLabel'
   pod 'iOSDropDown'
+pod 'SpreadsheetView'
 end

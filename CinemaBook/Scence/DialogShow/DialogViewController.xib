@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="lbl_note" destination="KAl-WS-atp" id="uJL-NI-RwG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

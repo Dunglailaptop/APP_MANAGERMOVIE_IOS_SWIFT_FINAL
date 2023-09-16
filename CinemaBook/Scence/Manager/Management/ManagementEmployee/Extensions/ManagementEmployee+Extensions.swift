@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import ObjectMapper
+import JonAlert
 
 extension ManagementEmployeeViewController {
     func getlistEmployee() {
@@ -22,6 +23,32 @@ extension ManagementEmployeeViewController {
             
             }).disposed(by: rxbag)
     }
+    func getlockEmployee() {
+           viewModel.getLockEmployee().subscribe(onNext: { (response) in
+               if response.code == RRHTTPStatusCode.ok.rawValue {
+                
+                JonAlert.show(message: "kHOÁ TÀI KHOẢN THÀNH CÔNG")
+               }else {
+                JonAlert.show(message: "CÓ LỖI XẢY RA")
+            }
+               
+               }).disposed(by: rxbag)
+       }
+    
+    func resetPaasword() {
+           viewModel.resetPassword().subscribe(onNext: { (response) in
+               if response.code == RRHTTPStatusCode.ok.rawValue {
+                 
+                                  
+                    JonAlert.show(message: "khôi phục mật khẩu TÀI KHOẢN THÀNH CÔNG")
+                }else {
+                                  JonAlert.show(message: "CÓ LỖI XẢY RA")
+                }
+               
+               
+               }).disposed(by: rxbag)
+       }
+    
 }
 extension ManagementEmployeeViewController {
     func register() {
@@ -45,7 +72,15 @@ extension ManagementEmployeeViewController {
             (row,data,cell) in
             
             cell.btn_lockAccount.rx.tap.asDriver().drive(onNext: { [self] in
-                           self.presentModalDialogAccess()
+                dLog(data.idusers)
+                self.presentModalDialogAccess(idemployee: data.idusers,status:1)
+            })
+            cell.btn_unlock.rx.tap.asDriver().drive(onNext: { [self] in
+                          dLog(data.idusers)
+                          self.presentModalDialogAccess(idemployee: data.idusers,status:0)
+                      })
+            cell.btn_resetpassword.rx.tap.asDriver().drive(onNext: { [self] in
+                self.resetPaasword()
             })
             
             cell.selectionStyle = .none
@@ -61,12 +96,27 @@ extension ManagementEmployeeViewController: UITableViewDelegate {
 }
 
 extension ManagementEmployeeViewController: DialogAccessEmployee{
-    func callbackDialogAccess(id: Int) {
+    func callbackDialogAccess(id: Int,status:Int) {
+        var data = viewModel.pagation.value
+        data.iduser = id
+        data.status = status
+        viewModel.pagation.accept(data)
+        getlockEmployee()
+        getlistEmployee()
+//        viewModel.cleardata()
+//        getlistEmployee()
+        dismiss(animated: true)
         
+     
     }
     
-     func presentModalDialogAccess() {
-        let DialogAccessViewController = DialogAccessViewController()
+    func presentModalDialogAccess(idemployee:Int,status:Int) {
+        let DialogAccessViewController = DialogViewController()
+        DialogAccessViewController.delegate2 = self
+        DialogAccessViewController.type = 0
+        DialogAccessViewController.status = status
+        DialogAccessViewController.idemployee = idemployee
+        DialogAccessViewController.tittle = "Bạn có muốn khoá tài khoản nhân viên này không?"
     DialogAccessViewController.view.backgroundColor = ColorUtils.blackTransparent()
 
                   let nav = UINavigationController(rootViewController: DialogAccessViewController)
@@ -76,7 +126,7 @@ extension ManagementEmployeeViewController: DialogAccessEmployee{
 //    ////
 //                  // 2
 //                  if #available(iOS 15.0, *) {
-//                    if let sheet = nav.sheetPresentationController as! UISheet {
+//                    if let sheet = nav.presentationController as! UISheetPresentationController {
 //
 //                          // 3
 //                          sheet.detents = [.large()]

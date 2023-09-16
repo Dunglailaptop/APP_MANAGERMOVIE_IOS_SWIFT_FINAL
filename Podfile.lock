@@ -45,6 +45,7 @@ PODS:
   - SDWebImage/Core (3.8.3)
   - SKPhotoBrowser (7.1.0)
   - SnapKit (5.6.0)
+  - SpreadsheetView (0.9.1)
   - SquareFlowLayout (0.0.1)
   - youtube-ios-player-helper (1.0.4)
 
@@ -73,6 +74,7 @@ DEPENDENCIES:
   - RxSwift (= 4.5)
   - SKPhotoBrowser
   - SnapKit
+  - SpreadsheetView
   - SquareFlowLayout
   - youtube-ios-player-helper
 
@@ -105,6 +107,7 @@ SPEC REPOS:
     - SDWebImage
     - SKPhotoBrowser
     - SnapKit
+    - SpreadsheetView
     - SquareFlowLayout
     - youtube-ios-player-helper
 
@@ -136,9 +139,10 @@ SPEC CHECKSUMS:
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
   SKPhotoBrowser: cd95b95a6f352fc2a50992721299f75ead77f9ab
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SpreadsheetView: 688dbd19f2b355df0eb09e486266fd913a013449
   SquareFlowLayout: cde3486d3086fb7f95b303d9b90bb86aa9dd98b5
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: b7bb5bb6f2a92654bbe8f17774a387df4dd70be5
+PODFILE CHECKSUM: 0d789d54b7b60ccfef41d803f60394b81be61211
 
 COCOAPODS: 1.12.1
