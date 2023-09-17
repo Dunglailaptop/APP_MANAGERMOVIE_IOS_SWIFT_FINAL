@@ -63,7 +63,7 @@ extension LoginViewController {
                
                
                   
-               }else {
+               }else if ManageCacheObject.getCurrentUserInfo().idrole != 1 {
                  JonAlert.showError(message: "Nhân viên không tồn tại trong danh sách nhà hàng xin vui lòng đăng ký tài khoản cho nhân viên")
                 }
             }else {

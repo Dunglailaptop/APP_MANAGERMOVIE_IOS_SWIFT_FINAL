@@ -24,15 +24,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNh-xc-pcT">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO-APP" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-dT-ome">
-                            <rect key="frame" x="107" y="100" width="200" height="80"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_new" translatesAutoresizingMaskIntoConstraints="NO" id="D2o-dT-ome">
+                            <rect key="frame" x="57" y="100" width="300" height="200"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="TT9-v8-bU6"/>
-                                <constraint firstAttribute="height" constant="80" id="fSf-g5-Nu6"/>
+                                <constraint firstAttribute="width" constant="300" id="TT9-v8-bU6"/>
+                                <constraint firstAttribute="height" constant="200" id="fSf-g5-Nu6"/>
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6c-nE-MLL">
-                            <rect key="frame" x="20" y="200" width="374" height="200"/>
+                            <rect key="frame" x="20" y="300" width="374" height="200"/>
                             <subviews>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên đăng nhập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ce-ua-VVO">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -114,13 +114,13 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn quên mật khẩu ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOz-H6-DJL">
-                            <rect key="frame" x="127" y="410" width="160" height="21"/>
+                            <rect key="frame" x="127" y="510" width="160" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" name="AccentColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-login" translatesAutoresizingMaskIntoConstraints="NO" id="Rcb-H7-eyi">
-                            <rect key="frame" x="182" y="451" width="50" height="50"/>
+                            <rect key="frame" x="182" y="551" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="50" id="MU0-Z5-lfa"/>
                                 <constraint firstAttribute="height" constant="50" id="nHU-Cb-Uli"/>
@@ -131,7 +131,7 @@
                     <constraints>
                         <constraint firstItem="D2o-dT-ome" firstAttribute="centerX" secondItem="KNh-xc-pcT" secondAttribute="centerX" id="1mS-BN-6vs"/>
                         <constraint firstItem="NOz-H6-DJL" firstAttribute="centerX" secondItem="KNh-xc-pcT" secondAttribute="centerX" id="4YQ-oc-NFE"/>
-                        <constraint firstItem="d6c-nE-MLL" firstAttribute="top" secondItem="D2o-dT-ome" secondAttribute="bottom" constant="20" id="7wm-Gp-lFW"/>
+                        <constraint firstItem="d6c-nE-MLL" firstAttribute="top" secondItem="D2o-dT-ome" secondAttribute="bottom" id="7wm-Gp-lFW"/>
                         <constraint firstItem="Rcb-H7-eyi" firstAttribute="top" secondItem="NOz-H6-DJL" secondAttribute="bottom" constant="20" id="Dx9-mz-qaC"/>
                         <constraint firstAttribute="trailing" secondItem="d6c-nE-MLL" secondAttribute="trailing" constant="20" id="LQl-7T-nyI"/>
                         <constraint firstItem="d6c-nE-MLL" firstAttribute="leading" secondItem="KNh-xc-pcT" secondAttribute="leading" constant="20" id="Trn-Zj-0eS"/>
@@ -153,8 +153,8 @@
         </view>
     </objects>
     <resources>
-        <image name="LOGO-APP" width="1010" height="554"/>
         <image name="icon-login" width="24" height="24"/>
+        <image name="logo_new" width="500" height="500"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

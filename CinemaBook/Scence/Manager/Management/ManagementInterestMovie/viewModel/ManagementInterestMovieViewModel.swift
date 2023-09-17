@@ -22,7 +22,7 @@ class ManagementInterestMovieViewModel: BaseViewModel{
     
     public var dataArrayday: BehaviorRelay<[Date]> = BehaviorRelay(value: [])
     
-    public var dataDay: BehaviorRelay<(DateForm:String,DateTo:String)> = BehaviorRelay(value: (DateForm:"2023-09-09",DateTo:"2023-09-09"))
+    public var dataDay: BehaviorRelay<(DateForm:String,DateTo:String)> = BehaviorRelay(value: (DateForm: Utils.getCurrentDateStringformatMysql(),DateTo:Utils.getCurrentDateStringformatMysql()))
     
     func bind(view: ManagementInterestMovieViewController, router: ManagementInterestMovieRouter){
         self.view = view

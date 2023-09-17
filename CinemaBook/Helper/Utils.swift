@@ -42,6 +42,18 @@ class Utils: NSObject {
            return String(format: "%02d/%02d/%d", day, month, year)
        }
     
+    static func getCurrentDateStringformatMysql() -> String{
+              let date = Date()
+              let calendar = Calendar.current
+              let components = calendar.dateComponents([.year, .month, .day], from: date)
+              
+              let year:Int =  components.year ?? 2022
+              let month:Int = components.month ?? 01
+              let day:Int = components.day ?? 01
+              
+              return String(format: "%02d-%02d-%d", day, month, year)
+          }
+    
     func setupvideo(url:String,type:Int,view:UIView!) {
       
            let videoUrl = URL(string:url)

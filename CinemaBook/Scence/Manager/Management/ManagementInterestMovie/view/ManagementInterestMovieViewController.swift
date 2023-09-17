@@ -23,6 +23,8 @@ class ManagementInterestMovieViewController: BaseViewController {
     private var spreadsheetview = SpreadsheetView()
     var viewModel =  ManagementInterestMovieViewModel()
     var router = ManagementInterestMovieRouter()
+    var ischeckday = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,9 +78,11 @@ class ManagementInterestMovieViewController: BaseViewController {
    
 
     @IBAction func btn_choose_to(_ sender: Any) {
+        ischeckday = 1
         self.showDateTimePicker(dateTimeData: Utils.getCurrentDateString())
     }
     @IBAction func btn_choose_datefrom(_ sender: Any) {
+        ischeckday = 0
          self.showDateTimePicker(dateTimeData: Utils.getCurrentDateString())
     }
 }

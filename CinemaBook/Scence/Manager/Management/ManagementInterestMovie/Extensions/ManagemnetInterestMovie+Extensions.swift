@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import JonAlert
 
 extension ManagementInterestMovieViewController {
     func resgister() {
@@ -39,11 +40,42 @@ extension ManagementInterestMovieViewController {
 extension ManagementInterestMovieViewController: SambagDatePickerViewControllerDelegate {
     
     func sambagDatePickerDidSet(_ viewController: SambagDatePickerViewController, result: SambagDatePickerResult){
-        self.lbl_dateTo.text = result.description
-        var date = viewModel.dataDay.value
-        date.DateForm = Utils().convertdatetime(string: result.description)
-        viewModel.dataDay.accept(date)
-        viewController.dismiss(animated: true, completion: nil)
+        if ischeckday == 0 {
+           
+                  self.lbl_datefrom.text = result.description
+                            var date = viewModel.dataDay.value
+                            date.DateForm = Utils().convertdatetime(string: result.description)
+                            viewModel.dataDay.accept(date)
+        }else {
+          self.lbl_dateTo.text = result.description
+                           var date = viewModel.dataDay.value
+                           date.DateTo = Utils().convertdatetime(string: result.description)
+                           viewModel.dataDay.accept(date)
+          
+        }
+        
+        let from_date = viewModel.dataDay.value.DateForm.components(separatedBy: "-")
+        let to_date =  viewModel.dataDay.value.DateTo.components(separatedBy: "-")
+        //
+              let from_date_in = String(format: "%@%@%@", from_date[2], from_date[1], from_date[0])
+              let to_date_in = String(format: "%@%@%@", to_date[2], to_date[1], to_date[0])
+              dLog(from_date_in)
+        dLog(to_date_in)
+              // MARK: Xét điều kiện ngày bắt đầu ko được lớn hơn ngày kết thúc
+              if(from_date_in > to_date_in){
+                  JonAlert.show(message: "Ngày bắt đầu không được lớn hơn ngày kết thúc!", andIcon: UIImage(named: "icon-cancel"), duration: 2.0)
+                  if ischeckday == 0{
+                    lbl_datefrom.text = Utils.getCurrentDateString()
+                 
+                  }else{
+                       
+                        lbl_dateTo.text = Utils.getCurrentDateString()
+                    
+                }
+              
+              }
+                viewController.dismiss(animated: true, completion: nil)
+      
      }
      
      func sambagDatePickerDidCancel(_ viewController: SambagDatePickerViewController) {

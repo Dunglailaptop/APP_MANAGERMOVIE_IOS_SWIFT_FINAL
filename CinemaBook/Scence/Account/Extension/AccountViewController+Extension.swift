@@ -66,20 +66,10 @@ extension AccountViewController: LogoutConfirm {
         logoutview.tittle = "Bạn có muốn đăng suất?"
         logoutview.delegate = self
         logoutview.view.backgroundColor = ColorUtils.blackTransparent()
-
-              let nav = UINavigationController(rootViewController: logoutview)
-                         // 1
-                         nav.modalPresentationStyle = .overCurrentContext
-                         // 2
-//                         if #available(iOS 15.0, *) {
-//                         if let sheet = nav.sheetPresentationController {
-//                          sheet.detents = [.large()]
-//                            }
-//                         } else {
-//                             // Fallback on earlier versions
-//                         }
-//                         // 4
-//////
+        //Set up navigationBar
+        let nav = UINavigationController(rootViewController: logoutview)
+            nav.isNavigationBarHidden = true
+            nav.modalPresentationStyle = .overCurrentContext
               present(nav, animated: true, completion: nil)
 
           }
