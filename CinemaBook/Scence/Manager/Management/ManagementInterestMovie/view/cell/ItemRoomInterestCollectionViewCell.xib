@@ -42,6 +42,9 @@
                     <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="lbl_name_room" destination="3gR-wH-7g1" id="mkw-9a-gMO"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </collectionViewCell>
     </objects>

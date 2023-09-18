@@ -10,9 +10,14 @@ import UIKit
 
 class ItemRoomInterestCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lbl_name_room: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    var data:Room? = nil {
+        didSet{
+            lbl_name_room.text = data?.nameroom
+        }
+    }
 }

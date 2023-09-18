@@ -10,6 +10,21 @@ import UIKit
 import RxCocoa
 import RxSwift
 import JonAlert
+import ObjectMapper
+
+//call api
+extension ManagementInterestMovieViewController{
+    func getListRoom(){
+           viewModel.getListRoom().subscribe(onNext: {
+               (response) in
+               if response.code == RRHTTPStatusCode.ok.rawValue {
+                   if let data = Mapper<Room>().mapArray(JSONObject: response.data) {
+                       self.viewModel.dataArrayRoom.accept(data)
+                   }
+               }
+           })
+       }
+}
 
 extension ManagementInterestMovieViewController {
     func resgister() {
@@ -32,7 +47,7 @@ extension ManagementInterestMovieViewController {
         viewModel.dataArrayRoom.bind(to: collectionview.rx.items(cellIdentifier: "ItemRoomInterestCollectionViewCell", cellType: ItemRoomInterestCollectionViewCell.self))
         { (row,data,cell) in
             
-            
+            cell.data = data
             
         }
     }
@@ -105,4 +120,41 @@ extension ManagementInterestMovieViewController: SambagDatePickerViewControllerD
          vc.delegate = self
          present(vc, animated: true, completion: nil)
         }
+}
+extension ManagementInterestMovieViewController: DialogListPopupInterestMovie {
+    func presentDialogPopUpList() {
+           let PopupviewController = DialogPopupListMovieViewController()
+        
+        PopupviewController.delagate = self
+           PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
+           //Set up navigationBar
+           let nav = UINavigationController(rootViewController: PopupviewController)
+               nav.isNavigationBarHidden = true
+               nav.modalPresentationStyle = .overCurrentContext
+                 present(nav, animated: true, completion: nil)
+
+             }
+    func callbackDialogListMovie(Movies:[Movie]){
+        dismiss(animated: true)
+        viewModel.selectedDataMovie.accept(Movies)
+        presentDialogPopUpListRoom()
+    }
+}
+extension ManagementInterestMovieViewController: DialogListPopupInterestRoom {
+    func callbackDialogListRoom(Rooms:[Room]){
+        dismiss(animated: true)
+        viewModel.selectedDataRoom.accept(Rooms)
+    }
+    func presentDialogPopUpListRoom() {
+             let PopupviewController = DialogPopupListRoomViewController()
+          
+        PopupviewController.delegate = self
+             PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
+             //Set up navigationBar
+             let nav = UINavigationController(rootViewController: PopupviewController)
+                 nav.isNavigationBarHidden = true
+                 nav.modalPresentationStyle = .overCurrentContext
+                   present(nav, animated: true, completion: nil)
+
+               }
 }

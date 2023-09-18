@@ -19,3 +19,9 @@ protocol  LogoutConfirm {
 protocol DialogAccessEmployee {
     func callbackDialogAccess(id:Int,status:Int)
 }
+protocol DialogListPopupInterestMovie {
+    func callbackDialogListMovie(Movies:[Movie])
+}
+protocol  DialogListPopupInterestRoom {
+    func callbackDialogListRoom(Rooms:[Room])
+}

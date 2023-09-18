@@ -58,6 +58,10 @@
 		FE50965D2A7654AA00F5A457 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50965C2A7654AA00F5A457 /* MenuViewModel.swift */; };
 		FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50965E2A76558000F5A457 /* LoginRouter.swift */; };
 		FE5096612A76578C00F5A457 /* SplachScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5096602A76578C00F5A457 /* SplachScreenViewModel.swift */; };
+		FE50991D2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE50991B2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.swift */; };
+		FE50991E2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE50991C2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib */; };
+		FE5099222AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5099202AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.swift */; };
+		FE5099232AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5099212AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.xib */; };
 		FE51042C2A9312BB000D9CCD /* DetailMovieViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE51042B2A9312BB000D9CCD /* DetailMovieViewController+Extension.swift */; };
 		FE519E752A88CB9A007E131E /* BookingTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE519E732A88CB9A007E131E /* BookingTicketViewController.swift */; };
 		FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE519E742A88CB9A007E131E /* BookingTicketViewController.xib */; };
@@ -209,6 +213,11 @@
 		FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6E5CB62A7A985E00467358 /* HomeViewController.xib */; };
 		FE6EE71B2A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6EE7192A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift */; };
 		FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6EE71A2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib */; };
+		FE71C65B2AB7FA310029D84B /* DialogPopupListMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71C6592AB7FA310029D84B /* DialogPopupListMovieViewController.swift */; };
+		FE71C65C2AB7FA310029D84B /* DialogPopupListMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE71C65A2AB7FA310029D84B /* DialogPopupListMovieViewController.xib */; };
+		FE71C6602AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE71C65E2AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.swift */; };
+		FE71C6612AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE71C65F2AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.xib */; };
+		FE73FB882AB8845B00732F36 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE73FB872AB8845B00732F36 /* Room.swift */; };
 		FE745FF32A7EAFF60091C0FA /* TicketViewController+Extension+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE745FF22A7EAFF60091C0FA /* TicketViewController+Extension+API.swift */; };
 		FE745FF52A7EB00E0091C0FA /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE745FF42A7EB00E0091C0FA /* TicketViewModel.swift */; };
 		FE745FF72A7EB0210091C0FA /* TicketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE745FF62A7EB0210091C0FA /* TicketRouter.swift */; };
@@ -326,6 +335,10 @@
 		FE50965C2A7654AA00F5A457 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		FE50965E2A76558000F5A457 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FE5096602A76578C00F5A457 /* SplachScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplachScreenViewModel.swift; sourceTree = "<group>"; };
+		FE50991B2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPopupListRoomViewController.swift; sourceTree = "<group>"; };
+		FE50991C2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogPopupListRoomViewController.xib; sourceTree = "<group>"; };
+		FE5099202AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemRoomInterestManagementTableViewCell.swift; sourceTree = "<group>"; };
+		FE5099212AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemRoomInterestManagementTableViewCell.xib; sourceTree = "<group>"; };
 		FE51042B2A9312BB000D9CCD /* DetailMovieViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailMovieViewController+Extension.swift"; sourceTree = "<group>"; };
 		FE519E732A88CB9A007E131E /* BookingTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTicketViewController.swift; sourceTree = "<group>"; };
 		FE519E742A88CB9A007E131E /* BookingTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingTicketViewController.xib; sourceTree = "<group>"; };
@@ -477,6 +490,11 @@
 		FE6E5CB62A7A985E00467358 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FE6EE7192A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderChairCollectionReusableView.swift; sourceTree = "<group>"; };
 		FE6EE71A2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderChairCollectionReusableView.xib; sourceTree = "<group>"; };
+		FE71C6592AB7FA310029D84B /* DialogPopupListMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPopupListMovieViewController.swift; sourceTree = "<group>"; };
+		FE71C65A2AB7FA310029D84B /* DialogPopupListMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogPopupListMovieViewController.xib; sourceTree = "<group>"; };
+		FE71C65E2AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMovieInterestManagementTableViewCell.swift; sourceTree = "<group>"; };
+		FE71C65F2AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemMovieInterestManagementTableViewCell.xib; sourceTree = "<group>"; };
+		FE73FB872AB8845B00732F36 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		FE745FF22A7EAFF60091C0FA /* TicketViewController+Extension+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TicketViewController+Extension+API.swift"; sourceTree = "<group>"; };
 		FE745FF42A7EB00E0091C0FA /* TicketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
 		FE745FF62A7EB0210091C0FA /* TicketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRouter.swift; sourceTree = "<group>"; };
@@ -839,6 +857,25 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		FE50991A2AB80CCF00ED0CBA /* DialogPopupListRoom */ = {
+			isa = PBXGroup;
+			children = (
+				FE50991F2AB80E6600ED0CBA /* cell */,
+				FE50991B2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.swift */,
+				FE50991C2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib */,
+			);
+			path = DialogPopupListRoom;
+			sourceTree = "<group>";
+		};
+		FE50991F2AB80E6600ED0CBA /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE5099202AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.swift */,
+				FE5099212AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		FE51042A2A9312A1000D9CCD /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -980,6 +1017,8 @@
 		FE53784C2AB4A59500B5141D /* ManagementInterestMovie */ = {
 			isa = PBXGroup;
 			children = (
+				FE50991A2AB80CCF00ED0CBA /* DialogPopupListRoom */,
+				FE71C6582AB7F9E20029D84B /* DialogPopupListMovie */,
 				FE5378502AB4A5B100B5141D /* viewModel */,
 				FE53784F2AB4A5AE00B5141D /* view */,
 				FE53784E2AB4A5AB00B5141D /* Router */,
@@ -1662,6 +1701,25 @@
 			path = DialogShow;
 			sourceTree = "<group>";
 		};
+		FE71C6582AB7F9E20029D84B /* DialogPopupListMovie */ = {
+			isa = PBXGroup;
+			children = (
+				FE71C65D2AB7FD2D0029D84B /* cell */,
+				FE71C6592AB7FA310029D84B /* DialogPopupListMovieViewController.swift */,
+				FE71C65A2AB7FA310029D84B /* DialogPopupListMovieViewController.xib */,
+			);
+			path = DialogPopupListMovie;
+			sourceTree = "<group>";
+		};
+		FE71C65D2AB7FD2D0029D84B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE71C65E2AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.swift */,
+				FE71C65F2AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		FE745FEF2A7EAFAD0091C0FA /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1935,6 +1993,7 @@
 				FE624F722AACCD3700AA93FA /* InterestMovie.swift */,
 				FE5EA0E12AAE09350039DEC3 /* chair.swift */,
 				FE7E6CBC2AB1F3EE0051E985 /* Role.swift */,
+				FE73FB872AB8845B00732F36 /* Room.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2208,9 +2267,11 @@
 				FE585F8B2A9AFD2100775B27 /* ListCategoryChairTableViewCell.xib in Resources */,
 				FE6533902AAA21A400C0739B /* itemTraillerCollectionViewCell.xib in Resources */,
 				FE5378542AB4A5E000B5141D /* ManagementInterestMovieViewController.xib in Resources */,
+				FE71C6612AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.xib in Resources */,
 				FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */,
 				FE5C40F92AB0A6AC00BC7BF9 /* ItemEmployeeTableViewCell.xib in Resources */,
 				FE69A8AA2AA1A2C90017D891 /* NewFeedViewController.xib in Resources */,
+				FE50991E2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
 				FE59CF412AA3994300A6ADAA /* AccountInfoViewController.xib in Resources */,
 				FE5C9E832AA42BE300FA235D /* Roboto-Regular.ttf in Resources */,
@@ -2244,6 +2305,7 @@
 				FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */,
 				FE5C9E822AA42BE300FA235D /* Roboto-Light.ttf in Resources */,
 				FE5C9E8A2AA42BE300FA235D /* Roboto-LightItalic.ttf in Resources */,
+				FE5099232AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.xib in Resources */,
 				FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */,
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
 				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
@@ -2268,6 +2330,7 @@
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
 				FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */,
 				FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */,
+				FE71C65C2AB7FA310029D84B /* DialogPopupListMovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2384,6 +2447,7 @@
 				FE33F39E2A6CC82800A396A1 /* HandlerDelegate.swift in Sources */,
 				FEE5CA562A62EB8200299EA6 /* HomeViewController+Extensions.swift in Sources */,
 				FE2172AE2A76B299000C0C17 /* UIImage+Extension.swift in Sources */,
+				FE5099222AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.swift in Sources */,
 				FE5D081E2AA22019004FA3D9 /* MovieViewController.swift in Sources */,
 				FE2172B52A76B606000C0C17 /* CustomViewController.swift in Sources */,
 				FE5096612A76578C00F5A457 /* SplachScreenViewModel.swift in Sources */,
@@ -2434,8 +2498,10 @@
 				FE5C9E692AA427BB00FA235D /* TimeMeridian.swift in Sources */,
 				FE491ED72AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.swift in Sources */,
 				FE2172A72A76A7F0000C0C17 /* CustomTabItem.swift in Sources */,
+				FE71C6602AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.swift in Sources */,
 				FE33F3992A6CC77500A396A1 /* RRHTTPStatusCode.swift in Sources */,
 				FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */,
+				FE73FB882AB8845B00732F36 /* Room.swift in Sources */,
 				FE5C9E652AA427BB00FA235D /* WheelViewController.swift in Sources */,
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
 				FE5EA0F62AAE218D0039DEC3 /* HomeReportViewController.swift in Sources */,
@@ -2444,12 +2510,14 @@
 				FE585F8A2A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift in Sources */,
 				FE59D1382AB5F8DB00295E11 /* ItemRoomInterestCollectionViewCell.swift in Sources */,
 				FE5EA0E22AAE09350039DEC3 /* chair.swift in Sources */,
+				FE50991D2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.swift in Sources */,
 				FE5252422AAF7CA500296246 /* ManagementEmployee+Extensions.swift in Sources */,
 				FE65338B2AAA173600C0739B /* BannerVoucherTableViewCell.swift in Sources */,
 				FEDC3F482A6CD9FE004D3789 /* Account.swift in Sources */,
 				FE502C932A9BA41E00779055 /* TimeShowViewController.swift in Sources */,
 				FE59CF312AA36CD800A6ADAA /* DetailVideoShortRouter.swift in Sources */,
 				FE5DFFA12A76A53E00E2E345 /* CustomBarViewModel.swift in Sources */,
+				FE71C65B2AB7FA310029D84B /* DialogPopupListMovieViewController.swift in Sources */,
 				FE624F732AACCD3700AA93FA /* InterestMovie.swift in Sources */,
 				FE33F3962A6CC77500A396A1 /* InternetTouchView.swift in Sources */,
 				FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */,

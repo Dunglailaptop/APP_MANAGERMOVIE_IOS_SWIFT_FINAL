@@ -14,7 +14,7 @@ var describes = ""
 var poster = ""
 var statusshow = ""
 var videofile = ""
-    
+var ischeck = 0
     init() {
         
     }

@@ -31,29 +31,39 @@ class ManagementInterestMovieViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
         resgister()
         bindingCollectionviewcell()
-        spreadsheetview.register(myLabel.self, forCellWithReuseIdentifier: myLabel.identifier)
-        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
-          UIViewController.attemptRotationToDeviceOrientation()
-        spreadsheetview.dataSource = self
-        spreadsheetview.frame = CGRect(x: 0, y: 0, width: view_of_spreadsheet.frame.size.width, height: view_of_spreadsheet.frame.size.height)
-        view_of_spreadsheet.addSubview(spreadsheetview)
-      let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd"
-
-            let startDate = dateFormatter.date(from: "2023-09-20")!
-            let endDate = dateFormatter.date(from: "2023-09-30")!
-           
-            var listOfDates = Utils().getListOfDates(startDate: startDate, endDate: endDate)
-            viewModel.dataArrayday.accept(listOfDates)
-        
-        viewModel.dataArrayday.subscribe(onNext: {
-            [self] respone in
-            self.spreadsheetview.reloadData()
-            
-            }).disposed(by: rxbag)
+     setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        var data = viewModel.allvalue.value
+               data.idcinema = ManageCacheObject.getCurrentCinema().idcinema
+               viewModel.allvalue.accept(data)
+        self.getListRoom()
+    }
+    
+    func setup(){
+        spreadsheetview.register(myLabel.self, forCellWithReuseIdentifier: myLabel.identifier)
+             UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
+               UIViewController.attemptRotationToDeviceOrientation()
+             spreadsheetview.dataSource = self
+             spreadsheetview.frame = CGRect(x: 0, y: 0, width: view_of_spreadsheet.frame.size.width, height: view_of_spreadsheet.frame.size.height)
+             view_of_spreadsheet.addSubview(spreadsheetview)
+           let dateFormatter = DateFormatter()
+                 dateFormatter.dateFormat = "yyyy-MM-dd"
 
+                 let startDate = dateFormatter.date(from: "2023-09-20")!
+                 let endDate = dateFormatter.date(from: "2023-09-30")!
+                
+                 var listOfDates = Utils().getListOfDates(startDate: startDate, endDate: endDate)
+                 viewModel.dataArrayday.accept(listOfDates)
+             
+             viewModel.dataArrayday.subscribe(onNext: {
+                 [self] respone in
+                 self.spreadsheetview.reloadData()
+                 
+                 }).disposed(by: rxbag)
+    }
     
     
     
@@ -85,6 +95,13 @@ class ManagementInterestMovieViewController: BaseViewController {
         ischeckday = 0
          self.showDateTimePicker(dateTimeData: Utils.getCurrentDateString())
     }
+    
+    
+    @IBAction func btn_showDialogPopUpListViewController(_ sender: Any) {
+        self.presentDialogPopUpList()
+    }
+    
+    
 }
 extension ManagementInterestMovieViewController: SpreadsheetViewDataSource {
     

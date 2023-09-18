@@ -31,6 +31,7 @@ enum ManagerConnections {
     case lockEmployee(id:Int,status:Int)
     case resetPasswordEmployee(id:Int)
     case getInfoUserCinema(iduser:Int)
+    case getListRoom(idcinema:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -81,6 +82,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlResetPassword
         case .getInfoUserCinema(let iduser):
             return APIEndPoint.Name.urlGetInfoUserCinema
+        case .getListRoom(let idcinema):
+              return APIEndPoint.Name.urlGetListRoom
         }
     
     }
@@ -121,6 +124,8 @@ extension ManagerConnections: TargetType {
         case .resetPasswordEmployee(_):
             return .get
         case .getInfoUserCinema(_):
+            return .get
+        case .getListRoom(_):
             return .get
         }
 
@@ -187,6 +192,8 @@ extension ManagerConnections: TargetType {
                 return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getInfoUserCinema(_):
                      return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListRoom(_):
+             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -266,6 +273,8 @@ extension ManagerConnections: TargetType {
             return ["idemployee":id]
         case .getInfoUserCinema(let iduser):
             return ["iduser":iduser]
+        case .getListRoom(let idcinema):
+            return ["idCinema":idcinema]
         }
        
     }
@@ -316,6 +325,8 @@ extension ManagerConnections: TargetType {
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getInfoUserCinema(_):
                    return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListRoom(_):
+                        return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 
