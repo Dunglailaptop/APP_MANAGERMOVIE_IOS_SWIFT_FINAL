@@ -16,6 +16,8 @@ struct Room: Mappable {
     var chairinrow = 0
     var statusroom = 0
     var ischeck = 0
+    var dayStart = ""
+    var dayEnd = ""
     
    init?(map: Map) {
     }

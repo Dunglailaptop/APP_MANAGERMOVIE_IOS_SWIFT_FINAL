@@ -24,6 +24,17 @@ extension ManagementInterestMovieViewController{
                }
            })
        }
+    func getListAutoInterest() {
+        viewModel.getListInterestAuto().subscribe(onNext: {
+            (response) in
+            dLog(response.toJSON())
+//            if response.code == RRHTTPStatusCode.ok.rawValue {
+//                if let data = Mapper<InterestModel>().map(JSONObject: response.data) {
+//                    self.viewModel.dataArrayInterest.accept(data.list)
+//                }
+//            }
+        })
+    }
 }
 
 extension ManagementInterestMovieViewController {
@@ -136,14 +147,33 @@ extension ManagementInterestMovieViewController: DialogListPopupInterestMovie {
              }
     func callbackDialogListMovie(Movies:[Movie]){
         dismiss(animated: true)
-        viewModel.selectedDataMovie.accept(Movies)
+        var data  = viewModel.pagationDataArray.value
+        Movies.enumerated().forEach{ (index,value) in
+            var datas  = viewModel.pagationData.value
+            dLog(Movies[index].movieID)
+            datas.MovieLists.idMovie = Movies[index].movieID
+            data.MovieLists.append(datas.MovieLists)
+        }
+        viewModel.pagationDataArray.accept(data)
+        dLog(data)
+//        viewModel.pagationData.accept(data)
         presentDialogPopUpListRoom()
     }
 }
 extension ManagementInterestMovieViewController: DialogListPopupInterestRoom {
     func callbackDialogListRoom(Rooms:[Room]){
         dismiss(animated: true)
-        viewModel.selectedDataRoom.accept(Rooms)
+        var data = viewModel.pagationDataArray.value
+        dLog(Rooms)
+//        viewModel.selectedDataRoom.accept(Rooms)
+        Rooms.enumerated().forEach{ (index,value) in
+            dLog(Rooms[index].idroom)
+            var datas = viewModel.pagationData.value
+            datas.RoomLists.idroom = Rooms[index].idroom
+            data.RoomLists.append(datas.RoomLists)
+        }
+        viewModel.pagationDataArray.accept(data)
+        getListAutoInterest()
     }
     func presentDialogPopUpListRoom() {
              let PopupviewController = DialogPopupListRoomViewController()

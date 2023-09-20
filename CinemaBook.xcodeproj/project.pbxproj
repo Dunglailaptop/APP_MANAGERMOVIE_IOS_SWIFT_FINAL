@@ -21,6 +21,7 @@
 		FE2172AE2A76B299000C0C17 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2172AD2A76B299000C0C17 /* UIImage+Extension.swift */; };
 		FE2172B12A76B55C000C0C17 /* CustomItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2172AF2A76B559000C0C17 /* CustomItemView.swift */; };
 		FE2172B52A76B606000C0C17 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2172B42A76B606000C0C17 /* CustomViewController.swift */; };
+		FE22C3202ABA08F300DB72B4 /* AutoInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22C31F2ABA08F200DB72B4 /* AutoInterest.swift */; };
 		FE33F3792A6CC68E00A396A1 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE33F3772A6CC68E00A396A1 /* Constans.swift */; };
 		FE33F37A2A6CC68E00A396A1 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE33F3782A6CC68E00A396A1 /* Struct.swift */; };
 		FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE33F37B2A6CC6C100A396A1 /* ManagerConnections.swift */; };
@@ -299,6 +300,7 @@
 		FE2172AD2A76B299000C0C17 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		FE2172AF2A76B559000C0C17 /* CustomItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomItemView.swift; sourceTree = "<group>"; };
 		FE2172B42A76B606000C0C17 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		FE22C31F2ABA08F200DB72B4 /* AutoInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoInterest.swift; sourceTree = "<group>"; };
 		FE33F3772A6CC68E00A396A1 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		FE33F3782A6CC68E00A396A1 /* Struct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		FE33F37B2A6CC6C100A396A1 /* ManagerConnections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerConnections.swift; sourceTree = "<group>"; };
@@ -1994,6 +1996,7 @@
 				FE5EA0E12AAE09350039DEC3 /* chair.swift */,
 				FE7E6CBC2AB1F3EE0051E985 /* Role.swift */,
 				FE73FB872AB8845B00732F36 /* Room.swift */,
+				FE22C31F2ABA08F200DB72B4 /* AutoInterest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2537,6 +2540,7 @@
 				FE59CF332AA36D6400A6ADAA /* DetailVideoShortViewController+Extension.swift in Sources */,
 				FE519E782A88CBAD007E131E /* BookingViewModel.swift in Sources */,
 				FE5C40F82AB0A6AC00BC7BF9 /* ItemEmployeeTableViewCell.swift in Sources */,
+				FE22C3202ABA08F300DB72B4 /* AutoInterest.swift in Sources */,
 				FE519E752A88CB9A007E131E /* BookingTicketViewController.swift in Sources */,
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
 				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,

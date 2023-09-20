@@ -32,6 +32,7 @@ enum ManagerConnections {
     case resetPasswordEmployee(id:Int)
     case getInfoUserCinema(iduser:Int)
     case getListRoom(idcinema:Int)
+    case getListAutoInterest(roomlist:[RoomList],movieList:[MovieList],dayStart:String,dayEnd:String)
 }
 
 extension ManagerConnections: TargetType {
@@ -84,6 +85,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetInfoUserCinema
         case .getListRoom(let idcinema):
               return APIEndPoint.Name.urlGetListRoom
+        case .getListAutoInterest(_,_,_,_):
+            return APIEndPoint.Name.urlPostAutoInterest
         }
     
     }
@@ -127,6 +130,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListRoom(_):
             return .get
+        case .getListAutoInterest(_,_,_,_):
+            return .post
         }
 
         
@@ -194,6 +199,8 @@ extension ManagerConnections: TargetType {
                      return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListRoom(_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListAutoInterest(_,_,_,_):
+             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -275,6 +282,13 @@ extension ManagerConnections: TargetType {
             return ["iduser":iduser]
         case .getListRoom(let idcinema):
             return ["idCinema":idcinema]
+        case .getListAutoInterest(let roomlist,let  movieList,let dayStart,let dayEnd):
+            return [
+                "dayStart": dayStart,
+              "dayEnd": dayEnd,
+              "movieList": movieList.toJSON(),
+              "roomList": roomlist.toJSON()
+            ]
         }
        
     }
@@ -324,9 +338,11 @@ extension ManagerConnections: TargetType {
         case .resetPasswordEmployee(_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getInfoUserCinema(_):
-                   return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListRoom(_):
-                        return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListAutoInterest(_,_,_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 
