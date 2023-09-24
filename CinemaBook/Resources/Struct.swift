@@ -43,6 +43,8 @@ public struct APIEndPoint {
         static let urlGetInfoUserCinema = "/Cinema/getInfoUserCinema"
         static let urlGetListRoom = "/Room/getlistRoom"
         static let urlPostAutoInterest = "/AutointerestMovie/AutoGetListInterest"
+        static let urlGetListInterestMovieAuto = "/AutointerestMovie/getListInterest"
+        static let urlInsterestArray = "AutointerestMovie/InsertIntoAutoInterest"
     }
     
 }

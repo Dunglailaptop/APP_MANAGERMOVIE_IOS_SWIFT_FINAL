@@ -31,4 +31,9 @@ class ManagementViewController: BaseViewController {
     @IBAction func btn_makeToManagementInterestMovie(_ sender: Any) {
         viewModel.navigationToManagementMovieInterest()
     }
+    
+ 
+    @IBAction func btn_makeToManagementRoomViewController(_ sender: Any) {
+        viewModel.navigationToManagementRoomViewController()
+    }
 }

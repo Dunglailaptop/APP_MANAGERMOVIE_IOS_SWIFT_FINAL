@@ -39,5 +39,8 @@ class ManagementRouter {
         let ManagementInterestMovieView = ManagementInterestMovieRouter().viewController
                   sourceView?.navigationController?.pushViewController(ManagementInterestMovieView, animated: true)
     }
-    
+    func navigationToManagementRoomViewController() {
+        let ManagementRoomviewController = ManagementRoomRouter().viewController
+                  sourceView?.navigationController?.pushViewController(ManagementRoomviewController, animated: true)
+    }
 }

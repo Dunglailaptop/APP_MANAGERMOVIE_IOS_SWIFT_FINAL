@@ -23,5 +23,5 @@ protocol DialogListPopupInterestMovie {
     func callbackDialogListMovie(Movies:[Movie])
 }
 protocol  DialogListPopupInterestRoom {
-    func callbackDialogListRoom(Rooms:[Room])
+    func callbackDialogListRoom(Rooms:Room)
 }

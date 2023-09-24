@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagementInterestMovieViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_button" destination="Ts3-hc-Rxr" id="Hod-Oq-DK8"/>
                 <outlet property="collectionview" destination="uxr-L4-DSq" id="NmN-Cl-eZz"/>
                 <outlet property="lbl_dateTo" destination="Kgg-a2-Ndq" id="r6H-n1-K2N"/>
                 <outlet property="lbl_datefrom" destination="i4e-ju-whv" id="vfW-DR-dXT"/>
@@ -190,11 +191,40 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts3-hc-Rxr">
+                                    <rect key="frame" x="366" y="5" width="100" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="mZO-FS-gbb"/>
+                                        <constraint firstAttribute="width" constant="100" id="sKF-Ce-Mlr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Lưu" image="folder.badge.plus" catalog="system">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btn_save_data:" destination="-1" eventType="touchUpInside" id="kOB-aU-tiG"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="Ts3-hc-Rxr" firstAttribute="centerY" secondItem="gHv-Sz-7bU" secondAttribute="centerY" id="43U-KH-gno"/>
                                 <constraint firstItem="Z1p-fD-uoH" firstAttribute="leading" secondItem="evY-3G-FPb" secondAttribute="trailing" constant="20" id="AHA-sL-37o"/>
                                 <constraint firstAttribute="bottom" secondItem="QCz-ji-nYw" secondAttribute="bottom" id="GFZ-mR-t5s"/>
+                                <constraint firstItem="evY-3G-FPb" firstAttribute="leading" secondItem="Ts3-hc-Rxr" secondAttribute="trailing" constant="20" id="Gng-QI-caW"/>
                                 <constraint firstItem="QCz-ji-nYw" firstAttribute="leading" secondItem="gHv-Sz-7bU" secondAttribute="leading" id="IQz-Gk-1Jf"/>
                                 <constraint firstItem="Jge-9V-5QV" firstAttribute="centerY" secondItem="gHv-Sz-7bU" secondAttribute="centerY" id="Kjn-LZ-TVU"/>
                                 <constraint firstItem="Z1p-fD-uoH" firstAttribute="centerY" secondItem="gHv-Sz-7bU" secondAttribute="centerY" id="Lwg-9A-dYn"/>
@@ -276,6 +306,7 @@
         </view>
     </objects>
     <resources>
+        <image name="folder.badge.plus" catalog="system" width="128" height="86"/>
         <image name="icon-back-blue" width="9" height="18"/>
         <image name="icon-calendar" width="24" height="24"/>
         <image name="icon-plus" width="30" height="30"/>

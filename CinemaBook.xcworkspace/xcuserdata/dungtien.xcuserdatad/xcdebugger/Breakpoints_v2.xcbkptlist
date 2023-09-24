@@ -232,8 +232,8 @@
             timestampString = "712946899.62257"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
+            startingLineNumber = "424"
+            endingLineNumber = "424"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -249,8 +249,8 @@
             timestampString = "712946899.622638"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -266,8 +266,8 @@
             timestampString = "712946899.62269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "parameters"
             landmarkType = "24">
          </BreakpointContent>
@@ -283,8 +283,8 @@
             timestampString = "712946899.622739"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
+            startingLineNumber = "409"
+            endingLineNumber = "409"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>
@@ -350,8 +350,8 @@
             timestampString = "712946899.622787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>
@@ -417,8 +417,8 @@
             timestampString = "712946899.622834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "373"
-            endingLineNumber = "373"
+            startingLineNumber = "403"
+            endingLineNumber = "403"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -881,8 +881,8 @@
             filePath = "CinemaBook/Helper/Utils.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "fetchAsset(for:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1169,58 +1169,10 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagemnetInterestMovie+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "sambagDatePickerDidSet(_:result:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "86043972-771B-4F86-8538-01B6357C73F8"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/DialogPopupListMovie/DialogPopupListMovieViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "bindingtableviewcell()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "86043972-771B-4F86-8538-01B6357C73F8 - ab1bb48f5431e485"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Int, CinemaBook.Movie, CinemaBook.ItemMovieInterestManagementTableViewCell) -&gt; () in CinemaBook.DialogPopupListMovieViewController.bindingtableviewcell() -&gt; ()"
-                  moduleName = "CinemaBook"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dungtien/Desktop/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook_branch/CinemaBook/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/DialogPopupListMovie/DialogPopupListMovieViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "155">
-               </Location>
-               <Location
-                  uuid = "86043972-771B-4F86-8538-01B6357C73F8 - fbae63e758bb2038"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Int, CinemaBook.Movie) -&gt; () in closure #1 () -&gt; () in closure #1 (Swift.Int, CinemaBook.Movie, CinemaBook.ItemMovieInterestManagementTableViewCell) -&gt; () in CinemaBook.DialogPopupListMovieViewController.bindingtableviewcell() -&gt; ()"
-                  moduleName = "CinemaBook"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dungtien/Desktop/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook_branch/CinemaBook/APP_MANAGERMOVIE_IOS_SWIFT_FINAL/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/DialogPopupListMovie/DialogPopupListMovieViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "169">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1243,14 +1195,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F2E3084E-F4B4-49A2-99DA-5834D3204EF6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagemnetInterestMovie+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "getListAutoInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1265,8 +1217,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagemnetInterestMovie+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "callbackDialogListRoom(Rooms:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1274,32 +1226,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "95F8A65E-33BE-402B-A64A-B420C82E4891"
+            uuid = "4E895F15-B08E-47B9-ADB4-8B36E0D9C793"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagemnetInterestMovie+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "callbackDialogListRoom(Rooms:)"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "getListAutoInterest()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7DF90BF8-9C5B-4022-8224-DC8764763A07"
+            uuid = "991359BE-73C4-4A84-A5D4-9C1DF6C40F0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagemnetInterestMovie+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "getListAutoInterest()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A2E188F-9C70-4EFC-8CDC-EA60BA6AB237"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagementInterestMovie+Extension+SpreadView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "spreadsheetView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F4CF839-472D-4C99-BC7C-28CE9EC09422"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagementInterestMovie+Extension+SpreadView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "spreadsheetView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D878DC48-1D6F-42DB-A1FC-766711162B07"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagementInterestMovie+Extension+SpreadView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "spreadsheetView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B53F5228-D7DD-4FE8-BC64-64675BC11C9C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagemnetInterestMovie+Extensions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "callbackDialogListRoom(Rooms:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getListInterest()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68EA9E7E-587A-47F7-B61B-1DCBEB2BE9E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/Extensions/ManagemnetInterestMovie+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "getListAutoInterest()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

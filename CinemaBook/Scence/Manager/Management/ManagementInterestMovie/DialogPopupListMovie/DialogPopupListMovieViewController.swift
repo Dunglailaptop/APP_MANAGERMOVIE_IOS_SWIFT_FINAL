@@ -77,27 +77,27 @@ extension DialogPopupListMovieViewController {
           
            tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.rx.setDelegate(self)
+          tableView.rx.modelSelected(Movie.self).subscribe(onNext: { [self] element in
+                 var datas = self.viewModel.dataArrayMovie.value
+                                var dataselected = self.viewModel.selectedDataMovie.value
+                                datas.enumerated().forEach {(index,value) in
+                                    if(element.movieID == value.movieID){
+                                        datas[index].ischeck = element.ischeck == 1 ? 0 : 1
+                                    }
+                                }
+                                if element.ischeck == 1 {
+                                    dataselected.append(element)
+                                                 self.viewModel.selectedDataMovie.accept(dataselected)
+                                }
+                             
+                                self.viewModel.dataArrayMovie.accept(datas)
+             })
     }
     func bindingtableviewcell(){
         viewModel.dataArrayMovie.bind(to: tableView.rx.items(cellIdentifier: "ItemMovieInterestManagementTableViewCell", cellType: ItemMovieInterestManagementTableViewCell.self)){
             (row,data,cell) in
             cell.data = data
-            cell.btn_button_check.rx.tap.asDriver().drive(onNext: {
-                var datas = self.viewModel.dataArrayMovie.value
-                var dataselected = self.viewModel.selectedDataMovie.value
-                datas.enumerated().forEach {(index,value) in
-                   if(cell.data?.movieID == value.movieID){
-                        datas[index].ischeck = cell.data?.ischeck == 1 ? 0 : 1
-                    }
-                }
-                if data.ischeck == 1 {
-                    dataselected.append(data)
-                                 self.viewModel.selectedDataMovie.accept(dataselected)
-                }
-             
-                self.viewModel.dataArrayMovie.accept(datas)
-            
-            })
+           
         }
     }
 }

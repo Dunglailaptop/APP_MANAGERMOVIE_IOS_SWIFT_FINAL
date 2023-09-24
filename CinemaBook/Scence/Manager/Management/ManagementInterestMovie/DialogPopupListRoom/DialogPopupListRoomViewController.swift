@@ -51,8 +51,16 @@ class DialogPopupListRoomViewController: UIViewController {
     }
     
     @IBAction func btn_access(_ sender: Any) {
-        let data = viewModel.selectedDataRoom.value.filter{$0.ischeck == 1}
-        delegate?.callbackDialogListRoom(Rooms: data)
+        
+        let data = viewModel.dataArrayRoom.value.filter{$0.ischeck == 1}
+        var datas = viewModel.pagationDataArray.value
+        dLog(data)
+        data.enumerated().forEach{(index,value) in
+            datas.Rooms.idroom = value.idroom
+        }
+        viewModel.pagationDataArray.accept(datas)
+        dLog(viewModel.pagationDataArray.value)
+        delegate?.callbackDialogListRoom(Rooms:viewModel.pagationDataArray.value.Rooms)
     }
 }
 extension DialogPopupListRoomViewController {
@@ -81,9 +89,15 @@ extension DialogPopupListRoomViewController{
             cell.data = data
             cell.btn_check.rx.tap.asDriver().drive(onNext: {
                 [self] in
-                var dataArray = self.viewModel.dataArrayRoom.value ?? []
+                var dataArray = self.viewModel.dataArrayRoom.value
                 dataArray.enumerated().forEach {(index,value) in
-                    dataArray[index].ischeck = cell.data?.ischeck == 0 ? 1:0
+                    if value.idroom == cell.data?.idroom {
+                           dataArray[index].ischeck = cell.data?.ischeck == 0 ? 1:0
+                    }else {
+                        dataArray[index].ischeck = 0
+                                        
+                    }
+                 
                 }
                 self.viewModel.dataArrayRoom.accept(dataArray)
                 

@@ -31,6 +31,9 @@ class ManagementViewModel: BaseViewModel{
     func navigationToManagementMovieInterest() {
             router?.navigationToManagementInterestMovie()
         }
+    func navigationToManagementRoomViewController() {
+        router?.navigationToManagementRoomViewController()
+    }
 }
 
 

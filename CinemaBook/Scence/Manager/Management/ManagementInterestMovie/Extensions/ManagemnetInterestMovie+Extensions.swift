@@ -14,12 +14,54 @@ import ObjectMapper
 
 //call api
 extension ManagementInterestMovieViewController{
+    func getListMovie() {
+          viewModel.getListMovieShow().subscribe(onNext: {
+              (response) in
+              if response.code == RRHTTPStatusCode.ok.rawValue {
+                  if let data = Mapper<Movie>().mapArray(JSONObject: response.data)
+                  {
+                      self.viewModel.dataArrayMovie.accept(data)
+                    self.getListInterest()
+                  }
+              }
+          })
+      }
+    
+    func getListInterest() {
+        viewModel.getListInterestAutoCreate().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let dataMap = Mapper<InterestModel>().map(JSONObject: response.data) {
+                        var dataGet = self.viewModel.pagationDataArray.value
+
+                        dataGet.RoomLists = dataMap.list
+                        dataGet.RoomLists.MovieLists = dataMap.list.MovieLists
+
+                        self.viewModel.pagationDataArray.accept(dataGet)
+
+                        self.spreadsheetview.reloadData()
+//                        self.btn_button.isHidden = self.viewModel.pagationDataArray.value.MovieLists.count > 0 ? false:true
+                }
+            }
+        })
+    }
+    
+    func CreateInterest() {
+        viewModel.CreateArrayInterest().subscribe(onNext: {(response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                JonAlert.showSuccess(message: "Thêm suất chiếu thành công vui lòng kiểm tra lại")
+            }
+            
+        })
+    }
+    
     func getListRoom(){
            viewModel.getListRoom().subscribe(onNext: {
                (response) in
                if response.code == RRHTTPStatusCode.ok.rawValue {
                    if let data = Mapper<Room>().mapArray(JSONObject: response.data) {
                        self.viewModel.dataArrayRoom.accept(data)
+                    self.getListMovie()
                    }
                }
            })
@@ -28,6 +70,21 @@ extension ManagementInterestMovieViewController{
         viewModel.getListInterestAuto().subscribe(onNext: {
             (response) in
             dLog(response.toJSON())
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let dataMap = Mapper<InterestModel>().map(JSONObject: response.data) {
+                    var dataGet = self.viewModel.pagationDataArray.value
+                 
+                    dataGet.RoomLists = dataMap.list
+                    dataGet.RoomLists.MovieLists = dataMap.list.MovieLists
+                    
+                    self.viewModel.pagationDataArray.accept(dataGet)
+                    dLog(self.viewModel.pagationDataArray.value)
+                    self.spreadsheetview.reloadData()
+                    self.btn_button.isHidden = self.viewModel.pagationDataArray.value.MovieLists.count > 0 ? false:true
+                }
+            }else {
+                JonAlert.showError(message: "Có lỗi trong quá trình kết nối")
+            }
 //            if response.code == RRHTTPStatusCode.ok.rawValue {
 //                if let data = Mapper<InterestModel>().map(JSONObject: response.data) {
 //                    self.viewModel.dataArrayInterest.accept(data.list)
@@ -59,7 +116,12 @@ extension ManagementInterestMovieViewController {
         { (row,data,cell) in
             
             cell.data = data
-            
+            cell.btn_chooseRoom.rx.tap.asDriver().drive(onNext: {[self]
+                var ChooseRoom = self.viewModel.allvalue.value
+                ChooseRoom.idroom = cell.data?.idroom as! Int
+                self.viewModel.allvalue.accept(ChooseRoom)
+                self.getListInterest()
+            })
         }
     }
 }
@@ -92,15 +154,21 @@ extension ManagementInterestMovieViewController: SambagDatePickerViewControllerD
                   JonAlert.show(message: "Ngày bắt đầu không được lớn hơn ngày kết thúc!", andIcon: UIImage(named: "icon-cancel"), duration: 2.0)
                   if ischeckday == 0{
                     lbl_datefrom.text = Utils.getCurrentDateString()
-                 
+                 var date = viewModel.dataDay.value
+                  date.DateForm = Utils().convertdatetime(string: Utils.getCurrentDateString())
+                viewModel.dataDay.accept(date)
                   }else{
                        
                         lbl_dateTo.text = Utils.getCurrentDateString()
-                    
+                    var date = viewModel.dataDay.value
+                    date.DateTo = Utils().convertdatetime(string: Utils.getCurrentDateString())
+                    viewModel.dataDay.accept(date)
                 }
               
               }
-                viewController.dismiss(animated: true, completion: nil)
+        
+         getListDay(startday: viewModel.dataDay.value.DateForm, endDay: viewModel.dataDay.value.DateTo)
+        viewController.dismiss(animated: true, completion: nil)
       
      }
      
@@ -147,11 +215,13 @@ extension ManagementInterestMovieViewController: DialogListPopupInterestMovie {
              }
     func callbackDialogListMovie(Movies:[Movie]){
         dismiss(animated: true)
+        viewModel.clearData()
         var data  = viewModel.pagationDataArray.value
         Movies.enumerated().forEach{ (index,value) in
             var datas  = viewModel.pagationData.value
             dLog(Movies[index].movieID)
             datas.MovieLists.idMovie = Movies[index].movieID
+            datas.MovieLists.alltime = Movies[index].timeall
             data.MovieLists.append(datas.MovieLists)
         }
         viewModel.pagationDataArray.accept(data)
@@ -161,18 +231,12 @@ extension ManagementInterestMovieViewController: DialogListPopupInterestMovie {
     }
 }
 extension ManagementInterestMovieViewController: DialogListPopupInterestRoom {
-    func callbackDialogListRoom(Rooms:[Room]){
+    func callbackDialogListRoom(Rooms:Room){
         dismiss(animated: true)
         var data = viewModel.pagationDataArray.value
-        dLog(Rooms)
-//        viewModel.selectedDataRoom.accept(Rooms)
-        Rooms.enumerated().forEach{ (index,value) in
-            dLog(Rooms[index].idroom)
-            var datas = viewModel.pagationData.value
-            datas.RoomLists.idroom = Rooms[index].idroom
-            data.RoomLists.append(datas.RoomLists)
-        }
+        data.RoomLists.idroom = Rooms.idroom
         viewModel.pagationDataArray.accept(data)
+        dLog(Rooms)
         getListAutoInterest()
     }
     func presentDialogPopUpListRoom() {
@@ -187,4 +251,20 @@ extension ManagementInterestMovieViewController: DialogListPopupInterestRoom {
                    present(nav, animated: true, completion: nil)
 
                }
+}
+extension ManagementInterestMovieViewController {
+    func presentDialogPopUpListInfoInterest(namemovie:String,imageMovie:String) {
+              let PopupviewController = DialogPopupInfoListInterestMovieViewController()
+        PopupviewController.viewModel = viewModel
+        PopupviewController.name = namemovie
+        PopupviewController.image = imageMovie
+//           PopupviewController.delagate = self
+              PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
+              //Set up navigationBar
+              let nav = UINavigationController(rootViewController: PopupviewController)
+                  nav.isNavigationBarHidden = true
+                  nav.modalPresentationStyle = .overCurrentContext
+                    present(nav, animated: true, completion: nil)
+
+                }
 }

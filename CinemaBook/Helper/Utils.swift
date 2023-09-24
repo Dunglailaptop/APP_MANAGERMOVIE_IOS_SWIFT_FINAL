@@ -42,6 +42,37 @@ class Utils: NSObject {
            return String(format: "%02d/%02d/%d", day, month, year)
        }
     
+    static func getCurrentDateStringFormatyyyyMMdd() -> String{
+             let date = Date()
+             let calendar = Calendar.current
+             let components = calendar.dateComponents([.year, .month, .day], from: date)
+             
+             let year:Int =  components.year ?? 2022
+             let month:Int = components.month ?? 01
+             let day:Int = components.day ?? 01
+             
+             return String(format: "%02d-%02d-%d", year, month, day)
+         }
+    
+    func separateDateAndTime(from dateTimeString: String) -> (date: String, time: String)? {
+        // Sử dụng định dạng ngày tháng ISO 8601 để parse chuỗi thành ngày
+        let isoDateFormatter = ISO8601DateFormatter()
+        if let date = isoDateFormatter.date(from: dateTimeString) {
+            // Định dạng lại ngày thành "yyyy-MM-dd"
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateString = dateFormatter.string(from: date)
+            
+            // Định dạng lại giờ thành "HH:mm"
+            dateFormatter.dateFormat = "HH:mm"
+            let timeString = dateFormatter.string(from: date)
+            
+            return (dateString, timeString)
+        }
+        return nil
+    }
+
+    
     static func getCurrentDateStringformatMysql() -> String{
               let date = Date()
               let calendar = Calendar.current

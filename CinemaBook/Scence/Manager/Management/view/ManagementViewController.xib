@@ -279,12 +279,24 @@
                                                                                 <constraint firstItem="23W-n0-1on" firstAttribute="top" secondItem="YGz-C9-CLC" secondAttribute="top" constant="20" id="l3J-eD-Oud"/>
                                                                             </constraints>
                                                                         </view>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXC-Ay-8A3">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="142"/>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="btn_makeToManagementRoomViewController:" destination="-1" eventType="touchUpInside" id="cn0-PE-R9y"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="CXC-Ay-8A3" secondAttribute="trailing" id="2b5-Qw-DvL"/>
                                                                         <constraint firstAttribute="bottom" secondItem="YGz-C9-CLC" secondAttribute="bottom" constant="14" id="BHq-be-HrS"/>
+                                                                        <constraint firstItem="CXC-Ay-8A3" firstAttribute="top" secondItem="L3t-sT-uX0" secondAttribute="top" id="JvI-XN-fpb"/>
+                                                                        <constraint firstItem="CXC-Ay-8A3" firstAttribute="leading" secondItem="L3t-sT-uX0" secondAttribute="leading" id="SJh-w3-N9e"/>
                                                                         <constraint firstItem="YGz-C9-CLC" firstAttribute="leading" secondItem="L3t-sT-uX0" secondAttribute="leading" constant="18.5" id="c09-l8-GJn"/>
                                                                         <constraint firstAttribute="trailing" secondItem="YGz-C9-CLC" secondAttribute="trailing" constant="18.5" id="h5F-gu-LRN"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="CXC-Ay-8A3" secondAttribute="bottom" id="o5p-Nm-E38"/>
                                                                         <constraint firstItem="YGz-C9-CLC" firstAttribute="top" secondItem="L3t-sT-uX0" secondAttribute="top" constant="14" id="u94-oV-PhV"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>

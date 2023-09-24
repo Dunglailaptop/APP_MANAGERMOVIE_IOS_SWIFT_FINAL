@@ -19,6 +19,10 @@ struct Room: Mappable {
     var dayStart = ""
     var dayEnd = ""
     
+    init() {
+        
+    }
+    
    init?(map: Map) {
     }
     

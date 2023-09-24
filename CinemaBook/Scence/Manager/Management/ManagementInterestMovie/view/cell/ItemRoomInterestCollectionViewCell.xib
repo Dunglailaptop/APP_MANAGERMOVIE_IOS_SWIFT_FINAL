@@ -23,11 +23,20 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjV-XW-Uc0">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="qjV-XW-Uc0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Fno-IR-b0j"/>
+                <constraint firstAttribute="bottom" secondItem="qjV-XW-Uc0" secondAttribute="bottom" id="cG3-Hv-BdR"/>
                 <constraint firstItem="3gR-wH-7g1" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fcj-RM-hs7"/>
+                <constraint firstItem="qjV-XW-Uc0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="j97-Bg-cgp"/>
+                <constraint firstAttribute="trailing" secondItem="qjV-XW-Uc0" secondAttribute="trailing" id="rbC-Lk-SSk"/>
                 <constraint firstItem="3gR-wH-7g1" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="s6f-Nb-xCa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -43,6 +52,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="btn_chooseRoom" destination="qjV-XW-Uc0" id="S3B-Xy-u5P"/>
                 <outlet property="lbl_name_room" destination="3gR-wH-7g1" id="mkw-9a-gMO"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>

@@ -32,7 +32,9 @@ enum ManagerConnections {
     case resetPasswordEmployee(id:Int)
     case getInfoUserCinema(iduser:Int)
     case getListRoom(idcinema:Int)
-    case getListAutoInterest(roomlist:[RoomList],movieList:[MovieList],dayStart:String,dayEnd:String)
+    case getListAutoInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
+     case postListInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
+    case getListInterestsMovie(idcinema:Int,idroom:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -87,6 +89,10 @@ extension ManagerConnections: TargetType {
               return APIEndPoint.Name.urlGetListRoom
         case .getListAutoInterest(_,_,_,_):
             return APIEndPoint.Name.urlPostAutoInterest
+        case .getListInterestsMovie(let idcinema,let idroom):
+            return APIEndPoint.Name.urlGetListInterestMovieAuto
+        case .postListInterest(_,_,_,_):
+            return APIEndPoint.Name.urlInsterestArray
         }
     
     }
@@ -131,6 +137,10 @@ extension ManagerConnections: TargetType {
         case .getListRoom(_):
             return .get
         case .getListAutoInterest(_,_,_,_):
+            return .post
+        case .getListInterestsMovie(_,_):
+            return .get
+        case .postListInterest(_,_,_,_):
             return .post
         }
 
@@ -200,6 +210,10 @@ extension ManagerConnections: TargetType {
         case .getListRoom(_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListAutoInterest(_,_,_,_):
+             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getListInterestsMovie(_,_):
+             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .postListInterest(_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
@@ -289,6 +303,18 @@ extension ManagerConnections: TargetType {
               "movieList": movieList.toJSON(),
               "roomList": roomlist.toJSON()
             ]
+        case .getListInterestsMovie(let idcinema,let idroom):
+            return [
+                "idcinema":idcinema,
+                "idroom":idroom
+            ]
+            case .postListInterest(let roomlist,let  movieList,let dayStart,let dayEnd):
+            return [
+            "dayStart": dayStart,
+            "dayEnd": dayEnd,
+            "movieList": movieList.toJSON(),
+            "roomList": roomlist.toJSON()
+            ]
         }
        
     }
@@ -343,6 +369,10 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListAutoInterest(_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getListInterestsMovie(_,_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .postListInterest(_,_,_,_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 
