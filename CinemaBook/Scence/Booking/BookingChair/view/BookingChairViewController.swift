@@ -16,11 +16,17 @@ class BookingChairViewController: BaseViewController {
     var currentScale: CGFloat = 1.0
     var safeAreaInsets: UIEdgeInsets = .zero
      var originalCollectionViewSize: CGSize = .zero
-    
+    var type = 0
     var idcinema = 0
     var idroom = 0
     var idinterest = 0
- 
+ //view hidden
+    @IBOutlet weak var view_height_info: NSLayoutConstraint!
+   
+    @IBOutlet weak var view_info_room: UIView!
+    
+    @IBOutlet weak var view_payment: UIView!
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var view_collection: UICollectionView!
@@ -52,12 +58,21 @@ class BookingChairViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var data = viewModel.pagition.value
-        data.idroom = idroom
-        data.idinterest = idinterest
-        data.idcinema = idcinema
-        viewModel.pagition.accept(data)
-        getListchair()
+            var data = viewModel.pagition.value
+            data.idroom = idroom
+            data.idinterest = idinterest
+            data.idcinema = idcinema
+            viewModel.pagition.accept(data)
+        if type == 1{
+            self.view_info_room.isHidden = true
+            self.view_payment.isHidden = true
+            self.view_height_info.constant = 0
+            getListchairRoom()
+        }else {
+            getListchair()
+        }
+      
+        
     }
    
     @IBAction func btn_makePopToViewController(_ sender: Any) {

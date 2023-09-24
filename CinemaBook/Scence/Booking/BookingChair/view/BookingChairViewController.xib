@@ -12,8 +12,11 @@
             <connections>
                 <outlet property="scroll_view_zoom" destination="kdR-wv-YPR" id="bHw-BX-4dB"/>
                 <outlet property="tableView" destination="Kjd-lg-jSe" id="gHu-be-ABp"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="Ck5-fX-PDz"/>
+                <outlet property="view_height_info" destination="ZjI-8c-0k0" id="KEL-8J-BWh"/>
+                <outlet property="view_info_room" destination="ZYb-Lp-LC4" id="7v4-Ny-maL"/>
                 <outlet property="view_of_collectionview" destination="Ynr-MH-DBd" id="CzL-0d-CeU"/>
+                <outlet property="view_payment" destination="Xfu-k4-dYR" id="eZh-SY-dNI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

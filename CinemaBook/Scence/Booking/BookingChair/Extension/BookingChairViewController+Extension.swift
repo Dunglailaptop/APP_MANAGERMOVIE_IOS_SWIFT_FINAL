@@ -23,6 +23,18 @@ extension BookingChairViewController {
             }
             }).disposed(by: rxbag)
     }
+    func getListchairRoom() {
+        viewModel.getListchairRoom().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<chair>().mapArray(JSONObject: response.data) {
+                    self.viewModel.dataArray.accept(data)
+                }
+            }
+            }).disposed(by: rxbag)
+    }
+
+    
 }
 
 extension BookingChairViewController {

@@ -207,4 +207,166 @@ class Utils: NSObject {
              return formattedDate
           
       }
+    static func stringVietnameseMoneyFormatWithNumber(amount:Float, unit_name :String = "")->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.groupingSeparator = ","
+         number.groupingSize = 3
+         
+         let strAmount = number.string(from: NSNumber(value: amount))
+         return String(format: "%@ %@",strAmount!, unit_name)
+     }
+     
+     static func stringVietnameseMoneyFormatWithNumberInt(amount:Int, unit_name :String = "")->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.groupingSeparator = ","
+         number.groupingSize = 3
+         
+         let strAmount = number.string(from: NSNumber(value: amount))
+         return String(format: "%@ %@",strAmount!, unit_name)
+     }
+     
+     
+     static func stringVietnameseMoneyFormatWithNumber(amount:Int)->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.groupingSeparator = ","
+         number.groupingSize = 3
+         
+         let strAmount = number.string(from: NSNumber(value: amount))
+         return String(format: "%@",strAmount!)
+     }
+     static func stringVietnameseMoneyFormatWithDouble(amount: Double)->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.numberStyle = .decimal
+         number.groupingSeparator = ","
+         number.decimalSeparator = "."
+         number.groupingSize = 3
+         number.maximumFractionDigits = 2
+         
+         let strAmount = number.string(from: NSNumber(value: amount))
+         return String(format: "%@", strAmount!)
+     }
+     
+     static func stringVietnameseMoneyFormatWithNumberDouble(amount:Double, unit_name :String = "")->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.numberStyle = .decimal
+         number.groupingSeparator = ","
+         number.decimalSeparator = "."
+         number.groupingSize = 3
+         number.maximumFractionDigits = 2
+         
+         let strAmount = number.string(from: NSNumber(value: amount))
+         return String(format: "%@ %@",strAmount!, unit_name)
+     }
+     static func removeStringVietnameseFormatMoney(amount:String)->(Int){
+         return Int(amount.replacingOccurrences(of: ",", with: "")) ?? 0
+     }
+     static func removeStringVietnameseFormatStringFloat(amount:String)->(Float){
+         return Float(amount.replacingOccurrences(of: ",", with: "")) ?? 0
+     }
+     static func removeStringVietnameseFormatStringInt(amount:String)->(Double){
+         return Double(amount.replacingOccurrences(of: ".", with: "")) ?? 0
+     }
+     
+     
+     static func formatQuantityToStringWithNumberFloat(quantity:Float) -> String{
+         /*
+             nếu 1.0 return "1"
+             nếu 2.5 return "2.5"
+             nếu 2.68 return "2.68"
+          */
+         var amount = String(format: "%.2f", quantity)
+         while amount.last == "0" {
+            amount.removeLast()
+         }
+         if amount.last == "." {
+            amount.removeLast()
+         }
+         return amount
+     }
+     
+     
+     static func formatQuantityToStringWithNumberDouble(quantity:Double) -> String{
+         /*
+             nếu 1.0 return "1"
+             nếu 2.5 return "2.5"
+             nếu 2.68 return "2.68"
+          */
+         var amount = String(format: "%f", quantity)
+         dLog(amount)
+         while amount.last == "0" {
+            amount.removeLast()
+         }
+         if amount.last == "." {
+            amount.removeLast()
+         }
+         return amount
+     }
+     
+     
+     
+     func capitalizeString(inputString: String) -> String {
+         let capitalizedString = inputString.uppercased()
+         return capitalizedString
+     }
+
+     
+     
+     static func stringVietnameseFormatWithNumber(amount:Int)->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.groupingSeparator = "."
+         number.groupingSize = 3
+         
+         let strAmount = number.string(from: NSNumber(value: amount))
+         return String(format: "%@",strAmount!)
+     }
+     
+     static func stringQuantityFormatWithNumber(amount:Int)->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.groupingSeparator = ","
+         number.groupingSize = 3
+         
+         let strAmount = number.string(from: NSNumber(value: amount))
+         return String(format: "%@",strAmount!)
+     }
+     static func stringQuantityFormatWithNumberFloat(amount:Float)->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.numberStyle = .decimal
+         number.groupingSeparator = ","
+         number.decimalSeparator = "."
+         number.groupingSize = 3
+         number.maximumFractionDigits = 2
+         let strAmount = number.string(from: NSNumber(value: Double(amount)))
+         return String(format: "%@",strAmount!)
+     }
+     static func stringQuantityFormatWithNumberDouble(amount:Double)->(String){
+         let number = NumberFormatter()
+         number.usesGroupingSeparator = true
+         number.numberStyle = .decimal
+         number.groupingSeparator = ","
+         number.decimalSeparator = "."
+         number.groupingSize = 3
+         number.maximumFractionDigits = 2
+         let strAmount = number.string(from: NSNumber(value: Double(amount)))
+         return String(format: "%@",strAmount!)
+     }
+     
+     static func isCheckCharacterVN(string : String) -> Bool{
+         
+         let character = "àảãáạăằẳẵắặâầẩẫấậÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬđĐèẻẽéẹêềểễếệÈẺẼÉẸÊỀỂỄẾỆìỉĩíịÌỈĨÍỊòỏõóọôồổỗốộơờởỡớợÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢùủũúụưừửữứựÙỦŨÚỤƯỪỬỮỨỰyỳỷỹýỵỲỶỸÝỴ"
+         
+         if character.contains(string){
+             return true
+         }else{
+             return false
+         }
+         
+     }
 }

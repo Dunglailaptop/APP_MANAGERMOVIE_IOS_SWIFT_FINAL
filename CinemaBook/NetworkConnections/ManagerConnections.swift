@@ -35,6 +35,8 @@ enum ManagerConnections {
     case getListAutoInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
      case postListInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
     case getListInterestsMovie(idcinema:Int,idroom:Int)
+    case getListChairRoom(Idroom:Int)
+    case getListCategoryChair(Idroom:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -93,6 +95,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListInterestMovieAuto
         case .postListInterest(_,_,_,_):
             return APIEndPoint.Name.urlInsterestArray
+        case .getListChairRoom(let Idroom):
+            return APIEndPoint.Name.urlGetListChairRoom
+        case .getListCategoryChair(let idroom):
+            return APIEndPoint.Name.urlGetListCategoryChair
         }
     
     }
@@ -142,6 +148,12 @@ extension ManagerConnections: TargetType {
             return .get
         case .postListInterest(_,_,_,_):
             return .post
+        case .getListRoom(_):
+            return .get
+        case .getListChairRoom(_):
+            return .get
+        case .getListCategoryChair(_):
+            return .get
         }
 
         
@@ -215,6 +227,10 @@ extension ManagerConnections: TargetType {
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .postListInterest(_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getListChairRoom(_):
+               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListCategoryChair(_):
+              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -315,6 +331,10 @@ extension ManagerConnections: TargetType {
             "movieList": movieList.toJSON(),
             "roomList": roomlist.toJSON()
             ]
+        case .getListChairRoom(let Idroom):
+            return ["Idroom":Idroom]
+        case .getListCategoryChair(let Idroom):
+            return ["Idroom":Idroom]
         }
        
     }
@@ -373,6 +393,10 @@ extension ManagerConnections: TargetType {
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .postListInterest(_,_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getListChairRoom(_):
+              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListCategoryChair(_):
+                    return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

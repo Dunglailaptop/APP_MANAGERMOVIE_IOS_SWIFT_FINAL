@@ -42,4 +42,11 @@ extension BookingChairViewModel{
                  .showAPIErrorToast()
                  .mapObject(type: APIResponse.self)
          }
+    func getListchairRoom() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListChairRoom(Idroom: pagition.value.idroom))
+                   .filterSuccessfulStatusCodes()
+                   .mapJSON().asObservable()
+                   .showAPIErrorToast()
+                   .mapObject(type: APIResponse.self)
+           }
 }

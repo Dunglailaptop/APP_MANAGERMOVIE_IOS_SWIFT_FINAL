@@ -14,7 +14,7 @@ struct chair:Mappable {
     var numberChair = 0
     var rowChar = ""
     var bill = 0
-    
+    var statusChair = 0
     init?(map: Map) {
         
     }
@@ -24,5 +24,6 @@ struct chair:Mappable {
          numberChair <- map["numberChair"]
          rowChar <- map["rowChar"]
          bill <- map["bill"]
+        statusChair <- map["statusChair"]
     }
 }

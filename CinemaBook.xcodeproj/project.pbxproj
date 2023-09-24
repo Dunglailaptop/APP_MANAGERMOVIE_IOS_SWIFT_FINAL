@@ -106,6 +106,16 @@
 		FE53AE492AAC2AA10082B8FC /* Trailler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53AE482AAC2AA10082B8FC /* Trailler.swift */; };
 		FE53B8162A7FF28F00976628 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53B8152A7FF28F00976628 /* AccountViewModel.swift */; };
 		FE53B8182A7FF2B700976628 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53B8172A7FF2B700976628 /* AccountRouter.swift */; };
+		FE5461202AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE54611E2AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift */; };
+		FE5461212AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE54611F2AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib */; };
+		FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5461222AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift */; };
+		FE5461262AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5461242AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift */; };
+		FE5461272AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5461252AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib */; };
+		FE54612C2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE54612A2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift */; };
+		FE54612D2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE54612B2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib */; };
+		FE5461312AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE54612F2AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift */; };
+		FE5461322AC076B00015DB93 /* ItemCategoryChairTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5461302AC076B00015DB93 /* ItemCategoryChairTableViewCell.xib */; };
+		FE5461342AC09D100015DB93 /* CategoryChair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5461332AC09D100015DB93 /* CategoryChair.swift */; };
 		FE585F8A2A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE585F882A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift */; };
 		FE585F8B2A9AFD2100775B27 /* ListCategoryChairTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE585F892A9AFD2100775B27 /* ListCategoryChairTableViewCell.xib */; };
 		FE585F8F2A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE585F8D2A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.swift */; };
@@ -395,6 +405,16 @@
 		FE53AE482AAC2AA10082B8FC /* Trailler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailler.swift; sourceTree = "<group>"; };
 		FE53B8152A7FF28F00976628 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		FE53B8172A7FF2B700976628 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
+		FE54611E2AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemRoomsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE54611F2AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemRoomsCollectionViewCell.xib; sourceTree = "<group>"; };
+		FE5461222AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementRoomViewController+Extensions.swift"; sourceTree = "<group>"; };
+		FE5461242AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryChairCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE5461252AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCategoryChairCollectionViewCell.xib; sourceTree = "<group>"; };
+		FE54612A2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementCategoryChairViewController.swift; sourceTree = "<group>"; };
+		FE54612B2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementCategoryChairViewController.xib; sourceTree = "<group>"; };
+		FE54612F2AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryChairTableViewCell.swift; sourceTree = "<group>"; };
+		FE5461302AC076B00015DB93 /* ItemCategoryChairTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCategoryChairTableViewCell.xib; sourceTree = "<group>"; };
+		FE5461332AC09D100015DB93 /* CategoryChair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryChair.swift; sourceTree = "<group>"; };
 		FE585F882A9AFD2100775B27 /* ListCategoryChairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCategoryChairTableViewCell.swift; sourceTree = "<group>"; };
 		FE585F892A9AFD2100775B27 /* ListCategoryChairTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCategoryChairTableViewCell.xib; sourceTree = "<group>"; };
 		FE585F8D2A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChairCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -786,6 +806,7 @@
 		FE50109F2AC028BE00B18D21 /* ManagementRoom */ = {
 			isa = PBXGroup;
 			children = (
+				FE5461282AC074B80015DB93 /* ManagementCategoryChair */,
 				FE5010A32AC028E100B18D21 /* Extensions */,
 				FE5010A22AC028D100B18D21 /* Router */,
 				FE5010A12AC028CD00B18D21 /* view */,
@@ -805,6 +826,7 @@
 		FE5010A12AC028CD00B18D21 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				FE54611D2AC0685C0015DB93 /* cell */,
 				FE5010A42AC0290200B18D21 /* ManagementRoomViewController.swift */,
 				FE5010A52AC0290200B18D21 /* ManagementRoomViewController.xib */,
 			);
@@ -822,6 +844,7 @@
 		FE5010A32AC028E100B18D21 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FE5461222AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1188,6 +1211,44 @@
 				FE53B8172A7FF2B700976628 /* AccountRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		FE54611D2AC0685C0015DB93 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE54611E2AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift */,
+				FE54611F2AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib */,
+				FE5461242AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift */,
+				FE5461252AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		FE5461282AC074B80015DB93 /* ManagementCategoryChair */ = {
+			isa = PBXGroup;
+			children = (
+				FE5461292AC074EA0015DB93 /* view */,
+			);
+			path = ManagementCategoryChair;
+			sourceTree = "<group>";
+		};
+		FE5461292AC074EA0015DB93 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				FE54612E2AC076980015DB93 /* cell */,
+				FE54612A2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift */,
+				FE54612B2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		FE54612E2AC076980015DB93 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE54612F2AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift */,
+				FE5461302AC076B00015DB93 /* ItemCategoryChairTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		FE585F8C2A9AFDBB00775B27 /* itemCollectionCell */ = {
@@ -2094,6 +2155,7 @@
 				FE7E6CBC2AB1F3EE0051E985 /* Role.swift */,
 				FE73FB872AB8845B00732F36 /* Room.swift */,
 				FE22C31F2ABA08F200DB72B4 /* AutoInterest.swift */,
+				FE5461332AC09D100015DB93 /* CategoryChair.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2397,6 +2459,7 @@
 				FE6E0A402A77FED200DC628F /* LoginViewController.xib in Resources */,
 				FE5D083C2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.xib in Resources */,
 				FE5C9E8B2AA42BE300FA235D /* Roboto-CondensedItalic.ttf in Resources */,
+				FE5461322AC076B00015DB93 /* ItemCategoryChairTableViewCell.xib in Resources */,
 				FE491ED82AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.xib in Resources */,
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
@@ -2408,11 +2471,14 @@
 				FE5C9E8A2AA42BE300FA235D /* Roboto-LightItalic.ttf in Resources */,
 				FE5099232AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.xib in Resources */,
 				FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */,
+				FE5461272AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib in Resources */,
+				FE54612D2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib in Resources */,
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
 				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */,
 				FE6533842AAA16AA00C0739B /* BannerMovieTableViewCell.xib in Resources */,
+				FE5461212AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
 				FE5C9E862AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				FE51DE862ABE98A700D5BE93 /* ItemInterestMovieListManagementCollectionViewCell.xib in Resources */,
@@ -2513,6 +2579,7 @@
 				FE33F3792A6CC68E00A396A1 /* Constans.swift in Sources */,
 				FE53AE472AAC29750082B8FC /* voucher.swift in Sources */,
 				FE5378562AB4A69300B5141D /* ManagementInterestMovieViewModel.swift in Sources */,
+				FE5461342AC09D100015DB93 /* CategoryChair.swift in Sources */,
 				FE745FF32A7EAFF60091C0FA /* TicketViewController+Extension+API.swift in Sources */,
 				FE51DE7B2ABE881D00D5BE93 /* DialogPopupInfoListInterestMovieViewController.swift in Sources */,
 				FE5C9E662AA427BB00FA235D /* SambagTheme.swift in Sources */,
@@ -2524,6 +2591,7 @@
 				FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */,
 				FE11FA7C2AAB5F770016CC6A /* BannerProductTableViewCell.swift in Sources */,
 				FE5EA0ED2AAE1A700039DEC3 /* NewFeedViewModel.swift in Sources */,
+				FE54612C2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift in Sources */,
 				FEDC3F4D2A6CE11D004D3789 /* APIResponse.swift in Sources */,
 				FE5252332AAF787400296246 /* ManagementRouter.swift in Sources */,
 				FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */,
@@ -2532,6 +2600,7 @@
 				FE52523B2AAF79CC00296246 /* ManagementEmployeeViewController.swift in Sources */,
 				FE2172B12A76B55C000C0C17 /* CustomItemView.swift in Sources */,
 				FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */,
+				FE5461262AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift in Sources */,
 				FE33F3902A6CC76B00A396A1 /* Observable+Extension.swift in Sources */,
 				FE5010A92AC02C1D00B18D21 /* ManagementRoomRouter.swift in Sources */,
 				FE33F3832A6CC73600A396A1 /* ManageCacheObject.swift in Sources */,
@@ -2561,6 +2630,7 @@
 				FE491EE42AA0F87800BCA4D1 /* AccountViewController+Extension.swift in Sources */,
 				FE5C9E372AA4231C00FA235D /* AccountInfoViewController+Extension.swift in Sources */,
 				FE5C9E632AA427BB00FA235D /* AlphaTransitioning.swift in Sources */,
+				FE5461202AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift in Sources */,
 				FE7BA97F2A5AFCEE00344EFB /* MenuViewController+Extensions.swift in Sources */,
 				FE33F3982A6CC77500A396A1 /* JHProgressHUD.swift in Sources */,
 				FE5D082A2AA23676004FA3D9 /* videoShortViewController.swift in Sources */,
@@ -2602,6 +2672,7 @@
 				FE59AE2B2AB366BA00D4E1F6 /* ManagementMovieViewModel.swift in Sources */,
 				FE5C9E6D2AA428CC00FA235D /* SambagDatePickerResult.swift in Sources */,
 				FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */,
+				FE5461312AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift in Sources */,
 				FE5C9E692AA427BB00FA235D /* TimeMeridian.swift in Sources */,
 				FE491ED72AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.swift in Sources */,
 				FE2172A72A76A7F0000C0C17 /* CustomTabItem.swift in Sources */,
@@ -2629,6 +2700,7 @@
 				FE624F732AACCD3700AA93FA /* InterestMovie.swift in Sources */,
 				FE33F3962A6CC77500A396A1 /* InternetTouchView.swift in Sources */,
 				FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */,
+				FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */,
 				FE59CF402AA3994300A6ADAA /* AccountInfoViewController.swift in Sources */,
 				FE5010AD2AC02D6C00B18D21 /* ManagementRoomViewModel.swift in Sources */,
 				FE69A8A52AA1909F0017D891 /* DialogViewController.swift in Sources */,
