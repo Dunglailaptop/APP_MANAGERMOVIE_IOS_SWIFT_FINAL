@@ -43,4 +43,8 @@ class ManagementRouter {
         let ManagementRoomviewController = ManagementRoomRouter().viewController
                   sourceView?.navigationController?.pushViewController(ManagementRoomviewController, animated: true)
     }
+    func navigationToManagementProduct() {
+        let ManagementProduct = MangamentProductViewController()
+        sourceView?.navigationController?.pushViewController(ManagementProduct, animated: true)
+    }
 }

@@ -16,12 +16,45 @@ class DialogPopupListMovieViewController: UIViewController {
     var viewModel = ManagementInterestMovieViewModel()
     var delagate: DialogListPopupInterestMovie?
    
+    @IBOutlet weak var text_field_search: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
        register()
         bindingtableviewcell()
+        text_field_search.rx.controlEvent(.editingChanged)
+             .withLatestFrom(text_field_search.rx.text)
+               .subscribe(onNext:{ [self] query in
+                var cloneAreaDataFilter = self.viewModel.dataArrayMovie.value
+                  var dataAll = self.viewModel.dataSearchMovie.value
+                if self.viewModel.dataSearchMovieHistory.value.count == 0 {
+                  
+                    self.viewModel.dataSearchMovieHistory.accept(cloneAreaDataFilter)
+                }else {
+                    var dataCheckHistry = self.viewModel.dataSearchMovieHistory.value
+                    dataCheckHistry.enumerated().forEach{ (index,value) in
+                        dataAll.enumerated().forEach{ (index1,value1) in
+                            if value.movieID == value1.movieID && value.ischeck == 1 {
+                                dataAll[index1].ischeck = 1
+                            }
+                        }
+                    }
+                }
+             
+               
+                   if !query!.isEmpty{
+                       var filteredWarehouseMaterialList = cloneAreaDataFilter.filter({
+                           (value) -> Bool in
+                           let str1 = query!.uppercased().applyingTransform(.stripDiacritics, reverse: false)!
+                           let str2 = value.namemovie.uppercased().applyingTransform(.stripDiacritics, reverse: false)!
+                           return str2.contains(str1)
+                       })
+                    self.viewModel.dataArrayMovie.accept(filteredWarehouseMaterialList)
+                   }else{
+                    self.viewModel.dataArrayMovie.accept(dataAll)
+                   }
+        })
         // Do any additional setup after loading the view.
     }
 
@@ -65,6 +98,7 @@ extension DialogPopupListMovieViewController {
                 if let data = Mapper<Movie>().mapArray(JSONObject: response.data)
                 {
                     self.viewModel.dataArrayMovie.accept(data)
+                    self.viewModel.dataSearchMovie.accept(data)
                 }
             }
         })
@@ -78,19 +112,27 @@ extension DialogPopupListMovieViewController {
            tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.rx.setDelegate(self)
           tableView.rx.modelSelected(Movie.self).subscribe(onNext: { [self] element in
-                 var datas = self.viewModel.dataArrayMovie.value
+                                var datas = self.viewModel.dataArrayMovie.value
                                 var dataselected = self.viewModel.selectedDataMovie.value
+                                var dataCheckHistory = self.viewModel.dataSearchMovieHistory.value
                                 datas.enumerated().forEach {(index,value) in
-                                    if(element.movieID == value.movieID){
-                                        datas[index].ischeck = element.ischeck == 1 ? 0 : 1
+                                if(element.movieID == value.movieID){
+                                datas[index].ischeck = element.ischeck == 1 ? 0 : 1
                                     }
-                                }
+                                  }
+                                dataCheckHistory.enumerated().forEach {(index,value) in
+                                if(element.movieID == value.movieID){
+                                dataCheckHistory[index].ischeck = element.ischeck == 1 ? 0 : 1
+                                    }
+                                 }
+            
                                 if element.ischeck == 1 {
-                                    dataselected.append(element)
-                                                 self.viewModel.selectedDataMovie.accept(dataselected)
+                                dataselected.append(element)
+                                         self.viewModel.selectedDataMovie.accept(dataselected)
                                 }
-                             
+
                                 self.viewModel.dataArrayMovie.accept(datas)
+                              self.viewModel.dataSearchMovieHistory.accept(dataCheckHistory)
              })
     }
     func bindingtableviewcell(){

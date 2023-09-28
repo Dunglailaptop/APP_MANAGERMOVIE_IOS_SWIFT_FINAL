@@ -369,4 +369,69 @@ class Utils: NSObject {
          }
          
      }
+    static func getDateString() -> (thisWeek: String, thisMonth: String, lastMonth: String, threeLastMonth: String, thisYear: String, lastYear: String, threeLastYear: String, dateTimeNow: String, today: String, yesterday: String) {
+           
+           let date = Date()
+           let calendar = Calendar.current
+           let month = calendar.component(.month, from: date)
+           let year = calendar.component(.year, from: date)
+           let Week = calendar.component(.weekOfYear, from: date)
+           
+           // Tuần này
+           var thisWeek = String(format: "%d/%d", Week, year)
+           if thisWeek.count == 6 {
+               thisWeek = String(format: "0%d/%d", Week, year)
+           }
+           // Tháng này
+           _ = String(format: "%d/%d", month, year)
+           let tm = Calendar.current.date(byAdding: .month, value: 0, to: Date())
+           let tmFormatter : DateFormatter = DateFormatter()
+           tmFormatter.dateFormat = "MM/yyyy"
+           let thisMonth = tmFormatter.string(from: tm!)
+           
+           // Tháng trước
+           let lm = Calendar.current.date(byAdding: .month, value: -1, to: Date())
+           let monthFormatter : DateFormatter = DateFormatter()
+           monthFormatter.dateFormat = "MM/yyyy"
+           let lastMonth = monthFormatter.string(from: lm!)
+           
+           // 3 Tháng trước
+           let tlm = Calendar.current.date(byAdding: .month, value: -3, to: Date())
+           let threeLastMonthFormatter : DateFormatter = DateFormatter()
+           threeLastMonthFormatter.dateFormat = "MM/yyyy"
+           let threeLastMonth = threeLastMonthFormatter.string(from: tlm!)
+           
+           // Năm nay
+           let thisYear = String(year)
+           
+           // Năm trước
+           let ly = Calendar.current.date(byAdding: .year, value: -1, to: Date())
+           let yearFormatter : DateFormatter = DateFormatter()
+           yearFormatter.dateFormat = "yyyy"
+           let lastYear = yearFormatter.string(from: ly!)
+           
+           // 3 năm trước
+           let tly = Calendar.current.date(byAdding: .year, value: -3, to: Date())
+           let threeLastYearFormatter : DateFormatter = DateFormatter()
+           threeLastYearFormatter.dateFormat = "yyyy"
+           let threeLastYear = threeLastYearFormatter.string(from: tly!)
+           
+           // Ngày hôm nay
+           let format = DateFormatter()
+           format.dateFormat = "dd/MM/YYYY"
+           let formattedDate = format.string(from: date)
+           let dateTimeNow = formattedDate
+           
+           // Giờ hôm nay
+           let formatTime = DateFormatter()
+           formatTime.dateFormat = "HH:mm:ss"
+           let today = formatTime.string(from: date)
+           
+           // Hôm qua
+           let y = Calendar.current.date(byAdding: .day, value: -1, to: Date())
+           let dateFormatter : DateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "dd/MM/yyyy"
+           let yesterday = dateFormatter.string(from: y!)
+           return (thisWeek, thisMonth, lastMonth, threeLastMonth, thisYear, lastYear, threeLastYear, dateTimeNow, today, yesterday)
+       }
 }

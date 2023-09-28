@@ -18,7 +18,7 @@ struct Room: Mappable {
     var ischeck = 0
     var dayStart = ""
     var dayEnd = ""
-    
+    var idcinema = 0
     init() {
         
     }

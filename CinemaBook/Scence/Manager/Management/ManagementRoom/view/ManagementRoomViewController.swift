@@ -14,6 +14,7 @@ class ManagementRoomViewController: BaseViewController {
     var router = ManagementRoomRouter()
     var view1 = BookingChairViewController()
     var view2 = ManagementCategoryChairViewController()
+    var delegate: CallBackCallApiLoadListChair?
     var title_name = ["Phòng Đang Hoạt Động","Phòng Tạm Ngưng"]
     @IBOutlet weak var Collectionview: UICollectionView!
    
@@ -28,20 +29,14 @@ class ManagementRoomViewController: BaseViewController {
     @IBOutlet weak var lbl_room_status_working: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.bind(view: self,router: router)
         register()
         bindingCollectionCell()
         registerCategory()
         bindingCollectionCategory()
-        viewModel.bind(view: self,router: router)
+        registerViewController()
         
-        view1 = BookingChairViewController(nibName: "BookingChairViewController", bundle: .main) as!  BookingChairViewController
-             view1.type = 1
-             view1.idroom = 1
-             addTopCustomViewController(view1, addTopCustom: 170)
-
-            view2 = ManagementCategoryChairViewController(nibName: "ManagementCategoryChairViewController", bundle: .main) as! ManagementCategoryChairViewController
-        view2.viewModel = viewModel
-         room_working()
+      
     }
 
 
@@ -56,7 +51,12 @@ class ManagementRoomViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getListRoom()
-        getListCategoryChair()
+     
+    }
+    
+    
+    @IBAction func btn_makePopToViewController(_ sender: Any) {
+        viewModel.makePopToViewController()
     }
     
     func room_working() {
@@ -90,75 +90,19 @@ class ManagementRoomViewController: BaseViewController {
        
     }
     
+    func registerViewController() {
+        
+        view1 = BookingChairViewController(nibName: "BookingChairViewController", bundle: .main) as!  BookingChairViewController
+        view1.type = 1
+        view1.idroom = 1
+        addTopCustomViewController(view1, addTopCustom: 170)
+
+        view2 = ManagementCategoryChairViewController(nibName: "ManagementCategoryChairViewController", bundle: .main) as! ManagementCategoryChairViewController
+        view2.viewModel = viewModel
+        room_working()
+    }
+    
+    @IBAction func btn_makeToCreateRoomViewController(_ sender: Any) {
+        viewModel.makeCreateRoomViewController()
+    }
 }
-//extension ManagementRoomViewController: BmoViewPagerDelegate, BmoViewPagerDataSource{
-//
-//
-//
-//
-//
-//    func bmoViewPagerDataSourceNumberOfPage(in viewPager: BmoViewPager) -> Int {
-//        return self.title_name.count
-//    }
-//
-//    func bmoViewPagerDataSource(_ viewPager: BmoViewPager, viewControllerForPageAt page: Int) -> UIViewController {
-//        if(page == 0){
-//            let ListMovieShowNowRouters = BookingChairRouter().viewController as! BookingChairViewController
-//           ListMovieShowNowRouters.type = 1
-//
-//            return ListMovieShowNowRouters
-//        }else if(page == 1){
-//           let ListMovieShowNowRouters = BookingChairRouter().viewController as! BookingChairViewController
-//          ListMovieShowNowRouters.type = 1
-//
-//             return ListMovieShowNowRouters
-//        }else {
-//        let ListMovieShowNowRouters = BookingChairRouter().viewController as! BookingChairViewController
-//            ListMovieShowNowRouters.type = 1
-//
-//            return ListMovieShowNowRouters
-//        }
-//    }
-//
-//    func bmoViewPagerDataSourceNaviagtionBarItemNormalAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]? {
-//        return [
-//            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 12.0),
-//            NSAttributedString.Key.foregroundColor : ColorUtils.blackBackGroundColor()
-//        ]
-//    }
-//
-//    func bmoViewPagerDataSourceNaviagtionBarItemHighlightedAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]? {
-//        return [
-//            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 12.0),
-//            NSAttributedString.Key.foregroundColor : ColorUtils.blue_color()
-//        ]
-//    }
-//
-//    func bmoViewPagerDataSourceNaviagtionBarItemTitle(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> String? {
-//        return self.title_name[page].uppercased()
-//    }
-//
-//
-//    func bmoViewPagerDataSourceNaviagtionBarItemSize(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> CGSize {
-//        switch page {
-//        case 0:
-//            return CGSize(width: 200, height: navigationBar.bounds.height)
-//        case 1:
-//            return CGSize(width: 200, height: navigationBar.bounds.height)
-//        default:
-//            return CGSize(width: 200, height: navigationBar.bounds.height)
-//        }
-//    }
-//
-//    func bmoViewPagerDataSourceNaviagtionBarItemHighlightedBackgroundView(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> UIView? {
-//        let view = UIView()
-//
-//        view.addBottomBorder()
-//        return view
-//    }
-//
-//    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-//        return viewPager
-//    }
-//}
-//

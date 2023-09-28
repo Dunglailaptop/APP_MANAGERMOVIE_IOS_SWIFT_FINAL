@@ -10,7 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagementViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="lbl_bill" destination="Wda-bs-0Sm" id="IPL-ki-6GU"/>
+                <outlet property="lbl_management" destination="O8o-JV-2qA" id="5Or-rP-97I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_bill" destination="64R-VB-mQ5" id="IDg-8I-iWk"/>
+                <outlet property="view_management" destination="i0u-E0-uo3" id="KAh-5F-d19"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -39,10 +43,22 @@
                                                             <color key="textColor" red="0.078431372549019607" green="0.38431372549019605" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7h-4h-97K">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187" height="46"/>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="btn_ManagementBillViewController:" destination="-1" eventType="touchUpInside" id="m8T-L1-v3W"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.8901960784313725" green="0.92549019607843142" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="L7h-4h-97K" secondAttribute="bottom" id="4OV-HP-P46"/>
+                                                        <constraint firstAttribute="trailing" secondItem="L7h-4h-97K" secondAttribute="trailing" id="9gj-pH-y6F"/>
+                                                        <constraint firstItem="L7h-4h-97K" firstAttribute="top" secondItem="64R-VB-mQ5" secondAttribute="top" id="JnZ-dK-oeO"/>
                                                         <constraint firstItem="Wda-bs-0Sm" firstAttribute="centerY" secondItem="64R-VB-mQ5" secondAttribute="centerY" id="O1I-RS-cLx"/>
+                                                        <constraint firstItem="L7h-4h-97K" firstAttribute="leading" secondItem="64R-VB-mQ5" secondAttribute="leading" id="e0X-ph-vm8"/>
                                                         <constraint firstItem="Wda-bs-0Sm" firstAttribute="centerX" secondItem="64R-VB-mQ5" secondAttribute="centerX" id="l45-DY-VbC"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -66,10 +82,22 @@
                                                             <color key="textColor" red="0.49019607843137253" green="0.49411764705882355" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jku-MB-91E">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187" height="46"/>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="btn_ManagementViewController:" destination="-1" eventType="touchUpInside" id="57v-fB-bKw"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="jku-MB-91E" secondAttribute="trailing" id="4mF-jR-NEO"/>
+                                                        <constraint firstItem="jku-MB-91E" firstAttribute="top" secondItem="i0u-E0-uo3" secondAttribute="top" id="5Mj-N5-yUD"/>
                                                         <constraint firstItem="O8o-JV-2qA" firstAttribute="centerY" secondItem="i0u-E0-uo3" secondAttribute="centerY" id="EXq-yL-Efh"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jku-MB-91E" secondAttribute="bottom" id="VN8-4W-YXI"/>
+                                                        <constraint firstItem="jku-MB-91E" firstAttribute="leading" secondItem="i0u-E0-uo3" secondAttribute="leading" id="md5-Eq-vWC"/>
                                                         <constraint firstItem="O8o-JV-2qA" firstAttribute="centerX" secondItem="i0u-E0-uo3" secondAttribute="centerX" id="wK5-Jl-V8i"/>
                                                     </constraints>
                                                 </view>
@@ -340,11 +368,23 @@
                                                                                 <constraint firstItem="fz6-iI-Uq5" firstAttribute="centerX" secondItem="Szq-rQ-akY" secondAttribute="centerX" id="yei-tU-cm7"/>
                                                                             </constraints>
                                                                         </view>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2x-Vg-e6g">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="142"/>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="btn_ManagementProduct:" destination="-1" eventType="touchUpInside" id="Oyg-vH-NPl"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="bottom" secondItem="Szq-rQ-akY" secondAttribute="bottom" constant="14" id="56C-i8-6pu"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="a2x-Vg-e6g" secondAttribute="trailing" id="HOx-8D-iJk"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="a2x-Vg-e6g" secondAttribute="bottom" id="TGy-vy-aGA"/>
                                                                         <constraint firstItem="Szq-rQ-akY" firstAttribute="leading" secondItem="6tg-dn-bEy" secondAttribute="leading" constant="18.5" id="fcq-Br-GyV"/>
+                                                                        <constraint firstItem="a2x-Vg-e6g" firstAttribute="leading" secondItem="6tg-dn-bEy" secondAttribute="leading" id="jym-h4-kI7"/>
+                                                                        <constraint firstItem="a2x-Vg-e6g" firstAttribute="top" secondItem="6tg-dn-bEy" secondAttribute="top" id="o4L-XU-I8z"/>
                                                                         <constraint firstItem="Szq-rQ-akY" firstAttribute="top" secondItem="6tg-dn-bEy" secondAttribute="top" constant="14" id="vQP-IN-ns6"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Szq-rQ-akY" secondAttribute="trailing" constant="18.5" id="vS4-Pl-1Dc"/>
                                                                     </constraints>

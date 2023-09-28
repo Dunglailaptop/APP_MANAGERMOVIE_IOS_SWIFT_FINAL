@@ -47,6 +47,7 @@ public struct APIEndPoint {
         static let urlInsterestArray = "AutointerestMovie/InsertIntoAutoInterest"
         static let urlGetListChairRoom = "Chair/getlistchairRoom"
         static let urlGetListCategoryChair = "CategoryChair/getlistCategoryChairByRoom"
+        static let urlCreatChairRoom = "Chair/CreateChairInRoom"
     }
     
 }

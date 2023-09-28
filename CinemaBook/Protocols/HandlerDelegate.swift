@@ -25,3 +25,6 @@ protocol DialogListPopupInterestMovie {
 protocol  DialogListPopupInterestRoom {
     func callbackDialogListRoom(Rooms:Room)
 }
+protocol CallBackCallApiLoadListChair {
+   func callbackCallapiLoadListchairRoom(Idroom:Int)
+}

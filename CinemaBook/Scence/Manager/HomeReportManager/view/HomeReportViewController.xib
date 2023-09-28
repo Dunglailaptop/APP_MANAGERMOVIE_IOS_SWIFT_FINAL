@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeReportViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="lbl_date" destination="B7P-SU-Isf" id="T2w-tl-H7s"/>
+                <outlet property="lbl_time" destination="f87-WB-Bqt" id="TbH-6l-NEP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -17,7 +17,7 @@ extension ManagementRoomViewController {
                if response.code == RRHTTPStatusCode.ok.rawValue {
                    if let data = Mapper<Room>().mapArray(JSONObject: response.data) {
                        self.viewModel.dataArrayRoom.accept(data)
-                  
+                    self.getListCategoryChair()
                    }
                }
            })
@@ -34,21 +34,44 @@ extension ManagementRoomViewController {
                       }
                   })
     }
+    
+    func getListchairRoom() {
+          viewModel.getListchairRoom().subscribe(onNext: {
+              (response) in
+              if response.code == RRHTTPStatusCode.ok.rawValue {
+                  if let data = Mapper<chair>().mapArray(JSONObject: response.data) {
+                      self.viewModel.dataArrayChair.accept(data)
+                  }
+              }
+              }).disposed(by: rxbag)
+      }
 
 }
 
-extension ManagementRoomViewController {
+extension ManagementRoomViewController{
+    
+    
+    
     func register() {
         let cellColletion = UINib(nibName: "itemRoomsCollectionViewCell", bundle: .main)
         Collectionview.register(cellColletion, forCellWithReuseIdentifier: "itemRoomsCollectionViewCell")
         setupCollectionView()
+          
     }
     func bindingCollectionCell() {
         viewModel.dataArrayRoom.bind(to: Collectionview.rx.items(cellIdentifier: "itemRoomsCollectionViewCell", cellType: itemRoomsCollectionViewCell.self)) {
             (row,data,cell) in
              cell.data = data
+            cell.btn_choose_room.rx.tap.asDriver().drive(onNext: {
+                let Response = ["userInfo": cell.data?.idroom]
+                   NotificationCenter.default.post(name: Notification.Name("NotificationCallApi"), object: nil,userInfo: Response)
+                
+            }).disposed(by: self.rxbag)
         }
     }
+    
+  
+    
     func registerCategory() {
         let cellCollectionCategory = UINib(nibName: "ItemCategoryChairCollectionViewCell", bundle: .main)
         collectionView_category_chair.register(cellCollectionCategory, forCellWithReuseIdentifier: "ItemCategoryChairCollectionViewCell")

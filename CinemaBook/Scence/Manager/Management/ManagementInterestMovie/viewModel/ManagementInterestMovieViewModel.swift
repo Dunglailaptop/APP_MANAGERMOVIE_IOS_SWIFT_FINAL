@@ -15,7 +15,8 @@ import RxCocoa
 class ManagementInterestMovieViewModel: BaseViewModel{
     private(set) weak var view: ManagementInterestMovieViewController?
     private var router: ManagementInterestMovieRouter?
-    
+    public var dataSearchMovie:BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
+      public var dataSearchMovieHistory:BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
     public var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1])
     
 //    public var dataArrayRoom: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2,3,4,5,6,7,8,9])

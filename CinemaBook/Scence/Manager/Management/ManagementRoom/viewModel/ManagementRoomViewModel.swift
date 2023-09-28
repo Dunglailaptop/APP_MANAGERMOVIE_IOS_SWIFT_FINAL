@@ -13,7 +13,7 @@ import RxCocoa
 class ManagementRoomViewModel: BaseViewModel {
     private(set) weak var view: ManagementRoomViewController?
     private var router: ManagementRoomRouter?
-  
+    public var dataArrayChair: BehaviorRelay<[chair]> = BehaviorRelay(value: [])
     public var dataArrayRoom: BehaviorRelay<[Room]> = BehaviorRelay(value: [])
     public var dataArrayCategoryChair: BehaviorRelay<[CategoryChair]> = BehaviorRelay(value: [])
     public var dataChoose: BehaviorRelay<(Idcinema:Int,Idroom:Int)> = BehaviorRelay(value: (Idcinema: ManageCacheObject.getCurrentCinema().idcinema,Idroom:1))
@@ -23,6 +23,14 @@ class ManagementRoomViewModel: BaseViewModel {
           self.router = router
           self.router?.setSourceView(self.view)
       }
+    
+    func makePopToViewController() {
+        router?.navigationPopToViewController()
+    }
+    
+    func makeCreateRoomViewController() {
+        router?.navigationToCreatRoomViewController()
+    }
 }
 
 extension ManagementRoomViewModel {
@@ -40,4 +48,11 @@ extension ManagementRoomViewModel {
                         .showAPIErrorToast()
                         .mapObject(type: APIResponse.self)
                 }
+    func getListchairRoom() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListChairRoom(Idroom: dataChoose.value.Idroom))
+                     .filterSuccessfulStatusCodes()
+                     .mapJSON().asObservable()
+                     .showAPIErrorToast()
+                     .mapObject(type: APIResponse.self)
+             }
 }

@@ -34,6 +34,10 @@ class ManagementViewModel: BaseViewModel{
     func navigationToManagementRoomViewController() {
         router?.navigationToManagementRoomViewController()
     }
+    
+    func navigationToManagementProductViewController() {
+        router?.navigationToManagementProduct()
+    }
 }
 
 

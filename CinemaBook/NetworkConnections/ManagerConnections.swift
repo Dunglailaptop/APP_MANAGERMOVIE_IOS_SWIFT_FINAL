@@ -37,6 +37,7 @@ enum ManagerConnections {
     case getListInterestsMovie(idcinema:Int,idroom:Int)
     case getListChairRoom(Idroom:Int)
     case getListCategoryChair(Idroom:Int)
+    case postCreateChairInRoom(idcinema:Int,nameroom:String,numberChair:Int,allschair:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -99,6 +100,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListChairRoom
         case .getListCategoryChair(let idroom):
             return APIEndPoint.Name.urlGetListCategoryChair
+        case .postCreateChairInRoom(let idcinema,let nameroom,let  numberChair,let allschair ):
+            return APIEndPoint.Name.urlCreatChairRoom
         }
     
     }
@@ -154,6 +157,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListCategoryChair(_):
             return .get
+        case .postCreateChairInRoom(_,_,_,_):
+            return .post
         }
 
         
@@ -231,6 +236,8 @@ extension ManagerConnections: TargetType {
                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListCategoryChair(_):
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .postCreateChairInRoom(_,_,_,_):
+             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -335,6 +342,13 @@ extension ManagerConnections: TargetType {
             return ["Idroom":Idroom]
         case .getListCategoryChair(let Idroom):
             return ["Idroom":Idroom]
+        case .postCreateChairInRoom(let idcinema,let nameroom, let numberChair,let allschair):
+            return [
+                "idcinema":idcinema,
+                "nameroom":nameroom,
+                "numberChair":numberChair,
+                "allschair":allschair
+            ]
         }
        
     }
@@ -397,6 +411,8 @@ extension ManagerConnections: TargetType {
               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListCategoryChair(_):
                     return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .postCreateChairInRoom(_,_,_,_):
+               return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

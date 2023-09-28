@@ -28,5 +28,11 @@ class ManagementRoomRouter {
     func navigationPopToViewController() {
         sourceView?.navigationController?.popViewController(animated: true)
     }
+    
+    func navigationToCreatRoomViewController() {
+        let CreateRoomViewController = MangementRoomCreateRouter().viewController
+        sourceView?.navigationController?.pushViewController(CreateRoomViewController, animated: true)
+    }
+    
   
 }

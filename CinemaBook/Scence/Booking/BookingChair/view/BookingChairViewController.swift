@@ -12,7 +12,7 @@ class BookingChairViewController: BaseViewController {
 
     var viewModel = BookingChairViewModel()
     var router = BookingChairRouter()
-    
+    var dataChair = [chair]()
     var currentScale: CGFloat = 1.0
     var safeAreaInsets: UIEdgeInsets = .zero
      var originalCollectionViewSize: CGSize = .zero
@@ -52,6 +52,8 @@ class BookingChairViewController: BaseViewController {
         
       resgisterCollection()
         binđDataTableCollectionView()
+        
+         NotificationCenter.default.addObserver(self, selector: #selector(self.onDidReceiveNotification(_:)), name: NSNotification.Name("NotificationCallApi"), object: nil)
        
         // Do any additional setup after loading the view.
     }
@@ -68,12 +70,25 @@ class BookingChairViewController: BaseViewController {
             self.view_payment.isHidden = true
             self.view_height_info.constant = 0
             getListchairRoom()
-        }else {
+        }else if dataChair.count > 0 {
             getListchair()
         }
       
         
     }
+    
+    @objc func onDidReceiveNotification(_ notification: Notification)
+      {
+       
+          
+        dLog(notification.userInfo?["userInfo"])
+        var Idroom = notification.userInfo?["userInfo"]
+        var data = viewModel.pagition.value
+        data.idroom = Idroom as! Int
+        viewModel.pagition.accept(data)
+        getListchairRoom()
+      }
+    
    
     @IBAction func btn_makePopToViewController(_ sender: Any) {
         viewModel.makePopToViewController()

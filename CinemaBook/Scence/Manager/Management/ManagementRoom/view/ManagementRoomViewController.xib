@@ -54,16 +54,44 @@
                                         <constraint firstAttribute="width" constant="22" id="HWP-ue-EDl"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X03-CN-pSr">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="FW3-lK-hhi"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btn_makePopToViewController:" destination="-1" eventType="touchUpInside" id="aPI-au-WE5"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMy-Uf-UzH">
+                                    <rect key="frame" x="314" y="0.0" width="100" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="DMC-9f-0e0"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btn_makeToCreateRoomViewController:" destination="-1" eventType="touchUpInside" id="AWs-2g-XJz"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="X03-CN-pSr" firstAttribute="leading" secondItem="bSS-8Y-bTk" secondAttribute="leading" id="0sR-D7-gpS"/>
                                 <constraint firstItem="Z7T-Z9-oaz" firstAttribute="centerX" secondItem="bSS-8Y-bTk" secondAttribute="centerX" id="4r3-u5-H17"/>
+                                <constraint firstAttribute="trailing" secondItem="CMy-Uf-UzH" secondAttribute="trailing" id="7a7-k8-6qF"/>
                                 <constraint firstItem="Z7T-Z9-oaz" firstAttribute="centerY" secondItem="bSS-8Y-bTk" secondAttribute="centerY" id="9UI-Ug-7hN"/>
                                 <constraint firstItem="jpu-Av-7Vt" firstAttribute="centerY" secondItem="bSS-8Y-bTk" secondAttribute="centerY" id="Ha4-BD-QHH"/>
+                                <constraint firstAttribute="bottom" secondItem="X03-CN-pSr" secondAttribute="bottom" id="KBx-x5-Gu1"/>
                                 <constraint firstAttribute="trailing" secondItem="jpu-Av-7Vt" secondAttribute="trailing" constant="20" id="UpN-Xw-4dv"/>
                                 <constraint firstAttribute="height" constant="40" id="UzR-Iv-gT4"/>
                                 <constraint firstItem="Ekt-ip-j7b" firstAttribute="centerY" secondItem="bSS-8Y-bTk" secondAttribute="centerY" id="WRW-GW-VGk"/>
+                                <constraint firstAttribute="bottom" secondItem="CMy-Uf-UzH" secondAttribute="bottom" id="deS-23-kbb"/>
                                 <constraint firstItem="Ekt-ip-j7b" firstAttribute="leading" secondItem="bSS-8Y-bTk" secondAttribute="leading" constant="20" id="iAf-5b-1vA"/>
+                                <constraint firstItem="CMy-Uf-UzH" firstAttribute="top" secondItem="bSS-8Y-bTk" secondAttribute="top" id="pow-pD-w91"/>
+                                <constraint firstItem="X03-CN-pSr" firstAttribute="top" secondItem="bSS-8Y-bTk" secondAttribute="top" id="q9N-t7-diW"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-Iq-ntR">

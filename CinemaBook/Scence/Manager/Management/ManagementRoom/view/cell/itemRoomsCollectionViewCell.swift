@@ -10,6 +10,7 @@ import UIKit
 
 class itemRoomsCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var btn_choose_room: UIButton!
     @IBOutlet weak var lbl_nameRoom: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
