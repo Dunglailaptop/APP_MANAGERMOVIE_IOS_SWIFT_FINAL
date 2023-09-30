@@ -25,6 +25,8 @@ class CreateProductRouter {
         self.sourceView = view
     }
     
-   
+    func makePopToviewController() {
+        sourceView?.navigationController?.popViewController(animated: true)
+    }
   
 }

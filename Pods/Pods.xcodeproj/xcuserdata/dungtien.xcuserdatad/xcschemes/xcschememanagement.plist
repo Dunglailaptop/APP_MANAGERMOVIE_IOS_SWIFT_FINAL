@@ -214,6 +214,13 @@
 			<key>orderHint</key>
 			<integer>30</integer>
 		</dict>
+		<key>TagListView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>33</integer>
+		</dict>
 		<key>iOSDropDown.xcscheme</key>
 		<dict>
 			<key>isShown</key>

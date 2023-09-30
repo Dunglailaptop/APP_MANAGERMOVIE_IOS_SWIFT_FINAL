@@ -47,6 +47,7 @@ PODS:
   - SnapKit (5.6.0)
   - SpreadsheetView (0.9.1)
   - SquareFlowLayout (0.0.1)
+  - TagListView (1.4.1)
   - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
@@ -76,6 +77,7 @@ DEPENDENCIES:
   - SnapKit
   - SpreadsheetView
   - SquareFlowLayout
+  - TagListView (~> 1.0)
   - youtube-ios-player-helper
 
 SPEC REPOS:
@@ -109,6 +111,7 @@ SPEC REPOS:
     - SnapKit
     - SpreadsheetView
     - SquareFlowLayout
+    - TagListView
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
@@ -141,8 +144,9 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SpreadsheetView: 688dbd19f2b355df0eb09e486266fd913a013449
   SquareFlowLayout: cde3486d3086fb7f95b303d9b90bb86aa9dd98b5
+  TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 0d789d54b7b60ccfef41d803f60394b81be61211
+PODFILE CHECKSUM: 2827b70c2b370eaafc76356ac5b4a452bb0ee853
 
 COCOAPODS: 1.12.1

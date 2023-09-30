@@ -28,3 +28,12 @@ protocol  DialogListPopupInterestRoom {
 protocol CallBackCallApiLoadListChair {
    func callbackCallapiLoadListchairRoom(Idroom:Int)
 }
+protocol InputMoneyDelegatePriceList {
+    func callbackInputPriceList()
+}
+protocol InputMoneyDelegate {
+    func callBackInputMoney(amount:Int, position:Int)
+}
+protocol InputQuantityDelegate {
+    func callbackInputQuantity(number:Float, position:Int)
+}

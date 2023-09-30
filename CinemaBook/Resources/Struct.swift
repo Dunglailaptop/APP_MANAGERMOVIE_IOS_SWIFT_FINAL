@@ -48,6 +48,9 @@ public struct APIEndPoint {
         static let urlGetListChairRoom = "Chair/getlistchairRoom"
         static let urlGetListCategoryChair = "CategoryChair/getlistCategoryChairByRoom"
         static let urlCreatChairRoom = "Chair/CreateChairInRoom"
+        static let urlGetListFood = "/FoodCombo/getListFood"
+        static let urlGetListFooCombo = "/FoodCombo/getListComboFood"
+        static let urlCreateFoodCombo = "/FoodCombo/AddFoodComboFood"
     }
     
 }

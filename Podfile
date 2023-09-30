@@ -34,4 +34,5 @@ pod 'LNICoverFlowLayout'
  pod 'MarqueeLabel'
   pod 'iOSDropDown'
 pod 'SpreadsheetView'
+ pod 'TagListView', '~> 1.0'
 end

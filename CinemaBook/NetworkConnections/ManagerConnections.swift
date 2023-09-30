@@ -38,6 +38,9 @@ enum ManagerConnections {
     case getListChairRoom(Idroom:Int)
     case getListCategoryChair(Idroom:Int)
     case postCreateChairInRoom(idcinema:Int,nameroom:String,numberChair:Int,allschair:Int)
+    case getListFood(Idcategoryfood:Int)
+    case getListFoodCombo
+    case createFoodCombo(nametittle:String,discription:String,priceCombo:Int,picture:String,foodCreates: [Food])
 }
 
 extension ManagerConnections: TargetType {
@@ -102,6 +105,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListCategoryChair
         case .postCreateChairInRoom(let idcinema,let nameroom,let  numberChair,let allschair ):
             return APIEndPoint.Name.urlCreatChairRoom
+        case .getListFood(let Idcategoryfood):
+            return APIEndPoint.Name.urlGetListFood
+        case .getListFoodCombo:
+            return APIEndPoint.Name.urlGetListFooCombo
+        case .createFoodCombo(_,_,_,_,_):
+            return APIEndPoint.Name.urlCreateFoodCombo
         }
     
     }
@@ -158,6 +167,12 @@ extension ManagerConnections: TargetType {
         case .getListCategoryChair(_):
             return .get
         case .postCreateChairInRoom(_,_,_,_):
+            return .post
+        case .getListFood(_):
+            return .get
+        case .getListFoodCombo:
+            return .get
+        case .createFoodCombo(_,_,_,_,_):
             return .post
         }
 
@@ -238,6 +253,12 @@ extension ManagerConnections: TargetType {
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .postCreateChairInRoom(_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getListFood(_):
+              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListFoodCombo:
+              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .createFoodCombo(_,_,_,_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -349,6 +370,18 @@ extension ManagerConnections: TargetType {
                 "numberChair":numberChair,
                 "allschair":allschair
             ]
+        case .getListFood(let Idcategoryfood):
+            return ["Idcategoryfood":Idcategoryfood]
+        case .getListFoodCombo:
+            return [:]
+        case .createFoodCombo(let nametittle,let discription, let priceCombo,let picture,let foodCreates):
+            return [
+                "nametittle":nametittle,
+                "discription":discription,
+                "priceCombo":priceCombo,
+                "picture":picture,
+                "foodCreates":foodCreates.toJSON()
+            ]
         }
        
     }
@@ -413,6 +446,12 @@ extension ManagerConnections: TargetType {
                     return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .postCreateChairInRoom(_,_,_,_):
                return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getListFood(_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListFoodCombo:
+               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .createFoodCombo(_,_,_,_,_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

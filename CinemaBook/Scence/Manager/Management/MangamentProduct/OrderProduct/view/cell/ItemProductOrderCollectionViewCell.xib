@@ -104,6 +104,11 @@
                     <color key="value" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="image_product" destination="0Mb-GT-MxL" id="DI8-Em-ahj"/>
+                <outlet property="lbl_name_product" destination="ekv-dq-vdR" id="51K-gC-uyc"/>
+                <outlet property="lbl_price" destination="eJx-bY-YQr" id="Piz-4B-2aG"/>
+            </connections>
             <point key="canvasLocation" x="132" y="110"/>
         </collectionViewCell>
     </objects>

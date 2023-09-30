@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import ObjectMapper
 
 class OrderProductViewController: UIViewController {
     
@@ -24,7 +25,10 @@ class OrderProductViewController: UIViewController {
         bindCollecion()
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getListFoodCombo()
+    }
     
 
 }
@@ -68,7 +72,19 @@ extension OrderProductViewController {
     func bindCollecion() {
         viewModel.dataArray.bind(to: collectionView.rx.items(cellIdentifier: "ItemProductOrderCollectionViewCell", cellType: ItemProductOrderCollectionViewCell.self)) {
             (row,data,cell) in
-         
+            cell.data = data
         }
+    }
+}
+extension OrderProductViewController {
+    func getListFoodCombo() {
+        viewModel.getListFoodCombo().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<FoodCombo>().mapArray(JSONObject: response.data) {
+                    self.viewModel.dataArray.accept(data)
+                }
+            }
+        })
     }
 }

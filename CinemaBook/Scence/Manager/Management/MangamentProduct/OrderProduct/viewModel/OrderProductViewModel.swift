@@ -14,7 +14,7 @@ class OrderProductViewModel: BaseViewModel {
     private(set) weak var view: OrderProductViewController?
     private var router: OrderProductRouter?
     
-    public var dataArray:BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2,4,5,6,7,8,9,10])
+    public var dataArray:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     
     func bind(view: OrderProductViewController, router: OrderProductRouter){
           self.view = view
@@ -24,4 +24,12 @@ class OrderProductViewModel: BaseViewModel {
     
   
 }
-
+extension OrderProductViewModel {
+    func getListFoodCombo() -> Observable<APIResponse> {
+          return appServiceProvider.rx.request(.getListFoodCombo)
+                   .filterSuccessfulStatusCodes()
+                   .mapJSON().asObservable()
+                   .showAPIErrorToast()
+                   .mapObject(type: APIResponse.self)
+           }
+}
