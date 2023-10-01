@@ -13,6 +13,7 @@ class itemTimeCollectionViewCell: UICollectionViewCell {
     var idcinema = 0
     var idroom = 0
     var idinterest = 0
+    var idmovie = 0
     
     @IBOutlet weak var lbl_time: UILabel!
     @IBOutlet weak var btn_makeToBookingChairViewController: UIButton!
@@ -35,7 +36,7 @@ class itemTimeCollectionViewCell: UICollectionViewCell {
     
     @IBAction func btn_makeToChairBookingViewController(_ sender: Any) {
         dLog(idcinema)
-        self.viewModel?.navigationToBookingChairViewController(idcinema: idcinema, idroom: idroom, idinterest: idinterest)
+        self.viewModel?.navigationToBookingChairViewController(idcinema: idcinema, idroom: idroom, idinterest: idinterest,idmovie: idmovie)
     }
     
 }

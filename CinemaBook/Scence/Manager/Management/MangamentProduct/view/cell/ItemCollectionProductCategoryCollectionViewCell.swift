@@ -10,9 +10,15 @@ import UIKit
 
 class ItemCollectionProductCategoryCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lbl_namecategoryfood: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    var data: CategoryFood? = nil {
+        didSet {
+            lbl_namecategoryfood.text = data?.namecategoryfood
+        }
+    }
 }

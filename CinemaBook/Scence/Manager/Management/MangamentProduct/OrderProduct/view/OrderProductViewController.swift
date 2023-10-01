@@ -17,6 +17,7 @@ class OrderProductViewController: UIViewController {
     var viewModel = OrderProductViewModel()
     var router = OrderProductRouter()
 
+    @IBOutlet weak var btn_edit: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,10 @@ class OrderProductViewController: UIViewController {
         getListFoodCombo()
     }
     
-
+    @IBAction func btn_makeToCreateProductViewController(_ sender: Any) {
+        viewModel.makeToCreateProductViewController()
+    }
+    
 }
 
 
@@ -38,6 +42,11 @@ extension OrderProductViewController {
     func register() {
         let cellCollection = UINib(nibName: "ItemProductOrderCollectionViewCell", bundle: .main)
         collectionView.register(cellCollection, forCellWithReuseIdentifier: "ItemProductOrderCollectionViewCell")
+        collectionView.rx.modelSelected(FoodCombo.self).subscribe(onNext: { [self] element in
+            
+            self.viewModel.makeToDetailViewController(foodcomboss: element)
+            
+        })
         setupCollection()
     }
     
@@ -87,4 +96,5 @@ extension OrderProductViewController {
             }
         })
     }
+ 
 }

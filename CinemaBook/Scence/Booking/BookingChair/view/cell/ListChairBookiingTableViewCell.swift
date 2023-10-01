@@ -39,6 +39,22 @@ extension ListChairBookiingTableViewCell {
         let collectionviewcell = UINib(nibName: "ItemChairCollectionViewCell", bundle: .main)
         viewCollection.register(collectionviewcell, forCellWithReuseIdentifier: "ItemChairCollectionViewCell")
         setupCollectionView(rows: 4, columns: 3, itemSize: 50)
+        viewCollection.rx.modelSelected(chair.self).subscribe(onNext: { [self] element in
+            var data = self.viewModel?.dataArray.value
+            data?.enumerated().forEach{ (index,value) in
+                if value.idchair == element.idchair && element.isSelected != BILL {
+                    data?[index].isSelected = element.isSelected == ACTIVE ? DEACTIVE:ACTIVE
+                }
+                if element.bill != 0 && element.isSelected == BILL{
+                    JonAlert.showError(message: "Ghê đã được đặt")
+                }
+            }
+             self.viewModel?.dataArray.accept(data!)
+            var datafilter = self.viewModel!.dataArray.value.filter{$0.isSelected == ACTIVE}
+            self.viewModel?.view!.lbl_price_chair.text = Utils.stringVietnameseFormatWithNumber(amount: datafilter.map { $0.price }.reduce(0, +) ?? 0)
+            self.viewModel?.view?.lbl_number_chair.text = String(datafilter.count) + " Ghế"
+           
+        })
     }
     
     func setupCollectionView(rows: Int, columns: Int, itemSize: CGFloat) {
@@ -100,21 +116,6 @@ extension ListChairBookiingTableViewCell {
     func bindingCollectionviewcell() {
         viewModel!.dataArray.bind(to: viewCollection.rx.items(cellIdentifier: "ItemChairCollectionViewCell", cellType: ItemChairCollectionViewCell.self)) { (index, data, cell) in
             dLog(data)
-
-            
-            cell.btn_choose_chair.rx.tap.asDriver().drive(onNext: {
-                [self] in
-                
-               if cell.contentView.backgroundColor == .blue
-               {
-                cell.contentView.backgroundColor = .darkGray
-               }else if cell.contentView.backgroundColor == .red {
-                JonAlert.show(message: "Ghe da duoc dat vui long chon ghe khac")
-               }
-               else {
-                cell.contentView.backgroundColor = .blue
-                }
-            })
             cell.data = data
         
         

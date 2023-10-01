@@ -15,8 +15,12 @@ class ItemChairCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lbl_numberChair: UILabel!
     var data:chair? = nil {
         didSet {
-            if data?.bill != 0 {
+            if data?.isSelected == BILL {
                 contentView.backgroundColor = .red
+            } else if data?.isSelected == ACTIVE {
+                contentView.backgroundColor = .blue
+            } else {
+                contentView.backgroundColor = .clear
             }
             lbl_numberChair.text = String(String(data!.numberChair)+data!.rowChar)
         }

@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingChairViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="lbl_info_interest" destination="DQW-gi-p11" id="GaA-Fn-npN"/>
+                <outlet property="lbl_name_cinema" destination="68R-lK-txI" id="C5o-W9-cjj"/>
+                <outlet property="lbl_namemovie" destination="8JR-5l-PNz" id="iS3-rx-cx7"/>
+                <outlet property="lbl_number_chair" destination="bOf-bo-KAb" id="pLg-Ck-1T9"/>
+                <outlet property="lbl_price_chair" destination="xnY-UE-8TL" id="zNw-29-NrH"/>
                 <outlet property="scroll_view_zoom" destination="kdR-wv-YPR" id="bHw-BX-4dB"/>
                 <outlet property="tableView" destination="Kjd-lg-jSe" id="gHu-be-ABp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Ck5-fX-PDz"/>
@@ -85,31 +90,25 @@
                             <rect key="frame" x="0.0" y="738" width="414" height="80"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n4z-oo-9Gw">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                    <rect key="frame" x="10" y="0.0" width="200" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPPENHEIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JR-5l-PNz">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="26.666666666666668"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2D phụ đề Việt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk4-pr-UVr">
-                                            <rect key="frame" x="0.0" y="26.666666666666629" width="200" height="26.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tnj-RH-Px0">
-                                            <rect key="frame" x="0.0" y="53.333333333333364" width="200" height="26.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="40" width="200" height="40"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500.000 đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnY-UE-8TL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="26.666666666666668"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnY-UE-8TL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 ghế" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOf-bo-KAb">
-                                                    <rect key="frame" x="100" y="0.0" width="100" height="26.666666666666668"/>
+                                                    <rect key="frame" x="100" y="0.0" width="100" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -144,6 +143,9 @@
                                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btn_makeToBookingProductCombo:" destination="-1" eventType="touchUpInside" id="CAB-9W-KFl"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -151,7 +153,7 @@
                                 <constraint firstItem="n4z-oo-9Gw" firstAttribute="top" secondItem="Xfu-k4-dYR" secondAttribute="top" id="7pV-Hb-V4c"/>
                                 <constraint firstAttribute="trailing" secondItem="dxE-eS-9rl" secondAttribute="trailing" constant="20" id="ENe-s2-i7k"/>
                                 <constraint firstAttribute="height" constant="80" id="Rg7-9g-FxE"/>
-                                <constraint firstItem="n4z-oo-9Gw" firstAttribute="leading" secondItem="Xfu-k4-dYR" secondAttribute="leading" id="a7F-fY-fy5"/>
+                                <constraint firstItem="n4z-oo-9Gw" firstAttribute="leading" secondItem="Xfu-k4-dYR" secondAttribute="leading" constant="10" id="a7F-fY-fy5"/>
                                 <constraint firstAttribute="bottom" secondItem="n4z-oo-9Gw" secondAttribute="bottom" id="afn-3u-2pj"/>
                                 <constraint firstItem="dxE-eS-9rl" firstAttribute="centerY" secondItem="Xfu-k4-dYR" secondAttribute="centerY" id="tgP-jc-got"/>
                             </constraints>

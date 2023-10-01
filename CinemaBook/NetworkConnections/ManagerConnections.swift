@@ -41,6 +41,9 @@ enum ManagerConnections {
     case getListFood(Idcategoryfood:Int)
     case getListFoodCombo
     case createFoodCombo(nametittle:String,discription:String,priceCombo:Int,picture:String,foodCreates: [Food])
+    case getListCategoryFood
+    case UpdateFoodCombo(idcombo:Int,nametittle:String,discription:String,priceCombo:Int,picture:String,foodCreates: [FoodOfCombo])
+    case getInfoInterestMovie(idmovie:Int,idcinema:Int,idroom:Int,idinterest:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -111,6 +114,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListFooCombo
         case .createFoodCombo(_,_,_,_,_):
             return APIEndPoint.Name.urlCreateFoodCombo
+        case .getListCategoryFood:
+            return APIEndPoint.Name.urlGetListCategoryFood
+        case .UpdateFoodCombo(_,_,_,_,_,_):
+            return APIEndPoint.Name.urlUpdateinfofoodCombo
+        case .getInfoInterestMovie(let idmovie,let idcinema,let idroom, let idinterest):
+            return APIEndPoint.Name.urlGetInfoInterestMovie
         }
     
     }
@@ -174,6 +183,12 @@ extension ManagerConnections: TargetType {
             return .get
         case .createFoodCombo(_,_,_,_,_):
             return .post
+        case .getListCategoryFood:
+            return .get
+        case .UpdateFoodCombo(_,_,_,_,_,_):
+            return .post
+        case .getInfoInterestMovie(_,_,_,_):
+            return .get
         }
 
         
@@ -259,6 +274,12 @@ extension ManagerConnections: TargetType {
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .createFoodCombo(_,_,_,_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getListCategoryFood:
+                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .UpdateFoodCombo(_,_,_,_,_,_):
+              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getInfoInterestMovie(_,_,_,_):
+             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -382,6 +403,24 @@ extension ManagerConnections: TargetType {
                 "picture":picture,
                 "foodCreates":foodCreates.toJSON()
             ]
+        case .getListCategoryFood:
+            return [:]
+        case .UpdateFoodCombo(let idcombo,let nametittle,let discription, let priceCombo,let picture,let foodCreates):
+        return [
+            "idcombo":idcombo,
+            "nametittle":nametittle,
+            "discription":discription,
+            "priceCombo":priceCombo,
+            "picture":picture,
+            "foodCreates":foodCreates.toJSON()
+        ]
+        case .getInfoInterestMovie(let idmovie,let idcinema,let idroom ,let idinterest):
+            return [
+                "idmoive":idmovie,
+                "idcinema":idcinema,
+                "idroom":idroom,
+                "idinterest": idinterest
+            ]
         }
        
     }
@@ -452,6 +491,12 @@ extension ManagerConnections: TargetType {
                return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .createFoodCombo(_,_,_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getListCategoryFood:
+               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .UpdateFoodCombo(_,_,_,_,_,_):
+             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getInfoInterestMovie(_,_,_,_):
+              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

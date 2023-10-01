@@ -9,3 +9,4 @@ import UIKit
 
 var ACTIVE = 1
 var DEACTIVE = 0
+var BILL = 3 // trạng thái ghế đã đặt thành công

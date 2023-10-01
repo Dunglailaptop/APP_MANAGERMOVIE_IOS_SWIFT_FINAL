@@ -18,9 +18,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TẤT CẢ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haV-gK-1DN">
-                        <rect key="frame" x="-3" y="14.5" width="56" height="21"/>
+                        <rect key="frame" x="3.5" y="18" width="43.5" height="14.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -43,6 +43,9 @@
                     <real key="value" value="1"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="lbl_namecategoryfood" destination="haV-gK-1DN" id="to8-B6-Qy8"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </collectionViewCell>
     </objects>

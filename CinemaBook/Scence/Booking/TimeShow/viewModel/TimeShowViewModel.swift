@@ -28,8 +28,8 @@ class TimeShowViewModel:BaseViewModel {
           self.router?.setSourceView(self.view!)
       }
     
-    func navigationToBookingChairViewController(idcinema:Int,idroom:Int,idinterest:Int) {
-        router?.navigationToBookingChairViewController(idcinema: idcinema, idroom: idroom, idinterest: idinterest)
+    func navigationToBookingChairViewController(idcinema:Int,idroom:Int,idinterest:Int,idmovie:Int) {
+        router?.navigationToBookingChairViewController(idcinema: idcinema, idroom: idroom, idinterest: idinterest,idmovie:idmovie)
     }
     func navigationPopToViewController() {
         router?.makepopToViewController()

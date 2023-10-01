@@ -22,7 +22,13 @@ class OrderProductViewModel: BaseViewModel {
           self.router?.setSourceView(self.view)
       }
     
-  
+    func makeToCreateProductViewController(){
+        router?.navigationtocreateproduct()
+    }
+    
+    func makeToDetailViewController(foodcomboss:FoodCombo) {
+        router?.maketoDetailviewController(foodcombos: foodcomboss)
+    }
 }
 extension OrderProductViewModel {
     func getListFoodCombo() -> Observable<APIResponse> {
@@ -32,4 +38,6 @@ extension OrderProductViewModel {
                    .showAPIErrorToast()
                    .mapObject(type: APIResponse.self)
            }
+   
+     
 }

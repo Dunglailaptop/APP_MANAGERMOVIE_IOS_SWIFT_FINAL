@@ -30,3 +30,29 @@ struct InterestMovie: Mappable {
             idinterest <- map["idinterest"]
     }
 }
+struct InfoInterestMovie: Mappable {
+      var namemovie = ""
+       var  startstime = ""
+        var endtime = ""
+        var dateshow = ""
+        var nameroom = ""
+        var namecinema = ""
+    
+    init() {
+        
+    }
+    
+  init?(map: Map) {
+           
+       }
+    
+    mutating func mapping(map: Map) {
+        namemovie <- map["namemovie"]
+          startstime <- map["startstime"]
+          endtime <- map["endtime"]
+          dateshow <- map["dateshow"]
+          nameroom <- map["nameroom"]
+          namecinema <- map["namecinema"]
+        
+    }
+}

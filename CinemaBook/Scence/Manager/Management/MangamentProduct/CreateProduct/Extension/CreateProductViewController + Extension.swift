@@ -60,6 +60,7 @@ extension CreateProductViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Food>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
+                    self.setuptaglist(data: self.foodcombo)
                     self.heighttable.constant = CGFloat(self.viewModel.dataArray.value.count * 50) + 10
                     self.height_Scroll.constant = self.heighttable.constant + 1000
                 }
@@ -77,6 +78,17 @@ extension CreateProductViewController {
             }
         })
     }
+   func updateFoodCombo() {
+          viewModel.updateComboFood().subscribe(onNext: {
+              (response) in
+              if response.code == RRHTTPStatusCode.ok.rawValue {
+                  JonAlert.showSuccess(message: "Cập nhật món combo thành công")
+                  self.viewModel.makePopToViewController()
+              }else {
+                  JonAlert.showError(message: "Cập nhật món combo thất bại")
+              }
+          })
+      }
 }
 
 extension CreateProductViewController: InputMoneyDelegate {
@@ -165,7 +177,8 @@ extension CreateProductViewController: UIImagePickerControllerDelegate, UINaviga
           let connectImage = nameImage[0] + "/" + nameImage[0];
            dataImage.picture = connectImage
           viewModel.dataMap.accept(dataImage)
-          createFoodCombo()
+        
+        type == "CREATE" ?  createFoodCombo() : updateFoodCombo()
          
         
       

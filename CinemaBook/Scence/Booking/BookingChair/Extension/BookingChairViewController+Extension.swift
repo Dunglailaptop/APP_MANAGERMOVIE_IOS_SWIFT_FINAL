@@ -19,6 +19,16 @@ extension BookingChairViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<chair>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
+                    dLog(data)
+                    var dataget = self.viewModel.dataArray.value
+                    dataget.enumerated().forEach{(index,value) in
+                        if value.bill != 0 {
+                            dataget[index].isSelected = BILL
+                        }
+                    }
+                    self.viewModel.dataArray.accept(dataget)
+                    self.getInfoInterestMovie()
+                   
                 }
             }
             }).disposed(by: rxbag)
@@ -33,7 +43,27 @@ extension BookingChairViewController {
             }
             }).disposed(by: rxbag)
     }
-
+    
+    func getInfoInterestMovie() {
+        viewModel.getinfoInterestMovie().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<InfoInterestMovie>().map(JSONObject: response.data) {
+                    self.viewModel.infoInterestMovie.accept(data)
+                     self.setup()
+                }
+            }
+        })
+    }
+    func setup() {
+        var dataInfo = viewModel.infoInterestMovie.value
+        var starttimeconvert = dataInfo.startstime.components(separatedBy: "T")
+        var dateshow = dataInfo.dateshow.components(separatedBy: "T")
+        lbl_info_interest.text = dataInfo.nameroom + "," + dateshow[0] + "," + starttimeconvert[1]
+        lbl_name_cinema.text = dataInfo.namecinema
+        lbl_namemovie.text = dataInfo.namemovie
+        
+    }
     
 }
 

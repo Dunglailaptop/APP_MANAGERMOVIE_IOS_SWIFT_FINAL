@@ -27,6 +27,10 @@ class BookingChairRouter {
     func makePopToViewController() {
         sourceView?.navigationController?.popViewController(animated: true)
     }
-  
+    func makeToBookingProductComboViewController() {
+        let viewBookingProductCombo = BookingProductComboRouter().viewController
+        sourceView?.navigationController?.pushViewController(viewBookingProductCombo, animated: true)
+    }
+    
 }
 

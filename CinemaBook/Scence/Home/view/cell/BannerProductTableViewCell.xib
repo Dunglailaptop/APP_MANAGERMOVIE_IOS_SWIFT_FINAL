@@ -18,24 +18,53 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRp-Qa-UjT">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HE THONG RAP CHIEU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTA-5M-fYd">
-                                <rect key="frame" x="58" y="10" width="184.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-admin" translatesAutoresizingMaskIntoConstraints="NO" id="er4-2d-IAB">
+                                <rect key="frame" x="20" y="5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IMw-gP-6Cu"/>
+                                    <constraint firstAttribute="width" constant="50" id="oh9-pX-MAJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DREAMCINEMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUu-zW-m0l">
+                                <rect key="frame" x="89.5" y="19.5" width="121.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket" translatesAutoresizingMaskIntoConstraints="NO" id="qTK-Kv-P3D">
+                                <rect key="frame" x="258" y="19" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="4vN-QP-raN"/>
+                                    <constraint firstAttribute="height" constant="22" id="lpf-qF-j5Q"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qTA-5M-fYd" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="A9b-Bp-S3C"/>
-                            <constraint firstItem="qTA-5M-fYd" firstAttribute="centerX" secondItem="eRp-Qa-UjT" secondAttribute="centerX" id="VN8-kX-r3N"/>
-                            <constraint firstAttribute="height" constant="40" id="i3B-QD-FC1"/>
+                            <constraint firstItem="qTK-Kv-P3D" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="70w-UY-ftC"/>
+                            <constraint firstItem="er4-2d-IAB" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="GNe-am-ZlQ"/>
+                            <constraint firstItem="gUu-zW-m0l" firstAttribute="centerX" secondItem="eRp-Qa-UjT" secondAttribute="centerX" id="IYH-5u-slM"/>
+                            <constraint firstAttribute="trailing" secondItem="qTK-Kv-P3D" secondAttribute="trailing" constant="20" id="L9Z-Kz-9yj"/>
+                            <constraint firstItem="er4-2d-IAB" firstAttribute="leading" secondItem="eRp-Qa-UjT" secondAttribute="leading" constant="20" id="Mgv-Rt-Omp"/>
+                            <constraint firstAttribute="height" constant="60" id="i3B-QD-FC1"/>
+                            <constraint firstItem="gUu-zW-m0l" firstAttribute="centerY" secondItem="eRp-Qa-UjT" secondAttribute="centerY" id="rgC-JX-aqc"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-pd-3zZ" customClass="FSPagerView" customModule="FSPagerView">
-                        <rect key="frame" x="0.0" y="40" width="300" height="252"/>
+                        <rect key="frame" x="0.0" y="60" width="300" height="232"/>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </subviews>
@@ -58,4 +87,8 @@
             <point key="canvasLocation" x="132" y="110"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="avatar-admin" width="672" height="1536"/>
+        <image name="ticket" width="25" height="18"/>
+    </resources>
 </document>

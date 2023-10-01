@@ -24,7 +24,16 @@ class OrderProductRouter {
         guard let view = sourceView else {fatalError("Error Desconocido")}
         self.sourceView = view
     }
-    
-   
+    func navigationtocreateproduct() {
+            let viewcreateproduct = CreateProductRouter().viewController as! CreateProductViewController
+        viewcreateproduct.type = "CREATE"
+       sourceView?.navigationController?.pushViewController(viewcreateproduct, animated: true)
+        }
+    func maketoDetailviewController(foodcombos:FoodCombo) {
+        let viewcreateproduct = CreateProductRouter().viewController as! CreateProductViewController
+        viewcreateproduct.foodcombo = foodcombos
+        viewcreateproduct.type = "UPDATE"
+              sourceView?.navigationController?.pushViewController(viewcreateproduct, animated: true)
+    }
   
 }

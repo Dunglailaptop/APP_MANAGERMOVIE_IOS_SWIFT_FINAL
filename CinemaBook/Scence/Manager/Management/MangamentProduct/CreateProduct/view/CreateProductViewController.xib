@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateProductViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="BTN_EDITS" destination="08u-Ee-4oQ" id="bIw-SS-mDg"/>
                 <outlet property="Taglistview" destination="lFR-Lh-YGq" id="jcZ-BD-cq7"/>
                 <outlet property="avatar" destination="c5k-B6-ICv" id="Esg-P4-2g5"/>
                 <outlet property="height_Scroll" destination="vE4-kN-N3A" id="BWb-nw-eaP"/>
@@ -46,12 +47,26 @@
                                     <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-d4-25u">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="4wc-dq-ctt"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btn_makePopToViewController:" destination="-1" eventType="touchUpInside" id="v3o-pS-w6R"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="F2e-d4-25u" secondAttribute="bottom" id="SFp-c9-Wus"/>
+                                <constraint firstItem="F2e-d4-25u" firstAttribute="leading" secondItem="MhK-43-Zb1" secondAttribute="leading" id="XHY-mP-Edv"/>
                                 <constraint firstItem="ko7-38-dtb" firstAttribute="leading" secondItem="MhK-43-Zb1" secondAttribute="leading" constant="20" id="Zdg-cG-9f1"/>
                                 <constraint firstAttribute="height" constant="40" id="cAG-fL-OyC"/>
                                 <constraint firstItem="b1Y-HY-X82" firstAttribute="centerY" secondItem="MhK-43-Zb1" secondAttribute="centerY" id="dYo-1h-oZI"/>
+                                <constraint firstItem="F2e-d4-25u" firstAttribute="top" secondItem="MhK-43-Zb1" secondAttribute="top" id="dq1-Tt-dAP"/>
                                 <constraint firstItem="ko7-38-dtb" firstAttribute="centerY" secondItem="MhK-43-Zb1" secondAttribute="centerY" id="oQ4-8q-3LN"/>
                                 <constraint firstItem="b1Y-HY-X82" firstAttribute="centerX" secondItem="MhK-43-Zb1" secondAttribute="centerX" id="uXB-iD-bGZ"/>
                             </constraints>

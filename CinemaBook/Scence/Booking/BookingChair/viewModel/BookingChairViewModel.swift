@@ -17,10 +17,11 @@ class  BookingChairViewModel: BaseViewModel
 {
     private(set) weak var view: BookingChairViewController?
     private var router: BookingChairRouter?
-    public var pagition: BehaviorRelay<(idroom:Int,idcinema:Int,idinterest:Int)> = BehaviorRelay(value: (idroom:1,idcinema:1,idinterest:3))
+    public var pagition: BehaviorRelay<(idroom:Int,idcinema:Int,idinterest:Int,idmovie:Int)> = BehaviorRelay(value: (idroom:1,idcinema:1,idinterest:3,idmovie:0))
     public var dataArray: BehaviorRelay<[chair]> = BehaviorRelay(value: [])
     public var listtable: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2])
         public var ChairCategory: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2])
+    public var infoInterestMovie: BehaviorRelay<InfoInterestMovie> = BehaviorRelay(value: InfoInterestMovie())
     
     func bind(view: BookingChairViewController, router: BookingChairRouter)
     {
@@ -31,6 +32,10 @@ class  BookingChairViewModel: BaseViewModel
     
     func makePopToViewController() {
         router?.makePopToViewController()
+    }
+    
+    func makeToBookingProductComboViewController() {
+        router?.makeToBookingProductComboViewController()
     }
     
 }
@@ -49,4 +54,11 @@ extension BookingChairViewModel{
                    .showAPIErrorToast()
                    .mapObject(type: APIResponse.self)
            }
+    func getinfoInterestMovie() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getInfoInterestMovie(idmovie: pagition.value.idmovie, idcinema: pagition.value.idcinema, idroom: pagition.value.idroom, idinterest: pagition.value.idinterest))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
 }

@@ -79,6 +79,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     cell.idroom = viewModel?.listTime.value[indexPath.item].idroom as! Int
     cell.idinterest = viewModel?.listTime.value[indexPath.item].idinterest as! Int
     cell.lbl_time.text = String((viewModel?.listTime.value[indexPath.item].times)!)
+    cell.idmovie = viewModel?.listTime.value[indexPath.item].idmovie as! Int
     dLog(viewModel?.listTime.value[indexPath.item].times)
     
     return cell

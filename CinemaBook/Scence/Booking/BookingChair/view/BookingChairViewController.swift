@@ -20,7 +20,14 @@ class BookingChairViewController: BaseViewController {
     var idcinema = 0
     var idroom = 0
     var idinterest = 0
- //view hidden
+    var idmovie = 0
+    //label
+    
+    @IBOutlet weak var lbl_name_cinema: UILabel!
+    
+    @IBOutlet weak var lbl_namemovie: UILabel!
+    @IBOutlet weak var lbl_info_interest: UILabel!
+    //view hidden
     @IBOutlet weak var view_height_info: NSLayoutConstraint!
    
     @IBOutlet weak var view_info_room: UIView!
@@ -34,8 +41,10 @@ class BookingChairViewController: BaseViewController {
     @IBOutlet weak var view_of_collectionview: UIView!
     @IBOutlet weak var view_of_collection: UIView!
     
+    @IBOutlet weak var lbl_price_chair: UILabel!
     @IBOutlet weak var scroll_view_zoom: UIScrollView!
     
+    @IBOutlet weak var lbl_number_chair: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self,router: router)
@@ -64,13 +73,18 @@ class BookingChairViewController: BaseViewController {
             data.idroom = idroom
             data.idinterest = idinterest
             data.idcinema = idcinema
+            data.idmovie = idmovie
             viewModel.pagition.accept(data)
+        
         if type == 1{
             self.view_info_room.isHidden = true
             self.view_payment.isHidden = true
             self.view_height_info.constant = 0
             getListchairRoom()
-        }else if dataChair.count > 0 {
+        }else  {
+                self.view_info_room.isHidden = false
+                self.view_payment.isHidden = false
+                self.view_height_info.constant = 40
             getListchair()
         }
       
@@ -93,6 +107,12 @@ class BookingChairViewController: BaseViewController {
     @IBAction func btn_makePopToViewController(_ sender: Any) {
         viewModel.makePopToViewController()
     }
+    
+    
+    @IBAction func btn_makeToBookingProductCombo(_ sender: Any) {
+        viewModel.makeToBookingProductComboViewController()
+    }
+    
 }
 extension BookingChairViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

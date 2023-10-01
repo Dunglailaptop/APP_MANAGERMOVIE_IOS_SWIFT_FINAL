@@ -57,9 +57,21 @@
                                         <action selector="btn_makeTocreateProduct:" destination="-1" eventType="touchUpInside" id="lyj-Ih-lIk"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVb-WY-wpX">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="Si0-WN-Wcd"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btn_makePopToViewController:" destination="-1" eventType="touchUpInside" id="DoN-y8-WX4"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstItem="uVb-WY-wpX" firstAttribute="leading" secondItem="SVD-ot-VgC" secondAttribute="leading" id="7xx-sP-AVm"/>
                                 <constraint firstAttribute="trailing" secondItem="OIB-N7-D3O" secondAttribute="trailing" id="9RL-7q-4a6"/>
                                 <constraint firstItem="S9U-Ao-8fZ" firstAttribute="centerY" secondItem="SVD-ot-VgC" secondAttribute="centerY" id="Gny-ue-AFl"/>
                                 <constraint firstAttribute="trailing" secondItem="R0f-Ec-WKo" secondAttribute="trailing" constant="20" id="Khw-Md-8zk"/>
@@ -68,7 +80,9 @@
                                 <constraint firstItem="bXg-lI-zhf" firstAttribute="centerY" secondItem="SVD-ot-VgC" secondAttribute="centerY" id="O9D-EZ-nvy"/>
                                 <constraint firstAttribute="height" constant="40" id="OKp-k2-UAh"/>
                                 <constraint firstItem="bXg-lI-zhf" firstAttribute="centerX" secondItem="SVD-ot-VgC" secondAttribute="centerX" id="VDc-Kn-wcP"/>
+                                <constraint firstItem="uVb-WY-wpX" firstAttribute="top" secondItem="SVD-ot-VgC" secondAttribute="top" id="eYi-Se-2ch"/>
                                 <constraint firstItem="S9U-Ao-8fZ" firstAttribute="leading" secondItem="SVD-ot-VgC" secondAttribute="leading" constant="20" id="gl8-zz-Lrg"/>
+                                <constraint firstAttribute="bottom" secondItem="uVb-WY-wpX" secondAttribute="bottom" id="hJL-V8-QpI"/>
                                 <constraint firstItem="R0f-Ec-WKo" firstAttribute="centerY" secondItem="SVD-ot-VgC" secondAttribute="centerY" id="yNh-Ha-XqK"/>
                             </constraints>
                         </view>
