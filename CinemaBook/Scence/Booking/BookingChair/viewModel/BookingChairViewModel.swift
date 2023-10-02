@@ -34,8 +34,8 @@ class  BookingChairViewModel: BaseViewModel
         router?.makePopToViewController()
     }
     
-    func makeToBookingProductComboViewController() {
-        router?.makeToBookingProductComboViewController()
+    func makeToBookingProductComboViewController(dataInfoMovie:InfoInterestMovie,datachairs:[chair]) {
+        router?.makeToBookingProductComboViewController(dataInfoMovieS:dataInfoMovie,dataChairs:datachairs)
     }
     
 }

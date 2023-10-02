@@ -110,7 +110,8 @@ class BookingChairViewController: BaseViewController {
     
     
     @IBAction func btn_makeToBookingProductCombo(_ sender: Any) {
-        viewModel.makeToBookingProductComboViewController()
+        var datafilter = viewModel.dataArray.value.filter{$0.isSelected == ACTIVE}
+        viewModel.makeToBookingProductComboViewController(dataInfoMovie: viewModel.infoInterestMovie.value,datachairs: datafilter)
     }
     
 }

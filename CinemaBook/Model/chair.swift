@@ -17,6 +17,10 @@ struct chair:Mappable {
     var statusChair = 0
     var price = 0
     var isSelected = DEACTIVE
+    
+    init() {
+        
+    }
     init?(map: Map) {
         
     }

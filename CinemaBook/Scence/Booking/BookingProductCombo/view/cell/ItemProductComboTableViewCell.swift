@@ -10,10 +10,12 @@ import UIKit
 
 class ItemProductComboTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbl_number: UILabel!
     @IBOutlet weak var lbl_price: UILabel!
     @IBOutlet weak var lbl_desscription: UILabel!
     @IBOutlet weak var lbl_name: UILabel!
     @IBOutlet weak var image_combo: UIImageView!
+    var number = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         lbl_name.adjustsFontSizeToFitWidth = true
@@ -26,6 +28,55 @@ class ItemProductComboTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    var viewModel: BookingProductComboViewModel? = nil {
+        didSet {
+            
+        }
+    }
+    
+    @IBAction func btn_incease(_ sender: Any) {
+        if number > 0 {
+            number = number - 1
+            lbl_number.text = String(number)
+            var datacheck = viewModel?.dataArray.value
+            datacheck?.enumerated().forEach{ (index,value) in
+                if value.idcombo == data?.idcombo {
+                            datacheck![index].quantity = number
+                      }
+                if number > 0 {
+                    datacheck?[index].isSelected = ACTIVE
+                }
+            }
+            viewModel?.dataArray.accept(datacheck!)
+           var prices =  viewModel?.view?.dataChair.map{$0.price}.reduce(0, +)
+            var pricecombo = viewModel?.dataArray.value.map{$0.priceCombo * $0.quantity}.reduce(0 ,+)
+            viewModel?.view?.lbl_price_chair.text = Utils.stringVietnameseFormatWithNumber(amount: pricecombo! + prices!)
+            
+        }
+       
+    }
+    
+    
+    @IBAction func btn_includenumber(_ sender: Any) {
+            number = number + 1
+            lbl_number.text = String(number)
+                var datacheck = viewModel?.dataArray.value
+                datacheck?.enumerated().forEach{ (index,value) in
+                    if value.idcombo == data?.idcombo {
+                          datacheck![index].quantity = number
+                        if number > 0 {
+                            datacheck![index].isSelected = ACTIVE
+                        }
+                    }
+                
+                }
+                viewModel?.dataArray.accept(datacheck!)
+                var prices =  viewModel?.view?.dataChair.map{$0.price}.reduce(0, +)
+                var pricecombo = viewModel?.dataArray.value.map{$0.priceCombo * $0.quantity}.reduce(0 ,+)
+                viewModel?.view?.lbl_price_chair.text = Utils.stringVietnameseFormatWithNumber(amount: pricecombo! + prices!)
+    }
+    
     
     var data:FoodCombo? = nil {
         didSet {

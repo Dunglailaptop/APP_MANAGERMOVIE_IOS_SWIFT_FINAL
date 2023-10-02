@@ -17,15 +17,19 @@ class BookingProductComboViewModel: BaseViewModel {
     var idmovie: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     var dataArray: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     var dataArrayVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
-    
+    var dataCombo:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     func bind(view: BookingProductComboViewController,router: BookingProductComboRouter){
         self.view = view
         self.router = router
         self.router?.setSourceView(view)
     }
     
-  
-    
+    func makePopToViewController() {
+        router?.makePopToViewController()
+    }
+    func makePopToViewPayment(dataChair:[chair],infoInterestMovie:InfoInterestMovie,datafoodcombo:[FoodCombo]) {
+        router?.makeToPaymentViewController(dataChairs: dataChair, infoInterestMovie: infoInterestMovie, dataFoodCombo: datafoodcombo)
+    }
     
 }
 extension BookingProductComboViewModel {

@@ -16,6 +16,8 @@ struct FoodCombo: Mappable {
         var priceCombo = 0
         var picture = ""
         var foods = [FoodOfCombo]()
+    var isSelected = DEACTIVE
+    var quantity = 0
     init() {
         
     }

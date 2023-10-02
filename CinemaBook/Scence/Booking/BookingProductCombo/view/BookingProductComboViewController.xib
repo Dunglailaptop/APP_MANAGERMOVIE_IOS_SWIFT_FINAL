@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookingProductComboViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="lbl_info_interest" destination="Waq-m9-09A" id="Kv0-Ex-2qg"/>
+                <outlet property="lbl_name_cinema" destination="rmO-LK-pJ7" id="5H9-m5-Yty"/>
+                <outlet property="lbl_name_movie" destination="nov-SA-4ic" id="J7I-hg-zg6"/>
+                <outlet property="lbl_number_chair" destination="OXz-hO-BdI" id="L7f-Tj-rYt"/>
+                <outlet property="lbl_price_chair" destination="Pep-vV-0OH" id="0aZ-Ng-Y3y"/>
                 <outlet property="tableview" destination="cEA-Pm-wIv" id="byh-ZC-k3S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -53,14 +58,28 @@
                                         <constraint firstAttribute="height" constant="40" id="gDw-9G-RpY"/>
                                     </constraints>
                                 </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHS-0r-i7G">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="j8X-Pw-fpH"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btn_makePopToviewController:" destination="-1" eventType="touchUpInside" id="1x8-sV-tG0"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="zHS-0r-i7G" secondAttribute="bottom" id="8CK-6l-ekt"/>
                                 <constraint firstItem="WfN-Rl-QLE" firstAttribute="centerY" secondItem="yId-Aw-FBE" secondAttribute="centerY" id="GMB-FI-8Br"/>
                                 <constraint firstItem="WfN-Rl-QLE" firstAttribute="leading" secondItem="F8j-lg-yVk" secondAttribute="trailing" constant="20" id="Gtz-0s-XFC"/>
                                 <constraint firstItem="F8j-lg-yVk" firstAttribute="centerY" secondItem="yId-Aw-FBE" secondAttribute="centerY" id="Vfd-w1-LWm"/>
+                                <constraint firstItem="zHS-0r-i7G" firstAttribute="leading" secondItem="yId-Aw-FBE" secondAttribute="leading" id="XfX-Ce-VLF"/>
                                 <constraint firstItem="F8j-lg-yVk" firstAttribute="leading" secondItem="yId-Aw-FBE" secondAttribute="leading" constant="20" id="gBe-9T-n6E"/>
                                 <constraint firstAttribute="height" constant="50" id="oay-nn-Mt3"/>
+                                <constraint firstItem="zHS-0r-i7G" firstAttribute="top" secondItem="yId-Aw-FBE" secondAttribute="top" id="yQ5-5C-zN2"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cEA-Pm-wIv">
@@ -71,31 +90,25 @@
                             <rect key="frame" x="0.0" y="738" width="414" height="80"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nU1-4r-4hQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
+                                    <rect key="frame" x="10" y="0.0" width="200" height="80"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPPENHEIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nov-SA-4ic">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="26.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2D phụ đề Việt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg9-va-BZl">
-                                            <rect key="frame" x="0.0" y="26.5" width="200" height="27"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KRX-Uo-JTq">
-                                            <rect key="frame" x="0.0" y="53.5" width="200" height="26.5"/>
+                                            <rect key="frame" x="0.0" y="40" width="200" height="40"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500.000 đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pep-vV-0OH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="26.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="40"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 ghế" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXz-hO-BdI">
-                                                    <rect key="frame" x="100" y="0.0" width="100" height="26.5"/>
+                                                    <rect key="frame" x="100" y="0.0" width="100" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -130,6 +143,9 @@
                                             <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btn_makeToPaymentviewcontroller:" destination="-1" eventType="touchUpInside" id="VAL-Q7-6rx"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -140,7 +156,7 @@
                                 <constraint firstItem="8tT-gL-3as" firstAttribute="centerY" secondItem="bbg-Vu-TsK" secondAttribute="centerY" id="dSD-cf-Fw6"/>
                                 <constraint firstAttribute="bottom" secondItem="nU1-4r-4hQ" secondAttribute="bottom" id="e9G-xd-qTk"/>
                                 <constraint firstAttribute="trailing" secondItem="8tT-gL-3as" secondAttribute="trailing" constant="20" id="fmK-8l-GQz"/>
-                                <constraint firstItem="nU1-4r-4hQ" firstAttribute="leading" secondItem="bbg-Vu-TsK" secondAttribute="leading" id="qA7-Bg-v2O"/>
+                                <constraint firstItem="nU1-4r-4hQ" firstAttribute="leading" secondItem="bbg-Vu-TsK" secondAttribute="leading" constant="10" id="qA7-Bg-v2O"/>
                             </constraints>
                         </view>
                     </subviews>
