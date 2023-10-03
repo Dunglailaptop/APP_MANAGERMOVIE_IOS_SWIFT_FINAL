@@ -10,10 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentBillViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_check_1" destination="ESB-Wo-Vpp" id="LVy-au-kbL"/>
+                <outlet property="btn_check_2" destination="0S1-Vy-eyq" id="f3S-qm-0NF"/>
+                <outlet property="btn_check_3" destination="1UK-UP-Fe2" id="g0G-UO-2qS"/>
                 <outlet property="collectionview" destination="FLU-Lf-TO7" id="iYP-zC-0dR"/>
                 <outlet property="height_combofoodadd" destination="W32-zW-x5G" id="i1z-Nb-SE1"/>
                 <outlet property="height_scroll" destination="gd2-iV-dM6" id="Uys-iw-wxP"/>
                 <outlet property="height_table" destination="bZQ-Yt-IgY" id="VUt-ZU-yuI"/>
+                <outlet property="image_check" destination="jIT-Rm-zDl" id="GzN-00-NKn"/>
+                <outlet property="image_check_1" destination="wMA-SD-92v" id="P9a-jk-hBi"/>
+                <outlet property="image_check_2" destination="zj4-XD-38w" id="1dU-kM-kcP"/>
                 <outlet property="image_movie" destination="ehs-Ev-i8X" id="5fw-yV-ME7"/>
                 <outlet property="lbl_chair" destination="BHY-Z4-Ann" id="C7Y-Z5-JQn"/>
                 <outlet property="lbl_combo" destination="nI7-rK-IEM" id="7O8-rg-WKT"/>
@@ -567,15 +573,15 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZw-Ec-Hof">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-discount" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-3Y-6qw">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cost-point" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-3Y-6qw">
                                                                     <rect key="frame" x="20" y="10" width="30" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="b8d-w3-Gyi"/>
                                                                         <constraint firstAttribute="height" constant="30" id="liJ-Gy-hNr"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATM (Thẻ nội địa)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQz-X7-7fl">
-                                                                    <rect key="frame" x="70" y="15" width="135.5" height="20.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh toán bằng điểm tích lũy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQz-X7-7fl">
+                                                                    <rect key="frame" x="70" y="15" width="231" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -607,13 +613,91 @@
                                                                 <constraint firstAttribute="trailing" secondItem="jIT-Rm-zDl" secondAttribute="trailing" constant="20" id="p9U-v2-gef"/>
                                                             </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsT-n8-5Qd">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d44-X5-Wgg">
                                                             <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank" translatesAutoresizingMaskIntoConstraints="NO" id="2at-Oa-JAJ">
+                                                                    <rect key="frame" x="20" y="10" width="30" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="30" id="GKU-sN-Ig3"/>
+                                                                        <constraint firstAttribute="height" constant="30" id="aO2-IT-3Mt"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATM (Nội địa)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU3-zw-Qeg">
+                                                                    <rect key="frame" x="70" y="15" width="104.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S1-Vy-eyq">
+                                                                    <rect key="frame" x="50" y="0.0" width="364" height="50"/>
+                                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-check-disable" translatesAutoresizingMaskIntoConstraints="NO" id="wMA-SD-92v">
+                                                                    <rect key="frame" x="372" y="14" width="22" height="22"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="22" id="7WC-6T-UZi"/>
+                                                                        <constraint firstAttribute="height" constant="22" id="gh9-7E-3aF"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="wMA-SD-92v" firstAttribute="centerY" secondItem="d44-X5-Wgg" secondAttribute="centerY" id="2LV-3v-2mB"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wMA-SD-92v" secondAttribute="trailing" constant="20" id="AsQ-Th-60t"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0S1-Vy-eyq" secondAttribute="trailing" id="Qvi-zd-qid"/>
+                                                                <constraint firstItem="2at-Oa-JAJ" firstAttribute="leading" secondItem="d44-X5-Wgg" secondAttribute="leading" constant="20" id="ZIC-li-bkJ"/>
+                                                                <constraint firstItem="ZU3-zw-Qeg" firstAttribute="leading" secondItem="2at-Oa-JAJ" secondAttribute="trailing" constant="20" id="auE-3V-YpT"/>
+                                                                <constraint firstItem="0S1-Vy-eyq" firstAttribute="top" secondItem="d44-X5-Wgg" secondAttribute="top" id="eC6-tD-gDT"/>
+                                                                <constraint firstAttribute="bottom" secondItem="0S1-Vy-eyq" secondAttribute="bottom" id="h06-iW-WQG"/>
+                                                                <constraint firstItem="0S1-Vy-eyq" firstAttribute="leading" secondItem="2at-Oa-JAJ" secondAttribute="trailing" id="sZg-3Z-CXC"/>
+                                                                <constraint firstItem="2at-Oa-JAJ" firstAttribute="centerY" secondItem="d44-X5-Wgg" secondAttribute="centerY" id="uhR-ic-FuD"/>
+                                                                <constraint firstItem="ZU3-zw-Qeg" firstAttribute="centerY" secondItem="d44-X5-Wgg" secondAttribute="centerY" id="zFz-ee-vje"/>
+                                                            </constraints>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IzL-bP-fOk">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33F-4c-1cW">
                                                             <rect key="frame" x="0.0" y="100" width="414" height="50"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="momo-icon" translatesAutoresizingMaskIntoConstraints="NO" id="n5H-cJ-isl">
+                                                                    <rect key="frame" x="20" y="10" width="30" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="PSP-xI-97y"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="UIz-gp-fUF"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh toán MOMO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alw-p9-GZb">
+                                                                    <rect key="frame" x="70" y="15" width="145.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UK-UP-Fe2">
+                                                                    <rect key="frame" x="50" y="0.0" width="364" height="50"/>
+                                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-check-disable" translatesAutoresizingMaskIntoConstraints="NO" id="zj4-XD-38w">
+                                                                    <rect key="frame" x="372" y="14" width="22" height="22"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="22" id="FKk-lI-9ZL"/>
+                                                                        <constraint firstAttribute="width" constant="22" id="q8k-RC-K5M"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="alw-p9-GZb" firstAttribute="centerY" secondItem="33F-4c-1cW" secondAttribute="centerY" id="0JI-cA-Ahu"/>
+                                                                <constraint firstAttribute="bottom" secondItem="1UK-UP-Fe2" secondAttribute="bottom" id="13i-gO-ezX"/>
+                                                                <constraint firstItem="n5H-cJ-isl" firstAttribute="leading" secondItem="33F-4c-1cW" secondAttribute="leading" constant="20" id="BgQ-M9-eq1"/>
+                                                                <constraint firstAttribute="trailing" secondItem="zj4-XD-38w" secondAttribute="trailing" constant="20" id="D6D-7h-3xf"/>
+                                                                <constraint firstItem="n5H-cJ-isl" firstAttribute="centerY" secondItem="33F-4c-1cW" secondAttribute="centerY" id="ES4-xL-hiI"/>
+                                                                <constraint firstItem="zj4-XD-38w" firstAttribute="centerY" secondItem="33F-4c-1cW" secondAttribute="centerY" id="GWL-Go-Z9h"/>
+                                                                <constraint firstAttribute="trailing" secondItem="1UK-UP-Fe2" secondAttribute="trailing" id="Ioz-r6-hrZ"/>
+                                                                <constraint firstItem="alw-p9-GZb" firstAttribute="leading" secondItem="n5H-cJ-isl" secondAttribute="trailing" constant="20" id="SIj-73-wdc"/>
+                                                                <constraint firstItem="1UK-UP-Fe2" firstAttribute="top" secondItem="33F-4c-1cW" secondAttribute="top" id="coC-17-zUq"/>
+                                                                <constraint firstItem="1UK-UP-Fe2" firstAttribute="leading" secondItem="n5H-cJ-isl" secondAttribute="trailing" id="iXh-Ej-te5"/>
+                                                            </constraints>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
@@ -707,10 +791,12 @@
         </view>
     </objects>
     <resources>
+        <image name="bank" width="512" height="512"/>
+        <image name="cost-point" width="512" height="512"/>
         <image name="h1" width="144" height="180"/>
         <image name="icon-back-blue" width="9" height="18"/>
         <image name="icon-check-disable" width="20" height="20"/>
-        <image name="icon-discount" width="21" height="16.5"/>
         <image name="img-no-data" width="220" height="170"/>
+        <image name="momo-icon" width="1024" height="1024"/>
     </resources>
 </document>

@@ -16,7 +16,7 @@ struct InterestMovie: Mappable {
     var idcinema = 0
     var idroom = 0
     var idinterest = 0
-    
+  
     init?(map: Map) {
         
     }
@@ -28,6 +28,7 @@ struct InterestMovie: Mappable {
             idcinema <- map["idcinema"]
             idroom <- map["idroom"]
             idinterest <- map["idinterest"]
+     
     }
 }
 struct InfoInterestMovie: Mappable {
@@ -37,7 +38,7 @@ struct InfoInterestMovie: Mappable {
         var dateshow = ""
         var nameroom = ""
         var namecinema = ""
-    
+      var poster = ""
     init() {
         
     }
@@ -53,6 +54,6 @@ struct InfoInterestMovie: Mappable {
           dateshow <- map["dateshow"]
           nameroom <- map["nameroom"]
           namecinema <- map["namecinema"]
-        
+           poster <- map["poster"]
     }
 }

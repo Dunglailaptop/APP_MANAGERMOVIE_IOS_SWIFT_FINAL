@@ -14,6 +14,12 @@ import ObjectMapper
 class PaymentBillViewController: UIViewController {
     
     
+    @IBOutlet weak var image_check_2: UIImageView!
+    @IBOutlet weak var image_check_1: UIImageView!
+    @IBOutlet weak var image_check: UIImageView!
+    @IBOutlet weak var btn_check_3: UIButton!
+    @IBOutlet weak var btn_check_2: UIButton!
+    @IBOutlet weak var btn_check_1: UIButton!
     @IBOutlet weak var lbl_total_amount_final: UILabel!
     @IBOutlet weak var lbl_total_amount_vat: UILabel!
     @IBOutlet weak var lbl_total_combofood: UILabel!
@@ -47,6 +53,7 @@ class PaymentBillViewController: UIViewController {
         bindingCollectioncell()
         registertable()
         bindingtablecell()
+        checkbtn()
         // Do any additional setup after loading the view.
     }
 
@@ -88,6 +95,7 @@ extension PaymentBillViewController {
         lbl_total_amount_vat.text = Utils.stringVietnameseFormatWithNumber(amount: dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)) + "đ"
         lbl_total_amount_final.text = Utils.stringVietnameseFormatWithNumber(amount: dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)) + "đ"
         viewModel.dataArrayCombo.accept(dataFoodCombo)
+        image_movie.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: infoInterestMovie.poster)), placeholder: UIImage(named: "image_defauft_medium"))
         height_table.constant = CGFloat(dataFoodCombo.count * 50)
         height_combofoodadd.constant = height_table.constant + 100
         height_scroll.constant = height_combofoodadd.constant + 950
@@ -143,5 +151,25 @@ extension PaymentBillViewController {
             (row,data,cell) in
             cell.data = data
         }
+    }
+}
+extension PaymentBillViewController {
+    func checkbtn() {
+        btn_check_1.rx.tap.asDriver().drive(onNext: {
+            self.image_check.image = UIImage(named: "check_2")
+            self.image_check_2.image = UIImage(named: "icon-check-disable")
+            self.image_check_1.image = UIImage(named: "icon-check-disable")
+            
+        })
+        btn_check_2.rx.tap.asDriver().drive(onNext: {
+            self.image_check.image = UIImage(named: "icon-check-disable")
+            self.image_check_2.image = UIImage(named: "icon-check-disable")
+            self.image_check_1.image = UIImage(named: "check_2")
+        })
+        btn_check_3.rx.tap.asDriver().drive(onNext: {
+            self.image_check.image = UIImage(named: "icon-check-disable")
+            self.image_check_2.image = UIImage(named: "check_2")
+            self.image_check_1.image = UIImage(named: "icon-check-disable")
+        })
     }
 }
