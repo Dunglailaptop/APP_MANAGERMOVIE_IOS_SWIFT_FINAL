@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoViewController" customModule="CinemaBook" customModuleProvider="target">
+            <connections>
+                <outlet property="playerview" destination="kmP-qA-C4d" id="crL-dY-rUU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAl-Lg-ggi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-back-blue" translatesAutoresizingMaskIntoConstraints="NO" id="JWj-7p-TXn">
+                            <rect key="frame" x="20" y="14" width="22" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="22" id="2ne-rv-Hls"/>
+                                <constraint firstAttribute="height" constant="22" id="mec-SK-Ezd"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIDEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrO-dj-Id7">
+                            <rect key="frame" x="176" y="13" width="62" height="24"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" name="AccentColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGw-ym-1mU">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Nl8-f6-9rT"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="btn_makePopToViewController:" destination="-1" eventType="touchUpInside" id="pLn-jD-cBl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3iF-qC-SJk"/>
+                        <constraint firstItem="OrO-dj-Id7" firstAttribute="centerY" secondItem="bAl-Lg-ggi" secondAttribute="centerY" id="56b-By-sr7"/>
+                        <constraint firstAttribute="bottom" secondItem="FGw-ym-1mU" secondAttribute="bottom" id="F3c-L3-kkU"/>
+                        <constraint firstItem="JWj-7p-TXn" firstAttribute="centerY" secondItem="bAl-Lg-ggi" secondAttribute="centerY" id="Frh-bX-7V8"/>
+                        <constraint firstItem="FGw-ym-1mU" firstAttribute="leading" secondItem="bAl-Lg-ggi" secondAttribute="leading" id="MdY-rF-RFs"/>
+                        <constraint firstItem="JWj-7p-TXn" firstAttribute="leading" secondItem="bAl-Lg-ggi" secondAttribute="leading" constant="20" id="R1H-UN-edJ"/>
+                        <constraint firstItem="FGw-ym-1mU" firstAttribute="top" secondItem="bAl-Lg-ggi" secondAttribute="top" id="RNZ-Cw-jto"/>
+                        <constraint firstItem="OrO-dj-Id7" firstAttribute="centerX" secondItem="bAl-Lg-ggi" secondAttribute="centerX" id="udk-qH-SFu"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmP-qA-C4d" customClass="YTPlayerView">
+                    <rect key="frame" x="0.0" y="94" width="414" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="PAB-ZM-uT6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="bAl-Lg-ggi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="26x-3i-Tya"/>
+                <constraint firstItem="kmP-qA-C4d" firstAttribute="top" secondItem="bAl-Lg-ggi" secondAttribute="bottom" id="7Aj-Vr-ALX"/>
+                <constraint firstItem="bAl-Lg-ggi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NHb-LM-9Sx"/>
+                <constraint firstItem="kmP-qA-C4d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RC1-kj-5gV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bAl-Lg-ggi" secondAttribute="trailing" id="qet-Rv-zlN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kmP-qA-C4d" secondAttribute="trailing" id="wGc-IH-bR8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-back-blue" width="9" height="18"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

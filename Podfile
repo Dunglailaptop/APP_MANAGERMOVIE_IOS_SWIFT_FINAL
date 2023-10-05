@@ -13,11 +13,26 @@ target 'CinemaBook' do
    pod 'JonAlert'
   pod 'IQKeyboardManager'
   pod 'Moya/RxSwift'
- pod 'Alamofire' 
+  pod 'Alamofire' 
 pod 'Moya'
 pod 'RxGesture'
 pod 'SnapKit'
 pod 'SKPhotoBrowser'
 pod 'Kingfisher', '5.15.0'
-
+pod 'youtube-ios-player-helper'
+pod "QVRWeekView"
+pod 'FSCalendar'
+pod 'BmoViewPager'
+pod 'CHTCollectionViewWaterfallLayout'
+pod 'CollectionViewSlantedLayout', '~> 3.1'
+pod 'SquareFlowLayout'
+ pod 'FSPagerView'
+pod 'PagingCollectionViewLayout'
+pod "MWPhotoBrowser"
+pod 'GravitySliderFlowLayout'
+pod 'LNICoverFlowLayout'
+ pod 'MarqueeLabel'
+  pod 'iOSDropDown'
+pod 'SpreadsheetView'
+ pod 'TagListView', '~> 1.0'
 end

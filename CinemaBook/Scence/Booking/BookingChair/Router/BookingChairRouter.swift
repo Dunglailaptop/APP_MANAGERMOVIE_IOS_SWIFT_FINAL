@@ -24,7 +24,15 @@ class BookingChairRouter {
         guard let view = sourceView else {fatalError("Error")}
         self.sourceView = view
     }
+    func makePopToViewController() {
+        sourceView?.navigationController?.popViewController(animated: true)
+    }
+    func makeToBookingProductComboViewController(dataInfoMovieS: InfoInterestMovie,dataChairs:[chair]) {
+        let viewBookingProductCombo = BookingProductComboRouter().viewController as! BookingProductComboViewController
+        viewBookingProductCombo.dataInfoMovie = dataInfoMovieS
+        viewBookingProductCombo.dataChair = dataChairs
+        sourceView?.navigationController?.pushViewController(viewBookingProductCombo, animated: true)
+    }
     
-  
 }
 

@@ -36,7 +36,7 @@ class BaseViewController: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
                 
-        view.backgroundColor = ColorUtils.white()
+        view.backgroundColor = .white
         
         setNeedsStatusBarAppearanceUpdate()
         
@@ -46,6 +46,10 @@ class BaseViewController: UIViewController {
         
         
         self.navigationController?.isNavigationBarHidden = true
+        
+        
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+                 UIViewController.attemptRotationToDeviceOrientation()
 
       
     }
@@ -92,7 +96,17 @@ class BaseViewController: UIViewController {
         
     }
    
-    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .portrait
+    }
    
     
     // MARK: - Memory Release -
@@ -120,7 +134,7 @@ extension BaseViewController{
         
        var user = Users()
         user.idusers = 0
-        
+        user.idrole = 0
        
         ManageCacheObject.setConfig(Config())
         ManageCacheObject.saveCurrentUserInfo(user)

@@ -19,8 +19,12 @@ struct Users: Mappable {
     var birthday = ""
     var idrole = 0
     var avatar = ""
-    
-    
+    var idroleName = ""
+    var gender = 0
+    var address = ""
+   var idcinema = 1
+    var statuss = 0
+    var keysearch = ""
     init() {
         
     }
@@ -37,6 +41,10 @@ struct Users: Mappable {
         birthday <- map["birthday"]
         idrole <- map["idrole"]
         avatar <- map["avatar"]
+        idroleName <- map["idrolename"]
+        gender <- map["gender"]
+        address <- map["address"]
+        statuss <- map["statuss"]
     }
     
 }

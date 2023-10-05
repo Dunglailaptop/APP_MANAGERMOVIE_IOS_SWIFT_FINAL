@@ -21,14 +21,26 @@ extension CustomTabItem {
     var viewController: UIViewController {
         switch self {
         case .Home:
-            let view = HomeViewController(nibName: "HomeViewController", bundle: Bundle.main)
-            return view
-        case .Ticket:
-            let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
+            dLog(ManageCacheObject.getCurrentUserInfo().idrole)
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                let view = HomeReportViewController(nibName: "HomeReportViewController", bundle: Bundle.main)
+                return view
+            }else  {
+                let view = HomeViewController(nibName: "HomeViewController", bundle: Bundle.main)
+                return view
+            }
             
-            return view
+        case .Ticket:
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                let view = ManagementViewController(nibName: "ManagementViewController", bundle: Bundle.main)
+                return view
+            }else {
+                let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
+                return view
+            }
+           
         case .newFeed:
-            let view = MapViewController(nibName: "MapViewController", bundle: Bundle.main)
+            let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)
             
             return view
             
@@ -54,11 +66,21 @@ extension CustomTabItem {
     var icon: UIImage? {
         switch self {
         case .Home:
-            return UIImage(named: "icon_house")?.withTintColor(.white, alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                    return UIImage(named: "icon-report")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }else {
+                    return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }
+        
         case .Ticket:
-            return UIImage(named: "icon_ticket")?.withTintColor(.white, alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                 return UIImage(named: "icon-manager")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }else {
+                 return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
+            }
+           
         case .newFeed:
-            return UIImage(named: "icon-setting-lang")?.withTintColor(.white, alpha: CGFloat(1))
+            return UIImage(named: "icon-newfees")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
             
             //           case .fee:
             //               return UIImage(named: "icon-fee-tabbar")?.withTintColor(.white.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
@@ -66,11 +88,11 @@ extension CustomTabItem {
         case .NotificationApp:
             
            
-                return UIImage(named: "icon_bell")?.withTintColor(.white, alpha: CGFloat(1))
+                return UIImage(named: "icon-bell")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
             
             
         case .SettingAccount:
-            return UIImage(named: "icon-setting")?.withTintColor(.white, alpha: CGFloat(1))
+            return UIImage(named: "icon-user")?.withTintColor(ColorUtils.gray_400(), alpha: CGFloat(1))
         }
     }
     
@@ -78,21 +100,31 @@ extension CustomTabItem {
     var selectedIcon: UIImage? {
         switch self {
         case .Home:
-            return UIImage(named: "icon_house")?.withTintColor(.red, alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                    return UIImage(named: "icon-report")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }else {
+                    return UIImage(named: "icon-homes")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }
+        
             
         case .Ticket:
-            return UIImage(named: "icon_ticket")?.withTintColor(.red, alpha: CGFloat(1))
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                 return UIImage(named: "icon-manager")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }else {
+                 return UIImage(named: "icon-tickets")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
+            }
+           
         case .newFeed:
-            return UIImage(named: "icon-setting-lang")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-newfees")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
        
             //           case .fee:
             //               return UIImage(named: "icon-fee-tabbar")?.withTintColor(.white, renderingMode: .alwaysOriginal)
             
         case .NotificationApp:
-            return UIImage(named: "icon_bell")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-bell")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
            
         case .SettingAccount:
-            return UIImage(named: "icon-setting")?.withTintColor(.red, alpha: CGFloat(1))
+            return UIImage(named: "icon-user")?.withTintColor(ColorUtils.buttonGreen(), alpha: CGFloat(1))
         }
     }
     

@@ -15,8 +15,8 @@ class DetailMovieviewModel {
     private var router: DetailMovieRouter?
     
     var idmovie: BehaviorRelay<Int> = BehaviorRelay(value: 0)
-    var data: BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
-    
+    var dataArray: BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
+    var dataArrayVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
     
     func bind(view: DetailMovieViewController,router: DetailMovieRouter){
         self.view = view
@@ -28,10 +28,13 @@ class DetailMovieviewModel {
         self.router?.makePopToViewController()
     }
     
-    func makeToBookingChairViewController(){
-        router?.navigationMakeToBookingChairViewController()
+    func makeToBookingChairViewController(idmovie:Int){
+        router?.navigationMakeToBookingChairViewController(idmovie:idmovie)
     }
     
+    func makeToVideoYoutuebViewController(videoId:String) {
+        router?.navigationMakeVideoYoutubeViewController(videoid:videoId)
+    }
     
     
 }
@@ -44,4 +47,11 @@ extension DetailMovieviewModel {
                .showAPIErrorToast()
                .mapObject(type: APIResponse.self)
        }
+    func getListVoucher() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListVoucher)
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
 }

@@ -17,6 +17,7 @@ class AccountViewController: BaseViewController {
     
     @IBOutlet weak var avatar: UIImageView!
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lbl_name: UILabel!
     
     var viewModel = AccountViewModel()
@@ -25,10 +26,14 @@ class AccountViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self,router: router)
+        register()
+        bindingtableview()
         setup()
+        
         // Do any additional setup after loading the view.
     }
 
+<<<<<<< HEAD
 
     @IBAction func btn_actionlogout(_ sender: Any) {
     
@@ -37,10 +42,15 @@ class AccountViewController: BaseViewController {
         
 
     }
+=======
+>>>>>>> dungnxt_developer
     
     func setup(){
         lbl_name.text = ManageCacheObject.getCurrentUserInfo().fullname
         avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: ManageCacheObject.getCurrentUserInfo().avatar)), placeholder:  UIImage(named: "image_defauft_medium"))
     }
     
+    @IBAction func bnt_makeToAccountinfoviewcontroller(_ sender: Any) {
+        viewModel.makeToAccountInfoViewController()
+    }
 }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +17,45 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQh-B0-PXV">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-no-data" translatesAutoresizingMaskIntoConstraints="NO" id="MzR-Qz-bQk">
+                            <rect key="frame" x="132" y="300" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="MCz-E1-5es"/>
+                                <constraint firstAttribute="height" constant="150" id="xTA-ZY-dfR"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Không có dữ liệu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCp-Qb-lLE">
+                            <rect key="frame" x="138.5" y="450" width="137" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="MzR-Qz-bQk" firstAttribute="top" secondItem="cQh-B0-PXV" secondAttribute="top" constant="300" id="2vN-8R-zcm"/>
+                        <constraint firstItem="kCp-Qb-lLE" firstAttribute="centerX" secondItem="cQh-B0-PXV" secondAttribute="centerX" id="OYh-lU-RsF"/>
+                        <constraint firstItem="MzR-Qz-bQk" firstAttribute="centerX" secondItem="cQh-B0-PXV" secondAttribute="centerX" id="UoA-zL-Xre"/>
+                        <constraint firstItem="kCp-Qb-lLE" firstAttribute="top" secondItem="MzR-Qz-bQk" secondAttribute="bottom" id="peq-ei-X92"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cQh-B0-PXV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2As-hM-MNV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cQh-B0-PXV" secondAttribute="trailing" id="4bc-tZ-zKT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cQh-B0-PXV" secondAttribute="bottom" id="BjD-Ec-koc"/>
+                <constraint firstItem="cQh-B0-PXV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kFr-UU-krd"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="90"/>
         </view>
     </objects>
+    <resources>
+        <image name="img-no-data" width="220" height="170"/>
+    </resources>
 </document>

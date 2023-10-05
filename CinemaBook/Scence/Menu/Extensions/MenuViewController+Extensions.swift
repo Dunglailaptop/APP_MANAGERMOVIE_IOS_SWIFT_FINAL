@@ -8,7 +8,7 @@ extension MenuViewController
         let view1 = HomeViewController()
         let view2 = TicketViewController()
         let view3 = SalesViewController()
-        let view4 = MapViewController()
+        let view4 = NewFeedViewController()
         let view5 = AccountViewController()
         
         view1.title = "Trang chủ"
