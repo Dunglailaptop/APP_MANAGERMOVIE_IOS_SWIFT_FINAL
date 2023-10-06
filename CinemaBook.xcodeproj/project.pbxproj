@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		86B5B9C750EDADF5BFB6EDF0 /* Pods_CinemaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1358A0C5EED4EAF251BF12C /* Pods_CinemaBook.framework */; };
+		B0224BCE2ACF1A1E002D57CB /* DialogInputMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0224BCA2ACF1A1D002D57CB /* DialogInputMoneyViewController.xib */; };
+		B0224BCF2ACF1A1E002D57CB /* DialogInputQuantityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */; };
+		B0224BD02ACF1A1E002D57CB /* DialogInputMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */; };
+		B0224BD12ACF1A1E002D57CB /* DialogInputQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */; };
 		FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */; };
 		FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */; };
 		FE0F290C2A5AF4DC008C62CD /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0F290A2A5AF4DC008C62CD /* MenuViewController.xib */; };
@@ -62,10 +66,6 @@
 		FE4EB36B2AC7184700BB2D79 /* ConfigValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EB36A2AC7184700BB2D79 /* ConfigValue.swift */; };
 		FE4EB36F2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EB36D2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift */; };
 		FE4EB3702AC719EC00BB2D79 /* ItemFoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4EB36E2AC719EC00BB2D79 /* ItemFoodTableViewCell.xib */; };
-		FE4EB3772AC739AD00BB2D79 /* DialogInputMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EB3732AC739AD00BB2D79 /* DialogInputMoneyViewController.swift */; };
-		FE4EB3782AC739AD00BB2D79 /* DialogInputMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4EB3742AC739AD00BB2D79 /* DialogInputMoneyViewController.xib */; };
-		FE4EB3792AC739AD00BB2D79 /* DialogInputQuantityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4EB3752AC739AD00BB2D79 /* DialogInputQuantityViewController.xib */; };
-		FE4EB37A2AC739AD00BB2D79 /* DialogInputQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EB3762AC739AD00BB2D79 /* DialogInputQuantityViewController.swift */; };
 		FE4EE4602A9CF8A2008E7F1D /* TimeShowViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EE45E2A9CF8A0008E7F1D /* TimeShowViewController+Extension.swift */; };
 		FE4F3B622ABC9ED600EA186F /* ManagementInterestMovie+Extension+SpreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4F3B612ABC9ED600EA186F /* ManagementInterestMovie+Extension+SpreadView.swift */; };
 		FE4FFD972A77F16F00983304 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4FFD962A77F16F00983304 /* BaseViewController.swift */; };
@@ -364,6 +364,10 @@
 /* Begin PBXFileReference section */
 		19AC624DDF767157C361164E /* Pods-CinemaBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinemaBook.debug.xcconfig"; path = "Target Support Files/Pods-CinemaBook/Pods-CinemaBook.debug.xcconfig"; sourceTree = "<group>"; };
 		261DBCB471B12C02B892DA72 /* Pods-CinemaBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinemaBook.release.xcconfig"; path = "Target Support Files/Pods-CinemaBook/Pods-CinemaBook.release.xcconfig"; sourceTree = "<group>"; };
+		B0224BCA2ACF1A1D002D57CB /* DialogInputMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogInputMoneyViewController.xib; sourceTree = "<group>"; };
+		B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogInputQuantityViewController.xib; sourceTree = "<group>"; };
+		B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputMoneyViewController.swift; sourceTree = "<group>"; };
+		B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputQuantityViewController.swift; sourceTree = "<group>"; };
 		F1358A0C5EED4EAF251BF12C /* Pods_CinemaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinemaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Extensions.swift"; sourceTree = "<group>"; };
 		FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -418,10 +422,6 @@
 		FE4EB36A2AC7184700BB2D79 /* ConfigValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigValue.swift; sourceTree = "<group>"; };
 		FE4EB36D2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFoodTableViewCell.swift; sourceTree = "<group>"; };
 		FE4EB36E2AC719EC00BB2D79 /* ItemFoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemFoodTableViewCell.xib; sourceTree = "<group>"; };
-		FE4EB3732AC739AD00BB2D79 /* DialogInputMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputMoneyViewController.swift; sourceTree = "<group>"; };
-		FE4EB3742AC739AD00BB2D79 /* DialogInputMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogInputMoneyViewController.xib; sourceTree = "<group>"; };
-		FE4EB3752AC739AD00BB2D79 /* DialogInputQuantityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogInputQuantityViewController.xib; sourceTree = "<group>"; };
-		FE4EB3762AC739AD00BB2D79 /* DialogInputQuantityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputQuantityViewController.swift; sourceTree = "<group>"; };
 		FE4EE45E2A9CF8A0008E7F1D /* TimeShowViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeShowViewController+Extension.swift"; sourceTree = "<group>"; };
 		FE4F3B612ABC9ED600EA186F /* ManagementInterestMovie+Extension+SpreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementInterestMovie+Extension+SpreadView.swift"; sourceTree = "<group>"; };
 		FE4FFD962A77F16F00983304 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -741,6 +741,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B0224BC92ACF19FA002D57CB /* DialogComputers */ = {
+			isa = PBXGroup;
+			children = (
+				B0224BD22ACF1A21002D57CB /* view */,
+			);
+			path = DialogComputers;
+			sourceTree = "<group>";
+		};
+		B0224BD22ACF1A21002D57CB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */,
+				B0224BCA2ACF1A1D002D57CB /* DialogInputMoneyViewController.xib */,
+				B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */,
+				B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		B0B5B341377929BBBB0C4305 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,26 +1009,6 @@
 				FE4EB36E2AC719EC00BB2D79 /* ItemFoodTableViewCell.xib */,
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		FE4EB3712AC7394700BB2D79 /* DialogComputer */ = {
-			isa = PBXGroup;
-			children = (
-				FE4EB3722AC739AD00BB2D79 /* view */,
-			);
-			path = DialogComputer;
-			sourceTree = "<group>";
-		};
-		FE4EB3722AC739AD00BB2D79 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				FE4EB3732AC739AD00BB2D79 /* DialogInputMoneyViewController.swift */,
-				FE4EB3742AC739AD00BB2D79 /* DialogInputMoneyViewController.xib */,
-				FE4EB3752AC739AD00BB2D79 /* DialogInputQuantityViewController.xib */,
-				FE4EB3762AC739AD00BB2D79 /* DialogInputQuantityViewController.swift */,
-			);
-			name = view;
-			path = ../../../../../../../../Downloads/supplier_app/Supplier/Scenes/DialogInputData/view;
 			sourceTree = "<group>";
 		};
 		FE4EE4502A9CF278008E7F1D /* cell */ = {
@@ -2681,7 +2680,7 @@
 		FEAC96C52A5A561700B49C80 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
-				FE4EB3712AC7394700BB2D79 /* DialogComputer */,
+				B0224BC92ACF19FA002D57CB /* DialogComputers */,
 				FE5EA0EE2AAE212B0039DEC3 /* Manager */,
 				FE69A8A22AA190220017D891 /* DialogShow */,
 				FEEF09522A9500A400756BC8 /* video */,
@@ -2997,15 +2996,16 @@
 				FE71C6612AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.xib in Resources */,
 				FE6E5CB82A7A985E00467358 /* HomeViewController.xib in Resources */,
 				FE5C40F92AB0A6AC00BC7BF9 /* ItemEmployeeTableViewCell.xib in Resources */,
-				FE4EB3782AC739AD00BB2D79 /* DialogInputMoneyViewController.xib in Resources */,
 				FE69A8AA2AA1A2C90017D891 /* NewFeedViewController.xib in Resources */,
 				FEAB99212AC1D90900F024D5 /* ManagementRoomCreateViewController.xib in Resources */,
+				B0224BCF2ACF1A1E002D57CB /* DialogInputQuantityViewController.xib in Resources */,
 				FE50991E2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
 				FE59CF412AA3994300A6ADAA /* AccountInfoViewController.xib in Resources */,
 				FE5C9E832AA42BE300FA235D /* Roboto-Regular.ttf in Resources */,
 				FE69A8A62AA1909F0017D891 /* DialogViewController.xib in Resources */,
 				FE5C1D212AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib in Resources */,
+				B0224BCE2ACF1A1E002D57CB /* DialogInputMoneyViewController.xib in Resources */,
 				FE5C9E872AA42BE300FA235D /* Roboto-Condensed.ttf in Resources */,
 				FE5C9E8E2AA42BE300FA235D /* Roboto-Bold.ttf in Resources */,
 				FE59CF382AA36DCA00A6ADAA /* ItemDetailVideoShortCollectionViewCell.xib in Resources */,
@@ -3035,7 +3035,6 @@
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
 				FE4BAAB32ACAD2040010C0B9 /* ItemComboFoodAddTableViewCell.xib in Resources */,
 				FEFBFB752A9F93A800A85879 /* itemMovieTableViewCell.xib in Resources */,
-				FE4EB3792AC739AD00BB2D79 /* DialogInputQuantityViewController.xib in Resources */,
 				FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */,
 				FE5C9E842AA42BE300FA235D /* Roboto-MediumItalic.ttf in Resources */,
 				FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */,
@@ -3172,7 +3171,6 @@
 				FE59AE262AB3616D00D4E1F6 /* ManagementMovieViewController.swift in Sources */,
 				FE4BAAA32ACABF350010C0B9 /* PaymentBillViewController.swift in Sources */,
 				FE53784B2AB49B9800B5141D /* ManagementMovieViewController+Extensions.swift in Sources */,
-				FE4EB3772AC739AD00BB2D79 /* DialogInputMoneyViewController.swift in Sources */,
 				FE6BD1822AC859A000177093 /* MangamentFoodItemViewModel.swift in Sources */,
 				FE5A14AE2AC99CD1005739E4 /* BookingProductComboRouter.swift in Sources */,
 				FEAC969A2A5A55CC00B49C80 /* ViewController.swift in Sources */,
@@ -3265,6 +3263,7 @@
 				FE7BA9942A5AFE2700344EFB /* AccountViewController.swift in Sources */,
 				FE6E5CB72A7A985E00467358 /* HomeViewController.swift in Sources */,
 				FE6B146A2AAC7FFC009ADA30 /* Cinema.swift in Sources */,
+				B0224BD02ACF1A1E002D57CB /* DialogInputMoneyViewController.swift in Sources */,
 				FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */,
 				FE745FF92A7EB30D0091C0FA /* Movie.swift in Sources */,
 				FE4EB36F2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift in Sources */,
@@ -3315,7 +3314,6 @@
 				FE5010AD2AC02D6C00B18D21 /* ManagementRoomViewModel.swift in Sources */,
 				FE69A8A52AA1909F0017D891 /* DialogViewController.swift in Sources */,
 				FE33F3852A6CC73900A396A1 /* Utils.swift in Sources */,
-				FE4EB37A2AC739AD00BB2D79 /* DialogInputQuantityViewController.swift in Sources */,
 				FE5D08232AA2337E004FA3D9 /* MovieViewModel.swift in Sources */,
 				FE52546E2AC32604003229A0 /* ManagementBillProductViewController.swift in Sources */,
 				FE51DE802ABE8D5700D5BE93 /* DialogItemInterestMovieTableViewCell.swift in Sources */,
@@ -3330,6 +3328,7 @@
 				FE5276F32A8D115600252843 /* ItemChairCollectionViewCell.swift in Sources */,
 				FECD093C2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift in Sources */,
 				FE5276EC2A8D08AB00252843 /* BookingChairViewModel.swift in Sources */,
+				B0224BD12ACF1A1E002D57CB /* DialogInputQuantityViewController.swift in Sources */,
 				FE59CF332AA36D6400A6ADAA /* DetailVideoShortViewController+Extension.swift in Sources */,
 				FE519E782A88CBAD007E131E /* BookingViewModel.swift in Sources */,
 				FE5C40F82AB0A6AC00BC7BF9 /* ItemEmployeeTableViewCell.swift in Sources */,

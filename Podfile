@@ -7,8 +7,12 @@ target 'CinemaBook' do
 
   # Pods for CinemaBook
 
- pod 'RxSwift','4.5'
-  pod 'RxCocoa', '4.5'
+ pod 'RxSwift'
+  pod 'RxCocoa'
+ pod 'RxGesture'
+pod 'RxBinding'
+pod 'RxDataSources'
+pod 'RxSwiftExt'
   pod 'ObjectMapper'
    pod 'JonAlert'
   pod 'IQKeyboardManager'
@@ -18,21 +22,21 @@ pod 'Moya'
 pod 'RxGesture'
 pod 'SnapKit'
 pod 'SKPhotoBrowser'
-pod 'Kingfisher', '5.15.0'
+pod 'Kingfisher'
 pod 'youtube-ios-player-helper'
 pod "QVRWeekView"
 pod 'FSCalendar'
 pod 'BmoViewPager'
 pod 'CHTCollectionViewWaterfallLayout'
-pod 'CollectionViewSlantedLayout', '~> 3.1'
+pod 'CollectionViewSlantedLayout'
 pod 'SquareFlowLayout'
  pod 'FSPagerView'
 pod 'PagingCollectionViewLayout'
 pod "MWPhotoBrowser"
-pod 'GravitySliderFlowLayout'
+
 pod 'LNICoverFlowLayout'
  pod 'MarqueeLabel'
   pod 'iOSDropDown'
 pod 'SpreadsheetView'
- pod 'TagListView', '~> 1.0'
+ pod 'TagListView'
 end

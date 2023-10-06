@@ -33,7 +33,7 @@ class AccountViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
-<<<<<<< HEAD
+
 
     @IBAction func btn_actionlogout(_ sender: Any) {
     
@@ -42,8 +42,7 @@ class AccountViewController: BaseViewController {
         
 
     }
-=======
->>>>>>> dungnxt_developer
+
     
     func setup(){
         lbl_name.text = ManageCacheObject.getCurrentUserInfo().fullname

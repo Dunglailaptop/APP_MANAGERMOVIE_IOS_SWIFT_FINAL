@@ -524,15 +524,9 @@ let responseDataFormatter: (Data) -> Data = { data in
     // You can implement custom logic to modify or format the response data here
     return data
 }
+let loggerConfig = NetworkLoggerPlugin.Configuration(logOptions: .requestBody)
+let networkLogger = NetworkLoggerPlugin(configuration: loggerConfig)
 
-// Instantiate the NetworkLoggerPlugin
-let networkLogger = NetworkLoggerPlugin(
-    verbose: true, // Set to true for detailed logging, false otherwise
-    cURL: false,   // Set to true to log requests and responses in cURL format
-   
-    requestDataFormatter: requestDataFormatter, // The closure to format request data
-    responseDataFormatter: responseDataFormatter  // The closure to format response data
-)
 
 
 
