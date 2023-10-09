@@ -29,5 +29,14 @@ class PaymentBillRouter {
     func makePopToViewController() {
         sourceView?.navigationController?.popViewController(animated: true)
     }
+    
+    func makePopToViewControllerSuccessPayment(){
+        sourceView?.navigationController?.popViewController(animated: false)
+    }
+    func makeToBookingChairView(){
+        let viewBookingChair = BookingChairRouter().viewController
+        sourceView?.navigationController?.pushViewController(viewBookingChair, animated: true)
+        
+    }
   
 }

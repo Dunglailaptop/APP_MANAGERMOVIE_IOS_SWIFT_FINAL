@@ -18,6 +18,7 @@ class PaymentBillViewModel: BaseViewModel {
     var dataArray: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     var dataArrayCombo:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     var dataCombo:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
+    var databill: BehaviorRelay<Bill> = BehaviorRelay(value: Bill())
     func bind(view: PaymentBillViewController,router: PaymentBillRouter){
         self.view = view
         self.router = router
@@ -26,6 +27,12 @@ class PaymentBillViewModel: BaseViewModel {
     
     func makePopToViewController() {
         router?.makePopToViewController()
+    }
+    func makeToBookingChairViewController() {
+        router?.makeToBookingChairView()
+    }
+    func makePopToSuccessPayment(){
+        router?.makePopToViewControllerSuccessPayment()
     }
     
     
@@ -38,4 +45,12 @@ extension PaymentBillViewModel {
                         .showAPIErrorToast()
                         .mapObject(type: APIResponse.self)
                 }
+    
+    func postCreateBill() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.PostPaymentBill(bill: databill.value))
+                 .filterSuccessfulStatusCodes()
+                 .mapJSON().asObservable()
+                 .showAPIErrorToast()
+                 .mapObject(type: APIResponse.self)
+    }
 }

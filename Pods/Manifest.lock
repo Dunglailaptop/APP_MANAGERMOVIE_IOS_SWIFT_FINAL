@@ -7,12 +7,105 @@ PODS:
   - CollectionViewSlantedLayout (3.1.1)
   - DACircularProgress (2.3.1)
   - Differentiator (5.0.0)
+  - Firebase/Auth (10.16.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 10.16.0)
+  - Firebase/Core (10.16.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 10.16.0)
+  - Firebase/CoreOnly (10.16.0):
+    - FirebaseCore (= 10.16.0)
+  - Firebase/Database (10.16.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 10.16.0)
+  - FirebaseAnalytics (10.16.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.16.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.16.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.16.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseAppCheckInterop (10.16.0)
+  - FirebaseAuth (10.16.0):
+    - FirebaseAppCheckInterop (~> 10.0)
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GTMSessionFetcher/Core (< 4.0, >= 2.1)
+    - RecaptchaInterop (~> 100.0)
+  - FirebaseCore (10.16.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Logger (~> 7.8)
+  - FirebaseCoreInternal (10.16.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseDatabase (10.16.0):
+    - FirebaseAppCheckInterop (~> 10.16)
+    - FirebaseCore (~> 10.0)
+    - leveldb-library (~> 1.22)
+  - FirebaseInstallations (10.16.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
   - FSCalendar (2.8.4)
   - FSPagerView (0.8.3)
+  - GoogleAppMeasurement (10.16.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.16.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.16.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.16.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.16.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.11.5):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.11.5):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.11.5):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.11.5):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.11.5):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.11.5)"
+  - GoogleUtilities/Reachability (7.11.5):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (7.11.5):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (3.1.1)
   - iOSDropDown (0.4.0)
   - IQKeyboardManager (6.5.15)
   - JonAlert (1.0.0)
   - Kingfisher (6.3.1)
+  - leveldb-library (1.22.2)
   - LNICoverFlowLayout (2.0.0)
   - MarqueeLabel (4.3.2)
   - MBProgressHUD (0.9.2)
@@ -27,9 +120,16 @@ PODS:
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
     - "SDWebImage (!= 3.7.2, ~> 3.7)"
+  - nanopb (2.30909.0):
+    - nanopb/decode (= 2.30909.0)
+    - nanopb/encode (= 2.30909.0)
+  - nanopb/decode (2.30909.0)
+  - nanopb/encode (2.30909.0)
   - ObjectMapper (4.2.0)
   - PagingCollectionViewLayout (0.0.4)
+  - PromisesObjC (2.3.1)
   - QVRWeekView (0.14.1)
+  - RecaptchaInterop (100.0.0)
   - RxBinding (0.5):
     - RxCocoa (~> 6)
     - RxSwift (~> 6)
@@ -59,8 +159,12 @@ PODS:
   - SDWebImage/Core (3.8.3)
   - SKPhotoBrowser (7.1.0)
   - SnapKit (5.6.0)
+  - Socket.IO-Client-Swift (16.1.0):
+    - Starscream (~> 4.0.6)
+  - SocketRocket (0.7.0)
   - SpreadsheetView (0.9.1)
   - SquareFlowLayout (0.0.1)
+  - Starscream (4.0.6)
   - TagListView (1.4.1)
   - youtube-ios-player-helper (1.0.4)
 
@@ -69,6 +173,9 @@ DEPENDENCIES:
   - BmoViewPager
   - CHTCollectionViewWaterfallLayout
   - CollectionViewSlantedLayout
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Database
   - FSCalendar
   - FSPagerView
   - iOSDropDown
@@ -91,6 +198,8 @@ DEPENDENCIES:
   - RxSwiftExt
   - SKPhotoBrowser
   - SnapKit
+  - Socket.IO-Client-Swift
+  - SocketRocket
   - SpreadsheetView
   - SquareFlowLayout
   - TagListView
@@ -104,20 +213,35 @@ SPEC REPOS:
     - CollectionViewSlantedLayout
     - DACircularProgress
     - Differentiator
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAppCheckInterop
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseCoreInternal
+    - FirebaseDatabase
+    - FirebaseInstallations
     - FSCalendar
     - FSPagerView
+    - GoogleAppMeasurement
+    - GoogleUtilities
+    - GTMSessionFetcher
     - iOSDropDown
     - IQKeyboardManager
     - JonAlert
     - Kingfisher
+    - leveldb-library
     - LNICoverFlowLayout
     - MarqueeLabel
     - MBProgressHUD
     - Moya
     - MWPhotoBrowser
+    - nanopb
     - ObjectMapper
     - PagingCollectionViewLayout
+    - PromisesObjC
     - QVRWeekView
+    - RecaptchaInterop
     - RxBinding
     - RxCocoa
     - RxDataSources
@@ -128,8 +252,11 @@ SPEC REPOS:
     - SDWebImage
     - SKPhotoBrowser
     - SnapKit
+    - Socket.IO-Client-Swift
+    - SocketRocket
     - SpreadsheetView
     - SquareFlowLayout
+    - Starscream
     - TagListView
     - youtube-ios-player-helper
 
@@ -140,20 +267,35 @@ SPEC CHECKSUMS:
   CollectionViewSlantedLayout: 24397455acd2461960bc45d394e0ef99c17d03ce
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  Firebase: 25899099b77d255a636e3579c3d9dce10ec150d5
+  FirebaseAnalytics: 7b41efc4eba5ff841cc94d5994b5f339361258f4
+  FirebaseAppCheckInterop: 82358cff9f33452dd44259e88eea5e562500b1cb
+  FirebaseAuth: 3862d87d4d58deff08f705d471896a2f66e8bbf0
+  FirebaseCore: 65a801af84cca84361ef9eac3fd868656968a53b
+  FirebaseCoreInternal: 26233f705cc4531236818a07ac84d20c333e505a
+  FirebaseDatabase: c30143ba53120307f5c37d9ecb9acd780a1f7c55
+  FirebaseInstallations: b822f91a61f7d1ba763e5ccc9d4f2e6f2ed3b3ee
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  GoogleAppMeasurement: 079d7632810e9d9704a99932547ba1554acc4342
+  GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
+  GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
   iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   IQKeyboardManager: 22ffab9bd300ad493485a390a095f5db0c841776
   JonAlert: a83b374ccbf1a14aeb25537d5a3cbe957aac1c2b
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   LNICoverFlowLayout: d7e1067f8f48ff4c7562d40bec23e18698b36353
   MarqueeLabel: 15e524a6762552bb279cb17438b8a94990269fb9
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
+  nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PagingCollectionViewLayout: a75339d9fe45affc116b6770f37c884a8a5e9cd9
+  PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   QVRWeekView: 8b68e870e17bd970f44a5a2017e0bd031c825af3
+  RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   RxBinding: e3c76d02d0ee3f1a306a0fb8e8ef6f2eda65a375
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
@@ -164,11 +306,14 @@ SPEC CHECKSUMS:
   SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
   SKPhotoBrowser: cd95b95a6f352fc2a50992721299f75ead77f9ab
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  Socket.IO-Client-Swift: ee4b8f80a3db18dd7f32b266ddf273310609443c
+  SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   SpreadsheetView: 688dbd19f2b355df0eb09e486266fd913a013449
   SquareFlowLayout: cde3486d3086fb7f95b303d9b90bb86aa9dd98b5
+  Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: f706c47581db05d823a27ba37d341a244df985a8
+PODFILE CHECKSUM: f23d5681074687d752ba6a1b3f4f53fee4da4d05
 
 COCOAPODS: 1.13.0

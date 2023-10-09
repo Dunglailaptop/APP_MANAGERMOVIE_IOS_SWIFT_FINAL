@@ -69,6 +69,14 @@ public extension UIView {
             ToastCoordinator.toastVisibility = .hidden
         })
     }
+    
+    func addShadow() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = .zero
+        layer.shadowOpacity = 0.4
+        layer.shadowRadius = 7
+        layer.backgroundColor = ColorUtils.white().cgColor
+    }
 }
 
 enum ToastVisibility {

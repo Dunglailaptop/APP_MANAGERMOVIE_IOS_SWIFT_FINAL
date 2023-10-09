@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 import ObjectMapper
-
+import FirebaseAuth
 
 class BaseViewController: UIViewController {
    var viewModels = BaseViewModel()
@@ -169,4 +169,7 @@ extension BaseViewController{
        return UIApplication.shared.keyWindow
    }
     
+}
+extension BaseViewController {
+   
 }

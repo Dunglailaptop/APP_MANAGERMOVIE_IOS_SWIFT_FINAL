@@ -26,7 +26,8 @@ class MangamentProductRouter {
     }
     
    func navigationtocreateproduct() {
-         let viewcreateproduct = CreateProductRouter().viewController
+         let viewcreateproduct = CreateProductRouter().viewController as! CreateProductViewController
+       viewcreateproduct.type = "CREATE"
     sourceView?.navigationController?.pushViewController(viewcreateproduct, animated: true)
      }
     func navigationPopToViewController() {

@@ -39,6 +39,10 @@ struct InfoInterestMovie: Mappable {
         var nameroom = ""
         var namecinema = ""
       var poster = ""
+    var idcinema = 0
+    var idinterest = 0
+    var idmovie = 0
+    
     init() {
         
     }
@@ -55,5 +59,8 @@ struct InfoInterestMovie: Mappable {
           nameroom <- map["nameroom"]
           namecinema <- map["namecinema"]
            poster <- map["poster"]
+        idcinema <- map["idcinema"]
+        idmovie <- map["idmovie"]
+        idinterest <- map["idinterest"]
     }
 }

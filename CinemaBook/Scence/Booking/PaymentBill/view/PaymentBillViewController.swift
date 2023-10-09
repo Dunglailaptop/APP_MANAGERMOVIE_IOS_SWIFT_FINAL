@@ -10,10 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 import ObjectMapper
+import JonAlert
 
 class PaymentBillViewController: UIViewController {
     
-    
+    var callPopViewController:() -> Void = {}
     @IBOutlet weak var image_check_2: UIImageView!
     @IBOutlet weak var image_check_1: UIImageView!
     @IBOutlet weak var image_check: UIImageView!
@@ -67,7 +68,10 @@ class PaymentBillViewController: UIViewController {
         viewModel.makePopToViewController()
     }
     
-
+    @IBAction func btn_paymentbill(_ sender: Any) {
+        PaymentBill()
+    }
+    
 }
 
 extension PaymentBillViewController {
@@ -99,6 +103,28 @@ extension PaymentBillViewController {
         height_table.constant = CGFloat(dataFoodCombo.count * 50)
         height_combofoodadd.constant = height_table.constant + 100
         height_scroll.constant = height_combofoodadd.constant + 950
+        acceptValueBill()
+    }
+    
+    func acceptValueBill() {
+        var billinfo = viewModel.databill.value
+        dLog(infoInterestMovie.idinterest)
+        billinfo.iduser = ManageCacheObject.getCurrentUserInfo().idusers
+        billinfo.quantityticket = dataChair.count
+        billinfo.note = "ko co noi dung gi"
+        billinfo.statusbill = 1
+        billinfo.totalamount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
+        billinfo.idmovie = infoInterestMovie.idcinema
+        billinfo.idcinema = infoInterestMovie.idcinema
+        billinfo.idinterest = infoInterestMovie.idinterest
+        dataChair.enumerated().forEach{ (index,value) in
+            var dataticket = ticket()
+            dataticket.idchair = value.idchair
+            dataticket.idinterest = infoInterestMovie.idinterest
+            billinfo.tickets.append(dataticket)
+        }
+        billinfo.combobills = dataFoodCombo
+        viewModel.databill.accept(billinfo)
     }
     
     func getListCombo() {
@@ -111,6 +137,23 @@ extension PaymentBillViewController {
                }
            })
        }
+    
+    func PaymentBill() {
+        viewModel.postCreateBill().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<Bill>().map(JSONObject: response.data)
+                {
+                    JonAlert.showSuccess(message: "Thanh toan thanh cong")
+                    self.viewModel.makePopToSuccessPayment()
+                    self.callPopViewController()
+                }
+            } else {
+                JonAlert.showError(message: response.message ?? "Co loi trong qua trinh ket noi")
+            }
+        })
+    }
+    
 }
 extension PaymentBillViewController {
     func registertable() {

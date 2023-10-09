@@ -34,6 +34,7 @@ class BookingProductComboRouter {
         viewPayment.dataChair = dataChairs
         viewPayment.infoInterestMovie = infoInterestMovie
         viewPayment.dataFoodCombo = dataFoodCombo
+        viewPayment.callPopViewController = makePopToViewController
         sourceView?.navigationController?.pushViewController(viewPayment, animated: true)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol RestartApp {
     func restartApp()
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,RestartApp {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        FirebaseApp.configure()
         window = UIWindow(frame: UIScreen.main.bounds)
         navigationController.setViewControllers([SplachScreenViewController()], animated: true)
         window?.rootViewController = navigationController

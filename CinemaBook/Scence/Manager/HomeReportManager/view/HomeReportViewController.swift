@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeReportViewController: UIViewController {
+class HomeReportViewController: BaseViewController {
 
       weak var timer: Timer?
     @IBOutlet weak var lbl_time: UILabel!

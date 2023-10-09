@@ -44,6 +44,7 @@ enum ManagerConnections {
     case getListCategoryFood
     case UpdateFoodCombo(idcombo:Int,nametittle:String,discription:String,priceCombo:Int,picture:String,foodCreates: [FoodOfCombo])
     case getInfoInterestMovie(idmovie:Int,idcinema:Int,idroom:Int,idinterest:Int)
+    case PostPaymentBill(bill:Bill)
 }
 
 extension ManagerConnections: TargetType {
@@ -120,6 +121,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlUpdateinfofoodCombo
         case .getInfoInterestMovie(let idmovie,let idcinema,let idroom, let idinterest):
             return APIEndPoint.Name.urlGetInfoInterestMovie
+        case .PostPaymentBill(_):
+            return APIEndPoint.Name.urlPostPayMentBill
         }
     
     }
@@ -189,6 +192,8 @@ extension ManagerConnections: TargetType {
             return .post
         case .getInfoInterestMovie(_,_,_,_):
             return .get
+        case .PostPaymentBill(_):
+            return .post
         }
 
         
@@ -280,6 +285,8 @@ extension ManagerConnections: TargetType {
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getInfoInterestMovie(_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .PostPaymentBill(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -421,6 +428,23 @@ extension ManagerConnections: TargetType {
                 "idroom":idroom,
                 "idinterest": idinterest
             ]
+        case .PostPaymentBill(let bill):
+            return [
+                "idaccount": bill.iduser,
+                "idbill": bill.idbill,
+                "idmovie": bill.idmovie,
+                "idvoucher": bill.idvoucher,
+                "iduser": bill.iduser,
+                "idinterest": bill.idinterest,
+                "idcinema": bill.idcinema,
+                "quantityticket": bill.quantityticket,
+                "vat": bill.vat,
+                "totalamount": bill.totalamount,
+                "note": bill.note,
+                "statusbill": bill.statusbill,
+                "ticket": bill.tickets.toJSON(),
+                "combobill": bill.combobills.toJSON()
+            ]
         }
        
     }
@@ -497,6 +521,8 @@ extension ManagerConnections: TargetType {
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getInfoInterestMovie(_,_,_,_):
               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .PostPaymentBill(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 
