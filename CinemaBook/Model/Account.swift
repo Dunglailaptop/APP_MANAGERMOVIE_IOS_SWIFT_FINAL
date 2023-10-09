@@ -11,7 +11,7 @@ import ObjectMapper
 struct Account: Mappable{
     var id = 0
     var username = ""
-    
+    var password = ""
     
     init() {
         
@@ -24,6 +24,6 @@ struct Account: Mappable{
     mutating func mapping(map: Map) {
         id <- map["id"]
         username <- map["username"]
-        
+        password <- map["password"]
     }
 }

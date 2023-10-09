@@ -8,6 +8,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import FirebaseAuth
 
 extension AccountViewController {
     func register() {
@@ -34,7 +35,7 @@ extension AccountViewController {
                 cell.btn_logout.rx.tap.asDriver().drive(onNext: { [weak self]  in
                     self?.presentModalLogout()
                 }).disposed(by: self.rxbag)
-                
+                cell.selectionStyle = .none
                 return cell
             default:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
@@ -57,7 +58,14 @@ extension AccountViewController: UITableViewDelegate {
 }
 extension AccountViewController: LogoutConfirm {
     func callbackAccessConfirm() {
+        do {
+            dLog("dang suat thanh cong")
+          try  FirebaseAuth.Auth.auth().signOut()
+        } catch {
+            dLog("Co loi xay rar")
+        }
         self.logout()
+        
     }
     
     func presentModalLogout() {

@@ -12,10 +12,23 @@
 		B0224BCF2ACF1A1E002D57CB /* DialogInputQuantityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */; };
 		B0224BD02ACF1A1E002D57CB /* DialogInputMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */; };
 		B0224BD12ACF1A1E002D57CB /* DialogInputQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */; };
+		B0A7B26E2AD3FCB10035828C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B26C2AD3FCB10035828C /* MessageViewController.swift */; };
+		B0A7B26F2AD3FCB10035828C /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A7B26D2AD3FCB10035828C /* MessageViewController.xib */; };
+		B0A7B2712AD3FFF60035828C /* MessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B2702AD3FFF60035828C /* MessageRouter.swift */; };
+		B0A7B2732AD400040035828C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B2722AD400040035828C /* MessageViewModel.swift */; };
+		B0A7B2792AD406040035828C /* MessageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B2772AD406040035828C /* MessageControlViewController.swift */; };
+		B0A7B27A2AD406040035828C /* MessageControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A7B2782AD406040035828C /* MessageControlViewController.xib */; };
 		B0AF7A352AD3B9D7008AE1F2 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */; };
+		B0AF7A392AD3E2DC008AE1F2 /* ChatMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */; };
+		B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AF7A382AD3E2DC008AE1F2 /* ChatMessageViewController.xib */; };
+		B0AF7A412AD3E6AB008AE1F2 /* ItemChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A3F2AD3E6AB008AE1F2 /* ItemChatTableViewCell.swift */; };
+		B0AF7A422AD3E6AB008AE1F2 /* ItemChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AF7A402AD3E6AB008AE1F2 /* ItemChatTableViewCell.xib */; };
+		B0AF7A442AD3E7D9008AE1F2 /* ChatMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A432AD3E7D9008AE1F2 /* ChatMessageViewModel.swift */; };
+		B0AF7A462AD3E7EA008AE1F2 /* ChatMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A452AD3E7EA008AE1F2 /* ChatMessageRouter.swift */; };
 		B0AF91722AD004C2000035DB /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91712AD004C2000035DB /* Bill.swift */; };
 		B0BD0A512AD2F1720099FB2C /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD0A502AD2F1720099FB2C /* SocketIOManager.swift */; };
 		B0BD0A532AD2FF870099FB2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0BD0A522AD2FF870099FB2C /* GoogleService-Info.plist */; };
+		B0EBEEA72AD4372100521CF1 /* StorageBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBEEA62AD4372100521CF1 /* StorageBaseManager.swift */; };
 		FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */; };
 		FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */; };
 		FE0F290C2A5AF4DC008C62CD /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0F290A2A5AF4DC008C62CD /* MenuViewController.xib */; };
@@ -372,10 +385,23 @@
 		B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogInputQuantityViewController.xib; sourceTree = "<group>"; };
 		B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputMoneyViewController.swift; sourceTree = "<group>"; };
 		B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputQuantityViewController.swift; sourceTree = "<group>"; };
+		B0A7B26C2AD3FCB10035828C /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		B0A7B26D2AD3FCB10035828C /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		B0A7B2702AD3FFF60035828C /* MessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRouter.swift; sourceTree = "<group>"; };
+		B0A7B2722AD400040035828C /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		B0A7B2772AD406040035828C /* MessageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageControlViewController.swift; sourceTree = "<group>"; };
+		B0A7B2782AD406040035828C /* MessageControlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageControlViewController.xib; sourceTree = "<group>"; };
 		B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
+		B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewController.swift; sourceTree = "<group>"; };
+		B0AF7A382AD3E2DC008AE1F2 /* ChatMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMessageViewController.xib; sourceTree = "<group>"; };
+		B0AF7A3F2AD3E6AB008AE1F2 /* ItemChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatTableViewCell.swift; sourceTree = "<group>"; };
+		B0AF7A402AD3E6AB008AE1F2 /* ItemChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemChatTableViewCell.xib; sourceTree = "<group>"; };
+		B0AF7A432AD3E7D9008AE1F2 /* ChatMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewModel.swift; sourceTree = "<group>"; };
+		B0AF7A452AD3E7EA008AE1F2 /* ChatMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageRouter.swift; sourceTree = "<group>"; };
 		B0AF91712AD004C2000035DB /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		B0BD0A502AD2F1720099FB2C /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		B0BD0A522AD2FF870099FB2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0EBEEA62AD4372100521CF1 /* StorageBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageBaseManager.swift; sourceTree = "<group>"; };
 		F1358A0C5EED4EAF251BF12C /* Pods_CinemaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinemaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Extensions.swift"; sourceTree = "<group>"; };
 		FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -768,6 +794,113 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		B0A7B2682AD3FC6A0035828C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B26B2AD3FC7F0035828C /* viewModel */,
+				B0A7B26A2AD3FC7B0035828C /* Router */,
+				B0A7B2692AD3FC780035828C /* view */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		B0A7B2692AD3FC780035828C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B26C2AD3FCB10035828C /* MessageViewController.swift */,
+				B0A7B26D2AD3FCB10035828C /* MessageViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0A7B26A2AD3FC7B0035828C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B2702AD3FFF60035828C /* MessageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0A7B26B2AD3FC7F0035828C /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B2722AD400040035828C /* MessageViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0A7B2742AD405B90035828C /* MessageController */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B2752AD405CF0035828C /* MessageControl */,
+				B0A7B2682AD3FC6A0035828C /* Message */,
+			);
+			path = MessageController;
+			sourceTree = "<group>";
+		};
+		B0A7B2752AD405CF0035828C /* MessageControl */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B2762AD405E10035828C /* view */,
+			);
+			path = MessageControl;
+			sourceTree = "<group>";
+		};
+		B0A7B2762AD405E10035828C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B2772AD406040035828C /* MessageControlViewController.swift */,
+				B0A7B2782AD406040035828C /* MessageControlViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0AF7A362AD3E2AE008AE1F2 /* MessageChatAndNotifaction */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7B2742AD405B90035828C /* MessageController */,
+				B0AF7A3D2AD3E2E6008AE1F2 /* Router */,
+				B0AF7A3C2AD3E2E2008AE1F2 /* viewModel */,
+				B0AF7A3B2AD3E2E0008AE1F2 /* view */,
+			);
+			path = MessageChatAndNotifaction;
+			sourceTree = "<group>";
+		};
+		B0AF7A3B2AD3E2E0008AE1F2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF7A3E2AD3E68D008AE1F2 /* cell */,
+				B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */,
+				B0AF7A382AD3E2DC008AE1F2 /* ChatMessageViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0AF7A3C2AD3E2E2008AE1F2 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF7A432AD3E7D9008AE1F2 /* ChatMessageViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0AF7A3D2AD3E2E6008AE1F2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF7A452AD3E7EA008AE1F2 /* ChatMessageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0AF7A3E2AD3E68D008AE1F2 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF7A3F2AD3E6AB008AE1F2 /* ItemChatTableViewCell.swift */,
+				B0AF7A402AD3E6AB008AE1F2 /* ItemChatTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		B0B5B341377929BBBB0C4305 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -854,6 +987,7 @@
 				FE4EB36A2AC7184700BB2D79 /* ConfigValue.swift */,
 				B0BD0A502AD2F1720099FB2C /* SocketIOManager.swift */,
 				B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */,
+				B0EBEEA62AD4372100521CF1 /* StorageBaseManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -2691,6 +2825,7 @@
 		FEAC96C52A5A561700B49C80 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
+				B0AF7A362AD3E2AE008AE1F2 /* MessageChatAndNotifaction */,
 				B0224BC92ACF19FA002D57CB /* DialogComputers */,
 				FE5EA0EE2AAE212B0039DEC3 /* Manager */,
 				FE69A8A22AA190220017D891 /* DialogShow */,
@@ -3025,6 +3160,7 @@
 				FE502C942A9BA41E00779055 /* TimeShowViewController.xib in Resources */,
 				FE51B88F2A9A5B5B00A1495D /* ListChairBookiingTableViewCell.xib in Resources */,
 				FE5EA1002AAE21E10039DEC3 /* ManagementViewController.xib in Resources */,
+				B0A7B26F2AD3FCB10035828C /* MessageViewController.xib in Resources */,
 				FE5EA0E72AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.xib in Resources */,
 				FE52523C2AAF79CC00296246 /* ManagementEmployeeViewController.xib in Resources */,
 				FE4BAAAF2ACAD1E20010C0B9 /* itemComboFoodCollectionViewCell.xib in Resources */,
@@ -3035,6 +3171,7 @@
 				FE4E70F52AC524C30020BC2C /* OrderProductViewController.xib in Resources */,
 				FE11FA792AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib in Resources */,
 				FE5010A72AC0290200B18D21 /* ManagementRoomViewController.xib in Resources */,
+				B0A7B27A2AD406040035828C /* MessageControlViewController.xib in Resources */,
 				FE5C9E8C2AA42BE300FA235D /* Roboto-Italic.ttf in Resources */,
 				FE59CF2B2AA36BDF00A6ADAA /* DetailVideoShortViewController.xib in Resources */,
 				FE52546F2AC32604003229A0 /* ManagementBillProductViewController.xib in Resources */,
@@ -3069,6 +3206,7 @@
 				FE5254632AC31857003229A0 /* ManagementBillViewController.xib in Resources */,
 				FE5461212AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
+				B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */,
 				FE6A85FC2AC5D9F700810FFB /* ItemCollectionProductCategoryCollectionViewCell.xib in Resources */,
 				FE5C9E862AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				FE51DE862ABE98A700D5BE93 /* ItemInterestMovieListManagementCollectionViewCell.xib in Resources */,
@@ -3093,6 +3231,7 @@
 				FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */,
 				FE5A14B52AC9A089005739E4 /* ItemProductComboTableViewCell.xib in Resources */,
 				FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */,
+				B0AF7A422AD3E6AB008AE1F2 /* ItemChatTableViewCell.xib in Resources */,
 				FE4EB3702AC719EC00BB2D79 /* ItemFoodTableViewCell.xib in Resources */,
 				FE6BD1872AC85D0B00177093 /* ItemFoodInManagementTableViewCell.xib in Resources */,
 				FE71C65C2AB7FA310029D84B /* DialogPopupListMovieViewController.xib in Resources */,
@@ -3172,6 +3311,7 @@
 				FEC1E3F02A9CD481005A9F16 /* TimeShowRouter.swift in Sources */,
 				FE6533872AAA172100C0739B /* BannerTraillerVideoTableViewCell.swift in Sources */,
 				FE59CF372AA36DCA00A6ADAA /* ItemDetailVideoShortCollectionViewCell.swift in Sources */,
+				B0A7B2792AD406040035828C /* MessageControlViewController.swift in Sources */,
 				B0BD0A512AD2F1720099FB2C /* SocketIOManager.swift in Sources */,
 				FE33F3792A6CC68E00A396A1 /* Constans.swift in Sources */,
 				FE53AE472AAC29750082B8FC /* voucher.swift in Sources */,
@@ -3232,6 +3372,7 @@
 				FE2172AE2A76B299000C0C17 /* UIImage+Extension.swift in Sources */,
 				FE5A14B82AC9AC2D005739E4 /* BookingProductComboViewController+Extensions.swift in Sources */,
 				FE5099222AB80E8E00ED0CBA /* itemRoomInterestManagementTableViewCell.swift in Sources */,
+				B0EBEEA72AD4372100521CF1 /* StorageBaseManager.swift in Sources */,
 				FE5D081E2AA22019004FA3D9 /* MovieViewController.swift in Sources */,
 				FE2172B52A76B606000C0C17 /* CustomViewController.swift in Sources */,
 				FE5096612A76578C00F5A457 /* SplachScreenViewModel.swift in Sources */,
@@ -3281,7 +3422,9 @@
 				FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */,
 				FE745FF92A7EB30D0091C0FA /* Movie.swift in Sources */,
 				FE4EB36F2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift in Sources */,
+				B0AF7A442AD3E7D9008AE1F2 /* ChatMessageViewModel.swift in Sources */,
 				FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */,
+				B0AF7A412AD3E6AB008AE1F2 /* ItemChatTableViewCell.swift in Sources */,
 				FE59AE2B2AB366BA00D4E1F6 /* ManagementMovieViewModel.swift in Sources */,
 				FE5C9E6D2AA428CC00FA235D /* SambagDatePickerResult.swift in Sources */,
 				FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */,
@@ -3302,6 +3445,7 @@
 				FE6A86062AC5E66A00810FFB /* CreateProductRouter.swift in Sources */,
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
 				FE5EA0F62AAE218D0039DEC3 /* HomeReportViewController.swift in Sources */,
+				B0A7B26E2AD3FCB10035828C /* MessageViewController.swift in Sources */,
 				B0AF7A352AD3B9D7008AE1F2 /* FireBaseManager.swift in Sources */,
 				FE4E71042AC52EA70020BC2C /* OrderProductViewModel.swift in Sources */,
 				FE59CF432AA39D8100A6ADAA /* AccountInfoRouter.swift in Sources */,
@@ -3327,6 +3471,7 @@
 				FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */,
 				FE59CF402AA3994300A6ADAA /* AccountInfoViewController.swift in Sources */,
 				FE4E71072AC52F1B0020BC2C /* OrderProductRouter.swift in Sources */,
+				B0AF7A392AD3E2DC008AE1F2 /* ChatMessageViewController.swift in Sources */,
 				FE5010AD2AC02D6C00B18D21 /* ManagementRoomViewModel.swift in Sources */,
 				FE69A8A52AA1909F0017D891 /* DialogViewController.swift in Sources */,
 				FE33F3852A6CC73900A396A1 /* Utils.swift in Sources */,
@@ -3351,6 +3496,7 @@
 				FE22C3202ABA08F300DB72B4 /* AutoInterest.swift in Sources */,
 				FE519E752A88CB9A007E131E /* BookingTicketViewController.swift in Sources */,
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
+				B0AF7A462AD3E7EA008AE1F2 /* ChatMessageRouter.swift in Sources */,
 				FE6BD17D2AC8595900177093 /* MangamentFoodItemViewController.swift in Sources */,
 				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
@@ -3370,6 +3516,7 @@
 				FEFCF4392A76B7E90023B4D1 /* UIImageView+Extension.swift in Sources */,
 				FE5C1D202AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.swift in Sources */,
 				FEAC96982A5A55CC00B49C80 /* AppDelegate.swift in Sources */,
+				B0A7B2732AD400040035828C /* MessageViewModel.swift in Sources */,
 				FE7460052A7EB8B00091C0FA /* MovieItemTableViewCell.swift in Sources */,
 				FE745FF72A7EB0210091C0FA /* TicketRouter.swift in Sources */,
 				FE74CE132A91C46F0069259C /* Users.swift in Sources */,
@@ -3389,6 +3536,7 @@
 				FE5C9E672AA427BB00FA235D /* SambagMonthYearPickerResult.swift in Sources */,
 				FE53AE492AAC2AA10082B8FC /* Trailler.swift in Sources */,
 				FE5D083B2AA24D7B004FA3D9 /* MovieItemCollectionViewCell.swift in Sources */,
+				B0A7B2712AD3FFF60035828C /* MessageRouter.swift in Sources */,
 				FE5C9E612AA427BB00FA235D /* SambagYearPickerResult.swift in Sources */,
 				FE33F37A2A6CC68E00A396A1 /* Struct.swift in Sources */,
 				FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */,

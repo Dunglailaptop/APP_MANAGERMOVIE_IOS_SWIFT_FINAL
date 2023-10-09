@@ -35,8 +35,10 @@ class HomeViewController: BaseViewController {
         Register()
         bindingtable()
        setupView()
-        FireBaseManager.shared.LoginUser(email: "ndung983@gmail.com", password: "123456")
-  
+      
+        
+      
+       
     
 //       testSocket()
     }

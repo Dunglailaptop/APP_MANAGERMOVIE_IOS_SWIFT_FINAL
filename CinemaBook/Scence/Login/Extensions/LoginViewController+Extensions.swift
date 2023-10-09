@@ -35,11 +35,12 @@ extension LoginViewController {
          (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue{
                     if let account = Mapper<Users>().map(JSONObject: response.data) {
-                               
+                      
                                 ManageCacheObject.saveCurrentUserInfo(account)
                                  self.viewModel.makeToMenuViewController()
                                 self.viewModel.iduser.accept(account.idusers)
                                 self.getCinema()
+                        
                                 dLog(account)
                             }
             }else {

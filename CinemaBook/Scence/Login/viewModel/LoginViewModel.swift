@@ -30,14 +30,17 @@ class LoginViewModel {
         router?.navigateToMenuViewController()
     }
     
-   var username = BehaviorRelay<String>(value: "")
-    var password = BehaviorRelay<String>(value: "")
+    var account: BehaviorRelay<Account> = BehaviorRelay(value: Account())
    var iduser = BehaviorRelay<Int>(value: 0)
 
 }
 extension LoginViewModel{
     func getLogin() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.Login(username: username.value, password: password.value))
+    
+        FireBaseManager.shared.LoginUser(email: "ndung983@gmail.com", password: "123456",username: account.value.username)
+       
+      
+        return appServiceProvider.rx.request(.Login(username: account.value.username, password: account.value.password))
             .filterSuccessfulStatusCodes()
             .mapJSON().asObservable()
             .showAPIErrorToast()
@@ -45,7 +48,7 @@ extension LoginViewModel{
     }
     
     func getConfig() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.config(username: username.value))
+        return appServiceProvider.rx.request(.config(username: account.value.username))
         .filterSuccessfulStatusCodes()
         .mapJSON().asObservable()
         .showAPIErrorToast()

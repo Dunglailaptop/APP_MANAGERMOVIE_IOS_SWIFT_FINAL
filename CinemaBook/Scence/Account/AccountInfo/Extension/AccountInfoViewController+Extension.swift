@@ -128,7 +128,7 @@ extension AccountInfoViewController: UIImagePickerControllerDelegate, UINavigati
                // Lưu ảnh đã chọn vào biến imageView
                avatar.image = selectedImage
                self.imagecover.append(selectedImage)
-               
+               imageAvatarFireBase = selectedImage
                // Lấy URL của ảnh đã chọn
                if let imageUrl = info[.imageURL] as? URL {
                    let imageName = imageUrl.lastPathComponent

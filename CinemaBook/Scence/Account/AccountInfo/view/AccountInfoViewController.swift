@@ -9,6 +9,8 @@
 import UIKit
 import MWPhotoBrowser
 import iOSDropDown
+import FirebaseAuth
+import JonAlert
 
 class AccountInfoViewController: BaseViewController {
 
@@ -28,7 +30,7 @@ class AccountInfoViewController: BaseViewController {
     var imagecover = [UIImage]()
      var selectedAssets = [PHAsset]()
     var nameImage: [String] = []
-    
+    var imageAvatarFireBase = UIImage()
     @IBOutlet weak var lbl_btn_title: UILabel!
     @IBOutlet weak var txt_email: UITextField!
     @IBOutlet weak var txt_username: UITextField!
@@ -143,7 +145,8 @@ class AccountInfoViewController: BaseViewController {
     
     @IBAction func btn_updateAccount(_ sender: Any) {
         if imagecover.count > 0 {
-            self.postUpdateWithAvatar()
+            createUserFireBase(imageView: imageAvatarFireBase)
+//            self.postUpdateWithAvatar()
         }else {
             type_dy == "CREATE"  ? self.postCreateEmployee():self.postUpdateAccount()
         }
@@ -175,4 +178,64 @@ class AccountInfoViewController: BaseViewController {
     }
     
     
+}
+
+//CALL CONNECT FIREBASE
+extension AccountInfoViewController {
+    func createUserFireBase(imageView: UIImage) {
+      
+            createUser(email: ManageCacheObject.getCurrentUserInfo().email, password: "123456", imageView: imageView)
+    
+//        FireBaseManager.shared.createUser(email: ManageCacheObject.getCurrentUserInfo().email, password: "123456", imageView: imageView)
+    }
+    
+    func createUser(email: String, password: String, imageView: UIImage) {
+        var safeEmail = email.replacingOccurrences(of: ".", with: "-")
+        safeEmail = safeEmail.replacingOccurrences(of: "@", with: "-")
+
+        FireBaseManager.shared.userExists(with: safeEmail) { [weak self] exists in
+            guard let strongSelf = self else {
+                return
+            }
+
+            guard !exists else {
+                JonAlert.showError(message: "User Already exists")
+                return
+            }
+
+            do {
+                try FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    guard let result = authResult, error == nil else {
+                        dLog("Error firebase: \(error?.localizedDescription ?? "Unknown error")")
+                        return
+                    }
+
+                    let chatUser = ChatAppUser(firstName: ManageCacheObject.getCurrentUser().username, lastName: ManageCacheObject.getCurrentUserInfo().fullname, emailAddress: safeEmail)
+
+                    FireBaseManager.shared.insertUser(with: chatUser) { success in
+                        guard let data = imageView.pngData() else {
+                            return
+                        }
+
+                        let filename = chatUser.imageProfile
+
+                        StorageManager.shared.uploadProfilePicture(with: data, fileName: filename) { result in
+                            switch result {
+                            case .success(let downloadurl):
+                                UserDefaults.standard.set(downloadurl, forKey: "profile_picture_url")
+                                dLog(downloadurl)
+                            case .failure(let error):
+                                dLog(error)
+                            }
+                        }
+                    }
+
+                    let user = result.user
+                    dLog("create user: \(user)")
+                }
+            } catch {
+                dLog("Error creating user: \(error.localizedDescription)")
+            }
+        }
+    }
 }
