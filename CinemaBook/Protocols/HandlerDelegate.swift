@@ -37,3 +37,10 @@ protocol InputMoneyDelegate {
 protocol InputQuantityDelegate {
     func callbackInputQuantity(number:Float, position:Int)
 }
+
+protocol DialogNotPayment {
+    func callBackDialogNotPayment()
+}
+protocol DialogPayment {
+    func callbackPayment()
+}

@@ -23,38 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D6500559-3C39-46B9-B112-49C57AEB3B3E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CinemaBook/Scence/Booking/PaymentBill/view/PaymentBillViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "PaymentBill()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D8516CF5-AF71-4E78-9B90-FE8B676EBA0E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CinemaBook/Scence/Booking/PaymentBill/view/PaymentBillViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "acceptValueBill()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2D067689-BD8B-42D4-AC83-16E74F9F6C5A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -204,9 +172,9 @@
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "createUser(email:password:imageView:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "checkExists(email:password:imageView:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -284,6 +252,81 @@
                   endingLineNumber = "76"
                   offsetFromSymbolStart = "108">
                </Location>
+               <Location
+                  uuid = "9C5A47FC-6476-4042-A65A-B5E0AEFDF400 - 871c83a6bd400572"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "9C5A47FC-6476-4042-A65A-B5E0AEFDF400 - fe5830e1690ae8c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "9C5A47FC-6476-4042-A65A-B5E0AEFDF400 - fe5830e1690ae8c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "9C5A47FC-6476-4042-A65A-B5E0AEFDF400 - fe5830e1690ae8c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "9C5A47FC-6476-4042-A65A-B5E0AEFDF400 - fe5830e1690ae847"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "116">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -345,9 +388,9 @@
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "createUser(email:password:imageView:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "checkExists(email:password:imageView:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -393,9 +436,9 @@
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "createUser(email:password:imageView:)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "checkExists(email:password:imageView:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -428,6 +471,51 @@
                   endingLineNumber = "84"
                   offsetFromSymbolStart = "236">
                </Location>
+               <Location
+                  uuid = "115CFEF1-3F1A-4D44-A7B5-2C0C44C66095 - 5ac6968ead15b584"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in CinemaBook.FireBaseManager.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "115CFEF1-3F1A-4D44-A7B5-2C0C44C66095 - 1f93f637a1e2522"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "115CFEF1-3F1A-4D44-A7B5-2C0C44C66095 - 1f93f637a1e25a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "160">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -441,10 +529,57 @@
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "userExists(with:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C8F6261-65F6-495F-8FEE-2372652B659C - 87b5c8929d7197c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "8C8F6261-65F6-495F-8FEE-2372652B659C - 9020bb36726ebce8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; Swift.Bool"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "656">
+               </Location>
+               <Location
+                  uuid = "8C8F6261-65F6-495F-8FEE-2372652B659C - 9020bb36726ebf74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; Swift.Bool"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "656">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -457,56 +592,134 @@
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "userExists(with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B7EF71D-5731-4FB8-941C-061CB460DCF2 - 87b5c8929d71adf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "3B7EF71D-5731-4FB8-941C-061CB460DCF2 - 9020bb36726ebf57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; Swift.Bool"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "3B7EF71D-5731-4FB8-941C-061CB460DCF2 - 9020bb36726ebfd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; Swift.Bool"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "484">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8987B066-FE95-47B6-ACC4-3C4940E4A93A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "btn_updateAccount(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1FE85DCA-3467-49C5-AC48-9456BD41C56A"
+            uuid = "1E8D3D70-0CB0-424A-81B2-7E6708C87D42"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "createUser(email:password:imageView:)"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "uploadImageWithUser(safeEmail:imageView:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1FE85DCA-3467-49C5-AC48-9456BD41C56A - 5ac6968ead15b467"
+                  uuid = "1E8D3D70-0CB0-424A-81B2-7E6708C87D42 - 573043e194ee3529"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in CinemaBook.FireBaseManager.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(check: Swift.Bool, safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
                   moduleName = "CinemaBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "248">
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "336">
                </Location>
                <Location
-                  uuid = "1FE85DCA-3467-49C5-AC48-9456BD41C56A - 7656ea4f532bcdf4"
+                  uuid = "1E8D3D70-0CB0-424A-81B2-7E6708C87D42 - 8768bcc87de25e6c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Bool) -&gt; () in CinemaBook.FireBaseManager.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
                   moduleName = "CinemaBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "100">
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "1E8D3D70-0CB0-424A-81B2-7E6708C87D42 - 8768bcc87de25ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "336">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -514,62 +727,78 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4C8F3070-1CE3-4A66-AB59-6E7B22F756CE"
+            uuid = "01552BA2-2DBB-4567-B296-D82EDF1ACC55"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/FireBaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "uploadImageWithUser(safeEmail:imageView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A38A7605-C24E-4AD1-B4CA-68E3EA9B381E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+            filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "createUser(email:password:imageView:)"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "uploadImageWithUser(safeEmail:imageView:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4C8F3070-1CE3-4A66-AB59-6E7B22F756CE - 8646ba450b723294"
+                  uuid = "A38A7605-C24E-4AD1-B4CA-68E3EA9B381E - 573043e194ee356b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CinemaBook.AccountInfoViewController.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(check: Swift.Bool, safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
                   moduleName = "CinemaBook"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "168">
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "540">
                </Location>
                <Location
-                  uuid = "4C8F3070-1CE3-4A66-AB59-6E7B22F756CE - ef93c5f8d2cb2fae"
+                  uuid = "A38A7605-C24E-4AD1-B4CA-68E3EA9B381E - 8768bcc87de25ea2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in CinemaBook.AccountInfoViewController.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
                   moduleName = "CinemaBook"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "124">
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "540">
                </Location>
                <Location
-                  uuid = "4C8F3070-1CE3-4A66-AB59-6E7B22F756CE - 292df9d1294298e9"
+                  uuid = "A38A7605-C24E-4AD1-B4CA-68E3EA9B381E - 8768bcc87de25926"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Bool) -&gt; () in CinemaBook.AccountInfoViewController.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
                   moduleName = "CinemaBook"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "100">
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "540">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -577,49 +806,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7D37FC5C-5EA4-4DD8-B715-07EE4C545886"
+            uuid = "60E470B3-C15B-43BE-8270-98E2666019B8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+            filePath = "CinemaBook/Helper/FireBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "createUser(email:password:imageView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD776766-DECD-4A4F-9E16-71DE25107347"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/FireBaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "createUser(email:password:imageView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6029B0BB-1CB0-4E7E-8F40-43A9B6ECE8DB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/FireBaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "insertUsers(safeEmail:imageView:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7D37FC5C-5EA4-4DD8-B715-07EE4C545886 - ef93c5f8d2cb21f8"
+                  uuid = "6029B0BB-1CB0-4E7E-8F40-43A9B6ECE8DB - a2a8ebd8e0ca0de8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in CinemaBook.AccountInfoViewController.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  symbolName = "CinemaBook.FireBaseManager.insertUsers(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
                   moduleName = "CinemaBook"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "207"
-                  endingLineNumber = "207"
-                  offsetFromSymbolStart = "248">
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "300">
                </Location>
                <Location
-                  uuid = "7D37FC5C-5EA4-4DD8-B715-07EE4C545886 - 292df9d1294298e9"
+                  uuid = "6029B0BB-1CB0-4E7E-8F40-43A9B6ECE8DB - a2a8ebd8e0ca0ca2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Bool) -&gt; () in CinemaBook.AccountInfoViewController.createUser(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  symbolName = "CinemaBook.FireBaseManager.insertUsers(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
                   moduleName = "CinemaBook"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "100">
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "6029B0BB-1CB0-4E7E-8F40-43A9B6ECE8DB - a2a8ebd8e0ca0f26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.insertUsers(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "312">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B1A4C35-98A5-4076-97B7-637C72C3FC8E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/FireBaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "checkExists(email:password:imageView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E555776-47AE-4926-B364-6F93DC1BEA3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/FireBaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "insertUsers(safeEmail:imageView:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
