@@ -45,6 +45,7 @@ enum ManagerConnections {
     case UpdateFoodCombo(idcombo:Int,nametittle:String,discription:String,priceCombo:Int,picture:String,foodCreates: [FoodOfCombo])
     case getInfoInterestMovie(idmovie:Int,idcinema:Int,idroom:Int,idinterest:Int)
     case PostPaymentBill(bill:Bill)
+    case getPoint(iduser:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -123,6 +124,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetInfoInterestMovie
         case .PostPaymentBill(_):
             return APIEndPoint.Name.urlPostPayMentBill
+        case .getPoint(let iduser):
+            return APIEndPoint.Name.urlGetPointInAccount
         }
     
     }
@@ -194,6 +197,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .PostPaymentBill(_):
             return .post
+        case .getPoint(_):
+            return .get
         }
 
         
@@ -287,6 +292,8 @@ extension ManagerConnections: TargetType {
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .PostPaymentBill(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getPoint(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -445,6 +452,10 @@ extension ManagerConnections: TargetType {
                 "ticket": bill.tickets.toJSON(),
                 "combobill": bill.combobills.toJSON()
             ]
+        case .getPoint(let iduser):
+            return [
+                "iduser": iduser
+            ]
         }
        
     }
@@ -523,6 +534,8 @@ extension ManagerConnections: TargetType {
               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .PostPaymentBill(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getPoint(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

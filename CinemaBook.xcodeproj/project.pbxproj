@@ -12,6 +12,8 @@
 		B0224BCF2ACF1A1E002D57CB /* DialogInputQuantityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */; };
 		B0224BD02ACF1A1E002D57CB /* DialogInputMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */; };
 		B0224BD12ACF1A1E002D57CB /* DialogInputQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */; };
+		B09CD1212AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */; };
+		B09CD1222AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09CD1202AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib */; };
 		B0A7B26E2AD3FCB10035828C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B26C2AD3FCB10035828C /* MessageViewController.swift */; };
 		B0A7B26F2AD3FCB10035828C /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A7B26D2AD3FCB10035828C /* MessageViewController.xib */; };
 		B0A7B2712AD3FFF60035828C /* MessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B2702AD3FFF60035828C /* MessageRouter.swift */; };
@@ -23,6 +25,14 @@
 		B0A88C082AD59F7300A5E38E /* PaymentBillViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A88C072AD59F7300A5E38E /* PaymentBillViewController + Extension.swift */; };
 		B0A88C0C2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A88C0A2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.swift */; };
 		B0A88C0D2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A88C0B2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib */; };
+		B0A9A4582AD66122005C16C1 /* HomeReportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4572AD66122005C16C1 /* HomeReportRouter.swift */; };
+		B0A9A45A2AD66133005C16C1 /* HomeReportviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4592AD66133005C16C1 /* HomeReportviewModel.swift */; };
+		B0A9A4602AD6617C005C16C1 /* ReportDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A45E2AD6617C005C16C1 /* ReportDetailTableViewCell.swift */; };
+		B0A9A4612AD6617C005C16C1 /* ReportDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A45F2AD6617C005C16C1 /* ReportDetailTableViewCell.xib */; };
+		B0A9A4642AD6619C005C16C1 /* ReportMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4622AD6619C005C16C1 /* ReportMovieTableViewCell.swift */; };
+		B0A9A4652AD6619C005C16C1 /* ReportMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A4632AD6619C005C16C1 /* ReportMovieTableViewCell.xib */; };
+		B0A9A4682AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4662AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift */; };
+		B0A9A4692AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A4672AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib */; };
 		B0AF7A352AD3B9D7008AE1F2 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */; };
 		B0AF7A392AD3E2DC008AE1F2 /* ChatMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */; };
 		B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AF7A382AD3E2DC008AE1F2 /* ChatMessageViewController.xib */; };
@@ -390,6 +400,8 @@
 		B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogInputQuantityViewController.xib; sourceTree = "<group>"; };
 		B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputMoneyViewController.swift; sourceTree = "<group>"; };
 		B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputQuantityViewController.swift; sourceTree = "<group>"; };
+		B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFunctionMoreTableViewCell.swift; sourceTree = "<group>"; };
+		B09CD1202AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryFunctionMoreTableViewCell.xib; sourceTree = "<group>"; };
 		B0A7B26C2AD3FCB10035828C /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B0A7B26D2AD3FCB10035828C /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		B0A7B2702AD3FFF60035828C /* MessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRouter.swift; sourceTree = "<group>"; };
@@ -401,6 +413,14 @@
 		B0A88C072AD59F7300A5E38E /* PaymentBillViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentBillViewController + Extension.swift"; sourceTree = "<group>"; };
 		B0A88C0A2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogShowInfoMoneyViewController.swift; sourceTree = "<group>"; };
 		B0A88C0B2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogShowInfoMoneyViewController.xib; sourceTree = "<group>"; };
+		B0A9A4572AD66122005C16C1 /* HomeReportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReportRouter.swift; sourceTree = "<group>"; };
+		B0A9A4592AD66133005C16C1 /* HomeReportviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReportviewModel.swift; sourceTree = "<group>"; };
+		B0A9A45E2AD6617C005C16C1 /* ReportDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDetailTableViewCell.swift; sourceTree = "<group>"; };
+		B0A9A45F2AD6617C005C16C1 /* ReportDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportDetailTableViewCell.xib; sourceTree = "<group>"; };
+		B0A9A4622AD6619C005C16C1 /* ReportMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMovieTableViewCell.swift; sourceTree = "<group>"; };
+		B0A9A4632AD6619C005C16C1 /* ReportMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMovieTableViewCell.xib; sourceTree = "<group>"; };
+		B0A9A4662AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFoodComboTableViewCell.swift; sourceTree = "<group>"; };
+		B0A9A4672AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportFoodComboTableViewCell.xib; sourceTree = "<group>"; };
 		B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewController.swift; sourceTree = "<group>"; };
 		B0AF7A382AD3E2DC008AE1F2 /* ChatMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMessageViewController.xib; sourceTree = "<group>"; };
@@ -804,6 +824,81 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		B09CD1172AD64006008B8A17 /* section1 */ = {
+			isa = PBXGroup;
+			children = (
+				FE11FA7A2AAB5F770016CC6A /* BannerProductTableViewCell.swift */,
+				FE11FA7B2AAB5F770016CC6A /* BannerProductTableViewCell.xib */,
+			);
+			path = section1;
+			sourceTree = "<group>";
+		};
+		B09CD1182AD64010008B8A17 /* section2 */ = {
+			isa = PBXGroup;
+			children = (
+				B09CD11D2AD64089008B8A17 /* cellsection */,
+				FE6533892AAA173600C0739B /* BannerVoucherTableViewCell.swift */,
+				FE65338A2AAA173600C0739B /* BannerVoucherTableViewCell.xib */,
+			);
+			path = section2;
+			sourceTree = "<group>";
+		};
+		B09CD1192AD6401D008B8A17 /* section3 */ = {
+			isa = PBXGroup;
+			children = (
+				B09CD11C2AD64078008B8A17 /* cellsection */,
+				FE6533852AAA172100C0739B /* BannerTraillerVideoTableViewCell.swift */,
+				FE6533862AAA172100C0739B /* BannerTraillerVideoTableViewCell.xib */,
+			);
+			path = section3;
+			sourceTree = "<group>";
+		};
+		B09CD11A2AD64043008B8A17 /* section4 */ = {
+			isa = PBXGroup;
+			children = (
+				B09CD11B2AD64063008B8A17 /* cellsection */,
+				FE6533812AAA16AA00C0739B /* BannerMovieTableViewCell.swift */,
+				FE6533822AAA16AA00C0739B /* BannerMovieTableViewCell.xib */,
+			);
+			path = section4;
+			sourceTree = "<group>";
+		};
+		B09CD11B2AD64063008B8A17 /* cellsection */ = {
+			isa = PBXGroup;
+			children = (
+				FE6A8D812A642CDF00BEC7BE /* FlimsCollectionViewCell.swift */,
+				FE6A8D822A642CDF00BEC7BE /* FlimsCollectionViewCell.xib */,
+			);
+			path = cellsection;
+			sourceTree = "<group>";
+		};
+		B09CD11C2AD64078008B8A17 /* cellsection */ = {
+			isa = PBXGroup;
+			children = (
+				FE65338D2AAA21A400C0739B /* itemTraillerCollectionViewCell.swift */,
+				FE65338E2AAA21A400C0739B /* itemTraillerCollectionViewCell.xib */,
+			);
+			path = cellsection;
+			sourceTree = "<group>";
+		};
+		B09CD11D2AD64089008B8A17 /* cellsection */ = {
+			isa = PBXGroup;
+			children = (
+				FE11FA762AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.swift */,
+				FE11FA772AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib */,
+			);
+			path = cellsection;
+			sourceTree = "<group>";
+		};
+		B09CD11E2AD646E2008B8A17 /* section5 */ = {
+			isa = PBXGroup;
+			children = (
+				B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */,
+				B09CD1202AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib */,
+			);
+			path = section5;
+			sourceTree = "<group>";
+		};
 		B0A7B2682AD3FC6A0035828C /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -912,6 +1007,49 @@
 				B0A88C0B2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib */,
 			);
 			path = DialogShowInfoMoneyPayment;
+			sourceTree = "<group>";
+		};
+		B0A9A4552AD660F5005C16C1 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0A9A4592AD66133005C16C1 /* HomeReportviewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0A9A4562AD660FD005C16C1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0A9A4572AD66122005C16C1 /* HomeReportRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0A9A45B2AD66142005C16C1 /* section1 */ = {
+			isa = PBXGroup;
+			children = (
+				B0A9A45E2AD6617C005C16C1 /* ReportDetailTableViewCell.swift */,
+				B0A9A45F2AD6617C005C16C1 /* ReportDetailTableViewCell.xib */,
+			);
+			path = section1;
+			sourceTree = "<group>";
+		};
+		B0A9A45C2AD6614C005C16C1 /* section2 */ = {
+			isa = PBXGroup;
+			children = (
+				B0A9A4622AD6619C005C16C1 /* ReportMovieTableViewCell.swift */,
+				B0A9A4632AD6619C005C16C1 /* ReportMovieTableViewCell.xib */,
+			);
+			path = section2;
+			sourceTree = "<group>";
+		};
+		B0A9A45D2AD66155005C16C1 /* section3 */ = {
+			isa = PBXGroup;
+			children = (
+				B0A9A4662AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift */,
+				B0A9A4672AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib */,
+			);
+			path = section3;
 			sourceTree = "<group>";
 		};
 		B0AF7A362AD3E2AE008AE1F2 /* MessageChatAndNotifaction */ = {
@@ -2282,38 +2420,19 @@
 		FE5EA0EF2AAE213C0039DEC3 /* HomeReportManager */ = {
 			isa = PBXGroup;
 			children = (
+				B0A9A4562AD660FD005C16C1 /* Router */,
+				B0A9A4552AD660F5005C16C1 /* viewModel */,
 				FE5EA0F32AAE21570039DEC3 /* view */,
-				FE5EA0F22AAE21550039DEC3 /* viewModel */,
-				FE5EA0F12AAE21520039DEC3 /* Router */,
-				FE5EA0F02AAE214F0039DEC3 /* Extensions */,
 			);
 			path = HomeReportManager;
-			sourceTree = "<group>";
-		};
-		FE5EA0F02AAE214F0039DEC3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FE5EA0F12AAE21520039DEC3 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		FE5EA0F22AAE21550039DEC3 /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewModel;
 			sourceTree = "<group>";
 		};
 		FE5EA0F32AAE21570039DEC3 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				B0A9A45D2AD66155005C16C1 /* section3 */,
+				B0A9A45C2AD6614C005C16C1 /* section2 */,
+				B0A9A45B2AD66142005C16C1 /* section1 */,
 				FE5EA0F42AAE218D0039DEC3 /* HomeReportViewController.swift */,
 				FE5EA0F52AAE218D0039DEC3 /* HomeReportViewController.xib */,
 			);
@@ -2392,19 +2511,6 @@
 				FE639D592A9641DE003F618F /* videoRouter.swift */,
 			);
 			path = router;
-			sourceTree = "<group>";
-		};
-		FE6533802AAA166C00C0739B /* ItemCollectioncell */ = {
-			isa = PBXGroup;
-			children = (
-				FE6A8D812A642CDF00BEC7BE /* FlimsCollectionViewCell.swift */,
-				FE6A8D822A642CDF00BEC7BE /* FlimsCollectionViewCell.xib */,
-				FE65338D2AAA21A400C0739B /* itemTraillerCollectionViewCell.swift */,
-				FE65338E2AAA21A400C0739B /* itemTraillerCollectionViewCell.xib */,
-				FE11FA762AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.swift */,
-				FE11FA772AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib */,
-			);
-			path = ItemCollectioncell;
 			sourceTree = "<group>";
 		};
 		FE6775F12A8920730007A659 /* cell */ = {
@@ -2670,15 +2776,11 @@
 		FE7BA99C2A5B036800344EFB /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				FE6533802AAA166C00C0739B /* ItemCollectioncell */,
-				FE6533812AAA16AA00C0739B /* BannerMovieTableViewCell.swift */,
-				FE6533822AAA16AA00C0739B /* BannerMovieTableViewCell.xib */,
-				FE6533852AAA172100C0739B /* BannerTraillerVideoTableViewCell.swift */,
-				FE6533862AAA172100C0739B /* BannerTraillerVideoTableViewCell.xib */,
-				FE6533892AAA173600C0739B /* BannerVoucherTableViewCell.swift */,
-				FE65338A2AAA173600C0739B /* BannerVoucherTableViewCell.xib */,
-				FE11FA7A2AAB5F770016CC6A /* BannerProductTableViewCell.swift */,
-				FE11FA7B2AAB5F770016CC6A /* BannerProductTableViewCell.xib */,
+				B09CD11E2AD646E2008B8A17 /* section5 */,
+				B09CD11A2AD64043008B8A17 /* section4 */,
+				B09CD1192AD6401D008B8A17 /* section3 */,
+				B09CD1182AD64010008B8A17 /* section2 */,
+				B09CD1172AD64006008B8A17 /* section1 */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -3150,6 +3252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A9A4612AD6617C005C16C1 /* ReportDetailTableViewCell.xib in Resources */,
 				FE5C9E8F2AA42BE300FA235D /* Roboto-Thin.ttf in Resources */,
 				FE5096572A76534800F5A457 /* SplachScreenViewController.xib in Resources */,
 				FEAC96A22A5A55CD00B49C80 /* LaunchScreen.storyboard in Resources */,
@@ -3223,12 +3326,14 @@
 				FE52546B2AC325EE003229A0 /* ManagementBillTicketViewController.xib in Resources */,
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
 				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
+				B09CD1222AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */,
 				FE6533842AAA16AA00C0739B /* BannerMovieTableViewCell.xib in Resources */,
 				FE4BAAA42ACABF350010C0B9 /* PaymentBillViewController.xib in Resources */,
 				FE5254632AC31857003229A0 /* ManagementBillViewController.xib in Resources */,
 				B0A88C0D2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib in Resources */,
+				B0A9A4652AD6619C005C16C1 /* ReportMovieTableViewCell.xib in Resources */,
 				FE5461212AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
 				B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */,
@@ -3259,6 +3364,7 @@
 				B0AF7A422AD3E6AB008AE1F2 /* ItemChatTableViewCell.xib in Resources */,
 				FE4EB3702AC719EC00BB2D79 /* ItemFoodTableViewCell.xib in Resources */,
 				FE6BD1872AC85D0B00177093 /* ItemFoodInManagementTableViewCell.xib in Resources */,
+				B0A9A4692AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib in Resources */,
 				FE71C65C2AB7FA310029D84B /* DialogPopupListMovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3362,6 +3468,7 @@
 				FEDC3F4D2A6CE11D004D3789 /* APIResponse.swift in Sources */,
 				FE4BAAA82ACACC860010C0B9 /* PaymentBillViewModel.swift in Sources */,
 				FE5252332AAF787400296246 /* ManagementRouter.swift in Sources */,
+				B0A9A4602AD6617C005C16C1 /* ReportDetailTableViewCell.swift in Sources */,
 				FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */,
 				FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */,
 				FE6533832AAA16AA00C0739B /* BannerMovieTableViewCell.swift in Sources */,
@@ -3413,6 +3520,7 @@
 				FE5893752A8A6DD600058864 /* DetailMovieViewController.swift in Sources */,
 				FE5096592A76538A00F5A457 /* SplachScreenRouter.swift in Sources */,
 				FE6EE71B2A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift in Sources */,
+				B0A9A4582AD66122005C16C1 /* HomeReportRouter.swift in Sources */,
 				FE7BA9882A5AFDE500344EFB /* SalesViewController.swift in Sources */,
 				FE5C1D242AA2DFDA00F9B3E5 /* videoShortViewController+Extension.swift in Sources */,
 				FE4EB3692AC716A200BB2D79 /* Food.swift in Sources */,
@@ -3473,6 +3581,7 @@
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
 				FE5EA0F62AAE218D0039DEC3 /* HomeReportViewController.swift in Sources */,
 				B0A7B26E2AD3FCB10035828C /* MessageViewController.swift in Sources */,
+				B0A9A45A2AD66133005C16C1 /* HomeReportviewModel.swift in Sources */,
 				B0AF7A352AD3B9D7008AE1F2 /* FireBaseManager.swift in Sources */,
 				FE4E71042AC52EA70020BC2C /* OrderProductViewModel.swift in Sources */,
 				FE59CF432AA39D8100A6ADAA /* AccountInfoRouter.swift in Sources */,
@@ -3519,6 +3628,7 @@
 				FE5276EC2A8D08AB00252843 /* BookingChairViewModel.swift in Sources */,
 				B0224BD12ACF1A1E002D57CB /* DialogInputQuantityViewController.swift in Sources */,
 				FE59CF332AA36D6400A6ADAA /* DetailVideoShortViewController+Extension.swift in Sources */,
+				B09CD1212AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift in Sources */,
 				FE519E782A88CBAD007E131E /* BookingViewModel.swift in Sources */,
 				FE5C40F82AB0A6AC00BC7BF9 /* ItemEmployeeTableViewCell.swift in Sources */,
 				FE22C3202ABA08F300DB72B4 /* AutoInterest.swift in Sources */,
@@ -3530,12 +3640,14 @@
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
 				FEAB99232AC1DEE800F024D5 /* MangementRoomCreateRouter.swift in Sources */,
 				FE5C6B892AA4D09000852DBE /* Medias.swift in Sources */,
+				B0A9A4682AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift in Sources */,
 				FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */,
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
 				FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */,
 				FE745FF52A7EB00E0091C0FA /* TicketViewModel.swift in Sources */,
 				FE5EA0E62AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.swift in Sources */,
+				B0A9A4642AD6619C005C16C1 /* ReportMovieTableViewCell.swift in Sources */,
 				FE6A86082AC5E68500810FFB /* CreateProductViewModel.swift in Sources */,
 				FEC1E3F22A9CD4F8005A9F16 /* TimeShowViewModel.swift in Sources */,
 				FE50965B2A76544400F5A457 /* MenuRouter.swift in Sources */,

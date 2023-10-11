@@ -16,6 +16,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogShowInfoMoneyViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="lbl_final" destination="nnW-0t-156" id="ODw-jf-KED"/>
+                <outlet property="lbl_point" destination="R1o-dn-BGc" id="06B-ye-5xG"/>
                 <outlet property="lbl_total_bill" destination="3By-n1-DaC" id="7gq-V8-ubC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -65,8 +67,8 @@
                                             <rect key="frame" x="0.0" y="-2.3333333333333162" width="19.666666666666668" height="19"/>
                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1o-dn-BGc">
-                                            <rect key="frame" x="19.666666666666689" y="-0.33333333333331439" width="52.333333333333343" height="14.333333333333334"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1o-dn-BGc">
+                                            <rect key="frame" x="19.666666666666686" y="-0.33333333333331439" width="7" height="14.333333333333334"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                             <color key="textColor" systemColor="systemYellowColor"/>
                                             <nil key="highlightedColor"/>

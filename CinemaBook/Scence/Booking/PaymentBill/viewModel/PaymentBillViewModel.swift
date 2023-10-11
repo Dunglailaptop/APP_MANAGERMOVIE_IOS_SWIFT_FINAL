@@ -53,4 +53,12 @@ extension PaymentBillViewModel {
                  .showAPIErrorToast()
                  .mapObject(type: APIResponse.self)
     }
+    
+    func getPoint() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getPoint(iduser: ManageCacheObject.getCurrentUserInfo().idusers))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
 }

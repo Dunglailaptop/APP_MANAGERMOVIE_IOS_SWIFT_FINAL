@@ -10,9 +10,12 @@ import UIKit
 
 class DialogShowInfoMoneyViewController: UIViewController {
 
+    @IBOutlet weak var lbl_final: UILabel!
+    @IBOutlet weak var lbl_point: UILabel!
     @IBOutlet weak var lbl_total_bill: UILabel!
     var Delegate: DialogPayment?
     var totalbill = 0
+    var point = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,9 @@ class DialogShowInfoMoneyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         lbl_total_bill.text = Utils.stringVietnameseFormatWithNumber(amount: totalbill)
+        lbl_point.text = Utils.stringQuantityFormatWithNumber(amount: point)
+       var total_final = point - totalbill
+        lbl_final.text = Utils.stringQuantityFormatWithNumber(amount: total_final)
     }
 
 
@@ -32,5 +38,8 @@ class DialogShowInfoMoneyViewController: UIViewController {
     @IBAction func btn_access(_ sender: Any) {
         Delegate?.callbackPayment()
     }
+    
+}
+extension DialogShowInfoMoneyViewController {
     
 }

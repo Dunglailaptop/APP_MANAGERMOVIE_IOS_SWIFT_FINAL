@@ -49,6 +49,7 @@ class PaymentBillViewController: UIViewController {
     var dataFoodCombo = [FoodCombo]()
     var typeCheck = 0
     var TotalBill = 0
+    var pointget = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view:self,router:router)
@@ -63,6 +64,7 @@ class PaymentBillViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getListCombo()
+        getPoint()
         setup()
     }
 

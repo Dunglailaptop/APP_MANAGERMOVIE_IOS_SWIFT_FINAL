@@ -51,6 +51,9 @@ struct Bill: Mappable{
         combobills <- map["combobill"]
     }
 }
+
+
+
 struct ticket: Mappable {
             var idticket = 0
             var idchair = 0

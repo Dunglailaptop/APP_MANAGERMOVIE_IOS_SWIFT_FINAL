@@ -55,6 +55,7 @@ public struct APIEndPoint {
         static let urlUpdateinfofoodCombo = "/FoodCombo/UpdateInfoCombofood"
         static let urlGetInfoInterestMovie = "/AutointerestMovie/getInfoInterestMovie"
         static let urlPostPayMentBill = "/Bill/PaymentBill"
+        static let urlGetPointInAccount = "/Account/getInfoPointAccount"
     }
     
 }

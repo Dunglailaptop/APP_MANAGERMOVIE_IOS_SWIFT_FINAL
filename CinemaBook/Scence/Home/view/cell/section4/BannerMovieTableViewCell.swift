@@ -16,6 +16,7 @@ class BannerMovieTableViewCell: UITableViewCell {
 
     private(set) var disposeBag = DisposeBag()
   
+    @IBOutlet weak var lbl_name_movie: UILabel!
     @IBOutlet weak var collection_view: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -78,7 +79,7 @@ extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDe
     }
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlimsCollectionViewCell", for: indexPath) as! FlimsCollectionViewCell
-        cell.lbl_title.text = viewModel?.dataArrayMovie.value[indexPath.item].namemovie
+      lbl_name_movie.text = viewModel?.dataArrayMovie.value[indexPath.item].namemovie
         cell.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.item].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
           // Configure the cell
 

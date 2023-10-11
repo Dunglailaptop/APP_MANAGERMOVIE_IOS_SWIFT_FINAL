@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CategoryFunctionMoreTableViewCell" customModule="CinemaBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-Cw-ncv">
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="150"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRl-0y-6GQ">
+                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shops" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-AY-X9B">
+                                        <rect key="frame" x="31.666666666666671" y="20" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Krv-IC-U6E"/>
+                                            <constraint firstAttribute="height" constant="60" id="YmL-89-L1z"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DREAMMOVIE STORE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Squ-J4-qFs">
+                                        <rect key="frame" x="11.666666666666664" y="90" width="100" height="31.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="QEK-52-NTT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNw-i2-D01">
+                                        <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="150"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="btn_makeToStoreViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rkR-M6-IVE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FNw-i2-D01" secondAttribute="trailing" id="4k1-tP-Aze"/>
+                                    <constraint firstItem="Squ-J4-qFs" firstAttribute="centerX" secondItem="uRl-0y-6GQ" secondAttribute="centerX" id="DOy-Ed-SUz"/>
+                                    <constraint firstItem="YoZ-AY-X9B" firstAttribute="top" secondItem="uRl-0y-6GQ" secondAttribute="top" constant="20" id="EPj-8M-yRZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FNw-i2-D01" secondAttribute="bottom" id="Ltl-9k-ZTE"/>
+                                    <constraint firstItem="FNw-i2-D01" firstAttribute="top" secondItem="uRl-0y-6GQ" secondAttribute="top" id="POQ-rr-l1H"/>
+                                    <constraint firstItem="YoZ-AY-X9B" firstAttribute="centerX" secondItem="uRl-0y-6GQ" secondAttribute="centerX" id="RgD-Rc-TZJ"/>
+                                    <constraint firstItem="Squ-J4-qFs" firstAttribute="top" secondItem="YoZ-AY-X9B" secondAttribute="bottom" constant="10" id="iSj-bm-i64"/>
+                                    <constraint firstItem="FNw-i2-D01" firstAttribute="leading" secondItem="uRl-0y-6GQ" secondAttribute="leading" id="xKI-id-VAi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwm-3g-nCo">
+                                <rect key="frame" x="123.33333333333334" y="0.0" width="123.33333333333334" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cinema" translatesAutoresizingMaskIntoConstraints="NO" id="42G-Z4-ErX">
+                                        <rect key="frame" x="31.666666666666671" y="20" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="9XN-cC-EFD"/>
+                                            <constraint firstAttribute="height" constant="60" id="icD-mK-lN2"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DREAMMOVIE CINEMA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MO-8f-OcD">
+                                        <rect key="frame" x="11.666666666666671" y="90" width="100" height="31.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="1Ra-AO-YEf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="42G-Z4-ErX" firstAttribute="top" secondItem="mwm-3g-nCo" secondAttribute="top" constant="20" id="0ak-id-9SU"/>
+                                    <constraint firstItem="4MO-8f-OcD" firstAttribute="centerX" secondItem="mwm-3g-nCo" secondAttribute="centerX" id="pvH-b5-a6k"/>
+                                    <constraint firstItem="4MO-8f-OcD" firstAttribute="top" secondItem="42G-Z4-ErX" secondAttribute="bottom" constant="10" id="rnV-cN-gla"/>
+                                    <constraint firstItem="42G-Z4-ErX" firstAttribute="centerX" secondItem="mwm-3g-nCo" secondAttribute="centerX" id="ryZ-hL-QGC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVm-jP-rk7">
+                                <rect key="frame" x="246.66666666666666" y="0.0" width="123.33333333333334" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-insterest" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-wN-tvA">
+                                        <rect key="frame" x="31.666666666666657" y="20" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="XBD-gM-v54"/>
+                                            <constraint firstAttribute="width" constant="60" id="jGc-JF-rcV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DREAMMOVIE GIẢI TRÍ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oq0-S6-fjG">
+                                        <rect key="frame" x="11.666666666666657" y="90" width="100" height="31.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="d3I-aK-sXZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="oq0-S6-fjG" firstAttribute="top" secondItem="MZd-wN-tvA" secondAttribute="bottom" constant="10" id="3V2-ju-ex7"/>
+                                    <constraint firstItem="MZd-wN-tvA" firstAttribute="centerX" secondItem="WVm-jP-rk7" secondAttribute="centerX" id="b8a-Fs-gl2"/>
+                                    <constraint firstItem="MZd-wN-tvA" firstAttribute="top" secondItem="WVm-jP-rk7" secondAttribute="top" constant="20" id="d5R-4f-PE5"/>
+                                    <constraint firstItem="oq0-S6-fjG" firstAttribute="centerX" secondItem="WVm-jP-rk7" secondAttribute="centerX" id="jyv-zs-6y3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ag6-Cw-ncv" secondAttribute="bottom" id="Fjb-sL-jqd"/>
+                    <constraint firstItem="ag6-Cw-ncv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LAA-Wl-IUX"/>
+                    <constraint firstItem="ag6-Cw-ncv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O8r-Pg-1AM"/>
+                    <constraint firstAttribute="trailing" secondItem="ag6-Cw-ncv" secondAttribute="trailing" id="vKs-Eu-py4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="-18.320610687022899" y="-12.67605633802817"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cinema" width="512" height="512"/>
+        <image name="icon-insterest" width="512" height="512"/>
+        <image name="shops" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

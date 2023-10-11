@@ -21,15 +21,16 @@ class BannerProductTableViewCell: UITableViewCell {
     private(set) var disposeBag = DisposeBag()
     override func awakeFromNib() {
         super.awakeFromNib()
-          BANNER.cornerRadius = 20
-               BANNER.transformer = FSPagerViewTransformer(type: .cubic)
-               BANNER.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCell")
-               BANNER.automaticSlidingInterval = 5
-               BANNER.interitemSpacing = 100
-               BANNER.alwaysBounceHorizontal = true
-               BANNER.dataSource = self
-               BANNER.delegate = self
-               BANNER.isInfinite = true
+            BANNER.cornerRadius = 20
+            BANNER.transformer = FSPagerViewTransformer(type: .cubic)
+            BANNER.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCell")
+            BANNER.automaticSlidingInterval = 5
+            BANNER.interitemSpacing = 100
+            BANNER.alwaysBounceHorizontal = true
+     
+            BANNER.dataSource = self
+            BANNER.delegate = self
+            BANNER.isInfinite = true
         // Initialization code
     }
 

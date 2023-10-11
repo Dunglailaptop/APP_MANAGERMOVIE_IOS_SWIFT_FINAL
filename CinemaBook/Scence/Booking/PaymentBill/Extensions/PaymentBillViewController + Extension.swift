@@ -21,12 +21,13 @@ extension PaymentBillViewController: DialogPayment {
     }
     
     func presentPopupPayment() {
+       
         let DialogShowInfoMoneyViewControllers = DialogShowInfoMoneyViewController()
         
         DialogShowInfoMoneyViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
         DialogShowInfoMoneyViewControllers.Delegate = self
         DialogShowInfoMoneyViewControllers.totalbill = TotalBill
-        
+        DialogShowInfoMoneyViewControllers.point = pointget
         let nav = UINavigationController(rootViewController: DialogShowInfoMoneyViewControllers)
         // 1
         nav.modalPresentationStyle = .overCurrentContext
@@ -162,6 +163,19 @@ extension PaymentBillViewController {
                 JonAlert.showError(message: response.message ?? "Co loi trong qua trinh ket noi")
             }
         })
+    }
+    
+    func getPoint()  {
+      
+        viewModel.getPoint().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<Account>().map(JSONObject: response.data) {
+                    self.pointget = data.point
+                }
+            }
+        })
+       
     }
     
 }

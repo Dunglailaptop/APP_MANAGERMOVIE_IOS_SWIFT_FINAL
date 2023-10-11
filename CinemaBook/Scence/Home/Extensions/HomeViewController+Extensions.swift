@@ -99,7 +99,8 @@ extension HomeViewController {
         tableView.register(BannerTraillerTable, forCellReuseIdentifier: "BannerTraillerVideoTableViewCell")
         let BannerProductTable = UINib(nibName: "BannerProductTableViewCell", bundle: .main)
               tableView.register(BannerProductTable, forCellReuseIdentifier: "BannerProductTableViewCell")
-          
+        let CategoryFunctionMoreTableViewCellS =  UINib(nibName: "CategoryFunctionMoreTableViewCell", bundle: .main)
+        tableView.register(CategoryFunctionMoreTableViewCellS, forCellReuseIdentifier: "CategoryFunctionMoreTableViewCell")
       
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
@@ -126,12 +127,19 @@ extension HomeViewController {
                     cell.selectionStyle = .none
                 return cell
             case 2:
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryFunctionMoreTableViewCell", for: indexPath) as! CategoryFunctionMoreTableViewCell
+                                                           
+                   
+                               
+                    cell.selectionStyle = .none
+                return cell
+            case 3:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerTraillerVideoTableViewCell", for: indexPath) as! BannerTraillerVideoTableViewCell
                            cell.viewModel = self.viewModel
                     cell.selectionStyle = .none
                            
                            return cell
-            case 3:
+            case 4:
            let cell = self.tableView.dequeueReusableCell(withIdentifier: "BannerVoucherTableViewCell", for: indexPath) as! BannerVoucherTableViewCell
                           cell.viewModel = self.viewModel
                           cell.selectionStyle = .none
@@ -154,12 +162,14 @@ extension HomeViewController:UITableViewDelegate{
 
         switch indexPath.row {
         case 0:
-            return 200
+            return 140
         case 1:
             return 400
         case 2:
-            return 200
+            return 150
         case 3:
+            return 200
+        case 4:
             return 200
         default:
             return 200
