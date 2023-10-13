@@ -129,7 +129,7 @@ extension HomeViewController {
             case 2:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "CategoryFunctionMoreTableViewCell", for: indexPath) as! CategoryFunctionMoreTableViewCell
                                                            
-                   
+                cell.viewModel = self.viewModel
                                
                     cell.selectionStyle = .none
                 return cell

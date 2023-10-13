@@ -31,6 +31,11 @@ class HomeRouter {
         sourceView?.navigationController?.pushViewController(DetailViewController, animated: true)
     }
     
+    func navigationToStoreProductViewController() {
+        let storeProduct = StoreRouter().viewController
+        sourceView?.navigationController?.pushViewController(storeProduct, animated: true)
+    }
+    
 }
 
 

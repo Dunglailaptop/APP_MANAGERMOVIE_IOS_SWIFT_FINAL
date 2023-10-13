@@ -29,6 +29,10 @@ class OrderProductViewModel: BaseViewModel {
     func makeToDetailViewController(foodcomboss:FoodCombo) {
         router?.maketoDetailviewController(foodcombos: foodcomboss)
     }
+    
+    func makeToDetailStoreViewController(foodcombo: FoodCombo) {
+        router?.makeToDetailStoreViewController(foodcombo: foodcombo)
+    }
 }
 extension OrderProductViewModel {
     func getListFoodCombo() -> Observable<APIResponse> {

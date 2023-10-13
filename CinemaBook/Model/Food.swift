@@ -10,14 +10,15 @@ import UIKit
 import  ObjectMapper
 
 struct FoodCombo: Mappable {
-        var idcombo = 0
-        var descriptions =  ""
-        var nametittle =  ""
-        var priceCombo = 0
-        var picture = ""
-        var foods = [FoodOfCombo]()
-    var isSelected = DEACTIVE
-    var quantity = 0
+            var idcombo = 0
+            var descriptions =  ""
+            var nametittle =  ""
+            var priceCombo = 0
+            var picture = ""
+            var foods = [FoodOfCombo]()
+            var isSelected = DEACTIVE
+            var quantity = 0
+    var quantityRealtime = 0
     init() {
         
     }
@@ -33,6 +34,7 @@ struct FoodCombo: Mappable {
              priceCombo <- map["priceCombo"]
              picture <- map["picture"]
         foods <- map["foods"]
+        quantityRealtime <- map["quantityRealtime"]
     }
 }
 
@@ -66,6 +68,7 @@ struct  Food: Mappable {
         var isSelected = DEACTIVE
         var idcombo = 0
         var id = 0
+    var quantityRealTime = 0
     init() {
         
     }

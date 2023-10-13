@@ -35,5 +35,11 @@ class OrderProductRouter {
         viewcreateproduct.type = "UPDATE"
               sourceView?.navigationController?.pushViewController(viewcreateproduct, animated: true)
     }
+    
+    func makeToDetailStoreViewController(foodcombo: FoodCombo) {
+        let viewDetailStoreViewController = DetailProductRouter().viewController as! DetailProductComboViewController
+        viewDetailStoreViewController.foodcombo = foodcombo
+        sourceView?.navigationController?.pushViewController(viewDetailStoreViewController, animated: true)
+    }
   
 }

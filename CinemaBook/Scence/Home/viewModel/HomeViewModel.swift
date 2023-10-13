@@ -25,6 +25,10 @@ class HomeViewModel: BaseViewModel {
         router?.navigationToDetailViewController(idmovie: idmovie)
     }
     
+    func makeToStoreViewController() {
+        router?.navigationToStoreProductViewController()
+    }
+    
     func cleardata() {
         dataArrayMovie.accept([])
     }

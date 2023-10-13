@@ -8,8 +8,13 @@
 
 import Foundation
 import ObjectMapper
+import RxCocoa
+import RxRelay
+import RxSwift
 
 class  ManageCacheObject{
+    
+  static public var dataCart: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
 
     // lưu xuống bộ nhớ cache của máy
     static func saveCache(_ config: Config) {
@@ -67,6 +72,23 @@ class  ManageCacheObject{
     static func saveCurrentUser(_ user : Account) {
         UserDefaults.standard.set(Mapper<Account>().toJSON(user), forKey:
                                     Constans.KEY_DEFAULT_STORAGE.key_account)
+
+    }
+    
+    //don hang -- giỏ hàng
+    static func getCartInfo() -> [FoodCombo] {
+        if let user = UserDefaults.standard.object(forKey: Constans.KEY_DEFAULT_STORAGE.KEY_PHONE){
+            return Mapper<FoodCombo>().mapArray(JSONObject: user) ?? []
+        }else{
+            return []
+        }
+    }
+    static func saveCartInfo(_ cart : FoodCombo) {
+        var data = dataCart.value
+        data.append(cart)
+        dataCart.accept(data)
+        UserDefaults.standard.set(Mapper<FoodCombo>().toJSONArray(dataCart.value), forKey:
+                                    Constans.KEY_DEFAULT_STORAGE.KEY_PHONE)
 
     }
     

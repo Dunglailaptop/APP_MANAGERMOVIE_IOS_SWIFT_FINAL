@@ -1,15 +1,19 @@
 //
-//  CategoryFunctionMoreTableViewCell.swift
+//  ItemDialogFoodComboWaterTableViewCell.swift
 //  CinemaBook
 //
-//  Created by Nguyen Xuan Tien Dung on 11/10/2023.
+//  Created by Nguyen Xuan Tien Dung on 12/10/2023.
 //  Copyright © 2023 dungtien. All rights reserved.
 //
 
 import UIKit
 
-class CategoryFunctionMoreTableViewCell: UITableViewCell {
+class ItemDialogFoodComboWaterTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var btn_descreament: UIButton!
+    @IBOutlet weak var btn_inscreament: UIButton!
+    @IBOutlet weak var lbl_number: UILabel!
+    @IBOutlet weak var lbl_name_food: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,14 +25,5 @@ class CategoryFunctionMoreTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var viewModel: HomeViewModel? = nil {
-        didSet{
-            
-        }
-    }
-    
-    
-    @IBAction func btn_makeToStoreViewController(_ sender: Any) {
-        viewModel?.makeToStoreViewController()
-    }
+
 }
