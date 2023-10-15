@@ -20,6 +20,7 @@ class DetailProductViewModel: BaseViewModel {
     public var dataArrayfood: BehaviorRelay<[Food]> = BehaviorRelay(value: [])
     public var dataArrayFoodWater: BehaviorRelay<[Food]> = BehaviorRelay(value: [])
     public var dataDetailFoodCombo: BehaviorRelay<FoodCombo> = BehaviorRelay(value: FoodCombo())
+    public var dataAllFood: BehaviorRelay<[Food]> = BehaviorRelay(value: [])
     
     func bind(view: DetailProductComboViewController,router: DetailProductRouter){
         self.view = view

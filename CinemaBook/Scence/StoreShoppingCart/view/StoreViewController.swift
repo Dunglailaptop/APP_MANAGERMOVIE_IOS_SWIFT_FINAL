@@ -30,7 +30,7 @@ class StoreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        lbl_number_cart.text = String(ManageCacheObject.getCartInfo().count)
+        lbl_number_cart.text = String(ManageCacheObject.getCartInfo().reduce(0) { $0 + $1.quantityRealtime })
     }
     
     @objc func handleNotification(_ notification: Notification) {
@@ -40,7 +40,9 @@ class StoreViewController: UIViewController {
                     let foodcombo = reportType["foodcombo"] as? FoodCombo
                     let food = reportType["food"] as? Food
                     let foodwater = reportType["foodwater"] as? Food
-                    lbl_number_cart.text = String(ManageCacheObject.getCartInfo().count)
+                    var countnumber = 0
+                  
+                    lbl_number_cart.text = String(ManageCacheObject.getCartInfo().reduce(0) { $0 + $1.quantityRealtime })
 //                    dLog(ManageCacheObject.getCartInfo().count)
                   dLog(foodcombo)
                 }

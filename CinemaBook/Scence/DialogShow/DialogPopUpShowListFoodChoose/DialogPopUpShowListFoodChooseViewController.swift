@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import RxRelay
 
-class DialogPopUpShowListFoodChooseViewController: UIViewController {
+class DialogPopUpShowListFoodChooseViewController: BaseViewController {
 
    
     @IBOutlet weak var btn_plus: UIButton!
@@ -52,7 +52,8 @@ class DialogPopUpShowListFoodChooseViewController: UIViewController {
         dataDetailFoodCombo?.descriptions = dataFoodDetail.descriptions
         dataDetailFoodCombo?.priceCombo = dataFoodDetail.priceCombo
         dataDetailFoodCombo?.picture = dataFoodDetail.picture
-        dataFoodDetail.quantityRealtime = 1
+        dataDetailFoodCombo?.quantityRealtime = 1
+        viewModel?.dataDetailFoodCombo.accept(dataDetailFoodCombo!)
         btn_minius.rx.tap.asDriver().drive(onNext: {
             if dataDetailFoodCombo!.quantityRealtime > 1 {
                 dataDetailFoodCombo?.quantityRealtime -= 1
@@ -72,7 +73,15 @@ class DialogPopUpShowListFoodChooseViewController: UIViewController {
             self.viewModel?.dataDetailFoodCombo.accept(dataDetailFoodCombo!)
         })
       
-//        viewModel?.dataDetailFoodCombo.accept(dataDetailFoodCombo!)
+//        viewModel?.dataAllFood.subscribe(onNext: {
+//         [weak self] elment in
+//            var dataAll = self!.viewModel?.dataAllFood.value
+//            var datafood = self!.viewModel?.dataArrayfood.value
+//            var dataFoodWater = self!.viewModel?.dataArrayFoodWater.value
+//            dataAll?.append(contentsOf: datafood!)
+//            dataAll?.append(contentsOf: dataFoodWater!)
+//            self!.viewModel?.dataAllFood.accept(dataAll!)
+//        }).disposed(by: rxbag)
     }
     
     @objc func handleTapOutSide(_ gesture: UITapGestureRecognizer) {
@@ -97,10 +106,20 @@ class DialogPopUpShowListFoodChooseViewController: UIViewController {
   
     @IBAction func btn_addCart(_ sender: Any) {
         guard var dataDetailFoodCombo = viewModel?.dataDetailFoodCombo.value  else { return  }
-        guard var dataFood = viewModel?.dataArrayfood.value else { return  }
-        guard var dataFoodWater = viewModel?.dataArrayFoodWater.value  else { return  }
+        var dataFood = viewModel?.dataArrayfood.value.filter{ $0.isSelected == ACTIVE}
+        var dataFoodWater = viewModel?.dataArrayFoodWater.value.filter{ $0.quantityRealTime > 0 }
+        dLog(dataFoodWater)
+        viewModel?.dataAllFood.accept([])
+        var dataAll = self.viewModel?.dataAllFood.value
+     
+        dataAll?.append(contentsOf: dataFood!)
+        dataAll?.append(contentsOf: dataFoodWater!)
+        self.viewModel?.dataAllFood.accept(dataAll!)
+        var datafilterfoodcombo = viewModel?.dataAllFood.value
+        dataDetailFoodCombo.foods = datafilterfoodcombo!
+        dLog(viewModel?.dataAllFood.value)
         ManageCacheObject.saveCartInfo(dataDetailFoodCombo)
-        nootifacationCart(foodcombo: dataDetailFoodCombo,food: dataFood, foodwater: dataFoodWater)
+        nootifacationCart(foodcombo: dataDetailFoodCombo,food: dataFood!, foodwater: dataFoodWater!)
          dLog(dataDetailFoodCombo)
        
 //        ManageCacheObject.saveCartInfo(dataDetailFoodCombo)
@@ -108,6 +127,9 @@ class DialogPopUpShowListFoodChooseViewController: UIViewController {
     
 }
 extension DialogPopUpShowListFoodChooseViewController: UITableViewDelegate {
+    
+    
+    
     func register1() {
         let listFoodCombo = UINib(nibName: "ItemFoodWaterSectionTableViewCell", bundle: .main)
         TableView.register(listFoodCombo, forCellReuseIdentifier: "ItemFoodWaterSectionTableViewCell")

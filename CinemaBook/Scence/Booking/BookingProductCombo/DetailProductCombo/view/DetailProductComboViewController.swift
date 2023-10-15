@@ -38,11 +38,8 @@ class DetailProductComboViewController: UIViewController {
                     let foodcombo = reportType["foodcombo"] as? FoodCombo
                     let food = reportType["food"] as? Food
                     let foodwater = reportType["foodwater"] as? Food
-                    lbl_number_cart.text = String(ManageCacheObject.getCartInfo().count)
-                    dLog(ManageCacheObject.getCartInfo().count)
-                    ManageCacheObject.getCartInfo().enumerated().forEach{(index,value) in
-                        dLog(value)
-                    }
+                    lbl_number_cart.text = String(ManageCacheObject.getCartInfo().reduce(0) { $0 + $1.quantityRealtime })
+                  
                   dLog(foodcombo)
                 }
             }
@@ -54,7 +51,8 @@ class DetailProductComboViewController: UIViewController {
         lbl_price_food.text = Utils.stringVietnameseFormatWithNumber(amount: foodcombo.priceCombo)
         image_food.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: foodcombo.picture)), placeholder: UIImage(named: "image_defauft_medium"))
         viewModel.dataDetailFoodCombo.accept(foodcombo)
-        lbl_number_cart.text = String(ManageCacheObject.getCartInfo().count)
+        lbl_number_cart.text = String(ManageCacheObject.getCartInfo().reduce(0) { $0 + $1.quantityRealtime })
+        dLog(ManageCacheObject.getCartInfo())
     }
 
     override func viewWillAppear(_ animated: Bool) {

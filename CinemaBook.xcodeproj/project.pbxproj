@@ -65,6 +65,12 @@
 		B0B2BA022AD6EE5E003CE655 /* DIalogPopUpShowListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B2BA002AD6EE5E003CE655 /* DIalogPopUpShowListViewController.xib */; };
 		B0BD0A512AD2F1720099FB2C /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD0A502AD2F1720099FB2C /* SocketIOManager.swift */; };
 		B0BD0A532AD2FF870099FB2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0BD0A522AD2FF870099FB2C /* GoogleService-Info.plist */; };
+		B0BEC1CB2ADADE0C00709883 /* PaymentFoodComboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEC1C92ADADE0C00709883 /* PaymentFoodComboViewController.swift */; };
+		B0BEC1CC2ADADE0C00709883 /* PaymentFoodComboViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BEC1CA2ADADE0C00709883 /* PaymentFoodComboViewController.xib */; };
+		B0BEC1D02ADAEC2300709883 /* PaymentFoodComboViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEC1CF2ADAEC2300709883 /* PaymentFoodComboViewModel.swift */; };
+		B0BEC1D22ADAECA900709883 /* PaymentFoodComboRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEC1D12ADAECA800709883 /* PaymentFoodComboRouter.swift */; };
+		B0BEC1D62ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEC1D42ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift */; };
+		B0BEC1D72ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BEC1D52ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib */; };
 		B0CCC2912AD7D10A0015880A /* DetailProductComboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCC28F2AD7D10A0015880A /* DetailProductComboViewController.swift */; };
 		B0CCC2922AD7D10A0015880A /* DetailProductComboViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CCC2902AD7D10A0015880A /* DetailProductComboViewController.xib */; };
 		B0CCC2942AD7D1380015880A /* DetailProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCC2932AD7D1380015880A /* DetailProductViewModel.swift */; };
@@ -479,6 +485,12 @@
 		B0B2BA002AD6EE5E003CE655 /* DIalogPopUpShowListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DIalogPopUpShowListViewController.xib; sourceTree = "<group>"; };
 		B0BD0A502AD2F1720099FB2C /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		B0BD0A522AD2FF870099FB2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0BEC1C92ADADE0C00709883 /* PaymentFoodComboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFoodComboViewController.swift; sourceTree = "<group>"; };
+		B0BEC1CA2ADADE0C00709883 /* PaymentFoodComboViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentFoodComboViewController.xib; sourceTree = "<group>"; };
+		B0BEC1CF2ADAEC2300709883 /* PaymentFoodComboViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFoodComboViewModel.swift; sourceTree = "<group>"; };
+		B0BEC1D12ADAECA800709883 /* PaymentFoodComboRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFoodComboRouter.swift; sourceTree = "<group>"; };
+		B0BEC1D42ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPaymentFoodComboTableViewCell.swift; sourceTree = "<group>"; };
+		B0BEC1D52ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemPaymentFoodComboTableViewCell.xib; sourceTree = "<group>"; };
 		B0CCC28F2AD7D10A0015880A /* DetailProductComboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductComboViewController.swift; sourceTree = "<group>"; };
 		B0CCC2902AD7D10A0015880A /* DetailProductComboViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProductComboViewController.xib; sourceTree = "<group>"; };
 		B0CCC2932AD7D1380015880A /* DetailProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewModel.swift; sourceTree = "<group>"; };
@@ -1255,6 +1267,7 @@
 		B0B2B9F22AD6D8D7003CE655 /* StoreShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
+				B0BEC1C72ADADDD100709883 /* PaymentFoodCombo */,
 				B0A9EF902AD96F9200B9EF1D /* Cart */,
 				B0B2B9F52AD6D903003CE655 /* viewModel */,
 				B0B2B9F42AD6D8F9003CE655 /* view */,
@@ -1304,6 +1317,51 @@
 				261DBCB471B12C02B892DA72 /* Pods-CinemaBook.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0BEC1C72ADADDD100709883 /* PaymentFoodCombo */ = {
+			isa = PBXGroup;
+			children = (
+				B0BEC1CE2ADAEBF200709883 /* Router */,
+				B0BEC1CD2ADAEBE100709883 /* viewModel */,
+				B0BEC1C82ADADDE700709883 /* view */,
+			);
+			path = PaymentFoodCombo;
+			sourceTree = "<group>";
+		};
+		B0BEC1C82ADADDE700709883 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0BEC1D32ADAF0EA00709883 /* cell */,
+				B0BEC1C92ADADE0C00709883 /* PaymentFoodComboViewController.swift */,
+				B0BEC1CA2ADADE0C00709883 /* PaymentFoodComboViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0BEC1CD2ADAEBE100709883 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0BEC1CF2ADAEC2300709883 /* PaymentFoodComboViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0BEC1CE2ADAEBF200709883 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0BEC1D12ADAECA800709883 /* PaymentFoodComboRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0BEC1D32ADAF0EA00709883 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0BEC1D42ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift */,
+				B0BEC1D52ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		B0CCC28B2AD7D0CD0015880A /* DetailProductCombo */ = {
@@ -3515,8 +3573,10 @@
 				B0224BCF2ACF1A1E002D57CB /* DialogInputQuantityViewController.xib in Resources */,
 				FE50991E2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
+				B0BEC1CC2ADADE0C00709883 /* PaymentFoodComboViewController.xib in Resources */,
 				FE59CF412AA3994300A6ADAA /* AccountInfoViewController.xib in Resources */,
 				B0B2B9F92AD6D92E003CE655 /* StoreViewController.xib in Resources */,
+				B0BEC1D72ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib in Resources */,
 				FE5C9E832AA42BE300FA235D /* Roboto-Regular.ttf in Resources */,
 				FE69A8A62AA1909F0017D891 /* DialogViewController.xib in Resources */,
 				FE5C1D212AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib in Resources */,
@@ -3688,6 +3748,7 @@
 				FE6A86032AC5E03F00810FFB /* CreateProductViewController.swift in Sources */,
 				FE491EDB2AA0F78B00BCA4D1 /* LogoutTableViewCell.swift in Sources */,
 				B0A88C022AD59D2700A5E38E /* DialogNotPaymentViewController.swift in Sources */,
+				B0BEC1CB2ADADE0C00709883 /* PaymentFoodComboViewController.swift in Sources */,
 				FEC1E3F02A9CD481005A9F16 /* TimeShowRouter.swift in Sources */,
 				FE6533872AAA172100C0739B /* BannerTraillerVideoTableViewCell.swift in Sources */,
 				FE59CF372AA36DCA00A6ADAA /* ItemDetailVideoShortCollectionViewCell.swift in Sources */,
@@ -3711,6 +3772,7 @@
 				FEAC969A2A5A55CC00B49C80 /* ViewController.swift in Sources */,
 				FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */,
 				B0A9EFA22AD9805F00B9EF1D /* CartRouter.swift in Sources */,
+				B0BEC1D02ADAEC2300709883 /* PaymentFoodComboViewModel.swift in Sources */,
 				FE11FA7C2AAB5F770016CC6A /* BannerProductTableViewCell.swift in Sources */,
 				FE5EA0ED2AAE1A700039DEC3 /* NewFeedViewModel.swift in Sources */,
 				B0B2BA012AD6EE5E003CE655 /* DIalogPopUpShowListViewController.swift in Sources */,
@@ -3816,6 +3878,7 @@
 				FE4EB36F2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift in Sources */,
 				B0AF7A442AD3E7D9008AE1F2 /* ChatMessageViewModel.swift in Sources */,
 				FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */,
+				B0BEC1D22ADAECA900709883 /* PaymentFoodComboRouter.swift in Sources */,
 				B0AF7A412AD3E6AB008AE1F2 /* ItemChatTableViewCell.swift in Sources */,
 				FE59AE2B2AB366BA00D4E1F6 /* ManagementMovieViewModel.swift in Sources */,
 				FE5C9E6D2AA428CC00FA235D /* SambagDatePickerResult.swift in Sources */,
@@ -3873,6 +3936,7 @@
 				FE33F3852A6CC73900A396A1 /* Utils.swift in Sources */,
 				FE5D08232AA2337E004FA3D9 /* MovieViewModel.swift in Sources */,
 				FE52546E2AC32604003229A0 /* ManagementBillProductViewController.swift in Sources */,
+				B0BEC1D62ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift in Sources */,
 				FE51DE802ABE8D5700D5BE93 /* DialogItemInterestMovieTableViewCell.swift in Sources */,
 				B0B2B9FD2AD6DF54003CE655 /* StoreViewModel.swift in Sources */,
 				FE59CF2F2AA36CA800A6ADAA /* DetailVideoShortViewModel.swift in Sources */,

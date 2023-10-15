@@ -80,7 +80,7 @@ class  ManageCacheObject{
         if let user = UserDefaults.standard.object(forKey: Constans.KEY_DEFAULT_STORAGE.KEY_PHONE){
             return Mapper<FoodCombo>().mapArray(JSONObject: user) ?? []
         }else{
-            return []
+            return [FoodCombo]()
         }
     }
     static func saveCartInfo(_ cart : FoodCombo) {
@@ -90,6 +90,11 @@ class  ManageCacheObject{
         UserDefaults.standard.set(Mapper<FoodCombo>().toJSONArray(dataCart.value), forKey:
                                     Constans.KEY_DEFAULT_STORAGE.KEY_PHONE)
 
+    }
+    
+    static func clearCartInfo() {
+        dataCart.accept([])  // Clear the in-memory data
+        UserDefaults.standard.removeObject(forKey: Constans.KEY_DEFAULT_STORAGE.KEY_PHONE)  // Remove the data from UserDefaults
     }
     
     // lay thong tin nhan vien
