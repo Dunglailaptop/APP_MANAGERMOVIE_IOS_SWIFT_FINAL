@@ -11,7 +11,7 @@ import BmoViewPager
 
 class ManagementBillViewController: UIViewController {
 
-    var title_name = ["HÓA ĐƠN VÉ","HÓA DƠN SẢN PHẨM","HÓA HOÀN TẤT","HÓA ĐƠN CHỜ XÁC NHẬN"]
+    var title_name = ["VÉ CHỜ XEM","VÉ ĐÃ XEM","SP CHỜ NHẬN","SP HOÀN TẤT"]
     
     @IBOutlet weak var bmoViewBar: BmoViewPagerNavigationBar!
     
@@ -43,7 +43,7 @@ extension ManagementBillViewController: BmoViewPagerDelegate, BmoViewPagerDataSo
     
     func bmoViewPagerDataSource(_ viewPager: BmoViewPager, viewControllerForPageAt page: Int) -> UIViewController {
         if(page == 0){
-            let ListMovieShowNowRouters = ManagementBillTicketViewController()
+            let ListMovieShowNowRouters = ManagementBillProductViewController()
          
             return ListMovieShowNowRouters
         }else if(page == 1){
@@ -59,14 +59,14 @@ extension ManagementBillViewController: BmoViewPagerDelegate, BmoViewPagerDataSo
     
     func bmoViewPagerDataSourceNaviagtionBarItemNormalAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]? {
         return [
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14.0),
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15.0),
             NSAttributedString.Key.foregroundColor : ColorUtils.blackBackGroundColor()
         ]
     }
     
     func bmoViewPagerDataSourceNaviagtionBarItemHighlightedAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]? {
         return [
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14.0),
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15.0),
             NSAttributedString.Key.foregroundColor : ColorUtils.blue_color()
         ]
     }
@@ -79,11 +79,11 @@ extension ManagementBillViewController: BmoViewPagerDelegate, BmoViewPagerDataSo
     func bmoViewPagerDataSourceNaviagtionBarItemSize(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> CGSize {
         switch page {
         case 0:
-            return CGSize(width: 200, height: navigationBar.bounds.height)
+            return CGSize(width: 150, height: navigationBar.bounds.height)
         case 1:
-            return CGSize(width: 200, height: navigationBar.bounds.height)
+            return CGSize(width: 150, height: navigationBar.bounds.height)
         default:
-            return CGSize(width: 200, height: navigationBar.bounds.height)
+            return CGSize(width: 150, height: navigationBar.bounds.height)
         }
     }
     

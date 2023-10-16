@@ -49,6 +49,7 @@ enum ManagerConnections {
     case postPaymentBillFoodCombo(foodcombobill:PaymentFoodCombo)
     case getListBillinAccount(iduser:Int)
     case getListBillFoodCombo(iduser:Int)
+    case getListAllBill(idcinema:Int,status:Int)
     
 }
 
@@ -136,6 +137,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListBillAccount
         case .getListBillFoodCombo(let iduser):
             return APIEndPoint.Name.urlGetListInfoBillFoodCombo
+        case .getListAllBill(let idcinema,let status):
+            return APIEndPoint.Name.urlGetListBillAll
         }
     
     }
@@ -214,6 +217,8 @@ extension ManagerConnections: TargetType {
         case .getListBillinAccount(_):
             return .get
         case .getListBillFoodCombo(_):
+            return .get
+        case .getListAllBill(_,_):
             return .get
         }
 
@@ -315,6 +320,8 @@ extension ManagerConnections: TargetType {
         case .getListBillinAccount(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListBillFoodCombo(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListAllBill(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -495,6 +502,11 @@ extension ManagerConnections: TargetType {
             ]
         case .getListBillFoodCombo(let iduser):
             return ["iduser":iduser]
+        case .getListAllBill(let idcinema,let status):
+            return [
+                "idcinema":idcinema,
+                "status": status
+            ]
         }
        
     }
@@ -580,6 +592,8 @@ extension ManagerConnections: TargetType {
         case .getListBillinAccount(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListBillFoodCombo(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListAllBill(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }

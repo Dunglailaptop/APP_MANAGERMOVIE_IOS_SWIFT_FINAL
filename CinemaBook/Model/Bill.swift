@@ -171,6 +171,7 @@ struct FoodComboList: Mappable {
     }
 }
 struct BillInfoAccount: Mappable {
+    var idbill = 0
         var totalamount = 0
         var datebill =  ""
         var quantityticket = 0
@@ -186,6 +187,7 @@ struct BillInfoAccount: Mappable {
     }
     
     mutating func mapping(map: Map) {
+        idbill <- map["idbill"]
          totalamount <- map["totalamount"]
          datebill <- map["datebill"]
          quantityticket <- map["quantityticket"]

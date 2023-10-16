@@ -59,6 +59,7 @@ public struct APIEndPoint {
         static let urlPostPaymentFoodComboStore = "/Bill/postPaymentFoodComboBill"
         static let urlGetListBillAccount = "/Bill/getListBillinAccount"
         static let urlGetListInfoBillFoodCombo = "/Bill/getListBillFoodinAccount"
+        static let urlGetListBillAll = "/Bill/getListAllBillTicket"
     }
     
 }

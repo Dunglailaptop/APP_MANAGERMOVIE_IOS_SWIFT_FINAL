@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManagementBillTicketViewController: UIViewController {
+class ManagementBillTicketViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
