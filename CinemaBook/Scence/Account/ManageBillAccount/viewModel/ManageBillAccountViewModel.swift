@@ -15,7 +15,7 @@ class ManageBillAccountViewModel {
     private(set) weak var view: ManageBillAccountViewController?
     private var router: ManageBillAccountRouter?
     
-    public var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1])
+    public var dataArray: BehaviorRelay<[BillInfoAccount]> = BehaviorRelay(value: [])
     
     func bind(view: ManageBillAccountViewController, router: ManageBillAccountRouter){
         self.view = view
@@ -25,5 +25,14 @@ class ManageBillAccountViewModel {
     
     func makePopViewController() {
         router?.makePopToViewController()
+    }
+}
+extension ManageBillAccountViewModel {
+    func getListBillInAccount() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListBillinAccount(iduser: ManageCacheObject.getCurrentUserInfo().idusers))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
     }
 }

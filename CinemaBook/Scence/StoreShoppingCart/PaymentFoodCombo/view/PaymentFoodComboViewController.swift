@@ -44,7 +44,7 @@ class PaymentFoodComboViewController: UIViewController {
         var dataFoodCombobill = viewModel.dataArrayBillPayment.value
         dataFoodCombobill.total_price = data.map{ $0.quantityRealtime * $0.priceCombo}.reduce(0,+)
         dataFoodCombobill.numbers = data.map{ $0.quantityRealtime}.reduce(0, +)
-        
+        dataFoodCombobill.iduser = ManageCacheObject.getCurrentUserInfo().idusers
         data.enumerated().forEach{
             (index,value) in
             var dataonly = FoodComboList()

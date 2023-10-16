@@ -36,6 +36,10 @@ class AccountRouter {
         let billaccount = ManageBillAccountRouter().viewController as! ManageBillAccountViewController
         sourceView?.navigationController?.pushViewController(billaccount, animated: true)
     }
+    func navigationToManageBillFoodAccountViewController() {
+        let view2 = ManageBillFoodAccountViewController()
+        sourceView?.navigationController?.pushViewController(view2, animated: true)
+    }
     
 }
 

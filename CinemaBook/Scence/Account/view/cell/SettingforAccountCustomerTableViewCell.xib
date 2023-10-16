@@ -78,8 +78,8 @@
                                             <constraint firstAttribute="height" constant="30" id="zau-De-Kxb"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VIDEO ĐÃ XEM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nae-zF-ygB">
-                                        <rect key="frame" x="70" y="20.5" width="116.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOÁ ĐƠN SẢN PHẨM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nae-zF-ygB">
+                                        <rect key="frame" x="70" y="20.5" width="167.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -91,14 +91,27 @@
                                             <constraint firstAttribute="width" constant="22" id="lv8-Ab-L3F"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfd-N3-FM2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="61.5"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="btn_makeToBillFoodListAccount:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JFd-mB-ife"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Atm-oP-b6o" firstAttribute="leading" secondItem="wff-Ig-5uA" secondAttribute="leading" constant="20" id="8O1-D0-cHD"/>
+                                    <constraint firstItem="Gfd-N3-FM2" firstAttribute="leading" secondItem="wff-Ig-5uA" secondAttribute="leading" id="HVM-ic-2ep"/>
                                     <constraint firstAttribute="trailing" secondItem="Bfe-Gm-wiT" secondAttribute="trailing" constant="20" id="Sfb-sF-Ix6"/>
                                     <constraint firstItem="Nae-zF-ygB" firstAttribute="leading" secondItem="Atm-oP-b6o" secondAttribute="trailing" constant="20" id="a4Z-6Z-tF3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gfd-N3-FM2" secondAttribute="trailing" id="nCR-h6-0gc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gfd-N3-FM2" secondAttribute="bottom" id="qGp-7K-8gh"/>
                                     <constraint firstItem="Atm-oP-b6o" firstAttribute="centerY" secondItem="wff-Ig-5uA" secondAttribute="centerY" id="rKP-Ma-z8I"/>
                                     <constraint firstItem="Bfe-Gm-wiT" firstAttribute="centerY" secondItem="wff-Ig-5uA" secondAttribute="centerY" id="u5i-lm-5Ge"/>
+                                    <constraint firstItem="Gfd-N3-FM2" firstAttribute="top" secondItem="wff-Ig-5uA" secondAttribute="top" id="v7g-BB-b3m"/>
                                     <constraint firstItem="Nae-zF-ygB" firstAttribute="centerY" secondItem="wff-Ig-5uA" secondAttribute="centerY" id="wRL-B2-sZd"/>
                                 </constraints>
                             </view>

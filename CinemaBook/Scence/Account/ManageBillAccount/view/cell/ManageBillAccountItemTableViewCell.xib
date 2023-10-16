@@ -171,6 +171,14 @@
                     <color key="value" systemColor="tintColor"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="image_avatar" destination="iKz-k0-U8l" id="gGj-Vs-Jf7"/>
+                <outlet property="lbl_date_interest" destination="ZCf-26-ido" id="V5n-PL-iwH"/>
+                <outlet property="lbl_name_movie" destination="LeR-hq-T3U" id="KCl-Q2-joC"/>
+                <outlet property="lbl_number_chair" destination="EwF-jf-POH" id="3fq-3O-xwD"/>
+                <outlet property="lbl_price" destination="9iv-rM-rpa" id="a15-5d-nHv"/>
+                <outlet property="lbl_time_interest" destination="3Xv-qH-83C" id="mNL-2C-JSM"/>
+            </connections>
             <point key="canvasLocation" x="-9.1603053435114496" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>

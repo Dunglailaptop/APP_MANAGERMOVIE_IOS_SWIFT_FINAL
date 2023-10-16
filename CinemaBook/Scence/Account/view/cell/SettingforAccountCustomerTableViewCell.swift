@@ -31,5 +31,8 @@ class SettingforAccountCustomerTableViewCell: UITableViewCell {
     @IBAction func btn_makeToManageBillPayment(_ sender: Any) {
         viewModel?.makeToManageBillAccountViewController()
     }
-    
+        
+    @IBAction func btn_makeToBillFoodListAccount(_ sender: Any) {
+        viewModel?.makeToManageBillFoodListViewController()
+    }
 }

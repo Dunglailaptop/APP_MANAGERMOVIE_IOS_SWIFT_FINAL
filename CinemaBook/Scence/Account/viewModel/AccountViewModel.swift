@@ -26,5 +26,9 @@ class AccountViewModel{
     func makeToManageBillAccountViewController() {
         router?.navigationToManageBillAccountViewController()
     }
+    
+    func makeToManageBillFoodListViewController() {
+        router?.navigationToManageBillFoodAccountViewController()
+    }
 }
 

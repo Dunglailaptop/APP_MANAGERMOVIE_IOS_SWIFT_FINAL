@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxRelay
 import RxSwift
+import ObjectMapper
 
 class ManageBillAccountViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class ManageBillAccountViewController: UIViewController {
         viewModel.bind(view: self, router: router)
         regiter()
         bindingtable()
+        getListBillAccount()
     }
 
 
@@ -49,6 +51,20 @@ class ManageBillAccountViewController: UIViewController {
     }
     
 }
+
+extension ManageBillAccountViewController {
+    func getListBillAccount() {
+        viewModel.getListBillInAccount().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<BillInfoAccount>().mapArray(JSONObject: response.data) {
+                    self.viewModel.dataArray.accept(data)
+                }
+            }
+        })
+    }
+}
+
 extension ManageBillAccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
@@ -62,6 +78,7 @@ extension ManageBillAccountViewController: UITableViewDelegate {
     func bindingtable() {
         viewModel.dataArray.bind(to: tableView.rx.items(cellIdentifier: "ManageBillAccountItemTableViewCell", cellType: ManageBillAccountItemTableViewCell.self)) {
             (row,data,cell) in
+            cell.data = data
             cell.selectionStyle = .none
            
         }
