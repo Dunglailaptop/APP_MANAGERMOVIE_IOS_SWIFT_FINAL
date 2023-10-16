@@ -30,12 +30,29 @@ class PaymentFoodComboViewController: UIViewController {
         resgiter()
         bindingtable()
         setup()
+        getDataPaymentBillFoodCombo()
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        
       
+    }
+    
+    func getDataPaymentBillFoodCombo() {
+        var data = viewModel.dataArrayFoodCombo.value
+        var dataFoodCombobill = viewModel.dataArrayBillPayment.value
+        dataFoodCombobill.total_price = data.map{ $0.quantityRealtime * $0.priceCombo}.reduce(0,+)
+        dataFoodCombobill.numbers = data.map{ $0.quantityRealtime}.reduce(0, +)
+        
+        data.enumerated().forEach{
+            (index,value) in
+            var dataonly = FoodComboList()
+            dataonly.idfoodcombo = value.idcombo
+            dataFoodCombobill.foodComboBills.append(dataonly)
+        }
+        viewModel.dataArrayBillPayment.accept(dataFoodCombobill)
+        dLog(viewModel.dataArrayBillPayment.value)
     }
     
     func setup() {
@@ -46,6 +63,12 @@ class PaymentFoodComboViewController: UIViewController {
     @IBAction func btn_makePopToViewController(_ sender: Any) {
         viewModel.maKeToViewController()
     }
+    
+    @IBAction func btn_paymentFoodCombo(_ sender: Any) {
+       paymentBillFoodCombo()
+        
+    }
+    
     
 }
 extension PaymentFoodComboViewController: UITableViewDelegate {

@@ -29,6 +29,7 @@ extension AccountViewController {
             switch index {
             case 0:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "SettingforAccountCustomerTableViewCell", for: indexPath) as! SettingforAccountCustomerTableViewCell
+                cell.viewModel = self.viewModel
                 return cell
             case 1:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell

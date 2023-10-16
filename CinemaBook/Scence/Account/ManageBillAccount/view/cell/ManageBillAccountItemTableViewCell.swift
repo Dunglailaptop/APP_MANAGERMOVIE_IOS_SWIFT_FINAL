@@ -1,14 +1,14 @@
 //
-//  SettingforAccountCustomerTableViewCell.swift
+//  ManageBillAccountItemTableViewCell.swift
 //  CinemaBook
 //
-//  Created by dungtien on 8/31/23.
+//  Created by Nguyen Xuan Tien Dung on 15/10/2023.
 //  Copyright © 2023 dungtien. All rights reserved.
 //
 
 import UIKit
 
-class SettingforAccountCustomerTableViewCell: UITableViewCell {
+class ManageBillAccountItemTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,17 +19,6 @@ class SettingforAccountCustomerTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    var viewModel: AccountViewModel? = nil {
-        didSet {
-            
-        }
-    }
-    
-    
-    @IBAction func btn_makeToManageBillPayment(_ sender: Any) {
-        viewModel?.makeToManageBillAccountViewController()
     }
     
 }

@@ -22,5 +22,9 @@ class AccountViewModel{
     func makeToAccountInfoViewController() {
         router?.navigationToAccountInfoViewController()
     }
+    
+    func makeToManageBillAccountViewController() {
+        router?.navigationToManageBillAccountViewController()
+    }
 }
 

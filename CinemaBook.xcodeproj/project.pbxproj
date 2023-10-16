@@ -12,6 +12,13 @@
 		B0224BCF2ACF1A1E002D57CB /* DialogInputQuantityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */; };
 		B0224BD02ACF1A1E002D57CB /* DialogInputMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */; };
 		B0224BD12ACF1A1E002D57CB /* DialogInputQuantityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */; };
+		B038572D2ADC1B1B00814F02 /* PaymentFoodComboViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038572C2ADC1B1B00814F02 /* PaymentFoodComboViewController + Extensions.swift */; };
+		B03857342ADC30FE00814F02 /* ManageBillAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03857322ADC30FE00814F02 /* ManageBillAccountViewController.swift */; };
+		B03857352ADC30FE00814F02 /* ManageBillAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B03857332ADC30FE00814F02 /* ManageBillAccountViewController.xib */; };
+		B03857372ADC32DB00814F02 /* ManageBillAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03857362ADC32DB00814F02 /* ManageBillAccountRouter.swift */; };
+		B03857392ADC33B800814F02 /* ManageBillAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03857382ADC33B800814F02 /* ManageBillAccountViewModel.swift */; };
+		B038573D2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038573B2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.swift */; };
+		B038573E2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B038573C2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.xib */; };
 		B09B6CD82AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B6CD62AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift */; };
 		B09B6CD92AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */; };
 		B09CD1212AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */; };
@@ -432,6 +439,13 @@
 		B0224BCB2ACF1A1D002D57CB /* DialogInputQuantityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogInputQuantityViewController.xib; sourceTree = "<group>"; };
 		B0224BCC2ACF1A1D002D57CB /* DialogInputMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputMoneyViewController.swift; sourceTree = "<group>"; };
 		B0224BCD2ACF1A1D002D57CB /* DialogInputQuantityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInputQuantityViewController.swift; sourceTree = "<group>"; };
+		B038572C2ADC1B1B00814F02 /* PaymentFoodComboViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentFoodComboViewController + Extensions.swift"; sourceTree = "<group>"; };
+		B03857322ADC30FE00814F02 /* ManageBillAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBillAccountViewController.swift; sourceTree = "<group>"; };
+		B03857332ADC30FE00814F02 /* ManageBillAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageBillAccountViewController.xib; sourceTree = "<group>"; };
+		B03857362ADC32DB00814F02 /* ManageBillAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBillAccountRouter.swift; sourceTree = "<group>"; };
+		B03857382ADC33B800814F02 /* ManageBillAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBillAccountViewModel.swift; sourceTree = "<group>"; };
+		B038573B2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBillAccountItemTableViewCell.swift; sourceTree = "<group>"; };
+		B038573C2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageBillAccountItemTableViewCell.xib; sourceTree = "<group>"; };
 		B09B6CD62AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPopUpShowListFoodChooseViewController.swift; sourceTree = "<group>"; };
 		B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogPopUpShowListFoodChooseViewController.xib; sourceTree = "<group>"; };
 		B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFunctionMoreTableViewCell.swift; sourceTree = "<group>"; };
@@ -888,6 +902,59 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		B038572B2ADC1AE700814F02 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B038572C2ADC1B1B00814F02 /* PaymentFoodComboViewController + Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B038572E2ADC301F00814F02 /* ManageBillAccount */ = {
+			isa = PBXGroup;
+			children = (
+				B03857312ADC30C100814F02 /* Router */,
+				B03857302ADC30B100814F02 /* viewModel */,
+				B038572F2ADC30AD00814F02 /* view */,
+			);
+			path = ManageBillAccount;
+			sourceTree = "<group>";
+		};
+		B038572F2ADC30AD00814F02 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B038573A2ADC347900814F02 /* cell */,
+				B03857322ADC30FE00814F02 /* ManageBillAccountViewController.swift */,
+				B03857332ADC30FE00814F02 /* ManageBillAccountViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B03857302ADC30B100814F02 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B03857382ADC33B800814F02 /* ManageBillAccountViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B03857312ADC30C100814F02 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B03857362ADC32DB00814F02 /* ManageBillAccountRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B038573A2ADC347900814F02 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B038573B2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.swift */,
+				B038573C2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		B09B6CD52AD7F8B200FF3E35 /* DialogPopUpShowListFoodChoose */ = {
 			isa = PBXGroup;
 			children = (
@@ -1322,6 +1389,7 @@
 		B0BEC1C72ADADDD100709883 /* PaymentFoodCombo */ = {
 			isa = PBXGroup;
 			children = (
+				B038572B2ADC1AE700814F02 /* Extension */,
 				B0BEC1CE2ADAEBF200709883 /* Router */,
 				B0BEC1CD2ADAEBE100709883 /* viewModel */,
 				B0BEC1C82ADADDE700709883 /* view */,
@@ -2992,6 +3060,7 @@
 		FE7BA9822A5AFD8500344EFB /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				B038572E2ADC301F00814F02 /* ManageBillAccount */,
 				FE59CF392AA3990700A6ADAA /* AccountInfo */,
 				FE491EDD2AA0F82A00BCA4D1 /* Extension */,
 				FE53B8142A7FF26600976628 /* Router */,
@@ -3558,6 +3627,7 @@
 				B0CCC2922AD7D10A0015880A /* DetailProductComboViewController.xib in Resources */,
 				FE5276E82A8D067300252843 /* BookingChairViewController.xib in Resources */,
 				FE491EDC2AA0F78B00BCA4D1 /* LogoutTableViewCell.xib in Resources */,
+				B03857352ADC30FE00814F02 /* ManageBillAccountViewController.xib in Resources */,
 				FE5EA0F72AAE218D0039DEC3 /* HomeReportViewController.xib in Resources */,
 				FE59D1392AB5F8DB00295E11 /* ItemRoomInterestCollectionViewCell.xib in Resources */,
 				B0A9A2272AD8429900D68692 /* ItemFoodWaterSectionTableViewCell.xib in Resources */,
@@ -3613,6 +3683,7 @@
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
 				FE4BAAB32ACAD2040010C0B9 /* ItemComboFoodAddTableViewCell.xib in Resources */,
 				FEFBFB752A9F93A800A85879 /* itemMovieTableViewCell.xib in Resources */,
+				B038573E2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.xib in Resources */,
 				FE519E762A88CB9A007E131E /* BookingTicketViewController.xib in Resources */,
 				B0A88C032AD59D2700A5E38E /* DialogNotPaymentViewController.xib in Resources */,
 				FE5C9E842AA42BE300FA235D /* Roboto-MediumItalic.ttf in Resources */,
@@ -3781,6 +3852,7 @@
 				FEDC3F4D2A6CE11D004D3789 /* APIResponse.swift in Sources */,
 				FE4BAAA82ACACC860010C0B9 /* PaymentBillViewModel.swift in Sources */,
 				FE5252332AAF787400296246 /* ManagementRouter.swift in Sources */,
+				B03857372ADC32DB00814F02 /* ManageBillAccountRouter.swift in Sources */,
 				B0A9A4602AD6617C005C16C1 /* ReportDetailTableViewCell.swift in Sources */,
 				FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */,
 				FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */,
@@ -3828,6 +3900,7 @@
 				FE491EE42AA0F87800BCA4D1 /* AccountViewController+Extension.swift in Sources */,
 				FE5C9E372AA4231C00FA235D /* AccountInfoViewController+Extension.swift in Sources */,
 				FE5C9E632AA427BB00FA235D /* AlphaTransitioning.swift in Sources */,
+				B03857342ADC30FE00814F02 /* ManageBillAccountViewController.swift in Sources */,
 				FE5461202AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift in Sources */,
 				FE6BD1802AC8597A00177093 /* MangamentFoodItemRouter.swift in Sources */,
 				FE7BA97F2A5AFCEE00344EFB /* MenuViewController+Extensions.swift in Sources */,
@@ -3847,6 +3920,7 @@
 				FE6A85FB2AC5D9F700810FFB /* ItemCollectionProductCategoryCollectionViewCell.swift in Sources */,
 				FE5C1D2A2AA2E15300F9B3E5 /* videoShortRouter.swift in Sources */,
 				FE624F712AACB95900AA93FA /* HomeRouter.swift in Sources */,
+				B038573D2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.swift in Sources */,
 				FE59AE292AB3668F00D4E1F6 /* ManagementMovieRouter.swift in Sources */,
 				FE5276EA2A8D07D900252843 /* BookingChairRouter.swift in Sources */,
 				FE5C9E6F2AA42B6A00FA235D /* UIColorExtension.swift in Sources */,
@@ -3883,6 +3957,7 @@
 				FE59AE2B2AB366BA00D4E1F6 /* ManagementMovieViewModel.swift in Sources */,
 				FE5C9E6D2AA428CC00FA235D /* SambagDatePickerResult.swift in Sources */,
 				FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */,
+				B038572D2ADC1B1B00814F02 /* PaymentFoodComboViewController + Extensions.swift in Sources */,
 				FE4BAAA62ACACC6A0010C0B9 /* PaymentBillRouter.swift in Sources */,
 				FE5461312AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift in Sources */,
 				FE4EB36B2AC7184700BB2D79 /* ConfigValue.swift in Sources */,
@@ -3901,6 +3976,7 @@
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
 				FE5EA0F62AAE218D0039DEC3 /* HomeReportViewController.swift in Sources */,
 				B0A7B26E2AD3FCB10035828C /* MessageViewController.swift in Sources */,
+				B03857392ADC33B800814F02 /* ManageBillAccountViewModel.swift in Sources */,
 				B0A9A45A2AD66133005C16C1 /* HomeReportviewModel.swift in Sources */,
 				B0AF7A352AD3B9D7008AE1F2 /* FireBaseManager.swift in Sources */,
 				FE4E71042AC52EA70020BC2C /* OrderProductViewModel.swift in Sources */,

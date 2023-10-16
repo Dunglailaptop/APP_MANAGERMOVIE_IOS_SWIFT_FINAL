@@ -427,6 +427,9 @@
                                             <state key="normal" title="THANH TOÁN">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="btn_paymentFoodCombo:" destination="-1" eventType="touchUpInside" id="FaA-wm-JBX"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemGray6Color"/>

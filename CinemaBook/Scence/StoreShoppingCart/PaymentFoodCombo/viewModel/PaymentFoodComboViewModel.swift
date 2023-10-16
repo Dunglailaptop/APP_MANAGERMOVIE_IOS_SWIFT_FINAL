@@ -17,7 +17,7 @@ class PaymentFoodComboViewModel: BaseViewModel {
     private(set) weak var view: PaymentFoodComboViewController?
     private var router: PaymentFoodComboRouter?
     
-    
+    public var dataArrayBillPayment: BehaviorRelay<PaymentFoodCombo> = BehaviorRelay(value: PaymentFoodCombo())
     public var dataArrayFoodCombo: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value : [])
     
     func bind(view: PaymentFoodComboViewController,router: PaymentFoodComboRouter) {
@@ -31,4 +31,13 @@ class PaymentFoodComboViewModel: BaseViewModel {
     }
     
     
+}
+extension PaymentFoodComboViewModel {
+    func PaymentBillFoodCombo() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.postPaymentBillFoodCombo(foodcombobill: dataArrayBillPayment.value))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
 }

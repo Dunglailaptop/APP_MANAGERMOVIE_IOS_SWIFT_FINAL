@@ -46,6 +46,9 @@ enum ManagerConnections {
     case getInfoInterestMovie(idmovie:Int,idcinema:Int,idroom:Int,idinterest:Int)
     case PostPaymentBill(bill:Bill)
     case getPoint(iduser:Int)
+    case postPaymentBillFoodCombo(foodcombobill:PaymentFoodCombo)
+//    case getListBillinAccount(iduser:Int)
+    
 }
 
 extension ManagerConnections: TargetType {
@@ -126,6 +129,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlPostPayMentBill
         case .getPoint(let iduser):
             return APIEndPoint.Name.urlGetPointInAccount
+        case .postPaymentBillFoodCombo(_):
+            return APIEndPoint.Name.urlPostPaymentFoodComboStore
         }
     
     }
@@ -199,6 +204,8 @@ extension ManagerConnections: TargetType {
             return .post
         case .getPoint(_):
             return .get
+        case .postPaymentBillFoodCombo(_):
+            return .post
         }
 
         
@@ -294,6 +301,8 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getPoint(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .postPaymentBillFoodCombo(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -456,6 +465,16 @@ extension ManagerConnections: TargetType {
             return [
                 "iduser": iduser
             ]
+        case .postPaymentBillFoodCombo(let foodcombobill):
+            return [
+                "id": 0,
+                "idFoodcombo": foodcombobill.idFoodcombo,
+                "idFoodlistcombo": 0,
+                "numbers": foodcombobill.numbers,
+                "total_price": foodcombobill.total_price,
+                "foodComboBills": foodcombobill.foodComboBills.toJSON()
+              
+            ]
         }
        
     }
@@ -536,6 +555,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getPoint(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .postPaymentBillFoodCombo(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

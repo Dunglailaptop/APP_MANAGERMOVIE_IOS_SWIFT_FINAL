@@ -30,8 +30,8 @@
             filePath = "CinemaBook/Scence/Home/view/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "testSocket()"
             landmarkType = "7">
             <Locations>
@@ -108,8 +108,8 @@
             filePath = "CinemaBook/Scence/Account/Extension/AccountViewController+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "callbackAccessConfirm()"
             landmarkType = "7">
             <Locations>

@@ -22,12 +22,11 @@ class HomeViewController: BaseViewController {
     var router = HomeRouter()
     @IBOutlet weak var avatar: UIImageView!
     
-  
+    @IBOutlet weak var lbl_name_account: UILabel!
+    
+    @IBOutlet weak var lbl_price_point: UILabel!
     @IBOutlet weak var lbl_movie_coming: UILabel!
-    @IBOutlet weak var view_movie_coming: UIView!
-    @IBOutlet weak var lbl_movie_now: UILabel!
-    @IBOutlet weak var view_movienow: UIView!
-    @IBOutlet weak var collection_view: UICollectionView!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +40,12 @@ class HomeViewController: BaseViewController {
        
     
 //       testSocket()
+    }
+    func setupinfo() {
+        lbl_name_account.text = ManageCacheObject.getCurrentUserInfo().fullname
+        lbl_price_point.text = Utils.stringVietnameseFormatWithNumber(amount: ManageCacheObject.getCurrentUser().point)
+        avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: ManageCacheObject.getCurrentUserInfo().avatar)), placeholder: UIImage(named: "image_defauft_medium"))
+//        lbl_price_point.text =
     }
    
   
@@ -91,14 +96,11 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        self.getListMovieShowBanner()
-       
+       setupinfo()
     }
     
     @IBAction func btn_movienow(_ sender: Any) {
-        view_movie_coming.backgroundColor = .white
-        lbl_movie_coming.textColor = .blue
-        view_movienow.backgroundColor = .blue
-        lbl_movie_now.textColor = .white
+     
         var data = viewModel.pagigation.value
         data.status = 1
         viewModel.pagigation.accept(data)
@@ -106,10 +108,7 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func btn_moviecoming(_ sender: Any) {
-        view_movienow.backgroundColor = .white
-        lbl_movie_now.textColor = .blue
-        view_movie_coming.backgroundColor = .blue
-        lbl_movie_coming.textColor = .white
+     
         var data = viewModel.pagigation.value
         data.status = 0
         viewModel.pagigation.accept(data)

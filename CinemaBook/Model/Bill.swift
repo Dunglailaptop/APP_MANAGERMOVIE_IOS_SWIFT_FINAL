@@ -96,3 +96,78 @@ struct combobill: Mappable {
         idbill <- map["idbill"]
     }
 }
+
+
+struct PaymentFoodCombo: Mappable {
+        var id = 0
+        var idFoodcombo = 0
+        var idFoodlistcombo = 0
+        var numbers = 0
+        var datetimes = ""
+        var total_price = 0
+        var foodComboBills = [FoodComboList]()
+    
+    init() {
+        
+    }
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+         id <- map["id"]
+         idFoodcombo <- map["idFoodcombo"]
+         idFoodlistcombo <- map["idFoodlistcombo"]
+         numbers <- map["numbers"]
+         datetimes <- map["datetimes"]
+         total_price <- map["total_price"]
+         foodComboBills <- map["foodComboBills"]
+    }
+}
+struct FoodComboList: Mappable {
+    var id = 0
+    var idfoodcombo = 0
+    var idfoodcombobill = 0
+
+    init() {
+        
+    }
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        id <- map["id"]
+        idfoodcombo <- map["idfoodcombo"]
+        idfoodcombobill <- map["idfoodcombobill"]
+    }
+}
+struct BillInfoAccount: Mappable {
+        var totalamount = 0
+        var datebill =  ""
+        var quantityticket = 0
+        var statusbill = 0
+        var namemovie = ""
+        var poster = ""
+        var starttime = ""
+        var endtime = ""
+        var numberchair = ""
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+         totalamount <- map["totalamount"]
+         datebill <- map["datebill"]
+         quantityticket <- map["quantityticket"]
+         statusbill <- map["statusbill"]
+         namemovie <- map["namemovie"]
+         poster <- map["poster"]
+         starttime <- map["starttime"]
+         endtime <- map["endtime"]
+         numberchair <- map["numberchair"]
+    }
+}
