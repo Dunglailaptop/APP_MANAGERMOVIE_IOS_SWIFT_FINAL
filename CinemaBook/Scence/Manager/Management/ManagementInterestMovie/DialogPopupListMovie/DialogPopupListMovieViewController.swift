@@ -13,12 +13,14 @@ import RxCocoa
 
 class DialogPopupListMovieViewController: UIViewController {
 
-    var viewModel = ManagementInterestMovieViewModel()
+    var viewModel = ManagementInterestMoviesViewModel()
     var delagate: DialogListPopupInterestMovie?
    
     @IBOutlet weak var text_field_search: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
+    var date = ""
+    var idroom = 0
     override func viewDidLoad() {
         super.viewDidLoad()
        register()
@@ -86,7 +88,7 @@ class DialogPopupListMovieViewController: UIViewController {
     
     @IBAction func btn_access(_ sender: Any) {
         var data = viewModel.dataArrayMovie.value.filter{ $0.ischeck == 1}
-        delagate!.callbackDialogListMovie(Movies: data)
+        delagate!.callbackDialogListMovie(Movies: data,date: date,idroom: idroom)
     }
 }
 

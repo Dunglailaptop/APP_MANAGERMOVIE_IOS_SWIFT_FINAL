@@ -13,23 +13,23 @@ import ObjectMapper
 
 class DialogPopupListRoomViewController: UIViewController {
 
-    var viewModel = ManagementInterestMovieViewModel()
+    var viewModel = ManagementInterestMoviesViewModel()
     var delegate: DialogListPopupInterestRoom?
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
+    var date = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        register()
-        bindingtableview()
+//        register()
+//        bindingtableview()
       UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
                            UIViewController.attemptRotationToDeviceOrientation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var data = viewModel.allvalue.value
-        data.idcinema = ManageCacheObject.getCurrentCinema().idcinema
-        viewModel.allvalue.accept(data)
-        self.getListRoom()
+     
+        
         
     }
     // Cho phép xoay cả hai hướng
@@ -51,63 +51,16 @@ class DialogPopupListRoomViewController: UIViewController {
     }
     
     @IBAction func btn_access(_ sender: Any) {
-        
-        let data = viewModel.dataArrayRoom.value.filter{$0.ischeck == 1}
-        var datas = viewModel.pagationDataArray.value
-        dLog(data)
-        data.enumerated().forEach{(index,value) in
-            datas.Rooms.idroom = value.idroom
-        }
-        viewModel.pagationDataArray.accept(datas)
-        dLog(viewModel.pagationDataArray.value)
-        delegate?.callbackDialogListRoom(Rooms:viewModel.pagationDataArray.value.Rooms)
-    }
-}
-extension DialogPopupListRoomViewController {
-    func getListRoom(){
-        viewModel.getListRoom().subscribe(onNext: {
-            (response) in
-            if response.code == RRHTTPStatusCode.ok.rawValue {
-                if let data = Mapper<Room>().mapArray(JSONObject: response.data) {
-                    self.viewModel.dataArrayRoom.accept(data)
-                }
-            }
-        })
+        dismiss(animated: true)
+//        let data = viewModel.dataArrayRoom.value.filter{$0.ischeck == 1}
+//        var datas = viewModel.pagationDataArray.value
+//        dLog(data)
+//        data.enumerated().forEach{(index,value) in
+//            datas.Rooms.idroom = value.idroom
+//        }
+//        viewModel.pagationDataArray.accept(datas)
+//        dLog(viewModel.pagationDataArray.value)
+//        delegate?.callbackDialogListRoom(Rooms:viewModel.pagationDataArray.value.Rooms,date: date)
     }
 }
 
-extension DialogPopupListRoomViewController{
-    func register(){
-        let Tableviewcell = UINib(nibName: "itemRoomInterestManagementTableViewCell", bundle: .main)
-        tableView.register(Tableviewcell, forCellReuseIdentifier: "itemRoomInterestManagementTableViewCell")
-        tableView.separatorStyle = .none
-        tableView.rx.setDelegate(self)
-    }
-    func bindingtableview(){
-        viewModel.dataArrayRoom.bind(to: tableView.rx.items(cellIdentifier: "itemRoomInterestManagementTableViewCell", cellType: itemRoomInterestManagementTableViewCell.self)){
-            (row,data,cell) in
-            cell.data = data
-            cell.btn_check.rx.tap.asDriver().drive(onNext: {
-                [self] in
-                var dataArray = self.viewModel.dataArrayRoom.value
-                dataArray.enumerated().forEach {(index,value) in
-                    if value.idroom == cell.data?.idroom {
-                           dataArray[index].ischeck = cell.data?.ischeck == 0 ? 1:0
-                    }else {
-                        dataArray[index].ischeck = 0
-                                        
-                    }
-                 
-                }
-                self.viewModel.dataArrayRoom.accept(dataArray)
-                
-            })
-            
-        }
-    }
-}
-extension DialogPopupListRoomViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
-}

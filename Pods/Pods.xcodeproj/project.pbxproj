@@ -3578,7 +3578,7 @@
 		157887A868D9595921877C7DFED7BD82 /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Concurrency.swift; sourceTree = "<group>"; };
 		1586716CBF1858D537BE681D30C38149 /* _RXKVOObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _RXKVOObserver.h; path = RxCocoa/Runtime/include/_RXKVOObserver.h; sourceTree = "<group>"; };
 		1590652EDCA33DF2B00F0E7DF062B983 /* CompositeDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositeDisposable.swift; path = RxSwift/Disposables/CompositeDisposable.swift; sourceTree = "<group>"; };
-		15A68A8F33BD9EB9AFD02465B0418BCF /* MessageKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MessageKit; path = MessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A68A8F33BD9EB9AFD02465B0418BCF /* MessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B91BDEC5A61D0286976DD6CFAF64C6 /* MWCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWCommon.h; path = Pod/Classes/MWCommon.h; sourceTree = "<group>"; };
 		15D82BC7A1A10C2EA5217103FF3B9B4F /* FIRTwitterAuthProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRTwitterAuthProvider.m; path = FirebaseAuth/Sources/AuthProvider/Twitter/FIRTwitterAuthProvider.m; sourceTree = "<group>"; };
 		1696E92F36CF8E9B93E017179ED6D513 /* RealmSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RealmSwift.release.xcconfig; sourceTree = "<group>"; };
@@ -9267,7 +9267,7 @@
 				9E11FE2DD1AC8BFB6ED1490A716003AD /* LNICoverFlowLayout */,
 				CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel */,
 				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */,
-				15A68A8F33BD9EB9AFD02465B0418BCF /* MessageKit */,
+				15A68A8F33BD9EB9AFD02465B0418BCF /* MessageKit.framework */,
 				3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya */,
 				DF1C341214C72E18A4C46ED244CF9F71 /* MWPhotoBrowser.framework */,
 				7C8D4F1ABE417E5041301FAEA089DFE1 /* MWPhotoBrowser-MWPhotoBrowser */,
@@ -11776,7 +11776,7 @@
 			);
 			name = MessageKit;
 			productName = MessageKit;
-			productReference = 15A68A8F33BD9EB9AFD02465B0418BCF /* MessageKit */;
+			productReference = 15A68A8F33BD9EB9AFD02465B0418BCF /* MessageKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3820B3D61248CD2A225DA312BC70F110 /* youtube-ios-player-helper-Assets */ = {
@@ -18373,7 +18373,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MessageKit/MessageKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MessageKit/MessageKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -20022,7 +20022,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MessageKit/MessageKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MessageKit/MessageKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

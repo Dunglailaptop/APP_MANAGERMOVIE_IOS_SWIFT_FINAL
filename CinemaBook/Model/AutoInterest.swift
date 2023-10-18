@@ -25,7 +25,7 @@ struct InterestModel: Mappable {
 
 struct RoomList: Mappable {
      var idroom = 0
-    var idcinema = 0
+    var Idcinema = 0
     var MovieLists = [MovieList]()
     init() {
          
@@ -38,18 +38,21 @@ struct RoomList: Mappable {
      mutating func mapping(map:Map) {
       idroom <- map["idroom"]
       MovieLists <- map["schedule"]
+     Idcinema <- map["Idcinema"]
      }
     
 }
 
 
 struct MovieList: Mappable {
+    var idinterest = 0
     var idMovie =  0
     var startTime = "2023-09-19T16:02:37.650Z"
     var endTime = "2023-09-19T16:02:37.650Z"
     var alltime = 0
     var image = ""
     var namemovie = ""
+    var status = 0
     init() {
         
     }
@@ -59,12 +62,14 @@ struct MovieList: Mappable {
     }
     
     mutating func mapping(map:Map) {
+        idinterest <- map["idinterest"]
         idMovie <- map["idMovie"]
         startTime <- map["startTime"]
         endTime <- map["endTime"]
         alltime <- map["alltime"]
         image <- map["image"]
         namemovie <- map["namemovie"]
+        status <- map["status"]
     }
 }
 

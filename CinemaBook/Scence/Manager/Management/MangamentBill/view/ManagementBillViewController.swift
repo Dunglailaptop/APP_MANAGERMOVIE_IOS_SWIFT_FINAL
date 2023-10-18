@@ -43,15 +43,15 @@ extension ManagementBillViewController: BmoViewPagerDelegate, BmoViewPagerDataSo
     
     func bmoViewPagerDataSource(_ viewPager: BmoViewPager, viewControllerForPageAt page: Int) -> UIViewController {
         if(page == 0){
-            let ListMovieShowNowRouters = ManagementBillProductViewController()
+            let ListMovieShowNowRouters = ManagementBillticketViewController()
          
             return ListMovieShowNowRouters
         }else if(page == 1){
-          let ListMovieShowNowRouters = ManagementBillTicketViewController()
+          let ListMovieShowNowRouters = ManagementBillFoodComboViewController()
                    
                       return ListMovieShowNowRouters
         }else {
-       let ListMovieShowNowRouters = ManagementBillTicketViewController()
+       let ListMovieShowNowRouters = ManagementBillFoodComboViewController()
                 
                    return ListMovieShowNowRouters
         }

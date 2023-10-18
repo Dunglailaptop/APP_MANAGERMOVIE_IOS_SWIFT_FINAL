@@ -34,7 +34,7 @@ enum ManagerConnections {
     case getListRoom(idcinema:Int)
     case getListAutoInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
      case postListInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
-    case getListInterestsMovie(idcinema:Int,idroom:Int)
+    case getListInterestsMovie(idcinema:Int,idroom:Int,date:String)
     case getListChairRoom(Idroom:Int)
     case getListCategoryChair(Idroom:Int)
     case postCreateChairInRoom(idcinema:Int,nameroom:String,numberChair:Int,allschair:Int)
@@ -50,7 +50,8 @@ enum ManagerConnections {
     case getListBillinAccount(iduser:Int)
     case getListBillFoodCombo(iduser:Int)
     case getListAllBill(idcinema:Int,status:Int)
-    
+    case getListAllBillFoodCombo(idcinema:Int,status:Int)
+    case updateSatus(idinterest:Int,status:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -105,7 +106,7 @@ extension ManagerConnections: TargetType {
               return APIEndPoint.Name.urlGetListRoom
         case .getListAutoInterest(_,_,_,_):
             return APIEndPoint.Name.urlPostAutoInterest
-        case .getListInterestsMovie(let idcinema,let idroom):
+        case .getListInterestsMovie(let idcinema,let idroom,let date):
             return APIEndPoint.Name.urlGetListInterestMovieAuto
         case .postListInterest(_,_,_,_):
             return APIEndPoint.Name.urlInsterestArray
@@ -139,6 +140,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListInfoBillFoodCombo
         case .getListAllBill(let idcinema,let status):
             return APIEndPoint.Name.urlGetListBillAll
+        case .getListAllBillFoodCombo(let idcinema, let status):
+            return APIEndPoint.Name.urlGetListBillAllFoodCombo
+        case .updateSatus(let idinterest,let status):
+            return APIEndPoint.Name.urlUpdateSatusInterest
         }
     
     }
@@ -184,7 +189,7 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListAutoInterest(_,_,_,_):
             return .post
-        case .getListInterestsMovie(_,_):
+        case .getListInterestsMovie(_,_,_):
             return .get
         case .postListInterest(_,_,_,_):
             return .post
@@ -220,6 +225,10 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListAllBill(_,_):
             return .get
+        case .getListAllBillFoodCombo(_,_):
+            return .get
+        case .updateSatus(_,_):
+            return .post
         }
 
         
@@ -289,7 +298,7 @@ extension ManagerConnections: TargetType {
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListAutoInterest(_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
-        case .getListInterestsMovie(_,_):
+        case .getListInterestsMovie(_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .postListInterest(_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
@@ -323,6 +332,10 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListAllBill(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListAllBillFoodCombo(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .updateSatus(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -411,10 +424,11 @@ extension ManagerConnections: TargetType {
               "movieList": movieList.toJSON(),
               "roomList": roomlist.toJSON()
             ]
-        case .getListInterestsMovie(let idcinema,let idroom):
+        case .getListInterestsMovie(let idcinema,let idroom,let date):
             return [
                 "idcinema":idcinema,
-                "idroom":idroom
+                "idroom":idroom,
+                "date": date
             ]
             case .postListInterest(let roomlist,let  movieList,let dayStart,let dayEnd):
             return [
@@ -493,6 +507,7 @@ extension ManagerConnections: TargetType {
                 "numbers": foodcombobill.numbers,
                 "total_price": foodcombobill.total_price,
                 "iduser": foodcombobill.iduser,
+                "idcinemas": foodcombobill.idcinemas,
                 "foodComboBills": foodcombobill.foodComboBills.toJSON()
               
             ]
@@ -505,6 +520,16 @@ extension ManagerConnections: TargetType {
         case .getListAllBill(let idcinema,let status):
             return [
                 "idcinema":idcinema,
+                "status": status
+            ]
+        case .getListAllBillFoodCombo(let idcinema, let status):
+            return [
+                "idcinema": idcinema,
+                "status": status
+            ]
+        case .updateSatus(let idinterest,let status):
+            return [
+                "idinterest": idinterest,
                 "status": status
             ]
         }
@@ -561,7 +586,7 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListAutoInterest(_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
-        case .getListInterestsMovie(_,_):
+        case .getListInterestsMovie(_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .postListInterest(_,_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
@@ -595,6 +620,10 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListAllBill(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListAllBillFoodCombo(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .updateSatus(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

@@ -28,7 +28,7 @@ class DialogItemInterestMovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var viewModel: ManagementInterestMovieViewModel? = nil {
+    var viewModel: ManagementInterestMoviesViewModel? = nil {
         didSet{
             
         }

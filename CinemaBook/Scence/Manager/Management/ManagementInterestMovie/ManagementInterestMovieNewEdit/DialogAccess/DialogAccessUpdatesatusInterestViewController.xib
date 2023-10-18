@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogAccessUpdatesatusInterestViewController" customModule="CinemaBook" customModuleProvider="target">
+            <connections>
+                <outlet property="lbl_tittle" destination="FDY-Nq-nIp" id="9hR-nX-4rx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnr-fS-7TB">
+                    <rect key="frame" x="71.666666666666686" y="326" width="250" height="200"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-SZ-LMv">
+                            <rect key="frame" x="0.0" y="150" width="250" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcq-nT-Phv">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="HUỶ">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btn_cancel:" destination="-1" eventType="touchUpInside" id="iHa-nr-sMR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYt-7p-kf6">
+                                    <rect key="frame" x="125" y="0.0" width="125" height="50"/>
+                                    <color key="backgroundColor" name="outgoingMessageBackground"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="CẬP NHẬT">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btn_access:" destination="-1" eventType="touchUpInside" id="4gr-70-HsQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="I3e-GJ-32n"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông báo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1T-b9-Sip">
+                            <rect key="frame" x="83.999999999999986" y="9.9999999999999982" width="82.000000000000014" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn có chắc chắn muốn huỷ suất chiếu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDY-Nq-nIp">
+                            <rect key="frame" x="25" y="40.333333333333314" width="200" height="40.666666666666657"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="VmI-FS-gvA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="c8e-SZ-LMv" secondAttribute="bottom" id="Gws-U7-sKf"/>
+                        <constraint firstItem="Z1T-b9-Sip" firstAttribute="centerX" secondItem="Hnr-fS-7TB" secondAttribute="centerX" id="cjf-qi-rye"/>
+                        <constraint firstItem="FDY-Nq-nIp" firstAttribute="centerX" secondItem="Hnr-fS-7TB" secondAttribute="centerX" id="ctT-Iz-IeV"/>
+                        <constraint firstAttribute="height" constant="200" id="fWB-93-iAy"/>
+                        <constraint firstAttribute="width" constant="250" id="hji-SD-eZT"/>
+                        <constraint firstItem="c8e-SZ-LMv" firstAttribute="leading" secondItem="Hnr-fS-7TB" secondAttribute="leading" id="iJu-yj-b2J"/>
+                        <constraint firstItem="FDY-Nq-nIp" firstAttribute="top" secondItem="Z1T-b9-Sip" secondAttribute="bottom" constant="10" id="k0g-cT-91e"/>
+                        <constraint firstAttribute="trailing" secondItem="c8e-SZ-LMv" secondAttribute="trailing" id="pta-5l-UdN"/>
+                        <constraint firstItem="Z1T-b9-Sip" firstAttribute="top" secondItem="Hnr-fS-7TB" secondAttribute="top" constant="10" id="tWB-27-N8W"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+            <constraints>
+                <constraint firstItem="Hnr-fS-7TB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z0G-fs-fYK"/>
+                <constraint firstItem="Hnr-fS-7TB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="adm-W2-zNp"/>
+            </constraints>
+            <point key="canvasLocation" x="73" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="outgoingMessageBackground">
+            <color red="0.20399998128414154" green="0.77999997138977051" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -36,7 +36,7 @@ class ManagementRouter {
            sourceView?.navigationController?.pushViewController(ManagementMovieViewRouters, animated: true)
        }
     func navigationToManagementInterestMovie() {
-        let ManagementInterestMovieView = ManagementInterestMovieRouter().viewController
+        let ManagementInterestMovieView = ManagementInterestMoviesViewController()
                   sourceView?.navigationController?.pushViewController(ManagementInterestMovieView, animated: true)
     }
     func navigationToManagementRoomViewController() {

@@ -20,10 +20,10 @@ protocol DialogAccessEmployee {
     func callbackDialogAccess(id:Int,status:Int)
 }
 protocol DialogListPopupInterestMovie {
-    func callbackDialogListMovie(Movies:[Movie])
+    func callbackDialogListMovie(Movies:[Movie],date:String,idroom:Int)
 }
 protocol  DialogListPopupInterestRoom {
-    func callbackDialogListRoom(Rooms:Room)
+    func callbackDialogListRoom(Rooms:Room,date:String)
 }
 protocol CallBackCallApiLoadListChair {
    func callbackCallapiLoadListchairRoom(Idroom:Int)
@@ -43,4 +43,9 @@ protocol DialogNotPayment {
 }
 protocol DialogPayment {
     func callbackPayment()
+}
+
+protocol DialogUpdateSatusInterest
+{
+    func callbackUpdatesatusInterest(idinterest:Int,status:Int)
 }

@@ -33,7 +33,7 @@ class DialogPopupInfoListInterestMovieViewController: UIViewController {
         poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: image)), placeholder: UIImage(named: "image_defauft_medium"))
     }
 
-    var viewModel: ManagementInterestMovieViewModel? = nil {
+    var viewModel: ManagementInterestMoviesViewModel? = nil {
         didSet {
           
 //            viewModel?.dataArrayInterestInfo.subscribe(onNext: {
