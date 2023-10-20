@@ -13,54 +13,72 @@ import ObjectMapper
 
 class DialogPopupListRoomViewController: UIViewController {
 
-    var viewModel = ManagementInterestMoviesViewModel()
+    @IBOutlet weak var lbl_date_interest: UILabel!
+  
+    @IBOutlet weak var lbl_name_room: UILabel!
+    @IBOutlet weak var collectionview: UICollectionView!
+  
     var delegate: DialogListPopupInterestRoom?
+    var Movies = [Movie]()
 //    @IBOutlet weak var tableView: UITableView!
     var date = ""
-    
+    var idroom = 0
+    var nameroom = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-//        register()
-//        bindingtableview()
-      UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
-                           UIViewController.attemptRotationToDeviceOrientation()
+        register()
+        bindingtable()
+        
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
-        
+        lbl_name_room.text = nameroom
+        lbl_date_interest.text = date
         
     }
-    // Cho phép xoay cả hai hướng
-           override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-               return .landscape
-           }
-
-
-            override var shouldAutorotate: Bool {
-                return true
-            }
-
-            override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-                return .landscapeRight
-            }
+    
+    var viewModel : ManagementInterestMoviesViewModel? = nil {
+        didSet {
+           
+          
+        }
+    }
+    
 
     @IBAction func btn_cancel(_ sender: Any) {
         dismiss(animated: true)
     }
     
     @IBAction func btn_access(_ sender: Any) {
-        dismiss(animated: true)
-//        let data = viewModel.dataArrayRoom.value.filter{$0.ischeck == 1}
-//        var datas = viewModel.pagationDataArray.value
-//        dLog(data)
-//        data.enumerated().forEach{(index,value) in
-//            datas.Rooms.idroom = value.idroom
-//        }
-//        viewModel.pagationDataArray.accept(datas)
-//        dLog(viewModel.pagationDataArray.value)
-//        delegate?.callbackDialogListRoom(Rooms:viewModel.pagationDataArray.value.Rooms,date: date)
+       
+        delegate?.callbackDialogListRoom(idroom: idroom, date: date)
+
     }
 }
 
+extension DialogPopupListRoomViewController {
+    func register() {
+        let collectioncell = UINib(nibName: "ItemDialogPopUpDetailInterestCollectionViewCell", bundle: .main)
+        collectionview.register(collectioncell, forCellWithReuseIdentifier: "ItemDialogPopUpDetailInterestCollectionViewCell")
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            layout.itemSize = CGSize(width: 200, height: 80)
+            layout.minimumLineSpacing = 5
+            collectionview.collectionViewLayout = layout
+            collectionview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            collectionview.translatesAutoresizingMaskIntoConstraints = false
+            }
+    
+    func bindingtable() {
+        viewModel!.dataArrayMovie.bind(to: collectionview.rx.items(cellIdentifier: "ItemDialogPopUpDetailInterestCollectionViewCell", cellType: ItemDialogPopUpDetailInterestCollectionViewCell.self)) {
+            (row,data,cell) in
+            cell.data = data
+        }
+    }
+}

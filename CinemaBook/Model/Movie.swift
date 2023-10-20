@@ -17,6 +17,7 @@ var videofile = ""
 var ischeck = 0
 var dayStart = "2023-09-19T16:02:37.650Z"
 var dayEnd = "2023-09-19T16:02:37.650Z"
+var isSelected = DEACTIVE
     init() {
         
     }

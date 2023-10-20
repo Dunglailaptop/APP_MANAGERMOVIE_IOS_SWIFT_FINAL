@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2D067689-BD8B-42D4-AC83-16E74F9F6C5A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Home/view/HomeViewController.swift"
@@ -37,7 +37,7 @@
             <Locations>
                <Location
                   uuid = "2D067689-BD8B-42D4-AC83-16E74F9F6C5A - 95c21fc8402ee016"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CinemaBook.HomeViewController.setupfirebase() -&gt; ()"
@@ -52,7 +52,7 @@
                </Location>
                <Location
                   uuid = "2D067689-BD8B-42D4-AC83-16E74F9F6C5A - d9de00754fcc09ee"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CinemaBook.HomeViewController.testSocket() -&gt; ()"
@@ -67,7 +67,7 @@
                </Location>
                <Location
                   uuid = "2D067689-BD8B-42D4-AC83-16E74F9F6C5A - d9de00754fcc098f"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CinemaBook.HomeViewController.testSocket() -&gt; ()"
@@ -82,7 +82,7 @@
                </Location>
                <Location
                   uuid = "2D067689-BD8B-42D4-AC83-16E74F9F6C5A - d9de00754fcc0972"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CinemaBook.HomeViewController.testSocket() -&gt; ()"
@@ -130,7 +130,7 @@
             <Locations>
                <Location
                   uuid = "169E3677-D62E-4E59-BAED-B5126A4CA8EA - 2136eafec9ecab97"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CinemaBook.AccountViewController.callbackAccessConfirm() -&gt; ()"
@@ -145,7 +145,7 @@
                </Location>
                <Location
                   uuid = "169E3677-D62E-4E59-BAED-B5126A4CA8EA - 2136eafec9ecabb6"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CinemaBook.AccountViewController.callbackAccessConfirm() -&gt; ()"
@@ -538,7 +538,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8C8F6261-65F6-495F-8FEE-2372652B659C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
@@ -551,7 +551,7 @@
             <Locations>
                <Location
                   uuid = "8C8F6261-65F6-495F-8FEE-2372652B659C - 87b5c8929d7197c"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
@@ -566,7 +566,7 @@
                </Location>
                <Location
                   uuid = "8C8F6261-65F6-495F-8FEE-2372652B659C - 9020bb36726ebce8"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; Swift.Bool"
@@ -581,7 +581,7 @@
                </Location>
                <Location
                   uuid = "8C8F6261-65F6-495F-8FEE-2372652B659C - 9020bb36726ebf74"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; Swift.Bool"
@@ -601,7 +601,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3B7EF71D-5731-4FB8-941C-061CB460DCF2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Helper/FireBaseManager.swift"
@@ -614,7 +614,7 @@
             <Locations>
                <Location
                   uuid = "3B7EF71D-5731-4FB8-941C-061CB460DCF2 - 87b5c8929d71adf"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
@@ -629,7 +629,7 @@
                </Location>
                <Location
                   uuid = "3B7EF71D-5731-4FB8-941C-061CB460DCF2 - 9020bb36726ebf57"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in CinemaBook.FireBaseManager.userExists(with: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; Swift.Bool"
@@ -664,7 +664,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8987B066-FE95-47B6-ACC4-3C4940E4A93A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Account/AccountInfo/view/AccountInfoViewController.swift"
@@ -1265,8 +1265,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
             landmarkName = "getListAutoInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1281,8 +1281,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/view/ManagementInterestMoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "calendar(_:didSelect:at:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1297,8 +1297,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "272"
-            endingLineNumber = "272"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
             landmarkName = "getListAutoInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1307,14 +1307,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7B02F1C3-BFE4-4AB4-98FE-B5BB415E09D3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "getListInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1329,8 +1329,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "239"
-            endingLineNumber = "239"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "CreateInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1345,8 +1345,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "CreateInterest()"
             landmarkType = "7">
             <Locations>
@@ -1393,10 +1393,57 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
             landmarkName = "CreateInterest()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52A98AB5-176D-47B9-B26D-74CDBE03E094 - bbe359743554b575"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.CreateInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "52A98AB5-176D-47B9-B26D-74CDBE03E094 - bbe359743554b575"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.CreateInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "289"
+                  endingLineNumber = "289"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "52A98AB5-176D-47B9-B26D-74CDBE03E094 - bbe359743554b930"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.CreateInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "318"
+                  endingLineNumber = "318"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1409,9 +1456,228 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "getListMovie()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0EEE030-A004-4467-8A51-767A6350F967"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "413"
+            endingLineNumber = "413"
+            landmarkName = "callbackDialogListRoom(idroom:date:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E0EEE030-A004-4467-8A51-767A6350F967 - 8bdc532a8e174e20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ManagementInterestMoviesViewController.callbackDialogListRoom(idroom: Swift.Int, date: Swift.String) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "384"
+                  endingLineNumber = "384"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "E0EEE030-A004-4467-8A51-767A6350F967 - 8bdc532a8e174e20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ManagementInterestMoviesViewController.callbackDialogListRoom(idroom: Swift.Int, date: Swift.String) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "384"
+                  endingLineNumber = "384"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "E0EEE030-A004-4467-8A51-767A6350F967 - 8bdc532a8e174ae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ManagementInterestMoviesViewController.callbackDialogListRoom(idroom: Swift.Int, date: Swift.String) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "413"
+                  endingLineNumber = "413"
+                  offsetFromSymbolStart = "428">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4F0DDF0-75C5-4E3F-94D2-6C50ECCC2FCF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "getListAutoInterest()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A4F0DDF0-75C5-4E3F-94D2-6C50ECCC2FCF - 498e28f42aad6509"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.getListAutoInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "310"
+                  endingLineNumber = "310"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "A4F0DDF0-75C5-4E3F-94D2-6C50ECCC2FCF - 498e28f42aad6509"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.getListAutoInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "310"
+                  endingLineNumber = "310"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "A4F0DDF0-75C5-4E3F-94D2-6C50ECCC2FCF - 498e28f42aad68d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.getListAutoInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "339"
+                  endingLineNumber = "339"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3EDD2F8-7DA1-45C5-8B0A-F3425708DA42"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
+            landmarkName = "getListInterest()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E3EDD2F8-7DA1-45C5-8B0A-F3425708DA42 - 4e325448c3d2b1ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, CinemaBook.MovieList) -&gt; () in closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.getListInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "E3EDD2F8-7DA1-45C5-8B0A-F3425708DA42 - 4e325448c3d2b1cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, CinemaBook.MovieList) -&gt; () in closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.getListInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "E3EDD2F8-7DA1-45C5-8B0A-F3425708DA42 - 4e325448c3d2b508"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, CinemaBook.MovieList) -&gt; () in closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.getListInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "304"
+                  endingLineNumber = "304"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "556C4751-7F66-4F09-BE83-5BCF4CA1D81A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/DialogPopupInfoListInterestMovie/cell/ItemInterestMovieListManagementCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EA4556D-EE85-4BAD-8B3C-A4B1ABD23F52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "getListInterest()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

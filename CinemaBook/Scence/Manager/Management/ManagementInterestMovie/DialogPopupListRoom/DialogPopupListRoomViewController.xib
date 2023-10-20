@@ -19,6 +19,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogPopupListRoomViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="collectionview" destination="qhN-o6-RXz" id="X36-zD-wnS"/>
+                <outlet property="lbl_date_interest" destination="EiM-3q-0Th" id="zod-eU-tFm"/>
+                <outlet property="lbl_name_room" destination="nq3-OX-fJG" id="thi-o3-pVJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,10 +31,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT2-As-jX8">
-                    <rect key="frame" x="0.0" y="512" width="414" height="350"/>
+                    <rect key="frame" x="0.0" y="462" width="414" height="400"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nar-oN-TfJ">
-                            <rect key="frame" x="0.0" y="310" width="414" height="40"/>
+                            <rect key="frame" x="0.0" y="360" width="414" height="40"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qIh-cA-JRi">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -83,19 +86,19 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wdc-fr-yRz">
-                            <rect key="frame" x="0.0" y="30" width="414" height="280"/>
+                            <rect key="frame" x="0.0" y="30" width="414" height="330"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bU5-qS-ErY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phòng chiếu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHM-W0-RD7">
-                                            <rect key="frame" x="0.0" y="0.0" width="207" height="93.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="82.5"/>
                                             <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAP A1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nq3-OX-fJG">
-                                            <rect key="frame" x="207" y="0.0" width="207" height="93.5"/>
+                                            <rect key="frame" x="207" y="0.0" width="207" height="82.5"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -103,16 +106,33 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5aQ-te-2fb">
-                                    <rect key="frame" x="0.0" y="93.5" width="414" height="93"/>
+                                    <rect key="frame" x="0.0" y="82.5" width="414" height="82.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngảy chiếu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOB-G8-OCV">
-                                            <rect key="frame" x="0.0" y="0.0" width="207" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="82.5"/>
                                             <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27/09/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiM-3q-0Th">
-                                            <rect key="frame" x="207" y="0.0" width="207" height="93"/>
+                                            <rect key="frame" x="207" y="0.0" width="207" height="82.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="50L-mV-DVb">
+                                    <rect key="frame" x="0.0" y="165" width="414" height="82.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thời gian nghỉ giữa các suất:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9E-Ly-PUK">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="82.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-FU-ik4">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="82.5"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -120,11 +140,11 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FDR-nz-8aw">
-                                    <rect key="frame" x="0.0" y="186.5" width="414" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="247.5" width="414" height="82.5"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qhN-o6-RXz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qhN-o6-RXz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PSx-Vd-vkC">
                                                 <size key="itemSize" width="128" height="128"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -133,13 +153,14 @@
                                             </collectionViewFlowLayout>
                                         </collectionView>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 </stackView>
                             </subviews>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="350" id="1n3-ak-GaA"/>
+                        <constraint firstAttribute="height" constant="400" id="1n3-ak-GaA"/>
                         <constraint firstAttribute="trailing" secondItem="Nar-oN-TfJ" secondAttribute="trailing" id="26E-yf-tFh"/>
                         <constraint firstAttribute="trailing" secondItem="wdc-fr-yRz" secondAttribute="trailing" id="5Ax-LH-6d4"/>
                         <constraint firstItem="ifp-AA-SRu" firstAttribute="leading" secondItem="TT2-As-jX8" secondAttribute="leading" id="DSj-L9-qvQ"/>
@@ -169,6 +190,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -26,8 +26,8 @@ class ManagementInterestMoviesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        contentView.backgroundColor = .lightGray
-        view_time.backgroundColor = .lightGray
+//        contentView.backgroundColor = .lightGray
+//        view_time.backgroundColor = .lightGray
         // Configure the view for the selected state
     }
     

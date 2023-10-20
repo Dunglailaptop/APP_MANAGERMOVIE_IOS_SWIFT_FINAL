@@ -21,6 +21,7 @@ class DialogPopupListMovieViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var date = ""
     var idroom = 0
+    var nameroom = ""
     override func viewDidLoad() {
         super.viewDidLoad()
        register()
@@ -64,23 +65,10 @@ class DialogPopupListMovieViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getListMovie()
-        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
-                      UIViewController.attemptRotationToDeviceOrientation()
+      
     }
 
-     // Cho phép xoay cả hai hướng
-        override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-            return .landscape
-        }
-
-
-         override var shouldAutorotate: Bool {
-             return true
-         }
-
-         override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-             return .landscapeRight
-         }
+  
 
     @IBAction func btn_cancel(_ sender: Any) {
         dismiss(animated: true)
@@ -88,7 +76,7 @@ class DialogPopupListMovieViewController: UIViewController {
     
     @IBAction func btn_access(_ sender: Any) {
         var data = viewModel.dataArrayMovie.value.filter{ $0.ischeck == 1}
-        delagate!.callbackDialogListMovie(Movies: data,date: date,idroom: idroom)
+        delagate!.callbackDialogListMovie(Movies: data,date: date,idroom: idroom,nameroom: nameroom)
     }
 }
 

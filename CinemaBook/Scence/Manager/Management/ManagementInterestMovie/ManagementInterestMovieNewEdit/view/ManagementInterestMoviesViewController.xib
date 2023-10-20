@@ -21,9 +21,11 @@
                 <outlet property="calender" destination="Lxl-hW-OVQ" id="QEs-yo-EdT"/>
                 <outlet property="dropdown" destination="YQS-IX-HxK" id="hXM-Wq-3PN"/>
                 <outlet property="lbl_datetime" destination="elL-H6-TTh" id="jxI-5g-Rix"/>
-                <outlet property="lbl_number" destination="PS3-9H-I6d" id="dbH-iB-p7D"/>
+                <outlet property="lbl_number" destination="PS3-9H-I6d" id="fKp-bC-3J2"/>
+                <outlet property="lbl_number_txt" destination="KYM-p0-20t" id="z0K-RW-UFI"/>
                 <outlet property="tableView" destination="mKY-Jv-ukC" id="34k-4W-r5E"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_no_data" destination="M6l-Ae-fZk" id="0Jb-XV-Irp"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -105,8 +107,9 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZP-lS-sR7">
                             <rect key="frame" x="0.0" y="201" width="393" height="30"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYM-p0-20t">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="30 phút" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYM-p0-20t">
                                     <rect key="frame" x="20" y="5" width="353" height="20"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -117,22 +120,35 @@
                                         <constraint firstAttribute="height" constant="22" id="gSP-eo-1Ka"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5M-1P-NCG">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="btn_makechoosInputQuantity:" destination="-1" eventType="touchUpInside" id="3fN-4e-Ymh"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemGray3Color"/>
                             <constraints>
                                 <constraint firstItem="KYM-p0-20t" firstAttribute="top" secondItem="FZP-lS-sR7" secondAttribute="top" constant="5" id="5eT-1R-sjq"/>
+                                <constraint firstAttribute="trailing" secondItem="Z5M-1P-NCG" secondAttribute="trailing" id="6AQ-Qc-9fg"/>
                                 <constraint firstItem="KYM-p0-20t" firstAttribute="leading" secondItem="FZP-lS-sR7" secondAttribute="leading" constant="20" id="AEP-dY-GIV"/>
                                 <constraint firstAttribute="trailing" secondItem="KYM-p0-20t" secondAttribute="trailing" constant="20" id="Brz-xW-sbw"/>
                                 <constraint firstAttribute="bottom" secondItem="KYM-p0-20t" secondAttribute="bottom" constant="5" id="Owr-ru-5n7"/>
                                 <constraint firstAttribute="bottom" secondItem="KYM-p0-20t" secondAttribute="bottom" constant="5" id="VE5-U8-XI7"/>
+                                <constraint firstAttribute="bottom" secondItem="Z5M-1P-NCG" secondAttribute="bottom" id="dNI-sb-ksE"/>
                                 <constraint firstItem="KYM-p0-20t" firstAttribute="leading" secondItem="FZP-lS-sR7" secondAttribute="leading" constant="20" id="fxO-rh-GEO"/>
                                 <constraint firstItem="KYM-p0-20t" firstAttribute="top" secondItem="FZP-lS-sR7" secondAttribute="top" constant="5" id="gvu-ot-Z9x"/>
+                                <constraint firstItem="Z5M-1P-NCG" firstAttribute="leading" secondItem="FZP-lS-sR7" secondAttribute="leading" id="hur-Kn-W0M"/>
                                 <constraint firstAttribute="height" constant="30" id="lqv-bf-Y29"/>
+                                <constraint firstItem="Z5M-1P-NCG" firstAttribute="top" secondItem="FZP-lS-sR7" secondAttribute="top" id="rFL-2T-TXP"/>
                                 <constraint firstAttribute="trailing" secondItem="SRB-DN-0Wi" secondAttribute="trailing" constant="20" id="sF8-f9-Jfj"/>
                                 <constraint firstItem="SRB-DN-0Wi" firstAttribute="centerY" secondItem="FZP-lS-sR7" secondAttribute="centerY" id="tS5-0l-Mwl"/>
                             </constraints>
                         </view>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mKY-Jv-ukC">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mKY-Jv-ukC">
                             <rect key="frame" x="0.0" y="231" width="393" height="468"/>
                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                         </tableView>
@@ -151,7 +167,7 @@
                                                 <constraint firstAttribute="width" constant="22" id="eOa-re-uG6"/>
                                             </constraints>
                                         </imageView>
-                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="RAP A1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQS-IX-HxK" customClass="JRDropDown">
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Vui lòng chọn rạp" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQS-IX-HxK" customClass="JRDropDown">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -285,6 +301,31 @@
                                 <constraint firstAttribute="trailing" secondItem="9Rz-VL-2Sx" secondAttribute="trailing" id="vsV-Wt-fcL"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6l-Ae-fZk">
+                            <rect key="frame" x="0.0" y="231" width="393" height="468"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-no-data" translatesAutoresizingMaskIntoConstraints="NO" id="Vg5-kU-woR">
+                                    <rect key="frame" x="96.666666666666686" y="100" width="200" height="200"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="HHz-mb-yxK"/>
+                                        <constraint firstAttribute="width" constant="200" id="Jwv-L1-DK7"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KHÔNG CÓ DỮ LIỆU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJu-Ym-TXj">
+                                    <rect key="frame" x="116" y="320" width="161" height="21.333333333333314"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            <constraints>
+                                <constraint firstItem="hJu-Ym-TXj" firstAttribute="centerX" secondItem="M6l-Ae-fZk" secondAttribute="centerX" id="JJK-oo-4nM"/>
+                                <constraint firstItem="hJu-Ym-TXj" firstAttribute="top" secondItem="Vg5-kU-woR" secondAttribute="bottom" constant="20" id="Jcs-GE-lJP"/>
+                                <constraint firstItem="Vg5-kU-woR" firstAttribute="top" secondItem="M6l-Ae-fZk" secondAttribute="top" constant="100" id="egY-ae-gof"/>
+                                <constraint firstItem="Vg5-kU-woR" firstAttribute="centerX" secondItem="M6l-Ae-fZk" secondAttribute="centerX" id="gjU-xp-EQL"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
@@ -292,10 +333,13 @@
                         <constraint firstAttribute="bottom" secondItem="Tmh-6n-Qkq" secondAttribute="bottom" id="3yQ-IN-0bN"/>
                         <constraint firstItem="Qo6-nm-QZq" firstAttribute="leading" secondItem="kGr-2A-zOj" secondAttribute="leading" id="70E-pK-O67"/>
                         <constraint firstItem="mKY-Jv-ukC" firstAttribute="leading" secondItem="kGr-2A-zOj" secondAttribute="leading" id="86O-Bp-d1i"/>
+                        <constraint firstAttribute="trailing" secondItem="M6l-Ae-fZk" secondAttribute="trailing" id="AwY-Lo-oZ0"/>
                         <constraint firstAttribute="trailing" secondItem="Qo6-nm-QZq" secondAttribute="trailing" id="BDY-bZ-QcY"/>
+                        <constraint firstItem="M6l-Ae-fZk" firstAttribute="top" secondItem="Qo6-nm-QZq" secondAttribute="bottom" constant="150" id="EDU-aC-9wt"/>
                         <constraint firstItem="Lxl-hW-OVQ" firstAttribute="leading" secondItem="kGr-2A-zOj" secondAttribute="leading" id="FSN-wd-SY6"/>
                         <constraint firstAttribute="trailing" secondItem="Tmh-6n-Qkq" secondAttribute="trailing" id="Jme-v2-D5e"/>
                         <constraint firstItem="FZP-lS-sR7" firstAttribute="top" secondItem="Qo6-nm-QZq" secondAttribute="bottom" constant="120" id="MCT-6j-mRy"/>
+                        <constraint firstItem="Tmh-6n-Qkq" firstAttribute="top" secondItem="M6l-Ae-fZk" secondAttribute="bottom" id="Sr9-sP-tUP"/>
                         <constraint firstItem="Tmh-6n-Qkq" firstAttribute="leading" secondItem="kGr-2A-zOj" secondAttribute="leading" id="W26-Mp-Vp5"/>
                         <constraint firstAttribute="trailing" secondItem="FZP-lS-sR7" secondAttribute="trailing" id="Xti-ZV-oZy"/>
                         <constraint firstAttribute="trailing" secondItem="mKY-Jv-ukC" secondAttribute="trailing" id="a6t-x5-hws"/>
@@ -307,12 +351,13 @@
                         <constraint firstItem="FZP-lS-sR7" firstAttribute="leading" secondItem="kGr-2A-zOj" secondAttribute="leading" id="qfX-jF-B76"/>
                         <constraint firstItem="Qo6-nm-QZq" firstAttribute="top" secondItem="SPx-yD-dav" secondAttribute="bottom" constant="1" id="sg3-VM-eiI"/>
                         <constraint firstItem="Tmh-6n-Qkq" firstAttribute="top" secondItem="mKY-Jv-ukC" secondAttribute="bottom" id="vdu-CQ-T9Y"/>
+                        <constraint firstItem="M6l-Ae-fZk" firstAttribute="leading" secondItem="kGr-2A-zOj" secondAttribute="leading" id="y1o-Tg-tS6"/>
                         <constraint firstItem="SPx-yD-dav" firstAttribute="leading" secondItem="kGr-2A-zOj" secondAttribute="leading" id="zDP-Mc-s5Z"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kGr-2A-zOj" secondAttribute="trailing" id="Hp3-aJ-gah"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kGr-2A-zOj" secondAttribute="bottom" id="Tm5-aN-V6Y"/>
@@ -322,9 +367,15 @@
             <point key="canvasLocation" x="32.824427480916029" y="-11.267605633802818"/>
         </view>
     </objects>
+    <designables>
+        <designable name="YQS-IX-HxK">
+            <size key="intrinsicContentSize" width="113" height="18.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="icon-back-blue" width="8.6666669845581055" height="17.333333969116211"/>
         <image name="icon_scale" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="img-no-data" width="220" height="170"/>
         <image name="see_more" width="18" height="18"/>
         <namedColor name="outgoingMessageBackground">
             <color red="0.20399998128414154" green="0.77999997138977051" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

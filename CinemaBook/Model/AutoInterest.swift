@@ -53,6 +53,7 @@ struct MovieList: Mappable {
     var image = ""
     var namemovie = ""
     var status = 0
+    var resetTime = 0
     init() {
         
     }
@@ -70,6 +71,7 @@ struct MovieList: Mappable {
         image <- map["image"]
         namemovie <- map["namemovie"]
         status <- map["status"]
+        resetTime <- map["resetTime"]
     }
 }
 

@@ -32,8 +32,8 @@ enum ManagerConnections {
     case resetPasswordEmployee(id:Int)
     case getInfoUserCinema(iduser:Int)
     case getListRoom(idcinema:Int)
-    case getListAutoInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
-     case postListInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String)
+    case getListAutoInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String,breakTime:Int)
+    case postListInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String,resetTime:Int)
     case getListInterestsMovie(idcinema:Int,idroom:Int,date:String)
     case getListChairRoom(Idroom:Int)
     case getListCategoryChair(Idroom:Int)
@@ -104,11 +104,11 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetInfoUserCinema
         case .getListRoom(let idcinema):
               return APIEndPoint.Name.urlGetListRoom
-        case .getListAutoInterest(_,_,_,_):
+        case .getListAutoInterest(_,_,_,_,_):
             return APIEndPoint.Name.urlPostAutoInterest
         case .getListInterestsMovie(let idcinema,let idroom,let date):
             return APIEndPoint.Name.urlGetListInterestMovieAuto
-        case .postListInterest(_,_,_,_):
+        case .postListInterest(_,_,_,_,_):
             return APIEndPoint.Name.urlInsterestArray
         case .getListChairRoom(let Idroom):
             return APIEndPoint.Name.urlGetListChairRoom
@@ -187,11 +187,11 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListRoom(_):
             return .get
-        case .getListAutoInterest(_,_,_,_):
+        case .getListAutoInterest(_,_,_,_,_):
             return .post
         case .getListInterestsMovie(_,_,_):
             return .get
-        case .postListInterest(_,_,_,_):
+        case .postListInterest(_,_,_,_,_):
             return .post
         case .getListRoom(_):
             return .get
@@ -296,11 +296,11 @@ extension ManagerConnections: TargetType {
                      return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListRoom(_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .getListAutoInterest(_,_,_,_):
+        case .getListAutoInterest(_,_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getListInterestsMovie(_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .postListInterest(_,_,_,_):
+        case .postListInterest(_,_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getListChairRoom(_):
                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
@@ -417,10 +417,11 @@ extension ManagerConnections: TargetType {
             return ["iduser":iduser]
         case .getListRoom(let idcinema):
             return ["idCinema":idcinema]
-        case .getListAutoInterest(let roomlist,let  movieList,let dayStart,let dayEnd):
+        case .getListAutoInterest(let roomlist,let  movieList,let dayStart,let dayEnd,let breakTime):
             return [
                 "dayStart": dayStart,
               "dayEnd": dayEnd,
+                "breakTime": breakTime,
               "movieList": movieList.toJSON(),
               "roomList": roomlist.toJSON()
             ]
@@ -430,10 +431,11 @@ extension ManagerConnections: TargetType {
                 "idroom":idroom,
                 "date": date
             ]
-            case .postListInterest(let roomlist,let  movieList,let dayStart,let dayEnd):
+            case .postListInterest(let roomlist,let  movieList,let dayStart,let dayEnd, let resetTime):
             return [
             "dayStart": dayStart,
             "dayEnd": dayEnd,
+            "breakTime": resetTime,
             "movieList": movieList.toJSON(),
             "roomList": roomlist.toJSON()
             ]
@@ -584,11 +586,11 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListRoom(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .getListAutoInterest(_,_,_,_):
+        case .getListAutoInterest(_,_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getListInterestsMovie(_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .postListInterest(_,_,_,_):
+        case .postListInterest(_,_,_,_,_):
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getListChairRoom(_):
               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))

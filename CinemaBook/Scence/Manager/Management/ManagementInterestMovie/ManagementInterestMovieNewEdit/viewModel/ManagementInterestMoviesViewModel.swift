@@ -28,7 +28,7 @@ class ManagementInterestMoviesViewModel: BaseViewModel {
     public var dataArrayMovie: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
     public var dataArrayRoom: BehaviorRelay<[Room]> = BehaviorRelay(value: [])
     public var dataDay: BehaviorRelay<(DateForm:String,DateTo:String,dateStart:String,dateEnd:String)> = BehaviorRelay(value: (DateForm: Utils.getCurrentDateStringFormatyyyyMMdd(),DateTo:Utils.getCurrentDateStringFormatyyyyMMdd(),dateStart:"2023-09-19T16:02:37.650Z",dateEnd:"2023-09-19T16:02:37.650Z"))
-    public var allvalue: BehaviorRelay<(page:Int,limit:Int,status:Int,idcinema:Int,idroom:Int,idinterest:Int,statusInterest:Int)> = BehaviorRelay(value: (page:0,limit:20,status:1,idcinema:ManageCacheObject.getCurrentCinema().idcinema ,idroom:0,idinterest:0,statusInterest:0))
+    public var allvalue: BehaviorRelay<(page:Int,limit:Int,status:Int,idcinema:Int,idroom:Int,idinterest:Int,statusInterest:Int,breakTime:Int)> = BehaviorRelay(value: (page:0,limit:20,status:1,idcinema:ManageCacheObject.getCurrentCinema().idcinema ,idroom:0,idinterest:0,statusInterest:0,breakTime:0))
     public var pagationData: BehaviorRelay<(MovieLists: MovieList,RoomLists:RoomList)> = BehaviorRelay(value:  (MovieLists: MovieList(),RoomLists:RoomList()))
     public var pagationDataArray: BehaviorRelay<(MovieLists: [MovieList],RoomLists:RoomList,Rooms:Room)> = BehaviorRelay(value:  (MovieLists:[],RoomLists:RoomList(),Rooms:Room()))
     public var selectedDataMovie: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
@@ -79,7 +79,7 @@ extension ManagementInterestMoviesViewModel {
               }
      func getListInterestAuto() -> Observable<APIResponse> {
         dLog(pagationDataArray.value)
-        return appServiceProvider.rx.request(.getListAutoInterest(roomlist: pagationDataArray.value.RoomLists, movieList: pagationDataArray.value.MovieLists, dayStart: dataDay.value.DateForm, dayEnd: dataDay.value.DateTo))
+         return appServiceProvider.rx.request(.getListAutoInterest(roomlist: pagationDataArray.value.RoomLists, movieList: pagationDataArray.value.MovieLists, dayStart: dataDay.value.DateForm, dayEnd: dataDay.value.DateTo,breakTime: allvalue.value.breakTime))
                 .filterSuccessfulStatusCodes()
                 .mapJSON().asObservable()
                 .showAPIErrorToast()
@@ -88,7 +88,7 @@ extension ManagementInterestMoviesViewModel {
     func CreateArrayInterest() -> Observable<APIResponse> {
         dLog(pagationDataArray.value.MovieLists)
         dLog(pagationDataArray.value.RoomLists)
-        return appServiceProvider.rx.request(.postListInterest(roomlist: pagationDataArray.value.RoomLists, movieList: pagationDataArray.value.RoomLists.MovieLists, dayStart: dataDay.value.DateForm, dayEnd: dataDay.value.DateTo))
+        return appServiceProvider.rx.request(.postListInterest(roomlist: pagationDataArray.value.RoomLists, movieList: pagationDataArray.value.RoomLists.MovieLists, dayStart: dataDay.value.DateForm, dayEnd: dataDay.value.DateTo,resetTime: allvalue.value.breakTime))
                    .filterSuccessfulStatusCodes()
                    .mapJSON().asObservable()
                    .showAPIErrorToast()

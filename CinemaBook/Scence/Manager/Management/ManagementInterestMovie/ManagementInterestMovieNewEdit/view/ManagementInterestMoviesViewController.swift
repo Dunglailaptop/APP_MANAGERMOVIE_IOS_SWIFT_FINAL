@@ -13,9 +13,13 @@ import RxSwift
 import RxRelay
 import ObjectMapper
 import iOSDropDown
+import JonAlert
 
 class ManagementInterestMoviesViewController: BaseViewController {
 
+   
+    @IBOutlet weak var lbl_number_txt: UITextField!
+    @IBOutlet weak var view_no_data: UIView!
     @IBOutlet weak var lbl_number: UILabel!
     @IBOutlet weak var lbl_datetime: UILabel!
     @IBOutlet weak var btn_dropdown: UIButton!
@@ -25,8 +29,11 @@ class ManagementInterestMoviesViewController: BaseViewController {
     var router = ManagementInterestMoviesRouter()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calender: FSCalendar!
+    var checkroom = false
+    var checkdate = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        view_no_data.isHidden = true
         calender.scope = .week
         calender.delegate = self
         viewModel.bind(view: self, router: router)
@@ -61,20 +68,40 @@ class ManagementInterestMoviesViewController: BaseViewController {
             var cloneEmployeeInfor = viewModel.pagationDataArray.value
             var allvalue = viewModel.allvalue.value
             cloneEmployeeInfor.RoomLists.idroom = id
+            cloneEmployeeInfor.Rooms.nameroom = selectedText
             allvalue.idroom = id
-            dLog(id)
+            dLog(selectedText)
             viewModel.pagationDataArray.accept(cloneEmployeeInfor)
             viewModel.allvalue.accept(allvalue)
+            checkroom = true
             self.getListInterest()
         }
         
     }
 
     @IBAction func btn_makechoospresentdlialog(_ sender: Any) {
-        var dataDay = viewModel.dataDay.value
-        dLog(dataDay.dateStart)
-        self.presentDialogPopUpList(date: dataDay.dateStart)
+        if checkdate && checkroom  {
+            if viewModel.movielist.value.count == 0 {
+                var dataDay = viewModel.dataDay.value
+                dLog(dataDay.dateStart)
+                self.presentDialogPopUpList(date: dataDay.dateStart)
+            }else {
+                JonAlert.showError(message: "Ngày chiếu tại phòng này đã được xếp lịch !!!!")
+            }
+          
+        } else
+        {
+            JonAlert.showError(message: "Vui lòng chọn thông tin phòng chiếu ngày chiếu để thực hiện xếp lịch")
+        }
+     
     }
+    
+    @IBAction func btn_makechoosInputQuantity(_ sender: Any) {
+        var number = lbl_number.text?.components(separatedBy: " ")
+        
+        presentModalInputQuantityViewController(position: 1, current_quantity: Float(number![0])!)
+    }
+    
 }
 extension ManagementInterestMoviesViewController: FSCalendarDelegate {
     
@@ -91,6 +118,7 @@ extension ManagementInterestMoviesViewController: FSCalendarDelegate {
         allvalue.idcinema = ManageCacheObject.getCurrentCinema().idcinema
         viewModel.allvalue.accept(allvalue)
         viewModel.dataDay.accept(dataDateGet)
+        checkdate = true
         getListInterest()
         lbl_datetime.text = dateString
 //        self.lbl_number.text = String(self.viewModel.movielist.value.count)
@@ -99,9 +127,6 @@ extension ManagementInterestMoviesViewController: FSCalendarDelegate {
        
     }
     
-    func callGetListInterest() {
-        
-    }
-
+   
     
 }

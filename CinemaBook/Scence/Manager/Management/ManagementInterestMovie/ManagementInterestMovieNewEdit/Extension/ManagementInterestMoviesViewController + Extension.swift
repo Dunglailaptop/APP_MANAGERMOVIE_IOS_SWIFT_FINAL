@@ -13,6 +13,75 @@ import RxSwift
 import ObjectMapper
 import JonAlert
 
+extension ManagementInterestMoviesViewController {
+    func presentDialogDetailMovieInterest(movies:MovieList) {
+        let DialogPopupInfoListInterestMovieViewControllers = DialogPopupInfoListInterestMovieViewController()
+        DialogPopupInfoListInterestMovieViewControllers.nameroom = viewModel.pagationDataArray.value.Rooms.nameroom
+        DialogPopupInfoListInterestMovieViewControllers.movie = movies
+        DialogPopupInfoListInterestMovieViewControllers.viewModel = self.viewModel
+        DialogPopupInfoListInterestMovieViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
+        let nav = UINavigationController(rootViewController: DialogPopupInfoListInterestMovieViewControllers)
+            // 1
+        nav.modalPresentationStyle = .overCurrentContext
+
+            
+            // 2
+            if #available(iOS 15.0, *) {
+                if let sheet = nav.sheetPresentationController {
+                    
+                    // 3
+                    sheet.detents = [.large()]
+                    
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            // 4
+     
+            present(nav, animated: true, completion: nil)
+    }
+}
+
+extension ManagementInterestMoviesViewController: CaculatorInputQuantityDelegate {
+    func presentModalInputQuantityViewController(position:Int, current_quantity:Float) {
+        let quantityInputViewController = QuantityInputViewController()
+        
+        quantityInputViewController.current_quantity = current_quantity
+        quantityInputViewController.max_quantity = 30
+        quantityInputViewController.view.backgroundColor = ColorUtils.blackTransparent()
+        let nav = UINavigationController(rootViewController: quantityInputViewController)
+            // 1
+        nav.modalPresentationStyle = .overCurrentContext
+
+            
+            // 2
+            if #available(iOS 15.0, *) {
+                if let sheet = nav.sheetPresentationController {
+                    
+                    // 3
+                    sheet.detents = [.large()]
+                    
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            // 4
+        quantityInputViewController.delegate_quantity = self
+        quantityInputViewController.position = position
+            present(nav, animated: true, completion: nil)
+
+        }
+    func callbackCaculatorInputQuantity(number: Float, position: Int) {
+        let roundedNumber = round(number)
+           lbl_number_txt.text = String(Int(roundedNumber)) + " phút"
+        var allvalue = viewModel.allvalue.value
+        allvalue.breakTime = Int(roundedNumber)
+        viewModel.allvalue.accept(allvalue)
+        dLog(viewModel.allvalue.value)
+       
+    }
+}
+
 extension ManagementInterestMoviesViewController: DialogUpdateSatusInterest {
     func callbackUpdatesatusInterest(idinterest: Int, status: Int) {
         var allvalues = viewModel.allvalue.value
@@ -125,7 +194,7 @@ extension ManagementInterestMoviesViewController: UITableViewDelegate {
            
            // Create a second swipe action (similar to the first one)
            let secondAction = UIContextualAction(style: .normal, title: "") { [weak self] (action, view, completionHandler) in
-               // Your code for the second action
+               self!.presentDialogDetailMovieInterest(movies: order_detail)
                completionHandler(true)
            }
         secondAction.backgroundColor = .systemGreen
@@ -226,6 +295,17 @@ extension ManagementInterestMoviesViewController {
                     dLog(self.viewModel.pagationDataArray.value)
                     self.viewModel.movielist.accept(self.viewModel.pagationDataArray.value.RoomLists.MovieLists)
                     self.lbl_number.text = String(self.viewModel.movielist.value.count)
+                    self.view_no_data.isHidden = self.viewModel.movielist.value.count > 0 ? true : false
+                    var dataNumberTimeReset = self.viewModel.movielist.value
+                    dataNumberTimeReset.enumerated().forEach{
+                        (index,value) in
+                        dLog(value.resetTime)
+                      
+                        self.lbl_number_txt.text = String(value.resetTime)
+                        
+                     
+                       
+                    }
 //                    self.viewModel.movielist.accept(dataGet.MovieLists)
                 }
             }
@@ -271,6 +351,7 @@ extension ManagementInterestMoviesViewController {
                     self.lbl_number.text = String(self.viewModel.movielist.value.count)
                     dLog(self.viewModel.movielist.value)
                     dLog(self.viewModel.pagationDataArray.value)
+                   
                     self.tableView.reloadData()
                     self.CreateInterest()
                 }
@@ -292,6 +373,8 @@ extension ManagementInterestMoviesViewController: DialogListPopupInterestMovie {
                 PopupviewController.delagate = self
                 PopupviewController.date = date
                 PopupviewController.idroom = viewModel.pagationDataArray.value.RoomLists.idroom
+        PopupviewController.nameroom = viewModel.pagationDataArray.value.Rooms.nameroom
+        dLog(viewModel.pagationDataArray.value.RoomLists)
                 PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
                 //Set up navigationBar
                 let nav = UINavigationController(rootViewController: PopupviewController)
@@ -300,11 +383,10 @@ extension ManagementInterestMoviesViewController: DialogListPopupInterestMovie {
                 present(nav, animated: true, completion: nil)
 
              }
-    func callbackDialogListMovie(Movies:[Movie],date:String,idroom:Int){
+    func callbackDialogListMovie(Movies:[Movie],date:String,idroom:Int,nameroom:String){
         dismiss(animated: true)
         viewModel.clearData()
         var data  = viewModel.pagationDataArray.value
-        var dataday = viewModel.dataDay.value
         Movies.enumerated().forEach{ (index,value) in
             var datas  = viewModel.pagationData.value
             dLog(Movies[index].movieID)
@@ -313,48 +395,41 @@ extension ManagementInterestMoviesViewController: DialogListPopupInterestMovie {
             
             data.MovieLists.append(datas.MovieLists)
         }
-        dataday.DateForm = date
-        dataday.DateTo = date
-        viewModel.dataDay.accept(dataday)
+      
         data.RoomLists.idroom = idroom
         data.RoomLists.Idcinema = ManageCacheObject.getCurrentCinema().idcinema
         viewModel.pagationDataArray.accept(data)
-        presentDialogPopUpListRoom(date: date, idroom: idroom)
+        viewModel.dataArrayMovie.accept(Movies)
+        presentDialogPopUpListRoom(date: date, idroom: idroom,Movies: Movies,nameroom: nameroom)
 //        getListAutoInterest()
     }
 }
 extension ManagementInterestMoviesViewController: DialogListPopupInterestRoom {
-    func callbackDialogListRoom(Rooms:Room,date:String){
+    func callbackDialogListRoom(idroom:Int,date:String){
+        var dataday = viewModel.dataDay.value
+        dataday.DateForm = date
+        dataday.DateTo = date
+        viewModel.dataDay.accept(dataday)
+        getListAutoInterest()
         dismiss(animated: true)
     
     }
-    func presentDialogPopUpListRoom(date:String,idroom:Int) {
-             let PopupviewController = DialogPopupListRoomViewController()
-          
-        PopupviewController.delegate = self
-        PopupviewController.date = date
-             PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
-             //Set up navigationBar
-             let nav = UINavigationController(rootViewController: PopupviewController)
-                 nav.isNavigationBarHidden = true
-                 nav.modalPresentationStyle = .overCurrentContext
-                   present(nav, animated: true, completion: nil)
+    func presentDialogPopUpListRoom(date:String,idroom:Int,Movies:[Movie],nameroom:String) {
+            let PopupviewController = DialogPopupListRoomViewController()
+        PopupviewController.viewModel = self.viewModel
+            PopupviewController.Movies = Movies
+            PopupviewController.delegate = self
+            PopupviewController.date = date
+        PopupviewController.nameroom = nameroom
+            PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
+            //Set up navigationBar
+            let nav = UINavigationController(rootViewController: PopupviewController)
+            nav.isNavigationBarHidden = true
+            nav.modalPresentationStyle = .overCurrentContext
+            present(nav, animated: true, completion: nil)
 
                }
 }
 extension ManagementInterestMoviesViewController {
-    func presentDialogPopUpListInfoInterest(namemovie:String,imageMovie:String) {
-              let PopupviewController = DialogPopupInfoListInterestMovieViewController()
-        PopupviewController.viewModel = viewModel
-        PopupviewController.name = namemovie
-        PopupviewController.image = imageMovie
-//           PopupviewController.delagate = self
-              PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
-              //Set up navigationBar
-              let nav = UINavigationController(rootViewController: PopupviewController)
-                  nav.isNavigationBarHidden = true
-                  nav.modalPresentationStyle = .overCurrentContext
-                    present(nav, animated: true, completion: nil)
 
-                }
 }
