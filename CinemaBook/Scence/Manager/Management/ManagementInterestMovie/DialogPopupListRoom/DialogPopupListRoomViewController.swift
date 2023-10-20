@@ -13,6 +13,7 @@ import ObjectMapper
 
 class DialogPopupListRoomViewController: UIViewController {
 
+    @IBOutlet weak var lbl_time_reset: UILabel!
     @IBOutlet weak var lbl_date_interest: UILabel!
   
     @IBOutlet weak var lbl_name_room: UILabel!
@@ -24,6 +25,7 @@ class DialogPopupListRoomViewController: UIViewController {
     var date = ""
     var idroom = 0
     var nameroom = ""
+    var timeReset = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         register()
@@ -36,7 +38,7 @@ class DialogPopupListRoomViewController: UIViewController {
         super.viewWillAppear(animated)
         lbl_name_room.text = nameroom
         lbl_date_interest.text = date
-        
+        lbl_time_reset.text = String(timeReset)
     }
     
     var viewModel : ManagementInterestMoviesViewModel? = nil {

@@ -17,7 +17,10 @@ import JonAlert
 
 class ManagementInterestMoviesViewController: BaseViewController {
 
-   
+    @IBOutlet weak var view_choose_resettime: UIView!
+    @IBOutlet weak var view_auto_interest: UIView!
+    @IBOutlet weak var height_view_success: NSLayoutConstraint!
+    @IBOutlet weak var view_success: UIView!
     @IBOutlet weak var lbl_number_txt: UITextField!
     @IBOutlet weak var view_no_data: UIView!
     @IBOutlet weak var lbl_number: UILabel!
@@ -31,6 +34,7 @@ class ManagementInterestMoviesViewController: BaseViewController {
     @IBOutlet weak var calender: FSCalendar!
     var checkroom = false
     var checkdate = false
+    var checkmovie = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         view_no_data.isHidden = true
@@ -43,7 +47,10 @@ class ManagementInterestMoviesViewController: BaseViewController {
       
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func btn_makePopToViewController(_ sender: Any) {
+        viewModel.makePopToViewController()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var dataDays = viewModel.dataDay.value
@@ -97,9 +104,10 @@ class ManagementInterestMoviesViewController: BaseViewController {
     }
     
     @IBAction func btn_makechoosInputQuantity(_ sender: Any) {
-        var number = lbl_number.text?.components(separatedBy: " ")
-        
-        presentModalInputQuantityViewController(position: 1, current_quantity: Float(number![0])!)
+        var number = 0
+        var data = viewModel.allvalue.value
+        dLog(number)
+        presentModalInputQuantityViewController(position: 1, current_quantity: Float(data.breakTime))
     }
     
 }
@@ -110,6 +118,29 @@ extension ManagementInterestMoviesViewController: FSCalendarDelegate {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: date)
         dLog("Selected date: \(dateString)")
+        
+        let from_date = dateString.components(separatedBy: "-")
+        let to_date = Utils.getCurrentDateStringformatMysql().components(separatedBy: "-")
+    
+        let from_date_in = String(format: "%@%@%@", from_date[0], from_date[1], from_date[2])
+        let to_date_in = String(format: "%@%@%@", to_date[2], to_date[1], to_date[0])
+        dLog(to_date_in +  "-" + from_date_in)
+    
+        if from_date_in < to_date_in {
+            JonAlert.showSuccess(message: "Ngày chọn đã chiếu")
+            view_success.isHidden = false
+            height_view_success.constant = 40
+            checkmovie = 1
+            view_auto_interest.isUserInteractionEnabled = false
+            view_choose_resettime.isUserInteractionEnabled = false
+        }else {
+            view_auto_interest.isUserInteractionEnabled = true
+            view_choose_resettime.isUserInteractionEnabled = true
+            checkmovie = 0
+            height_view_success.constant = 0
+            view_success.isHidden = true
+        }
+        dLog(calendar)
         var dataDateGet = viewModel.dataDay.value
         var allvalue = viewModel.allvalue.value
         dataDateGet.dateStart = dateString

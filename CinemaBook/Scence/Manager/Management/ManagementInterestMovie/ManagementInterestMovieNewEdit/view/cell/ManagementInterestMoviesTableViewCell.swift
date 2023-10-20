@@ -52,6 +52,8 @@ class ManagementInterestMoviesTableViewCell: UITableViewCell {
             lbl_name_movie.text = data?.namemovie
             lbl_timeallshowinmovie.text = String(data!.alltime) + "P"
             lbl_timestart_timeend.text = times + "-" + timesend
+            //kiem tra time
+           
             
         }
     }

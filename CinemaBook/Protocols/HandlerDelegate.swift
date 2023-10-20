@@ -52,3 +52,6 @@ protocol DialogUpdateSatusInterest
 protocol CaculatorInputQuantityDelegate {
     func callbackCaculatorInputQuantity(number:Float, position:Int)
 }
+protocol DialogchooseInterestMovies {
+    func callbackUpdateInterestMovies(idinterest:Int,idmovie:Int)
+}

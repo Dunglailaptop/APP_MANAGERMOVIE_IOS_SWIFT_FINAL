@@ -1265,8 +1265,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
+            startingLineNumber = "430"
+            endingLineNumber = "430"
             landmarkName = "getListAutoInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1281,8 +1281,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/view/ManagementInterestMoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "calendar(_:didSelect:at:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1297,8 +1297,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "435"
+            endingLineNumber = "435"
             landmarkName = "getListAutoInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1313,8 +1313,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "374"
+            endingLineNumber = "374"
             landmarkName = "getListInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1329,8 +1329,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
+            startingLineNumber = "402"
+            endingLineNumber = "402"
             landmarkName = "CreateInterest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1345,8 +1345,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
+            startingLineNumber = "399"
+            endingLineNumber = "399"
             landmarkName = "CreateInterest()"
             landmarkType = "7">
             <Locations>
@@ -1393,8 +1393,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
             landmarkName = "CreateInterest()"
             landmarkType = "7">
             <Locations>
@@ -1456,8 +1456,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "357"
+            endingLineNumber = "357"
             landmarkName = "getListMovie()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1472,8 +1472,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "413"
-            endingLineNumber = "413"
+            startingLineNumber = "496"
+            endingLineNumber = "496"
             landmarkName = "callbackDialogListRoom(idroom:date:)"
             landmarkType = "7">
             <Locations>
@@ -1535,8 +1535,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "422"
+            endingLineNumber = "422"
             landmarkName = "getListAutoInterest()"
             landmarkType = "7">
             <Locations>
@@ -1598,8 +1598,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "getListInterest()"
             landmarkType = "7">
             <Locations>
@@ -1675,8 +1675,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "getListInterest()"
             landmarkType = "7">
          </BreakpointContent>

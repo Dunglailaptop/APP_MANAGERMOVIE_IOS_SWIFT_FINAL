@@ -187,6 +187,18 @@ class Utils: NSObject {
           //println(dateString)
           return Int(dateString)!
       }
+    func gettimenow() -> String {
+        let currentTime = Date()
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale(identifier: "vi_VN")
+
+        let formattedTime = dateFormatter.string(from: currentTime)
+        return formattedTime
+        
+    }
+    
    func getDayOfWeek(today: String) -> Int? {
           let formatter  = DateFormatter()
           formatter.dateFormat = "yyyy-MM-dd"

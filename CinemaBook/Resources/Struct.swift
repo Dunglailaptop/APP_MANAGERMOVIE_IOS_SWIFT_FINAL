@@ -62,6 +62,8 @@ public struct APIEndPoint {
         static let urlGetListBillAll = "/Bill/getListAllBillTicket"
         static let urlGetListBillAllFoodCombo = "/Bill/getListAllBillFoodCombo"
         static let urlUpdateSatusInterest = "/AutointerestMovie/UpdateStatusInterest"
+        static let urlupdateInterestMovie = "/AutointerestMovie/UpdateInterestMovie"
+        static let urlgetListMovieWithResetTime = "/Movie/GetListMovieWithTimeReset"
     }
     
 }

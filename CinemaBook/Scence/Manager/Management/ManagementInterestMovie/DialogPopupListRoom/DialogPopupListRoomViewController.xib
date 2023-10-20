@@ -22,6 +22,7 @@
                 <outlet property="collectionview" destination="qhN-o6-RXz" id="X36-zD-wnS"/>
                 <outlet property="lbl_date_interest" destination="EiM-3q-0Th" id="zod-eU-tFm"/>
                 <outlet property="lbl_name_room" destination="nq3-OX-fJG" id="thi-o3-pVJ"/>
+                <outlet property="lbl_time_reset" destination="JeV-FU-ik4" id="bm1-hQ-wTF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -52,6 +52,8 @@ enum ManagerConnections {
     case getListAllBill(idcinema:Int,status:Int)
     case getListAllBillFoodCombo(idcinema:Int,status:Int)
     case updateSatus(idinterest:Int,status:Int)
+    case updateInterestMovie(idinterest:Int,idmovie:Int)
+    case getListMovieWithResetTime(breakTime:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -144,6 +146,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListBillAllFoodCombo
         case .updateSatus(let idinterest,let status):
             return APIEndPoint.Name.urlUpdateSatusInterest
+        case .updateInterestMovie(let idinterest,let idmovie):
+            return APIEndPoint.Name.urlupdateInterestMovie
+        case .getListMovieWithResetTime(let breakTime):
+            return APIEndPoint.Name.urlgetListMovieWithResetTime
         }
     
     }
@@ -229,6 +235,10 @@ extension ManagerConnections: TargetType {
             return .get
         case .updateSatus(_,_):
             return .post
+        case .updateInterestMovie(_,_):
+            return .post
+        case .getListMovieWithResetTime(_):
+            return .get
         }
 
         
@@ -336,6 +346,10 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .updateSatus(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .updateInterestMovie(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getListMovieWithResetTime(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -534,6 +548,16 @@ extension ManagerConnections: TargetType {
                 "idinterest": idinterest,
                 "status": status
             ]
+        case .updateInterestMovie(let idinterest, let idmovie):
+            return [
+                "idinterest": idinterest,
+                 "idmovie": idmovie
+               
+            ]
+        case .getListMovieWithResetTime(let breakTime):
+           return [
+                "timereset": breakTime
+            ]
         }
        
     }
@@ -626,6 +650,10 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .updateSatus(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .updateInterestMovie(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getListMovieWithResetTime(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

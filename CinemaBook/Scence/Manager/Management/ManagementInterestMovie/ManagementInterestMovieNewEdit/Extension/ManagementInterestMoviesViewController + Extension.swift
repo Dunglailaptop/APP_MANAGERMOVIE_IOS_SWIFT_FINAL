@@ -13,12 +13,27 @@ import RxSwift
 import ObjectMapper
 import JonAlert
 
-extension ManagementInterestMoviesViewController {
-    func presentDialogDetailMovieInterest(movies:MovieList) {
+extension ManagementInterestMoviesViewController: DialogchooseInterestMovies {
+    
+    func callbackUpdateInterestMovies(idinterest: Int, idmovie: Int) {
+        var allvalues = viewModel.allvalue.value
+        allvalues.idinterest = idinterest
+        allvalues.idmovie = idmovie
+        viewModel.allvalue.accept(allvalues)
+        updateInterestMovie()
+        
+        dismiss(animated: true)
+//        getListInterest()
+    }
+    
+    func presentDialogDetailMovieInterest(movies:MovieList,check:Int) {
         let DialogPopupInfoListInterestMovieViewControllers = DialogPopupInfoListInterestMovieViewController()
+        DialogPopupInfoListInterestMovieViewControllers.delegate = self
         DialogPopupInfoListInterestMovieViewControllers.nameroom = viewModel.pagationDataArray.value.Rooms.nameroom
+        DialogPopupInfoListInterestMovieViewControllers.idinterest = movies.idinterest
         DialogPopupInfoListInterestMovieViewControllers.movie = movies
         DialogPopupInfoListInterestMovieViewControllers.viewModel = self.viewModel
+        DialogPopupInfoListInterestMovieViewControllers.checkTime = check
         DialogPopupInfoListInterestMovieViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
         let nav = UINavigationController(rootViewController: DialogPopupInfoListInterestMovieViewControllers)
             // 1
@@ -73,7 +88,7 @@ extension ManagementInterestMoviesViewController: CaculatorInputQuantityDelegate
         }
     func callbackCaculatorInputQuantity(number: Float, position: Int) {
         let roundedNumber = round(number)
-           lbl_number_txt.text = String(Int(roundedNumber)) + " phút"
+           lbl_number_txt.text = String(Int(roundedNumber)) + "Phút"
         var allvalue = viewModel.allvalue.value
         allvalue.breakTime = Int(roundedNumber)
         viewModel.allvalue.accept(allvalue)
@@ -124,9 +139,6 @@ extension ManagementInterestMoviesViewController: DialogUpdateSatusInterest {
 }
 
 extension ManagementInterestMoviesViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//       return viewModel.dataArray.value.count
-//    }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
@@ -180,6 +192,21 @@ extension ManagementInterestMoviesViewController: UITableViewDelegate {
         
         customView3.addSubview(imageView3)
         customView3.addSubview(label3)
+        // NUT TRANG THAI THOI GIAN HOAN TAT
+        let customView4 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 80))
+        
+        let imageView4 = UIImageView(frame: CGRect(x: 0, y: 10, width: 35, height: 35))
+        imageView4.image = UIImage(named: "delete")
+        imageView4.contentMode = .scaleAspectFit
+        imageView4.center.x = customView4.center.x
+        
+        let label4 = UILabel(frame: CGRect(x: 0, y: 45, width: 150, height: 30))
+        label4.text = "Đang chiếu"
+        label4.textAlignment = .left
+        label4.textColor = .white
+        
+        customView4.addSubview(imageView4)
+        customView4.addSubview(label4)
       
         // Create the first swipe action using the custom view
            let cancelFood = UIContextualAction(style: .normal, title: "") { [weak self] (action, view, completionHandler) in
@@ -191,10 +218,20 @@ extension ManagementInterestMoviesViewController: UITableViewDelegate {
            cancelFood.image = UIGraphicsImageRenderer(size: customView2.bounds.size).image { _ in
                customView2.drawHierarchy(in: customView2.bounds, afterScreenUpdates: true)
            }
+        // trang thai thoi gian hoan tat
+            let stoptime = UIContextualAction(style: .normal, title: "") { [weak self] (action, view, completionHandler) in
+            dLog(order_detail)
+                self!.presentDialogDetailMovieInterest(movies: order_detail,check: 1)
+            completionHandler(true)
+            }
+            stoptime.backgroundColor = .gray
+             stoptime.image = UIGraphicsImageRenderer(size: customView4.bounds.size).image { _ in
+            customView4.drawHierarchy(in: customView4.bounds, afterScreenUpdates: true)
+            }
            
            // Create a second swipe action (similar to the first one)
            let secondAction = UIContextualAction(style: .normal, title: "") { [weak self] (action, view, completionHandler) in
-               self!.presentDialogDetailMovieInterest(movies: order_detail)
+               self!.presentDialogDetailMovieInterest(movies: order_detail,check: 0)
                completionHandler(true)
            }
         secondAction.backgroundColor = .systemGreen
@@ -211,21 +248,53 @@ extension ManagementInterestMoviesViewController: UITableViewDelegate {
         actionUpdateUnlock.image = UIGraphicsImageRenderer(size: customView3.bounds.size).image { _ in
             customView3.drawHierarchy(in: customView3.bounds, afterScreenUpdates: true)
         }
-           
         
-        if order_detail.status == 1 {
+        //date
+      
+        var dateall = viewModel.dataDay.value.dateStart.components(separatedBy: "-")
+        var datechoose = String(format: "%@%@%@",dateall[0],dateall[1],dateall[2])
+        var datenowall = Utils.getCurrentDateStringformatMysql().components(separatedBy: "-")
+        var datenow = String(format: "%@%@%@",datenowall[2],datenowall[1],datenowall[0])
+        dLog(datenow + "-" + datechoose)
+        if datenow == datechoose {
+            var timenowAll = Utils().gettimenow().components(separatedBy: ":")
+            var timenow = timenowAll[0] + timenowAll[1]
+            var timechooseall = order_detail.startTime.components(separatedBy: ":")
+            var timechoose = timechooseall[0] + timechooseall[1]
+            if timenow >= timechoose {
+                checkmovie = 2
+            }
+        }
+
+           
+        if checkmovie == 0 {
+            if order_detail.status == 1 {
+                // Configure the swipe action configuration
+                let configuration = UISwipeActionsConfiguration(actions: [actionUpdateUnlock])
+                configuration.performsFirstActionWithFullSwipe = false
+                
+                return configuration
+            }else {
+                // Configure the swipe action configuration
+                let configuration = UISwipeActionsConfiguration(actions: [cancelFood, secondAction])
+                configuration.performsFirstActionWithFullSwipe = false
+                
+                return configuration
+            }
+        } else if checkmovie == 2 {
             // Configure the swipe action configuration
-            let configuration = UISwipeActionsConfiguration(actions: [actionUpdateUnlock])
+            let configuration = UISwipeActionsConfiguration(actions: [stoptime])
             configuration.performsFirstActionWithFullSwipe = false
             
             return configuration
-        }else {
+        } else {
             // Configure the swipe action configuration
-            let configuration = UISwipeActionsConfiguration(actions: [cancelFood, secondAction])
+            let configuration = UISwipeActionsConfiguration(actions: [])
             configuration.performsFirstActionWithFullSwipe = false
             
             return configuration
         }
+       
           
     }
     
@@ -255,6 +324,17 @@ extension ManagementInterestMoviesViewController: UITableViewDelegate {
     
 }
 extension ManagementInterestMoviesViewController {
+    func updateInterestMovie() {
+        viewModel.updateInterestMovie().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                JonAlert.showSuccess(message: "Cập nhật lại suất chiếu phim thành công")
+                self.getListInterest()
+            }
+        })
+    }
+    
+    
     func getListRoom(){
            viewModel.getListRoom().subscribe(onNext: {
                (response) in
@@ -297,15 +377,18 @@ extension ManagementInterestMoviesViewController {
                     self.lbl_number.text = String(self.viewModel.movielist.value.count)
                     self.view_no_data.isHidden = self.viewModel.movielist.value.count > 0 ? true : false
                     var dataNumberTimeReset = self.viewModel.movielist.value
+                    var allvalues = self.viewModel.allvalue.value
                     dataNumberTimeReset.enumerated().forEach{
                         (index,value) in
                         dLog(value.resetTime)
-                      
-                        self.lbl_number_txt.text = String(value.resetTime)
+                        allvalues.breakTime = value.resetTime
+                        self.lbl_number_txt.text = String(value.resetTime) + "Phút"
                         
                      
                        
                     }
+                    
+                    self.viewModel.allvalue.accept(allvalues)
 //                    self.viewModel.movielist.accept(dataGet.MovieLists)
                 }
             }
@@ -373,8 +456,8 @@ extension ManagementInterestMoviesViewController: DialogListPopupInterestMovie {
                 PopupviewController.delagate = self
                 PopupviewController.date = date
                 PopupviewController.idroom = viewModel.pagationDataArray.value.RoomLists.idroom
-        PopupviewController.nameroom = viewModel.pagationDataArray.value.Rooms.nameroom
-        dLog(viewModel.pagationDataArray.value.RoomLists)
+                PopupviewController.nameroom = viewModel.pagationDataArray.value.Rooms.nameroom
+                dLog(viewModel.pagationDataArray.value.RoomLists)
                 PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
                 //Set up navigationBar
                 let nav = UINavigationController(rootViewController: PopupviewController)
@@ -415,21 +498,19 @@ extension ManagementInterestMoviesViewController: DialogListPopupInterestRoom {
     
     }
     func presentDialogPopUpListRoom(date:String,idroom:Int,Movies:[Movie],nameroom:String) {
-            let PopupviewController = DialogPopupListRoomViewController()
-        PopupviewController.viewModel = self.viewModel
-            PopupviewController.Movies = Movies
-            PopupviewController.delegate = self
-            PopupviewController.date = date
-        PopupviewController.nameroom = nameroom
-            PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
-            //Set up navigationBar
-            let nav = UINavigationController(rootViewController: PopupviewController)
-            nav.isNavigationBarHidden = true
-            nav.modalPresentationStyle = .overCurrentContext
-            present(nav, animated: true, completion: nil)
+                    let PopupviewController = DialogPopupListRoomViewController()
+                    PopupviewController.viewModel = self.viewModel
+                    PopupviewController.Movies = Movies
+                    PopupviewController.delegate = self
+                    PopupviewController.date = date
+                    PopupviewController.nameroom = nameroom
+                    PopupviewController.timeReset = viewModel.allvalue.value.breakTime
+                    PopupviewController.view.backgroundColor = ColorUtils.blackTransparent()
+                    //Set up navigationBar
+                    let nav = UINavigationController(rootViewController: PopupviewController)
+                    nav.isNavigationBarHidden = true
+                    nav.modalPresentationStyle = .overCurrentContext
+                    present(nav, animated: true, completion: nil)
 
                }
-}
-extension ManagementInterestMoviesViewController {
-
 }

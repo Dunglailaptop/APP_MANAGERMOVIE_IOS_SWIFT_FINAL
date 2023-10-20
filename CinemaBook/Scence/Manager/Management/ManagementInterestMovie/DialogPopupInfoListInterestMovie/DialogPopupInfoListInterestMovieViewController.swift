@@ -23,17 +23,26 @@ class DialogPopupInfoListInterestMovieViewController: UIViewController {
     @IBOutlet weak var collectionview: UICollectionView!
     var movie = MovieList()
     var nameroom = ""
-    
+    var delegate: DialogchooseInterestMovies?
+    var idinterest = 0
+    var idmovie = 0
+    var checkTime = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         register()
         bindingtable()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
       getListMovie()
       setupvalid(movieinfo: movie)
+        if checkTime == 1 {
+            collectionview.isHidden = true
+        }else {
+            collectionview.isHidden = false
+        }
     }
     
     func setupvalid(movieinfo: MovieList) {
@@ -56,6 +65,12 @@ class DialogPopupInfoListInterestMovieViewController: UIViewController {
     
    
     @IBAction func btn_access(_ sender: Any) {
+      dLog(idinterest)
+        dLog(idmovie)
+      
+            delegate!.callbackUpdateInterestMovies(idinterest: idinterest, idmovie: idmovie)
+        
+     
     }
     
     var viewModel: ManagementInterestMoviesViewModel? = nil {
@@ -69,7 +84,7 @@ class DialogPopupInfoListInterestMovieViewController: UIViewController {
 
 extension DialogPopupInfoListInterestMovieViewController {
     func getListMovie() {
-        self.viewModel!.getListMovieShow().subscribe(onNext: {
+        self.viewModel!.getListMovieShowWithRest().subscribe(onNext: {
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Movie>().mapArray(JSONObject: response.data)
@@ -90,13 +105,13 @@ extension DialogPopupInfoListInterestMovieViewController {
         collectionview.rx.modelSelected(Movie.self).subscribe(onNext:{ element in
             dLog(element)
             var datas = self.viewModel?.dataArrayMovie.value
-            self.lbl_nameroom.text = element.namemovie
+            self.lbl_namemovie.text = element.namemovie
             self.image_avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: element.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
             datas?.enumerated().forEach{
                 (index,value) in
                 if value.movieID == element.movieID  {
                     datas![index].isSelected = ACTIVE
-                    
+                    self.idmovie = value.movieID
                 }else
                 {
                     datas![index].isSelected = DEACTIVE
