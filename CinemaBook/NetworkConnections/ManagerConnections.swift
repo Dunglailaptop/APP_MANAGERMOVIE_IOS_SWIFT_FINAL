@@ -54,6 +54,9 @@ enum ManagerConnections {
     case updateSatus(idinterest:Int,status:Int)
     case updateInterestMovie(idinterest:Int,idmovie:Int)
     case getListMovieWithResetTime(breakTime:Int)
+    case getListCategoryMovie
+    case getListNation
+    case CreateMovie(movievalue: Movie)
 }
 
 extension ManagerConnections: TargetType {
@@ -150,6 +153,13 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlupdateInterestMovie
         case .getListMovieWithResetTime(let breakTime):
             return APIEndPoint.Name.urlgetListMovieWithResetTime
+        case .getListNation:
+            return APIEndPoint.Name.urlgetListNation
+        case .getListCategoryMovie:
+            return APIEndPoint.Name.urlgetListCategoryMovie
+        case .CreateMovie(_):
+            return APIEndPoint.Name.urlCreateMovieNew
+            
         }
     
     }
@@ -239,6 +249,12 @@ extension ManagerConnections: TargetType {
             return .post
         case .getListMovieWithResetTime(_):
             return .get
+        case .getListNation:
+            return .get
+        case .getListCategoryMovie:
+            return .get
+        case .CreateMovie(_):
+            return .post
         }
 
         
@@ -350,6 +366,12 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getListMovieWithResetTime(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListCategoryMovie:
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListNation:
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .CreateMovie(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -558,6 +580,25 @@ extension ManagerConnections: TargetType {
            return [
                 "timereset": breakTime
             ]
+        case .getListNation:
+            return [
+                :
+            ]
+        case .getListCategoryMovie:
+            return [
+                :
+            ]
+        case .CreateMovie(let movievalue):
+          return  [
+                "namemovie": movievalue.namemovie,
+                "author": movievalue.author,
+                "yearbirthday": movievalue.yearbirthday,
+                "idcategorymovie": movievalue.idcategory,
+                "idnation": movievalue.idnation,
+                "timeall": movievalue.timeall,
+                "describes": movievalue.describes,
+                "poster": movievalue.poster
+            ]
         }
        
     }
@@ -654,6 +695,12 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getListMovieWithResetTime(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListNation:
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListCategoryMovie:
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .CreateMovie(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

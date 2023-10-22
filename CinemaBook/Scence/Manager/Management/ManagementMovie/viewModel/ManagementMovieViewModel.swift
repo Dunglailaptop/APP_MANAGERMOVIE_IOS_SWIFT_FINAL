@@ -27,6 +27,10 @@ class ManagementMovieViewModel: BaseViewModel{
         router?.navigationPopViewController()
     }
     
+    func makeToManagementDetailViewController() {
+        router?.navigationToManagementDetailViewController()
+    }
+    
 }
 extension ManagementMovieViewModel {
     func getListMovie() -> Observable<APIResponse> {

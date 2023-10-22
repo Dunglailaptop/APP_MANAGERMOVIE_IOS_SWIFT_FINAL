@@ -15,6 +15,8 @@ class ListMovieShowNowViewController: BaseViewController {
     
     var status = 0
     
+    var Type_edit = 0 
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

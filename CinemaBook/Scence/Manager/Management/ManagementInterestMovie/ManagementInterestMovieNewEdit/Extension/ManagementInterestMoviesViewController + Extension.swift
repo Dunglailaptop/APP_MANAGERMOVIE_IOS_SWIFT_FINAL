@@ -261,8 +261,13 @@ extension ManagementInterestMoviesViewController: UITableViewDelegate {
             var timenow = timenowAll[0] + timenowAll[1]
             var timechooseall = order_detail.startTime.components(separatedBy: ":")
             var timechoose = timechooseall[0] + timechooseall[1]
-            if timenow >= timechoose {
+            var timechoosefilter = timechoose.components(separatedBy: "T")
+            dLog(timenow)
+            dLog(timechoosefilter[1])
+            if timenow >= timechoosefilter[1] {
                 checkmovie = 2
+            }else {
+                checkmovie = 0
             }
         }
 

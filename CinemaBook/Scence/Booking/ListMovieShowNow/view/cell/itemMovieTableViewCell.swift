@@ -13,7 +13,7 @@ class itemMovieTableViewCell: UITableViewCell {
     @IBOutlet weak var lbl_name: UILabel!
     @IBOutlet weak var lbl_dateshow: UILabel!
     @IBOutlet weak var lbl_timeshow: UILabel!
-    
+    @IBOutlet weak var height_button: NSLayoutConstraint!
     @IBOutlet weak var poster: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

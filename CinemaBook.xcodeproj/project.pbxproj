@@ -23,6 +23,8 @@
 		B09B6CD92AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */; };
 		B09CD1212AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */; };
 		B09CD1222AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09CD1202AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib */; };
+		B0A40E3F2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */; };
+		B0A40E402AE2DC85008D07FC /* ManagementDetailMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A40E3E2AE2DC85008D07FC /* ManagementDetailMovieViewController.xib */; };
 		B0A410852ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A410842ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift */; };
 		B0A52B1C2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A52B1A2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.swift */; };
 		B0A52B1D2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A52B1B2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.xib */; };
@@ -84,11 +86,14 @@
 		B0AB37A72ADD299D00C2C102 /* ManageBillFoodAccountItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AB37A52ADD299D00C2C102 /* ManageBillFoodAccountItemTableViewCell.xib */; };
 		B0AB37AE2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB37AC2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.swift */; };
 		B0AB37AF2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AB37AD2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.xib */; };
+		B0AC087F2AE37AC300AAA5A9 /* ManagemetDetailMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC087E2AE37AC300AAA5A9 /* ManagemetDetailMovieRouter.swift */; };
+		B0AC08812AE37AF700AAA5A9 /* ManagementDetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC08802AE37AF700AAA5A9 /* ManagementDetailMovieViewModel.swift */; };
 		B0AC2D032ADE4F5500E4BB7E /* ManagementBillFoodComboViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC2D022ADE4F5500E4BB7E /* ManagementBillFoodComboViewModel.swift */; };
 		B0AC2D052ADE4F6C00E4BB7E /* ManagementBillFoodComboRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC2D042ADE4F6C00E4BB7E /* ManagementBillFoodComboRouter.swift */; };
 		B0AC2D092ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC2D072ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.swift */; };
 		B0AC2D0A2ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AC2D082ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib */; };
 		B0AC2D0C2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC2D0B2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift */; };
+		B0AD43632AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */; };
 		B0AF7A352AD3B9D7008AE1F2 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */; };
 		B0AF7A392AD3E2DC008AE1F2 /* ChatMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */; };
 		B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AF7A382AD3E2DC008AE1F2 /* ChatMessageViewController.xib */; };
@@ -113,6 +118,7 @@
 		B0BEC1D22ADAECA900709883 /* PaymentFoodComboRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEC1D12ADAECA800709883 /* PaymentFoodComboRouter.swift */; };
 		B0BEC1D62ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BEC1D42ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift */; };
 		B0BEC1D72ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BEC1D52ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib */; };
+		B0C8B6AA2AE3A75E0022232E /* Nation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8B6A92AE3A75E0022232E /* Nation.swift */; };
 		B0CCC2912AD7D10A0015880A /* DetailProductComboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCC28F2AD7D10A0015880A /* DetailProductComboViewController.swift */; };
 		B0CCC2922AD7D10A0015880A /* DetailProductComboViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CCC2902AD7D10A0015880A /* DetailProductComboViewController.xib */; };
 		B0CCC2942AD7D1380015880A /* DetailProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CCC2932AD7D1380015880A /* DetailProductViewModel.swift */; };
@@ -352,8 +358,6 @@
 		FE65338C2AAA173600C0739B /* BannerVoucherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE65338A2AAA173600C0739B /* BannerVoucherTableViewCell.xib */; };
 		FE65338F2AAA21A400C0739B /* itemTraillerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE65338D2AAA21A400C0739B /* itemTraillerCollectionViewCell.swift */; };
 		FE6533902AAA21A400C0739B /* itemTraillerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE65338E2AAA21A400C0739B /* itemTraillerCollectionViewCell.xib */; };
-		FE6775F42A8920A10007A659 /* ItemMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6775F22A8920A10007A659 /* ItemMovieCollectionViewCell.swift */; };
-		FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE6775F32A8920A10007A659 /* ItemMovieCollectionViewCell.xib */; };
 		FE69A8A52AA1909F0017D891 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69A8A32AA1909F0017D891 /* DialogViewController.swift */; };
 		FE69A8A62AA1909F0017D891 /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE69A8A42AA1909F0017D891 /* DialogViewController.xib */; };
 		FE69A8A92AA1A2C90017D891 /* NewFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69A8A72AA1A2C90017D891 /* NewFeedViewController.swift */; };
@@ -473,6 +477,8 @@
 		B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogPopUpShowListFoodChooseViewController.xib; sourceTree = "<group>"; };
 		B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFunctionMoreTableViewCell.swift; sourceTree = "<group>"; };
 		B09CD1202AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryFunctionMoreTableViewCell.xib; sourceTree = "<group>"; };
+		B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailMovieViewController.swift; sourceTree = "<group>"; };
+		B0A40E3E2AE2DC85008D07FC /* ManagementDetailMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementDetailMovieViewController.xib; sourceTree = "<group>"; };
 		B0A410842ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementInterestMoviesViewController + Extension.swift"; sourceTree = "<group>"; };
 		B0A52B1A2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDialogPopUpDetailInterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0A52B1B2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDialogPopUpDetailInterestCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -534,11 +540,14 @@
 		B0AB37A52ADD299D00C2C102 /* ManageBillFoodAccountItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageBillFoodAccountItemTableViewCell.xib; sourceTree = "<group>"; };
 		B0AB37AC2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDetailBillFoodAccountViewController.swift; sourceTree = "<group>"; };
 		B0AB37AD2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageDetailBillFoodAccountViewController.xib; sourceTree = "<group>"; };
+		B0AC087E2AE37AC300AAA5A9 /* ManagemetDetailMovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagemetDetailMovieRouter.swift; sourceTree = "<group>"; };
+		B0AC08802AE37AF700AAA5A9 /* ManagementDetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailMovieViewModel.swift; sourceTree = "<group>"; };
 		B0AC2D022ADE4F5500E4BB7E /* ManagementBillFoodComboViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementBillFoodComboViewModel.swift; sourceTree = "<group>"; };
 		B0AC2D042ADE4F6C00E4BB7E /* ManagementBillFoodComboRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementBillFoodComboRouter.swift; sourceTree = "<group>"; };
 		B0AC2D072ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementBillFoodComboItemTableViewCell.swift; sourceTree = "<group>"; };
 		B0AC2D082ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementBillFoodComboItemTableViewCell.xib; sourceTree = "<group>"; };
 		B0AC2D0B2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementBillFoodComboViewController + Extensions.swift"; sourceTree = "<group>"; };
+		B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementDetailMovie+Extensions.swift"; sourceTree = "<group>"; };
 		B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewController.swift; sourceTree = "<group>"; };
 		B0AF7A382AD3E2DC008AE1F2 /* ChatMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMessageViewController.xib; sourceTree = "<group>"; };
@@ -563,6 +572,7 @@
 		B0BEC1D12ADAECA800709883 /* PaymentFoodComboRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFoodComboRouter.swift; sourceTree = "<group>"; };
 		B0BEC1D42ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPaymentFoodComboTableViewCell.swift; sourceTree = "<group>"; };
 		B0BEC1D52ADAF10500709883 /* ItemPaymentFoodComboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemPaymentFoodComboTableViewCell.xib; sourceTree = "<group>"; };
+		B0C8B6A92AE3A75E0022232E /* Nation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nation.swift; sourceTree = "<group>"; };
 		B0CCC28F2AD7D10A0015880A /* DetailProductComboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductComboViewController.swift; sourceTree = "<group>"; };
 		B0CCC2902AD7D10A0015880A /* DetailProductComboViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProductComboViewController.xib; sourceTree = "<group>"; };
 		B0CCC2932AD7D1380015880A /* DetailProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewModel.swift; sourceTree = "<group>"; };
@@ -802,8 +812,6 @@
 		FE65338A2AAA173600C0739B /* BannerVoucherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerVoucherTableViewCell.xib; sourceTree = "<group>"; };
 		FE65338D2AAA21A400C0739B /* itemTraillerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemTraillerCollectionViewCell.swift; sourceTree = "<group>"; };
 		FE65338E2AAA21A400C0739B /* itemTraillerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemTraillerCollectionViewCell.xib; sourceTree = "<group>"; };
-		FE6775F22A8920A10007A659 /* ItemMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMovieCollectionViewCell.swift; sourceTree = "<group>"; };
-		FE6775F32A8920A10007A659 /* ItemMovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemMovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE69A8A32AA1909F0017D891 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		FE69A8A42AA1909F0017D891 /* DialogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogViewController.xib; sourceTree = "<group>"; };
 		FE69A8A72AA1A2C90017D891 /* NewFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedViewController.swift; sourceTree = "<group>"; };
@@ -1086,6 +1094,42 @@
 				B09CD1202AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib */,
 			);
 			path = section5;
+			sourceTree = "<group>";
+		};
+		B0A40E392AE2DC40008D07FC /* ManagementDetailMovie */ = {
+			isa = PBXGroup;
+			children = (
+				B0AD43612AE42E6400023E01 /* Extension */,
+				B0A40E3C2AE2DC5E008D07FC /* viewModel */,
+				B0A40E3B2AE2DC5C008D07FC /* Router */,
+				B0A40E3A2AE2DC58008D07FC /* view */,
+			);
+			path = ManagementDetailMovie;
+			sourceTree = "<group>";
+		};
+		B0A40E3A2AE2DC58008D07FC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */,
+				B0A40E3E2AE2DC85008D07FC /* ManagementDetailMovieViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0A40E3B2AE2DC5C008D07FC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0AC087E2AE37AC300AAA5A9 /* ManagemetDetailMovieRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0A40E3C2AE2DC5E008D07FC /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0AC08802AE37AF700AAA5A9 /* ManagementDetailMovieViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		B0A410832ADED9A20014751B /* Extension */ = {
@@ -1550,6 +1594,14 @@
 				B0AC2D082ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		B0AD43612AE42E6400023E01 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B0AF7A362AD3E2AE008AE1F2 /* MessageChatAndNotifaction */ = {
@@ -2598,6 +2650,7 @@
 		FE59AE1F2AB3612600D4E1F6 /* ManagementMovie */ = {
 			isa = PBXGroup;
 			children = (
+				B0A40E392AE2DC40008D07FC /* ManagementDetailMovie */,
 				FE59AE232AB3613C00D4E1F6 /* Extensions */,
 				FE59AE222AB3613800D4E1F6 /* viewModel */,
 				FE59AE212AB3613500D4E1F6 /* view */,
@@ -3585,6 +3638,7 @@
 				FE5461332AC09D100015DB93 /* CategoryChair.swift */,
 				FE4EB3682AC716A200BB2D79 /* Food.swift */,
 				B0AF91712AD004C2000035DB /* Bill.swift */,
+				B0C8B6A92AE3A75E0022232E /* Nation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3665,8 +3719,6 @@
 		FECD09332A9F9D5200D97711 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				FE6775F22A8920A10007A659 /* ItemMovieCollectionViewCell.swift */,
-				FE6775F32A8920A10007A659 /* ItemMovieCollectionViewCell.xib */,
 				FEFBFB722A9F93A800A85879 /* itemMovieTableViewCell.swift */,
 				FEFBFB732A9F93A800A85879 /* itemMovieTableViewCell.xib */,
 			);
@@ -3937,7 +3989,6 @@
 				B09CD1222AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				B0A9A21B2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.xib in Resources */,
-				FE6775F52A8920A10007A659 /* ItemMovieCollectionViewCell.xib in Resources */,
 				FE6533842AAA16AA00C0739B /* BannerMovieTableViewCell.xib in Resources */,
 				FE4BAAA42ACABF350010C0B9 /* PaymentBillViewController.xib in Resources */,
 				B0A9D79A2ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.xib in Resources */,
@@ -3981,6 +4032,7 @@
 				B0A9A4692AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib in Resources */,
 				B0A9EFA02AD9757200B9EF1D /* ItemCartTableViewCell.xib in Resources */,
 				FE71C65C2AB7FA310029D84B /* DialogPopupListMovieViewController.xib in Resources */,
+				B0A40E402AE2DC85008D07FC /* ManagementDetailMovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4144,6 +4196,7 @@
 				FE5461202AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift in Sources */,
 				FE6BD1802AC8597A00177093 /* MangamentFoodItemRouter.swift in Sources */,
 				FE7BA97F2A5AFCEE00344EFB /* MenuViewController+Extensions.swift in Sources */,
+				B0AC08812AE37AF700AAA5A9 /* ManagementDetailMovieViewModel.swift in Sources */,
 				FE33F3982A6CC77500A396A1 /* JHProgressHUD.swift in Sources */,
 				FE5D082A2AA23676004FA3D9 /* videoShortViewController.swift in Sources */,
 				B0A9D7AE2ADD8699008AD03D /* ManagementBillProductItemTableViewCell.swift in Sources */,
@@ -4178,7 +4231,6 @@
 				FE5DFF9F2A76A4F500E2E345 /* CustomBarRouter.swift in Sources */,
 				FE5EA0FF2AAE21E10039DEC3 /* ManagementViewController.swift in Sources */,
 				B0A9D7AA2ADD84EC008AD03D /* ManagementBillticketViewModel.swift in Sources */,
-				FE6775F42A8920A10007A659 /* ItemMovieCollectionViewCell.swift in Sources */,
 				FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */,
 				FE7E6CBD2AB1F3EE0051E985 /* Role.swift in Sources */,
 				FE5D08302AA23691004FA3D9 /* TraillerViewController.swift in Sources */,
@@ -4210,6 +4262,7 @@
 				FE2172A72A76A7F0000C0C17 /* CustomTabItem.swift in Sources */,
 				FE71C6602AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.swift in Sources */,
 				FE33F3992A6CC77500A396A1 /* RRHTTPStatusCode.swift in Sources */,
+				B0AD43632AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift in Sources */,
 				FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */,
 				B0AB37AE2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.swift in Sources */,
 				FE4BAAAE2ACAD1E20010C0B9 /* itemComboFoodCollectionViewCell.swift in Sources */,
@@ -4294,6 +4347,7 @@
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				B0AB37A22ADD271C00C2C102 /* ManageBillFoodAccountViewModel.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
+				B0A40E3F2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift in Sources */,
 				FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */,
 				FE745FF52A7EB00E0091C0FA /* TicketViewModel.swift in Sources */,
 				FE5EA0E62AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.swift in Sources */,
@@ -4307,12 +4361,14 @@
 				FEFCF4392A76B7E90023B4D1 /* UIImageView+Extension.swift in Sources */,
 				B0AC2D0C2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift in Sources */,
 				FE5C1D202AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.swift in Sources */,
+				B0C8B6AA2AE3A75E0022232E /* Nation.swift in Sources */,
 				B0A410852ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift in Sources */,
 				B0A52B1C2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.swift in Sources */,
 				FEAC96982A5A55CC00B49C80 /* AppDelegate.swift in Sources */,
 				B0A7B2732AD400040035828C /* MessageViewModel.swift in Sources */,
 				FE7460052A7EB8B00091C0FA /* MovieItemTableViewCell.swift in Sources */,
 				FE745FF72A7EB0210091C0FA /* TicketRouter.swift in Sources */,
+				B0AC087F2AE37AC300AAA5A9 /* ManagemetDetailMovieRouter.swift in Sources */,
 				FE74CE132A91C46F0069259C /* Users.swift in Sources */,
 				FE65338F2AAA21A400C0739B /* itemTraillerCollectionViewCell.swift in Sources */,
 				B0CCC2962AD7D14C0015880A /* DetailProductRouter.swift in Sources */,

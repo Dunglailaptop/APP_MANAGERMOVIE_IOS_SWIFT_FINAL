@@ -8,7 +8,7 @@ struct  Movie: Mappable {
   var movieID = 0
 var namemovie =  ""
 var author = ""
-var yearbirthday = 0
+var yearbirthday = ""
 var timeall = 0
 var describes = ""
 var poster = ""
@@ -18,6 +18,9 @@ var ischeck = 0
 var dayStart = "2023-09-19T16:02:37.650Z"
 var dayEnd = "2023-09-19T16:02:37.650Z"
 var isSelected = DEACTIVE
+var idvideo = 0
+var idcategory = 0
+var idnation = 0
     init() {
         
     }
@@ -36,5 +39,7 @@ var isSelected = DEACTIVE
     poster <- map["poster"]
         statusshow <- map["statusshow"]
         videofile <- map["videofile"]
+        idcategory <- map["idcategory"]
+        idnation <- map["idnation"]
     }
 }

@@ -64,6 +64,9 @@ public struct APIEndPoint {
         static let urlUpdateSatusInterest = "/AutointerestMovie/UpdateStatusInterest"
         static let urlupdateInterestMovie = "/AutointerestMovie/UpdateInterestMovie"
         static let urlgetListMovieWithResetTime = "/Movie/GetListMovieWithTimeReset"
+        static let urlgetListCategoryMovie = "/CategoryMovie/getlistcategoryMovie"
+        static let urlgetListNation = "CategoryMovie/getlistcategoryNation"
+        static let urlCreateMovieNew = "/Movie/CreateMovieNew"
     }
     
 }

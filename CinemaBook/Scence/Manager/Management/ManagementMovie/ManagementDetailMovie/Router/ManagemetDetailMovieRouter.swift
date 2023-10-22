@@ -1,15 +1,14 @@
 //
-//  ManagementMovieRouter.swift
+//  ManagemetnDetailMovieRouter.swift
 //  CinemaBook
 //
-//  Created by dungtien on 9/14/23.
+//  Created by Nguyen Xuan Tien Dung on 21/10/2023.
 //  Copyright © 2023 dungtien. All rights reserved.
 //
 
-
 import UIKit
 
-class ManagementMovieRouter {
+class ManagemetDetailMovieRouter {
     var viewController: UIViewController{
         return createViewController()
     }
@@ -17,7 +16,7 @@ class ManagementMovieRouter {
     private var sourceView:UIViewController?
     
     private func createViewController()-> UIViewController {
-        let view = ManagementMovieViewController(nibName: "ManagementMovieViewController", bundle: Bundle.main)
+        let view = ManagementDetailMovieViewController(nibName: "ManagementDetailMovieViewController", bundle: Bundle.main)
         return view
     }
     
@@ -28,10 +27,7 @@ class ManagementMovieRouter {
     func navigationPopViewController() {
         sourceView?.navigationController?.popViewController(animated: true)
     }
-    
-    func navigationToManagementDetailViewController() {
-        let viewDetail = ManagemetDetailMovieRouter().viewController
-        sourceView?.navigationController?.pushViewController(viewDetail, animated: true)
-    }
   
 }
+
+

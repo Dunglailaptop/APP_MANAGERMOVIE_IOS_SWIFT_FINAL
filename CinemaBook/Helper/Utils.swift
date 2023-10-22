@@ -151,6 +151,21 @@ class Utils: NSObject {
            var dateformart = dateFormatter.string(from: date)
            return dateformart
        }
+    func convertFormartDateyearMMddToString(date: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        // Convert the input string to a Date object
+        guard let inputDate = dateFormatter.date(from: date) else {
+            return nil // Return nil if the input date string is not in the expected format
+        }
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let formattedDate = dateFormatter.string(from: inputDate)
+        
+        return formattedDate
+    }
+
     
     func convertDateToString(inputDateString: String, inputFormat: String, outputFormat: String) -> String? {
         let dateFormatterInput = DateFormatter()

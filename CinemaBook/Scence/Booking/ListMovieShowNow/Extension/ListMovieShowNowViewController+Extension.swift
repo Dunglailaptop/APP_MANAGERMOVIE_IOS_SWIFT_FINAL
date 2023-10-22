@@ -20,21 +20,13 @@ extension ListMovieShowNowViewController{
         tableView.rx.setDelegate(self).disposed(by: rxbag)
     }
 
-//    func setupCollectionView() {
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = .vertical
-//        layout.itemSize = CGSize(width: view.frame.width/2.3, height: 330)
-//        layout.minimumLineSpacing = 5
-//        collectionviewcell.collectionViewLayout = layout
-//        collectionviewcell.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-//        collectionviewcell.translatesAutoresizingMaskIntoConstraints = false
-//    }
+
 
     func binđDataTableCollectionView(){
         viewModel.dataArray.bind(to: tableView.rx.items(cellIdentifier: "itemMovieTableViewCell", cellType: itemMovieTableViewCell.self)) { (index, data, cell) in
             cell.data = data
             cell.viewModel = self.viewModel
-
+            cell.height_button.constant = 0
 
             }.disposed(by: rxbag)
     }
