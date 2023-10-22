@@ -7,23 +7,29 @@
 //
 
 import UIKit
+import RxCocoa
+import RxRelay
+import RxSwift
 
 class ManagementMovieViewController: BaseViewController {
 
-    @IBOutlet weak var btn_search: UIButton!
+   
     @IBOutlet weak var view_History: UIView!
     @IBOutlet weak var lbl_viewControllerHistory: UILabel!
     
-    @IBOutlet weak var view_search: UIView!
+    
     @IBOutlet weak var view_New: UIView!
     @IBOutlet weak var lbl_viewControllerNew: UILabel!
     var viewModel = ManagementMovieViewModel()
     var router = ManagementMovieRouter()
+    var view1 = ListMovieShowNowViewController()
+    var view2 = ListMovieShowNowViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self,router: router)
         self.view_history()
+
         // Do any additional setup after loading the view.
     }
 
@@ -44,37 +50,30 @@ class ManagementMovieViewController: BaseViewController {
         viewModel.makeToManagementDetailViewController()
     }
     
-    @IBAction func btn_show_search(_ sender: Any) {
-        view_search.isHidden = false
-        
-    }
-    @IBAction func btn_close_view_search(_ sender: Any) {
-        view_search.isHidden = true
-    }
+  
     
     func view_history(){
-                lbl_viewControllerHistory.textColor = ColorUtils.blueLabel()
-                view_History.backgroundColor = ColorUtils.blue_textbutton()
-                view_New.backgroundColor = ColorUtils.gray_200()
-                lbl_viewControllerNew.textColor = ColorUtils.gray_600()
-                let ListMovieShowNowViewControllers = ListMovieShowNowViewController(nibName: "ListMovieShowNowViewController", bundle: Bundle.main)
-                ListMovieShowNowViewControllers.status = 1
-                ListMovieShowNowViewControllers.Type_edit = 1
-                addTopCustomViewController(ListMovieShowNowViewControllers, addTopCustom: 160)
-                let ListMovieShowNowViewControllerss = ListMovieShowNowViewController(nibName: "ListMovieShowNowViewController", bundle: Bundle.main)
-                ListMovieShowNowViewControllerss.remove()
+        lbl_viewControllerHistory.textColor = ColorUtils.blueLabel()
+        view_History.backgroundColor = ColorUtils.blue_textbutton()
+        view_New.backgroundColor = ColorUtils.gray_200()
+        lbl_viewControllerNew.textColor = ColorUtils.gray_600()
+        addTopCustomViewController(view1, addTopCustom: 110)
+        view1.Type_edit = 2
+        view1.type_viewTralling = 1
+        view1.status = 3
+
+        view2.remove()
     }
     
     func view_new() {
         lbl_viewControllerNew.textColor = ColorUtils.blueLabel()
-                  view_New.backgroundColor = ColorUtils.blue_textbutton()
-              view_History.backgroundColor = ColorUtils.gray_200()
-              lbl_viewControllerHistory.textColor = ColorUtils.gray_600()
-              let ListMovieShowNowViewControllers = ListMovieShowNowViewController(nibName: "ListMovieShowNowViewController", bundle: Bundle.main)
-                  ListMovieShowNowViewControllers.status = 0
-                      
-                        addTopCustomViewController(ListMovieShowNowViewControllers, addTopCustom: 160)
-                  let ListMovieShowNowViewControllerss = ListMovieShowNowViewController(nibName: "ListMovieShowNowViewController", bundle: Bundle.main)
-                        ListMovieShowNowViewControllerss.remove()
+        view_New.backgroundColor = ColorUtils.blue_textbutton()
+        view_History.backgroundColor = ColorUtils.gray_200()
+        lbl_viewControllerHistory.textColor = ColorUtils.gray_600()
+        view2.Type_edit = 1
+        view2.type_viewTralling = 1
+        view2.status = 0
+        addTopCustomViewController(view2, addTopCustom: 110)
+        view1.remove()
     }
 }

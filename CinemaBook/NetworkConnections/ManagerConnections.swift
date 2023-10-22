@@ -57,6 +57,8 @@ enum ManagerConnections {
     case getListCategoryMovie
     case getListNation
     case CreateMovie(movievalue: Movie)
+    case UpdateMovie(movievalue: Movie)
+    case UpdateStatusMovie(idmovie:Int,status:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -159,6 +161,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlgetListCategoryMovie
         case .CreateMovie(_):
             return APIEndPoint.Name.urlCreateMovieNew
+        case .UpdateMovie(_):
+            return APIEndPoint.Name.urlUpdateMovie
+        case  .UpdateStatusMovie(_,_):
+            return APIEndPoint.Name.urlUpdateStatusMovie
             
         }
     
@@ -254,6 +260,10 @@ extension ManagerConnections: TargetType {
         case .getListCategoryMovie:
             return .get
         case .CreateMovie(_):
+            return .post
+        case .UpdateMovie(_):
+            return .post
+        case .UpdateStatusMovie(_,_):
             return .post
         }
 
@@ -371,6 +381,10 @@ extension ManagerConnections: TargetType {
         case .getListNation:
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .CreateMovie(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .UpdateMovie(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .UpdateStatusMovie(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
@@ -599,6 +613,23 @@ extension ManagerConnections: TargetType {
                 "describes": movievalue.describes,
                 "poster": movievalue.poster
             ]
+        case .UpdateMovie(let movievalue):
+            return [
+                "idmovie": movievalue.movieID,
+                "namemovie": movievalue.namemovie,
+                "author": movievalue.author,
+                "yearbirthday": movievalue.yearbirthday,
+                "idcategorymovie": movievalue.idcategory,
+                "idnation": movievalue.idnation,
+                "timeall": movievalue.timeall,
+                "describes": movievalue.describes,
+                "poster": movievalue.poster
+            ]
+        case .UpdateStatusMovie(let idmovie,let status):
+            return [
+                "idmovie": idmovie,
+                "status":status
+            ]
         }
        
     }
@@ -700,6 +731,10 @@ extension ManagerConnections: TargetType {
         case .getListCategoryMovie:
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .CreateMovie(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .UpdateMovie(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .UpdateStatusMovie(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }

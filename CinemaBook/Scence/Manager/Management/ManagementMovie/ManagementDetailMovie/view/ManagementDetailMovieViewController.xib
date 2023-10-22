@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="btn_dropdown_nation" destination="gec-dE-T9b" id="nVW-ko-sIE"/>
                 <outlet property="btn_dropdowncategorymovie" destination="icy-Mn-Vlp" id="Ej3-fG-0Pw"/>
+                <outlet property="btn_tiitle_button" destination="uRm-hs-jkb" id="74U-67-egB"/>
                 <outlet property="image_poster" destination="QHF-42-bRJ" id="LIE-PL-Hwk"/>
                 <outlet property="lbl_error_alltime" destination="j00-xw-iAZ" id="PXu-9i-C5K"/>
                 <outlet property="lbl_error_author" destination="uiU-Vm-GBb" id="pe5-Ha-Hhc"/>
@@ -26,6 +27,7 @@
                 <outlet property="lbl_error_description" destination="Kar-fc-mEe" id="cgg-92-Ky9"/>
                 <outlet property="lbl_error_nameMovie" destination="uZL-Fa-Z8N" id="fAV-xs-KRS"/>
                 <outlet property="lbl_error_nation" destination="rV7-eC-oKT" id="f8m-KY-iHK"/>
+                <outlet property="lbl_tittlle_detial" destination="CTv-VY-eu1" id="NA2-sW-8D9"/>
                 <outlet property="txt_author" destination="FVC-4e-4rQ" id="2Rw-Fo-HWe"/>
                 <outlet property="txt_dateShow" destination="ORI-27-bCh" id="wtm-bP-AzL"/>
                 <outlet property="txt_description" destination="psQ-AH-xDK" id="f6x-Pt-gdz"/>

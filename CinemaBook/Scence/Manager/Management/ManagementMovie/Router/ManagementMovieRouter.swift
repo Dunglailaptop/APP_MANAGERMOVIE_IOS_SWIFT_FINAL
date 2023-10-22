@@ -30,7 +30,8 @@ class ManagementMovieRouter {
     }
     
     func navigationToManagementDetailViewController() {
-        let viewDetail = ManagemetDetailMovieRouter().viewController
+        let viewDetail = ManagemetDetailMovieRouter().viewController as! ManagementDetailMovieViewController
+        viewDetail.type_check = "CREATE"
         sourceView?.navigationController?.pushViewController(viewDetail, animated: true)
     }
   

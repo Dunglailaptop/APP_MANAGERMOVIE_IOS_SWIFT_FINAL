@@ -55,4 +55,20 @@ extension ManagementDetailMovieViewModel {
                         .mapObject(type: APIResponse.self)
     }
     
+    func updateMovie() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.UpdateMovie(movievalue: valueMovie.value))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+    }
+    
+    func getDetailMovie() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.MovieDetail(idmovie: valueMovie.value.movieID))
+               .filterSuccessfulStatusCodes()
+               .mapJSON().asObservable()
+               .showAPIErrorToast()
+               .mapObject(type: APIResponse.self)
+       }
+    
 }

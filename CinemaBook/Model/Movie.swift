@@ -12,7 +12,7 @@ var yearbirthday = ""
 var timeall = 0
 var describes = ""
 var poster = ""
-var statusshow = ""
+var statusshow = 0
 var videofile = ""
 var ischeck = 0
 var dayStart = "2023-09-19T16:02:37.650Z"
@@ -21,6 +21,8 @@ var isSelected = DEACTIVE
 var idvideo = 0
 var idcategory = 0
 var idnation = 0
+var namecategorymovie = ""
+var namenation = ""
     init() {
         
     }
@@ -41,5 +43,7 @@ var idnation = 0
         videofile <- map["videofile"]
         idcategory <- map["idcategory"]
         idnation <- map["idnation"]
+        namecategorymovie <- map["namecategorymovie"]
+        namenation <- map["namenation"]
     }
 }

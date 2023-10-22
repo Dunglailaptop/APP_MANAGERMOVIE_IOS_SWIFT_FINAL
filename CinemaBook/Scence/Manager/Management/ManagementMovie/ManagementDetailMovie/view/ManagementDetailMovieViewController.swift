@@ -57,20 +57,42 @@ class ManagementDetailMovieViewController: BaseViewController {
     
     @IBOutlet weak var txt_timeShow: UITextField!
     
+    
+    
+    @IBOutlet weak var btn_tiitle_button: UIButton!
+    @IBOutlet weak var lbl_tittlle_detial: UILabel!
     var imagecover = [UIImage]()
      var selectedAssets = [PHAsset]()
     var nameImage: [String] = []
     
+    var type_check = ""
+    var idmovie = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
+        txt_idmovie.isUserInteractionEnabled = false
         setup()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         getListNation()
+        
+        switch type_check {
+        case "DETAIL":
+            var data = viewModel.valueMovie.value
+            data.movieID = idmovie
+            viewModel.valueMovie.accept(data)
+            getDetailMovie()
+            btn_tiitle_button.setTitle("CẬP NHẬT", for: .normal)
+            lbl_tittlle_detial.text = "CHI TIẾT PHIM"
+        case "CREATE":
+            return
+        default:
+            return
+        }
     }
 
 
@@ -97,7 +119,15 @@ class ManagementDetailMovieViewController: BaseViewController {
         _ = isEmployeeInforValid.take(1).subscribe(onNext: {[self] (isValid) in
             
             if isValid {
-                imagecover.count > 0 ? postUpdateWithAvatar():createNewMovie()
+                switch type_check {
+                case "CREATE":
+                    imagecover.count > 0 ? postUpdateWithAvatar():createNewMovie()
+                case "DETAIL":
+                    imagecover.count > 0 ? postUpdateWithAvatar():updatemovie()
+                default:
+                    return
+                }
+              
             }
         }).disposed(by: rxbag)
     }

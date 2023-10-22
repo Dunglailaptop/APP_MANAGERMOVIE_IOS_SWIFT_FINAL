@@ -62,14 +62,17 @@ extension BookingTicketViewController: BmoViewPagerDelegate, BmoViewPagerDataSou
         if(page == 0){
             let ListMovieShowNowRouters = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
             ListMovieShowNowRouters.status = 1
+            ListMovieShowNowRouters.Type_edit = 0
             return ListMovieShowNowRouters
         }else if(page == 1){
            let ListMovieShowNowRouters = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
             ListMovieShowNowRouters.status = 0
+            ListMovieShowNowRouters.Type_edit = 0
              return ListMovieShowNowRouters
         }else {
         let ListMovieShowNowRouters = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
             ListMovieShowNowRouters.status = 1
+            ListMovieShowNowRouters.Type_edit = 0
             return ListMovieShowNowRouters
         }
     }

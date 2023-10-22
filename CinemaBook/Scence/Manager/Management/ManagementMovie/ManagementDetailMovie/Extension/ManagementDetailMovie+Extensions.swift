@@ -90,6 +90,20 @@ extension ManagementDetailMovieViewController: CaculatorInputQuantityDelegate {
 }
 
 extension ManagementDetailMovieViewController {
+    func updatemovie() {
+        viewModel.updateMovie().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<Movie>().map(JSONObject: response.data) {
+                    JonAlert.showSuccess(message: "Cập nhật phim thành công")
+                    self.viewModel.makePopTovViewController()
+                }
+            }
+            
+        })
+    }
+    
+    
     func createNewMovie() {
         viewModel.createNewMovie().subscribe(onNext:  {
             (response) in
@@ -104,6 +118,31 @@ extension ManagementDetailMovieViewController {
                 }
             }
         })
+    }
+    
+    func getDetailMovie() {
+        viewModel.getDetailMovie().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<Movie>().map(JSONObject: response.data) {
+                    self.viewModel.valueMovie.accept(data)
+                    self.setupvalid()
+                }
+            }
+
+        })
+    }
+    
+    func setupvalid() {
+        txt_author.text = viewModel.valueMovie.value.author
+        txt_namemovie.text = viewModel.valueMovie.value.namemovie
+        txt_description.text = viewModel.valueMovie.value.describes
+        txt_dropdown_nation.text = viewModel.valueMovie.value.namenation
+        txt_drop_down_categoryMovie.text = viewModel.valueMovie.value.namecategorymovie
+        txt_timeShow.text = String(viewModel.valueMovie.value.timeall)
+        txt_dateShow.text = viewModel.valueMovie.value.yearbirthday
+        txt_idmovie.text = String(viewModel.valueMovie.value.movieID)
+        image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: viewModel.valueMovie.value.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
     }
     
     
@@ -129,6 +168,7 @@ extension ManagementDetailMovieViewController {
                     self.viewModel.dataArrayMovie.accept(data)
                     self.txt_drop_down_categoryMovie.optionArray = data.map{ $0.namecategorymovie}
                     self.txt_drop_down_categoryMovie.optionIds = data.map{$0.idcategorymovie}
+                    
                 }
             }
         })
@@ -149,12 +189,12 @@ extension ManagementDetailMovieViewController {
          dataImage.poster = connectImage
         viewModel.valueMovie.accept(dataImage)
      
-       createNewMovie()
-//        if  type_dy == "CREATE" {
-//            postCreateEmployee()
-//        } else  {
-//                postUpdateAccount()
-//        }
+     
+        if  type_check == "CREATE" {
+            createNewMovie()
+        } else  {
+             updatemovie()
+        }
     
     }
 }
