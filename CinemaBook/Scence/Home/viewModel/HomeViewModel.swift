@@ -38,13 +38,13 @@ class HomeViewModel: BaseViewModel {
     var dataArrayTrailler:BehaviorRelay<[Trailler]> = BehaviorRelay(value: [])
     var dataArrayVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
     var dataArrayProduct:BehaviorRelay<[Cinema]> = BehaviorRelay(value: [])
-    var pagigation: BehaviorRelay<(page:Int,limit:Int,status:Int)> = BehaviorRelay(value:(page:0,limit:20,status:1))
+    var pagigation: BehaviorRelay<(page:Int,limit:Int,status:Int,dateFrom:String,dateTo:String)> = BehaviorRelay(value:(page:0,limit:20,status:1,dateFrom:"",dateTo:""))
     
     
 }
 extension HomeViewModel {
     func getListMovieShowBanner() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.Moive(page: pagigation.value.page, limit: pagigation.value.limit, status: pagigation.value.status))
+        return appServiceProvider.rx.request(.Moive(page: pagigation.value.page, limit: pagigation.value.limit, status: pagigation.value.status,Idcategory: 0,dateFrom: pagigation.value.dateFrom,dateTo: pagigation.value.dateTo))
                 .filterSuccessfulStatusCodes()
                 .mapJSON().asObservable()
                 .showAPIErrorToast()

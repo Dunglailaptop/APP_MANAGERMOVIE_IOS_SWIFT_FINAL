@@ -12,6 +12,10 @@ import RxSwift
 import ObjectMapper
 import JonAlert
 
+extension ManagementDetailMovieViewController {
+    
+}
+
 extension ManagementDetailMovieViewController: SambagDatePickerViewControllerDelegate {
     
     func sambagDatePickerDidSet(_ viewController: SambagDatePickerViewController, result: SambagDatePickerResult){

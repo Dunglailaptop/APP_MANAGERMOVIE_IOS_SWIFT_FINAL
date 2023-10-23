@@ -10,6 +10,7 @@ import UIKit
 
 class itemMovieTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbl_categorymovie: UILabel!
     @IBOutlet weak var view_trallsing_edit: UIView!
     @IBOutlet weak var view_cancel: UIView!
     @IBOutlet weak var view_button_edit: UIStackView!
@@ -38,6 +39,7 @@ class itemMovieTableViewCell: UITableViewCell {
                var date = data?.yearbirthday.components(separatedBy: "T")
                lbl_dateshow.text = "Ngày công chiếu: " + date![0]
                lbl_timeshow.text = String(data!.timeall) + "Phút"
+               lbl_categorymovie.text = data?.namecategorymovie
                switch data?.statusshow {
                case 1:
                    view_cancel.isHidden = true

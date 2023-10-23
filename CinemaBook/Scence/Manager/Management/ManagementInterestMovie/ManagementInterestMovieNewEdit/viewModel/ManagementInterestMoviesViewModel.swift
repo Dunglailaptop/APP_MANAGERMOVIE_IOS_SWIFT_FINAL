@@ -59,7 +59,7 @@ class ManagementInterestMoviesViewModel: BaseViewModel {
 }
 extension ManagementInterestMoviesViewModel {
     func getListMovieShow() -> Observable<APIResponse> {
-           return appServiceProvider.rx.request(.Moive(page: allvalue.value.page, limit: allvalue.value.limit,status: allvalue.value.status))
+        return appServiceProvider.rx.request(.Moive(page: allvalue.value.page, limit: allvalue.value.limit,status: allvalue.value.status,Idcategory: 0,dateFrom: "" ,dateTo: ""))
                 .filterSuccessfulStatusCodes()
                 .mapJSON().asObservable()
                 .showAPIErrorToast()

@@ -19,8 +19,8 @@ class ListMovieShowNowViewModel: BaseViewModel
     
     public var dataArray: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
     public var dataSearch: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
-    
-    var allvalue: BehaviorRelay<(page:Int,limit:Int,status:Int)> = BehaviorRelay(value: (page:0, limit:20,status:1))
+    public var dataCategoryMovie: BehaviorRelay<[CategoryMovie]> = BehaviorRelay(value: [])
+    var allvalue: BehaviorRelay<(page:Int,limit:Int,status:Int,Idcategory:Int,dateFrom:String,dateTo:String)> = BehaviorRelay(value: (page:0, limit:20,status:1,Idcategory:0,dateFrom: "",dateTo: ""))
     var dataMovie:BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
     func bind(view: ListMovieShowNowViewController, router: ListMovieShowNowRouter)
     {
@@ -42,7 +42,7 @@ class ListMovieShowNowViewModel: BaseViewModel
 
 extension ListMovieShowNowViewModel {
     func getListMovieShow() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.Moive(page: allvalue.value.page, limit: allvalue.value.limit,status: allvalue.value.status))
+        return appServiceProvider.rx.request(.Moive(page: allvalue.value.page, limit: allvalue.value.limit,status: allvalue.value.status,Idcategory: allvalue.value.Idcategory,dateFrom:  allvalue.value.dateFrom,dateTo: allvalue.value.dateTo))
              .filterSuccessfulStatusCodes()
              .mapJSON().asObservable()
              .showAPIErrorToast()
@@ -55,4 +55,11 @@ extension ListMovieShowNowViewModel {
              .showAPIErrorToast()
              .mapObject(type: APIResponse.self)
      }
+    func getListCategortMovie() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListCategoryMovie)
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+    }
 }

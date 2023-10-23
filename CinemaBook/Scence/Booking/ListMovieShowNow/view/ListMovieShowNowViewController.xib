@@ -16,6 +16,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListMovieShowNowViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="lbl_date_From" destination="ski-wH-HeE" id="bNi-Rz-nUw"/>
+                <outlet property="lbl_date_to" destination="XFy-9p-rqo" id="Sh6-Ah-l8J"/>
                 <outlet property="tableView" destination="yRg-64-soU" id="6cz-Za-iDS"/>
                 <outlet property="txt_search" destination="UeB-T8-yhr" id="fH6-dW-joV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -82,11 +84,24 @@
                                                         <constraint firstAttribute="height" constant="22" id="drs-x1-Knm"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd7-Gi-dTI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <connections>
+                                                        <action selector="btn_showDateFrom:" destination="-1" eventType="touchUpInside" id="l3U-Wo-uzd"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="yd7-Gi-dTI" secondAttribute="bottom" id="0dZ-0o-9Ib"/>
+                                                <constraint firstItem="yd7-Gi-dTI" firstAttribute="top" secondItem="SsH-dZ-jNf" secondAttribute="top" id="1dJ-W4-LYL"/>
                                                 <constraint firstItem="Q7E-Yg-LTS" firstAttribute="centerY" secondItem="SsH-dZ-jNf" secondAttribute="centerY" id="NYW-cO-3II"/>
+                                                <constraint firstItem="yd7-Gi-dTI" firstAttribute="leading" secondItem="SsH-dZ-jNf" secondAttribute="leading" id="VvI-M8-CN4"/>
                                                 <constraint firstItem="Q7E-Yg-LTS" firstAttribute="leading" secondItem="SsH-dZ-jNf" secondAttribute="leading" constant="10" id="a0A-7Z-30j"/>
+                                                <constraint firstAttribute="trailing" secondItem="yd7-Gi-dTI" secondAttribute="trailing" id="b47-01-zjX"/>
                                                 <constraint firstItem="ski-wH-HeE" firstAttribute="centerY" secondItem="SsH-dZ-jNf" secondAttribute="centerY" id="jCZ-6m-9nK"/>
                                                 <constraint firstAttribute="trailing" secondItem="ski-wH-HeE" secondAttribute="trailing" constant="10" id="ziH-Sw-tdQ"/>
                                             </constraints>
@@ -118,13 +133,26 @@
                                                         <constraint firstAttribute="height" constant="22" id="vIm-A7-ryz"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYu-b2-vyq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    <connections>
+                                                        <action selector="btn_showdateTO:" destination="-1" eventType="touchUpInside" id="fly-Aq-NXG"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="GYu-b2-vyq" secondAttribute="bottom" id="9ra-TL-Epl"/>
                                                 <constraint firstItem="BoH-8X-lwc" firstAttribute="centerY" secondItem="36n-0W-hra" secondAttribute="centerY" id="AKc-C1-SFl"/>
                                                 <constraint firstAttribute="trailing" secondItem="XFy-9p-rqo" secondAttribute="trailing" constant="10" id="P8w-Tb-jy2"/>
                                                 <constraint firstItem="XFy-9p-rqo" firstAttribute="centerY" secondItem="36n-0W-hra" secondAttribute="centerY" id="iHV-X6-0l2"/>
+                                                <constraint firstAttribute="trailing" secondItem="GYu-b2-vyq" secondAttribute="trailing" id="lDL-vC-8iy"/>
                                                 <constraint firstItem="BoH-8X-lwc" firstAttribute="leading" secondItem="36n-0W-hra" secondAttribute="leading" constant="10" id="rdm-6P-bFM"/>
+                                                <constraint firstItem="GYu-b2-vyq" firstAttribute="leading" secondItem="36n-0W-hra" secondAttribute="leading" id="vDc-Ef-zx6"/>
+                                                <constraint firstItem="GYu-b2-vyq" firstAttribute="top" secondItem="36n-0W-hra" secondAttribute="top" id="w8n-kh-uuF"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -165,6 +193,9 @@
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="icon-filter 1"/>
+                                    <connections>
+                                        <action selector="btn_showlistcategoryMovie:" destination="-1" eventType="touchUpInside" id="X5I-gO-XRS"/>
+                                    </connections>
                                 </button>
                                 <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efJ-Vd-Doc">
                                     <rect key="frame" x="20" y="5" width="374" height="34"/>

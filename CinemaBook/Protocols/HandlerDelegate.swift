@@ -55,3 +55,6 @@ protocol CaculatorInputQuantityDelegate {
 protocol DialogchooseInterestMovies {
     func callbackUpdateInterestMovies(idinterest:Int,idmovie:Int)
 }
+protocol DialogChooseCategoryMovie {
+    func callbackChooseCategoryMovie(Idcategory: Int)
+}

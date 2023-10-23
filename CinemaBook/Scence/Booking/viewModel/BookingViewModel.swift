@@ -28,7 +28,7 @@ class BookingViewModel: BaseViewModel
 
 extension BookingViewModel {
     func getListMovieShow() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.Moive(page: 0, limit: 20, status: 1))
+        return appServiceProvider.rx.request(.Moive(page: 0, limit: 20, status: 1,Idcategory: 0,dateFrom: "",dateTo: ""))
              .filterSuccessfulStatusCodes()
              .mapJSON().asObservable()
              .showAPIErrorToast()

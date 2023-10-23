@@ -28,3 +28,31 @@ extension ManagementMovieViewController {
             }).disposed(by: rxbag)
     }
 }
+extension ManagementMovieViewController {
+    func presentDialogCategoryMovie() {
+        let DialogChooseCategoryMovieViewControllers = DialogChooseCategoryMovieViewController()
+        
+     
+        DialogChooseCategoryMovieViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
+        let nav = UINavigationController(rootViewController: DialogChooseCategoryMovieViewControllers)
+            // 1
+        nav.modalPresentationStyle = .overCurrentContext
+
+            
+            // 2
+            if #available(iOS 15.0, *) {
+                if let sheet = nav.sheetPresentationController {
+                    
+                    // 3
+                    sheet.detents = [.large()]
+                    
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            // 4
+     
+            present(nav, animated: true, completion: nil)
+
+        }
+}

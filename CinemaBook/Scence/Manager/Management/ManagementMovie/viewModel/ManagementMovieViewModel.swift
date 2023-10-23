@@ -15,7 +15,7 @@ class ManagementMovieViewModel: BaseViewModel{
     private var router: ManagementMovieRouter?
     
     public var dataArray: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
-    public var pagigation:BehaviorRelay<(page:Int,limit:Int,status:Int)> = BehaviorRelay(value: (page:0,limit:20,status:1))
+    public var pagigation:BehaviorRelay<(page:Int,limit:Int,status:Int,Idcategory:Int,dateFrom:String,dateTo:String)> = BehaviorRelay(value: (page:0,limit:20,status:1,Idcategory:0,dateFrom:"",dateTo:""))
     
     func bind(view: ManagementMovieViewController, router: ManagementMovieRouter){
         self.view = view
@@ -34,7 +34,7 @@ class ManagementMovieViewModel: BaseViewModel{
 }
 extension ManagementMovieViewModel {
     func getListMovie() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.Moive(page: pagigation.value.page, limit: pagigation.value.limit, status: pagigation.value.status))
+        return appServiceProvider.rx.request(.Moive(page: pagigation.value.page, limit: pagigation.value.limit, status: pagigation.value.status,Idcategory: pagigation.value.Idcategory,dateFrom: pagigation.value.dateFrom,dateTo: pagigation.value.dateTo))
                         .filterSuccessfulStatusCodes()
                         .mapJSON().asObservable()
                         .showAPIErrorToast()

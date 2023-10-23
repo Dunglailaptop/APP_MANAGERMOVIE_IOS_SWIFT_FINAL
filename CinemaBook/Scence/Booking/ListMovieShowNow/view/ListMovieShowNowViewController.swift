@@ -20,10 +20,12 @@ class ListMovieShowNowViewController: BaseViewController {
     var Type_edit = 0
     var type_viewTralling = 0
     
+    @IBOutlet weak var lbl_date_to: UILabel!
+    @IBOutlet weak var lbl_date_From: UILabel!
     @IBOutlet weak var view_no_data: UIView!
     @IBOutlet weak var view_search: UIView!
     @IBOutlet weak var txt_search: UITextField!
-    
+    var type_choose_date = 0
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,4 +67,56 @@ class ListMovieShowNowViewController: BaseViewController {
     @IBAction func btn_close_search(_ sender: Any) {
         view_search.isHidden = true
     }
+    
+    @IBAction func btn_showlistcategoryMovie(_ sender: Any) {
+     presentDialogCategoryMovie()
+    }
+    
+    @IBAction func btn_showDateFrom(_ sender: Any) {
+        type_choose_date = 0
+        showDateTimePicker(dataDateTime: Utils.getCurrentDateString())
+    }
+    
+    @IBAction func btn_showdateTO(_ sender: Any) {
+        type_choose_date = 1
+        showDateTimePicker(dataDateTime: Utils.getCurrentDateString())
+    }
+    
+    
+}
+extension ListMovieShowNowViewController: DialogChooseCategoryMovie {
+    func callbackChooseCategoryMovie(Idcategory: Int) {
+        var data = viewModel.allvalue.value
+        data.Idcategory = Idcategory
+        viewModel.allvalue.accept(data)
+        getListmovie()
+        dismiss(animated: true)
+    }
+    
+    func presentDialogCategoryMovie() {
+        let DialogChooseCategoryMovieViewControllers = DialogChooseCategoryMovieViewController()
+        DialogChooseCategoryMovieViewControllers.viewModel = self.viewModel
+        DialogChooseCategoryMovieViewControllers.delegate = self
+        DialogChooseCategoryMovieViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
+        let nav = UINavigationController(rootViewController: DialogChooseCategoryMovieViewControllers)
+            // 1
+        nav.modalPresentationStyle = .overCurrentContext
+
+            
+            // 2
+            if #available(iOS 15.0, *) {
+                if let sheet = nav.sheetPresentationController {
+                    
+                    // 3
+                    sheet.detents = [.large()]
+                    
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            // 4
+     
+            present(nav, animated: true, completion: nil)
+
+        }
 }
