@@ -259,7 +259,7 @@ extension BookingChairViewController {
                              return cell
                          default:
                             let cell = self.tableView.dequeueReusableCell(withIdentifier: "headerTableViewCell", for: indexPath) as! headerTableViewCell
-                                                     
+                             cell.viewModel = self.viewModel
                                                     
                             
                              return cell

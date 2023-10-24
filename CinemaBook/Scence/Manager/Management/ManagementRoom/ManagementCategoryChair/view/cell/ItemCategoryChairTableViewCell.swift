@@ -24,14 +24,5 @@ class ItemCategoryChairTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    var data: CategoryChair? = nil {
-        didSet {
-            if data?.colorchair == "1" {
-                view_color_chair.backgroundColor = .systemGray
-            }
-            lbl_price_chair.text = Utils.stringVietnameseMoneyFormatWithNumber(amount: data!.price)
-            lbl_name_chair.text = data?.namecategorychair
-            
-        }
-    }
+   
 }

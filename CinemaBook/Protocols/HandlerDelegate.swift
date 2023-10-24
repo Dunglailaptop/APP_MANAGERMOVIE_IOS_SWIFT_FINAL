@@ -58,3 +58,7 @@ protocol DialogchooseInterestMovies {
 protocol DialogChooseCategoryMovie {
     func callbackChooseCategoryMovie(Idcategory: Int)
 }
+
+protocol DialogCreateCategoryChair {
+    func callbackcreateCategoryChair(categorychairinfo: CategoryChair)
+}

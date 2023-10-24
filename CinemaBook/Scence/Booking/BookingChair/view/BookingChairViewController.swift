@@ -22,7 +22,7 @@ class BookingChairViewController: BaseViewController {
     var idinterest = 0
     var idmovie = 0
     //label
-    
+    @IBOutlet weak var height_view_payment: NSLayoutConstraint!
     @IBOutlet weak var lbl_name_cinema: UILabel!
     
     @IBOutlet weak var lbl_namemovie: UILabel!

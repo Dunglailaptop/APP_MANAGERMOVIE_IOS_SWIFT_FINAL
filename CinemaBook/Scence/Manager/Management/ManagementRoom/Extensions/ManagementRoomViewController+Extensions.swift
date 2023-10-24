@@ -48,58 +48,35 @@ extension ManagementRoomViewController {
 
 }
 
-extension ManagementRoomViewController{
-    
+extension ManagementRoomViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     
     
     func register() {
-        let cellColletion = UINib(nibName: "itemRoomsCollectionViewCell", bundle: .main)
-        Collectionview.register(cellColletion, forCellWithReuseIdentifier: "itemRoomsCollectionViewCell")
-        setupCollectionView()
-          
+        let celltable = UINib(nibName: "ItemRoomTableViewCell", bundle: .main)
+        tableView.register(celltable, forCellReuseIdentifier: "ItemRoomTableViewCell")
+        tableView.rx.setDelegate(self)
+        tableView.separatorStyle = .none
+        tableView.rx.modelSelected(Room.self).subscribe(onNext: {
+            element in
+            self.viewModel.makeToManagementDetailViewController(room: element)
+        })
     }
     func bindingCollectionCell() {
-        viewModel.dataArrayRoom.bind(to: Collectionview.rx.items(cellIdentifier: "itemRoomsCollectionViewCell", cellType: itemRoomsCollectionViewCell.self)) {
+        viewModel.dataArrayRoom.bind(to: tableView.rx.items(cellIdentifier: "ItemRoomTableViewCell", cellType: ItemRoomTableViewCell.self)) {
             (row,data,cell) in
              cell.data = data
-            cell.btn_choose_room.rx.tap.asDriver().drive(onNext: {
-                let Response = ["userInfo": cell.data?.idroom]
-                   NotificationCenter.default.post(name: Notification.Name("NotificationCallApi"), object: nil,userInfo: Response)
-                
-            }).disposed(by: self.rxbag)
+            cell.selectionStyle = .none
+//            cell.btn_choose_room.rx.tap.asDriver().drive(onNext: {
+//                let Response = ["userInfo": cell.data?.idroom]
+//                   NotificationCenter.default.post(name: Notification.Name("NotificationCallApi"), object: nil,userInfo: Response)
+//
+//            }).disposed(by: self.rxbag)
         }
     }
-    
-  
-    
-    func registerCategory() {
-        let cellCollectionCategory = UINib(nibName: "ItemCategoryChairCollectionViewCell", bundle: .main)
-        collectionView_category_chair.register(cellCollectionCategory, forCellWithReuseIdentifier: "ItemCategoryChairCollectionViewCell")
-        setupCollectionViewCategory()
-    }
-    
-    func bindingCollectionCategory() {
-        viewModel.dataArrayCategoryChair.bind(to: collectionView_category_chair.rx.items(cellIdentifier:"ItemCategoryChairCollectionViewCell" , cellType: ItemCategoryChairCollectionViewCell.self)) {
-            (row,data,cell) in
-            cell.data = data
-        }
-    }
-    func setupCollectionView() {
-                let layout = UICollectionViewFlowLayout()
-                layout.scrollDirection = .horizontal
-                layout.itemSize = CGSize(width: 100, height: 23)
-                layout.minimumLineSpacing = 5
-                Collectionview.collectionViewLayout = layout
-                Collectionview.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-                Collectionview.translatesAutoresizingMaskIntoConstraints = false
-            }
-    func setupCollectionViewCategory() {
-                let layout = UICollectionViewFlowLayout()
-                layout.scrollDirection = .horizontal
-                layout.itemSize = CGSize(width: 150, height: 30)
-                layout.minimumLineSpacing = 5
-                collectionView_category_chair.collectionViewLayout = layout
-                collectionView_category_chair.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-                collectionView_category_chair.translatesAutoresizingMaskIntoConstraints = false
-            }
+
+ 
+   
 }

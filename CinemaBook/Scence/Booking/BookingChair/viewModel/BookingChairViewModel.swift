@@ -20,7 +20,7 @@ class  BookingChairViewModel: BaseViewModel
     public var pagition: BehaviorRelay<(idroom:Int,idcinema:Int,idinterest:Int,idmovie:Int)> = BehaviorRelay(value: (idroom:1,idcinema:1,idinterest:3,idmovie:0))
     public var dataArray: BehaviorRelay<[chair]> = BehaviorRelay(value: [])
     public var listtable: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2])
-        public var ChairCategory: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2])
+        public var ChairCategory: BehaviorRelay<[CategoryChair]> = BehaviorRelay(value: [])
     public var infoInterestMovie: BehaviorRelay<InfoInterestMovie> = BehaviorRelay(value: InfoInterestMovie())
     
     func bind(view: BookingChairViewController, router: BookingChairRouter)
@@ -56,6 +56,13 @@ extension BookingChairViewModel{
            }
     func getinfoInterestMovie() -> Observable<APIResponse> {
         return appServiceProvider.rx.request(.getInfoInterestMovie(idmovie: pagition.value.idmovie, idcinema: pagition.value.idcinema, idroom: pagition.value.idroom, idinterest: pagition.value.idinterest))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
+    func getListCategoryChairRoom() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.GetListCategoryChairInRoom(idroom: pagition.value.idroom))
                         .filterSuccessfulStatusCodes()
                         .mapJSON().asObservable()
                         .showAPIErrorToast()

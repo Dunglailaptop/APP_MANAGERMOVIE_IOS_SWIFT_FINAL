@@ -17,6 +17,7 @@ class ManagementRoomViewModel: BaseViewModel {
     public var dataArrayRoom: BehaviorRelay<[Room]> = BehaviorRelay(value: [])
     public var dataArrayCategoryChair: BehaviorRelay<[CategoryChair]> = BehaviorRelay(value: [])
     public var dataChoose: BehaviorRelay<(Idcinema:Int,Idroom:Int)> = BehaviorRelay(value: (Idcinema: ManageCacheObject.getCurrentCinema().idcinema,Idroom:1))
+    public var dataCategoryChair: BehaviorRelay<CategoryChair> = BehaviorRelay(value: CategoryChair())
     
     func bind(view: ManagementRoomViewController, router: ManagementRoomRouter){
           self.view = view
@@ -31,6 +32,10 @@ class ManagementRoomViewModel: BaseViewModel {
     func makeCreateRoomViewController() {
         router?.navigationToCreatRoomViewController()
     }
+    
+    func makeToManagementDetailViewController(room:Room) {
+        router?.navigationToManagementDetailRoom(room: room)
+    }
 }
 
 extension ManagementRoomViewModel {
@@ -42,7 +47,7 @@ extension ManagementRoomViewModel {
                      .mapObject(type: APIResponse.self)
              }
     func getListCategoryChair() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.getListCategoryChair(Idroom: dataChoose.value.Idroom))
+        return appServiceProvider.rx.request(.getListCategoryChair)
                         .filterSuccessfulStatusCodes()
                         .mapJSON().asObservable()
                         .showAPIErrorToast()
@@ -50,6 +55,14 @@ extension ManagementRoomViewModel {
                 }
     func getListchairRoom() -> Observable<APIResponse> {
         return appServiceProvider.rx.request(.getListChairRoom(Idroom: dataChoose.value.Idroom))
+                     .filterSuccessfulStatusCodes()
+                     .mapJSON().asObservable()
+                     .showAPIErrorToast()
+                     .mapObject(type: APIResponse.self)
+             }
+    
+    func createCategoryChair() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.CreateCategoryChair(categoryinfo: dataCategoryChair.value))
                      .filterSuccessfulStatusCodes()
                      .mapJSON().asObservable()
                      .showAPIErrorToast()

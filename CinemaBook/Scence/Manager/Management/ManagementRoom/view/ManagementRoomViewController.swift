@@ -16,13 +16,8 @@ class ManagementRoomViewController: BaseViewController {
     var view2 = ManagementCategoryChairViewController()
     var delegate: CallBackCallApiLoadListChair?
     var title_name = ["Phòng Đang Hoạt Động","Phòng Tạm Ngưng"]
-    @IBOutlet weak var Collectionview: UICollectionView!
    
-    @IBOutlet weak var collectionView_category_chair: UICollectionView!
-    @IBOutlet weak var height_viewListroom: NSLayoutConstraint!
-    @IBOutlet weak var height_viewListCategory: NSLayoutConstraint!
-    @IBOutlet weak var view_listCategoryChair: UIView!
-    @IBOutlet weak var view_listroom: UIView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var view_line_notworking: UIView!
     @IBOutlet weak var view_line_working: UIView!
     @IBOutlet weak var lbl_room_status_notworking: UILabel!
@@ -32,9 +27,8 @@ class ManagementRoomViewController: BaseViewController {
         viewModel.bind(view: self,router: router)
         register()
         bindingCollectionCell()
-        registerCategory()
-        bindingCollectionCategory()
-        registerViewController()
+
+//        registerViewController()
         
       
     }
@@ -64,12 +58,9 @@ class ManagementRoomViewController: BaseViewController {
         lbl_room_status_working.textColor = .systemBlue
         view_line_notworking.backgroundColor = .clear
         lbl_room_status_notworking.textColor = .black
-        view_listroom.isHidden = false
-        view_listCategoryChair.isHidden = false
-        height_viewListroom.constant = 0
-        height_viewListCategory.constant = 50
-        height_viewListroom.constant = 40
-        addTopCustomViewController(view1, addTopCustom: 170)
+        tableView.isHidden = false
+        tableView.isUserInteractionEnabled = true
+      
         view2.remove()
 
        
@@ -80,12 +71,12 @@ class ManagementRoomViewController: BaseViewController {
         lbl_room_status_working.textColor = .black
         view_line_notworking.backgroundColor = .systemBlue
         lbl_room_status_notworking.textColor = .systemBlue
-        view_listroom.isHidden = true
-        view_listCategoryChair.isHidden = true
-        height_viewListCategory.constant = 0
-               height_viewListroom.constant = 0
-        addTopCustomViewController(view2, addTopCustom: 90)
-        view1.remove()
+       
+        addTopCustomViewController(view2, addTopCustom: 85)
+        tableView.isHidden = true
+        tableView.isUserInteractionEnabled = false
+        view2.viewModel = self.viewModel
+        
      
        
     }
@@ -98,7 +89,7 @@ class ManagementRoomViewController: BaseViewController {
         addTopCustomViewController(view1, addTopCustom: 170)
 
         view2 = ManagementCategoryChairViewController(nibName: "ManagementCategoryChairViewController", bundle: .main) as! ManagementCategoryChairViewController
-        view2.viewModel = viewModel
+       
         room_working()
     }
     

@@ -35,6 +35,13 @@ class ListChairBookiingTableViewCell: UITableViewCell {
     
 }
 extension ListChairBookiingTableViewCell {
+    
+    func nootifacationSetup(chairs: chair) {
+        let notificationName = Notification.Name("listchairs")
+        let loginResponse = ["userInfo": ["Report_type": chairs]]
+        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: loginResponse)
+    }
+    
     func registerCollectionview() {
         let collectionviewcell = UINib(nibName: "ItemChairCollectionViewCell", bundle: .main)
         viewCollection.register(collectionviewcell, forCellWithReuseIdentifier: "ItemChairCollectionViewCell")
@@ -53,8 +60,18 @@ extension ListChairBookiingTableViewCell {
             var datafilter = self.viewModel!.dataArray.value.filter{$0.isSelected == ACTIVE}
             self.viewModel?.view!.lbl_price_chair.text = Utils.stringVietnameseFormatWithNumber(amount: datafilter.map { $0.price }.reduce(0, +) ?? 0)
             self.viewModel?.view?.lbl_number_chair.text = String(datafilter.count) + " Ghế"
+            self.nootifacationSetup(chairs: element)
            
         })
+//        if viewModel?.view?.type == 1 {
+//            viewCollection.rx.modelSelected(chair.self).subscribe(onNext: {
+//                element in
+//             
+//            })
+//        }else {
+//         
+//        }
+      
     }
     
     func setupCollectionView(rows: Int, columns: Int, itemSize: CGFloat) {

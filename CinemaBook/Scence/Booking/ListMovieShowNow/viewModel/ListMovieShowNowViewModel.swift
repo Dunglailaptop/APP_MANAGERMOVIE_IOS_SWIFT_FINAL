@@ -20,7 +20,7 @@ class ListMovieShowNowViewModel: BaseViewModel
     public var dataArray: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
     public var dataSearch: BehaviorRelay<[Movie]> = BehaviorRelay(value: [])
     public var dataCategoryMovie: BehaviorRelay<[CategoryMovie]> = BehaviorRelay(value: [])
-    var allvalue: BehaviorRelay<(page:Int,limit:Int,status:Int,Idcategory:Int,dateFrom:String,dateTo:String)> = BehaviorRelay(value: (page:0, limit:20,status:1,Idcategory:0,dateFrom: "",dateTo: ""))
+    var allvalue: BehaviorRelay<(page:Int,limit:Int,status:Int,Idcategory:Int,dateFrom:String,dateTo:String)> = BehaviorRelay(value: (page:0, limit:20,status:1,Idcategory:0,dateFrom: Utils.getCurrentDateStringformatMysqlyymmdd(),dateTo: Utils.getCurrentDateStringformatMysqlyymmdd()))
     var dataMovie:BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
     func bind(view: ListMovieShowNowViewController, router: ListMovieShowNowRouter)
     {

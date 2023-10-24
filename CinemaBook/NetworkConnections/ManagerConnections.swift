@@ -36,7 +36,7 @@ enum ManagerConnections {
     case postListInterest(roomlist:RoomList,movieList:[MovieList],dayStart:String,dayEnd:String,resetTime:Int)
     case getListInterestsMovie(idcinema:Int,idroom:Int,date:String)
     case getListChairRoom(Idroom:Int)
-    case getListCategoryChair(Idroom:Int)
+    case getListCategoryChair
     case postCreateChairInRoom(idcinema:Int,nameroom:String,numberChair:Int,allschair:Int)
     case getListFood(Idcategoryfood:Int)
     case getListFoodCombo
@@ -59,6 +59,8 @@ enum ManagerConnections {
     case CreateMovie(movievalue: Movie)
     case UpdateMovie(movievalue: Movie)
     case UpdateStatusMovie(idmovie:Int,status:Int)
+    case GetListCategoryChairInRoom(idroom:Int)
+    case CreateCategoryChair(categoryinfo: CategoryChair)
 }
 
 extension ManagerConnections: TargetType {
@@ -119,7 +121,7 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlInsterestArray
         case .getListChairRoom(let Idroom):
             return APIEndPoint.Name.urlGetListChairRoom
-        case .getListCategoryChair(let idroom):
+        case .getListCategoryChair:
             return APIEndPoint.Name.urlGetListCategoryChair
         case .postCreateChairInRoom(let idcinema,let nameroom,let  numberChair,let allschair ):
             return APIEndPoint.Name.urlCreatChairRoom
@@ -165,7 +167,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlUpdateMovie
         case  .UpdateStatusMovie(_,_):
             return APIEndPoint.Name.urlUpdateStatusMovie
-            
+        case .GetListCategoryChairInRoom(let idroom):
+            return APIEndPoint.Name.urlGetListCategoryChairinRoom
+        case .CreateCategoryChair(_):
+            return APIEndPoint.Name.urlPostCreateCategoryChair
         }
     
     }
@@ -219,7 +224,7 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListChairRoom(_):
             return .get
-        case .getListCategoryChair(_):
+        case .getListCategoryChair:
             return .get
         case .postCreateChairInRoom(_,_,_,_):
             return .post
@@ -264,6 +269,10 @@ extension ManagerConnections: TargetType {
         case .UpdateMovie(_):
             return .post
         case .UpdateStatusMovie(_,_):
+            return .post
+        case .GetListCategoryChairInRoom(_):
+            return .get
+        case .CreateCategoryChair(_):
             return .post
         }
 
@@ -340,7 +349,7 @@ extension ManagerConnections: TargetType {
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getListChairRoom(_):
                return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .getListCategoryChair(_):
+        case .getListCategoryChair:
               return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .postCreateChairInRoom(_,_,_,_):
              return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
@@ -385,6 +394,10 @@ extension ManagerConnections: TargetType {
         case .UpdateMovie(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .UpdateStatusMovie(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .GetListCategoryChairInRoom(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .CreateCategoryChair(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
@@ -494,8 +507,8 @@ extension ManagerConnections: TargetType {
             ]
         case .getListChairRoom(let Idroom):
             return ["Idroom":Idroom]
-        case .getListCategoryChair(let Idroom):
-            return ["Idroom":Idroom]
+        case .getListCategoryChair:
+            return [:]
         case .postCreateChairInRoom(let idcinema,let nameroom, let numberChair,let allschair):
             return [
                 "idcinema":idcinema,
@@ -633,6 +646,16 @@ extension ManagerConnections: TargetType {
                 "idmovie": idmovie,
                 "status":status
             ]
+        case .GetListCategoryChairInRoom(let idroom):
+            return [
+                "idroom":idroom
+            ]
+        case .CreateCategoryChair(let categoryinfo):
+            return [
+                "price": categoryinfo.price,
+                "namecategory": categoryinfo.namecategorychair,
+                "colorchair": categoryinfo.colorchair
+            ]
         }
        
     }
@@ -693,7 +716,7 @@ extension ManagerConnections: TargetType {
              return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getListChairRoom(_):
               return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .getListCategoryChair(_):
+        case .getListCategoryChair:
                     return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .postCreateChairInRoom(_,_,_,_):
                return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
@@ -738,6 +761,10 @@ extension ManagerConnections: TargetType {
         case .UpdateMovie(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .UpdateStatusMovie(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .GetListCategoryChairInRoom(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .CreateCategoryChair(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }

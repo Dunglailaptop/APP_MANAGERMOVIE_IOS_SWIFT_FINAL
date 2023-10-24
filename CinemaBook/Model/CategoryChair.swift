@@ -16,6 +16,10 @@ struct CategoryChair: Mappable {
     var price = 0
     var idroom = 0
     
+    init(){
+        
+    }
+    
     init?(map: Map) {
         
     }

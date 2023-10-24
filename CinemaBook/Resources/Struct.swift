@@ -69,6 +69,8 @@ public struct APIEndPoint {
         static let urlCreateMovieNew = "/Movie/CreateMovieNew"
         static let urlUpdateMovie = "/Movie/UpdateMovies"
         static let urlUpdateStatusMovie = "/Movie/UpdateSatusMovie"
+        static let urlGetListCategoryChairinRoom = "/Chair/GetListCategoryInRoom"
+        static let urlPostCreateCategoryChair = "/CategoryChair/createCategoryChair"
     }
     
 }

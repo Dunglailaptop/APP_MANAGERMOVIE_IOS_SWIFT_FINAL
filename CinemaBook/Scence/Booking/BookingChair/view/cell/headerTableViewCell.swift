@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RxCocoa
+import RxRelay
+import RxSwift
+import ObjectMapper
 
 class headerTableViewCell: UITableViewCell {
 
@@ -14,6 +18,8 @@ class headerTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        registerCollectionview()
+      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,8 +29,8 @@ class headerTableViewCell: UITableViewCell {
     }
     var viewModel: BookingChairViewModel? = nil {
         didSet {
-            registerCollectionview()
-            bindingCollectionviewcell()
+          getListCategoryChairInRoom()
+         
         }
     }
     
@@ -32,13 +38,28 @@ class headerTableViewCell: UITableViewCell {
 }
 
 extension headerTableViewCell {
+    func getListCategoryChairInRoom() {
+        viewModel?.getListCategoryChairRoom().subscribe(onNext: { [self]
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<CategoryChair>().mapArray(JSONObject: response.data) {
+                    self.viewModel?.ChairCategory.accept(data)
+                    viewCollection.reloadData()
+                }
+            }
+        })
+    }
+    
+    
      func registerCollectionview() {
             let collectionviewcell = UINib(nibName: "ItemChairCategoryCollectionViewCell", bundle: .main)
             viewCollection.register(collectionviewcell, forCellWithReuseIdentifier: "ItemChairCategoryCollectionViewCell")
-           setupCollectionView(itemSize: 100)
+           setupCollectionView(itemSize: 150)
         }
         
         func setupCollectionView(itemSize: CGFloat) {
+            viewCollection.delegate = self
+            viewCollection.dataSource = self
              let layout = UICollectionViewFlowLayout()
 
              layout.minimumInteritemSpacing = 5
@@ -51,25 +72,25 @@ extension headerTableViewCell {
              viewCollection.collectionViewLayout = layout
              viewCollection.backgroundColor = ColorUtils.backgroudcolor()
 
-             // Tính toán kích thước thực tế của UICollectionView dựa trên số hàng và số cột
-             let collectionViewWidth = CGFloat(1) * itemSize + CGFloat(1 - 1) * 5
-             let collectionViewHeight = itemSize  // Mỗi hàng chỉ chứa một cell, nên chiều cao là chiều cao của cell
-
-             viewCollection.frame.size = CGSize(width: collectionViewWidth, height: collectionViewHeight)
+      
 
              // Đảm bảo scrollView có thể cuộn ngang
              viewCollection.isScrollEnabled = true
          }
 
 
-        func bindingCollectionviewcell() {
-            viewModel!.ChairCategory.bind(to: viewCollection.rx.items(cellIdentifier: "ItemChairCategoryCollectionViewCell", cellType: ItemChairCategoryCollectionViewCell.self)) { (index, data, cell) in
-                
-              
-               
-            
-            
-            
-            }.disposed(by: BookingChairViewController.rxbag)
-        }
+       
+}
+extension headerTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (viewModel?.ChairCategory.value.count)!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = viewCollection.dequeueReusableCell(withReuseIdentifier: "ItemChairCategoryCollectionViewCell", for: indexPath) as! ItemChairCategoryCollectionViewCell
+        cell.view_colorchair.backgroundColor = .systemGray
+        cell.lbl_name_chair.text = viewModel?.ChairCategory.value[indexPath.row].namecategorychair
+        return cell
+    }
 }

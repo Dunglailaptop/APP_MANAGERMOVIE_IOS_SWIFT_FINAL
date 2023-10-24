@@ -16,27 +16,39 @@ extension ListMovieShowNowViewController: SambagDatePickerViewControllerDelegate
           dLog(result.description)
         var data = viewModel.allvalue.value
         if(type_choose_date == 0) {
-            data.dateFrom = result.description
+            data.dateFrom = Utils().convertFormartDateyearMMddToString(date: result.description)!
             lbl_date_From.text = result.description
            
         } else {
-            data.dateTo = result.description
+          
+            data.dateTo = Utils().convertFormartDateyearMMddToString(date: result.description)!
             lbl_date_to.text = result.description
         }
         viewModel.allvalue.accept(data)
-        let from_date = viewModel.allvalue.value.dateFrom.components(separatedBy: "/")
-        let to_date = viewModel.allvalue.value.dateTo.components(separatedBy: "/")
+        dLog(viewModel.allvalue.value)
+        let from_date = viewModel.allvalue.value.dateFrom.components(separatedBy: "-")
+        let to_date = viewModel.allvalue.value.dateTo.components(separatedBy: "-")
     
         let from_date_in = String(format: "%@%@%@", from_date[2], from_date[1], from_date[0])
         let to_date_in = String(format: "%@%@%@", to_date[2], to_date[1], to_date[0])
         
         // MARK: Xét điều kiện ngày bắt đầu ko được lớn hơn ngày kết thúc
+        dLog(from_date_in)
+        dLog(to_date_in)
         if(from_date_in > to_date_in){
             JonAlert.show(message: "Ngày bắt đầu không được lớn hơn ngày kết thúc!", andIcon: UIImage(named: "icon-cancel"), duration: 2.0)
             if(type_choose_date == 0){
-              
+                lbl_date_to.text = Utils.getCurrentDateString()
+                lbl_date_From.text = Utils.getCurrentDateString()
+                var datadate = viewModel.allvalue.value
+                datadate.dateFrom = Utils.getCurrentDateStringformatMysqlyymmdd()
+                datadate.dateTo = Utils.getCurrentDateStringformatMysqlyymmdd()
             }else{
-               
+                lbl_date_to.text = Utils.getCurrentDateString()
+                lbl_date_From.text = Utils.getCurrentDateString()
+                var datadate = viewModel.allvalue.value
+                datadate.dateFrom = Utils.getCurrentDateStringformatMysqlyymmdd()
+                datadate.dateTo = Utils.getCurrentDateStringformatMysqlyymmdd()
              
             }
         }

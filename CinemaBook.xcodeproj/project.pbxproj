@@ -26,6 +26,12 @@
 		B0A40E3F2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */; };
 		B0A40E402AE2DC85008D07FC /* ManagementDetailMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A40E3E2AE2DC85008D07FC /* ManagementDetailMovieViewController.xib */; };
 		B0A410852ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A410842ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift */; };
+		B0A470E22AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A470E02AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.swift */; };
+		B0A470E32AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A470E12AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.xib */; };
+		B0A470E82AE79A380081C8AA /* DialogShowListChairEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A470E62AE79A380081C8AA /* DialogShowListChairEditViewController.swift */; };
+		B0A470E92AE79A380081C8AA /* DialogShowListChairEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A470E72AE79A380081C8AA /* DialogShowListChairEditViewController.xib */; };
+		B0A470EE2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A470EC2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.swift */; };
+		B0A470EF2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A470ED2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib */; };
 		B0A52B1C2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A52B1A2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.swift */; };
 		B0A52B1D2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A52B1B2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.xib */; };
 		B0A52B222AE0DEAC00CACC45 /* QuantityInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A52B202AE0DEAB00CACC45 /* QuantityInputViewController.xib */; };
@@ -128,6 +134,12 @@
 		B0CFEEDF2AE57B4300F6547F /* ItemCategoryMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CFEEDD2AE57B4300F6547F /* ItemCategoryMovieTableViewCell.swift */; };
 		B0CFEEE02AE57B4300F6547F /* ItemCategoryMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CFEEDE2AE57B4300F6547F /* ItemCategoryMovieTableViewCell.xib */; };
 		B0EBEEA72AD4372100521CF1 /* StorageBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBEEA62AD4372100521CF1 /* StorageBaseManager.swift */; };
+		B0F9D3042AE6BDB600CE70FC /* ItemRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9D3022AE6BDB600CE70FC /* ItemRoomTableViewCell.swift */; };
+		B0F9D3052AE6BDB600CE70FC /* ItemRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F9D3032AE6BDB600CE70FC /* ItemRoomTableViewCell.xib */; };
+		B0F9D3092AE6C48800CE70FC /* ManagementDetailRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9D3072AE6C48800CE70FC /* ManagementDetailRoomViewController.swift */; };
+		B0F9D30A2AE6C48800CE70FC /* ManagementDetailRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F9D3082AE6C48800CE70FC /* ManagementDetailRoomViewController.xib */; };
+		B0F9D30F2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9D30E2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift */; };
+		B0F9D3112AE6D48300CE70FC /* ManagementDetailRoomRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9D3102AE6D48300CE70FC /* ManagementDetailRoomRouter.swift */; };
 		FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */; };
 		FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */; };
 		FE0F290C2A5AF4DC008C62CD /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0F290A2A5AF4DC008C62CD /* MenuViewController.xib */; };
@@ -244,11 +256,7 @@
 		FE53AE492AAC2AA10082B8FC /* Trailler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53AE482AAC2AA10082B8FC /* Trailler.swift */; };
 		FE53B8162A7FF28F00976628 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53B8152A7FF28F00976628 /* AccountViewModel.swift */; };
 		FE53B8182A7FF2B700976628 /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53B8172A7FF2B700976628 /* AccountRouter.swift */; };
-		FE5461202AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE54611E2AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift */; };
-		FE5461212AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE54611F2AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib */; };
 		FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5461222AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift */; };
-		FE5461262AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5461242AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift */; };
-		FE5461272AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5461252AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib */; };
 		FE54612C2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE54612A2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift */; };
 		FE54612D2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE54612B2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib */; };
 		FE5461312AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE54612F2AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift */; };
@@ -484,6 +492,12 @@
 		B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailMovieViewController.swift; sourceTree = "<group>"; };
 		B0A40E3E2AE2DC85008D07FC /* ManagementDetailMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementDetailMovieViewController.xib; sourceTree = "<group>"; };
 		B0A410842ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementInterestMoviesViewController + Extension.swift"; sourceTree = "<group>"; };
+		B0A470E02AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailRoomItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		B0A470E12AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementDetailRoomItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		B0A470E62AE79A380081C8AA /* DialogShowListChairEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogShowListChairEditViewController.swift; sourceTree = "<group>"; };
+		B0A470E72AE79A380081C8AA /* DialogShowListChairEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogShowListChairEditViewController.xib; sourceTree = "<group>"; };
+		B0A470EC2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogManagementCategoryChairViewController.swift; sourceTree = "<group>"; };
+		B0A470ED2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogManagementCategoryChairViewController.xib; sourceTree = "<group>"; };
 		B0A52B1A2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDialogPopUpDetailInterestCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0A52B1B2AE0CAE000CACC45 /* ItemDialogPopUpDetailInterestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDialogPopUpDetailInterestCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0A52B202AE0DEAB00CACC45 /* QuantityInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuantityInputViewController.xib; sourceTree = "<group>"; };
@@ -586,6 +600,12 @@
 		B0CFEEDD2AE57B4300F6547F /* ItemCategoryMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryMovieTableViewCell.swift; sourceTree = "<group>"; };
 		B0CFEEDE2AE57B4300F6547F /* ItemCategoryMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCategoryMovieTableViewCell.xib; sourceTree = "<group>"; };
 		B0EBEEA62AD4372100521CF1 /* StorageBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageBaseManager.swift; sourceTree = "<group>"; };
+		B0F9D3022AE6BDB600CE70FC /* ItemRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRoomTableViewCell.swift; sourceTree = "<group>"; };
+		B0F9D3032AE6BDB600CE70FC /* ItemRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemRoomTableViewCell.xib; sourceTree = "<group>"; };
+		B0F9D3072AE6C48800CE70FC /* ManagementDetailRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailRoomViewController.swift; sourceTree = "<group>"; };
+		B0F9D3082AE6C48800CE70FC /* ManagementDetailRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementDetailRoomViewController.xib; sourceTree = "<group>"; };
+		B0F9D30E2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailRoomViewModel.swift; sourceTree = "<group>"; };
+		B0F9D3102AE6D48300CE70FC /* ManagementDetailRoomRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailRoomRouter.swift; sourceTree = "<group>"; };
 		F1358A0C5EED4EAF251BF12C /* Pods_CinemaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinemaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Extensions.swift"; sourceTree = "<group>"; };
 		FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -702,11 +722,7 @@
 		FE53AE482AAC2AA10082B8FC /* Trailler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailler.swift; sourceTree = "<group>"; };
 		FE53B8152A7FF28F00976628 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		FE53B8172A7FF2B700976628 /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
-		FE54611E2AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemRoomsCollectionViewCell.swift; sourceTree = "<group>"; };
-		FE54611F2AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemRoomsCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE5461222AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementRoomViewController+Extensions.swift"; sourceTree = "<group>"; };
-		FE5461242AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryChairCollectionViewCell.swift; sourceTree = "<group>"; };
-		FE5461252AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCategoryChairCollectionViewCell.xib; sourceTree = "<group>"; };
 		FE54612A2AC0751C0015DB93 /* ManagementCategoryChairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementCategoryChairViewController.swift; sourceTree = "<group>"; };
 		FE54612B2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementCategoryChairViewController.xib; sourceTree = "<group>"; };
 		FE54612F2AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCategoryChairTableViewCell.swift; sourceTree = "<group>"; };
@@ -1146,6 +1162,49 @@
 				B0A410842ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B0A470DF2AE7746C0081C8AA /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470E02AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.swift */,
+				B0A470E12AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		B0A470E42AE79A0E0081C8AA /* DialogShowListChairEdit */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470E52AE79A200081C8AA /* view */,
+			);
+			path = DialogShowListChairEdit;
+			sourceTree = "<group>";
+		};
+		B0A470E52AE79A200081C8AA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470E62AE79A380081C8AA /* DialogShowListChairEditViewController.swift */,
+				B0A470E72AE79A380081C8AA /* DialogShowListChairEditViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0A470EA2AE7B0320081C8AA /* DialogCreateManagemetCategoryChair */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470EB2AE7B0530081C8AA /* view */,
+			);
+			path = DialogCreateManagemetCategoryChair;
+			sourceTree = "<group>";
+		};
+		B0A470EB2AE7B0530081C8AA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470EC2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.swift */,
+				B0A470ED2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		B0A52B1E2AE0DE8400CACC45 /* DialogInputQuantity */ = {
@@ -1830,6 +1889,43 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		B0F9D3062AE6C46A00CE70FC /* ManagementDetailRoom */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470E42AE79A0E0081C8AA /* DialogShowListChairEdit */,
+				B0F9D30D2AE6D45B00CE70FC /* Router */,
+				B0F9D30C2AE6D45300CE70FC /* viewModel */,
+				B0F9D30B2AE6C48C00CE70FC /* view */,
+			);
+			path = ManagementDetailRoom;
+			sourceTree = "<group>";
+		};
+		B0F9D30B2AE6C48C00CE70FC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A470DF2AE7746C0081C8AA /* cell */,
+				B0F9D3072AE6C48800CE70FC /* ManagementDetailRoomViewController.swift */,
+				B0F9D3082AE6C48800CE70FC /* ManagementDetailRoomViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0F9D30C2AE6D45300CE70FC /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9D30E2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0F9D30D2AE6D45B00CE70FC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0F9D3102AE6D48300CE70FC /* ManagementDetailRoomRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FE0F29042A5AF492008C62CD /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -2114,6 +2210,7 @@
 		FE50109F2AC028BE00B18D21 /* ManagementRoom */ = {
 			isa = PBXGroup;
 			children = (
+				B0F9D3062AE6C46A00CE70FC /* ManagementDetailRoom */,
 				FEAB99192AC1D6CE00F024D5 /* ManagementRoomCreate */,
 				FE5461282AC074B80015DB93 /* ManagementCategoryChair */,
 				FE5010A32AC028E100B18D21 /* Extensions */,
@@ -2588,10 +2685,8 @@
 		FE54611D2AC0685C0015DB93 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				FE54611E2AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift */,
-				FE54611F2AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib */,
-				FE5461242AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift */,
-				FE5461252AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib */,
+				B0F9D3022AE6BDB600CE70FC /* ItemRoomTableViewCell.swift */,
+				B0F9D3032AE6BDB600CE70FC /* ItemRoomTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -2599,6 +2694,7 @@
 		FE5461282AC074B80015DB93 /* ManagementCategoryChair */ = {
 			isa = PBXGroup;
 			children = (
+				B0A470EA2AE7B0320081C8AA /* DialogCreateManagemetCategoryChair */,
 				FE5461292AC074EA0015DB93 /* view */,
 			);
 			path = ManagementCategoryChair;
@@ -3959,6 +4055,7 @@
 				B0224BCF2ACF1A1E002D57CB /* DialogInputQuantityViewController.xib in Resources */,
 				FE50991E2AB80CFC00ED0CBA /* DialogPopupListRoomViewController.xib in Resources */,
 				FE2172AC2A76A8C4000C0C17 /* TicketViewController.xib in Resources */,
+				B0F9D3052AE6BDB600CE70FC /* ItemRoomTableViewCell.xib in Resources */,
 				B0AC2D0A2ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib in Resources */,
 				B0BEC1CC2ADADE0C00709883 /* PaymentFoodComboViewController.xib in Resources */,
 				FE59CF412AA3994300A6ADAA /* AccountInfoViewController.xib in Resources */,
@@ -4002,6 +4099,7 @@
 				FE5461322AC076B00015DB93 /* ItemCategoryChairTableViewCell.xib in Resources */,
 				FE491ED82AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.xib in Resources */,
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
+				B0F9D30A2AE6C48800CE70FC /* ManagementDetailRoomViewController.xib in Resources */,
 				FE51B8932A9A5DA400A1495D /* headerTableViewCell.xib in Resources */,
 				FE4BAAB32ACAD2040010C0B9 /* ItemComboFoodAddTableViewCell.xib in Resources */,
 				FEFBFB752A9F93A800A85879 /* itemMovieTableViewCell.xib in Resources */,
@@ -4016,24 +4114,25 @@
 				FE6A86042AC5E03F00810FFB /* CreateProductViewController.xib in Resources */,
 				B0A9A2232AD8428900D68692 /* ItemFoodUnWaterSectionTableViewCell.xib in Resources */,
 				FE5D081F2AA22019004FA3D9 /* MovieViewController.xib in Resources */,
-				FE5461272AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.xib in Resources */,
+				B0A470E92AE79A380081C8AA /* DialogShowListChairEditViewController.xib in Resources */,
 				FE6BD17E2AC8595900177093 /* MangamentFoodItemViewController.xib in Resources */,
 				B0BD0A532AD2FF870099FB2C /* GoogleService-Info.plist in Resources */,
 				FE54612D2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib in Resources */,
 				FE52546B2AC325EE003229A0 /* ManagementBillFoodComboViewController.xib in Resources */,
+				B0A470EF2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib in Resources */,
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
 				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
 				B09CD1222AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				B0A9A21B2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.xib in Resources */,
 				FE6533842AAA16AA00C0739B /* BannerMovieTableViewCell.xib in Resources */,
+				B0A470E32AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.xib in Resources */,
 				FE4BAAA42ACABF350010C0B9 /* PaymentBillViewController.xib in Resources */,
 				B0A9D79A2ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.xib in Resources */,
 				FE5254632AC31857003229A0 /* ManagementBillViewController.xib in Resources */,
 				B0A9D7AF2ADD8699008AD03D /* ManagementBillProductItemTableViewCell.xib in Resources */,
 				B0A88C0D2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib in Resources */,
 				B0A9A4652AD6619C005C16C1 /* ReportMovieTableViewCell.xib in Resources */,
-				FE5461212AC0687D0015DB93 /* itemRoomsCollectionViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
 				B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */,
 				FE6A85FC2AC5D9F700810FFB /* ItemCollectionProductCategoryCollectionViewCell.xib in Resources */,
@@ -4186,12 +4285,14 @@
 				FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */,
 				B0A9EF962AD970FC00B9EF1D /* CartViewController.swift in Sources */,
 				FE6533832AAA16AA00C0739B /* BannerMovieTableViewCell.swift in Sources */,
+				B0F9D3112AE6D48300CE70FC /* ManagementDetailRoomRouter.swift in Sources */,
+				B0A470E22AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.swift in Sources */,
+				B0F9D30F2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift in Sources */,
 				FE52523B2AAF79CC00296246 /* ManagementEmployeeViewController.swift in Sources */,
 				B0A9A21A2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift in Sources */,
 				FE6A85F72AC5D95000810FFB /* MangamentProductRouter.swift in Sources */,
 				FE2172B12A76B55C000C0C17 /* CustomItemView.swift in Sources */,
 				FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */,
-				FE5461262AC06F2B0015DB93 /* ItemCategoryChairCollectionViewCell.swift in Sources */,
 				FE33F3902A6CC76B00A396A1 /* Observable+Extension.swift in Sources */,
 				FE5010A92AC02C1D00B18D21 /* ManagementRoomRouter.swift in Sources */,
 				FE33F3832A6CC73600A396A1 /* ManageCacheObject.swift in Sources */,
@@ -4232,13 +4333,13 @@
 				FE5C9E372AA4231C00FA235D /* AccountInfoViewController+Extension.swift in Sources */,
 				FE5C9E632AA427BB00FA235D /* AlphaTransitioning.swift in Sources */,
 				B03857342ADC30FE00814F02 /* ManageBillAccountViewController.swift in Sources */,
-				FE5461202AC0687D0015DB93 /* itemRoomsCollectionViewCell.swift in Sources */,
 				FE6BD1802AC8597A00177093 /* MangamentFoodItemRouter.swift in Sources */,
 				FE7BA97F2A5AFCEE00344EFB /* MenuViewController+Extensions.swift in Sources */,
 				B0AC08812AE37AF700AAA5A9 /* ManagementDetailMovieViewModel.swift in Sources */,
 				FE33F3982A6CC77500A396A1 /* JHProgressHUD.swift in Sources */,
 				FE5D082A2AA23676004FA3D9 /* videoShortViewController.swift in Sources */,
 				B0A9D7AE2ADD8699008AD03D /* ManagementBillProductItemTableViewCell.swift in Sources */,
+				B0A470EE2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.swift in Sources */,
 				FE5893752A8A6DD600058864 /* DetailMovieViewController.swift in Sources */,
 				FE5096592A76538A00F5A457 /* SplachScreenRouter.swift in Sources */,
 				FE6EE71B2A99D5EF00883F73 /* HeaderChairCollectionReusableView.swift in Sources */,
@@ -4293,6 +4394,7 @@
 				FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */,
 				B038572D2ADC1B1B00814F02 /* PaymentFoodComboViewController + Extensions.swift in Sources */,
 				B0A9D7A82ADD84CD008AD03D /* ManagementBillticketRouter.swift in Sources */,
+				B0F9D3092AE6C48800CE70FC /* ManagementDetailRoomViewController.swift in Sources */,
 				FE4BAAA62ACACC6A0010C0B9 /* PaymentBillRouter.swift in Sources */,
 				FE5461312AC076B00015DB93 /* ItemCategoryChairTableViewCell.swift in Sources */,
 				FE4EB36B2AC7184700BB2D79 /* ConfigValue.swift in Sources */,
@@ -4344,6 +4446,7 @@
 				FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */,
 				FEAB99272AC1EAD700F024D5 /* ManagementRoomCreateViewController+Extensions.swift in Sources */,
 				FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */,
+				B0F9D3042AE6BDB600CE70FC /* ItemRoomTableViewCell.swift in Sources */,
 				FE59CF402AA3994300A6ADAA /* AccountInfoViewController.swift in Sources */,
 				FE4E71072AC52F1B0020BC2C /* OrderProductRouter.swift in Sources */,
 				B0AF7A392AD3E2DC008AE1F2 /* ChatMessageViewController.swift in Sources */,
@@ -4373,6 +4476,7 @@
 				FE5C40F82AB0A6AC00BC7BF9 /* ItemEmployeeTableViewCell.swift in Sources */,
 				B0A9EFA42AD982B200B9EF1D /* CartViewModel.swift in Sources */,
 				FE22C3202ABA08F300DB72B4 /* AutoInterest.swift in Sources */,
+				B0A470E82AE79A380081C8AA /* DialogShowListChairEditViewController.swift in Sources */,
 				FE519E752A88CB9A007E131E /* BookingTicketViewController.swift in Sources */,
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
 				B0AF7A462AD3E7EA008AE1F2 /* ChatMessageRouter.swift in Sources */,

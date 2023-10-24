@@ -34,5 +34,11 @@ class ManagementRoomRouter {
         sourceView?.navigationController?.pushViewController(CreateRoomViewController, animated: true)
     }
     
+    func navigationToManagementDetailRoom(room:Room) {
+        let viewDetail = ManagementDetailRoomRouter().viewController as! ManagementDetailRoomViewController
+        viewDetail.infoRoom = room
+        sourceView?.navigationController?.pushViewController(viewDetail, animated: true)
+    }
+    
   
 }
