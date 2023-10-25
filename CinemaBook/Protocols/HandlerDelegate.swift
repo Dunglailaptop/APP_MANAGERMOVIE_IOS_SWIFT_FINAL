@@ -60,5 +60,11 @@ protocol DialogChooseCategoryMovie {
 }
 
 protocol DialogCreateCategoryChair {
-    func callbackcreateCategoryChair(categorychairinfo: CategoryChair)
+    func callbackcreateCategoryChair(categorychairinfo: CategoryChair,type:String)
+}
+protocol DialogCreateRoomInfo {
+    func callbackCreateRoominfo()
+}
+protocol DialogUpdateListCategoryChair {
+    func callbackUpdatelistcategorychair()
 }

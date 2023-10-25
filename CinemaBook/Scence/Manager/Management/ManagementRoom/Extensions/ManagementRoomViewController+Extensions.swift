@@ -17,6 +17,7 @@ extension ManagementRoomViewController {
                if response.code == RRHTTPStatusCode.ok.rawValue {
                    if let data = Mapper<Room>().mapArray(JSONObject: response.data) {
                        self.viewModel.dataArrayRoom.accept(data)
+                       self.viewModel.dataArrayRoomsearch.accept(data)
                     self.getListCategoryChair()
                    }
                }
@@ -52,7 +53,42 @@ extension ManagementRoomViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let order_detail = viewModel.dataArrayRoom.value[indexPath.row]
+            
+            // Create a custom view with an image and label
+            let customView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+            
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 10, width: 35, height: 35))
+            imageView.image = UIImage(named: "edit")
+            imageView.contentMode = .scaleAspectFit
+            imageView.center.x = customView.center.x
+            
+            let label = UILabel(frame: CGRect(x: 0, y: 45, width: 80, height: 30))
+            label.text = "Chỉnh sửa"
+            label.textAlignment = .center
+            label.textColor = UIColor(hex: "34C759")
+            
+            customView.addSubview(imageView)
+            customView.addSubview(label)
+            
+            // Create the swipe action using the custom view
+            let cancelFood = UIContextualAction(style: .normal, title: "") { [weak self] (action, view, completionHandler) in
+//                self!.presentDialogCreateCategoryChair(TYPE: "DETAIL",idcategorys: order_detail!.idcategorychair)
+                completionHandler(true)
+            }
+            cancelFood.backgroundColor = .UIColorFromRGB("DFEEE2")
+            cancelFood.image = UIGraphicsImageRenderer(size: customView.bounds.size).image { _ in
+                customView.drawHierarchy(in: customView.bounds, afterScreenUpdates: true)
+            }
+            
+            // Configure the swipe action configuration
+            let configuration = UISwipeActionsConfiguration(actions: [cancelFood])
+            configuration.performsFirstActionWithFullSwipe = false
+            
+            return configuration
+    }
     
     func register() {
         let celltable = UINib(nibName: "ItemRoomTableViewCell", bundle: .main)
@@ -79,4 +115,32 @@ extension ManagementRoomViewController: UITableViewDelegate{
 
  
    
+}
+extension ManagementRoomViewController: DialogCreateRoomInfo {
+    func callbackCreateRoominfo() {
+        getListRoom()
+        dismiss(animated: true)
+    }
+    func presentDialogCreateRoom() {
+            let ManagementRoomCreateViewControllers = ManagementRoomCreateViewController()
+        ManagementRoomCreateViewControllers.delegate = self
+        ManagementRoomCreateViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
+            let nav = UINavigationController(rootViewController: ManagementRoomCreateViewControllers)
+            // 1
+            nav.modalPresentationStyle = .overCurrentContext
+            // 2
+            if #available(iOS 15.0, *) {
+                if let sheet = nav.sheetPresentationController {
+                    
+                    // 3
+                    sheet.detents = [.large()]
+                    
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            // 4
+            present(nav, animated: true, completion: nil)
+
+        }
 }

@@ -16,9 +16,10 @@ extension ManagementRoomCreateViewController {
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 JonAlert.showSuccess(message: "Thêm thành công phòng chiếu")
-                self.viewModel.makePopToViewController()
+                self.delegate?.callbackCreateRoominfo()
             }else {
                   JonAlert.showSuccess(message: "Thêm không thành công xin vui lòng kiểm tra lại")
+             
             }
         })
     }

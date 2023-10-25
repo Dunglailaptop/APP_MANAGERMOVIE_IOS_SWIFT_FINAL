@@ -61,6 +61,9 @@ enum ManagerConnections {
     case UpdateStatusMovie(idmovie:Int,status:Int)
     case GetListCategoryChairInRoom(idroom:Int)
     case CreateCategoryChair(categoryinfo: CategoryChair)
+    case getDetailInfoCategoryChair(idcategory:Int)
+    case updateCategoryInChairRoom(listchair: updateCateWithChair)
+    case updateInfoCategoryChair(infocategory: CategoryChair)
 }
 
 extension ManagerConnections: TargetType {
@@ -171,6 +174,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListCategoryChairinRoom
         case .CreateCategoryChair(_):
             return APIEndPoint.Name.urlPostCreateCategoryChair
+        case .getDetailInfoCategoryChair(let idcategory):
+            return APIEndPoint.Name.urlGetDetailInfoCategoryChair
+        case .updateCategoryInChairRoom(_):
+            return APIEndPoint.Name.urlUpdateCategoryInChairRoom
+        case .updateInfoCategoryChair(_):
+            return APIEndPoint.Name.urlUpdateInfoDetailCategoryChair
         }
     
     }
@@ -273,6 +282,12 @@ extension ManagerConnections: TargetType {
         case .GetListCategoryChairInRoom(_):
             return .get
         case .CreateCategoryChair(_):
+            return .post
+        case .getDetailInfoCategoryChair(_):
+            return .get
+        case .updateCategoryInChairRoom(_):
+            return .post
+        case .updateInfoCategoryChair(_):
             return .post
         }
 
@@ -398,6 +413,12 @@ extension ManagerConnections: TargetType {
         case .GetListCategoryChairInRoom(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .CreateCategoryChair(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getDetailInfoCategoryChair(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .updateCategoryInChairRoom(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .updateInfoCategoryChair(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
@@ -654,8 +675,27 @@ extension ManagerConnections: TargetType {
             return [
                 "price": categoryinfo.price,
                 "namecategory": categoryinfo.namecategorychair,
-                "colorchair": categoryinfo.colorchair
+                "colorchair": categoryinfo.colorchair,
+                "idroom": categoryinfo.idroom
             ]
+        case .getDetailInfoCategoryChair(let idcategory):
+            return [
+                "idcategory":idcategory
+            ]
+        case .updateCategoryInChairRoom(let listchair):
+            return [
+                "idcategory": listchair.idcategory,
+                "listchair": listchair.listchair.toJSON()
+            ]
+        case .updateInfoCategoryChair(let infocategory):
+            return [
+                "idcategoryChair": infocategory.idcategoryChair,
+                "price": infocategory.price,
+                "namecategory": infocategory.namecategory,
+                "colorchair": infocategory.colorchair,
+                "idroom": infocategory.idroom,
+                "nameroom": infocategory.nameroom
+             ]
         }
        
     }
@@ -765,6 +805,12 @@ extension ManagerConnections: TargetType {
         case .GetListCategoryChairInRoom(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .CreateCategoryChair(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getDetailInfoCategoryChair(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .updateCategoryInChairRoom(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .updateInfoCategoryChair(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }

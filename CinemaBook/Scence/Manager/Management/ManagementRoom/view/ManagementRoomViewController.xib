@@ -19,6 +19,7 @@
                 <outlet property="lbl_room_status_notworking" destination="6u1-Q1-9yF" id="5KJ-Rk-dEA"/>
                 <outlet property="lbl_room_status_working" destination="f3s-Xk-ffW" id="UoQ-Si-Kn6"/>
                 <outlet property="tableView" destination="4Cg-Ba-IiS" id="Pnl-iy-hkN"/>
+                <outlet property="txt_search" destination="gu3-ms-pXf" id="461-Xs-Enq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="8B5-TO-fiH"/>
                 <outlet property="view_line_notworking" destination="VfM-gw-cq7" id="9Ps-3b-6rX"/>
                 <outlet property="view_line_working" destination="y7x-m6-X2X" id="bz5-UW-oqT"/>

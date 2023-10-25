@@ -16,9 +16,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogManagementCategoryChairViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_access" destination="WQe-jW-Yig" id="slj-FK-vjh"/>
                 <outlet property="btn_show_dropdown" destination="Se3-cx-qCs" id="ug5-dB-uPM"/>
                 <outlet property="lbl_number" destination="Tq2-YM-zbq" id="tOK-Ow-sya"/>
+                <outlet property="lbl_tittle" destination="JsW-te-38s" id="MAU-5n-x1O"/>
                 <outlet property="txt_drop_down_list" destination="ZV2-a9-pW8" id="kfs-5b-9EP"/>
+                <outlet property="txt_name_categoryChair" destination="mtX-5R-hSv" id="0IM-ct-NWS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view_color_chair" destination="com-RE-Ahe" id="jHq-ff-N0T"/>
             </connections>
@@ -382,6 +385,11 @@
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
+    <designables>
+        <designable name="ZV2-a9-pW8">
+            <size key="intrinsicContentSize" width="132.66666666666666" height="18.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="edit" width="512" height="512"/>
         <image name="icon-dropdown" width="24" height="24"/>

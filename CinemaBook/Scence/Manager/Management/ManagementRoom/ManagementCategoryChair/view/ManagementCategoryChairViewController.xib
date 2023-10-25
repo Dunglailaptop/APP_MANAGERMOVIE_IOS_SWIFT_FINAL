@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagementCategoryChairViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="tableView" destination="UHr-Mg-xt4" id="DzS-gR-9Ox"/>
+                <outlet property="txt_search" destination="JW6-nC-fes" id="bvZ-jU-Pud"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -170,7 +171,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
                 <constraint firstItem="ORc-fF-tUJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AT5-fv-9UM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ORc-fF-tUJ" secondAttribute="bottom" id="I9k-9x-aaV"/>

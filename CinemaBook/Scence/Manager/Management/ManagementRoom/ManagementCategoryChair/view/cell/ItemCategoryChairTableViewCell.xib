@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,14 +20,14 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Neq-aW-V1k">
                         <rect key="frame" x="20" y="7" width="30" height="30"/>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="ofu-zT-ulX"/>
                             <constraint firstAttribute="height" constant="30" id="y4I-q3-H0g"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên loại " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6x-dm-w1H">
-                        <rect key="frame" x="58" y="7" width="63.5" height="21"/>
+                        <rect key="frame" x="58" y="7" width="63" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,14 +38,34 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czJ-6u-TgC">
+                        <rect key="frame" x="315" y="0.0" width="5" height="44"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="r9v-XN-16F"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erI-eV-Viv">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bcO-Is-wOH"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="erI-eV-Viv" secondAttribute="trailing" id="0IP-pH-IgU"/>
                     <constraint firstItem="HHb-F2-Xge" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0hn-Ly-Skj"/>
                     <constraint firstAttribute="trailing" secondItem="HHb-F2-Xge" secondAttribute="trailing" constant="20" id="G20-L5-RJI"/>
+                    <constraint firstAttribute="bottom" secondItem="czJ-6u-TgC" secondAttribute="bottom" id="Mlb-cu-VYu"/>
                     <constraint firstItem="w6x-dm-w1H" firstAttribute="top" secondItem="Neq-aW-V1k" secondAttribute="top" id="O0H-MG-lHB"/>
                     <constraint firstItem="Neq-aW-V1k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="O5B-mH-zha"/>
                     <constraint firstItem="Neq-aW-V1k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ULY-BX-fKQ"/>
+                    <constraint firstAttribute="trailing" secondItem="czJ-6u-TgC" secondAttribute="trailing" id="XVG-9l-LKq"/>
                     <constraint firstItem="w6x-dm-w1H" firstAttribute="leading" secondItem="Neq-aW-V1k" secondAttribute="trailing" constant="8" id="en5-EZ-BZ7"/>
+                    <constraint firstItem="erI-eV-Viv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qfz-Sc-DAj"/>
+                    <constraint firstAttribute="bottom" secondItem="erI-eV-Viv" secondAttribute="bottom" id="sGT-yh-Rg1"/>
+                    <constraint firstItem="czJ-6u-TgC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="utD-7Y-d3R"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -53,7 +74,18 @@
                 <outlet property="lbl_price_chair" destination="HHb-F2-Xge" id="eA8-Gr-N6H"/>
                 <outlet property="view_color_chair" destination="Neq-aW-V1k" id="TzH-Nd-G79"/>
             </connections>
-            <point key="canvasLocation" x="132" y="110"/>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

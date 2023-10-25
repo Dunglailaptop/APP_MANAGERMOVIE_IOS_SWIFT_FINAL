@@ -19,7 +19,7 @@ extension BookingChairViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<chair>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
-                    dLog(data)
+                    dLog(response.data)
                     var dataget = self.viewModel.dataArray.value
                     dataget.enumerated().forEach{(index,value) in
                         if value.bill != 0 {
@@ -36,6 +36,7 @@ extension BookingChairViewController {
     func getListchairRoom() {
         viewModel.getListchairRoom().subscribe(onNext: {
             (response) in
+            dLog(response.data)
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<chair>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)

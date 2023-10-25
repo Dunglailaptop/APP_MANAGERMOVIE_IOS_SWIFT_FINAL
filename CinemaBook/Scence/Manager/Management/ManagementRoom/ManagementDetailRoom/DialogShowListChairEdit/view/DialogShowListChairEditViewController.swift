@@ -12,6 +12,7 @@ import RxCocoa
 import RxRelay
 import RxSwift
 import ObjectMapper
+import JonAlert
 
 class DialogShowListChairEditViewController: UIViewController {
 
@@ -19,21 +20,20 @@ class DialogShowListChairEditViewController: UIViewController {
     @IBOutlet weak var btn_drop_show_down: UIButton!
     @IBOutlet weak var txt_drop_down: DropDown!
     var listchair = [chair]()
+    var check = false
+    var delegate: DialogUpdateListCategoryChair?
     override func viewDidLoad() {
         super.viewDidLoad()
         resgiter()
         bindingtable()
-        getListCategory()
-        btn_drop_show_down.rx.tap.asDriver().drive(onNext: { [self] in
-            self.txt_drop_down.showList()
-        })
+       setup()
       
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
+        
     }
     
 
@@ -42,7 +42,13 @@ class DialogShowListChairEditViewController: UIViewController {
     }
     
     @IBAction func btn_access(_ sender: Any) {
-        
+        dLog(viewModel?.dataArrayListChairs.value)
+        if check {
+            updatechairWithCategory()
+          
+        }else {
+            JonAlert.showError(message: "Vui lòng chọn loại ghế")
+        }
     }
     
     var viewModel: ManagementDetailRoomViewModel? = nil {
@@ -51,8 +57,42 @@ class DialogShowListChairEditViewController: UIViewController {
         }
     }
     
+    func setup() {
+        getListCategory()
+        btn_drop_show_down.rx.tap.asDriver().drive(onNext: { [self] in
+            self.txt_drop_down.showList()
+        })
+        txt_drop_down.didSelect{ [self](selectedText , index ,id) in
+            
+            txt_drop_down.text = selectedText
+            var data = viewModel?.dataArrayListChairs.value
+            data?.idcategory = id
+            data?.listchair = listchair
+            viewModel?.dataArrayListChairs.accept(data!)
+            check = true
+        }
+        
+       
+        
+    }
+    
+   
+    
 }
+// CALL API
 extension DialogShowListChairEditViewController {
+    func updatechairWithCategory() {
+        viewModel?.updateCategoryInChairRoom().subscribe(onNext: {
+            (response) in
+            dLog(response)
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+               
+                self.delegate?.callbackUpdatelistcategorychair()
+                 
+               
+            }
+        })
+    }
     func getListCategory(){
         viewModel?.getListCategoryChair().subscribe(onNext: {
             (response) in
@@ -67,6 +107,10 @@ extension DialogShowListChairEditViewController {
             }
         })
     }
+}
+
+extension DialogShowListChairEditViewController {
+  
     
     func resgiter(){
         let viewcell = UINib(nibName: "ManagementDetailRoomItemCollectionViewCell", bundle: .main)

@@ -1754,8 +1754,8 @@
             filePath = "CinemaBook/Scence/Booking/BookingChair/view/cell/headerTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "getListCategoryChairInRoom()"
             landmarkType = "7">
             <Locations>
@@ -1802,10 +1802,122 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementCategoryChair/view/ManagementCategoryChairViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "viewModel"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5ACA9DA-BB18-4309-924E-FC9F795C7284"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementDetailRoom/DialogShowListChairEdit/view/DialogShowListChairEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "updatechairWithCategory()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5ACA9DA-BB18-4309-924E-FC9F795C7284 - baa19c1de2717863"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.DialogShowListChairEditViewController.updatechairWithCategory() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementDetailRoom/DialogShowListChairEdit/view/DialogShowListChairEditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "E5ACA9DA-BB18-4309-924E-FC9F795C7284 - baa19c1de2717802"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.DialogShowListChairEditViewController.updatechairWithCategory() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementDetailRoom/DialogShowListChairEdit/view/DialogShowListChairEditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D2D5FEE-ACEC-492B-A944-D37C0AA19E62"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementDetailRoom/DialogShowListChairEdit/view/DialogShowListChairEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "btn_access(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA5E1F9E-36D6-434F-BEEA-CE0DFD9076E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementDetailRoom/DialogShowListChairEdit/view/DialogShowListChairEditViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "updatechairWithCategory()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AA5E1F9E-36D6-434F-BEEA-CE0DFD9076E3 - a2d3360224c78d07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.DialogShowListChairEditViewController.updatechairWithCategory() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementDetailRoom/DialogShowListChairEdit/view/DialogShowListChairEditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "AA5E1F9E-36D6-434F-BEEA-CE0DFD9076E3 - baa19c1de2717b1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.DialogShowListChairEditViewController.updatechairWithCategory() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementRoom/ManagementDetailRoom/DialogShowListChairEdit/view/DialogShowListChairEditViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

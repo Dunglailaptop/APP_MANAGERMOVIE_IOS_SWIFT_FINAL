@@ -80,7 +80,7 @@ class BookingChairViewController: BaseViewController {
             self.view_info_room.isHidden = true
             self.view_payment.isHidden = true
             self.view_height_info.constant = 0
-            getListchairRoom()
+//            getListchairRoom()
         }else  {
                 self.view_info_room.isHidden = false
                 self.view_payment.isHidden = false

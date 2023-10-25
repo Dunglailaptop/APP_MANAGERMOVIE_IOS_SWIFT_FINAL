@@ -19,8 +19,10 @@ class headerTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         registerCollectionview()
-      
+    
     }
+    
+  
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -30,11 +32,21 @@ class headerTableViewCell: UITableViewCell {
     var viewModel: BookingChairViewModel? = nil {
         didSet {
           getListCategoryChairInRoom()
-         
+            NotificationCenter.default.addObserver(self, selector: #selector(self.onDidReceiveNotification(_:)), name: NSNotification.Name("NotificationCallApi"), object: nil)
         }
     }
     
-    
+    @objc func onDidReceiveNotification(_ notification: Notification)
+      {
+       
+          
+        dLog(notification.userInfo?["userInfo"])
+        var Idroom = notification.userInfo?["userInfo"]
+          var data = viewModel!.pagition.value
+        data.idroom = Idroom as! Int
+          viewModel!.pagition.accept(data)
+       getListCategoryChairInRoom()
+      }
 }
 
 extension headerTableViewCell {
@@ -89,7 +101,7 @@ extension headerTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = viewCollection.dequeueReusableCell(withReuseIdentifier: "ItemChairCategoryCollectionViewCell", for: indexPath) as! ItemChairCategoryCollectionViewCell
-        cell.view_colorchair.backgroundColor = .systemGray
+        cell.view_colorchair.backgroundColor = UIColor(hex: (viewModel?.ChairCategory.value[indexPath.row].colorchair.removeCharacters(from: "#"))!) 
         cell.lbl_name_chair.text = viewModel?.ChairCategory.value[indexPath.row].namecategorychair
         return cell
     }

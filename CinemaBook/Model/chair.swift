@@ -17,7 +17,7 @@ struct chair:Mappable {
     var statusChair = 0
     var price = 0
     var isSelected = DEACTIVE
-    
+    var colorchair = ""
     init() {
         
     }
@@ -32,5 +32,6 @@ struct chair:Mappable {
          bill <- map["bill"]
         statusChair <- map["statusChair"]
         price <- map["price"]
+        colorchair <- map["colorchair"]
     }
 }

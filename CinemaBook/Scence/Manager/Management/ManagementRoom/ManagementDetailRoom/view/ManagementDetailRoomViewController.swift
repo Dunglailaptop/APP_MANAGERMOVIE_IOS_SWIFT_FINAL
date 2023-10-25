@@ -15,6 +15,7 @@ import JonAlert
 
 class ManagementDetailRoomViewController: UIViewController {
 
+    @IBOutlet weak var lbl_number_categoryChair: UILabel!
     @IBOutlet weak var collectionview: UICollectionView!
     @IBOutlet weak var lbl_number_room: UILabel!
     @IBOutlet weak var lbl_name_room: UILabel!
@@ -31,7 +32,13 @@ class ManagementDetailRoomViewController: UIViewController {
         registerViewController()
         setup()
         NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("listchairs"), object: nil)
+        nootifacationSetup()
         // Do any additional setup after loading the view.
+    }
+    func nootifacationSetup() {
+        let notificationName = Notification.Name("NotificationCallApi")
+        let loginResponse = ["userInfo": infoRoom.idroom]
+        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: loginResponse)
     }
     
     @objc func handleNotification(_ notification: Notification) {
@@ -72,6 +79,7 @@ class ManagementDetailRoomViewController: UIViewController {
         lbl_idrom.text = String(infoRoom.idroom)
         lbl_name_room.text = infoRoom.nameroom
         lbl_number_room.text = String(infoRoom.allchair)
+        lbl_number_categoryChair.text = String(viewModel.dataArrayCategoryChair.value.count)
     }
 
     func registerViewController() {
@@ -119,11 +127,19 @@ extension ManagementDetailRoomViewController {
         }
     }
 }
-extension ManagementDetailRoomViewController {
+extension ManagementDetailRoomViewController: DialogUpdateListCategoryChair {
+    func callbackUpdatelistcategorychair() {
+        JonAlert.showSuccess(message: "Cập nhật danh sách loại ghế thành công")
+        dismiss(animated: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("listchairs"), object: nil)
+        nootifacationSetup()
+    }
+    
     func presentDialogEditListChair() {
             let DialogShowListChairEditViewControllers = DialogShowListChairEditViewController()
         DialogShowListChairEditViewControllers.viewModel = self.viewModel
         DialogShowListChairEditViewControllers.listchair = viewModel.dataArrayChairChoose.value
+        DialogShowListChairEditViewControllers.delegate = self
         DialogShowListChairEditViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
             let nav = UINavigationController(rootViewController: DialogShowListChairEditViewControllers)
             // 1

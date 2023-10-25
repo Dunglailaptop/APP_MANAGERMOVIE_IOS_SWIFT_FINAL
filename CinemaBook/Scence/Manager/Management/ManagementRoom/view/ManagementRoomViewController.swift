@@ -17,6 +17,7 @@ class ManagementRoomViewController: BaseViewController {
     var delegate: CallBackCallApiLoadListChair?
     var title_name = ["Phòng Đang Hoạt Động","Phòng Tạm Ngưng"]
    
+    @IBOutlet weak var txt_search: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var view_line_notworking: UIView!
     @IBOutlet weak var view_line_working: UIView!
@@ -27,7 +28,30 @@ class ManagementRoomViewController: BaseViewController {
         viewModel.bind(view: self,router: router)
         register()
         bindingCollectionCell()
-
+        
+        txt_search.rx.controlEvent(.editingChanged)
+                   .withLatestFrom(txt_search.rx.text)
+                   .subscribe(onNext:{ [self]  query in
+                       guard self != nil else { return }
+                
+                       let dataFirsts = viewModel.dataArrayRoomsearch.value
+                       let cloneDataFilter = viewModel.dataArrayRoom.value
+                       if !query!.isEmpty{
+                           var filteredDataArray = cloneDataFilter.filter({
+                               (value) -> Bool in
+                               let str1 = query!.uppercased().applyingTransform(.stripDiacritics, reverse: false)!
+                               let str2 = value.nameroom.uppercased().applyingTransform(.stripDiacritics, reverse: false)!
+                               return str2.contains(str1)
+                           })
+                           viewModel.dataArrayRoom.accept(filteredDataArray)
+                       }else{
+                           viewModel.dataArrayRoom.accept(dataFirsts)
+                             
+                          
+                       }
+                       
+        }).disposed(by: rxbag)
+        
 //        registerViewController()
         
       
@@ -94,6 +118,6 @@ class ManagementRoomViewController: BaseViewController {
     }
     
     @IBAction func btn_makeToCreateRoomViewController(_ sender: Any) {
-        viewModel.makeCreateRoomViewController()
+      presentDialogCreateRoom()
     }
 }

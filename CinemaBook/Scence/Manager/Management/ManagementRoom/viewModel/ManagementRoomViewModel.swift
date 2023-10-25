@@ -15,10 +15,12 @@ class ManagementRoomViewModel: BaseViewModel {
     private var router: ManagementRoomRouter?
     public var dataArrayChair: BehaviorRelay<[chair]> = BehaviorRelay(value: [])
     public var dataArrayRoom: BehaviorRelay<[Room]> = BehaviorRelay(value: [])
+    public var dataArrayRoomsearch: BehaviorRelay<[Room]> = BehaviorRelay(value: [])
     public var dataArrayCategoryChair: BehaviorRelay<[CategoryChair]> = BehaviorRelay(value: [])
-    public var dataChoose: BehaviorRelay<(Idcinema:Int,Idroom:Int)> = BehaviorRelay(value: (Idcinema: ManageCacheObject.getCurrentCinema().idcinema,Idroom:1))
-    public var dataCategoryChair: BehaviorRelay<CategoryChair> = BehaviorRelay(value: CategoryChair())
-    
+    public var dataArrayCategoryChairsearch: BehaviorRelay<[CategoryChair]> = BehaviorRelay(value: [])
+    public var dataChoose: BehaviorRelay<(Idcinema:Int,Idroom:Int,Idcategory:Int)> = BehaviorRelay(value: (Idcinema: ManageCacheObject.getCurrentCinema().idcinema,Idroom:1,Idcategory:0))
+    public var dataCategoryChair = BehaviorRelay<CategoryChair>(value: CategoryChair())
+   
     func bind(view: ManagementRoomViewController, router: ManagementRoomRouter){
           self.view = view
           self.router = router
@@ -68,4 +70,18 @@ extension ManagementRoomViewModel {
                      .showAPIErrorToast()
                      .mapObject(type: APIResponse.self)
              }
+    func getDetailInfoCategoryChair() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getDetailInfoCategoryChair(idcategory: dataChoose.value.Idcategory))
+                     .filterSuccessfulStatusCodes()
+                     .mapJSON().asObservable()
+                     .showAPIErrorToast()
+                     .mapObject(type: APIResponse.self)
+             }
+    func updateinfocategorychairwithinfo() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.updateInfoCategoryChair(infocategory: dataCategoryChair.value ))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
 }

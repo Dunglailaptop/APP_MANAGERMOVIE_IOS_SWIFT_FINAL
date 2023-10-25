@@ -221,6 +221,11 @@
             <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
+    <designables>
+        <designable name="DDJ-mf-6Eb">
+            <size key="intrinsicContentSize" width="142" height="18.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="icon-dropdown" width="24" height="24"/>
         <systemColor name="separatorColor">

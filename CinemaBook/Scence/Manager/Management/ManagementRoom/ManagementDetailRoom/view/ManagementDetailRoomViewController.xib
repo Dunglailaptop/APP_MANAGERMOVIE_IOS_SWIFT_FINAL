@@ -19,6 +19,7 @@
                 <outlet property="collectionview" destination="Wp0-LF-o2K" id="3Lw-ET-SvB"/>
                 <outlet property="lbl_idrom" destination="rcU-GA-r4L" id="Lyt-S8-gux"/>
                 <outlet property="lbl_name_room" destination="T3f-kc-hWx" id="MCo-HE-CXF"/>
+                <outlet property="lbl_number_categoryChair" destination="Gau-lo-Oh9" id="9ed-qh-DxE"/>
                 <outlet property="lbl_number_room" destination="D0o-ya-AIK" id="0Gn-SX-Bto"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
