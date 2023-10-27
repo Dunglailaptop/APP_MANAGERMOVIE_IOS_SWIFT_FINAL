@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StoreViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_makePopToViewController" destination="PCa-f4-POX" id="RaB-fT-lvr"/>
+                <outlet property="icon_back" destination="I2i-Ve-jlq" id="MCH-8Z-5Br"/>
                 <outlet property="lbl_number_cart" destination="cce-2y-Y5l" id="hb0-c5-UFs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

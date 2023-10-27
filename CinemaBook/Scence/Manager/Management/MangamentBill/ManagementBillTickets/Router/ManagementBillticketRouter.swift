@@ -23,6 +23,10 @@ class ManagementBillticketRouter {
         guard let view = sourceView else {fatalError("Error Desconocido")}
         self.sourceView = view
     }
-    
+    func navigationToDetailBill(bill: BillInfoAccount) {
+        let viewDetailBill = ManagementDetailBillRouter().viewController as! ManagementDetailBillViewController
+        viewDetailBill.infobill = bill
+        sourceView?.navigationController?.pushViewController(viewDetailBill, animated: true)
+    }
    
 }

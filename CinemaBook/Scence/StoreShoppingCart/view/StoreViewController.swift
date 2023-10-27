@@ -10,14 +10,24 @@ import UIKit
 
 class StoreViewController: UIViewController {
 
+    @IBOutlet weak var btn_makePopToViewController: UIButton!
+    @IBOutlet weak var icon_back: UIImageView!
     @IBOutlet weak var lbl_number_cart: UILabel!
     var view1 = OrderProductViewController()
     var viewModel = StoreViewModel()
     var router = StoreRouter()
+    var type = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
          setupViewOrderProductViewController()
+        if type == 1 {
+            btn_makePopToViewController.isUserInteractionEnabled = false
+            icon_back.isHidden = true
+        }else {
+            btn_makePopToViewController.isUserInteractionEnabled = true
+            icon_back.isHidden = false
+        }
         // Do any additional setup after loading the view.
     }
 

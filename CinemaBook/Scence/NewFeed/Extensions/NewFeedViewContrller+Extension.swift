@@ -33,13 +33,14 @@ extension NewFeedViewController {
         let Videotableviewcell = UINib(nibName: "VideoItemShowinnewfeedTableViewCell", bundle: .main)
         tableView.register(Videotableviewcell, forCellReuseIdentifier: "VideoItemShowinnewfeedTableViewCell")
         tableView.rowHeight = UITableView.automaticDimension
-               tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        tableView.separatorStyle = .none
         tableView.rx.setDelegate(self)
     }
     func bindingtableviewcell() {
         viewModel.dataArray.bind(to: tableView.rx.items(cellIdentifier: "VideoItemShowinnewfeedTableViewCell", cellType: VideoItemShowinnewfeedTableViewCell.self)) {  (row,data,cell) in
             cell.viewModel = self.viewModel
             cell.data = data
+            cell.selectionStyle = .none
         }.disposed(by: rxbag)
     }
 }

@@ -27,7 +27,8 @@ class ListMovieShowNowRouter {
     
    
       func navigationMakeToDetailMovieViewController(id:Int){
-          let DetailMovieViewController = DetailMovieRouter().viewController as! DetailMovieViewController
+        
+          let DetailMovieViewController = DetailMovieRouter().viewController as! DetailMovieInfoViewController
           DetailMovieViewController.idmovie = id
           sourceView?.navigationController?.pushViewController(DetailMovieViewController, animated: true)
       }

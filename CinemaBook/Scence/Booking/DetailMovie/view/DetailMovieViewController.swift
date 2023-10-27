@@ -48,26 +48,26 @@ class DetailMovieViewController: BaseViewController, FSPagerViewDataSource, FSPa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.bind(view: self, router: router)
-        readMore()
-        reaload()
-        bannerVoucher.cornerRadius = 20
-        bannerVoucher.transformer = FSPagerViewTransformer(type: .cubic)
-        bannerVoucher.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCell")
-        bannerVoucher.automaticSlidingInterval = 5
-        bannerVoucher.interitemSpacing = 100
-        bannerVoucher.alwaysBounceHorizontal = true
-        bannerVoucher.dataSource = self
-        bannerVoucher.delegate = self
-        bannerVoucher.isInfinite = true
+//        viewModel.bind(view: self, router: router)
+//        readMore()
+////        reaload()
+//        bannerVoucher.cornerRadius = 20
+//        bannerVoucher.transformer = FSPagerViewTransformer(type: .cubic)
+//        bannerVoucher.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCell")
+//        bannerVoucher.automaticSlidingInterval = 5
+//        bannerVoucher.interitemSpacing = 100
+//        bannerVoucher.alwaysBounceHorizontal = true
+//        bannerVoucher.dataSource = self
+//        bannerVoucher.delegate = self
+//        bannerVoucher.isInfinite = true
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         getListVoucher()
-        viewModel.idmovie.accept(idmovie)
-        getDetailMovie()
+//         getListVoucher()
+//        viewModel.idmovie.accept(idmovie)
+//        getDetailMovie()
     
     }
 
@@ -109,7 +109,7 @@ class DetailMovieViewController: BaseViewController, FSPagerViewDataSource, FSPa
     
     @IBAction func btn_maketoBookingChairViewController(_ sender: Any) {
         dLog(viewModel.dataArray.value.movieID)
-        viewModel.makeToBookingChairViewController(idmovie: viewModel.dataArray.value.movieID)
+        viewModel.makeToBookingChairViewController(idmovie: viewModel.dataArray.value.movieID, namemovie: "")
     }
     
     @IBAction func btn_makevideo(_ sender: Any) {

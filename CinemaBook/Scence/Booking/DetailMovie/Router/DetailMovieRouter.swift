@@ -17,7 +17,7 @@ class  DetailMovieRouter
     private var sourceView:UIViewController?
     
     private func createViewController() -> UIViewController {
-        let view = DetailMovieViewController(nibName: "DetailMovieViewController", bundle: Bundle.main)
+        let view = DetailMovieInfoViewController(nibName: "DetailMovieInfoViewController", bundle: Bundle.main)
         return view
     }
     
@@ -30,9 +30,10 @@ class  DetailMovieRouter
         sourceView?.navigationController?.popViewController(animated: true)
     }
     
-    func navigationMakeToBookingChairViewController(idmovie:Int){
+    func navigationMakeToBookingChairViewController(idmovie:Int,namemovie:String){
         let bookingchairViewController = TimeShowRouter().viewController as! TimeShowViewController
         bookingchairViewController.idmovie = idmovie
+        bookingchairViewController.namemovie = namemovie
         sourceView?.navigationController?.pushViewController(bookingchairViewController, animated: true)
     }
     

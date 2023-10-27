@@ -186,6 +186,10 @@ struct BillInfoAccount: Mappable {
         var endtime = ""
         var numberchair = ""
     
+    init() {
+        
+    }
+    
     init?(map: Map) {
         
     }
@@ -201,5 +205,79 @@ struct BillInfoAccount: Mappable {
          starttime <- map["starttime"]
          endtime <- map["endtime"]
          numberchair <- map["numberchair"]
+    }
+}
+struct detailBill: Mappable {
+        var idbill = 0
+        var dateBill = ""
+        var namemovie = ""
+        var timeall = 0
+        var starttime = ""
+        var endTime = ""
+        var showMovie = ""
+        var nameroom = ""
+        var idroom = 0
+        var status = 0
+        var detailTickets = [DetailTicket]()
+        var detailFoodcombos = [DetailFoodComboBill]()
+var total_price = 0
+var quantityticket = 0
+    
+    init() {}
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        idbill <- map["idbill"]
+         dateBill <- map["dateBill"]
+         namemovie <- map["namemovie"]
+         timeall <- map["timeall"]
+         starttime <- map["starttime"]
+         endTime <- map["endTime"]
+         showMovie <- map["showMovie"]
+         nameroom <- map["nameroom"]
+         idroom <- map["idroom"]
+         status <- map["status"]
+         detailTickets <- map["detailTickets"]
+         detailFoodcombos <- map["detailFoodcombos"]
+         total_price <- map["total_price"]
+         quantityticket  <- map["quantityticket"]
+    }
+}
+struct DetailTicket: Mappable {
+    var idbill = 0
+    var idchair = 0
+    var namechair = ""
+    var price = 0
+    init(){}
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+         idbill <- map["idbill"]
+         idchair <- map["idchair"]
+         namechair <- map["namechair"]
+         price <- map["price"]
+    }
+}
+struct DetailFoodComboBill: Mappable {
+    var idfoodcombo = 0
+    var namefoodcombo = ""
+    var totalprice = 0
+    var image = ""
+    
+    init() {}
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+         idfoodcombo <- map["idfoodcombo"]
+         namefoodcombo <- map["namefoodcombo"]
+         totalprice <- map["totalprice"]
+         image <- map["image"]
     }
 }

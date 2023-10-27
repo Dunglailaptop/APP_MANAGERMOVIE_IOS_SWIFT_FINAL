@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,39 +18,64 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsi-4G-LAH" customClass="YTPlayerView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9G-9F-6zi">
+                        <rect key="frame" x="5" y="5" width="310" height="290"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsi-4G-LAH" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="252"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt3-Ba-OVh">
+                                <rect key="frame" x="10" y="260" width="300" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="jII-f0-xUg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="270" id="kvP-NA-VZf"/>
+                            <constraint firstAttribute="bottom" secondItem="kt3-Ba-OVh" secondAttribute="bottom" constant="10" id="CoW-fY-Fdb"/>
+                            <constraint firstAttribute="trailing" secondItem="Rsi-4G-LAH" secondAttribute="trailing" id="Iik-0w-x2H"/>
+                            <constraint firstItem="Rsi-4G-LAH" firstAttribute="top" secondItem="J9G-9F-6zi" secondAttribute="top" id="JzB-Uf-PVc"/>
+                            <constraint firstItem="Rsi-4G-LAH" firstAttribute="leading" secondItem="J9G-9F-6zi" secondAttribute="leading" id="KcN-fg-Xso"/>
+                            <constraint firstItem="kt3-Ba-OVh" firstAttribute="leading" secondItem="J9G-9F-6zi" secondAttribute="leading" constant="10" id="OJi-SJ-VEm"/>
+                            <constraint firstAttribute="trailing" secondItem="kt3-Ba-OVh" secondAttribute="trailing" id="Tql-iK-QIn"/>
+                            <constraint firstItem="kt3-Ba-OVh" firstAttribute="top" secondItem="Rsi-4G-LAH" secondAttribute="bottom" constant="8" id="aVP-BX-Ghp"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kt3-Ba-OVh">
-                        <rect key="frame" x="0.0" y="270" width="320" height="22"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" systemColor="systemGray6Color"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="kt3-Ba-OVh" secondAttribute="trailing" id="6AJ-UJ-COf"/>
-                    <constraint firstItem="Rsi-4G-LAH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BYQ-cp-57D"/>
-                    <constraint firstItem="kt3-Ba-OVh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Km2-wx-IaT"/>
-                    <constraint firstAttribute="trailing" secondItem="Rsi-4G-LAH" secondAttribute="trailing" id="Vt0-m9-KOJ"/>
-                    <constraint firstItem="kt3-Ba-OVh" firstAttribute="top" secondItem="Rsi-4G-LAH" secondAttribute="bottom" id="cWX-b1-2kF"/>
-                    <constraint firstAttribute="bottom" secondItem="kt3-Ba-OVh" secondAttribute="bottom" constant="8" id="cmd-Me-7jU"/>
-                    <constraint firstItem="Rsi-4G-LAH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wXl-hp-VZJ"/>
+                    <constraint firstItem="J9G-9F-6zi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2RI-qP-wt7"/>
+                    <constraint firstAttribute="bottom" secondItem="J9G-9F-6zi" secondAttribute="bottom" constant="5" id="5Cr-F4-GkN"/>
+                    <constraint firstAttribute="trailing" secondItem="J9G-9F-6zi" secondAttribute="trailing" constant="5" id="SLm-Xd-zYV"/>
+                    <constraint firstItem="J9G-9F-6zi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="lcC-Le-TD6"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <connections>
                 <outlet property="lbl_namemovie" destination="kt3-Ba-OVh" id="6Ac-m3-T5Y"/>
                 <outlet property="playervideo" destination="Rsi-4G-LAH" id="PH1-K8-isH"/>
             </connections>
-            <point key="canvasLocation" x="132" y="90"/>
+            <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

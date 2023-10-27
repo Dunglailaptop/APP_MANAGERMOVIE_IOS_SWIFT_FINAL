@@ -16,7 +16,7 @@ class BookingTicketViewController: BaseViewController  {
   var viewModel = BookingViewModel()
     var router = BookingRouter()
  
-    var title_name = ["Phim đang chiếu","Phim sắp chiếu"]
+    var title_name = ["Phim đang chiếu","Phim sắp chiếu","Cửa hàng"]
     
     @IBOutlet weak var viewPager: BmoViewPager!
     @IBOutlet weak var _navigationbar: BmoViewPagerNavigationBar!
@@ -70,10 +70,11 @@ extension BookingTicketViewController: BmoViewPagerDelegate, BmoViewPagerDataSou
             ListMovieShowNowRouters.Type_edit = 0
              return ListMovieShowNowRouters
         }else {
-        let ListMovieShowNowRouters = ListMovieShowNowRouter().viewController as! ListMovieShowNowViewController
-            ListMovieShowNowRouters.status = 1
-            ListMovieShowNowRouters.Type_edit = 0
-            return ListMovieShowNowRouters
+        let StoreViewControllers = StoreRouter().viewController as! StoreViewController
+            StoreViewControllers.type = 1
+//            ListMovieShowNowRouters.status = 1
+//            ListMovieShowNowRouters.Type_edit = 0
+            return StoreViewControllers
         }
     }
     

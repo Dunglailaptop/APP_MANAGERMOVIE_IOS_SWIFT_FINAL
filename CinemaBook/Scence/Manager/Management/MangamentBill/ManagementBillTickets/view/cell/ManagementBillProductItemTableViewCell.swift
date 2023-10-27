@@ -10,6 +10,8 @@ import UIKit
 
 class ManagementBillProductItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var view_status: UIButton!
+    @IBOutlet weak var lbl_date_createbill: UILabel!
     @IBOutlet weak var lbl_time: UILabel!
     @IBOutlet weak var lbl_date: UILabel!
     @IBOutlet weak var lbl_price: UILabel!
@@ -30,9 +32,19 @@ class ManagementBillProductItemTableViewCell: UITableViewCell {
     
     var data: BillInfoAccount? = nil {
         didSet {
+            if data?.statusbill == 0 {
+              
+                view_status.setTitle("CHỜ XEM", for: .normal)
+                view_status.backgroundColor = .red
+            }else {
+                view_status.setTitle("HOÀN TẤT", for: .normal)
+                view_status.backgroundColor = .green
+            }
             var datatime = data?.starttime.components(separatedBy: "T")
             lbl_date.text = datatime![0]
             lbl_time.text = datatime![1]
+            var datebillcreate = data?.datebill.components(separatedBy: "T")
+            lbl_date_createbill.text = "Ngày tạo: " + datebillcreate![0]
             lbl_name_movie.text = data?.namemovie
             lbl_id_bill.text = "Mã hoá đơn:" + String(data!.idbill)
             lbl_price.text = Utils.stringVietnameseFormatWithNumber(amount: data!.totalamount)

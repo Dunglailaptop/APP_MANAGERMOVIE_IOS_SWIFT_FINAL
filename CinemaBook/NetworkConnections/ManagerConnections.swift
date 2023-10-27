@@ -49,8 +49,8 @@ enum ManagerConnections {
     case postPaymentBillFoodCombo(foodcombobill:PaymentFoodCombo)
     case getListBillinAccount(iduser:Int)
     case getListBillFoodCombo(iduser:Int)
-    case getListAllBill(idcinema:Int,status:Int)
-    case getListAllBillFoodCombo(idcinema:Int,status:Int)
+    case getListAllBill(idcinema:Int,status:Int,datefrom:String,dateto:String)
+    case getListAllBillFoodCombo(idcinema:Int,status:Int,datefrom:String,dateto:String)
     case updateSatus(idinterest:Int,status:Int)
     case updateInterestMovie(idinterest:Int,idmovie:Int)
     case getListMovieWithResetTime(breakTime:Int)
@@ -64,6 +64,7 @@ enum ManagerConnections {
     case getDetailInfoCategoryChair(idcategory:Int)
     case updateCategoryInChairRoom(listchair: updateCateWithChair)
     case updateInfoCategoryChair(infocategory: CategoryChair)
+    case getDetailBillInManager(idbill:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -150,9 +151,9 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListBillAccount
         case .getListBillFoodCombo(let iduser):
             return APIEndPoint.Name.urlGetListInfoBillFoodCombo
-        case .getListAllBill(let idcinema,let status):
+        case .getListAllBill(let idcinema,let status,let datefrom,let dateto):
             return APIEndPoint.Name.urlGetListBillAll
-        case .getListAllBillFoodCombo(let idcinema, let status):
+        case .getListAllBillFoodCombo(let idcinema, let status,let datefrom,let dateto):
             return APIEndPoint.Name.urlGetListBillAllFoodCombo
         case .updateSatus(let idinterest,let status):
             return APIEndPoint.Name.urlUpdateSatusInterest
@@ -180,6 +181,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlUpdateCategoryInChairRoom
         case .updateInfoCategoryChair(_):
             return APIEndPoint.Name.urlUpdateInfoDetailCategoryChair
+        case .getDetailBillInManager(let idbill):
+            return APIEndPoint.Name.urlGetDetailBillManager
         }
     
     }
@@ -259,9 +262,9 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListBillFoodCombo(_):
             return .get
-        case .getListAllBill(_,_):
+        case .getListAllBill(_,_,_,_):
             return .get
-        case .getListAllBillFoodCombo(_,_):
+        case .getListAllBillFoodCombo(_,_,_,_):
             return .get
         case .updateSatus(_,_):
             return .post
@@ -289,6 +292,8 @@ extension ManagerConnections: TargetType {
             return .post
         case .updateInfoCategoryChair(_):
             return .post
+        case .getDetailBillInManager(_):
+            return .get
         }
 
         
@@ -390,9 +395,9 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListBillFoodCombo(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .getListAllBill(_,_):
+        case .getListAllBill(_,_,_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .getListAllBillFoodCombo(_,_):
+        case .getListAllBillFoodCombo(_,_,_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .updateSatus(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
@@ -420,6 +425,8 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .updateInfoCategoryChair(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getDetailBillInManager(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -606,15 +613,19 @@ extension ManagerConnections: TargetType {
             ]
         case .getListBillFoodCombo(let iduser):
             return ["iduser":iduser]
-        case .getListAllBill(let idcinema,let status):
+        case .getListAllBill(let idcinema,let status,let datefrom,let dateto):
             return [
                 "idcinema":idcinema,
-                "status": status
+                "status": status,
+                "datefrom": datefrom,
+                "dateto":dateto
             ]
-        case .getListAllBillFoodCombo(let idcinema, let status):
+        case .getListAllBillFoodCombo(let idcinema, let status,let datefrom,let dateto):
             return [
                 "idcinema": idcinema,
-                "status": status
+                "status": status,
+                "datefrom": datefrom,
+                "dateto": dateto
             ]
         case .updateSatus(let idinterest,let status):
             return [
@@ -696,6 +707,10 @@ extension ManagerConnections: TargetType {
                 "idroom": infocategory.idroom,
                 "nameroom": infocategory.nameroom
              ]
+        case .getDetailBillInManager(let idbill):
+            return [
+                "idbill": idbill
+            ]
         }
        
     }
@@ -782,9 +797,9 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListBillFoodCombo(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .getListAllBill(_,_):
+        case .getListAllBill(_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .getListAllBillFoodCombo(_,_):
+        case .getListAllBillFoodCombo(_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .updateSatus(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
@@ -812,6 +827,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .updateInfoCategoryChair(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getDetailBillInManager(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

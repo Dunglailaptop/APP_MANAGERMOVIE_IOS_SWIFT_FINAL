@@ -24,6 +24,10 @@ class ManagementBillFoodComboRouter {
         guard let view = sourceView else {fatalError("Error Desconocido")}
         self.sourceView = view
     }
-    
+    func navigationToDetailProductFoodComboBill(PaymentBillfoodcombo: PaymentInfoBillFoodCombo) {
+        let viewcell = ManageDetailBillFoodAccountRouter().viewController as! ManageDetailBillFoodAccountViewController
+        viewcell.foodcombo = PaymentBillfoodcombo
+        sourceView?.navigationController?.pushViewController(viewcell, animated: true)
+    }
    
 }

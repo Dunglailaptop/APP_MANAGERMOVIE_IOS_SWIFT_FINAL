@@ -71,6 +71,7 @@ class itemMovieTableViewCell: UITableViewCell {
         default:
             viewModel?.makeToDetailMovieViewController(id: data!.movieID)
         }
-          
+        
+        
        }
 }

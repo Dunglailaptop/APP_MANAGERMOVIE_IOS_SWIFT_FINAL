@@ -11,14 +11,14 @@ import RxSwift
 import RxCocoa
 
 class DetailMovieviewModel {
-    private(set) weak var view: DetailMovieViewController?
+    private(set) weak var view: DetailMovieInfoViewController?
     private var router: DetailMovieRouter?
     
     var idmovie: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     var dataArray: BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
     var dataArrayVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
     
-    func bind(view: DetailMovieViewController,router: DetailMovieRouter){
+    func bind(view: DetailMovieInfoViewController,router: DetailMovieRouter){
         self.view = view
         self.router = router
         self.router?.setSourceview(view)
@@ -28,8 +28,8 @@ class DetailMovieviewModel {
         self.router?.makePopToViewController()
     }
     
-    func makeToBookingChairViewController(idmovie:Int){
-        router?.navigationMakeToBookingChairViewController(idmovie:idmovie)
+    func makeToBookingChairViewController(idmovie:Int,namemovie:String){
+        router?.navigationMakeToBookingChairViewController(idmovie:idmovie,namemovie: namemovie)
     }
     
     func makeToVideoYoutuebViewController(videoId:String) {

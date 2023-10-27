@@ -13,23 +13,33 @@ import ObjectMapper
 import Kingfisher
 import JonAlert
 
-extension DetailMovieViewController {
+extension DetailMovieInfoViewController {
     func getDetailMovie() {
         viewModel.getDetailMovie().subscribe(onNext: {
            (response) in
             if (response.code == RRHTTPStatusCode.ok.rawValue) {
                 if let data = Mapper<Movie>().map(JSONObject: response.data)
                 {
+                    dLog(data)
                     self.viewModel.dataArray.accept(data)
-                    self.lbl_namemovie.text = data.namemovie
-                    self.lbl_author.text = data.author
-                    self.lbl_text.text = data.describes
-                   self.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
-                    self.poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
+                    self.setupdata(datas: data)
                 }
             }
             }).disposed(by: rxbag)
     }
+    
+    func setupdata(datas: Movie) {
+        self.lbl_nation.text = datas.namenation
+        self.lbl_author.text = datas.author
+        self.lbl_categorymovie.text = datas.namecategorymovie
+        self.lbl_name_movie.text = datas.namemovie
+        self.txt_description.text = datas.describes
+        self.lbl_timeall.text = String(datas.timeall) + " Phút"
+        var date_show = datas.yearbirthday.components(separatedBy: "T")
+        self.lbl_date_show.text = date_show[0]
+        self.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: datas.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
+    }
+    
     func getListVoucher() {
         viewModel.getListVoucher().subscribe(onNext: {
             (response) in
@@ -45,7 +55,7 @@ extension DetailMovieViewController {
         })
     }
 }
-extension DetailMovieViewController {
+extension DetailMovieInfoViewController {
     func reaload() {
         viewModel.dataArrayVoucher.subscribe(onNext: {
             [weak self] data in
