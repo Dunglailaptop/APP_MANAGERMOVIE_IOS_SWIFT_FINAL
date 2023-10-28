@@ -78,6 +78,9 @@ public struct APIEndPoint {
         static let urlCreateNewVoucher = "/voucher/createNewVoucher"
         static let urlGetDetailInfoVoucher = "voucher/getDetailVoucher"
         static let urlUpdateInfoVoucher = "/voucher/UpdateInfoVoucher"
+        static let urlcreateNewFood = "/FoodCombo/CreateFoodNew"
+        static let urlGetDetailFood = "/FoodCombo/getDetailFood"
+        static let urlUpdateInfoDetailfood = "/FoodCombo/UpdateFood"
     }
     
 }

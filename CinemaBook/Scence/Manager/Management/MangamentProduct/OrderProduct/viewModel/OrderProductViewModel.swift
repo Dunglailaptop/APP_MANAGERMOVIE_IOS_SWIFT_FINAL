@@ -15,6 +15,7 @@ class OrderProductViewModel: BaseViewModel {
     private var router: OrderProductRouter?
     
     public var dataArray:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
+    public var dataArraySearch:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     
     func bind(view: OrderProductViewController, router: OrderProductRouter){
           self.view = view

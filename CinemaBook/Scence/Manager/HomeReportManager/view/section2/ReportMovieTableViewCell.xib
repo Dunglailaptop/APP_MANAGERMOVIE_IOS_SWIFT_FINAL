@@ -45,19 +45,19 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yny-TQ-K7G">
-                        <rect key="frame" x="0.0" y="50" width="320" height="40"/>
+                        <rect key="frame" x="0.0" y="50" width="320" height="30"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5l-Ac-Jxq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I80-CL-q3U">
-                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-Wc-1rJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="1200" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1200" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-1M-m9I">
-                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="30"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -71,7 +71,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-Pi-tkt">
-                                                        <rect key="frame" x="121" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="121" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Hôm qua"/>
@@ -88,7 +88,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-wz-3yW">
-                                                        <rect key="frame" x="242" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="242" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tuần này"/>
@@ -105,7 +105,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCa-ra-mhx">
-                                                        <rect key="frame" x="363" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="363" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tháng này"/>
@@ -122,7 +122,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOQ-oi-r3D">
-                                                        <rect key="frame" x="484" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="484" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tháng trước"/>
@@ -139,7 +139,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-0K-2Kk">
-                                                        <rect key="frame" x="605" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="605" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="3 Tháng gần nhất"/>
@@ -156,7 +156,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="if6-wV-RMi">
-                                                        <rect key="frame" x="726" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="726" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Năm nay "/>
@@ -173,7 +173,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-YG-4aW">
-                                                        <rect key="frame" x="847" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="847" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Năm trước"/>
@@ -190,7 +190,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-nV-58G">
-                                                        <rect key="frame" x="968" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="968" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="3 năm gần nhất"/>
@@ -207,7 +207,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWY-4F-sdL">
-                                                        <rect key="frame" x="1089" y="0.0" width="111" height="40"/>
+                                                        <rect key="frame" x="1089" y="0.0" width="111" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tất cả các năm"/>
@@ -253,11 +253,11 @@
                             <constraint firstAttribute="bottom" secondItem="X5l-Ac-Jxq" secondAttribute="bottom" id="7X5-ve-f7s"/>
                             <constraint firstItem="X5l-Ac-Jxq" firstAttribute="top" secondItem="yny-TQ-K7G" secondAttribute="top" id="LoK-4r-TJm"/>
                             <constraint firstItem="X5l-Ac-Jxq" firstAttribute="leading" secondItem="yny-TQ-K7G" secondAttribute="leading" id="ctg-Ie-Y5R"/>
-                            <constraint firstAttribute="height" constant="40" id="yBp-Wi-vn8"/>
+                            <constraint firstAttribute="height" constant="30" id="yBp-Wi-vn8"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvL-Rx-1jq">
-                        <rect key="frame" x="0.0" y="90" width="320" height="150"/>
+                        <rect key="frame" x="0.0" y="80" width="320" height="150"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMg-Kj-NSO">
                                 <rect key="frame" x="0.0" y="1" width="320" height="148"/>
@@ -295,25 +295,25 @@
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h5w-pe-yHT">
-                        <rect key="frame" x="0.0" y="240" width="320" height="70"/>
+                        <rect key="frame" x="0.0" y="230" width="320" height="80"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P46-oz-4Dt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TỔNG VÉ XEM PHIM:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-1F-kcp">
-                                        <rect key="frame" x="42" y="9.6666666666666572" width="133.33333333333334" height="15.666666666666664"/>
+                                        <rect key="frame" x="42" y="12.333333333333343" width="133.33333333333334" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z7-qo-fEg">
-                                        <rect key="frame" x="289.66666666666669" y="7.333333333333341" width="10.333333333333314" height="20.333333333333329"/>
+                                        <rect key="frame" x="289.66666666666669" y="9.9999999999999982" width="10.333333333333314" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket-2" translatesAutoresizingMaskIntoConstraints="NO" id="uJc-hz-GSt">
-                                        <rect key="frame" x="20" y="6.6666666666666572" width="22" height="22"/>
+                                        <rect key="frame" x="20" y="9" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="22" id="Wnq-7Q-nys"/>
                                             <constraint firstAttribute="height" constant="22" id="X9G-AE-fgw"/>
@@ -331,22 +331,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-Fx-rIU">
-                                <rect key="frame" x="0.0" y="35" width="320" height="35"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHỜ XÁC NHẬN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erg-YB-pOV">
-                                        <rect key="frame" x="41.999999999999993" y="9.6666666666666856" width="108.33333333333331" height="15.666666666666664"/>
+                                        <rect key="frame" x="41.999999999999993" y="12.333333333333314" width="108.33333333333331" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pu-3q-7of">
-                                        <rect key="frame" x="289.66666666666669" y="7.3333333333333126" width="10.333333333333314" height="20.333333333333329"/>
+                                        <rect key="frame" x="289.66666666666669" y="9.9999999999999982" width="10.333333333333314" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket-2" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-rb-Cg2">
-                                        <rect key="frame" x="20" y="6.6666666666666856" width="22" height="22"/>
+                                        <rect key="frame" x="20" y="9" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="2aB-ZX-olz"/>
                                             <constraint firstAttribute="width" constant="22" id="g1N-dw-oXm"/>

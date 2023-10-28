@@ -68,6 +68,9 @@ enum ManagerConnections {
     case createNewVoucher(vouchers: voucher)
     case getDetailVoucher(idvoucher:Int)
     case UpdateDetailVoucher(vouchers: voucher)
+    case createFoodNew(food:Food)
+    case getDetailfood(idfood:Int)
+    case updateinfodetailfood(food:Food)
 }
 
 extension ManagerConnections: TargetType {
@@ -192,6 +195,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetDetailInfoVoucher
         case .UpdateDetailVoucher(_):
             return APIEndPoint.Name.urlUpdateInfoVoucher
+        case .createFoodNew(_):
+            return APIEndPoint.Name.urlcreateNewFood
+        case .getDetailfood(let idfood):
+            return APIEndPoint.Name.urlGetDetailFood
+        case .updateinfodetailfood(_):
+            return APIEndPoint.Name.urlUpdateInfoDetailfood
         }
     
     }
@@ -309,6 +318,13 @@ extension ManagerConnections: TargetType {
             return .get
         case .UpdateDetailVoucher(_):
             return .post
+        case .createFoodNew(_):
+            return .post
+        case .getDetailfood(_):
+            return .get
+        case .updateinfodetailfood(_):
+            return .post
+            
         }
 
         
@@ -447,6 +463,12 @@ extension ManagerConnections: TargetType {
         case .getDetailVoucher(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .UpdateDetailVoucher(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .createFoodNew(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getDetailfood(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .updateinfodetailfood(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
@@ -755,6 +777,31 @@ extension ManagerConnections: TargetType {
                 "poster": vouchers.poster
                 
             ]
+        case .createFoodNew(let food):
+            return [
+                "idfood": food.idfood,
+                "namefood": food.namefood,
+                "quantityfood": food.quantityfood,
+                "picture": food.picture,
+                "pricefood": food.pricefood,
+                "idcategoryfood": food.idcategoryfood,
+                "datecreate": "2023-09-27T15:46:39.033Z"
+            ]
+        case .getDetailfood(let idfood):
+            return [
+                "idfood":idfood
+            ]
+        case .updateinfodetailfood(let food):
+            return [
+                "idfood": food.idfood,
+                "namefood": food.namefood,
+                "quantityfood": food.quantityfood,
+                "picture": food.picture,
+                "pricefood": food.pricefood,
+                "idcategoryfood": food.idcategoryfood,
+                "datecreate": "2023-10-28T16:31:56.834Z",
+                "namecategoryfood": "string"
+            ]
         }
        
     }
@@ -878,6 +925,12 @@ extension ManagerConnections: TargetType {
         case .getDetailVoucher(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .UpdateDetailVoucher(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .createFoodNew(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getDetailfood(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .updateinfodetailfood(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }

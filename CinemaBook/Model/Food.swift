@@ -69,6 +69,7 @@ struct  Food: Mappable {
         var idcombo = 0
         var id = 0
     var quantityRealTime = 0
+    var namecategoryfood = ""
     init() {
         
     }
@@ -85,6 +86,7 @@ struct  Food: Mappable {
             pricefood <- map["pricefood"]
             idcategoryfood <- map ["idcategoryfood"]
             datecreate <- map ["datecreate"]
+        namecategoryfood <- map["namecategoryfood"]
     }
 }
 struct CategoryFood: Mappable {

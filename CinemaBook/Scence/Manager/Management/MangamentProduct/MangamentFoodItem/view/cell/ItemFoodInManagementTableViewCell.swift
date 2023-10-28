@@ -25,6 +25,7 @@ class ItemFoodInManagementTableViewCell: UITableViewCell {
     }
     var data: Food? = nil {
         didSet {
+            dLog(data)
             lbl_name_food.text = data?.namefood
             lbl_price_food.text = Utils.stringVietnameseFormatWithNumber(amount: data!.pricefood)
              image_food.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.picture)), placeholder: UIImage(named: "image_defauft_medium"))

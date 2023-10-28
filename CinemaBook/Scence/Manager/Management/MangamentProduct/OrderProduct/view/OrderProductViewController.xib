@@ -14,6 +14,7 @@
                 <outlet property="btn_edit" destination="Ljk-aE-cie" id="Nph-Wg-zFt"/>
                 <outlet property="collectionView" destination="PW4-Ya-pqL" id="Kma-dA-5Qz"/>
                 <outlet property="height_btn_creata" destination="SlV-rM-Dv3" id="ev7-XB-9AG"/>
+                <outlet property="txt_search" destination="CNT-uk-tax" id="pMz-Db-w9Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="osI-dS-kD3"/>
                 <outlet property="view_of_button_create" destination="LbO-5u-uuI" id="DM8-ip-bus"/>
             </connections>
@@ -27,7 +28,7 @@
                     <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PW4-Ya-pqL">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="754"/>
+                            <rect key="frame" x="0.0" y="50" width="414" height="704"/>
                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aUi-tu-el4">
                                 <size key="itemSize" width="128" height="128"/>
@@ -71,14 +72,61 @@
                                 <constraint firstItem="Ljk-aE-cie" firstAttribute="leading" secondItem="LbO-5u-uuI" secondAttribute="leading" constant="20" id="n7o-Fr-C25"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9od-CS-uo0">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-0U-aw5">
+                                    <rect key="frame" x="20" y="10" width="374" height="30"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-search-gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q2X-1U-a5B">
+                                            <rect key="frame" x="10" y="4" width="22" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="OBF-1E-GFc"/>
+                                                <constraint firstAttribute="width" constant="22" id="a8d-g0-iem"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tìm kiếm" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CNT-uk-tax">
+                                            <rect key="frame" x="32" y="0.0" width="342" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                    <constraints>
+                                        <constraint firstItem="Q2X-1U-a5B" firstAttribute="centerY" secondItem="UTW-0U-aw5" secondAttribute="centerY" id="BtD-Ti-M9G"/>
+                                        <constraint firstItem="CNT-uk-tax" firstAttribute="leading" secondItem="Q2X-1U-a5B" secondAttribute="trailing" id="Ihe-Mn-yF4"/>
+                                        <constraint firstItem="CNT-uk-tax" firstAttribute="top" secondItem="UTW-0U-aw5" secondAttribute="top" id="KwK-qK-xY5"/>
+                                        <constraint firstItem="Q2X-1U-a5B" firstAttribute="leading" secondItem="UTW-0U-aw5" secondAttribute="leading" constant="10" id="SIV-wm-sMs"/>
+                                        <constraint firstAttribute="trailing" secondItem="CNT-uk-tax" secondAttribute="trailing" id="V1y-9d-FJI"/>
+                                        <constraint firstAttribute="bottom" secondItem="CNT-uk-tax" secondAttribute="bottom" id="ycm-Fh-v9l"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="UTW-0U-aw5" secondAttribute="bottom" constant="10" id="8Mj-go-zJ6"/>
+                                <constraint firstAttribute="trailing" secondItem="UTW-0U-aw5" secondAttribute="trailing" constant="20" id="Ie8-x7-1qX"/>
+                                <constraint firstItem="UTW-0U-aw5" firstAttribute="leading" secondItem="9od-CS-uo0" secondAttribute="leading" constant="20" id="MQE-al-5t8"/>
+                                <constraint firstItem="UTW-0U-aw5" firstAttribute="top" secondItem="9od-CS-uo0" secondAttribute="top" constant="10" id="iHw-WA-w2S"/>
+                                <constraint firstAttribute="height" constant="50" id="lBT-II-ApC"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="LbO-5u-uuI" secondAttribute="bottom" id="35K-aa-oGP"/>
                         <constraint firstItem="PW4-Ya-pqL" firstAttribute="leading" secondItem="qTL-9D-utc" secondAttribute="leading" id="CZ2-c1-RTB"/>
+                        <constraint firstItem="PW4-Ya-pqL" firstAttribute="top" secondItem="9od-CS-uo0" secondAttribute="bottom" id="KGN-5Y-5Cg"/>
+                        <constraint firstItem="9od-CS-uo0" firstAttribute="top" secondItem="qTL-9D-utc" secondAttribute="top" id="PXc-gF-REL"/>
                         <constraint firstItem="LbO-5u-uuI" firstAttribute="top" secondItem="PW4-Ya-pqL" secondAttribute="bottom" id="ViB-yf-ssi"/>
                         <constraint firstAttribute="trailing" secondItem="LbO-5u-uuI" secondAttribute="trailing" id="b5H-O9-1lu"/>
-                        <constraint firstItem="PW4-Ya-pqL" firstAttribute="top" secondItem="qTL-9D-utc" secondAttribute="top" id="gts-5i-Yl0"/>
+                        <constraint firstItem="9od-CS-uo0" firstAttribute="leading" secondItem="qTL-9D-utc" secondAttribute="leading" id="btw-qL-h5R"/>
+                        <constraint firstAttribute="trailing" secondItem="9od-CS-uo0" secondAttribute="trailing" id="k9a-mu-mch"/>
                         <constraint firstAttribute="trailing" secondItem="PW4-Ya-pqL" secondAttribute="trailing" id="o0G-W1-lmE"/>
                         <constraint firstItem="LbO-5u-uuI" firstAttribute="leading" secondItem="qTL-9D-utc" secondAttribute="leading" id="r7V-rU-3bF"/>
                     </constraints>
@@ -96,6 +144,7 @@
         </view>
     </objects>
     <resources>
+        <image name="icon-search-gray" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

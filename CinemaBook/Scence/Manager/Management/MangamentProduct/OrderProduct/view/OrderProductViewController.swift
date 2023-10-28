@@ -11,13 +11,14 @@ import RxCocoa
 import RxSwift
 import ObjectMapper
 
-class OrderProductViewController: UIViewController {
+class OrderProductViewController: BaseViewController {
     
    
    
     var viewModel = OrderProductViewModel()
     var router = OrderProductRouter()
    
+    @IBOutlet weak var txt_search: UITextField!
     @IBOutlet weak var height_btn_creata: NSLayoutConstraint!
     @IBOutlet weak var btn_edit: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -29,6 +30,29 @@ class OrderProductViewController: UIViewController {
         viewModel.bind(view: self, router: router)
         register()
         bindCollecion()
+        txt_search.rx.controlEvent(.editingChanged)
+                   .withLatestFrom(txt_search.rx.text)
+                   .subscribe(onNext:{ [self]  query in
+                       guard self != nil else { return }
+                
+                       let dataFirsts = viewModel.dataArraySearch.value
+                       let cloneDataFilter = viewModel.dataArray.value
+                       if !query!.isEmpty{
+                           var filteredDataArray = cloneDataFilter.filter({
+                               (value) -> Bool in
+                               let str1 = query!.uppercased().applyingTransform(.stripDiacritics, reverse: false)
+                               let str2 = value.nametittle.uppercased().applyingTransform(.stripDiacritics, reverse: false)
+                               return str2!.contains(str1!)
+                           })
+                           viewModel.dataArray.accept(filteredDataArray)
+                      
+                       }else{
+                           viewModel.dataArray.accept(dataFirsts)
+                          
+                          
+                       }
+                       
+                   }).disposed(by: rxbag)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -75,7 +99,7 @@ extension OrderProductViewController {
           layout.scrollDirection = .vertical // Đặt hướng cuộn là dọc
           
           let collectionViewWidth = view.frame.size.width
-        let cellWidth = (collectionViewWidth - 30)/2
+        let cellWidth = (collectionViewWidth - 10)/2
         dLog(collectionView.frame.size.width)
           dLog(cellWidth)
           layout.itemSize = CGSize(width: cellWidth, height: 250)
@@ -111,6 +135,7 @@ extension OrderProductViewController {
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<FoodCombo>().mapArray(JSONObject: response.data) {
+                    self.viewModel.dataArraySearch.accept(data)
                     self.viewModel.dataArray.accept(data)
                 }
             }

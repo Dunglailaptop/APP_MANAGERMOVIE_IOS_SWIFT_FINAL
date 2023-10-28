@@ -27,6 +27,7 @@ class ItemFoodTableViewCell: UITableViewCell {
         didSet {
             lbl_namefood.text = data?.namefood
             image_icon_check.isHidden = data?.isSelected == ACTIVE ? false:true
+            self.image_food.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.picture)), placeholder:  UIImage(named: "image_defauft_medium"))
         }
     }
     
