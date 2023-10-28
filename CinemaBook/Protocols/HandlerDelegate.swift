@@ -68,3 +68,6 @@ protocol DialogCreateRoomInfo {
 protocol DialogUpdateListCategoryChair {
     func callbackUpdatelistcategorychair()
 }
+protocol CalculatorMoneyDelegate {
+    func callBackCalculatorMoney(amount:Int, position:Int)
+}

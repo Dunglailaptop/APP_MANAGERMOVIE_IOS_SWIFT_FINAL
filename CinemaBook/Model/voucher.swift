@@ -17,6 +17,8 @@ struct voucher:Mappable {
    var note = ""
   var  poster = ""
     
+    init(){}
+    
     init?(map: Map) {
         
     }

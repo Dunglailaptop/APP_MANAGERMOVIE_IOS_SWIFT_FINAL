@@ -75,7 +75,9 @@ public struct APIEndPoint {
         static let urlUpdateCategoryInChairRoom = "/CategoryChair/updateCategoryChairInChairWithRoom"
         static let urlUpdateInfoDetailCategoryChair = "/CategoryChair/updateCategoryChairInfo"
         static let urlGetDetailBillManager = "/Bill/getDetailBill"
-        
+        static let urlCreateNewVoucher = "/voucher/createNewVoucher"
+        static let urlGetDetailInfoVoucher = "voucher/getDetailVoucher"
+        static let urlUpdateInfoVoucher = "/voucher/UpdateInfoVoucher"
     }
     
 }

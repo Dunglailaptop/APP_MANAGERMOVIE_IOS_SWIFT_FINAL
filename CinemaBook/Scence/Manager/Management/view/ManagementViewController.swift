@@ -75,4 +75,8 @@ class ManagementViewController: BaseViewController {
         viewModel.navigationToManagementProductViewController()
     }
     
+    @IBAction func btn_makeToVoucherManagement(_ sender: Any) {
+        viewModel.navigaionToManagementVoucher()
+    }
+    
 }

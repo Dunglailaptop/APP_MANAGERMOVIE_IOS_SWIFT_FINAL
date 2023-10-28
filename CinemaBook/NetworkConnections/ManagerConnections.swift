@@ -65,6 +65,9 @@ enum ManagerConnections {
     case updateCategoryInChairRoom(listchair: updateCateWithChair)
     case updateInfoCategoryChair(infocategory: CategoryChair)
     case getDetailBillInManager(idbill:Int)
+    case createNewVoucher(vouchers: voucher)
+    case getDetailVoucher(idvoucher:Int)
+    case UpdateDetailVoucher(vouchers: voucher)
 }
 
 extension ManagerConnections: TargetType {
@@ -183,6 +186,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlUpdateInfoDetailCategoryChair
         case .getDetailBillInManager(let idbill):
             return APIEndPoint.Name.urlGetDetailBillManager
+        case .createNewVoucher(_):
+            return APIEndPoint.Name.urlCreateNewVoucher
+        case .getDetailVoucher(let idvoucher):
+            return APIEndPoint.Name.urlGetDetailInfoVoucher
+        case .UpdateDetailVoucher(_):
+            return APIEndPoint.Name.urlUpdateInfoVoucher
         }
     
     }
@@ -294,6 +303,12 @@ extension ManagerConnections: TargetType {
             return .post
         case .getDetailBillInManager(_):
             return .get
+        case .createNewVoucher(_):
+            return .post
+        case .getDetailVoucher(_):
+            return .get
+        case .UpdateDetailVoucher(_):
+            return .post
         }
 
         
@@ -427,6 +442,12 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getDetailBillInManager(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .createNewVoucher(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getDetailVoucher(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .UpdateDetailVoucher(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -711,6 +732,29 @@ extension ManagerConnections: TargetType {
             return [
                 "idbill": idbill
             ]
+        case .createNewVoucher(let vouchers):
+            return [
+                "idvoucher": vouchers.idvoucher,
+                "namevoucher": vouchers.namevoucher,
+                "price": vouchers.price,
+                "percent": vouchers.percent,
+                "note": vouchers.note,
+                "poster": vouchers.poster
+            ]
+        case .getDetailVoucher(let idvoucher):
+            return [
+                "Idvoucher": idvoucher
+            ]
+        case .UpdateDetailVoucher(let vouchers):
+            return [
+                "idvoucher": vouchers.idvoucher,
+                "namevoucher": vouchers.namevoucher,
+                "price": vouchers.price,
+                "percent": vouchers.percent,
+                "note": vouchers.note,
+                "poster": vouchers.poster
+                
+            ]
         }
        
     }
@@ -829,6 +873,12 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getDetailBillInManager(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .createNewVoucher(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getDetailVoucher(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .UpdateDetailVoucher(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

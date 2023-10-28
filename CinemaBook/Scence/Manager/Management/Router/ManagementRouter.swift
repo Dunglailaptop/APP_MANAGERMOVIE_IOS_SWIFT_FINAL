@@ -47,4 +47,9 @@ class ManagementRouter {
         let ManagementProduct = MangamentProductViewController()
         sourceView?.navigationController?.pushViewController(ManagementProduct, animated: true)
     }
+    
+    func navigationToManagementVoucher() {
+        let managementVoucher = ManagementVoucherRouter().viewController
+        sourceView?.navigationController?.pushViewController(managementVoucher, animated: true)
+    }
 }

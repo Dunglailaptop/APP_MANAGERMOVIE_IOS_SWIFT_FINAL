@@ -38,6 +38,11 @@ class ManagementViewModel: BaseViewModel{
     func navigationToManagementProductViewController() {
         router?.navigationToManagementProduct()
     }
+    
+    func navigaionToManagementVoucher() {
+        router?.navigationToManagementVoucher()
+    }
+    
 }
 
 

@@ -497,13 +497,26 @@
                                                                                 <constraint firstAttribute="trailing" secondItem="OO4-OH-eVf" secondAttribute="trailing" constant="8" id="yrw-Bm-gjW"/>
                                                                             </constraints>
                                                                         </view>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drp-6x-n7k">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="142"/>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="btn_makeToVoucherManagement:" destination="-1" eventType="touchUpInside" id="R2e-Dl-RNg"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <constraints>
                                                                         <constraint firstItem="vLO-g8-Uk7" firstAttribute="top" secondItem="4Ko-g4-kFa" secondAttribute="top" constant="14" id="1G4-bE-mgY"/>
+                                                                        <constraint firstItem="Drp-6x-n7k" firstAttribute="leading" secondItem="4Ko-g4-kFa" secondAttribute="leading" id="1T6-Rm-5TG"/>
                                                                         <constraint firstItem="vLO-g8-Uk7" firstAttribute="leading" secondItem="4Ko-g4-kFa" secondAttribute="leading" constant="18.5" id="EDt-vs-ZPK"/>
                                                                         <constraint firstAttribute="bottom" secondItem="vLO-g8-Uk7" secondAttribute="bottom" constant="14" id="FLp-Jo-4Zj"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Drp-6x-n7k" secondAttribute="bottom" id="O0t-WP-tpd"/>
                                                                         <constraint firstAttribute="trailing" secondItem="vLO-g8-Uk7" secondAttribute="trailing" constant="18.5" id="k3T-Go-MQk"/>
+                                                                        <constraint firstItem="Drp-6x-n7k" firstAttribute="top" secondItem="4Ko-g4-kFa" secondAttribute="top" id="lld-a6-cYs"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Drp-6x-n7k" secondAttribute="trailing" id="qIZ-YW-lRR"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -520,7 +533,7 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-yv-4TW">
+                                                        <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="p0j-yv-4TW">
                                                             <rect key="frame" x="0.0" y="498" width="374" height="142"/>
                                                             <subviews>
                                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXa-aE-8Mw">
