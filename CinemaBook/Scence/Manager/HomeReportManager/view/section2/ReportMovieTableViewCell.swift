@@ -9,8 +9,11 @@
 import UIKit
 import Charts
 
+
+
 class ReportMovieTableViewCell: UITableViewCell {
 
+ 
     
     var btnArray:[UIButton] = []
     
@@ -85,7 +88,8 @@ extension ReportMovieTableViewCell {
 
     }
 }
-//extension ReportMovieTableViewCell: AxisValueFormatter {
+extension ReportMovieTableViewCell {
+  
 //    func setupBarChart(data:[OrderReportData],barChart:BarChartView){
 //        let groupCount = data.count + 1
 //        let groupSpace = 0.08 //inset padding of everygroup example |<-content->| (<-,-> is inset padding)
@@ -237,5 +241,5 @@ extension ReportMovieTableViewCell {
 //        }
 //        return String(format: "%@", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value))
 //     }
-//
-//}
+
+}

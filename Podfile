@@ -1,5 +1,5 @@
 
- platform :ios, '11.0'
+ platform :ios, '9.0'
 
 target 'CinemaBook' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -27,8 +27,8 @@ pod 'youtube-ios-player-helper'
 pod "QVRWeekView"
 pod 'FSCalendar'
 pod 'BmoViewPager'
-pod 'CHTCollectionViewWaterfallLayout'
-pod 'CollectionViewSlantedLayout'
+# pod 'CHTCollectionViewWaterfallLayout'
+# pod 'CollectionViewSlantedLayout'
 pod 'SquareFlowLayout'
  pod 'FSPagerView'
 pod 'PagingCollectionViewLayout'
@@ -49,4 +49,12 @@ pod 'SpreadsheetView'
   pod 'JGProgressHUD'
   pod 'RealmSwift'
   pod 'SDWebImage'
+ # pod 'Charts'
+# Example: For Swift 5.0
+ pod 'Charts'
+
+
+
+
+
 end
