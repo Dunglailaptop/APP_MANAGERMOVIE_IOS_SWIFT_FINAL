@@ -46,4 +46,16 @@ struct Constans {
         static let POST = 1
     }
     
+    static let REPORT_TYPE_DICTIONARY:[Int:String] = [
+            REPORT_TYPE_TODAY:Utils.getDateString().dateTimeNow,
+            REPORT_TYPE_YESTERDAY:Utils.getDateString().yesterday,
+            REPORT_TYPE_THIS_WEEK:Utils.getDateString().thisWeek,
+            REPORT_TYPE_LAST_MONTH:Utils.getDateString().lastMonth,
+            REPORT_TYPE_THIS_MONTH:Utils.getDateString().thisMonth,
+            REPORT_TYPE_THREE_MONTHS:Utils.getDateString().threeLastMonth,
+            REPORT_TYPE_LAST_YEAR:Utils.getDateString().lastYear,
+            REPORT_TYPE_THIS_YEAR:Utils.getDateString().thisYear,
+            REPORT_TYPE_THREE_YEAR:Utils.getDateString().threeLastYear,
+            REPORT_TYPE_ALL_YEAR:""]
+    
 }

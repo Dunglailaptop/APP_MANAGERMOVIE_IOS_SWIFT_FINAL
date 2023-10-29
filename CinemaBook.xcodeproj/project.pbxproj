@@ -40,6 +40,8 @@
 		B0A147812AEA35EF00668821 /* ManagementItemTicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A1477F2AEA35EF00668821 /* ManagementItemTicketTableViewCell.xib */; };
 		B0A147842AEA387500668821 /* ManagementDetailBillViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A147832AEA387500668821 /* ManagementDetailBillViewModel.swift */; };
 		B0A147862AEA389A00668821 /* ManagementDetailBillRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A147852AEA389A00668821 /* ManagementDetailBillRouter.swift */; };
+		B0A3FCBD2AEE048100468D02 /* ManageReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3FCBB2AEE048100468D02 /* ManageReportViewController.swift */; };
+		B0A3FCBE2AEE048100468D02 /* ManageReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A3FCBC2AEE048100468D02 /* ManageReportViewController.xib */; };
 		B0A40E3F2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */; };
 		B0A40E402AE2DC85008D07FC /* ManagementDetailMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A40E3E2AE2DC85008D07FC /* ManagementDetailMovieViewController.xib */; };
 		B0A410852ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A410842ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift */; };
@@ -533,6 +535,8 @@
 		B0A1477F2AEA35EF00668821 /* ManagementItemTicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementItemTicketTableViewCell.xib; sourceTree = "<group>"; };
 		B0A147832AEA387500668821 /* ManagementDetailBillViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailBillViewModel.swift; sourceTree = "<group>"; };
 		B0A147852AEA389A00668821 /* ManagementDetailBillRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailBillRouter.swift; sourceTree = "<group>"; };
+		B0A3FCBB2AEE048100468D02 /* ManageReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageReportViewController.swift; sourceTree = "<group>"; };
+		B0A3FCBC2AEE048100468D02 /* ManageReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageReportViewController.xib; sourceTree = "<group>"; };
 		B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailMovieViewController.swift; sourceTree = "<group>"; };
 		B0A40E3E2AE2DC85008D07FC /* ManagementDetailMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementDetailMovieViewController.xib; sourceTree = "<group>"; };
 		B0A410842ADED9D20014751B /* ManagementInterestMoviesViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementInterestMoviesViewController + Extension.swift"; sourceTree = "<group>"; };
@@ -1251,6 +1255,39 @@
 			isa = PBXGroup;
 			children = (
 				B0A147832AEA387500668821 /* ManagementDetailBillViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0A3FCB72AEE043700468D02 /* ManageReport */ = {
+			isa = PBXGroup;
+			children = (
+				B0A3FCBA2AEE045B00468D02 /* viewModel */,
+				B0A3FCB92AEE045800468D02 /* Router */,
+				B0A3FCB82AEE045500468D02 /* view */,
+			);
+			path = ManageReport;
+			sourceTree = "<group>";
+		};
+		B0A3FCB82AEE045500468D02 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A3FCBB2AEE048100468D02 /* ManageReportViewController.swift */,
+				B0A3FCBC2AEE048100468D02 /* ManageReportViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0A3FCB92AEE045800468D02 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0A3FCBA2AEE045B00468D02 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -3412,6 +3449,7 @@
 		FE5EA0EF2AAE213C0039DEC3 /* HomeReportManager */ = {
 			isa = PBXGroup;
 			children = (
+				B0A3FCB72AEE043700468D02 /* ManageReport */,
 				B0A9A4562AD660FD005C16C1 /* Router */,
 				B0A9A4552AD660F5005C16C1 /* viewModel */,
 				FE5EA0F32AAE21570039DEC3 /* view */,
@@ -4328,6 +4366,7 @@
 				B0AAFFD02ADE87C500E774AB /* ManagementInterestMoviesViewController.xib in Resources */,
 				FE5C9E8B2AA42BE300FA235D /* Roboto-CondensedItalic.ttf in Resources */,
 				FE5461322AC076B00015DB93 /* ItemCategoryChairTableViewCell.xib in Resources */,
+				B0A3FCBE2AEE048100468D02 /* ManageReportViewController.xib in Resources */,
 				FE491ED82AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.xib in Resources */,
 				FEAC969F2A5A55CD00B49C80 /* Assets.xcassets in Resources */,
 				B0F9D30A2AE6C48800CE70FC /* ManagementDetailRoomViewController.xib in Resources */,
@@ -4688,6 +4727,7 @@
 				B0AAFFD82ADE90D700E774AB /* ManagementInterestMoviesTableViewCell.swift in Sources */,
 				B0A5AEE42AEB97D7007320BE /* ManagementVoucherViewModel.swift in Sources */,
 				FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */,
+				B0A3FCBD2AEE048100468D02 /* ManageReportViewController.swift in Sources */,
 				FEAB99272AC1EAD700F024D5 /* ManagementRoomCreateViewController+Extensions.swift in Sources */,
 				FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */,
 				B0F9D3042AE6BDB600CE70FC /* ItemRoomTableViewCell.swift in Sources */,

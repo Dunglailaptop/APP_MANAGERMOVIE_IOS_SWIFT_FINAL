@@ -54,6 +54,11 @@ class ColorUtils{
         return hexStringToUIColor(hex: "#29292C")
     }
     
+    static func buttonBlueColor() -> UIColor {
+        return hexStringToUIColor(hex:"#0071BB")
+    }
+    
+    
     static func grey()->UIColor{
         return hexStringToUIColor(hex: "#D0D0D0")
     }

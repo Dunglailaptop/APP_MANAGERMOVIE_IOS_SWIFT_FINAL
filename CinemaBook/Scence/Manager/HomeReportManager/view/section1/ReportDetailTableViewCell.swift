@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxRelay
+import ObjectMapper
 
 class ReportDetailTableViewCell: UITableViewCell {
-
+   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
@@ -20,5 +26,9 @@ class ReportDetailTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
+}
+
+extension ReportDetailTableViewCell {
+   
 }

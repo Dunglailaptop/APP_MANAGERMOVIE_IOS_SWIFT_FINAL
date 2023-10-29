@@ -77,6 +77,13 @@ public extension UIView {
         layer.shadowRadius = 7
         layer.backgroundColor = ColorUtils.white().cgColor
     }
+    
+    func setupCornerRadius(_ cornerRadius: CGFloat = 0, maskedCorners: CACornerMask? = nil) {
+        layer.cornerRadius = cornerRadius
+        if let corners = maskedCorners {
+            layer.maskedCorners = corners
+        }
+    }
 }
 
 enum ToastVisibility {

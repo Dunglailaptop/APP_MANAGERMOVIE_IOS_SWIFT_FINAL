@@ -66,11 +66,17 @@ final class CustomTabBar: UIStackView {
     }
     
     
+
     private func setupProperties() {
         distribution = .fillEqually
         alignment = .center
         
-      
+        if #available(iOS 13.0, *) {
+            backgroundColor = .systemIndigo
+        } else {
+            // Fallback on earlier versions
+        }
+        setupCornerRadius(20)
         
         customItemViews.forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false

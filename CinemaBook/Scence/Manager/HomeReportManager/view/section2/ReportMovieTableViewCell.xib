@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ReportMovieTableViewCell" customModule="CinemaBook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkn-9n-o0g">
@@ -51,13 +51,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I80-CL-q3U">
-                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1250" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-Wc-1rJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="1200" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1250" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-1M-m9I">
-                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-1M-m9I">
+                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -69,9 +69,12 @@
                                                                 <real key="value" value="15"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MjQ-xp-KtH"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-Pi-tkt">
-                                                        <rect key="frame" x="121" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-Pi-tkt">
+                                                        <rect key="frame" x="126" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Hôm qua"/>
@@ -86,9 +89,12 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MIA-ve-GOY"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-wz-3yW">
-                                                        <rect key="frame" x="242" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-wz-3yW">
+                                                        <rect key="frame" x="252" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tuần này"/>
@@ -103,9 +109,12 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Cpc-T4-Lft"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCa-ra-mhx">
-                                                        <rect key="frame" x="363" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCa-ra-mhx">
+                                                        <rect key="frame" x="378" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tháng này"/>
@@ -120,9 +129,12 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GZC-Kl-1O6"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOQ-oi-r3D">
-                                                        <rect key="frame" x="484" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOQ-oi-r3D">
+                                                        <rect key="frame" x="504" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tháng trước"/>
@@ -137,12 +149,15 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6IX-Ob-tBK"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-0K-2Kk">
-                                                        <rect key="frame" x="605" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-0K-2Kk">
+                                                        <rect key="frame" x="630" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="3 Tháng gần nhất"/>
+                                                        <state key="normal" title="3 Tháng "/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                 <real key="value" value="15"/>
@@ -154,9 +169,12 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HKS-is-3hU"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="if6-wV-RMi">
-                                                        <rect key="frame" x="726" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="if6-wV-RMi">
+                                                        <rect key="frame" x="756" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Năm nay "/>
@@ -171,9 +189,12 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nLz-yd-aGC"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-YG-4aW">
-                                                        <rect key="frame" x="847" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iU-YG-4aW">
+                                                        <rect key="frame" x="882" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Năm trước"/>
@@ -188,9 +209,12 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WpO-c8-LMU"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-nV-58G">
-                                                        <rect key="frame" x="968" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEz-nV-58G">
+                                                        <rect key="frame" x="1008" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="3 năm gần nhất"/>
@@ -205,9 +229,12 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="w1z-UF-ufm"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWY-4F-sdL">
-                                                        <rect key="frame" x="1089" y="0.0" width="111" height="30"/>
+                                                    <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWY-4F-sdL">
+                                                        <rect key="frame" x="1134" y="0.0" width="116" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Tất cả các năm"/>
@@ -222,13 +249,16 @@
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="actionChooseReportType:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RgS-aJ-on3"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="1200" id="KSB-x9-EA8"/>
+                                            <constraint firstAttribute="width" constant="1250" id="KSB-x9-EA8"/>
                                             <constraint firstAttribute="trailing" secondItem="xd9-Wc-1rJ" secondAttribute="trailing" id="Lln-xs-ZU1"/>
                                             <constraint firstAttribute="bottom" secondItem="xd9-Wc-1rJ" secondAttribute="bottom" id="Lz0-Ee-ohc"/>
                                             <constraint firstItem="xd9-Wc-1rJ" firstAttribute="leading" secondItem="I80-CL-q3U" secondAttribute="leading" id="WuF-7j-9UE"/>
@@ -257,31 +287,32 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvL-Rx-1jq">
-                        <rect key="frame" x="0.0" y="80" width="320" height="150"/>
+                        <rect key="frame" x="0.0" y="81" width="320" height="270"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMg-Kj-NSO">
-                                <rect key="frame" x="0.0" y="1" width="320" height="148"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMg-Kj-NSO">
+                                <rect key="frame" x="0.0" y="1" width="320" height="268"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-no-data" translatesAutoresizingMaskIntoConstraints="NO" id="Y62-JF-18I">
-                                        <rect key="frame" x="130" y="20" width="60" height="60"/>
+                                        <rect key="frame" x="130" y="104" width="60" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="5Ju-Y1-Mxx"/>
-                                            <constraint firstAttribute="height" constant="60" id="Vrb-mD-9NO"/>
+                                            <constraint firstAttribute="width" constant="60" id="IER-ZF-Zry"/>
+                                            <constraint firstAttribute="height" constant="60" id="PjD-wc-DcO"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hiện tại chưa có dữ liệu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aq-Bd-93a">
-                                        <rect key="frame" x="81.333333333333329" y="90" width="157.66666666666669" height="18"/>
+                                        <rect key="frame" x="81.333333333333329" y="164" width="157.66666666666669" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Y62-JF-18I" firstAttribute="top" secondItem="eMg-Kj-NSO" secondAttribute="top" constant="20" id="6ct-zL-bQo"/>
+                                    <constraint firstItem="5aq-Bd-93a" firstAttribute="centerX" secondItem="eMg-Kj-NSO" secondAttribute="centerX" id="6vB-wL-PuI"/>
                                     <constraint firstItem="5aq-Bd-93a" firstAttribute="centerX" secondItem="eMg-Kj-NSO" secondAttribute="centerX" id="EHc-gs-HhN"/>
-                                    <constraint firstItem="Y62-JF-18I" firstAttribute="centerX" secondItem="eMg-Kj-NSO" secondAttribute="centerX" id="NhN-LI-2Dh"/>
-                                    <constraint firstItem="5aq-Bd-93a" firstAttribute="top" secondItem="Y62-JF-18I" secondAttribute="bottom" constant="10" id="iLL-dS-0hZ"/>
+                                    <constraint firstItem="Y62-JF-18I" firstAttribute="centerY" secondItem="eMg-Kj-NSO" secondAttribute="centerY" id="JF0-QE-lri"/>
+                                    <constraint firstItem="5aq-Bd-93a" firstAttribute="top" secondItem="Y62-JF-18I" secondAttribute="bottom" id="k2s-zu-sW7"/>
+                                    <constraint firstItem="Y62-JF-18I" firstAttribute="centerX" secondItem="eMg-Kj-NSO" secondAttribute="centerX" id="pMJ-tq-GSl"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -291,29 +322,29 @@
                             <constraint firstAttribute="bottom" secondItem="eMg-Kj-NSO" secondAttribute="bottom" constant="1" id="8XM-7i-V9y"/>
                             <constraint firstAttribute="trailing" secondItem="eMg-Kj-NSO" secondAttribute="trailing" id="90W-1L-NY7"/>
                             <constraint firstItem="eMg-Kj-NSO" firstAttribute="leading" secondItem="fvL-Rx-1jq" secondAttribute="leading" id="cKH-O6-c97"/>
-                            <constraint firstAttribute="height" constant="150" id="yWO-zM-IyW"/>
+                            <constraint firstAttribute="height" constant="270" id="yWO-zM-IyW"/>
                         </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="h5w-pe-yHT">
-                        <rect key="frame" x="0.0" y="230" width="320" height="80"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="h5w-pe-yHT">
+                        <rect key="frame" x="0.0" y="352" width="320" height="48"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P46-oz-4Dt">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="23.666666666666668"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TỔNG VÉ XEM PHIM:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-1F-kcp">
-                                        <rect key="frame" x="42" y="12.333333333333343" width="133.33333333333334" height="15.666666666666664"/>
+                                        <rect key="frame" x="42" y="3.9999999999999991" width="133.33333333333334" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z7-qo-fEg">
-                                        <rect key="frame" x="289.66666666666669" y="9.9999999999999982" width="10.333333333333314" height="20.333333333333329"/>
+                                        <rect key="frame" x="289.66666666666669" y="1.6666666666666856" width="10.333333333333314" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket-2" translatesAutoresizingMaskIntoConstraints="NO" id="uJc-hz-GSt">
-                                        <rect key="frame" x="20" y="9" width="22" height="22"/>
+                                        <rect key="frame" x="20" y="0.66666666666668561" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="22" id="Wnq-7Q-nys"/>
                                             <constraint firstAttribute="height" constant="22" id="X9G-AE-fgw"/>
@@ -331,22 +362,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-Fx-rIU">
-                                <rect key="frame" x="0.0" y="40" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="24.666666666666686" width="320" height="23.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHỜ XÁC NHẬN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erg-YB-pOV">
-                                        <rect key="frame" x="41.999999999999993" y="12.333333333333314" width="108.33333333333331" height="15.666666666666664"/>
+                                        <rect key="frame" x="41.999999999999993" y="3.6666666666666279" width="108.33333333333331" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pu-3q-7of">
-                                        <rect key="frame" x="289.66666666666669" y="9.9999999999999982" width="10.333333333333314" height="20.333333333333329"/>
+                                        <rect key="frame" x="289.66666666666669" y="1.3333333333333144" width="10.333333333333314" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ticket-2" translatesAutoresizingMaskIntoConstraints="NO" id="iUA-rb-Cg2">
-                                        <rect key="frame" x="20" y="9" width="22" height="22"/>
+                                        <rect key="frame" x="20" y="0.66666666666662877" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="2aB-ZX-olz"/>
                                             <constraint firstAttribute="width" constant="22" id="g1N-dw-oXm"/>
@@ -364,6 +395,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </stackView>
                 </subviews>
                 <constraints>
@@ -376,14 +408,26 @@
                     <constraint firstItem="Lkn-9n-o0g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Rgm-vz-Kw9"/>
                     <constraint firstAttribute="trailing" secondItem="h5w-pe-yHT" secondAttribute="trailing" id="Wgs-w1-gUB"/>
                     <constraint firstItem="yny-TQ-K7G" firstAttribute="top" secondItem="Lkn-9n-o0g" secondAttribute="bottom" id="Y5V-ne-lQK"/>
-                    <constraint firstItem="fvL-Rx-1jq" firstAttribute="top" secondItem="yny-TQ-K7G" secondAttribute="bottom" id="eQ7-VJ-ESY"/>
+                    <constraint firstItem="fvL-Rx-1jq" firstAttribute="top" secondItem="yny-TQ-K7G" secondAttribute="bottom" constant="1" id="eQ7-VJ-ESY"/>
                     <constraint firstAttribute="trailing" secondItem="fvL-Rx-1jq" secondAttribute="trailing" id="gsM-PS-Vb6"/>
                     <constraint firstAttribute="trailing" secondItem="Lkn-9n-o0g" secondAttribute="trailing" id="iq3-3U-TCm"/>
-                    <constraint firstItem="h5w-pe-yHT" firstAttribute="top" secondItem="fvL-Rx-1jq" secondAttribute="bottom" id="lMH-K1-fxT"/>
+                    <constraint firstItem="h5w-pe-yHT" firstAttribute="top" secondItem="fvL-Rx-1jq" secondAttribute="bottom" constant="1" id="lMH-K1-fxT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <connections>
+                <outlet property="btn_all" destination="iWY-4F-sdL" id="Ich-pd-OvK"/>
+                <outlet property="btn_last_month" destination="pOQ-oi-r3D" id="mtt-0K-vj4"/>
+                <outlet property="btn_last_year" destination="1iU-YG-4aW" id="8Eh-Ps-EfI"/>
+                <outlet property="btn_this_month" destination="bCa-ra-mhx" id="571-yL-alG"/>
+                <outlet property="btn_this_weak" destination="8BK-wz-3yW" id="SZr-5f-TMA"/>
+                <outlet property="btn_this_year" destination="if6-wV-RMi" id="XUc-TH-adC"/>
+                <outlet property="btn_three_month" destination="YWP-0K-2Kk" id="6mS-5c-Tbe"/>
+                <outlet property="btn_three_year" destination="cEz-nV-58G" id="3Ot-2y-cfk"/>
+                <outlet property="btn_today" destination="fVV-1M-m9I" id="oav-SW-fGy"/>
+                <outlet property="btn_yesterday" destination="I0R-Pi-tkt" id="RKH-03-dch"/>
+            </connections>
             <point key="canvasLocation" x="-18.320610687022899" y="-12.67605633802817"/>
         </tableViewCell>
     </objects>

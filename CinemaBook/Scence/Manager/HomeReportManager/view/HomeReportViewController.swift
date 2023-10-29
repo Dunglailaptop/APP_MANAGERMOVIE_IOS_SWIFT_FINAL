@@ -20,12 +20,24 @@ class HomeReportViewController: BaseViewController {
     @IBOutlet weak var lbl_time: UILabel!
     
     @IBOutlet weak var lbl_date: UILabel!
+    
+    @IBOutlet weak var view_all: UIView!
+    
+    @IBOutlet weak var view_all_report: UIView!
+    @IBOutlet weak var lbl_tittle_all: UILabel!
+    
+    @IBOutlet weak var lbl_tittle_all_report: UILabel!
+    var view1 = ManageReportViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
         resgiter()
         bindingtable()
         setup()
+        lbl_tittle_all.textColor = .systemBlue
+        view_all.backgroundColor = ColorUtils.blueButton()
+        lbl_tittle_all_report.textColor = ColorUtils.gray_600()
+        view_all_report.backgroundColor = .clear
         // Do any additional setup after loading the view.
     }
         deinit {
@@ -42,8 +54,22 @@ class HomeReportViewController: BaseViewController {
 
     }
 
-   
-
+    @IBAction func btn_choose_all(_ sender: Any) {
+        lbl_tittle_all.textColor = .systemBlue
+        view_all.backgroundColor = ColorUtils.blueButton()
+        lbl_tittle_all_report.textColor = ColorUtils.gray_600()
+        view_all_report.backgroundColor = .clear
+        view1.remove()
+    }
+    
+    @IBAction func btn_choose_all_report(_ sender: Any) {
+        lbl_tittle_all.textColor = ColorUtils.gray_600()
+        view_all.backgroundColor = .clear
+        lbl_tittle_all_report.textColor = .systemBlue
+        view_all_report.backgroundColor = ColorUtils.blueButton()
+        addTopCustomViewController(view1, addTopCustom: 60)
+    }
+    
 }
 extension HomeReportViewController: UITableViewDelegate {
     func resgiter() {
@@ -95,9 +121,9 @@ extension HomeReportViewController: UITableViewDelegate {
         case 0:
             return 200
         case 1:
-            return 310
+            return 410
         case 2:
-            return 310
+            return 410
         default:
             return 200
         }
