@@ -71,6 +71,7 @@ enum ManagerConnections {
     case createFoodNew(food:Food)
     case getDetailfood(idfood:Int)
     case updateinfodetailfood(food:Food)
+    case GetReportTicket(report_type:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -201,6 +202,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetDetailFood
         case .updateinfodetailfood(_):
             return APIEndPoint.Name.urlUpdateInfoDetailfood
+        case .GetReportTicket(let report_type):
+            return APIEndPoint.Name.urlReportTicketAll
         }
     
     }
@@ -324,6 +327,9 @@ extension ManagerConnections: TargetType {
             return .get
         case .updateinfodetailfood(_):
             return .post
+        case .GetReportTicket(_):
+            return .get
+
             
         }
 
@@ -470,6 +476,8 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .updateinfodetailfood(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .GetReportTicket(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -802,6 +810,10 @@ extension ManagerConnections: TargetType {
                 "datecreate": "2023-10-28T16:31:56.834Z",
                 "namecategoryfood": "string"
             ]
+        case .GetReportTicket(let report_type):
+            return [
+                "report_type": report_type
+            ]
         }
        
     }
@@ -932,6 +944,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .updateinfodetailfood(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .GetReportTicket(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

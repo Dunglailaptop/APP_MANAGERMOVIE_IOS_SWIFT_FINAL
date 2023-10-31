@@ -95,7 +95,7 @@ extension HomeReportViewController: UITableViewDelegate {
                  return cell
             case 1:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReportMovieTableViewCell", for: indexPath) as! ReportMovieTableViewCell
-                              
+                cell.viewModel = self.viewModel
                            cell.selectionStyle = .none
                  
                  return cell
@@ -121,9 +121,9 @@ extension HomeReportViewController: UITableViewDelegate {
         case 0:
             return 200
         case 1:
-            return 410
+            return 450
         case 2:
-            return 410
+            return 450
         default:
             return 200
         }

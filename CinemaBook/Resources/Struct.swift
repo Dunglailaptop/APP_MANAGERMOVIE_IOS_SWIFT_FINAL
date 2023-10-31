@@ -81,6 +81,7 @@ public struct APIEndPoint {
         static let urlcreateNewFood = "/FoodCombo/CreateFoodNew"
         static let urlGetDetailFood = "/FoodCombo/getDetailFood"
         static let urlUpdateInfoDetailfood = "/FoodCombo/UpdateFood"
+        static let urlReportTicketAll = "/Report/ReportTicketALL"
     }
     
 }

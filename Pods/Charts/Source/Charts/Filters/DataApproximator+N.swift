@@ -9,13 +9,14 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension CGPoint {
     fileprivate func distanceToLine(from linePoint1: CGPoint, to linePoint2: CGPoint) -> CGFloat {
         let dx = linePoint2.x - linePoint1.x
         let dy = linePoint2.y - linePoint1.y
         
-        let dividend = fabs(dy * self.x - dx * self.y - linePoint1.x * linePoint2.y + linePoint2.x * linePoint1.y)
+        let dividend = abs(dy * self.x - dx * self.y - linePoint1.x * linePoint2.y + linePoint2.x * linePoint1.y)
         let divisor = sqrt(dx * dx + dy * dy)
         
         return dividend / divisor
@@ -77,12 +78,12 @@ extension DataApproximator {
         var keep = [Bool](repeating: false, count: points.count)
         
         // first and last always stay
-        keep[0] = true
-        keep[points.count - 1] = true
+        keep[points.startIndex] = true
+        keep[points.endIndex - 1] = true
         var currentStoredPoints = 2
         
         var queue = [LineAlt]()
-        let line = LineAlt(start: 0, end: points.count - 1, points: points)
+        let line = LineAlt(start: points.startIndex, end: points.endIndex - 1, points: points)
         queue.append(line)
         
         repeat {
@@ -112,7 +113,7 @@ extension DataApproximator {
         } while !queue.isEmpty
         
         // create a new array with series, only take the kept ones
-        let reducedEntries = points.enumerated().flatMap { (index: Int, point: CGPoint) -> CGPoint? in
+        let reducedEntries = points.enumerated().compactMap { (index: Int, point: CGPoint) -> CGPoint? in
             return keep[index] ? point : nil
         }
         

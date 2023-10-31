@@ -58,6 +58,26 @@ class ColorUtils{
         return hexStringToUIColor(hex:"#0071BB")
     }
     
+    static func blue_first() -> UIColor {
+        return hexStringToUIColor(hex: "2672BC")
+    }
+    
+    static func green_export() -> UIColor {
+        return hexStringToUIColor(hex: "3AC382")
+    }
+    
+    static func water_import() -> UIColor {
+        return hexStringToUIColor(hex: "43CEE3")
+    }
+    
+    static func orange_now() -> UIColor {
+        return hexStringToUIColor(hex: "F8A234")
+    }
+    
+    static func pink_cancel() -> UIColor {
+        return hexStringToUIColor(hex: "F65D70")
+    }
+    
     
     static func grey()->UIColor{
         return hexStringToUIColor(hex: "#D0D0D0")

@@ -22,10 +22,10 @@ open class AxisBase: ComponentBase
     }
     
     /// Custom formatter that is used instead of the auto-formatter if set
-    private var _axisValueFormatter: IAxisValueFormatter?
+    private lazy var _axisValueFormatter: AxisValueFormatter = DefaultAxisValueFormatter(decimals: decimals)
     
     @objc open var labelFont = NSUIFont.systemFont(ofSize: 10.0)
-    @objc open var labelTextColor = NSUIColor.black
+    @objc open var labelTextColor = NSUIColor.labelOrBlack
     
     @objc open var axisLineColor = NSUIColor.gray
     @objc open var axisLineWidth = CGFloat(0.5)
@@ -63,9 +63,14 @@ open class AxisBase: ComponentBase
     private var _limitLines = [ChartLimitLine]()
     
     /// Are the LimitLines drawn behind the data or in front of the data?
-    /// 
+    ///
     /// **default**: false
     @objc open var drawLimitLinesBehindDataEnabled = false
+    
+    /// Are the grid lines drawn behind the data or in front of the data?
+    ///
+    /// **default**: true
+    @objc open var drawGridLinesBehindDataEnabled = true
 
     /// the flag can be used to turn off the antialias for grid lines
     @objc open var gridAntialiasEnabled = true
@@ -128,28 +133,18 @@ open class AxisBase: ComponentBase
     
     @objc open func getLongestLabel() -> String
     {
-        var longest = ""
-        
-        for i in 0 ..< entries.count
-        {
-            let text = getFormattedLabel(i)
-            
-            if longest.count < text.count
-            {
-                longest = text
-            }
-        }
-        
-        return longest
+        let longest = entries.indices
+            .lazy
+            .map(getFormattedLabel(_:))
+            .max(by: \.count)
+
+        return longest ?? ""
     }
     
-    /// - returns: The formatted label at the specified index. This will either use the auto-formatter or the custom formatter (if one is set).
+    /// - Returns: The formatted label at the specified index. This will either use the auto-formatter or the custom formatter (if one is set).
     @objc open func getFormattedLabel(_ index: Int) -> String
     {
-        if index < 0 || index >= entries.count
-        {
-            return ""
-        }
+        guard entries.indices.contains(index) else { return "" }
         
         return valueFormatter?.stringForValue(entries[index], axis: self) ?? ""
     }
@@ -157,18 +152,17 @@ open class AxisBase: ComponentBase
     /// Sets the formatter to be used for formatting the axis labels.
     /// If no formatter is set, the chart will automatically determine a reasonable formatting (concerning decimals) for all the values that are drawn inside the chart.
     /// Use `nil` to use the formatter calculated by the chart.
-    @objc open var valueFormatter: IAxisValueFormatter?
+    @objc open var valueFormatter: AxisValueFormatter?
     {
         get
         {
-            if _axisValueFormatter == nil ||
-                (_axisValueFormatter is DefaultAxisValueFormatter &&
-                    (_axisValueFormatter as! DefaultAxisValueFormatter).hasAutoDecimals &&
-                    (_axisValueFormatter as! DefaultAxisValueFormatter).decimals != decimals)
+            if _axisValueFormatter is DefaultAxisValueFormatter &&
+            (_axisValueFormatter as! DefaultAxisValueFormatter).hasAutoDecimals &&
+                (_axisValueFormatter as! DefaultAxisValueFormatter).decimals != decimals
             {
-                _axisValueFormatter = DefaultAxisValueFormatter(decimals: decimals)
+                (self._axisValueFormatter as! DefaultAxisValueFormatter).decimals = self.decimals
             }
-            
+
             return _axisValueFormatter
         }
         set
@@ -187,6 +181,11 @@ open class AxisBase: ComponentBase
     /// 
     /// **default**: false
     @objc open var isDrawLimitLinesBehindDataEnabled: Bool { return drawLimitLinesBehindDataEnabled }
+    
+    /// Are the grid lines drawn behind the data or in front of the data?
+    ///
+    /// **default**: true
+    @objc open var isDrawGridLinesBehindDataEnabled: Bool { return drawGridLinesBehindDataEnabled }
     
     /// Extra spacing for `axisMinimum` to be added to automatically calculated `axisMinimum`
     @objc open var spaceMin: Double = 0.0
@@ -213,6 +212,16 @@ open class AxisBase: ComponentBase
     /// the total range of values this axis covers
     @objc open var axisRange = Double(0)
     
+    /// The minumum number of labels on the axis
+    @objc open var axisMinLabels = Int(2) {
+        didSet { axisMinLabels = axisMinLabels > 0 ? axisMinLabels : oldValue }
+    }
+    
+    /// The maximum number of labels on the axis
+    @objc open var axisMaxLabels = Int(25) {
+        didSet { axisMaxLabels = axisMaxLabels > 0 ? axisMaxLabels : oldValue }
+    }
+    
     /// the number of label entries the axis should have
     /// max = 25,
     /// min = 2,
@@ -226,17 +235,9 @@ open class AxisBase: ComponentBase
         }
         set
         {
-            _labelCount = newValue
-            
-            if _labelCount > 25
-            {
-                _labelCount = 25
-            }
-            if _labelCount < 2
-            {
-                _labelCount = 2
-            }
-            
+            let range = axisMinLabels...axisMaxLabels as ClosedRange
+            _labelCount = newValue.clamped(to: range)
+                        
             forceLabelsEnabled = false
         }
     }
@@ -247,7 +248,7 @@ open class AxisBase: ComponentBase
         forceLabelsEnabled = force
     }
     
-    /// - returns: `true` if focing the y-label count is enabled. Default: false
+    /// `true` if focing the y-label count is enabled. Default: false
     @objc open var isForceLabelsEnabled: Bool { return forceLabelsEnabled }
     
     /// Adds a new ChartLimitLine to this axis.
@@ -259,14 +260,8 @@ open class AxisBase: ComponentBase
     /// Removes the specified ChartLimitLine from the axis.
     @objc open func removeLimitLine(_ line: ChartLimitLine)
     {
-        for i in 0 ..< _limitLines.count
-        {
-            if _limitLines[i] === line
-            {
-                _limitLines.remove(at: i)
-                return
-            }
-        }
+        guard let i = _limitLines.firstIndex(of: line) else { return }
+        _limitLines.remove(at: i)
     }
     
     /// Removes all LimitLines from the axis.
@@ -275,7 +270,7 @@ open class AxisBase: ComponentBase
         _limitLines.removeAll(keepingCapacity: false)
     }
     
-    /// - returns: The LimitLines of this axis.
+    /// The LimitLines of this axis.
     @objc open var limitLines : [ChartLimitLine]
     {
         return _limitLines
@@ -334,8 +329,10 @@ open class AxisBase: ComponentBase
     }
     
     /// Calculates the minimum, maximum and range values of the YAxis with the given minimum and maximum values from the chart data.
-    /// - parameter dataMin: the y-min value according to chart data
-    /// - parameter dataMax: the y-max value according to chart
+    ///
+    /// - Parameters:
+    ///   - dataMin: the y-min value according to chart data
+    ///   - dataMax: the y-max value according to chart
     @objc open func calculate(min dataMin: Double, max dataMax: Double)
     {
         // if custom, use value as is, else use data value
