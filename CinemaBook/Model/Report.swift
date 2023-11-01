@@ -60,3 +60,23 @@ struct ReportTicket: Mappable {
          totalpricefoodcomboorderwait <- map["totalpricefoodcomboorderwait"]
     }
 }
+struct ReportMovie: Mappable {
+            var totals = 0
+            var idmovie = 0
+            var poster = ""
+            var datebill = ""
+    
+    init() {}
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+         totals <- map["totals"]
+         idmovie <- map["idmovie"]
+         poster <- map["poster"]
+         datebill <- map["datebill"]
+    }
+    
+}

@@ -72,6 +72,7 @@ enum ManagerConnections {
     case getDetailfood(idfood:Int)
     case updateinfodetailfood(food:Food)
     case GetReportTicket(report_type:Int)
+    case ReportMovie(report_type:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -204,6 +205,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlUpdateInfoDetailfood
         case .GetReportTicket(let report_type):
             return APIEndPoint.Name.urlReportTicketAll
+        case .ReportMovie(let report_type):
+            return APIEndPoint.Name.urlReportMovie
         }
     
     }
@@ -329,7 +332,8 @@ extension ManagerConnections: TargetType {
             return .post
         case .GetReportTicket(_):
             return .get
-
+        case .ReportMovie(_):
+            return .get
             
         }
 
@@ -477,6 +481,8 @@ extension ManagerConnections: TargetType {
         case .updateinfodetailfood(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .GetReportTicket(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .ReportMovie(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -814,6 +820,10 @@ extension ManagerConnections: TargetType {
             return [
                 "report_type": report_type
             ]
+        case .ReportMovie(let report_type):
+            return [
+                "report_type": report_type
+            ]
         }
        
     }
@@ -945,6 +955,8 @@ extension ManagerConnections: TargetType {
         case .updateinfodetailfood(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .GetReportTicket(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .ReportMovie(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }

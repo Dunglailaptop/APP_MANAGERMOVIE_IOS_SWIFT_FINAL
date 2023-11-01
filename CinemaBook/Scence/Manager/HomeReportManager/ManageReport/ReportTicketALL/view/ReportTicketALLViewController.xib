@@ -11,7 +11,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportTicketALLViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_all" destination="3aL-Or-mkR" id="vzZ-vB-Cie"/>
+                <outlet property="btn_last_month" destination="FZI-1v-dY5" id="Js3-Ww-eej"/>
+                <outlet property="btn_last_year" destination="B7Z-Vu-f2S" id="ipU-71-OzC"/>
+                <outlet property="btn_this_month" destination="SST-pS-Qe5" id="ipK-x5-6E5"/>
+                <outlet property="btn_this_weak" destination="dB8-k5-sKu" id="yCU-Xt-eud"/>
+                <outlet property="btn_this_year" destination="8ei-3g-aCM" id="5tB-ki-iao"/>
+                <outlet property="btn_three_month" destination="wv1-Q6-Rdf" id="b5A-tq-x8q"/>
+                <outlet property="btn_three_year" destination="BY6-Aa-mT5" id="LjA-3y-nYQ"/>
+                <outlet property="btn_today" destination="kgm-yd-mB0" id="jCW-eu-v1E"/>
+                <outlet property="btn_yesterday" destination="OSZ-45-obu" id="X2c-Pm-Ods"/>
+                <outlet property="lbl_total_bill" destination="q3Y-nO-9Rv" id="CLb-NI-6me"/>
+                <outlet property="lbl_total_bill_wait" destination="gAq-Dk-k3f" id="qmg-jT-4Oc"/>
+                <outlet property="lbl_total_food" destination="9Es-dN-aVe" id="oPN-c5-XEO"/>
+                <outlet property="lbl_total_food_wait" destination="orD-vn-MBj" id="gmD-O9-lMf"/>
+                <outlet property="lbl_total_food_with_bill" destination="DbS-Ii-vlY" id="jLG-24-REi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_bar_chart" destination="4uw-4z-5N5" id="gT4-GK-tNf"/>
+                <outlet property="view_no_data" destination="9rA-jS-cNV" id="cPS-NC-co1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -88,6 +105,9 @@
                                                                     <real key="value" value="15"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="Dsw-2f-uMQ"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSZ-45-obu">
                                                             <rect key="frame" x="126" y="0.0" width="116" height="30"/>
@@ -105,6 +125,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="Dgg-Ey-kTE"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB8-k5-sKu">
                                                             <rect key="frame" x="252" y="0.0" width="116" height="30"/>
@@ -122,6 +145,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="dxM-HF-jMH"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SST-pS-Qe5">
                                                             <rect key="frame" x="378" y="0.0" width="116" height="30"/>
@@ -139,6 +165,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="Q6m-3d-VeG"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZI-1v-dY5">
                                                             <rect key="frame" x="504" y="0.0" width="116" height="30"/>
@@ -156,6 +185,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="b8j-AI-fz9"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv1-Q6-Rdf">
                                                             <rect key="frame" x="630" y="0.0" width="116" height="30"/>
@@ -173,6 +205,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="M16-W9-4ki"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ei-3g-aCM">
                                                             <rect key="frame" x="756" y="0.0" width="116" height="30"/>
@@ -190,6 +225,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="6cY-Dv-qw3"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7Z-Vu-f2S">
                                                             <rect key="frame" x="882" y="0.0" width="116" height="30"/>
@@ -207,6 +245,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="XnQ-2x-gnO"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY6-Aa-mT5">
                                                             <rect key="frame" x="1008" y="0.0" width="116" height="30"/>
@@ -224,6 +265,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="l3c-UK-Bbd"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aL-Or-mkR">
                                                             <rect key="frame" x="1134" y="0.0" width="116" height="30"/>
@@ -241,6 +285,9 @@
                                                                     <real key="value" value="1"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="actionChooseReportType:" destination="-1" eventType="touchUpInside" id="Vdy-Z4-1DT"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>

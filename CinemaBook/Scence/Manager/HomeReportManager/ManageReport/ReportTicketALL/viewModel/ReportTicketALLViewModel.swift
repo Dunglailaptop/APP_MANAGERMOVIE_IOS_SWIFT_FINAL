@@ -14,6 +14,10 @@ class ReportTicketALLViewModel: BaseViewModel{
     private(set) weak var view: ReportTicketALLViewController?
     private var router: ReportTicketALLRouter?
    
+    public var data: BehaviorRelay<(date_string:String,report_type:Int)> = BehaviorRelay(value: (date_string:Utils.getCurrentDateStringformatMysqlyymmdd(),report_type:1))
+    
+    public var dataTicketReport: BehaviorRelay<ReportTotalAll> = BehaviorRelay(value: ReportTotalAll())
+    
     func bind(view: ReportTicketALLViewController, router: ReportTicketALLRouter){
         self.view = view
         self.router = router
@@ -23,4 +27,13 @@ class ReportTicketALLViewModel: BaseViewModel{
         router?.makeToPopViewController()
     }
  
+}
+extension ReportTicketALLViewModel {
+    func getReportTicket() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.GetReportTicket(report_type: data.value.report_type))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
 }
