@@ -72,6 +72,64 @@ class ChartUtils: NSObject {
         chartView.leftAxis.valueFormatter = customFormatter as! AxisValueFormatter
     }
     
+    static func customBarChart2(chartView : BarChartView,barChartItems:[BarChartDataEntry],xLabel:[String]=[],color:[UIColor]?=nil,drawValuesOnDataSet:Bool=false) {
+        chartView.noDataText = "Chưa có dữ liệu !!"
+        //Bar Chart
+        let barChartDataSet = BarChartDataSet(entries: barChartItems, label: "")
+        barChartDataSet.valueColors = [ColorUtils.green_600(),ColorUtils.red_400(),ColorUtils.orange_brand_900()]
+        barChartDataSet.valueFont = UIFont.systemFont(ofSize: 9, weight: .semibold)
+        barChartDataSet.valueFormatter = CustomValueFormater()
+        color != nil ? barChartDataSet.setColors(color!,alpha: 1) : barChartDataSet.setColors(ColorUtils.blue_brand_700())
+        
+    
+        barChartDataSet.drawValuesEnabled = drawValuesOnDataSet
+        barChartDataSet.drawIconsEnabled = false
+        chartView.data = BarChartData(dataSet: barChartDataSet)
+        
+
+        
+        chartView.legend.enabled = false
+        chartView.chartDescription.enabled = false
+        chartView.backgroundColor = UIColor.white
+        chartView.leftAxis.drawAxisLineEnabled = true
+        chartView.leftAxis.drawGridLinesEnabled = true
+        chartView.leftAxis.axisLineWidth = 1
+        chartView.leftAxis.axisMinimum = 0
+        chartView.leftAxis.valueFormatter = CustomAxisValueFormatter()
+        
+        chartView.rightAxis.enabled = false
+        
+        chartView.xAxis.labelFont = UIFont.systemFont(ofSize: 10)
+        chartView.xAxis.drawAxisLineEnabled = true
+        chartView.xAxis.labelPosition = .bottom
+        chartView.xAxis.drawGridLinesEnabled = false
+        chartView.xAxis.axisLineWidth = 1
+        chartView.xAxis.axisMinimum = -1
+        chartView.xAxis.axisMaximum = Double(barChartItems.count)
+        chartView.xAxis.labelRotationAngle = -27
+        chartView.xAxis.labelRotatedHeight = 35
+        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: xLabel)
+        
+        chartView.animate(xAxisDuration: 2.0, yAxisDuration: 3.0, easingOption: ChartEasingOption.easeInOutQuart)
+        chartView.pinchZoomEnabled = false
+        chartView.doubleTapToZoomEnabled = false
+        
+        
+        let visibleXRange = 8 // Number of values to show in y-Axis
+        chartView.setVisibleXRangeMaximum(Double(visibleXRange))
+        chartView.xAxis.setLabelCount(visibleXRange, force: false)
+        chartView.xAxis.granularity = 1
+        chartView.xAxis.labelCount = visibleXRange
+        chartView.dragEnabled = true
+     
+        
+        // MARK: Handle click show tooltip
+        // Set the extraTopOffset property to add padding
+        chartView.extraTopOffset = 30.0 // Adjust the value as per your requirement
+        chartView.marker = CustomMarkerView(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
+
+    }
+    
     ////variable  dataPointnth is used to get label for the report type of week
     static func getXLabel(dateTime:String, reportType:Int, dataPointnth:Int) -> String {
         var x_label = ""
@@ -207,4 +265,88 @@ class ChartUtils: NSObject {
         }
 
     }
+}
+public class CustomAxisValueFormatter: NSObject, AxisValueFormatter {
+    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        
+        var yValue = value/1000
+        if(yValue >= 0 && yValue < 1000 ){
+            return String(format: "%@ K", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: yValue))
+        }else if(yValue >= 1000 && yValue < 1000000 ){
+            return String(format: "%@ Tr", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: yValue/1000))
+        }else if(yValue >= 1000000){
+            return String(format: "%@ Tỷ", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: yValue/1000000))
+        }
+        else if(value < 0 && value > -1000) {
+            return String(format: "%@", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value))
+        }else if(value <= -1000 && value > -1000000 ){
+            return String(format: "%@ Ng", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value/1000))
+        }else if(value <= -1000000){
+            return String(format: "%@ Tr", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value/1000000))
+        }else if(value <= -1000000000){
+            return String(format: "%@ Tỷ", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value/1000000000))
+        }
+        return String(format: "%@", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: yValue))
+        
+    }
+}
+private class CustomMarkerView: MarkerView {
+    private let label: UILabel
+
+    override init(frame: CGRect) {
+        // Create a label to display the tooltip text
+        label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 10)
+        label.backgroundColor = ColorUtils.blueTransparent008()
+        label.layer.cornerRadius = 5
+        label.clipsToBounds = true
+
+        super.init(frame: frame)
+
+        // Add the label to the marker view
+        addSubview(label)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    // Customization of the tooltip text
+    override func refreshContent(entry: ChartDataEntry, highlight: Highlight) {
+        label.text = Utils.stringVietnameseMoneyFormatWithNumber(amount: Float(Int(entry.y)))
+       
+        // Adjust the width of the tooltip based on the label's content
+        label.sizeToFit()
+        
+        // Update the frame of the tooltip
+        var frame = label.frame
+        frame.size.width += 15 // Add some padding
+        frame.size.height += 10 // Add some vertical padding
+        label.frame = frame
+    }
+
+    // Customization of the tooltip position
+    override func offsetForDrawing(atPoint point: CGPoint) -> CGPoint {
+        var offset = CGPoint(x: -bounds.size.width / 5 + 5, y: bounds.size.height)
+                
+        let chartHeight = super.chartView?.bounds.height ?? 0
+            let minY = bounds.size.height
+            let maxY = chartHeight - bounds.size.height
+            
+            if offset.y < minY {
+                offset.y = minY
+            } else if offset.y > maxY {
+                offset.y = maxY
+            }
+            
+            return offset
+    }
+}
+private class CustomValueFormater:ValueFormatter{
+    func stringForValue(_ value: Double, entry: ChartDataEntry, dataSetIndex: Int, viewPortHandler: ViewPortHandler?) -> String {
+        return Utils.stringVietnameseMoneyFormatWithNumberDouble(amount:value)
+    }
+
 }

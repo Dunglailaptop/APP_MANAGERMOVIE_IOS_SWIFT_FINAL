@@ -14,7 +14,7 @@ import RxSwift
 import ObjectMapper
 
 
-class ReportMovieTableViewCell: UITableViewCell {
+class ReportTicketAllTableViewCell: UITableViewCell {
 
     @IBOutlet weak var view_no_data: UIView!
     
@@ -73,7 +73,7 @@ class ReportMovieTableViewCell: UITableViewCell {
     
 }
 
-extension ReportMovieTableViewCell {
+extension ReportTicketAllTableViewCell {
     func getReportTicket() {
         viewModel?.getReportTicket().subscribe(onNext: { [self]
             (response) in
@@ -93,7 +93,7 @@ extension ReportMovieTableViewCell {
     }
 }
 
-extension ReportMovieTableViewCell {
+extension ReportTicketAllTableViewCell {
     func changeBgBtn(btn:UIButton){
          for button in self.btnArray{
              button.backgroundColor = ColorUtils.white()
@@ -123,7 +123,7 @@ extension ReportMovieTableViewCell {
 
     }
 }
-extension ReportMovieTableViewCell: AxisValueFormatter {
+extension ReportTicketAllTableViewCell: AxisValueFormatter {
   
     func setupBarChart(data:[ReportTicket],barChart:BarChartView){
         let groupCount = data.count + 1

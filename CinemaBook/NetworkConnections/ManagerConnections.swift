@@ -73,6 +73,7 @@ enum ManagerConnections {
     case updateinfodetailfood(food:Food)
     case GetReportTicket(report_type:Int)
     case ReportMovie(report_type:Int)
+    case reportFood(report_type:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -207,6 +208,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlReportTicketAll
         case .ReportMovie(let report_type):
             return APIEndPoint.Name.urlReportMovie
+        case .reportFood(let report_type):
+            return APIEndPoint.Name.urlreportfood
         }
     
     }
@@ -334,7 +337,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .ReportMovie(_):
             return .get
-            
+        case .reportFood(_):
+            return .get
         }
 
         
@@ -483,6 +487,8 @@ extension ManagerConnections: TargetType {
         case .GetReportTicket(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .ReportMovie(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .reportFood(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -824,6 +830,10 @@ extension ManagerConnections: TargetType {
             return [
                 "report_type": report_type
             ]
+        case .reportFood(let report_type):
+            return [
+                "report_type": report_type
+            ]
         }
        
     }
@@ -957,6 +967,8 @@ extension ManagerConnections: TargetType {
         case .GetReportTicket(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .ReportMovie(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .reportFood(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }

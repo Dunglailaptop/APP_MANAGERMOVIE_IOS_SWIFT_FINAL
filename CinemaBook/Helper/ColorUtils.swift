@@ -30,6 +30,15 @@ class ColorUtils{
             alpha: CGFloat(1.0)
         )
     }
+    static func red_400()->UIColor{
+        return hexStringToUIColor(hex: "#F2244A")
+    }
+    static func green_600()->UIColor{
+        return hexStringToUIColor(hex: "#00A534")
+    }
+    static func blue_brand_700()->UIColor{
+        return hexStringToUIColor(hex: "#0071BB")
+    }
     static func toolbar()->UIColor{
         return hexStringToUIColor(hex: "#FFA233")
     }
@@ -41,6 +50,15 @@ class ColorUtils{
     }
     static func green_transparent()->UIColor{
         return hexStringToUIColor(hex: "#DFEEE2")
+    }
+    static func orange_brand_900()->UIColor{
+        return hexStringToUIColor(hex: "#FF8B00")
+    }
+    static func blueTransparent008()->UIColor{
+    
+        let black = hexStringToUIColor(hex: "#0072bc")
+        let blackOpacity = black.withAlphaComponent(0.8)
+        return blackOpacity;
     }
     
     static func white()->UIColor{
@@ -369,6 +387,21 @@ class ColorUtils{
         }
     static func dark_blue() -> UIColor {
             return hexStringToUIColor(hex: "#2343A7")
+        }
+    
+    static func chartColors() -> [UIColor] {
+            return [
+                UIColor(hex: "5470c6"),
+                UIColor(hex: "c23531"),
+                UIColor(hex: "62c87f"),
+                UIColor(hex: "e76f00"),
+                UIColor(hex: "91c7ae"),
+                UIColor(hex: "749f83"),
+                UIColor(hex: "fac858"),
+                UIColor(hex: "f4e001"),
+                UIColor(hex: "00a2ae"),
+                UIColor(hex: "bdbcbb")
+            ]
         }
         
 }

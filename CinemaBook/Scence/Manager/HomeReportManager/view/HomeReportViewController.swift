@@ -75,10 +75,12 @@ extension HomeReportViewController: UITableViewDelegate {
     func resgiter() {
         let section1 = UINib(nibName: "ReportDetailTableViewCell", bundle: .main)
         tableView.register(section1, forCellReuseIdentifier: "ReportDetailTableViewCell")
-        let section2 = UINib(nibName: "ReportMovieTableViewCell", bundle: .main)
-        tableView.register(section2, forCellReuseIdentifier: "ReportMovieTableViewCell")
-        let section3 = UINib(nibName: "ReportFoodComboTableViewCell", bundle: .main)
-        tableView.register(section3, forCellReuseIdentifier: "ReportFoodComboTableViewCell")
+        let section2 = UINib(nibName: "ReportTicketAllTableViewCell", bundle: .main)
+        tableView.register(section2, forCellReuseIdentifier: "ReportTicketAllTableViewCell")
+        let section3 = UINib(nibName: "ReportMovieTableViewCell", bundle: .main)
+        tableView.register(section3, forCellReuseIdentifier: "ReportMovieTableViewCell")
+        let section4 = UINib(nibName: "ReportpProductTableViewCell", bundle: .main)
+        tableView.register(section4, forCellReuseIdentifier: "ReportpProductTableViewCell")
         tableView.separatorStyle = .none
         tableView.rx.setDelegate(self).disposed(by: rxbag)
     }
@@ -94,14 +96,20 @@ extension HomeReportViewController: UITableViewDelegate {
                  
                  return cell
             case 1:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReportMovieTableViewCell", for: indexPath) as! ReportMovieTableViewCell
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReportTicketAllTableViewCell", for: indexPath) as! ReportTicketAllTableViewCell
                 cell.viewModel = self.viewModel
                            cell.selectionStyle = .none
                  
                  return cell
             case 2:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReportFoodComboTableViewCell", for: indexPath) as! ReportFoodComboTableViewCell
-                              
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReportMovieTableViewCell", for: indexPath) as! ReportMovieTableViewCell
+                cell.viewModel = self.viewModel
+                           cell.selectionStyle = .none
+                 
+                 return cell
+            case 3:
+                let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReportpProductTableViewCell", for: indexPath) as! ReportpProductTableViewCell
+                cell.viewModel = self.viewModel
                            cell.selectionStyle = .none
                  
                  return cell
@@ -124,6 +132,8 @@ extension HomeReportViewController: UITableViewDelegate {
             return 450
         case 2:
             return 450
+        case 3:
+            return 400
         default:
             return 200
         }

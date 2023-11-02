@@ -72,6 +72,10 @@
 		B0A5AEEB2AEB9AA1007320BE /* ItemVoucherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A5AEE92AEB9AA1007320BE /* ItemVoucherTableViewCell.xib */; };
 		B0A5AEF32AEBA3E6007320BE /* CreateVoucherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A5AEF12AEBA3E6007320BE /* CreateVoucherViewController.swift */; };
 		B0A5AEF42AEBA3E6007320BE /* CreateVoucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A5AEF22AEBA3E6007320BE /* CreateVoucherViewController.xib */; };
+		B0A6F9E82AF27A7E0057CE02 /* ItemMovieReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6F9E62AF27A7E0057CE02 /* ItemMovieReportTableViewCell.swift */; };
+		B0A6F9E92AF27A7E0057CE02 /* ItemMovieReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A6F9E72AF27A7E0057CE02 /* ItemMovieReportTableViewCell.xib */; };
+		B0A6F9EC2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6F9EA2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.swift */; };
+		B0A6F9ED2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A6F9EB2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.xib */; };
 		B0A7B26E2AD3FCB10035828C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B26C2AD3FCB10035828C /* MessageViewController.swift */; };
 		B0A7B26F2AD3FCB10035828C /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A7B26D2AD3FCB10035828C /* MessageViewController.xib */; };
 		B0A7B2712AD3FFF60035828C /* MessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7B2702AD3FFF60035828C /* MessageRouter.swift */; };
@@ -95,10 +99,10 @@
 		B0A9A45A2AD66133005C16C1 /* HomeReportviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4592AD66133005C16C1 /* HomeReportviewModel.swift */; };
 		B0A9A4602AD6617C005C16C1 /* ReportDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A45E2AD6617C005C16C1 /* ReportDetailTableViewCell.swift */; };
 		B0A9A4612AD6617C005C16C1 /* ReportDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A45F2AD6617C005C16C1 /* ReportDetailTableViewCell.xib */; };
-		B0A9A4642AD6619C005C16C1 /* ReportMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4622AD6619C005C16C1 /* ReportMovieTableViewCell.swift */; };
-		B0A9A4652AD6619C005C16C1 /* ReportMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A4632AD6619C005C16C1 /* ReportMovieTableViewCell.xib */; };
-		B0A9A4682AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4662AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift */; };
-		B0A9A4692AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A4672AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib */; };
+		B0A9A4642AD6619C005C16C1 /* ReportTicketAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4622AD6619C005C16C1 /* ReportTicketAllTableViewCell.swift */; };
+		B0A9A4652AD6619C005C16C1 /* ReportTicketAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A4632AD6619C005C16C1 /* ReportTicketAllTableViewCell.xib */; };
+		B0A9A4682AD661B2005C16C1 /* ReportMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A4662AD661B2005C16C1 /* ReportMovieTableViewCell.swift */; };
+		B0A9A4692AD661B2005C16C1 /* ReportMovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A4672AD661B2005C16C1 /* ReportMovieTableViewCell.xib */; };
 		B0A9D7992ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9D7972ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.swift */; };
 		B0A9D79A2ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9D7982ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.xib */; };
 		B0A9D79E2ADD63C9008AD03D /* ManageDetailBillFoodAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9D79D2ADD63C9008AD03D /* ManageDetailBillFoodAccountRouter.swift */; };
@@ -134,6 +138,8 @@
 		B0AC2D092ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC2D072ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.swift */; };
 		B0AC2D0A2ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AC2D082ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib */; };
 		B0AC2D0C2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC2D0B2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift */; };
+		B0ACA7A02AF33CCB007CC560 /* ReportpProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ACA79E2AF33CCB007CC560 /* ReportpProductTableViewCell.swift */; };
+		B0ACA7A12AF33CCB007CC560 /* ReportpProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */; };
 		B0AD43632AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */; };
 		B0AF7A352AD3B9D7008AE1F2 /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */; };
 		B0AF7A392AD3E2DC008AE1F2 /* ChatMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */; };
@@ -576,6 +582,10 @@
 		B0A5AEE92AEB9AA1007320BE /* ItemVoucherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemVoucherTableViewCell.xib; sourceTree = "<group>"; };
 		B0A5AEF12AEBA3E6007320BE /* CreateVoucherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVoucherViewController.swift; sourceTree = "<group>"; };
 		B0A5AEF22AEBA3E6007320BE /* CreateVoucherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateVoucherViewController.xib; sourceTree = "<group>"; };
+		B0A6F9E62AF27A7E0057CE02 /* ItemMovieReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMovieReportTableViewCell.swift; sourceTree = "<group>"; };
+		B0A6F9E72AF27A7E0057CE02 /* ItemMovieReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemMovieReportTableViewCell.xib; sourceTree = "<group>"; };
+		B0A6F9EA2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemMovieReportsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B0A6F9EB2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemMovieReportsCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0A7B26C2AD3FCB10035828C /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		B0A7B26D2AD3FCB10035828C /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		B0A7B2702AD3FFF60035828C /* MessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRouter.swift; sourceTree = "<group>"; };
@@ -599,10 +609,10 @@
 		B0A9A4592AD66133005C16C1 /* HomeReportviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReportviewModel.swift; sourceTree = "<group>"; };
 		B0A9A45E2AD6617C005C16C1 /* ReportDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDetailTableViewCell.swift; sourceTree = "<group>"; };
 		B0A9A45F2AD6617C005C16C1 /* ReportDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportDetailTableViewCell.xib; sourceTree = "<group>"; };
-		B0A9A4622AD6619C005C16C1 /* ReportMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMovieTableViewCell.swift; sourceTree = "<group>"; };
-		B0A9A4632AD6619C005C16C1 /* ReportMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMovieTableViewCell.xib; sourceTree = "<group>"; };
-		B0A9A4662AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFoodComboTableViewCell.swift; sourceTree = "<group>"; };
-		B0A9A4672AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportFoodComboTableViewCell.xib; sourceTree = "<group>"; };
+		B0A9A4622AD6619C005C16C1 /* ReportTicketAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTicketAllTableViewCell.swift; sourceTree = "<group>"; };
+		B0A9A4632AD6619C005C16C1 /* ReportTicketAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTicketAllTableViewCell.xib; sourceTree = "<group>"; };
+		B0A9A4662AD661B2005C16C1 /* ReportMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportMovieTableViewCell.swift; sourceTree = "<group>"; };
+		B0A9A4672AD661B2005C16C1 /* ReportMovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportMovieTableViewCell.xib; sourceTree = "<group>"; };
 		B0A9D7972ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDetailBillFoodComboItemTableViewCell.swift; sourceTree = "<group>"; };
 		B0A9D7982ADD60FA008AD03D /* ManageDetailBillFoodComboItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageDetailBillFoodComboItemTableViewCell.xib; sourceTree = "<group>"; };
 		B0A9D79D2ADD63C9008AD03D /* ManageDetailBillFoodAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageDetailBillFoodAccountRouter.swift; sourceTree = "<group>"; };
@@ -638,6 +648,8 @@
 		B0AC2D072ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementBillFoodComboItemTableViewCell.swift; sourceTree = "<group>"; };
 		B0AC2D082ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementBillFoodComboItemTableViewCell.xib; sourceTree = "<group>"; };
 		B0AC2D0B2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementBillFoodComboViewController + Extensions.swift"; sourceTree = "<group>"; };
+		B0ACA79E2AF33CCB007CC560 /* ReportpProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportpProductTableViewCell.swift; sourceTree = "<group>"; };
+		B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportpProductTableViewCell.xib; sourceTree = "<group>"; };
 		B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementDetailMovie+Extensions.swift"; sourceTree = "<group>"; };
 		B0AF7A342AD3B9D7008AE1F2 /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		B0AF7A372AD3E2DC008AE1F2 /* ChatMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewController.swift; sourceTree = "<group>"; };
@@ -1536,6 +1548,17 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		B0A6F9E52AF27A650057CE02 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0A6F9E62AF27A7E0057CE02 /* ItemMovieReportTableViewCell.swift */,
+				B0A6F9E72AF27A7E0057CE02 /* ItemMovieReportTableViewCell.xib */,
+				B0A6F9EA2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.swift */,
+				B0A6F9EB2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		B0A7B2682AD3FC6A0035828C /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -1719,8 +1742,8 @@
 		B0A9A45C2AD6614C005C16C1 /* section2 */ = {
 			isa = PBXGroup;
 			children = (
-				B0A9A4622AD6619C005C16C1 /* ReportMovieTableViewCell.swift */,
-				B0A9A4632AD6619C005C16C1 /* ReportMovieTableViewCell.xib */,
+				B0A9A4622AD6619C005C16C1 /* ReportTicketAllTableViewCell.swift */,
+				B0A9A4632AD6619C005C16C1 /* ReportTicketAllTableViewCell.xib */,
 			);
 			path = section2;
 			sourceTree = "<group>";
@@ -1728,8 +1751,9 @@
 		B0A9A45D2AD66155005C16C1 /* section3 */ = {
 			isa = PBXGroup;
 			children = (
-				B0A9A4662AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift */,
-				B0A9A4672AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib */,
+				B0A6F9E52AF27A650057CE02 /* cell */,
+				B0A9A4662AD661B2005C16C1 /* ReportMovieTableViewCell.swift */,
+				B0A9A4672AD661B2005C16C1 /* ReportMovieTableViewCell.xib */,
 			);
 			path = section3;
 			sourceTree = "<group>";
@@ -1973,6 +1997,15 @@
 				B0AC2D082ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		B0ACA79D2AF33CA4007CC560 /* section4 */ = {
+			isa = PBXGroup;
+			children = (
+				B0ACA79E2AF33CCB007CC560 /* ReportpProductTableViewCell.swift */,
+				B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */,
+			);
+			path = section4;
 			sourceTree = "<group>";
 		};
 		B0AD43612AE42E6400023E01 /* Extension */ = {
@@ -3518,6 +3551,7 @@
 		FE5EA0F32AAE21570039DEC3 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				B0ACA79D2AF33CA4007CC560 /* section4 */,
 				B0A9A45D2AD66155005C16C1 /* section3 */,
 				B0A9A45C2AD6614C005C16C1 /* section2 */,
 				B0A9A45B2AD66142005C16C1 /* section1 */,
@@ -4396,6 +4430,7 @@
 				B0224BCE2ACF1A1E002D57CB /* DialogInputMoneyViewController.xib in Resources */,
 				B0BE0A552AE02481001BFE08 /* DialogAccessUpdatesatusInterestViewController.xib in Resources */,
 				FE5C9E872AA42BE300FA235D /* Roboto-Condensed.ttf in Resources */,
+				B0ACA7A12AF33CCB007CC560 /* ReportpProductTableViewCell.xib in Resources */,
 				FE5C9E8E2AA42BE300FA235D /* Roboto-Bold.ttf in Resources */,
 				FE59CF382AA36DCA00A6ADAA /* ItemDetailVideoShortCollectionViewCell.xib in Resources */,
 				FE7D51702A9E3C5A0089EDFB /* ItemCinemaTableViewCell.xib in Resources */,
@@ -4452,6 +4487,7 @@
 				B0BD0A532AD2FF870099FB2C /* GoogleService-Info.plist in Resources */,
 				FE54612D2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib in Resources */,
 				FE52546B2AC325EE003229A0 /* ManagementBillFoodComboViewController.xib in Resources */,
+				B0A6F9ED2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.xib in Resources */,
 				B0A470EF2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib in Resources */,
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
 				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
@@ -4465,7 +4501,7 @@
 				FE5254632AC31857003229A0 /* ManagementBillViewController.xib in Resources */,
 				B0A9D7AF2ADD8699008AD03D /* ManagementBillProductItemTableViewCell.xib in Resources */,
 				B0A88C0D2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib in Resources */,
-				B0A9A4652AD6619C005C16C1 /* ReportMovieTableViewCell.xib in Resources */,
+				B0A9A4652AD6619C005C16C1 /* ReportTicketAllTableViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
 				B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */,
 				FE6A85FC2AC5D9F700810FFB /* ItemCollectionProductCategoryCollectionViewCell.xib in Resources */,
@@ -4496,12 +4532,13 @@
 				B09F00972AECBF9B00EFDD7C /* DialogCreateFoodViewController.xib in Resources */,
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
 				FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */,
+				B0A6F9E92AF27A7E0057CE02 /* ItemMovieReportTableViewCell.xib in Resources */,
 				FE5A14B52AC9A089005739E4 /* ItemProductComboTableViewCell.xib in Resources */,
 				FE6EE71C2A99D5EF00883F73 /* HeaderChairCollectionReusableView.xib in Resources */,
 				B0AF7A422AD3E6AB008AE1F2 /* ItemChatTableViewCell.xib in Resources */,
 				FE4EB3702AC719EC00BB2D79 /* ItemFoodTableViewCell.xib in Resources */,
 				FE6BD1872AC85D0B00177093 /* ItemFoodInManagementTableViewCell.xib in Resources */,
-				B0A9A4692AD661B2005C16C1 /* ReportFoodComboTableViewCell.xib in Resources */,
+				B0A9A4692AD661B2005C16C1 /* ReportMovieTableViewCell.xib in Resources */,
 				B0A9EFA02AD9757200B9EF1D /* ItemCartTableViewCell.xib in Resources */,
 				FE71C65C2AB7FA310029D84B /* DialogPopupListMovieViewController.xib in Resources */,
 				B0A40E402AE2DC85008D07FC /* ManagementDetailMovieViewController.xib in Resources */,
@@ -4591,6 +4628,7 @@
 				B0BD0A512AD2F1720099FB2C /* SocketIOManager.swift in Sources */,
 				FE33F3792A6CC68E00A396A1 /* Constans.swift in Sources */,
 				FE53AE472AAC29750082B8FC /* voucher.swift in Sources */,
+				B0ACA7A02AF33CCB007CC560 /* ReportpProductTableViewCell.swift in Sources */,
 				FE5461342AC09D100015DB93 /* CategoryChair.swift in Sources */,
 				FE745FF32A7EAFF60091C0FA /* TicketViewController+Extension+API.swift in Sources */,
 				FE51DE7B2ABE881D00D5BE93 /* DialogPopupInfoListInterestMovieViewController.swift in Sources */,
@@ -4626,6 +4664,7 @@
 				B0A9EF962AD970FC00B9EF1D /* CartViewController.swift in Sources */,
 				FE6533832AAA16AA00C0739B /* BannerMovieTableViewCell.swift in Sources */,
 				B0F9D3112AE6D48300CE70FC /* ManagementDetailRoomRouter.swift in Sources */,
+				B0A6F9E82AF27A7E0057CE02 /* ItemMovieReportTableViewCell.swift in Sources */,
 				B0A470E22AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.swift in Sources */,
 				B0F9D30F2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift in Sources */,
 				FE52523B2AAF79CC00296246 /* ManagementEmployeeViewController.swift in Sources */,
@@ -4721,6 +4760,7 @@
 				FE7E6CBD2AB1F3EE0051E985 /* Role.swift in Sources */,
 				FE5D08302AA23691004FA3D9 /* TraillerViewController.swift in Sources */,
 				FE5C9E642AA427BB00FA235D /* SambagTimePickerViewController.swift in Sources */,
+				B0A6F9EC2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.swift in Sources */,
 				FE7BA9942A5AFE2700344EFB /* AccountViewController.swift in Sources */,
 				FE6E5CB72A7A985E00467358 /* HomeViewController.swift in Sources */,
 				B0A12B332AEBFDF2000B6FC4 /* CreateVoucherViewModel.swift in Sources */,
@@ -4841,7 +4881,7 @@
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
 				FEAB99232AC1DEE800F024D5 /* MangementRoomCreateRouter.swift in Sources */,
 				FE5C6B892AA4D09000852DBE /* Medias.swift in Sources */,
-				B0A9A4682AD661B2005C16C1 /* ReportFoodComboTableViewCell.swift in Sources */,
+				B0A9A4682AD661B2005C16C1 /* ReportMovieTableViewCell.swift in Sources */,
 				FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */,
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				B0AB37A22ADD271C00C2C102 /* ManageBillFoodAccountViewModel.swift in Sources */,
@@ -4853,7 +4893,7 @@
 				B0A12B2F2AEBEF72000B6FC4 /* CaculatorInputMoneyViewController.swift in Sources */,
 				FE745FF52A7EB00E0091C0FA /* TicketViewModel.swift in Sources */,
 				FE5EA0E62AAE18D80039DEC3 /* VideoItemShowinnewfeedTableViewCell.swift in Sources */,
-				B0A9A4642AD6619C005C16C1 /* ReportMovieTableViewCell.swift in Sources */,
+				B0A9A4642AD6619C005C16C1 /* ReportTicketAllTableViewCell.swift in Sources */,
 				FE6A86082AC5E68500810FFB /* CreateProductViewModel.swift in Sources */,
 				B0A9D7A22ADD65FE008AD03D /* ManageDetailBillFoodAccountViewModel.swift in Sources */,
 				FEC1E3F22A9CD4F8005A9F16 /* TimeShowViewModel.swift in Sources */,

@@ -65,7 +65,8 @@ struct ReportMovie: Mappable {
             var idmovie = 0
             var poster = ""
             var datebill = ""
-    
+            var stt = 0
+    var namemovie = ""
     init() {}
     
     init?(map: Map) {
@@ -77,6 +78,34 @@ struct ReportMovie: Mappable {
          idmovie <- map["idmovie"]
          poster <- map["poster"]
          datebill <- map["datebill"]
+        stt <- map["stt"]
+        namemovie <- map["namemovie"]
     }
     
+}
+struct ReportFood: Mappable {
+            var idfood = 0
+            var idcombo = 0
+            var image = ""
+            var stt = 0
+            var namefood = ""
+            var totals = 0
+            var datetimes = ""
+    
+    init() {}
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        idfood <- map["idfood"]
+         idcombo <- map["idcombo"]
+         image <- map["image"]
+         stt <- map["stt"]
+         namefood <- map["namefood"]
+         totals <- map["totals"]
+
+         datetimes  <- map["datetimes"]
+    }
 }
