@@ -60,6 +60,13 @@ extension HomeReportviewModel {
                         .showAPIErrorToast()
                         .mapObject(type: APIResponse.self)
                 }
+    func getReportDetailAll() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.reportDetailAll)
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
 }
 
 

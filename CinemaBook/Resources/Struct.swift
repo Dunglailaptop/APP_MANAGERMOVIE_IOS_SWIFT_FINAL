@@ -84,6 +84,7 @@ public struct APIEndPoint {
         static let urlReportTicketAll = "/Report/ReportTicketALL"
         static let urlReportMovie = "/Report/ReportMovie"
         static let urlreportfood = "/Report/ReportFoods"
+        static let urlReportDetail = "/Report/getDetailReport"
     }
     
 }

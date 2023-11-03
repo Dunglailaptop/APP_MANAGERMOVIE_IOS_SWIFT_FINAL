@@ -74,6 +74,7 @@ enum ManagerConnections {
     case GetReportTicket(report_type:Int)
     case ReportMovie(report_type:Int)
     case reportFood(report_type:Int)
+ case reportDetailAll
 }
 
 extension ManagerConnections: TargetType {
@@ -210,6 +211,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlReportMovie
         case .reportFood(let report_type):
             return APIEndPoint.Name.urlreportfood
+        case .reportDetailAll:
+            return APIEndPoint.Name.urlReportDetail
         }
     
     }
@@ -339,6 +342,9 @@ extension ManagerConnections: TargetType {
             return .get
         case .reportFood(_):
             return .get
+        case .reportDetailAll:
+            return .get
+            
         }
 
         
@@ -489,6 +495,8 @@ extension ManagerConnections: TargetType {
         case .ReportMovie(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .reportFood(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .reportDetailAll:
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -834,6 +842,8 @@ extension ManagerConnections: TargetType {
             return [
                 "report_type": report_type
             ]
+        case .reportDetailAll:
+            return [:]
         }
        
     }
@@ -969,6 +979,8 @@ extension ManagerConnections: TargetType {
         case .ReportMovie(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .reportFood(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .reportDetailAll:
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }

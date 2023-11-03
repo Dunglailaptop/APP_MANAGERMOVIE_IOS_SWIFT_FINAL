@@ -91,7 +91,7 @@ extension HomeReportViewController: UITableViewDelegate {
             switch index {
             case 0:
                 let cell = self.tableView.dequeueReusableCell(withIdentifier: "ReportDetailTableViewCell", for: indexPath) as! ReportDetailTableViewCell
-                              
+                cell.viewModel = self.viewModel
                            cell.selectionStyle = .none
                  
                  return cell
@@ -138,4 +138,7 @@ extension HomeReportViewController: UITableViewDelegate {
             return 200
         }
     }
+}
+extension HomeReportViewController {
+  
 }

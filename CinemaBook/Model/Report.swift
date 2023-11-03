@@ -139,3 +139,21 @@ struct ReportFood: Mappable {
          datetimes  <- map["datetimes"]
     }
 }
+struct reportDetail: Mappable {
+    var totalall = 0
+    var totalfood = 0
+         var totalticket = 0
+         var totalfoodcombowith = 0
+    init(){}
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        totalall <- map["totalall"]
+        totalfood <- map["totalfood"]
+        totalticket <- map["totalticket"]
+        totalfoodcombowith <- map["totalfoodcombowith"]
+    }
+}
