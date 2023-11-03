@@ -28,6 +28,9 @@ class ManageReportViewModel: BaseViewModel{
     func makeToReportMovieViewController() {
         router?.makeToReportMovie()
     }
+    func makeToReportFoodViewController() {
+        router?.makeToReportfood()
+    }
     
  
 }

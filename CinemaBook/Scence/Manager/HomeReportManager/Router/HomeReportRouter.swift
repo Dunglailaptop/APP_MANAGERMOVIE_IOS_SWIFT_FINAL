@@ -25,6 +25,20 @@ class HomeReportRouter {
         self.sourceView = view
     }
     
+    
+    func maketoManagementReportTicketAll() {
+        let viewreporticket = ReportTicketALLRouter().viewController
+        sourceView?.navigationController?.pushViewController(viewreporticket, animated: true)
+    }
+    
+    func makeToReportMovie() {
+        let viewrportMovie = ReportMovieRouter().viewController
+        sourceView?.navigationController?.pushViewController(viewrportMovie, animated: true)
+    }
  
+    func makeToReportfood() {
+        let viewrportFOOD = ReportFoodRouter().viewController
+        sourceView?.navigationController?.pushViewController(viewrportFOOD, animated: true)
+    }
 }
 

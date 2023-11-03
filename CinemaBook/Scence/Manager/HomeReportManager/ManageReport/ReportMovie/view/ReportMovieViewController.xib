@@ -87,7 +87,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUZ-lU-VUp">
-                            <rect key="frame" x="0.0" y="40" width="393" height="60"/>
+                            <rect key="frame" x="0.0" y="41" width="393" height="60"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF2-2Q-TKJ">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
@@ -149,7 +149,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIN-93-CZ4">
-                            <rect key="frame" x="0.0" y="100" width="393" height="50"/>
+                            <rect key="frame" x="0.0" y="104" width="393" height="50"/>
                             <subviews>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-vd-OU3">
                                     <rect key="frame" x="0.0" y="10" width="393" height="30"/>
@@ -392,7 +392,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKQ-fX-8ex">
-                            <rect key="frame" x="0.0" y="150" width="393" height="300"/>
+                            <rect key="frame" x="0.0" y="154" width="393" height="300"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7f-5V-3Uk" customClass="PieChartView" customModule="Charts">
                                     <rect key="frame" x="0.0" y="0.0" width="313" height="300"/>
@@ -449,14 +449,14 @@
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T6F-Tj-p2W">
-                            <rect key="frame" x="0.0" y="455" width="393" height="304"/>
+                            <rect key="frame" x="0.0" y="459" width="393" height="300"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
-                        <constraint firstItem="RUZ-lU-VUp" firstAttribute="top" secondItem="Ot4-fx-FNE" secondAttribute="bottom" id="1qF-Vf-a92"/>
-                        <constraint firstItem="yIN-93-CZ4" firstAttribute="top" secondItem="RUZ-lU-VUp" secondAttribute="bottom" id="3Om-bo-34w"/>
+                        <constraint firstItem="RUZ-lU-VUp" firstAttribute="top" secondItem="Ot4-fx-FNE" secondAttribute="bottom" constant="1" id="1qF-Vf-a92"/>
+                        <constraint firstItem="yIN-93-CZ4" firstAttribute="top" secondItem="RUZ-lU-VUp" secondAttribute="bottom" constant="3" id="3Om-bo-34w"/>
                         <constraint firstAttribute="trailing" secondItem="RUZ-lU-VUp" secondAttribute="trailing" id="7JY-BA-kTu"/>
                         <constraint firstItem="T6F-Tj-p2W" firstAttribute="leading" secondItem="Ne0-jH-rCv" secondAttribute="leading" id="CrW-K2-t8V"/>
                         <constraint firstItem="wKQ-fX-8ex" firstAttribute="leading" secondItem="Ne0-jH-rCv" secondAttribute="leading" id="E29-0t-IYx"/>

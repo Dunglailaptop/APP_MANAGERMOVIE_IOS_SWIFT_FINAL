@@ -25,7 +25,16 @@ class HomeReportviewModel: BaseViewModel{
         self.router = router
         self.router?.setSourceView(self.view)
     }
+    func makeToReportTicketViewController() {
+        router?.maketoManagementReportTicketAll()
+    }
     
+    func makeToReportMovieViewController() {
+        router?.makeToReportMovie()
+    }
+    func makeToReportFoodViewController() {
+        router?.makeToReportfood()
+    }
  
 }
 

@@ -54,6 +54,9 @@ class ReportpProductTableViewCell: UITableViewCell {
         }
     }
     
+    @IBAction func btn_showreportfood(_ sender: Any) {
+        viewModel?.makeToReportFoodViewController()
+    }
 }
 extension ReportpProductTableViewCell {
     func getReportfood() {

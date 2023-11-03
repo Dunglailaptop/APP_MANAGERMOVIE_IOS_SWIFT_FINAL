@@ -70,6 +70,9 @@ class ReportTicketAllTableViewCell: UITableViewCell {
         }
     }
     
+    @IBAction func btn_makePopToReportTicketAll(_ sender: Any) {
+        viewModel?.makeToReportTicketViewController()
+    }
     
 }
 

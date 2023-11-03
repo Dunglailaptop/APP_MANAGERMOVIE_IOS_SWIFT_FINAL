@@ -35,4 +35,9 @@ class ManageReportRouter {
         sourceView?.navigationController?.pushViewController(viewrportMovie, animated: true)
     }
  
+    func makeToReportfood() {
+        let viewrportFOOD = ReportFoodRouter().viewController
+        sourceView?.navigationController?.pushViewController(viewrportFOOD, animated: true)
+    }
+    
 }

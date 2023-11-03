@@ -69,6 +69,9 @@ class ReportMovieTableViewCell: UITableViewCell {
         }
     }
     
+    @IBAction func btn_makePopToReportMovie(_ sender: Any) {
+        viewModel?.makeToReportMovieViewController()
+    }
 }
 extension ReportMovieTableViewCell {
     func changeBgBtn(btn:UIButton){

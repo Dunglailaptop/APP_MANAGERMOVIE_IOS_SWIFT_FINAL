@@ -34,12 +34,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xem thêm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1f-zh-32M">
+                                <rect key="frame" x="216.66666666666666" y="13" width="57.333333333333343" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-arrow-right-blue" translatesAutoresizingMaskIntoConstraints="NO" id="L7D-9o-2Mn">
+                                <rect key="frame" x="278" y="9" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="1Il-Po-hLU"/>
+                                    <constraint firstAttribute="width" constant="22" id="CmV-tp-eYe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUy-J6-uuB">
+                                <rect key="frame" x="170" y="0.0" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="LCY-ct-SMK"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btn_makePopToReportTicketAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cdS-4B-aNW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="L7D-9o-2Mn" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="0BY-tv-svK"/>
+                            <constraint firstAttribute="trailing" secondItem="dUy-J6-uuB" secondAttribute="trailing" id="0ES-FO-elb"/>
                             <constraint firstItem="M1F-UX-Stm" firstAttribute="leading" secondItem="Lkn-9n-o0g" secondAttribute="leading" constant="20" id="BhO-qP-d8m"/>
+                            <constraint firstAttribute="trailing" secondItem="L7D-9o-2Mn" secondAttribute="trailing" constant="20" id="Crf-7t-KEF"/>
+                            <constraint firstItem="j1f-zh-32M" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="IOO-SM-uoE"/>
                             <constraint firstItem="M1F-UX-Stm" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="MOv-04-kwr"/>
                             <constraint firstItem="h95-gC-4pc" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="UbL-A8-wHT"/>
+                            <constraint firstItem="L7D-9o-2Mn" firstAttribute="leading" secondItem="j1f-zh-32M" secondAttribute="trailing" constant="4" id="dVn-76-v7v"/>
+                            <constraint firstItem="dUy-J6-uuB" firstAttribute="top" secondItem="Lkn-9n-o0g" secondAttribute="top" id="geB-b6-qGT"/>
+                            <constraint firstAttribute="bottom" secondItem="dUy-J6-uuB" secondAttribute="bottom" id="jqb-Nm-cLf"/>
                             <constraint firstItem="h95-gC-4pc" firstAttribute="leading" secondItem="M1F-UX-Stm" secondAttribute="trailing" id="qIQ-gZ-bmi"/>
                             <constraint firstAttribute="height" constant="40" id="rzC-H7-snP"/>
                         </constraints>
@@ -568,6 +600,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="icon-arrow-right-blue" width="22" height="22.333333969116211"/>
         <image name="img-no-data" width="220" height="170"/>
         <image name="tivi" width="24" height="24.333333969116211"/>
         <systemColor name="systemBackgroundColor">
