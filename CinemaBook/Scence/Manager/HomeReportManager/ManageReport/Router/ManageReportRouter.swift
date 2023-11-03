@@ -29,5 +29,10 @@ class ManageReportRouter {
         let viewreporticket = ReportTicketALLRouter().viewController
         sourceView?.navigationController?.pushViewController(viewreporticket, animated: true)
     }
+    
+    func makeToReportMovie() {
+        let viewrportMovie = ReportMovieRouter().viewController
+        sourceView?.navigationController?.pushViewController(viewrportMovie, animated: true)
+    }
  
 }

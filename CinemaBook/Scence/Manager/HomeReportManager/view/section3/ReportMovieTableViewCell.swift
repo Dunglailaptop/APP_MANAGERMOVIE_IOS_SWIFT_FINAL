@@ -22,6 +22,7 @@ class ReportMovieTableViewCell: UITableViewCell {
     @IBOutlet weak var pie_chart: PieChartView!
     var btnArray:[UIButton] = []
     
+    @IBOutlet weak var lbl_total_bill: UILabel!
     @IBOutlet weak var btn_today: UIButton!
     
     @IBOutlet weak var view_no_daata: UIView!
@@ -106,11 +107,12 @@ extension ReportMovieTableViewCell {
             (response) in
             dLog(response)
             if response.code == RRHTTPStatusCode.ok.rawValue {
-                if let data = Mapper<ReportMovie>().mapArray(JSONObject: response.data) {
+                if let data = Mapper<ReportMovieTotalAll>().map(JSONObject: response.data) {
                     dLog(response.data)
-                    self.viewModel?.dataMovieReport.accept(data)
+                    self.viewModel?.dataMovieReport.accept(data.reportMovieshows)
                     self.view_no_daata.isHidden = (viewModel?.dataMovieReport.value.count)! > 0 ? true:false
-                setUpPieChart(dataChart: data)
+                    setUpPieChart(dataChart: data.reportMovieshows)
+                    lbl_total_bill.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalall) 
                     tableview.reloadData()
                     collection_view.reloadData()
                 }
@@ -177,7 +179,7 @@ extension ReportMovieTableViewCell: UITableViewDelegate,UITableViewDataSource {
         cell.selectionStyle = .none
         cell.view_color.backgroundColor = colors[indexPath.row]
         cell.lbl_number.text = String(viewModel!.dataMovieReport.value[indexPath.row].stt)
-        
+     
         return cell
     }
     
@@ -215,6 +217,7 @@ extension ReportMovieTableViewCell: UICollectionViewDelegate,UICollectionViewDat
         cell.lbl_name_movie.text = viewModel?.dataMovieReport.value[indexPath.row].namemovie
 //        cell.contentView.backgroundColor = colors[indexPath.row]
         cell.view_all.backgroundColor = colors[indexPath.row]
+        cell.image_movie.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: viewModel!.dataMovieReport.value[indexPath.row].poster)), placeholder:  UIImage(named: "image_defauft_medium"))
         return cell
     }
 }

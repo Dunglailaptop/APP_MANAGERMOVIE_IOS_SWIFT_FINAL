@@ -25,6 +25,10 @@ class ManageReportViewModel: BaseViewModel{
         router?.maketoManagementReportTicketAll()
     }
     
+    func makeToReportMovieViewController() {
+        router?.makeToReportMovie()
+    }
+    
  
 }
 

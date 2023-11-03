@@ -24,4 +24,7 @@ class ManageReportViewController: UIViewController {
         viewModel.makeToReportTicketViewController()
     }
     
+    @IBAction func btn_makeToReportMovie(_ sender: Any) {
+        viewModel.makeToReportMovieViewController()
+    }
 }

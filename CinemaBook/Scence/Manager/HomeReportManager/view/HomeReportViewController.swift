@@ -133,7 +133,7 @@ extension HomeReportViewController: UITableViewDelegate {
         case 2:
             return 450
         case 3:
-            return 400
+            return 450
         default:
             return 200
         }

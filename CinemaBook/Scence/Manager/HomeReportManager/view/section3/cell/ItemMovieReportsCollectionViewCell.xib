@@ -91,6 +91,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="image_movie" destination="dcf-uj-Qab" id="Cr8-WN-ssc"/>
                 <outlet property="lbl_name_movie" destination="6fo-1a-h3E" id="YIh-PC-F0g"/>
                 <outlet property="lbl_stt" destination="EEs-FO-jWV" id="XzN-cY-3Ci"/>
                 <outlet property="view_all" destination="skt-dX-wAD" id="uYC-Pe-rdU"/>

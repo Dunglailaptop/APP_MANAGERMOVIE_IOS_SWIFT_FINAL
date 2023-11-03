@@ -16,6 +16,7 @@ import ObjectMapper
 class ReportpProductTableViewCell: UITableViewCell {
     var btnArray:[UIButton] = []
     
+    @IBOutlet weak var lbl_total_billfood: UILabel!
     @IBOutlet weak var btn_today: UIButton!
     
     @IBOutlet weak var view_no_daata: UIView!
@@ -59,10 +60,11 @@ extension ReportpProductTableViewCell {
         viewModel?.getReportfood().subscribe(onNext: {
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
-                if let data = Mapper<ReportFood>().mapArray(JSONObject: response.data){
-                    self.viewModel?.datafoodReport.accept(data)
-                    self.setupBarChart(data: data, barChart: self.bar_chart)
+                if let data = Mapper<ReportFoodTotalAll>().map(JSONObject: response.data){
+                    self.viewModel?.datafoodReport.accept(data.reportMovieshows)
+                    self.setupBarChart(data: data.reportMovieshows, barChart: self.bar_chart)
                     self.view_no_daata.isHidden = (self.viewModel?.datafoodReport.value.count)! > 0 ? true: false
+                    self.lbl_total_billfood.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalall) 
                 }
             }
         })

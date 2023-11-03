@@ -11,6 +11,7 @@ import MarqueeLabel
 
 class ItemMovieReportsCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var image_movie: UIImageView!
     @IBOutlet weak var view_all: UIView!
     @IBOutlet weak var lbl_name_movie: MarqueeLabel!
     @IBOutlet weak var lbl_stt: UILabel!
