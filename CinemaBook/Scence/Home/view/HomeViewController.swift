@@ -14,7 +14,7 @@ import SocketIO
 import FirebaseAuth
 import Firebase
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController {
    
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,6 +27,9 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var lbl_price_point: UILabel!
     @IBOutlet weak var lbl_movie_coming: UILabel!
   
+    @IBOutlet weak var view_detail: UIView!
+    
+    var rxbag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +37,8 @@ class HomeViewController: BaseViewController {
         Register()
         bindingtable()
        setupView()
-      
-        
+        view_detail.roundCorners([.bottomLeft], radius: 55)
+        view_detail.clipsToBounds = true
       
        
     

@@ -35,6 +35,7 @@ struct FoodCombo: Mappable {
              picture <- map["picture"]
         foods <- map["foods"]
         quantityRealtime <- map["quantityRealtime"]
+//        quantity <- map["quantity"]
     }
 }
 
