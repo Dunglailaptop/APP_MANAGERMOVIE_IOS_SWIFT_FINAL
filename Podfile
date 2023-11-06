@@ -52,7 +52,7 @@ pod 'SpreadsheetView'
  # pod 'Charts'
 # Example: For Swift 5.0
  pod 'Charts'
-
+pod 'VerticalCardSwiper'
 
 
 

@@ -19,6 +19,7 @@ struct Trailler:Mappable {
  var  imageview = ""
  var  types = 0
   
+    init() {}
     
     init?(map: Map) {
         

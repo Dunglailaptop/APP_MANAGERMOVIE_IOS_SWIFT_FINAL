@@ -8,14 +8,18 @@
 
 import UIKit
 import BmoViewPager
+import RxCocoa
+import RxRelay
+import RxSwift
 
-class NewFeedViewController: BaseViewController {
+
+class NewFeedViewController: UIViewController {
 
     var viewModel = NewFeedViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     
-  
+  let rxbag = DisposeBag()
     
 //    var title_name = ["Tất cả","Phim","Video short","Trailler"]
     override func viewDidLoad() {

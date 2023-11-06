@@ -51,7 +51,7 @@ extension CustomTabItem {
             
         case .NotificationApp:
            
-                let view = ChatMessageViewController(nibName: "ChatMessageViewController", bundle: Bundle.main)
+                let view = NotifcationMessageViewController(nibName: "NotifcationMessageViewController", bundle: Bundle.main)
                 
                 return view
             

@@ -34,6 +34,12 @@ extension NewFeedViewController {
         tableView.register(Videotableviewcell, forCellReuseIdentifier: "VideoItemShowinnewfeedTableViewCell")
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
+        tableView.rx.modelSelected(Trailler.self).subscribe(onNext: {
+            (element) in
+            let viewcell = VieoTraillerShowViewController()
+            viewcell.traillers = element
+            self.navigationController?.pushViewController(viewcell, animated: true)
+        })
         tableView.rx.setDelegate(self)
     }
     func bindingtableviewcell() {

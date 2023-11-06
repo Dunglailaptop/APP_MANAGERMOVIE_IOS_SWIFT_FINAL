@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
 //       testSocket()
     }
     func setupinfo() {
-        lbl_name_account.text = ManageCacheObject.getCurrentUserInfo().fullname
+        lbl_name_account.text = "Xin chào," + ManageCacheObject.getCurrentUserInfo().fullname
 //        lbl_price_point.text = Utils.stringVietnameseFormatWithNumber(amount: ManageCacheObject.getCurrentUser().point)
         avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: ManageCacheObject.getCurrentUserInfo().avatar)), placeholder: UIImage(named: "image_defauft_medium"))
 //        lbl_price_point.text =
