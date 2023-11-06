@@ -13,7 +13,8 @@ import RxSwift
 
 class BannerMovieTableViewCell: UITableViewCell {
 
-
+    @IBOutlet weak var image_poster: UIImageView!
+    
     private(set) var disposeBag = DisposeBag()
   
     @IBOutlet weak var lbl_name_movie: UILabel!
@@ -64,14 +65,14 @@ extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDe
         func setupcollection() {
                       let layout = LNICoverFlowLayout()
             layout.scrollDirection = .horizontal
-            
-                     layout.maxCoverDegree = 45
+
+                        layout.maxCoverDegree = 45
                         layout.coverDensity = 0.05
-                      layout.minCoverScale = 0.72
+                        layout.minCoverScale = 0.72
                         layout.minCoverOpacity = 0.5
-            layout.itemSize = CGSize(width: 300, height: 300)
+                        layout.itemSize = CGSize(width: 300, height: 300)
                         collection_view.collectionViewLayout = layout
-            collection_view.isPagingEnabled = false
+                        collection_view.isPagingEnabled = false
    
         }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -79,8 +80,10 @@ extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDe
     }
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlimsCollectionViewCell", for: indexPath) as! FlimsCollectionViewCell
+           dLog(indexPath.item)
       lbl_name_movie.text = viewModel?.dataArrayMovie.value[indexPath.item].namemovie
-        cell.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.item].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
+        cell.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.row].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
+           image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.item].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
           // Configure the cell
 
           return cell

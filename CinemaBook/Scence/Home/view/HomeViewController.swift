@@ -37,8 +37,8 @@ class HomeViewController: UIViewController {
         Register()
         bindingtable()
        setupView()
-        view_detail.roundCorners([.bottomLeft], radius: 55)
-        view_detail.clipsToBounds = true
+//        view_detail.roundCorners([.bottomLeft,.bottomRight], radius: 55)
+//        view_detail.clipsToBounds = true
       
        
     
@@ -46,7 +46,7 @@ class HomeViewController: UIViewController {
     }
     func setupinfo() {
         lbl_name_account.text = ManageCacheObject.getCurrentUserInfo().fullname
-        lbl_price_point.text = Utils.stringVietnameseFormatWithNumber(amount: ManageCacheObject.getCurrentUser().point)
+//        lbl_price_point.text = Utils.stringVietnameseFormatWithNumber(amount: ManageCacheObject.getCurrentUser().point)
         avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: ManageCacheObject.getCurrentUserInfo().avatar)), placeholder: UIImage(named: "image_defauft_medium"))
 //        lbl_price_point.text =
     }

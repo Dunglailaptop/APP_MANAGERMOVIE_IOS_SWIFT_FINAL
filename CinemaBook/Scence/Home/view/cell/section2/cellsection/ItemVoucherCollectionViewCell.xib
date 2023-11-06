@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -41,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tM6-IU-ZzF" firstAttribute="leading" secondItem="Amc-AJ-fBx" secondAttribute="leading" constant="10" id="7tO-Z4-3QX"/>
                             <constraint firstItem="tM6-IU-ZzF" firstAttribute="top" secondItem="Amc-AJ-fBx" secondAttribute="top" constant="5" id="LCO-De-Bf9"/>
@@ -50,6 +51,7 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="Amc-AJ-fBx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Kuv-gm-jOJ"/>
                 <constraint firstItem="hEB-07-lyL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="Mv6-Uv-SX6"/>
@@ -59,7 +61,6 @@
                 <constraint firstAttribute="trailing" secondItem="hEB-07-lyL" secondAttribute="trailing" id="chV-bT-pwc"/>
                 <constraint firstAttribute="trailing" secondItem="Amc-AJ-fBx" secondAttribute="trailing" id="zW4-1H-O8e"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="image_poster" destination="hEB-07-lyL" id="jOe-x9-dqK"/>
                 <outlet property="lbl_title" destination="tM6-IU-ZzF" id="1R3-2j-kSQ"/>
@@ -67,7 +68,15 @@
             <point key="canvasLocation" x="132" y="110"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="tM6-IU-ZzF">
+            <size key="intrinsicContentSize" width="62" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="h3" width="2048" height="2048"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -24,10 +24,10 @@
                             <constraint firstAttribute="height" constant="22" id="tuW-eT-jek"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên combo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bg-ix-Pco" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                        <rect key="frame" x="62" y="11.5" width="300" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên combo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bg-ix-Pco" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                        <rect key="frame" x="62" y="12" width="160" height="20.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="300" id="BN0-CX-OzQ"/>
+                            <constraint firstAttribute="width" constant="160" id="cpG-gT-htL"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -43,8 +43,8 @@
                 <constraints>
                     <constraint firstItem="jBO-Ir-SdA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BdV-nD-2qP"/>
                     <constraint firstItem="9bg-ix-Pco" firstAttribute="leading" secondItem="jBO-Ir-SdA" secondAttribute="trailing" constant="20" id="Qsb-Au-z7z"/>
+                    <constraint firstItem="9bg-ix-Pco" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dxr-bn-CQi"/>
                     <constraint firstItem="CJS-lA-929" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wKE-yo-tWr"/>
-                    <constraint firstItem="9bg-ix-Pco" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wh5-uL-ZXm"/>
                     <constraint firstItem="jBO-Ir-SdA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ydJ-A1-a7O"/>
                     <constraint firstAttribute="trailing" secondItem="CJS-lA-929" secondAttribute="trailing" constant="20" id="zTD-LU-hqv"/>
                 </constraints>

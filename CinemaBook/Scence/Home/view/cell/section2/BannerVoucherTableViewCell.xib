@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2L-KQ-r9N">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                        <rect key="frame" x="0.0" y="5" width="300" height="40"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOUCHER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4N-Wt-UHk">
                                 <rect key="frame" x="20" y="0.0" width="84" height="40"/>
@@ -55,7 +55,7 @@
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-sd-y5e">
-                        <rect key="frame" x="0.0" y="40" width="300" height="260"/>
+                        <rect key="frame" x="0.0" y="45" width="300" height="255"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="awh-Vw-dUN">
                             <size key="itemSize" width="128" height="128"/>
@@ -69,7 +69,7 @@
                     <constraint firstItem="cpD-sd-y5e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4G1-ru-Z7f"/>
                     <constraint firstAttribute="bottom" secondItem="cpD-sd-y5e" secondAttribute="bottom" id="LOx-DU-Y7k"/>
                     <constraint firstAttribute="trailing" secondItem="C2L-KQ-r9N" secondAttribute="trailing" id="YOS-Uz-S0i"/>
-                    <constraint firstItem="C2L-KQ-r9N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zhe-Bn-TYh"/>
+                    <constraint firstItem="C2L-KQ-r9N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Zhe-Bn-TYh"/>
                     <constraint firstAttribute="trailing" secondItem="cpD-sd-y5e" secondAttribute="trailing" id="ggU-s0-IeJ"/>
                     <constraint firstItem="cpD-sd-y5e" firstAttribute="top" secondItem="C2L-KQ-r9N" secondAttribute="bottom" id="gjy-vZ-mNU"/>
                     <constraint firstItem="C2L-KQ-r9N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xZ0-g6-Ei0"/>

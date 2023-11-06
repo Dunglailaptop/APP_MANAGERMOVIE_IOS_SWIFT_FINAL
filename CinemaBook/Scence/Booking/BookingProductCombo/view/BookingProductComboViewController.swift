@@ -53,7 +53,7 @@ class BookingProductComboViewController: UIViewController {
     }
     
     @IBAction func btn_makeToPaymentviewcontroller(_ sender: Any) {
-        var dataFoodCombo = viewModel.dataArray.value.filter{$0.isSelected == ACTIVE}
+        var dataFoodCombo = viewModel.dataArray.value.filter{$0.quantity > 0}
         viewModel.makePopToViewPayment(dataChair: dataChair, infoInterestMovie: dataInfoMovie, datafoodcombo: dataFoodCombo)
     }
 }
@@ -75,7 +75,7 @@ extension BookingProductComboViewController: UITableViewDelegate {
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130
+        return 140
     }
     
     

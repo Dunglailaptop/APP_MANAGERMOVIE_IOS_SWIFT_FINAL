@@ -25,7 +25,7 @@ class ItemComboFoodAddTableViewCell: UITableViewCell {
     }
     var data: FoodCombo? = nil {
         didSet {
-            lbl_number_combo.text = String(data!.quantity)
+            lbl_number_combo.text = "x" + String(data!.quantity)
             ilbl_name_combo.text = data?.nametittle
              image_combo.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.picture)), placeholder: UIImage(named: "image_defauft_medium"))
         }

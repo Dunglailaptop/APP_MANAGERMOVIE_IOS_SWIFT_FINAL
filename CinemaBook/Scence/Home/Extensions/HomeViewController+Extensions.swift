@@ -103,7 +103,7 @@ extension HomeViewController {
         tableView.register(CategoryFunctionMoreTableViewCellS, forCellReuseIdentifier: "CategoryFunctionMoreTableViewCell")
       
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        tableView.separatorStyle = .none
           tableView.rx.setDelegate(self).disposed(by: rxbag)
     
     }
@@ -166,13 +166,13 @@ extension HomeViewController:UITableViewDelegate{
         case 1:
             return 400
         case 2:
-            return 150
+            return 155
         case 3:
-            return 200
+            return 205
         case 4:
-            return 200
+            return 205
         default:
-            return 200
+            return 205
         }
 
     }

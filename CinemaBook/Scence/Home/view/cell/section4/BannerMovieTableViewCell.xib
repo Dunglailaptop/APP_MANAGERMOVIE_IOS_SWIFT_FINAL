@@ -24,11 +24,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="es5-gs-gvf">
-                        <rect key="frame" x="0.0" y="20" width="320" height="272"/>
+                        <rect key="frame" x="5" y="20" width="310" height="272"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h1" translatesAutoresizingMaskIntoConstraints="NO" id="ZAW-Uk-XNA">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="272"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="upM-Fv-ApC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="252"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="252"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="owh-Sw-m48">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,19 +45,19 @@
                                 </collectionViewFlowLayout>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-xT-PLv">
-                                <rect key="frame" x="0.0" y="252" width="320" height="20"/>
+                                <rect key="frame" x="0.0" y="252" width="310" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TÊN PHIM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsi-eJ-31l">
                                         <rect key="frame" x="20" y="0.0" width="73.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppj-HI-5ir">
-                                        <rect key="frame" x="212" y="-2.5" width="100" height="25"/>
+                                        <rect key="frame" x="202" y="0.0" width="100" height="20"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="26u-9h-kbz"/>
+                                            <constraint firstAttribute="height" constant="20" id="26u-9h-kbz"/>
                                             <constraint firstAttribute="width" constant="100" id="Pc9-en-Rad"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
@@ -73,12 +81,16 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Lfc-xT-PLv" secondAttribute="bottom" id="C2J-tp-hZZ"/>
                             <constraint firstItem="Lfc-xT-PLv" firstAttribute="top" secondItem="upM-Fv-ApC" secondAttribute="bottom" id="D9e-Q2-yvw"/>
+                            <constraint firstAttribute="bottom" secondItem="ZAW-Uk-XNA" secondAttribute="bottom" id="DeR-i4-vpP"/>
                             <constraint firstItem="upM-Fv-ApC" firstAttribute="top" secondItem="es5-gs-gvf" secondAttribute="top" id="E4K-0T-Oia"/>
+                            <constraint firstItem="ZAW-Uk-XNA" firstAttribute="leading" secondItem="es5-gs-gvf" secondAttribute="leading" id="Lor-hn-PLn"/>
+                            <constraint firstItem="ZAW-Uk-XNA" firstAttribute="top" secondItem="es5-gs-gvf" secondAttribute="top" id="QTY-f6-RRg"/>
                             <constraint firstAttribute="trailing" secondItem="Lfc-xT-PLv" secondAttribute="trailing" id="bni-if-jfA"/>
+                            <constraint firstAttribute="trailing" secondItem="ZAW-Uk-XNA" secondAttribute="trailing" id="mQf-v9-Rxy"/>
                             <constraint firstAttribute="trailing" secondItem="upM-Fv-ApC" secondAttribute="trailing" id="rY0-rS-YRq"/>
                             <constraint firstItem="upM-Fv-ApC" firstAttribute="leading" secondItem="es5-gs-gvf" secondAttribute="leading" id="wQA-pE-CzG"/>
                             <constraint firstItem="Lfc-xT-PLv" firstAttribute="leading" secondItem="es5-gs-gvf" secondAttribute="leading" id="yMy-wn-GvZ"/>
@@ -90,7 +102,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-YZ-YJ7">
                                 <rect key="frame" x="0.0" y="0.0" width="159.5" height="20"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Phim dang chieu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,19 +117,19 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="fNL-Ld-me7"/>
                         </constraints>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Qo6-7c-VPV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2ob-JF-cqV"/>
                     <constraint firstItem="es5-gs-gvf" firstAttribute="top" secondItem="Qo6-7c-VPV" secondAttribute="bottom" id="5kb-gF-aPb"/>
                     <constraint firstAttribute="trailing" secondItem="Qo6-7c-VPV" secondAttribute="trailing" id="Ngi-y8-5UV"/>
-                    <constraint firstAttribute="trailing" secondItem="es5-gs-gvf" secondAttribute="trailing" id="ZJm-X2-r37"/>
-                    <constraint firstItem="es5-gs-gvf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dBh-y1-VQc"/>
+                    <constraint firstAttribute="trailing" secondItem="es5-gs-gvf" secondAttribute="trailing" constant="5" id="ZJm-X2-r37"/>
+                    <constraint firstItem="es5-gs-gvf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="dBh-y1-VQc"/>
                     <constraint firstAttribute="bottom" secondItem="es5-gs-gvf" secondAttribute="bottom" constant="8" id="wPC-66-8J0"/>
                     <constraint firstItem="Qo6-7c-VPV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yMz-VP-JOv"/>
                 </constraints>
@@ -126,12 +138,14 @@
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <connections>
                 <outlet property="collection_view" destination="upM-Fv-ApC" id="Roi-rD-TpY"/>
+                <outlet property="image_poster" destination="ZAW-Uk-XNA" id="KCt-8Q-AiN"/>
                 <outlet property="lbl_name_movie" destination="qsi-eJ-31l" id="E7x-c0-sHa"/>
             </connections>
             <point key="canvasLocation" x="118.84057971014494" y="83.705357142857139"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="h1" width="144" height="180"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

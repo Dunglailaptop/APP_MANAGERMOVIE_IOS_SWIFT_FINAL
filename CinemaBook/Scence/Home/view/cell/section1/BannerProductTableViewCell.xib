@@ -18,21 +18,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-pd-3zZ" customClass="FSPagerView" customModule="FSPagerView">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="292"/>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7g-pd-3zZ" customClass="FSPagerView" customModule="FSPagerView">
+                        <rect key="frame" x="5" y="5" width="290" height="290"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="c7g-pd-3zZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="At5-by-cOw"/>
-                    <constraint firstAttribute="bottom" secondItem="c7g-pd-3zZ" secondAttribute="bottom" constant="8" id="QXM-zr-9zG"/>
-                    <constraint firstAttribute="trailing" secondItem="c7g-pd-3zZ" secondAttribute="trailing" id="aPF-dg-MBV"/>
-                    <constraint firstItem="c7g-pd-3zZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qrJ-TX-EZi"/>
+                    <constraint firstItem="c7g-pd-3zZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="At5-by-cOw"/>
+                    <constraint firstAttribute="bottom" secondItem="c7g-pd-3zZ" secondAttribute="bottom" constant="5" id="QXM-zr-9zG"/>
+                    <constraint firstAttribute="trailing" secondItem="c7g-pd-3zZ" secondAttribute="trailing" constant="5" id="aPF-dg-MBV"/>
+                    <constraint firstItem="c7g-pd-3zZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="qrJ-TX-EZi"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="BANNER" destination="c7g-pd-3zZ" id="jjA-cv-sVZ"/>
             </connections>
