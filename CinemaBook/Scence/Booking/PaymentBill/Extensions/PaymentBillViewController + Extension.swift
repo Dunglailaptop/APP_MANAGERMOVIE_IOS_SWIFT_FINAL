@@ -119,12 +119,14 @@ extension PaymentBillViewController {
     
     func acceptValueBill() {
         var billinfo = viewModel.databill.value
+        var paymentvnpay = viewModel.paymentVNPAY.value
         dLog(infoInterestMovie.idinterest)
         billinfo.iduser = ManageCacheObject.getCurrentUserInfo().idusers
         billinfo.quantityticket = dataChair.count
         billinfo.note = "ko co noi dung gi"
         billinfo.statusbill = 1
         billinfo.totalamount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
+        paymentvnpay.amount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
         billinfo.idmovie = infoInterestMovie.idcinema
         billinfo.idcinema = infoInterestMovie.idcinema
         billinfo.idinterest = infoInterestMovie.idinterest
@@ -150,17 +152,39 @@ extension PaymentBillViewController {
        }
     
     func PaymentBill() {
-        viewModel.postCreateBill().subscribe(onNext: {
+        viewModel.postCreateBill().subscribe(onNext: { [self]
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Bill>().map(JSONObject: response.data)
                 {
+                    
+                    var paymentVNPAY = self.viewModel.paymentVNPAY.value
+                    paymentVNPAY.idorder = data.idbill
+                    paymentVNPAY.amount = data.totalamount
+                    viewModel.paymentVNPAY.accept(paymentVNPAY)
                     JonAlert.showSuccess(message: "Thanh toan thanh cong")
-                    self.viewModel.makePopToSuccessPayment()
-                    self.callPopViewController()
+//                    self.viewModel.makePopToSuccessPayment()
+                    postpaymentVNPAY()
+                
+//                    self.callPopViewController()
                 }
             } else {
                 JonAlert.showError(message: response.message ?? "Co loi trong qua trinh ket noi")
+            }
+        })
+    }
+    
+    func postpaymentVNPAY() {
+        viewModel.postpaymentVNPAY().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<PaymentVNpay>().map(JSONObject: response.data) {
+                    self.viewModel.title_header.accept("THANH TOAN VNPAY")
+                    self.viewModel.link_website.accept(data.urlpayment)
+                    dLog(data.urlpayment)
+                    self.viewModel.idbill.accept(data.idorder)
+                    self.viewModel.makePolicyViewController()
+                }
             }
         })
     }
@@ -176,6 +200,21 @@ extension PaymentBillViewController {
             }
         })
        
+    }
+    
+    func getIdbill() {
+        viewModel.getIdbillPaymentVNPAY().subscribe(onNext: { [self]
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<IdbillPaymentVNPAYRequest>().map(JSONObject: response.data) {
+                    JonAlert.showSuccess(message: "Thanh toán thành công")
+                    viewModel.makePopToSuccessPayment()
+                    self.callPopViewController()
+                }else {
+                    JonAlert.showError(message: "Thanh toán thất bại")
+                }
+            }
+        })
     }
     
 }

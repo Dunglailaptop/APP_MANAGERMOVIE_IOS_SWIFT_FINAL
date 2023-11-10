@@ -22,6 +22,10 @@
 		B04458CD2AEAB08B0041EA50 /* ManagementDetailViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04458CC2AEAB08B0041EA50 /* ManagementDetailViewController + Extensions.swift */; };
 		B04458D02AEAB8D50041EA50 /* ItemfoodcombobillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04458CE2AEAB8D50041EA50 /* ItemfoodcombobillTableViewCell.swift */; };
 		B04458D12AEAB8D50041EA50 /* ItemfoodcombobillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B04458CF2AEAB8D50041EA50 /* ItemfoodcombobillTableViewCell.xib */; };
+		B04F23AF2AFCE67F00D83F47 /* LoadWebLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F23A92AFCE67F00D83F47 /* LoadWebLinkViewModel.swift */; };
+		B04F23B02AFCE67F00D83F47 /* LoadWebLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F23AB2AFCE67F00D83F47 /* LoadWebLinkViewController.swift */; };
+		B04F23B12AFCE67F00D83F47 /* LoadWebLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B04F23AC2AFCE67F00D83F47 /* LoadWebLinkViewController.xib */; };
+		B04F23B22AFCE67F00D83F47 /* LoadWebLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */; };
 		B09B6CD82AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B6CD62AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift */; };
 		B09B6CD92AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */; };
 		B09CD1212AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */; };
@@ -557,6 +561,10 @@
 		B04458CC2AEAB08B0041EA50 /* ManagementDetailViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementDetailViewController + Extensions.swift"; sourceTree = "<group>"; };
 		B04458CE2AEAB8D50041EA50 /* ItemfoodcombobillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemfoodcombobillTableViewCell.swift; sourceTree = "<group>"; };
 		B04458CF2AEAB8D50041EA50 /* ItemfoodcombobillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemfoodcombobillTableViewCell.xib; sourceTree = "<group>"; };
+		B04F23A92AFCE67F00D83F47 /* LoadWebLinkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadWebLinkViewModel.swift; sourceTree = "<group>"; };
+		B04F23AB2AFCE67F00D83F47 /* LoadWebLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadWebLinkViewController.swift; sourceTree = "<group>"; };
+		B04F23AC2AFCE67F00D83F47 /* LoadWebLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadWebLinkViewController.xib; sourceTree = "<group>"; };
+		B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadWebLinkRouter.swift; sourceTree = "<group>"; };
 		B09B6CD62AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPopUpShowListFoodChooseViewController.swift; sourceTree = "<group>"; };
 		B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogPopUpShowListFoodChooseViewController.xib; sourceTree = "<group>"; };
 		B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFunctionMoreTableViewCell.swift; sourceTree = "<group>"; };
@@ -1169,6 +1177,41 @@
 				B038573C2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		B04F23A72AFCE67F00D83F47 /* WebviewLoadNotification */ = {
+			isa = PBXGroup;
+			children = (
+				B04F23A82AFCE67F00D83F47 /* viewModel */,
+				B04F23AA2AFCE67F00D83F47 /* view */,
+				B04F23AD2AFCE67F00D83F47 /* router */,
+			);
+			path = WebviewLoadNotification;
+			sourceTree = "<group>";
+		};
+		B04F23A82AFCE67F00D83F47 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B04F23A92AFCE67F00D83F47 /* LoadWebLinkViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B04F23AA2AFCE67F00D83F47 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B04F23AB2AFCE67F00D83F47 /* LoadWebLinkViewController.swift */,
+				B04F23AC2AFCE67F00D83F47 /* LoadWebLinkViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B04F23AD2AFCE67F00D83F47 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */,
+			);
+			path = router;
 			sourceTree = "<group>";
 		};
 		B09B6CD52AD7F8B200FF3E35 /* DialogPopUpShowListFoodChoose */ = {
@@ -2646,6 +2689,7 @@
 		FE4BAA9D2ACABEF20010C0B9 /* PaymentBill */ = {
 			isa = PBXGroup;
 			children = (
+				B04F23A72AFCE67F00D83F47 /* WebviewLoadNotification */,
 				B0A88C062AD59F4600A5E38E /* Extensions */,
 				FE4BAAA02ACABF090010C0B9 /* view */,
 				FE4BAA9F2ACABF060010C0B9 /* viewModel */,
@@ -4773,6 +4817,7 @@
 				FE4E71002AC528A40020BC2C /* ItemProductOrderCollectionViewCell.xib in Resources */,
 				B09F00972AECBF9B00EFDD7C /* DialogCreateFoodViewController.xib in Resources */,
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
+				B04F23B12AFCE67F00D83F47 /* LoadWebLinkViewController.xib in Resources */,
 				FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */,
 				B0A6F9E92AF27A7E0057CE02 /* ItemMovieReportTableViewCell.xib in Resources */,
 				FE5A14B52AC9A089005739E4 /* ItemProductComboTableViewCell.xib in Resources */,
@@ -4892,6 +4937,7 @@
 				FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */,
 				B0A8CF9A2AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.swift in Sources */,
 				B0A9EFA22AD9805F00B9EF1D /* CartRouter.swift in Sources */,
+				B04F23AF2AFCE67F00D83F47 /* LoadWebLinkViewModel.swift in Sources */,
 				B0A5A8972AF15A5900DB6FCA /* ManageReportViewModel.swift in Sources */,
 				B0BEC1D02ADAEC2300709883 /* PaymentFoodComboViewModel.swift in Sources */,
 				FE11FA7C2AAB5F770016CC6A /* BannerProductTableViewCell.swift in Sources */,
@@ -4921,6 +4967,7 @@
 				FE6A85F72AC5D95000810FFB /* MangamentProductRouter.swift in Sources */,
 				FE2172B12A76B55C000C0C17 /* CustomItemView.swift in Sources */,
 				FE60BD882A76BCA7006EB219 /* tittleLable+Extension.swift in Sources */,
+				B04F23B02AFCE67F00D83F47 /* LoadWebLinkViewController.swift in Sources */,
 				FE33F3902A6CC76B00A396A1 /* Observable+Extension.swift in Sources */,
 				FE5010A92AC02C1D00B18D21 /* ManagementRoomRouter.swift in Sources */,
 				B0A8CF8E2AF8DB6E00596BBD /* NotifcationMessageRouter.swift in Sources */,
@@ -5200,6 +5247,7 @@
 				FE97D8A02A76C2C900D223C9 /* UIView+ToastKit.swift in Sources */,
 				FE52523E2AAF79EE00296246 /* ManagementEmployeeViewModel.swift in Sources */,
 				FE4FFD972A77F16F00983304 /* BaseViewController.swift in Sources */,
+				B04F23B22AFCE67F00D83F47 /* LoadWebLinkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

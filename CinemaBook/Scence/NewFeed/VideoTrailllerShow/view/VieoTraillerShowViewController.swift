@@ -49,8 +49,8 @@ extension VieoTraillerShowViewController: VerticalCardSwiperDatasource {
             let cellNib = UINib(nibName: "itemCardCell", bundle: nil)
 
             card_Swiper.register(nib: cellNib, forCellWithReuseIdentifier: "itemCardCell")
-            card_Swiper.topInset = 5
-            card_Swiper.sideInset = 5
+            card_Swiper.topInset = 0
+            card_Swiper.sideInset = 0
             card_Swiper.cardSpacing = 5
 //            card_Swiper.visibleNextCardHeight = card_Swiper.layer.frame.size.height
              card_Swiper.isSideSwipingEnabled = false

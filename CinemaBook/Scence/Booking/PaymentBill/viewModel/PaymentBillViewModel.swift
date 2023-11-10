@@ -19,6 +19,10 @@ class PaymentBillViewModel: BaseViewModel {
     var dataArrayCombo:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     var dataCombo:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     var databill: BehaviorRelay<Bill> = BehaviorRelay(value: Bill())
+    var idbill: BehaviorRelay<Int> = BehaviorRelay(value: 0)
+    var paymentVNPAY: BehaviorRelay<(amount:Int,idorder:Int)> = BehaviorRelay(value: (amount:0,idorder:0))
+    var title_header = BehaviorRelay<String>(value:  "")
+    var link_website = BehaviorRelay<String>(value:  "")
     func bind(view: PaymentBillViewController,router: PaymentBillRouter){
         self.view = view
         self.router = router
@@ -34,7 +38,9 @@ class PaymentBillViewModel: BaseViewModel {
     func makePopToSuccessPayment(){
         router?.makePopToViewControllerSuccessPayment()
     }
-    
+    func makePolicyViewController(){
+        router?.navigateToPolicyViewController(title_header: title_header.value, link_website: link_website.value,idbilll: idbill.value)
+    }
     
 }
 extension PaymentBillViewModel {
@@ -56,6 +62,22 @@ extension PaymentBillViewModel {
     
     func getPoint() -> Observable<APIResponse> {
         return appServiceProvider.rx.request(.getPoint(iduser: ManageCacheObject.getCurrentUserInfo().idusers))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
+    func getIdbillPaymentVNPAY() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getIdbillPayment(idbill: idbill.value))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
+    func postpaymentVNPAY() -> Observable<APIResponse> {
+        dLog(paymentVNPAY.value.amount)
+        dLog(paymentVNPAY.value.idorder)
+        return appServiceProvider.rx.request(.paymentVNPAY(amount: paymentVNPAY.value.amount, idorder: paymentVNPAY.value.idorder))
             .filterSuccessfulStatusCodes()
             .mapJSON().asObservable()
             .showAPIErrorToast()

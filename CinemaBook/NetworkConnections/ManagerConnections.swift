@@ -75,6 +75,9 @@ enum ManagerConnections {
     case ReportMovie(report_type:Int)
     case reportFood(report_type:Int)
  case reportDetailAll
+case paymentVNPAY(amount:Int,
+                  idorder:Int)
+    case getIdbillPayment(idbill:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -213,6 +216,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlreportfood
         case .reportDetailAll:
             return APIEndPoint.Name.urlReportDetail
+        case .paymentVNPAY(let amount,let idorder):
+            return APIEndPoint.Name.urlPaymentVnpay
+        case .getIdbillPayment(let idbill):
+            return APIEndPoint.Name.urlGetIdbillPaymentVNPay
         }
     
     }
@@ -344,7 +351,10 @@ extension ManagerConnections: TargetType {
             return .get
         case .reportDetailAll:
             return .get
-            
+        case .paymentVNPAY(_,_):
+            return .post
+        case .getIdbillPayment(_):
+            return .get
         }
 
         
@@ -497,6 +507,10 @@ extension ManagerConnections: TargetType {
         case .reportFood(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .reportDetailAll:
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .paymentVNPAY(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getIdbillPayment(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -844,6 +858,16 @@ extension ManagerConnections: TargetType {
             ]
         case .reportDetailAll:
             return [:]
+        case .paymentVNPAY(let amount,let idorder):
+            return [
+                "amount":amount,
+                "idorder":idorder,
+                "urlpayment":""
+            ]
+        case .getIdbillPayment(let idbill):
+            return [
+                "idbill":idbill
+            ]
         }
        
     }
@@ -981,6 +1005,10 @@ extension ManagerConnections: TargetType {
         case .reportFood(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .reportDetailAll:
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .paymentVNPAY(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getIdbillPayment(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }

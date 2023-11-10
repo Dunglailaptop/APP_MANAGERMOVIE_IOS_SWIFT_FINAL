@@ -50,6 +50,7 @@ class PaymentBillViewController: UIViewController {
     var typeCheck = 0
     var TotalBill = 0
     var pointget = 0
+    var Idbill = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view:self,router:router)
@@ -58,6 +59,7 @@ class PaymentBillViewController: UIViewController {
         registertable()
         bindingtablecell()
         checkbtn()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("idbillcheckPaymentVNPAY"), object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -66,6 +68,21 @@ class PaymentBillViewController: UIViewController {
         getListCombo()
         getPoint()
         setup()
+       
+    }
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any] {
+                // Access the loginResponse dictionary here
+                if let reportType = userInfo["userInfo"] as? [String: Any] {
+                    let reportTypeValue = reportType["Report_type"] as? Int ?? 0
+                    viewModel.idbill.accept(reportTypeValue)
+                 
+                       
+                        getIdbill()
+                       
+                   
+                }
+            }
     }
 
     @IBAction func btn_makePopToviewController(_ sender: Any) {
@@ -73,7 +90,8 @@ class PaymentBillViewController: UIViewController {
     }
     
     @IBAction func btn_paymentbill(_ sender: Any) {
-        typeCheck == 1 ? presentPopupPayment() : presentPopupNotPayment()
+        PaymentBill()
+//        typeCheck == 1 ? presentPopupPayment() : presentPopupNotPayment()
     }
     
 }

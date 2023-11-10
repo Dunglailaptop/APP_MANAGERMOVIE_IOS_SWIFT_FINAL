@@ -10,7 +10,7 @@ import UIKit
 var ACTIVE = 1
 var DEACTIVE = 0
 var BILL = 3 // trạng thái ghế đã đặt thành công
-
+var nopayment = 4
 
 var REPORT_TYPE_TODAY = 1 //lấy theo ngày
 var REPORT_TYPE_YESTERDAY = 9  // lấy theo ngày hôm qua

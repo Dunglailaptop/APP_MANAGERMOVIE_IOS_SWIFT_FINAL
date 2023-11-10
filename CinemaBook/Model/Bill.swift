@@ -281,3 +281,55 @@ struct DetailFoodComboBill: Mappable {
          image <- map["image"]
     }
 }
+struct PaymentVNpay: Mappable {
+    var idorder = 0
+            var amount = 0
+            var urlpayment = ""
+    
+    init(){}
+    
+    init?(map: Map) {
+        
+    }
+    mutating func mapping(map: Map) {
+        idorder <- map["idorder"]
+        amount <- map["amount"]
+        urlpayment <- map["urlpayment"]
+    }
+}
+struct IdbillPaymentVNPAYRequest: Mappable {
+    var idpaymentvnpay = 0
+    var vnp_Amount = ""
+    var vnp_BankCode = ""
+    var vnp_BackTranNo = ""
+     var vnp_CardType = ""
+    var vnp_OrderInfo = ""
+    var vnp_PayDate =  ""
+    var vnp_ResponseCode = ""
+    var vnp_TmnCode = ""
+    var vnp_TransactionNo = ""
+    var vnp_TransactionSatus = ""
+    var vnp_TxnRef = ""
+    var vnp_SecureHash = ""
+    var idbills = 0
+    
+    init?(map: Map) {
+        
+    }
+    mutating func mapping(map: Map) {
+        idpaymentvnpay <- map["idpaymentvnpay"]
+        vnp_Amount <- map["idpaymentvnpay"]
+        vnp_BankCode <- map["vnp_BankCode"]
+        vnp_BackTranNo <- map["vnp_BackTranNo"]
+        vnp_CardType <- map["vnp_CardType"]
+        vnp_OrderInfo <- map["vnp_OrderInfo"]
+        vnp_PayDate <- map["vnp_PayDate"]
+        vnp_ResponseCode <- map["vnp_ResponseCode"]
+        vnp_TmnCode <- map["vnp_TmnCode"]
+        vnp_TransactionNo <- map["vnp_TransactionNo"]
+        vnp_TransactionSatus <- map["vnp_TransactionSatus"]
+        vnp_TxnRef <- map["vnp_TxnRef"]
+        vnp_SecureHash <- map["vnp_SecureHash"]
+        idbills <- map["idbills"]
+    }
+}
