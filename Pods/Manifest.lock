@@ -144,6 +144,7 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - ObjectMapper (4.2.0)
+  - OTPFieldView (1.0.1)
   - PagingCollectionViewLayout (0.0.4)
   - PromisesObjC (2.3.1)
   - QVRWeekView (0.14.1)
@@ -215,6 +216,7 @@ DEPENDENCIES:
   - Moya/RxSwift
   - MWPhotoBrowser
   - ObjectMapper
+  - OTPFieldView
   - PagingCollectionViewLayout
   - QVRWeekView
   - RealmSwift
@@ -273,6 +275,7 @@ SPEC REPOS:
     - MWPhotoBrowser
     - nanopb
     - ObjectMapper
+    - OTPFieldView
     - PagingCollectionViewLayout
     - PromisesObjC
     - QVRWeekView
@@ -336,6 +339,7 @@ SPEC CHECKSUMS:
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   PagingCollectionViewLayout: a75339d9fe45affc116b6770f37c884a8a5e9cd9
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   QVRWeekView: 8b68e870e17bd970f44a5a2017e0bd031c825af3
@@ -362,6 +366,6 @@ SPEC CHECKSUMS:
   VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: a88a5dadf1c7fdc39c6fdf46d7b6b9090a2e6c1d
+PODFILE CHECKSUM: 46ce8e00f95add4913b8d9fb0b0856247e693ec4
 
 COCOAPODS: 1.13.0

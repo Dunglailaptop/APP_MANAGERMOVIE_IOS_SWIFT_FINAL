@@ -58,4 +58,9 @@ struct Constans {
             REPORT_TYPE_THREE_YEAR:Utils.getDateString().threeLastYear,
             REPORT_TYPE_ALL_YEAR:""]
     
+    /*warning messages after call API*/
+    struct WARNING_MESSAGE {
+        static let ICON_WARNING = "icon-warning"
+    }
+    
 }

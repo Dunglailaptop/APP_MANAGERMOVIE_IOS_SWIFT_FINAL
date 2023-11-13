@@ -26,7 +26,11 @@ class SigninRouter {
     }
     
     
-    
+    func makeToOTPViewController(emails:String) {
+        let viewOTP = EnterOTPRouter().viewController as! EnterOTPViewController
+        viewOTP.emails = emails
+        sourceView?.navigationController?.pushViewController(viewOTP, animated: true)
+    }
  
     
 }

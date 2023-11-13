@@ -11,6 +11,7 @@ import RxCocoa
 import RxSwift
 import RxRelay
 import ObjectMapper
+import JonAlert
 
 class SigninViewController: BaseViewController {
 
@@ -51,7 +52,7 @@ class SigninViewController: BaseViewController {
         _ = isEmployeeInforValid.take(1).subscribe(onNext: {[self] (isValid) in
             
             if isValid {
-                
+            sendOTP()
             }
         }).disposed(by: rxbag)
     }
@@ -171,4 +172,16 @@ extension SigninViewController {
         
     }
     
+}
+extension SigninViewController {
+    func sendOTP(){
+        viewModel.getOTP().subscribe(onNext: {[self] (response) in
+            if (response.code == RRHTTPStatusCode.ok.rawValue){
+                viewModel.makeToOTPViewController()
+            }else {
+                JonAlert.showError(message: response.message ?? "Có lỗi xảy ra trong quá trình kết nối tới máy chủ. Vui lòng thử lại")
+
+            }
+        }).disposed(by: rxbag)
+    }
 }

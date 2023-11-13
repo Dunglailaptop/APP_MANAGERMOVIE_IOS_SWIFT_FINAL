@@ -28,6 +28,7 @@ ${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework
 ${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
 ${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/OTPFieldView/OTPFieldView.framework
 ${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework
 ${BUILT_PRODUCTS_DIR}/PagingCollectionViewLayout/PagingCollectionViewLayout.framework
 ${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework

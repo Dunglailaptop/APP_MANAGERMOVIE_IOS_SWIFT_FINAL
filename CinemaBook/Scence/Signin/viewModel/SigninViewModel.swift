@@ -27,8 +27,20 @@ class SigninViewModel: BaseViewModel {
         self.router?.setSourceView(self.view)
     }
     
-   
+    func makeToOTPViewController() {
+        router?.makeToOTPViewController(emails: email.value)
+    }
     
  
+
+}
+extension SigninViewModel {
+    func getOTP() -> Observable<APIResponse>{
+        return appServiceProvider.rx.request(.getOTPInEmail(emails: email.value))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
 
 }

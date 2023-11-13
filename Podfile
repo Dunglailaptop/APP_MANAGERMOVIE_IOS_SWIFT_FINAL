@@ -53,7 +53,7 @@ pod 'SpreadsheetView'
 # Example: For Swift 5.0
  pod 'Charts'
 pod 'VerticalCardSwiper'
-
+  pod 'OTPFieldView'
 
 
 

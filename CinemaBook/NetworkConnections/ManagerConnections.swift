@@ -74,10 +74,12 @@ enum ManagerConnections {
     case GetReportTicket(report_type:Int)
     case ReportMovie(report_type:Int)
     case reportFood(report_type:Int)
- case reportDetailAll
-case paymentVNPAY(amount:Int,
-                  idorder:Int)
+    case reportDetailAll
+    case paymentVNPAY(amount:Int,
+              idorder:Int)
     case getIdbillPayment(idbill:Int)
+    case getOTPInEmail(emails:String)
+    case confrimOTP(emails:String,enteredOTP:String)
 }
 
 extension ManagerConnections: TargetType {
@@ -220,6 +222,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlPaymentVnpay
         case .getIdbillPayment(let idbill):
             return APIEndPoint.Name.urlGetIdbillPaymentVNPay
+        case .getOTPInEmail(let emails):
+            return APIEndPoint.Name.urlGetOTPInEmail
+        case .confrimOTP(let emails,let enteredOTP):
+            return APIEndPoint.Name.urlConfrimOTPEMAIL
         }
     
     }
@@ -354,6 +360,10 @@ extension ManagerConnections: TargetType {
         case .paymentVNPAY(_,_):
             return .post
         case .getIdbillPayment(_):
+            return .get
+        case .getOTPInEmail(_):
+            return .get
+        case .confrimOTP(_,_):
             return .get
         }
 
@@ -511,6 +521,10 @@ extension ManagerConnections: TargetType {
         case .paymentVNPAY(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getIdbillPayment(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getOTPInEmail(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .confrimOTP(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -868,6 +882,15 @@ extension ManagerConnections: TargetType {
             return [
                 "idbill":idbill
             ]
+        case .getOTPInEmail(let emails):
+            return [
+                "emails":emails
+            ]
+        case .confrimOTP(let emails,let enteredOTP):
+            return [
+                "emails":emails,
+                "enteredOTP":enteredOTP
+            ]
         }
        
     }
@@ -880,8 +903,9 @@ extension ManagerConnections: TargetType {
         return encoding
     }
     var task: Task {
+        dLog(headers ?? "")
         switch self {
-
+         
         case .Login(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .config(_):
@@ -1009,6 +1033,10 @@ extension ManagerConnections: TargetType {
         case .paymentVNPAY(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getIdbillPayment(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getOTPInEmail(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .confrimOTP(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
