@@ -22,7 +22,7 @@ extension LoginViewController {
                 }
              
             }else {
-                JonAlert.show(message: "Co loi trong qua trinh ket noi")
+                Toast.show(message: response.message ?? "Co loi trong qua trinh ket noi", controller: self)
             }
             
         }).disposed(by: LoginViewController.rxbag)
@@ -44,7 +44,7 @@ extension LoginViewController {
                                 dLog(account)
                             }
             }else {
-                JonAlert.showError(message: "Sai tài khoản và mật khẩu xin vui lòng kiểm tra lại")
+                Toast.show(message: response.message ?? "Có lỗi xảy ra trong quá trình kết nối", controller: self)
             }
         
         }).disposed(by: LoginViewController.rxbag)

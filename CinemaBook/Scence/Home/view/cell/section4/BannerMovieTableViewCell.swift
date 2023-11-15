@@ -13,7 +13,7 @@ import RxSwift
 
 class BannerMovieTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var image_poster: UIImageView!
+    
     
     private(set) var disposeBag = DisposeBag()
   
@@ -83,7 +83,7 @@ extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDe
            dLog(indexPath.item)
       lbl_name_movie.text = viewModel?.dataArrayMovie.value[indexPath.item].namemovie
         cell.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.row].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
-           image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.item].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
+         
           // Configure the cell
 
           return cell
