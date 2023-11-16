@@ -20,6 +20,7 @@ class ListMovieShowNowViewController: BaseViewController {
     var Type_edit = 0
     var type_viewTralling = 0
     
+    @IBOutlet weak var btn_close_sreach: UIButton!
     @IBOutlet weak var lbl_date_to: UILabel!
     @IBOutlet weak var lbl_date_From: UILabel!
     @IBOutlet weak var view_no_data: UIView!
@@ -48,15 +49,28 @@ class ListMovieShowNowViewController: BaseViewController {
                     self.viewModel.dataArray.accept(cloneAreaDataFilter)
                    }
         })
+        
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var data = viewModel.allvalue.value
-        data.status = status
-        viewModel.allvalue.accept(data)
-        getListmovie()
+        if Type_edit == 0 {
+            view_search.isHidden = false
+            btn_close_sreach.isUserInteractionEnabled = false
+            var data = viewModel.allvalue.value
+            data.status = status
+            viewModel.allvalue.accept(data)
+            getListMovieBooking()
+        } else
+        {
+            view_search.isHidden = true
+            var data = viewModel.allvalue.value
+            data.status = status
+            viewModel.allvalue.accept(data)
+            getListmovie()
+        }
+      
     }
  
     @IBAction func btn_showsearch(_ sender: Any) {

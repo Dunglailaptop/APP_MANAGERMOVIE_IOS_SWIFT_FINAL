@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import ObjectMapper
 import JonAlert
+import UserNotifications
 
 class PaymentBillViewController: UIViewController {
     
@@ -59,6 +60,7 @@ class PaymentBillViewController: UIViewController {
         registertable()
         bindingtablecell()
         checkbtn()
+//        showNotification()
         NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("idbillcheckPaymentVNPAY"), object: nil)
         // Do any additional setup after loading the view.
     }

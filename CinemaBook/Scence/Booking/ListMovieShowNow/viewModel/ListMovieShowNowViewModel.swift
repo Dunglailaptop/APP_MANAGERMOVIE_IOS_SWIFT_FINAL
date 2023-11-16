@@ -48,6 +48,13 @@ extension ListMovieShowNowViewModel {
              .showAPIErrorToast()
              .mapObject(type: APIResponse.self)
      }
+    func getListMovieBooking() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListMovieBooking(status: allvalue.value.status))
+             .filterSuccessfulStatusCodes()
+             .mapJSON().asObservable()
+             .showAPIErrorToast()
+             .mapObject(type: APIResponse.self)
+     }
     func UpdateStatusMovie() -> Observable<APIResponse> {
         return appServiceProvider.rx.request(.UpdateStatusMovie(idmovie: dataMovie.value.movieID, status: dataMovie.value.statusshow))
              .filterSuccessfulStatusCodes()

@@ -80,6 +80,7 @@ enum ManagerConnections {
     case getIdbillPayment(idbill:Int)
     case getOTPInEmail(emails:String)
     case confrimOTP(emails:String,enteredOTP:String)
+    case getListMovieBooking(status:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -226,6 +227,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetOTPInEmail
         case .confrimOTP(let emails,let enteredOTP):
             return APIEndPoint.Name.urlConfrimOTPEMAIL
+        case .getListMovieBooking(let status):
+            return APIEndPoint.Name.urlGetListBookingMovie
         }
     
     }
@@ -364,6 +367,8 @@ extension ManagerConnections: TargetType {
         case .getOTPInEmail(_):
             return .get
         case .confrimOTP(_,_):
+            return .get
+        case .getListMovieBooking(_):
             return .get
         }
 
@@ -525,6 +530,8 @@ extension ManagerConnections: TargetType {
         case .getOTPInEmail(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .confrimOTP(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getListMovieBooking(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -891,6 +898,10 @@ extension ManagerConnections: TargetType {
                 "emails":emails,
                 "enteredOTP":enteredOTP
             ]
+        case .getListMovieBooking(let status):
+            return [
+                "statusshow":status
+            ]
         }
        
     }
@@ -1037,6 +1048,8 @@ extension ManagerConnections: TargetType {
         case .getOTPInEmail(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .confrimOTP(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getListMovieBooking(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }

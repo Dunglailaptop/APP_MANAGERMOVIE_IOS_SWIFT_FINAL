@@ -34,8 +34,8 @@ class LoginViewController: BaseViewController {
     func checkvalid() {
         txt_password.isSecureTextEntry = true
         _ = txt_username.rx.text.map{(str) in
-            if str!.count > 0 {
-                JonAlert.showError(message: "Độ dài tối thiểu 5 tới 10 ký tự")
+            if str!.count > 50 {
+                self.lbl_error_password.text = "Độ dài tối đa 50 ký tự"
             }
             return String(str!.prefix(50))
         }.map({(str) -> Account in
@@ -46,8 +46,8 @@ class LoginViewController: BaseViewController {
         }).bind(to: viewModel.account).disposed(by: rxbag)
         
         _ = txt_password.rx.text.map{(str) in
-            if str!.count > 20 {
-                JonAlert.showError(message: "Độ dài tối đa 5 tới 20 ký tự")
+            if str!.count > 50 {
+                self.lbl_error_username.text = "Đô dài tối đa 50 ký tự"
             }
             return String(str!.prefix(20))
         }.map({(str) -> Account in
@@ -82,7 +82,7 @@ extension LoginViewController {
                 lbl_error_username.isHidden = false
 
             if name.count < 5{
-                lbl_error_username.text = "Độ dài tối thiểu 5 ký tự"
+                lbl_error_username.text = "Độ dài tối thiểu 10 ký tự"
                 return false
             }
 
@@ -98,7 +98,7 @@ extension LoginViewController {
                 lbl_error_password.isHidden = false
 
             if name.count < 2{
-                lbl_error_password.text = "Độ dài tối thiểu 2 ký tự"
+                lbl_error_password.text = "Độ dài tối thiểu 4 ký tự"
                 return false
             }
 

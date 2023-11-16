@@ -14,7 +14,7 @@ protocol RestartApp {
 }
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,RestartApp {
+class AppDelegate: UIResponder, UIApplicationDelegate,RestartApp,UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     private let navigationController = UINavigationController()
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,RestartApp {
         navigationController.setViewControllers([SplachScreenViewController()], animated: true)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
+        UNUserNotificationCenter.current().delegate = self
         return true
     }
     
@@ -82,6 +82,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,RestartApp {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if #available(iOS 14.0, *) {
+            completionHandler([ .banner, .list, .sound])
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        completionHandler()
     }
 
 ///=========

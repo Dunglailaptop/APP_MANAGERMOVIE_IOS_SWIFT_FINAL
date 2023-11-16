@@ -119,6 +119,21 @@ extension ListMovieShowNowViewController{
 
 // CALL API
 extension ListMovieShowNowViewController {
+    
+    func getListMovieBooking() {
+        viewModel.getListMovieBooking().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<Movie>().mapArray(JSONObject: response.data) {
+                    self.viewModel.dataArray.accept(data)
+                    self.viewModel.dataSearch.accept(data)
+                    self.view_no_data.isHidden = self.viewModel.dataArray.value.count > 0 ? true:false
+                }
+            }
+        }).disposed(by: rxbag)
+    }
+    
+    
     func getListCategoryMovie() {
         
     }

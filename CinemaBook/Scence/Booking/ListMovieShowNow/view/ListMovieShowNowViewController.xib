@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListMovieShowNowViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_close_sreach" destination="wnE-6F-rxP" id="B0J-4q-oDK"/>
                 <outlet property="lbl_date_From" destination="ski-wH-HeE" id="bNi-Rz-nUw"/>
                 <outlet property="lbl_date_to" destination="XFy-9p-rqo" id="Sh6-Ah-l8J"/>
                 <outlet property="tableView" destination="yRg-64-soU" id="6cz-Za-iDS"/>
@@ -219,6 +220,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="0cL-Zf-kp4"/>
                                                 <constraint firstAttribute="width" constant="30" id="XvK-yO-VN1"/>
                                             </constraints>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="icon-delete-share-point"/>
                                             <connections>

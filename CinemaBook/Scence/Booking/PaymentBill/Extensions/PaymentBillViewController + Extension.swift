@@ -12,7 +12,7 @@ import ObjectMapper
 import RxCocoa
 import RxSwift
 import JonAlert
-
+import UserNotifications
 
 extension PaymentBillViewController: DialogPayment {
     func callbackPayment() {
@@ -210,6 +210,7 @@ extension PaymentBillViewController {
                     JonAlert.showSuccess(message: "Thanh toán thành công")
                     viewModel.makePopToSuccessPayment()
                     self.callPopViewController()
+                    showNotification()
                 }else {
                     JonAlert.showError(message: "Thanh toán thất bại")
                 }
@@ -280,4 +281,56 @@ extension PaymentBillViewController {
             self.typeCheck  = 0
         })
     }
+}
+//notifiacation
+extension PaymentBillViewController {
+    func showNotification() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { settings in
+            switch settings.authorizationStatus {
+            case .authorized:
+                self.dispatchNotification()
+            case .denied:
+                dLog("Notifications denied by user")
+            case .notDetermined:
+                notificationCenter.requestAuthorization(options: [.alert, .sound]) { didAllow, error in
+                    if didAllow {
+                        self.dispatchNotification()
+                    } else {
+                        if let error = error {
+                            dLog("Error requesting authorization for notifications: \(error.localizedDescription)")
+                        }
+                    }
+                }
+            default:
+                break
+            }
+        }
+    }
+
+    func dispatchNotification() {
+        let identifier = "my_app_show"
+        let title = "Thanh toán thành công"
+        let body = "Xin vui lòng kiểm tra đơn hàng của bạn"
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = .default
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false) // Thông báo sẽ hiển thị sau 5 giây
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
+        notificationCenter.add(request) { error in
+            if let error = error {
+                dLog("Error scheduling notification: \(error.localizedDescription)")
+            } else {
+                dLog("Notification scheduled successfully")
+            }
+        }
+    }
+
 }

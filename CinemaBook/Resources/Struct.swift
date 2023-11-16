@@ -89,6 +89,7 @@ public struct APIEndPoint {
         static let urlGetIdbillPaymentVNPay = "PaymentMomo/getidbillPaymentVnpay"
         static let urlGetOTPInEmail = "/Account/SendOTPInEmail"
         static let urlConfrimOTPEMAIL = "/Account/ConfirmAccount"
+        static let urlGetListBookingMovie = "/Movie/getListMovieWithBooking"
     }
     
 }
