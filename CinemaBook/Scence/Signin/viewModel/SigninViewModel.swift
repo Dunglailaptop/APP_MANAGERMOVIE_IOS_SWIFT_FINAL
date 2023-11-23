@@ -42,5 +42,12 @@ extension SigninViewModel {
             .showAPIErrorToast()
             .mapObject(type: APIResponse.self)
     }
+    func checkaccount() -> Observable<APIResponse>{
+        return appServiceProvider.rx.request(.getcheckaccountExistsSigin(username: username.value))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
 
 }

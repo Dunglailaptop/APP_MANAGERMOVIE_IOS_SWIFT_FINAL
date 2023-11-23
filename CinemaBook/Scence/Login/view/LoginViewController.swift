@@ -15,7 +15,8 @@ class LoginViewController: BaseViewController {
 
     var viewModel = LoginViewModel()
     var router = LoginRouter()
-    
+    var check = 0
+    @IBOutlet weak var icon_eye: UIImageView!
     var username = "" // if you are create account and System show username in textbox your UI Loigin
     @IBOutlet weak var lbl_error_password: UILabel!
     @IBOutlet weak var lbl_error_username: UILabel!
@@ -37,7 +38,13 @@ class LoginViewController: BaseViewController {
         }
     }
 
-
+    @IBAction func btn_close_eye(_ sender: Any) {
+        check = check == 0 ? 1:0
+        icon_eye.image = check == 0 ? UIImage(named: "icon_eye_pass"):UIImage(named: "eye_pass")
+        txt_password.isSecureTextEntry =  check == 0 ? true:false
+        
+    }
+    
     func checkvalid() {
         txt_password.isSecureTextEntry = true
         _ = txt_username.rx.text.map{(str) in

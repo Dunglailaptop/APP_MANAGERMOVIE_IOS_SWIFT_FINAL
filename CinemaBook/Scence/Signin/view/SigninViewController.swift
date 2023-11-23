@@ -52,7 +52,7 @@ class SigninViewController: BaseViewController {
         _ = isEmployeeInforValid.take(1).subscribe(onNext: {[self] (isValid) in
             
             if isValid {
-            sendOTP()
+            checkaccount()
             }
         }).disposed(by: rxbag)
     }
@@ -174,6 +174,19 @@ extension SigninViewController {
     
 }
 extension SigninViewController {
+    func checkaccount() {
+        viewModel.checkaccount().subscribe(onNext: {
+            [self] (response) in
+            if (response.code == RRHTTPStatusCode.ok.rawValue){
+                sendOTP()
+            }else
+            {
+                JonAlert.showError(message: response.message ?? "Có lỗi xảy ra trong quá trình kết nối tới máy chủ")
+            }
+        }).disposed(by: rxbag)
+    }
+    
+    
     func sendOTP(){
         viewModel.getOTP().subscribe(onNext: {[self] (response) in
             if (response.code == RRHTTPStatusCode.ok.rawValue){
