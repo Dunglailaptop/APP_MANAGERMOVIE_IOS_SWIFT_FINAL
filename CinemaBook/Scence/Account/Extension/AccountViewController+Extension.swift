@@ -16,6 +16,8 @@ extension AccountViewController {
         tableView.register(SettingforAccountCustomerTableViewCell, forCellReuseIdentifier: "SettingforAccountCustomerTableViewCell")
         let LogoutTableViewCell = UINib(nibName: "LogoutTableViewCell", bundle: .main)
                tableView.register(LogoutTableViewCell, forCellReuseIdentifier: "LogoutTableViewCell")
+        let settingManger = UINib(nibName: "ItemAccountSettingMangerTableViewCell", bundle: .main)
+        tableView.register(settingManger, forCellReuseIdentifier: "ItemAccountSettingMangerTableViewCell")
         self.tableView.estimatedRowHeight = 80
              self.tableView.rowHeight = UITableView.automaticDimension
              tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
@@ -26,35 +28,77 @@ extension AccountViewController {
         viewModel.dataArray.bind(to: tableView.rx.items) {
             [self] (table, index, data) -> UITableViewCell in
             let indexPath = IndexPath(row: index, section: 0)
-            switch index {
-            case 0:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "SettingforAccountCustomerTableViewCell", for: indexPath) as! SettingforAccountCustomerTableViewCell
-                cell.viewModel = self.viewModel
-                return cell
-            case 1:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
-                cell.btn_logout.rx.tap.asDriver().drive(onNext: { [weak self]  in
-                    self?.presentModalLogout()
-                }).disposed(by: self.rxbag)
-                cell.selectionStyle = .none
-                return cell
-            default:
-                let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
-                return cell
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                switch index {
+                case 0:
+            
+                        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemAccountSettingMangerTableViewCell", for: indexPath) as! ItemAccountSettingMangerTableViewCell
+                        
+                        cell.selectionStyle = .none
+                        return cell
+                  
+                 
+                default:
+                    let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
+                    cell.btn_logout.rx.tap.asDriver().drive(onNext: { [weak self]  in
+                        self?.presentModalLogout()
+                    }).disposed(by: self.rxbag)
+                    return cell
+            }
+             
+            }
+                else
+            {
+                    switch index {
+                    case 0:
+                        let cell = self.tableView.dequeueReusableCell(withIdentifier: "SettingforAccountCustomerTableViewCell", for: indexPath) as! SettingforAccountCustomerTableViewCell
+                        cell.viewModel = self.viewModel
+                        return cell
+                    case 1:
+                        let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
+                        cell.btn_logout.rx.tap.asDriver().drive(onNext: { [weak self]  in
+                            self?.presentModalLogout()
+                        }).disposed(by: self.rxbag)
+                        cell.selectionStyle = .none
+                        return cell
+                    case 2:
+                        
+                        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemAccountSettingMangerTableViewCell", for: indexPath) as! ItemAccountSettingMangerTableViewCell
+                        
+                        cell.selectionStyle = .none
+                        return cell
+                        
+                        
+                    default:
+                        let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
+                        return cell
+                    }
+          
             }
         }.disposed(by: rxbag)
     }
 }
 extension AccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 250
-        case 1:
-            return 60
-        default:
-            return 0
+        if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+            switch indexPath.row {
+            case 0:
+                return 100
+            default:
+                return 60
+            }
+         
+        }else {
+            switch indexPath.row {
+            case 0:
+                return 250
+            case 1:
+                return 60
+            default:
+                return 0
+            }
         }
+     
     }
 }
 extension AccountViewController: LogoutConfirm {

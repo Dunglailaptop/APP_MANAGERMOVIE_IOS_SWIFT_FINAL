@@ -19,14 +19,18 @@ class EnterOTPViewModel: BaseViewModel{
     var sessionString = BehaviorRelay<String>(value: "")
     var timeToLockOPTEnterView = BehaviorRelay<Int>(value: 0)
     var emails = BehaviorRelay<String>(value: "")
+    
+    //dataccount new
+    var dataAccount: BehaviorRelay<(username:String,password:String,fullname:String,emails:String)> = BehaviorRelay(value: (username:"",password:"",fullname:"",emails:""))
+    
     func bind(view:EnterOTPViewController, router: EnterOTPRouter){
         self.view = view
         self.router = router
         self.router?.setSourceView(view)
     }
     
-    func makeLoginViewController(){
-        router?.navigateLoginViewController()
+    func makeLoginViewController(username:String){
+        router?.navigateLoginViewController(username: username)
     }
 //
 //    func makeUpdatePasswordViewController(){
@@ -39,7 +43,7 @@ class EnterOTPViewModel: BaseViewModel{
 extension EnterOTPViewModel{
   
     func checkOTP() -> Observable<APIResponse>{
-        return appServiceProvider.rx.request(.confrimOTP(emails: emails.value, enteredOTP: OTPCode.value))
+        return appServiceProvider.rx.request(.confrimOTP(emails: emails.value, enteredOTP: OTPCode.value,username: dataAccount.value.username,passwords: dataAccount.value.password,fullname: dataAccount.value.fullname))
             .filterSuccessfulStatusCodes()
             .mapJSON().asObservable()
             .showAPIErrorToast()

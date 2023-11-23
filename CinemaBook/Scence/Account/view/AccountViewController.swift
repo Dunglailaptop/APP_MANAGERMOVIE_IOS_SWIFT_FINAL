@@ -29,7 +29,11 @@ class AccountViewController: BaseViewController {
         register()
         bindingtableview()
         setup()
-        
+        if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+            viewModel.dataArray.accept([0,1])
+        }else {
+            viewModel.dataArray.accept([0,1,2])
+        }
         // Do any additional setup after loading the view.
     }
 

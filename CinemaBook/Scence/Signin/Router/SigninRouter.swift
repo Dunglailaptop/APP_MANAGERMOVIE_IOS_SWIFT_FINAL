@@ -26,9 +26,12 @@ class SigninRouter {
     }
     
     
-    func makeToOTPViewController(emails:String) {
+    func makeToOTPViewController(emails:String,username:String,password:String,Fullname:String) {
         let viewOTP = EnterOTPRouter().viewController as! EnterOTPViewController
         viewOTP.emails = emails
+        viewOTP.username = username
+        viewOTP.password = password
+        viewOTP.fullname = Fullname
         sourceView?.navigationController?.pushViewController(viewOTP, animated: true)
     }
  

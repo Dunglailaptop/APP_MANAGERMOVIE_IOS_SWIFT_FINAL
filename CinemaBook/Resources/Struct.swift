@@ -90,6 +90,7 @@ public struct APIEndPoint {
         static let urlGetOTPInEmail = "/Account/SendOTPInEmail"
         static let urlConfrimOTPEMAIL = "/Account/ConfirmAccount"
         static let urlGetListBookingMovie = "/Movie/getListMovieWithBooking"
+        static let urlGetchechkaccount = "/Account/checkaccount"
     }
     
 }

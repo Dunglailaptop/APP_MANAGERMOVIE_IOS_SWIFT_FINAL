@@ -25,8 +25,9 @@ class EnterOTPRouter {
     }
     
     
-    func navigateLoginViewController(){
-        let loginViewController = LoginRouter().viewController
+    func navigateLoginViewController(username:String){
+        let loginViewController = LoginRouter().viewController as! LoginViewController
+        loginViewController.username = username
         sourceView?.navigationController?.pushViewController(loginViewController, animated: true)
     }
 //    

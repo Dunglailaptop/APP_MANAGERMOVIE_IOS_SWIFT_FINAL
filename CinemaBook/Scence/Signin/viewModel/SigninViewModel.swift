@@ -28,7 +28,7 @@ class SigninViewModel: BaseViewModel {
     }
     
     func makeToOTPViewController() {
-        router?.makeToOTPViewController(emails: email.value)
+        router?.makeToOTPViewController(emails: email.value,username: username.value,password: password.value,Fullname: fullname.value)
     }
     
  

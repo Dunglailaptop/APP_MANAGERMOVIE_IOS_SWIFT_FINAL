@@ -264,22 +264,22 @@ extension PaymentBillViewController {
     func checkbtn() {
         btn_check_1.rx.tap.asDriver().drive(onNext: {
             self.image_check.image = UIImage(named: "check_2")
-            self.image_check_2.image = UIImage(named: "icon-check-disable")
+//            self.image_check_2.image = UIImage(named: "icon-check-disable")
             self.image_check_1.image = UIImage(named: "icon-check-disable")
             self.typeCheck = 1
         })
         btn_check_2.rx.tap.asDriver().drive(onNext: {
             self.image_check.image = UIImage(named: "icon-check-disable")
-            self.image_check_2.image = UIImage(named: "icon-check-disable")
+//            self.image_check_2.image = UIImage(named: "icon-check-disable")
             self.image_check_1.image = UIImage(named: "check_2")
             self.typeCheck  = 0
         })
-        btn_check_3.rx.tap.asDriver().drive(onNext: {
-            self.image_check.image = UIImage(named: "icon-check-disable")
-            self.image_check_2.image = UIImage(named: "check_2")
-            self.image_check_1.image = UIImage(named: "icon-check-disable")
-            self.typeCheck  = 0
-        })
+//        btn_check_3.rx.tap.asDriver().drive(onNext: {
+//            self.image_check.image = UIImage(named: "icon-check-disable")
+//            self.image_check_2.image = UIImage(named: "check_2")
+//            self.image_check_1.image = UIImage(named: "icon-check-disable")
+//            self.typeCheck  = 0
+//        })
     }
 }
 //notifiacation

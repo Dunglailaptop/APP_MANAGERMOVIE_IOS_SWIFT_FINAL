@@ -16,7 +16,7 @@ class LoginViewController: BaseViewController {
     var viewModel = LoginViewModel()
     var router = LoginRouter()
     
-    
+    var username = "" // if you are create account and System show username in textbox your UI Loigin
     @IBOutlet weak var lbl_error_password: UILabel!
     @IBOutlet weak var lbl_error_username: UILabel!
     @IBOutlet weak var txt_username: UITextField!
@@ -28,6 +28,13 @@ class LoginViewController: BaseViewController {
         // Do any additional setup after loading the view.
         
        checkvalid()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if username != "" {
+            txt_username.text = username
+        }
     }
 
 
@@ -81,7 +88,7 @@ extension LoginViewController {
             let name = str.trim()
                 lbl_error_username.isHidden = false
 
-            if name.count < 5{
+            if name.count < 2{
                 lbl_error_username.text = "Độ dài tối thiểu 10 ký tự"
                 return false
             }

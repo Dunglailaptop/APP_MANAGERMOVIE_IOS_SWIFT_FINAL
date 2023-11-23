@@ -123,8 +123,8 @@
             filePath = "CinemaBook/Scence/Account/Extension/AccountViewController+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "callbackAccessConfirm()"
             landmarkType = "7">
             <Locations>

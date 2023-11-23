@@ -28,6 +28,8 @@
 		B04F23B02AFCE67F00D83F47 /* LoadWebLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F23AB2AFCE67F00D83F47 /* LoadWebLinkViewController.swift */; };
 		B04F23B12AFCE67F00D83F47 /* LoadWebLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B04F23AC2AFCE67F00D83F47 /* LoadWebLinkViewController.xib */; };
 		B04F23B22AFCE67F00D83F47 /* LoadWebLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */; };
+		B0806AED2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0806AEB2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift */; };
+		B0806AEE2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0806AEC2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib */; };
 		B09B6CD82AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B6CD62AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift */; };
 		B09B6CD92AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */; };
 		B09CD1212AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */; };
@@ -576,6 +578,8 @@
 		B04F23AB2AFCE67F00D83F47 /* LoadWebLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadWebLinkViewController.swift; sourceTree = "<group>"; };
 		B04F23AC2AFCE67F00D83F47 /* LoadWebLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadWebLinkViewController.xib; sourceTree = "<group>"; };
 		B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadWebLinkRouter.swift; sourceTree = "<group>"; };
+		B0806AEB2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAccountSettingMangerTableViewCell.swift; sourceTree = "<group>"; };
+		B0806AEC2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemAccountSettingMangerTableViewCell.xib; sourceTree = "<group>"; };
 		B09B6CD62AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogPopUpShowListFoodChooseViewController.swift; sourceTree = "<group>"; };
 		B09B6CD72AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogPopUpShowListFoodChooseViewController.xib; sourceTree = "<group>"; };
 		B09CD11F2AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFunctionMoreTableViewCell.swift; sourceTree = "<group>"; };
@@ -1265,6 +1269,34 @@
 				B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		B0806AE82B076EEF0091B499 /* section2 */ = {
+			isa = PBXGroup;
+			children = (
+				FE491ED52AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.swift */,
+				FE491ED62AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.xib */,
+			);
+			name = section2;
+			path = "sectiòn";
+			sourceTree = "<group>";
+		};
+		B0806AE92B076EF20091B499 /* section1 */ = {
+			isa = PBXGroup;
+			children = (
+				FE491ED92AA0F78B00BCA4D1 /* LogoutTableViewCell.swift */,
+				FE491EDA2AA0F78B00BCA4D1 /* LogoutTableViewCell.xib */,
+			);
+			path = section1;
+			sourceTree = "<group>";
+		};
+		B0806AEA2B076F140091B499 /* section3 */ = {
+			isa = PBXGroup;
+			children = (
+				B0806AEB2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift */,
+				B0806AEC2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib */,
+			);
+			path = section3;
 			sourceTree = "<group>";
 		};
 		B09B6CD52AD7F8B200FF3E35 /* DialogPopUpShowListFoodChoose */ = {
@@ -2764,17 +2796,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		FE491ED42AA0F44F00BCA4D1 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				FE491ED52AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.swift */,
-				FE491ED62AA0F48500BCA4D1 /* SettingforAccountCustomerTableViewCell.xib */,
-				FE491ED92AA0F78B00BCA4D1 /* LogoutTableViewCell.swift */,
-				FE491EDA2AA0F78B00BCA4D1 /* LogoutTableViewCell.xib */,
-			);
-			path = cell;
-			sourceTree = "<group>";
-		};
 		FE491EDD2AA0F82A00BCA4D1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -4253,7 +4274,9 @@
 		FE7BA98F2A5AFE0800344EFB /* view */ = {
 			isa = PBXGroup;
 			children = (
-				FE491ED42AA0F44F00BCA4D1 /* cell */,
+				B0806AEA2B076F140091B499 /* section3 */,
+				B0806AE92B076EF20091B499 /* section1 */,
+				B0806AE82B076EEF0091B499 /* section2 */,
 				FE7BA9922A5AFE2700344EFB /* AccountViewController.swift */,
 				FE7BA9932A5AFE2700344EFB /* AccountViewController.xib */,
 			);
@@ -4875,6 +4898,7 @@
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
 				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
 				B09CD1222AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib in Resources */,
+				B0806AEE2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				B0A9A21B2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.xib in Resources */,
 				FE6533842AAA16AA00C0739B /* BannerMovieTableViewCell.xib in Resources */,
@@ -5194,6 +5218,7 @@
 				FE71C6602AB7FD520029D84B /* ItemMovieInterestManagementTableViewCell.swift in Sources */,
 				FE33F3992A6CC77500A396A1 /* RRHTTPStatusCode.swift in Sources */,
 				B0AD43632AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift in Sources */,
+				B0806AED2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift in Sources */,
 				FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */,
 				B0AB37AE2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.swift in Sources */,
 				FE4BAAAE2ACAD1E20010C0B9 /* itemComboFoodCollectionViewCell.swift in Sources */,

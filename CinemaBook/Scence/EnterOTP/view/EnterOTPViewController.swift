@@ -15,14 +15,21 @@ class EnterOTPViewController: BaseViewController {
     var viewModel = EnterOTPViewModel()
     var router = EnterOTPRouter()
     @IBOutlet weak var OTP_text_field_view: OTPFieldView!
+   
+  
     var username = ""
+    var emails = ""
+    var fullname = ""
+    var password = ""
+        
     var restaurant_brand_name = ""
     weak var reEnterTimer: Timer?
     weak var errorTimer: Timer?
     var OTPCountDown = 0
     var errorCounter = 5
     var timeToUnEnableOPTEnterView = 0
-    var emails = ""
+   
+  
     @IBOutlet weak var btn_send_OTP_again: UIButton!
     @IBOutlet weak var view_OTP_count_down: UIView!
     @IBOutlet weak var lbl_count_down_value: UILabel!
@@ -34,6 +41,12 @@ class EnterOTPViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
         setUpOtpView()
         viewModel.emails.accept(emails)
+        var dataaccountnew = viewModel.dataAccount.value
+        dataaccountnew.fullname = fullname
+        dataaccountnew.emails = emails
+        dataaccountnew.password = password
+        dataaccountnew.username = username
+        viewModel.dataAccount.accept(dataaccountnew)
         setOTPCountDown()
         
 
@@ -109,7 +122,7 @@ class EnterOTPViewController: BaseViewController {
     }
     
     @IBAction func actionToNavigateBackToLogin(_ sender: Any) {
-        viewModel.makeLoginViewController()
+        viewModel.makeLoginViewController(username: "")
     }
     
     

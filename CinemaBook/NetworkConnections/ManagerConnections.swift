@@ -79,8 +79,9 @@ enum ManagerConnections {
               idorder:Int)
     case getIdbillPayment(idbill:Int)
     case getOTPInEmail(emails:String)
-    case confrimOTP(emails:String,enteredOTP:String)
+    case confrimOTP(emails:String,enteredOTP:String,username:String,passwords:String,fullname:String)
     case getListMovieBooking(status:Int)
+    case getcheckaccountExistsSigin(username:String)
 }
 
 extension ManagerConnections: TargetType {
@@ -225,10 +226,12 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetIdbillPaymentVNPay
         case .getOTPInEmail(let emails):
             return APIEndPoint.Name.urlGetOTPInEmail
-        case .confrimOTP(let emails,let enteredOTP):
+        case .confrimOTP(let emails,let enteredOTP,_,_,_):
             return APIEndPoint.Name.urlConfrimOTPEMAIL
         case .getListMovieBooking(let status):
             return APIEndPoint.Name.urlGetListBookingMovie
+        case .getcheckaccountExistsSigin(let username):
+            return APIEndPoint.Name.urlGetchechkaccount
         }
     
     }
@@ -366,9 +369,11 @@ extension ManagerConnections: TargetType {
             return .get
         case .getOTPInEmail(_):
             return .get
-        case .confrimOTP(_,_):
-            return .get
+        case .confrimOTP(_,_,_,_,_):
+            return .post
         case .getListMovieBooking(_):
+            return .get
+        case .getcheckaccountExistsSigin(_):
             return .get
         }
 
@@ -529,9 +534,11 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getOTPInEmail(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .confrimOTP(_,_):
-            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .confrimOTP(_,_,_,_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getListMovieBooking(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getcheckaccountExistsSigin(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -893,14 +900,21 @@ extension ManagerConnections: TargetType {
             return [
                 "emails":emails
             ]
-        case .confrimOTP(let emails,let enteredOTP):
+        case .confrimOTP(let emails ,let enteredOTP,let username,let passwords,let fullname):
             return [
-                "emails":emails,
-                "enteredOTP":enteredOTP
+                "enteredOTP": enteredOTP,
+                "username": username,
+                 "passwords": passwords,
+                 "fullname": fullname,
+                 "emails": emails
             ]
         case .getListMovieBooking(let status):
             return [
                 "statusshow":status
+            ]
+        case .getcheckaccountExistsSigin(let username):
+            return [
+                "username":username
             ]
         }
        
@@ -1047,9 +1061,11 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getOTPInEmail(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .confrimOTP(_,_):
-            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .confrimOTP(_,_,_,_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getListMovieBooking(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getcheckaccountExistsSigin(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
