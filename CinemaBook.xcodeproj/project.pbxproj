@@ -189,6 +189,10 @@
 		B0AF7A442AD3E7D9008AE1F2 /* ChatMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A432AD3E7D9008AE1F2 /* ChatMessageViewModel.swift */; };
 		B0AF7A462AD3E7EA008AE1F2 /* ChatMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF7A452AD3E7EA008AE1F2 /* ChatMessageRouter.swift */; };
 		B0AF91722AD004C2000035DB /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91712AD004C2000035DB /* Bill.swift */; };
+		B0B26B972B0F8E0F003D867A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B26B952B0F8E0F003D867A /* ChangePasswordViewController.swift */; };
+		B0B26B982B0F8E0F003D867A /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B26B962B0F8E0F003D867A /* ChangePasswordViewController.xib */; };
+		B0B26B9A2B0F9D85003D867A /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B26B992B0F9D85003D867A /* ChangePasswordViewModel.swift */; };
+		B0B26B9C2B0F9D95003D867A /* ChangePasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B26B9B2B0F9D95003D867A /* ChangePasswordRouter.swift */; };
 		B0B2B9F82AD6D92E003CE655 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2B9F62AD6D92E003CE655 /* StoreViewController.swift */; };
 		B0B2B9F92AD6D92E003CE655 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B2B9F72AD6D92E003CE655 /* StoreViewController.xib */; };
 		B0B2B9FB2AD6DF39003CE655 /* StoreRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B2B9FA2AD6DF39003CE655 /* StoreRouter.swift */; };
@@ -224,6 +228,10 @@
 		B0F9D30A2AE6C48800CE70FC /* ManagementDetailRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F9D3082AE6C48800CE70FC /* ManagementDetailRoomViewController.xib */; };
 		B0F9D30F2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9D30E2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift */; };
 		B0F9D3112AE6D48300CE70FC /* ManagementDetailRoomRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9D3102AE6D48300CE70FC /* ManagementDetailRoomRouter.swift */; };
+		B0FB6AE82B0F3ED1004483E0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB6AE62B0F3ED1004483E0 /* ForgotPasswordViewController.swift */; };
+		B0FB6AE92B0F3ED1004483E0 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0FB6AE72B0F3ED1004483E0 /* ForgotPasswordViewController.xib */; };
+		B0FB6AEB2B0F4267004483E0 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB6AEA2B0F4267004483E0 /* ForgotPasswordViewModel.swift */; };
+		B0FB6AED2B0F429A004483E0 /* ForgotRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FB6AEC2B0F429A004483E0 /* ForgotRouter.swift */; };
 		FE0F29032A5AF427008C62CD /* LoginViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */; };
 		FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */; };
 		FE0F290C2A5AF4DC008C62CD /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0F290A2A5AF4DC008C62CD /* MenuViewController.xib */; };
@@ -739,6 +747,10 @@
 		B0AF7A432AD3E7D9008AE1F2 /* ChatMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewModel.swift; sourceTree = "<group>"; };
 		B0AF7A452AD3E7EA008AE1F2 /* ChatMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageRouter.swift; sourceTree = "<group>"; };
 		B0AF91712AD004C2000035DB /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		B0B26B952B0F8E0F003D867A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		B0B26B962B0F8E0F003D867A /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		B0B26B992B0F9D85003D867A /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		B0B26B9B2B0F9D95003D867A /* ChangePasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRouter.swift; sourceTree = "<group>"; };
 		B0B2B9F62AD6D92E003CE655 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		B0B2B9F72AD6D92E003CE655 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
 		B0B2B9FA2AD6DF39003CE655 /* StoreRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRouter.swift; sourceTree = "<group>"; };
@@ -774,6 +786,10 @@
 		B0F9D3082AE6C48800CE70FC /* ManagementDetailRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementDetailRoomViewController.xib; sourceTree = "<group>"; };
 		B0F9D30E2AE6D47400CE70FC /* ManagementDetailRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailRoomViewModel.swift; sourceTree = "<group>"; };
 		B0F9D3102AE6D48300CE70FC /* ManagementDetailRoomRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailRoomRouter.swift; sourceTree = "<group>"; };
+		B0FB6AE62B0F3ED1004483E0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		B0FB6AE72B0F3ED1004483E0 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		B0FB6AEA2B0F4267004483E0 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		B0FB6AEC2B0F429A004483E0 /* ForgotRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotRouter.swift; sourceTree = "<group>"; };
 		F1358A0C5EED4EAF251BF12C /* Pods_CinemaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinemaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0F29022A5AF427008C62CD /* LoginViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+Extensions.swift"; sourceTree = "<group>"; };
 		FE0F29092A5AF4DC008C62CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -2468,6 +2484,41 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		B0B26B912B0F8DDD003D867A /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				B0B26B942B0F8DF7003D867A /* Router */,
+				B0B26B932B0F8DEC003D867A /* viewModel */,
+				B0B26B922B0F8DE9003D867A /* view */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		B0B26B922B0F8DE9003D867A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0B26B952B0F8E0F003D867A /* ChangePasswordViewController.swift */,
+				B0B26B962B0F8E0F003D867A /* ChangePasswordViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0B26B932B0F8DEC003D867A /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0B26B992B0F9D85003D867A /* ChangePasswordViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0B26B942B0F8DF7003D867A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0B26B9B2B0F9D95003D867A /* ChangePasswordRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		B0B2B9F22AD6D8D7003CE655 /* StoreShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
@@ -2673,6 +2724,41 @@
 			isa = PBXGroup;
 			children = (
 				B0F9D3102AE6D48300CE70FC /* ManagementDetailRoomRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0FB6AE22B0F3E9D004483E0 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB6AE52B0F3EAD004483E0 /* Router */,
+				B0FB6AE42B0F3EAA004483E0 /* viewModel */,
+				B0FB6AE32B0F3EA8004483E0 /* view */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		B0FB6AE32B0F3EA8004483E0 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB6AE62B0F3ED1004483E0 /* ForgotPasswordViewController.swift */,
+				B0FB6AE72B0F3ED1004483E0 /* ForgotPasswordViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0FB6AE42B0F3EAA004483E0 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB6AEA2B0F4267004483E0 /* ForgotPasswordViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0FB6AE52B0F3EAD004483E0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB6AEC2B0F429A004483E0 /* ForgotRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -4480,6 +4566,8 @@
 		FEAC96C52A5A561700B49C80 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
+				B0B26B912B0F8DDD003D867A /* ChangePassword */,
+				B0FB6AE22B0F3E9D004483E0 /* ForgotPassword */,
 				B007724D2AFE9A4F0083AAB8 /* Signin */,
 				B0A52B1E2AE0DE8400CACC45 /* DialogInputQuantity */,
 				B0B2B9F22AD6D8D7003CE655 /* StoreShoppingCart */,
@@ -4854,6 +4942,7 @@
 				B0A9EF972AD970FC00B9EF1D /* CartViewController.xib in Resources */,
 				B0AF53E62AF530F5005F2A27 /* ReportFoodItemCellTableViewCell.xib in Resources */,
 				FE4E70F52AC524C30020BC2C /* OrderProductViewController.xib in Resources */,
+				B0FB6AE92B0F3ED1004483E0 /* ForgotPasswordViewController.xib in Resources */,
 				B0A52B222AE0DEAC00CACC45 /* QuantityInputViewController.xib in Resources */,
 				FE11FA792AAB5C9D0016CC6A /* ItemVoucherCollectionViewCell.xib in Resources */,
 				FE5010A72AC0290200B18D21 /* ManagementRoomViewController.xib in Resources */,
@@ -4942,6 +5031,7 @@
 				FE4E71002AC528A40020BC2C /* ItemProductOrderCollectionViewCell.xib in Resources */,
 				B09F00972AECBF9B00EFDD7C /* DialogCreateFoodViewController.xib in Resources */,
 				FEEF09562A9500C900756BC8 /* VideoViewController.xib in Resources */,
+				B0B26B982B0F8E0F003D867A /* ChangePasswordViewController.xib in Resources */,
 				B04F23B12AFCE67F00D83F47 /* LoadWebLinkViewController.xib in Resources */,
 				FE5C9E882AA42BE300FA235D /* Roboto-ThinItalic.ttf in Resources */,
 				B0A6F9E92AF27A7E0057CE02 /* ItemMovieReportTableViewCell.xib in Resources */,
@@ -5076,7 +5166,9 @@
 				FE4BAAA82ACACC860010C0B9 /* PaymentBillViewModel.swift in Sources */,
 				FE5252332AAF787400296246 /* ManagementRouter.swift in Sources */,
 				B03857372ADC32DB00814F02 /* ManageBillAccountRouter.swift in Sources */,
+				B0FB6AED2B0F429A004483E0 /* ForgotRouter.swift in Sources */,
 				B0A9A4602AD6617C005C16C1 /* ReportDetailTableViewCell.swift in Sources */,
+				B0B26B9C2B0F9D95003D867A /* ChangePasswordRouter.swift in Sources */,
 				FE33F37C2A6CC6C100A396A1 /* ManagerConnections.swift in Sources */,
 				FE5C9E6A2AA427BB00FA235D /* SambagTimePickerResult.swift in Sources */,
 				B0A9EF962AD970FC00B9EF1D /* CartViewController.swift in Sources */,
@@ -5117,6 +5209,7 @@
 				B0A9D79E2ADD63C9008AD03D /* ManageDetailBillFoodAccountRouter.swift in Sources */,
 				B0A147802AEA35EF00668821 /* ManagementItemTicketTableViewCell.swift in Sources */,
 				FE53B8162A7FF28F00976628 /* AccountViewModel.swift in Sources */,
+				B0B26B972B0F8E0F003D867A /* ChangePasswordViewController.swift in Sources */,
 				FE4E70FF2AC528A40020BC2C /* ItemProductOrderCollectionViewCell.swift in Sources */,
 				FE5D08252AA233C8004FA3D9 /* MovieRouter.swift in Sources */,
 				FE59CF452AA39DC300A6ADAA /* AccountInfoViewModel.swift in Sources */,
@@ -5221,6 +5314,7 @@
 				B0806AED2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift in Sources */,
 				FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */,
 				B0AB37AE2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.swift in Sources */,
+				B0FB6AEB2B0F4267004483E0 /* ForgotPasswordViewModel.swift in Sources */,
 				FE4BAAAE2ACAD1E20010C0B9 /* itemComboFoodCollectionViewCell.swift in Sources */,
 				FEAB99202AC1D90900F024D5 /* ManagementRoomCreateViewController.swift in Sources */,
 				FE73FB882AB8845B00732F36 /* Room.swift in Sources */,
@@ -5313,6 +5407,7 @@
 				FE6E0A3F2A77FED200DC628F /* LoginViewController.swift in Sources */,
 				B0AF7A462AD3E7EA008AE1F2 /* ChatMessageRouter.swift in Sources */,
 				FE6BD17D2AC8595900177093 /* MangamentFoodItemViewController.swift in Sources */,
+				B0FB6AE82B0F3ED1004483E0 /* ForgotPasswordViewController.swift in Sources */,
 				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
 				FEAB99232AC1DEE800F024D5 /* MangementRoomCreateRouter.swift in Sources */,
@@ -5337,6 +5432,7 @@
 				FEC1E3F22A9CD4F8005A9F16 /* TimeShowViewModel.swift in Sources */,
 				FE50965B2A76544400F5A457 /* MenuRouter.swift in Sources */,
 				B0A12B312AEBF2B5000B6FC4 /* ExUIButton.swift in Sources */,
+				B0B26B9A2B0F9D85003D867A /* ChangePasswordViewModel.swift in Sources */,
 				FE33F3972A6CC77500A396A1 /* LTActivityIndicatorView.swift in Sources */,
 				FE33F3812A6CC73300A396A1 /* ColorUtils.swift in Sources */,
 				FEFCF4392A76B7E90023B4D1 /* UIImageView+Extension.swift in Sources */,

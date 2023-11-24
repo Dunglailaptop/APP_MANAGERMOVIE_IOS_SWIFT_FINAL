@@ -45,6 +45,11 @@ class LoginViewController: BaseViewController {
         
     }
     
+    
+    @IBAction func btn_makeToForgotPassword(_ sender: Any) {
+        viewModel.makeToFogotPassword()
+    }
+    
     func checkvalid() {
         txt_password.isSecureTextEntry = true
         _ = txt_username.rx.text.map{(str) in

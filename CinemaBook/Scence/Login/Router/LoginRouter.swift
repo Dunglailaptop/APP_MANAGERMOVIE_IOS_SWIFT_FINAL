@@ -32,4 +32,9 @@ class LoginRouter {
         sourceView?.navigationController?.pushViewController(resetPasswordViewController, animated: true)
     }
     
+    func navigateToFogotPassword() {
+        let forgotpassword = ForgotPasswordViewController()
+        sourceView?.navigationController?.pushViewController(forgotpassword, animated: true)
+    }
+    
 }

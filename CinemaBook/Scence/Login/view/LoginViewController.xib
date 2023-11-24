@@ -240,6 +240,19 @@
                                 <constraint firstAttribute="height" constant="50" id="nHU-Cb-Uli"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f97-8y-3R6">
+                            <rect key="frame" x="157" y="520" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="3hf-EW-wUt"/>
+                                <constraint firstAttribute="width" constant="100" id="Fqo-Wt-wgZ"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="btn_makeToForgotPassword:" destination="-1" eventType="touchUpInside" id="LIY-34-9nh"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -249,8 +262,10 @@
                         <constraint firstItem="Rcb-H7-eyi" firstAttribute="top" secondItem="NOz-H6-DJL" secondAttribute="bottom" constant="20" id="Dx9-mz-qaC"/>
                         <constraint firstAttribute="trailing" secondItem="d6c-nE-MLL" secondAttribute="trailing" constant="20" id="LQl-7T-nyI"/>
                         <constraint firstItem="d6c-nE-MLL" firstAttribute="leading" secondItem="KNh-xc-pcT" secondAttribute="leading" constant="20" id="Trn-Zj-0eS"/>
+                        <constraint firstItem="f97-8y-3R6" firstAttribute="centerX" secondItem="KNh-xc-pcT" secondAttribute="centerX" id="YPD-pp-DkL"/>
                         <constraint firstItem="D2o-dT-ome" firstAttribute="top" secondItem="KNh-xc-pcT" secondAttribute="top" constant="60" id="bxe-0a-ShD"/>
                         <constraint firstItem="NOz-H6-DJL" firstAttribute="top" secondItem="d6c-nE-MLL" secondAttribute="bottom" constant="10" id="eOu-PL-P3Z"/>
+                        <constraint firstItem="f97-8y-3R6" firstAttribute="top" secondItem="d6c-nE-MLL" secondAttribute="bottom" constant="10" id="ffH-6o-XfN"/>
                         <constraint firstItem="Rcb-H7-eyi" firstAttribute="centerX" secondItem="KNh-xc-pcT" secondAttribute="centerX" id="iLb-fY-gvz"/>
                     </constraints>
                 </view>

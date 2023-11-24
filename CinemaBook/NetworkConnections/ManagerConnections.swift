@@ -82,6 +82,10 @@ enum ManagerConnections {
     case confrimOTP(emails:String,enteredOTP:String,username:String,passwords:String,fullname:String)
     case getListMovieBooking(status:Int)
     case getcheckaccountExistsSigin(username:String)
+    case getForgotPassword(username:String)
+    case confirmfogotAccount(emails:String,enteredOTP:String,iduser:Int)
+    case changepassword(newpassword:String,username:String)
+    case saveCacheVNPAY(bill:Bill)
 }
 
 extension ManagerConnections: TargetType {
@@ -232,6 +236,14 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetListBookingMovie
         case .getcheckaccountExistsSigin(let username):
             return APIEndPoint.Name.urlGetchechkaccount
+        case .getForgotPassword(let username):
+            return APIEndPoint.Name.urlForgotPassword
+        case .confirmfogotAccount(let emails,let enteredOTP,let iduser):
+            return APIEndPoint.Name.urlConfirmAccountForgotPassword
+        case .changepassword(let newpassword,let username):
+            return APIEndPoint.Name.urlChangePassword
+        case .saveCacheVNPAY(_):
+            return APIEndPoint.Name.urlSaveCacheBillVnapy
         }
     
     }
@@ -375,6 +387,14 @@ extension ManagerConnections: TargetType {
             return .get
         case .getcheckaccountExistsSigin(_):
             return .get
+        case .getForgotPassword(_):
+            return .get
+        case .confirmfogotAccount(_,_,_):
+            return .get
+        case .changepassword(_,_):
+            return .post
+        case .saveCacheVNPAY(_):
+            return .post
         }
 
         
@@ -540,6 +560,14 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getcheckaccountExistsSigin(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getForgotPassword(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .confirmfogotAccount(_,_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .changepassword(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .saveCacheVNPAY(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -916,6 +944,38 @@ extension ManagerConnections: TargetType {
             return [
                 "username":username
             ]
+        case .getForgotPassword(let username):
+            return [
+                "username":username
+            ]
+        case .confirmfogotAccount(let emails,let enteredOTP,let iduser):
+            return [
+                "emails": emails,
+                "enteredOTP": enteredOTP,
+                "iduser": iduser
+            ]
+        case .changepassword(let newpassword,let username):
+            return [
+                "newpassword":newpassword,
+                "username":username
+            ]
+        case .saveCacheVNPAY(let bill):
+            return [
+                "idaccount": bill.iduser,
+                "idbill": bill.idbill,
+                "idmovie": bill.idmovie,
+                "idvoucher": bill.idvoucher,
+                "iduser": bill.iduser,
+                "idinterest": bill.idinterest,
+                "idcinema": bill.idcinema,
+                "quantityticket": bill.quantityticket,
+                "vat": bill.vat,
+                "totalamount": bill.totalamount,
+                "note": bill.note,
+                "statusbill": bill.statusbill,
+                "ticket": bill.tickets.toJSON(),
+                "combobill": bill.combobills.toJSON()
+            ]
         }
        
     }
@@ -1067,6 +1127,14 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getcheckaccountExistsSigin(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getForgotPassword(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .confirmfogotAccount(_,_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .changepassword(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .saveCacheVNPAY(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

@@ -12,6 +12,38 @@ import JonAlert
 import ObjectMapper
 
 extension EnterOTPViewController {
+    
+    func verifyCodeforgotpassword() {
+        viewModel.checkOTPForgotPassword().subscribe(onNext:{[self] (response) in
+            if(response.code == RRHTTPStatusCode.ok.rawValue){
+                if let data = Mapper<Account>().map(JSONObject: response.data) {
+                    viewModel.dataaccountforgotpass.accept(data)
+                    JonAlert.showSuccess(message: "Xác nhận OTP thành công")
+                    viewModel.makeToChangePasswordViewController()
+                }
+              
+            }else{
+
+                OTP_text_field_view.initializeUI()
+                OTP_text_field_view.isUserInteractionEnabled = false
+                errorCounter -= 1
+                var timeToUnEnableOPTEnterView = viewModel.timeToLockOPTEnterView.value
+                timeToUnEnableOPTEnterView += 3*(5 - errorCounter)
+                viewModel.timeToLockOPTEnterView.accept(timeToUnEnableOPTEnterView)
+                JonAlert.show(
+                    message: String(format: "Bạn còn %d lần nhập OTP", errorCounter),
+                    andIcon: UIImage(named: Constans.WARNING_MESSAGE.ICON_WARNING),
+                    duration: 2.0)
+                if(errorCounter == 0){
+                    viewModel.makeLoginViewController(username: "")
+                }
+                Toast.show(message: response.message ?? "", controller: self)
+
+            }
+        }).disposed(by: rxbag)
+    }
+
+    
     func verifyCode() {
         viewModel.checkOTP().subscribe(onNext:{[self] (response) in
             if(response.code == RRHTTPStatusCode.ok.rawValue){

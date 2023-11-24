@@ -30,6 +30,7 @@ class EnterOTPRouter {
         loginViewController.username = username
         sourceView?.navigationController?.pushViewController(loginViewController, animated: true)
     }
+ 
 //    
 //    func navigateToUpdatePasswordViewController(username:String,verifyCode: String, restaurant_brand_name:String){
 //        let updatePasswordViewController = UpdatePasswordRouter().viewController as! UpdatePasswordViewController
@@ -38,6 +39,12 @@ class EnterOTPRouter {
 //        updatePasswordViewController.restaurant_brand_name = restaurant_brand_name
 //        sourceView!.navigationController?.pushViewController(updatePasswordViewController, animated: true)
 //    }
-    
+    func makeToChangePasswordViewController(dataacc:Account) {
+        let viewChangePassword = ChangePasswordRouter().viewController as! ChangePasswordViewController
+        viewChangePassword.accdata = dataacc
+        viewChangePassword.typecheck = 1
+        sourceView?.navigationController?.pushViewController(viewChangePassword, animated: true)
+    }
+ 
     
 }

@@ -30,6 +30,10 @@ class LoginViewModel {
         router?.navigateToMenuViewController()
     }
     
+    func makeToFogotPassword() {
+        router?.navigateToFogotPassword()
+    }
+    
     var account: BehaviorRelay<Account> = BehaviorRelay(value: Account())
    var iduser = BehaviorRelay<Int>(value: 0)
 

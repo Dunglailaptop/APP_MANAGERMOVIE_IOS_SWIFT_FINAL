@@ -1,14 +1,14 @@
 //
-//  SigninRouter.swift
+//  ForgotRouter.swift
 //  CinemaBook
 //
-//  Created by Nguyen Xuan Tien Dung on 11/11/2023.
+//  Created by Nguyen Xuan Tien Dung on 23/11/2023.
 //  Copyright © 2023 dungtien. All rights reserved.
 //
 
 import UIKit
 
-class SigninRouter {
+class ForgotRouter {
     var viewController: UIViewController{
         return createViewController()
     }
@@ -16,7 +16,7 @@ class SigninRouter {
     private var sourceView:UIViewController?
     
     private func createViewController()-> UIViewController {
-        let view = SigninViewController(nibName: "SigninViewController", bundle: Bundle.main)
+        let view = ForgotPasswordViewController(nibName: "ForgotPasswordViewController", bundle: Bundle.main)
         return view
     }
     
@@ -24,14 +24,11 @@ class SigninRouter {
         guard let view = sourceView else {fatalError("Error Desconocido")}
         self.sourceView = view
     }
-    
-    
-    func makeToOTPViewController(emails:String,username:String,password:String,Fullname:String) {
+    func makeToOTPviewController(iduser:Int,emails:String) {
         let viewOTP = EnterOTPRouter().viewController as! EnterOTPViewController
+        viewOTP.typecheck = 1
+        viewOTP.iduser = iduser
         viewOTP.emails = emails
-        viewOTP.username = username
-        viewOTP.password = password
-        viewOTP.fullname = Fullname
         sourceView?.navigationController?.pushViewController(viewOTP, animated: true)
     }
    

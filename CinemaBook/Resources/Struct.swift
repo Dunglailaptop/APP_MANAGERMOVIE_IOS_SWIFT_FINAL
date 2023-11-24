@@ -91,6 +91,10 @@ public struct APIEndPoint {
         static let urlConfrimOTPEMAIL = "/Account/ConfirmAccount"
         static let urlGetListBookingMovie = "/Movie/getListMovieWithBooking"
         static let urlGetchechkaccount = "/Account/checkaccount"
-    }
+        static let urlForgotPassword = "/Account/ForgotPasssword"
+        static let urlConfirmAccountForgotPassword = "/Account/ConfirmAccountForgotPassword"
+        static let urlChangePassword = "/Account/ChangePassWord"
+        static let urlSaveCacheBillVnapy = "/PaymentMomo/SaveCachePaymentBill"
+}
     
 }

@@ -119,6 +119,7 @@ extension PaymentBillViewController {
     
     func acceptValueBill() {
         var billinfo = viewModel.databill.value
+        var billVNPAY = viewModel.paymentVNPAY.value
         var paymentvnpay = viewModel.paymentVNPAY.value
         dLog(infoInterestMovie.idinterest)
         billinfo.iduser = ManageCacheObject.getCurrentUserInfo().idusers
@@ -126,6 +127,7 @@ extension PaymentBillViewController {
         billinfo.note = "ko co noi dung gi"
         billinfo.statusbill = 1
         billinfo.totalamount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
+        billVNPAY.amount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
         paymentvnpay.amount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
         billinfo.idmovie = infoInterestMovie.idcinema
         billinfo.idcinema = infoInterestMovie.idcinema
@@ -138,6 +140,7 @@ extension PaymentBillViewController {
         }
         billinfo.combobills = dataFoodCombo
         viewModel.databill.accept(billinfo)
+        viewModel.paymentVNPAY.accept(billVNPAY)
     }
     
     func getListCombo() {
@@ -163,10 +166,10 @@ extension PaymentBillViewController {
                     paymentVNPAY.amount = data.totalamount
                     viewModel.paymentVNPAY.accept(paymentVNPAY)
                     JonAlert.showSuccess(message: "Thanh toan thanh cong")
-//                    self.viewModel.makePopToSuccessPayment()
-                    postpaymentVNPAY()
+                    self.viewModel.makePopToSuccessPayment()
+//                    postpaymentVNPAY()
                 
-//                    self.callPopViewController()
+                    self.callPopViewController()
                 }
             } else {
                 JonAlert.showError(message: response.message ?? "Co loi trong qua trinh ket noi")
@@ -206,14 +209,28 @@ extension PaymentBillViewController {
         viewModel.getIdbillPaymentVNPAY().subscribe(onNext: { [self]
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
-                if let data = Mapper<IdbillPaymentVNPAYRequest>().map(JSONObject: response.data) {
-                    JonAlert.showSuccess(message: "Thanh toán thành công")
-                    viewModel.makePopToSuccessPayment()
-                    self.callPopViewController()
-                    showNotification()
-                }else {
-                    JonAlert.showError(message: "Thanh toán thất bại")
-                }
+
+                JonAlert.showSuccess(message: response.message ?? "có lỗi xảy ra")
+//                    viewModel.makePopToSuccessPayment()
+//                    self.callPopViewController()
+                  
+                self.navigationController?.popToViewController((self.navigationController?.viewControllers[4])!, animated: true)
+                showNotification()
+            }else {
+                JonAlert.showError(message: response.message ?? "Có lỗi xảy ra")
+            }
+        })
+    }
+    
+    func saveCacheBILLVNPAY() {
+        viewModel.postSaveCacheVNPAYBILL().subscribe(onNext: {
+            [self] (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue
+            {
+                postpaymentVNPAY()
+            }else
+            {
+                
             }
         })
     }

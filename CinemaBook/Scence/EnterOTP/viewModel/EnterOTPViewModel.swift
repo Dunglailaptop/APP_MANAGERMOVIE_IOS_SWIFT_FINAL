@@ -19,9 +19,9 @@ class EnterOTPViewModel: BaseViewModel{
     var sessionString = BehaviorRelay<String>(value: "")
     var timeToLockOPTEnterView = BehaviorRelay<Int>(value: 0)
     var emails = BehaviorRelay<String>(value: "")
-    
+    var dataaccountforgotpass: BehaviorRelay<Account> = BehaviorRelay(value: Account())
     //dataccount new
-    var dataAccount: BehaviorRelay<(username:String,password:String,fullname:String,emails:String)> = BehaviorRelay(value: (username:"",password:"",fullname:"",emails:""))
+    var dataAccount: BehaviorRelay<(username:String,password:String,fullname:String,emails:String,enteredOTP:String,iduser:Int)> = BehaviorRelay(value: (username:"",password:"",fullname:"",emails:"",enteredOTP:"",iduser:0))
     
     func bind(view:EnterOTPViewController, router: EnterOTPRouter){
         self.view = view
@@ -32,11 +32,13 @@ class EnterOTPViewModel: BaseViewModel{
     func makeLoginViewController(username:String){
         router?.navigateLoginViewController(username: username)
     }
-//
-//    func makeUpdatePasswordViewController(){
-//        router?.navigateToUpdatePasswordViewController(username:username.value
-//                                                       ,verifyCode: OTPCode.value, restaurant_brand_name:restaurant_brand_name.value)
-//    }
+    
+  
+    func makeToChangePasswordViewController(){
+        router?.makeToChangePasswordViewController(dataacc: dataaccountforgotpass.value)
+    }
+ 
+
         
 }
 
@@ -50,7 +52,13 @@ extension EnterOTPViewModel{
             .mapObject(type: APIResponse.self)
     }
 
-
+    func checkOTPForgotPassword() -> Observable<APIResponse>{
+        return appServiceProvider.rx.request(.confirmfogotAccount(emails: emails.value, enteredOTP: OTPCode.value, iduser: dataAccount.value.iduser))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
 
 
 

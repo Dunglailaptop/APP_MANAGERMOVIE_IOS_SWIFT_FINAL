@@ -83,4 +83,12 @@ extension PaymentBillViewModel {
             .showAPIErrorToast()
             .mapObject(type: APIResponse.self)
     }
+    func postSaveCacheVNPAYBILL() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.saveCacheVNPAY(bill: databill.value))
+                 .filterSuccessfulStatusCodes()
+                 .mapJSON().asObservable()
+                 .showAPIErrorToast()
+                 .mapObject(type: APIResponse.self)
+    }
+    
 }

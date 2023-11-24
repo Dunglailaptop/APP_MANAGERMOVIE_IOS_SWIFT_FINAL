@@ -13,6 +13,8 @@ struct Account: Mappable{
     var username = ""
     var password = ""
     var point = 0
+    var repasswrod = ""
+    var emails = ""
     init() {
         
     }
@@ -26,5 +28,6 @@ struct Account: Mappable{
         username <- map["username"]
         password <- map["password"]
         point <- map["point"]
+        emails <- map["emails"]
     }
 }

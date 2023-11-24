@@ -15,8 +15,8 @@ class EnterOTPViewController: BaseViewController {
     var viewModel = EnterOTPViewModel()
     var router = EnterOTPRouter()
     @IBOutlet weak var OTP_text_field_view: OTPFieldView!
-   
-  
+    var iduser = 0
+    var typecheck = 0
     var username = ""
     var emails = ""
     var fullname = ""
@@ -46,6 +46,7 @@ class EnterOTPViewController: BaseViewController {
         dataaccountnew.emails = emails
         dataaccountnew.password = password
         dataaccountnew.username = username
+        dataaccountnew.iduser = iduser
         viewModel.dataAccount.accept(dataaccountnew)
         setOTPCountDown()
         
@@ -145,7 +146,12 @@ extension EnterOTPViewController: OTPFieldViewDelegate{
     
     func enteredOTP(otp otpString: String) {
         viewModel.OTPCode.accept(otpString)
-        verifyCode()
+        if typecheck == 1{
+            verifyCodeforgotpassword()
+        } else {
+            verifyCode()
+        }
+        
     }
     
 }

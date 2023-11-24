@@ -92,8 +92,8 @@ class PaymentBillViewController: UIViewController {
     }
     
     @IBAction func btn_paymentbill(_ sender: Any) {
-        PaymentBill()
-//        typeCheck == 1 ? presentPopupPayment() : presentPopupNotPayment()
+   
+        typeCheck == 1 ?  saveCacheBILLVNPAY(): presentPopupPayment()
     }
     
 }
