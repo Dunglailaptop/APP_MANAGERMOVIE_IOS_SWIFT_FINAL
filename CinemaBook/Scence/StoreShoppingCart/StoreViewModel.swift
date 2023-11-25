@@ -37,3 +37,13 @@ class StoreViewModel: BaseViewModel {
     }
     
 }
+extension StoreViewModel {
+    func getListCinema() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getListCinema)
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
+}
+

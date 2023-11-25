@@ -41,8 +41,8 @@ class DialogCreateFoodViewController: BaseViewController {
     var type = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        view_all.roundCorners([.topLeft,.topRight], radius: 20)
-        view_button.roundCorners([.topLeft,.topRight], radius: 10)
+//        view_all.roundCorners([.topLeft,.topRight], radius: 20)
+//        view_button.roundCorners([.topLeft,.topRight], radius: 10)
         setup()
         // Do any additional setup after loading the view.
     }
@@ -96,9 +96,9 @@ class DialogCreateFoodViewController: BaseViewController {
             if isValid {
                 switch type {
                 case "CREATE":
-                    imagecover.count > 0 ? postUpdateWithAvatar():updateinfoFood()
-                case "DETAIL":
                     imagecover.count > 0 ? postUpdateWithAvatar():createfood()
+                case "DETAIL":
+                    imagecover.count > 0 ? postUpdateWithAvatar():updateinfoFood()
                 default:
                     return
                 }

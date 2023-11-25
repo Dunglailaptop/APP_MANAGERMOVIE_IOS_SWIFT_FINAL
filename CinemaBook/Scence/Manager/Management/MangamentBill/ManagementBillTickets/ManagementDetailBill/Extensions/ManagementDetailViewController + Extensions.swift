@@ -44,8 +44,10 @@ extension ManagementDetailBillViewController {
         var timecreatebill = viewModel.dataInfoBill.value.dateBill.components(separatedBy: "T")
         lbl_date.text = timecreatebill[0] + "-" + timecreatebill[1]
         if viewModel.dataInfoBill.value.status == 1 {
+            view_status.text = "Đã thanh toán"
             view_status.backgroundColor = .green
         }else {
+            view_status.text = "Đã xem phim"
             view_status.backgroundColor = .red
         }
         var totalprices = viewModel.dataInfoBill.value.detailTickets.map{$0.price}.reduce(0,+) + viewModel.dataInfoBill.value.detailFoodcombos.map{$0.totalprice}.reduce(0,+)

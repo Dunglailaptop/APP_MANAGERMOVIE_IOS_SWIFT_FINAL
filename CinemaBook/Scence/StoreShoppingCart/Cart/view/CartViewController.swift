@@ -60,6 +60,7 @@ class CartViewController: UIViewController {
 
     @IBAction func btn_paymentfoodcombo(_ sender: Any) {
         var datas = viewModel.dataArrayFoodCombo.value
+        dLog(datas)
         let cell = PaymentFoodComboViewController() as! PaymentFoodComboViewController
         cell.data = datas
         self.navigationController?.pushViewController(cell, animated: true)

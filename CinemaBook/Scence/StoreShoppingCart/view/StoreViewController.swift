@@ -81,7 +81,7 @@ extension StoreViewController {
         
         DIalogPopUpShowListViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
 //        DialogConfrimShowInfoViewController.Delegate = self
-        
+        DIalogPopUpShowListViewControllers.viewModel = viewModel
         
         
         let nav = UINavigationController(rootViewController: DIalogPopUpShowListViewControllers)

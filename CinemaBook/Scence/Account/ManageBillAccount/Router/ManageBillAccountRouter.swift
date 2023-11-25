@@ -29,5 +29,11 @@ class ManageBillAccountRouter {
         sourceView?.navigationController?.popViewController(animated: true)
     }
     
+    func makeToDetailBillInfoAccount(BillDetailInfo: BillInfoAccount){
+        let viewBill = ManagementDetailBillRouter().viewController as! ManagementDetailBillViewController
+        viewBill.infobill = BillDetailInfo
+        sourceView?.navigationController?.pushViewController(viewBill, animated: true)
+    }
+    
 }
 

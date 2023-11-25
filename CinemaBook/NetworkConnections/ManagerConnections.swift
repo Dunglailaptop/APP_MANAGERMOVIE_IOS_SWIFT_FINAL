@@ -47,7 +47,7 @@ enum ManagerConnections {
     case PostPaymentBill(bill:Bill)
     case getPoint(iduser:Int)
     case postPaymentBillFoodCombo(foodcombobill:PaymentFoodCombo)
-    case getListBillinAccount(iduser:Int)
+    case getListBillinAccount(iduser:Int,status:Int)
     case getListBillFoodCombo(iduser:Int)
     case getListAllBill(idcinema:Int,status:Int,datefrom:String,dateto:String)
     case getListAllBillFoodCombo(idcinema:Int,status:Int,datefrom:String,dateto:String)
@@ -168,7 +168,7 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetPointInAccount
         case .postPaymentBillFoodCombo(_):
             return APIEndPoint.Name.urlPostPaymentFoodComboStore
-        case .getListBillinAccount(let duser):
+        case .getListBillinAccount(let duser,let status):
             return APIEndPoint.Name.urlGetListBillAccount
         case .getListBillFoodCombo(let iduser):
             return APIEndPoint.Name.urlGetListInfoBillFoodCombo
@@ -319,7 +319,7 @@ extension ManagerConnections: TargetType {
             return .get
         case .postPaymentBillFoodCombo(_):
             return .post
-        case .getListBillinAccount(_):
+        case .getListBillinAccount(_,_):
             return .get
         case .getListBillFoodCombo(_):
             return .get
@@ -492,7 +492,7 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .postPaymentBillFoodCombo(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
-        case .getListBillinAccount(_):
+        case .getListBillinAccount(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListBillFoodCombo(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
@@ -748,8 +748,9 @@ extension ManagerConnections: TargetType {
                 "foodComboBills": foodcombobill.foodComboBills.toJSON()
               
             ]
-        case .getListBillinAccount(let iduser):
+        case .getListBillinAccount(let iduser,let status):
             return [
+                "status":status,
                 "iduser": iduser
             ]
         case .getListBillFoodCombo(let iduser):
@@ -1059,7 +1060,7 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .postPaymentBillFoodCombo(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
-        case .getListBillinAccount(_):
+        case .getListBillinAccount(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListBillFoodCombo(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
