@@ -161,6 +161,9 @@
                                                     <real key="value" value="0.0"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="btn_cancel_food:" destination="-1" eventType="touchUpInside" id="B3N-1V-4Vo"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcr-SK-4Qq">
                                             <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="50"/>

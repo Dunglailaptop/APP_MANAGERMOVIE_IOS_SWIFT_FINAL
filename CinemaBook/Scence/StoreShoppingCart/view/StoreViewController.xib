@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="btn_makePopToViewController" destination="PCa-f4-POX" id="RaB-fT-lvr"/>
                 <outlet property="icon_back" destination="I2i-Ve-jlq" id="MCH-8Z-5Br"/>
+                <outlet property="lbl_date_order" destination="sHd-pb-KpT" id="V6e-Sp-kPe"/>
+                <outlet property="lbl_name_cinema" destination="m7p-5A-G0T" id="k5k-Dh-CE5"/>
                 <outlet property="lbl_number_cart" destination="cce-2y-Y5l" id="hb0-c5-UFs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

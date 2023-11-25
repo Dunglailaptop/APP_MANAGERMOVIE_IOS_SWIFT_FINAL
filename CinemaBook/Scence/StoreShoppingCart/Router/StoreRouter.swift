@@ -33,8 +33,11 @@ class StoreRouter {
         sourceView?.navigationController?.pushViewController(viewProductCombo, animated: true)
     }
     
-    func makeToPopStoreViewController() {
-        let viewStoreViewController = CartRouter().viewController
+    func makeToPopStoreViewController(idcinema:Int,dateOrder:String,namecinema:String) {
+        let viewStoreViewController = CartRouter().viewController as! CartViewController
+        viewStoreViewController.idcinema = idcinema
+        viewStoreViewController.dateorder = dateOrder
+        viewStoreViewController.namecinema = namecinema
         sourceView?.navigationController?.pushViewController(viewStoreViewController, animated: true)
     }
    

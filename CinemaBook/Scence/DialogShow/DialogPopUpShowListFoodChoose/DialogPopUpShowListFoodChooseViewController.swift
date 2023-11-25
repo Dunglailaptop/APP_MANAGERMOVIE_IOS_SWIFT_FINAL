@@ -125,6 +125,9 @@ class DialogPopUpShowListFoodChooseViewController: BaseViewController {
 //        ManageCacheObject.saveCartInfo(dataDetailFoodCombo)
     }
     
+    @IBAction func btn_cancel_food(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }
 extension DialogPopUpShowListFoodChooseViewController: UITableViewDelegate {
     

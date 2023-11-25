@@ -31,6 +31,9 @@ class DetailProductViewModel: BaseViewModel {
     func makePopToViewOrderProduct() {
         router?.makePopToViewController()
     }
+    func makeToCartViewController() {
+        router?.makeToCartViewController()
+    }
     
 }
 extension DetailProductViewModel {

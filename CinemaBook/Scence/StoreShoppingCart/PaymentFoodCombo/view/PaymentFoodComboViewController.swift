@@ -17,26 +17,36 @@ class PaymentFoodComboViewController: UIViewController {
     var viewModel = PaymentFoodComboViewModel()
     var router = PaymentFoodComboRouter()
    
+    @IBOutlet weak var lbl_name_cinema: UILabel!
+    @IBOutlet weak var view_voucher: UIView!
+    @IBOutlet weak var view_no_datat: UIView!
+    @IBOutlet weak var tableviewvoucher: UITableView!
     @IBOutlet weak var lbl_total_final: UILabel!
     @IBOutlet weak var lbl_total_vat: UILabel!
     @IBOutlet weak var height_cell: NSLayoutConstraint!
     @IBOutlet weak var height_scroll: NSLayoutConstraint!
+    @IBOutlet weak var height_voucher: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     var data = [FoodCombo]()
+    var idcinema = 0
+    var dateorder = ""
+    var namecinema = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
         viewModel.dataArrayFoodCombo.accept(data)
         resgiter()
         bindingtable()
+        resgistervoucher()
+        bindingtablevoucher()
         setup()
         getDataPaymentBillFoodCombo()
     }
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
-      
+         getListVoucher()
+         lbl_name_cinema.text = "Rạp nhận: " + namecinema
     }
     
     func getDataPaymentBillFoodCombo() {
@@ -45,6 +55,7 @@ class PaymentFoodComboViewController: UIViewController {
         dataFoodCombobill.total_price = data.map{ $0.quantityRealtime * $0.priceCombo}.reduce(0,+)
         dataFoodCombobill.numbers = data.map{ $0.quantityRealtime}.reduce(0, +)
         dataFoodCombobill.iduser = ManageCacheObject.getCurrentUserInfo().idusers
+        dataFoodCombobill.idcinemas = idcinema
 //        dataFoodCombobill.idcinemas = ManageCacheObject.getCurrentCinema().idcinema
         data.enumerated().forEach{
             (index,value) in
@@ -91,4 +102,39 @@ extension PaymentFoodComboViewController: UITableViewDelegate {
             cell.data = data
         }
     }
+}
+extension PaymentFoodComboViewController {
+    func resgistervoucher() {
+        let celltable = UINib(nibName: "ItemVoucherFoodPaymentTableViewCell", bundle: .main)
+        tableviewvoucher.register(celltable, forCellReuseIdentifier: "ItemVoucherFoodPaymentTableViewCell")
+        tableviewvoucher.separatorStyle = .none
+        tableviewvoucher.rx.modelSelected(voucher.self).subscribe(onNext: {
+           [self] (element) in
+            var dataVoucher = viewModel.dataVoucher.value
+            var dataAllbill = viewModel.dataArrayBillPayment.value
+            dataVoucher.enumerated().forEach{
+                (index,value) in
+                if value.idvoucher == element.idvoucher {
+                    dataVoucher[index].isCheck = value.isCheck == ACTIVE ? DEACTIVE:ACTIVE
+                    if dataVoucher[index].isCheck == ACTIVE {
+                        dataAllbill.idvoucher = element.idvoucher
+                    }
+                 
+                    
+                }else {
+                    dataVoucher[index].isCheck = DEACTIVE
+                }
+            }
+            viewModel.dataVoucher.accept(dataVoucher)
+            viewModel.dataArrayBillPayment.accept(dataAllbill)
+        })
+    }
+    func bindingtablevoucher() {
+        viewModel.dataVoucher.bind(to: tableviewvoucher.rx.items(cellIdentifier: "ItemVoucherFoodPaymentTableViewCell",cellType: ItemVoucherFoodPaymentTableViewCell.self)) {
+            (row,data,cell) in
+            cell.data = data
+            cell.selectionStyle = .none
+        }
+    }
+    
 }

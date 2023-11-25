@@ -16,7 +16,7 @@ class ItemCartTableViewCell: UITableViewCell {
     @IBOutlet weak var lbl_number: UILabel!
     @IBOutlet weak var lbl_price: UILabel!
     @IBOutlet weak var lbl_name: UILabel!
-    
+    @IBOutlet weak var height_textview: NSLayoutConstraint!
     @IBOutlet weak var txt_view_list_food: UITextView!
     @IBOutlet weak var image_food: UIImageView!
    
@@ -33,7 +33,7 @@ class ItemCartTableViewCell: UITableViewCell {
     
     var viewModel: CartViewModel? = nil {
         didSet {
-            
+         
         }
     }
     
@@ -54,7 +54,7 @@ class ItemCartTableViewCell: UITableViewCell {
             }
 
             txt_view_list_food.text = textlistfood
-
+            height_textview.constant = CGFloat((data?.foods.count)! * 20)
             
         }
     }

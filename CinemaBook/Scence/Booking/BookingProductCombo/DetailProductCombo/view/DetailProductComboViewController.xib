@@ -38,9 +38,18 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIE-In-whq">
                                     <rect key="frame" x="333" y="0.0" width="40" height="40"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping-cart" translatesAutoresizingMaskIntoConstraints="NO" id="wXw-jV-ufC">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bag" translatesAutoresizingMaskIntoConstraints="NO" id="wXw-jV-ufC">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDX-3X-zwm">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <connections>
+                                                <action selector="btn_makeToViewControllerCart:" destination="-1" eventType="touchUpInside" id="N1Q-fO-L5w"/>
+                                            </connections>
+                                        </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ing-5t-GKc">
                                             <rect key="frame" x="18" y="18" width="22" height="22"/>
                                             <subviews>
@@ -75,14 +84,18 @@
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="GDX-3X-zwm" secondAttribute="trailing" id="4TA-VR-5vq"/>
                                         <constraint firstItem="wXw-jV-ufC" firstAttribute="leading" secondItem="yIE-In-whq" secondAttribute="leading" id="9wV-iX-YBc"/>
                                         <constraint firstItem="wXw-jV-ufC" firstAttribute="top" secondItem="yIE-In-whq" secondAttribute="top" id="EYp-FL-YV2"/>
                                         <constraint firstAttribute="bottom" secondItem="Ing-5t-GKc" secondAttribute="bottom" id="HBp-wc-AWP"/>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="I6j-D7-LxB"/>
+                                        <constraint firstItem="GDX-3X-zwm" firstAttribute="leading" secondItem="yIE-In-whq" secondAttribute="leading" id="JJm-fP-tdz"/>
                                         <constraint firstAttribute="width" constant="40" id="KKg-ak-Prt"/>
                                         <constraint firstAttribute="height" constant="40" id="USf-JC-1CN"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="bxj-Ee-qxQ"/>
                                         <constraint firstAttribute="trailing" secondItem="wXw-jV-ufC" secondAttribute="trailing" id="dgG-BV-Uji"/>
+                                        <constraint firstItem="GDX-3X-zwm" firstAttribute="top" secondItem="yIE-In-whq" secondAttribute="top" id="diP-7D-392"/>
+                                        <constraint firstAttribute="bottom" secondItem="GDX-3X-zwm" secondAttribute="bottom" id="hFJ-Tl-hyp"/>
                                         <constraint firstAttribute="trailing" secondItem="Ing-5t-GKc" secondAttribute="trailing" id="ssb-VM-mWx"/>
                                         <constraint firstAttribute="bottom" secondItem="wXw-jV-ufC" secondAttribute="bottom" id="yVg-p4-VNu"/>
                                     </constraints>
@@ -273,8 +286,8 @@
     </objects>
     <resources>
         <image name="PORNCORN-TEST" width="546" height="546"/>
+        <image name="bag" width="512" height="512"/>
         <image name="icon-back-blue" width="8.6666669845581055" height="17.333333969116211"/>
-        <image name="shopping-cart" width="512" height="512"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

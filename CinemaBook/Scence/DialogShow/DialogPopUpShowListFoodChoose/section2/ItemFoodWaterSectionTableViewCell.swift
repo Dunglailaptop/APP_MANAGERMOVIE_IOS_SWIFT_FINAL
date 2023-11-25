@@ -51,8 +51,9 @@ extension ItemFoodWaterSectionTableViewCell: UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDialogFoodComboWaterTableViewCell", for: indexPath) as! ItemDialogFoodComboWaterTableViewCell
         cell.lbl_name_food.text = viewModel?.dataArrayFoodWater.value[indexPath.row].namefood
-        cell.lbl_number.text = String(viewModel!.dataArrayFoodWater.value.count)
+        cell.lbl_number.text = String(viewModel!.dataArrayFoodWater.value[indexPath.row].quantityRealTime)
         var data = viewModel?.dataArrayFoodWater.value
+        cell.image_view.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayFoodWater.value[indexPath.row].picture)!)), placeholder:  UIImage(named: "image_defauft_medium"))
         cell.btn_inscreament.rx.tap.asDriver().drive(onNext: {
             data?.enumerated().forEach{
                 (index,value) in

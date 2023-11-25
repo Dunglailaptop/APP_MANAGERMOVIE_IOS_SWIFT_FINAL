@@ -10,6 +10,8 @@ import UIKit
 
 class StoreViewController: UIViewController {
 
+    @IBOutlet weak var lbl_date_order: UILabel!
+    @IBOutlet weak var lbl_name_cinema: UILabel!
     @IBOutlet weak var btn_makePopToViewController: UIButton!
     @IBOutlet weak var icon_back: UIImageView!
     @IBOutlet weak var lbl_number_cart: UILabel!

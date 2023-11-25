@@ -17,7 +17,9 @@ class StoreViewModel: BaseViewModel {
     
     
     public var dataArrayFoodCombo: BehaviorRelay<[Int]> = BehaviorRelay(value : [1,2,3])
-    
+    public var dateoreder: BehaviorRelay<String> = BehaviorRelay(value: "")
+    public var idcinema:BehaviorRelay<Int> = BehaviorRelay(value: 0)
+    public var namecinema: BehaviorRelay<String> = BehaviorRelay(value: "")
     func bind(view: StoreViewController,router: StoreRouter) {
         self.view = view
         self.router = router
@@ -33,7 +35,7 @@ class StoreViewModel: BaseViewModel {
     }
     
     func makePopStoreViewController() {
-        router?.makeToPopStoreViewController()
+        router?.makeToPopStoreViewController(idcinema: idcinema.value, dateOrder: dateoreder.value,namecinema: namecinema.value)
     }
     
 }
@@ -45,5 +47,6 @@ extension StoreViewModel {
                         .showAPIErrorToast()
                         .mapObject(type: APIResponse.self)
                 }
+  
 }
 

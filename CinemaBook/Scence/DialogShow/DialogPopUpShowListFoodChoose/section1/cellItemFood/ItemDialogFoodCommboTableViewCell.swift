@@ -10,7 +10,8 @@ import UIKit
 
 class ItemDialogFoodCommboTableViewCell: UITableViewCell {
 
-   
+    @IBOutlet weak var image_food: UIImageView!
+    
     @IBOutlet weak var icon_check: UIImageView!
     @IBOutlet weak var lbl_name_food: UILabel!
     override func awakeFromNib() {

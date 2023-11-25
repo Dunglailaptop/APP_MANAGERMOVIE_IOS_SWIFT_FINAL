@@ -14,9 +14,13 @@ import JonAlert
 
 class CartViewController: UIViewController {
 
+    @IBOutlet weak var lbl_name_cinema: UILabel!
     @IBOutlet weak var lbl_total_number: UILabel!
     @IBOutlet weak var lbl_number: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    var idcinema = 0
+    var namecinema = ""
+    var dateorder = ""
     var viewModel = CartViewModel()
     var router = CartRouter()
     override func viewDidLoad() {
@@ -30,7 +34,7 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    
+        lbl_name_cinema.text = namecinema
       
         var countnumber = 0
         var combinedCartItems = [Int: FoodCombo]()
@@ -59,11 +63,18 @@ class CartViewController: UIViewController {
     }
 
     @IBAction func btn_paymentfoodcombo(_ sender: Any) {
-        var datas = viewModel.dataArrayFoodCombo.value
-        dLog(datas)
-        let cell = PaymentFoodComboViewController() as! PaymentFoodComboViewController
-        cell.data = datas
-        self.navigationController?.pushViewController(cell, animated: true)
+        if idcinema != 0 {
+            var datas = viewModel.dataArrayFoodCombo.value
+            dLog(datas)
+            let cell = PaymentFoodComboViewController() as! PaymentFoodComboViewController
+            cell.idcinema = idcinema
+            cell.data = datas
+            cell.namecinema = namecinema
+            self.navigationController?.pushViewController(cell, animated: true)
+        }else {
+            JonAlert.showError(message: "Vui lòng chọn rạp chiếu phim hệ thống sẽ ghi nhận rạp mà bạn nhận hàng")
+        }
+     
     }
     
     @IBAction func btn_makePopToViewController(_ sender: Any) {
@@ -135,11 +146,12 @@ extension CartViewController: UITableViewDelegate {
            
             cell.data = data
             cell.viewModel = self.viewModel
-
+             
             cell.selectionStyle = .none
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        dLog(viewModel.dataArrayFoodCombo.value[indexPath.row].foods.count)
+        return CGFloat((viewModel.dataArrayFoodCombo.value[indexPath.row].foods.count * 10) + 150)
     }
 }

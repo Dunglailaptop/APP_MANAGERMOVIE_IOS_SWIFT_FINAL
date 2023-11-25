@@ -70,6 +70,9 @@ class DetailProductComboViewController: UIViewController {
     @IBAction func btn_showPopUpChooseListFoodCombo(_ sender: Any) {
         presenDialog(foodcombos: foodcombo)
     }
+    @IBAction func btn_makeToViewControllerCart(_ sender: Any) {
+        viewModel.makeToCartViewController()
+    }
     
 }
 extension DetailProductComboViewController {

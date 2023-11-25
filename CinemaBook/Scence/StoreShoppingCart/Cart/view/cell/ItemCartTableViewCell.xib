@@ -144,6 +144,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="height_textview" destination="BeI-Ig-IKq" id="bNO-TF-o29"/>
                 <outlet property="image_food" destination="eIy-Ko-GeO" id="Baq-ns-3XE"/>
                 <outlet property="lbl_name" destination="JH5-le-0wX" id="bem-QX-bK3"/>
                 <outlet property="lbl_number" destination="Zh9-mk-bN1" id="1Y4-uN-eD6"/>

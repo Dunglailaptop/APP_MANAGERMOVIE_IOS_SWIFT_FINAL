@@ -13,10 +13,15 @@
             <connections>
                 <outlet property="height_cell" destination="1KP-V5-FW5" id="kEl-x6-TzC"/>
                 <outlet property="height_scroll" destination="ghl-Pb-pwq" id="guB-m2-9dK"/>
+                <outlet property="height_voucher" destination="BgT-VC-sVE" id="3Nc-4M-I0L"/>
+                <outlet property="lbl_name_cinema" destination="ch0-do-rUE" id="wO0-JV-AuI"/>
                 <outlet property="lbl_total_final" destination="ysF-I4-HGS" id="DuX-Le-KZD"/>
                 <outlet property="lbl_total_vat" destination="8Se-uc-Eyi" id="uqq-DH-jGb"/>
                 <outlet property="tableView" destination="lee-RW-r1C" id="0jW-fA-8Eh"/>
+                <outlet property="tableviewvoucher" destination="yox-0t-X6o" id="bZG-9V-h4y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_no_datat" destination="2LX-GE-WLi" id="ilh-hQ-Gxc"/>
+                <outlet property="view_voucher" destination="oTd-Iy-X3C" id="lzg-Qo-OIn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

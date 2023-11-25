@@ -68,6 +68,7 @@ extension ItemFoodUnWaterSectionTableViewCell: UITableViewDelegate,UITableViewDa
         cell.selectionStyle = .none
         cell.lbl_name_food.text = viewModel?.dataArrayfood.value[indexPath.row].namefood
         cell.icon_check.image = UIImage(named: self.viewModel?.dataArrayfood.value[indexPath.row].isSelected == ACTIVE ? "check_2" : "icon-check-disable")
+        cell.image_food.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (self.viewModel?.dataArrayfood.value[indexPath.row].picture)!)), placeholder:  UIImage(named: "image_defauft_medium"))
 //        cell.btn_check.rx.tap.asDriver().drive(onNext: {
 //           
 //         

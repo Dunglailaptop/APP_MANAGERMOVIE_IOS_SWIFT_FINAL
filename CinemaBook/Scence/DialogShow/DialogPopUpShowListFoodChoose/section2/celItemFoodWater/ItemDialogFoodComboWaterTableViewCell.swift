@@ -10,6 +10,7 @@ import UIKit
 
 class ItemDialogFoodComboWaterTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var image_view: UIImageView!
     @IBOutlet weak var btn_descreament: UIButton!
     @IBOutlet weak var btn_inscreament: UIButton!
     @IBOutlet weak var lbl_number: UILabel!

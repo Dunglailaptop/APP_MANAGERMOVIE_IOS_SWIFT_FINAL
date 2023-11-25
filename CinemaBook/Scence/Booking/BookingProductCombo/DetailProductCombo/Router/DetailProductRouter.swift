@@ -28,6 +28,10 @@ class DetailProductRouter {
     func makePopToViewController() {
         sourceView?.navigationController?.popViewController(animated: true)
     }
+    func makeToCartViewController() {
+        let viewcart = CartRouter().viewController as! CartViewController
+        sourceView?.navigationController!.pushViewController(viewcart, animated: true)
+    }
     
    
   

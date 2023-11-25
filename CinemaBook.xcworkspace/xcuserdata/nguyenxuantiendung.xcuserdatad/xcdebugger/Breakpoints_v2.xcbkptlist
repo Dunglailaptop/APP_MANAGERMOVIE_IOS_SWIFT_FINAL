@@ -971,8 +971,8 @@
             filePath = "CinemaBook/Scence/Booking/BookingProductCombo/DetailProductCombo/view/DetailProductComboViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "getListfood()"
             landmarkType = "7">
          </BreakpointContent>
@@ -987,8 +987,8 @@
             filePath = "CinemaBook/Scence/Booking/BookingProductCombo/DetailProductCombo/view/DetailProductComboViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "getListfoodwater()"
             landmarkType = "7">
             <Locations>
@@ -1097,6 +1097,21 @@
                   endingLineNumber = "120"
                   offsetFromSymbolStart = "692">
                </Location>
+               <Location
+                  uuid = "AB25FC65-BD45-4C86-9A87-19849076BE5B - d8b59016db70b8bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.DetailProductComboViewController.getListfoodwater() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingProductCombo/DetailProductCombo/view/DetailProductComboViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "692">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1110,8 +1125,8 @@
             filePath = "CinemaBook/Scence/Booking/BookingProductCombo/DetailProductCombo/view/DetailProductComboViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "getListfoodwater()"
             landmarkType = "7">
             <Locations>
@@ -1220,6 +1235,21 @@
                   endingLineNumber = "127"
                   offsetFromSymbolStart = "1396">
                </Location>
+               <Location
+                  uuid = "07234E65-21EA-4A67-A8C9-B542B3CE1B45 - d8b59016db70bba2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.DetailProductComboViewController.getListfoodwater() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingProductCombo/DetailProductCombo/view/DetailProductComboViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "1396">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1233,8 +1263,8 @@
             filePath = "CinemaBook/Scence/Booking/BookingProductCombo/DetailProductCombo/view/DetailProductComboViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "getListfood()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1249,8 +1279,8 @@
             filePath = "CinemaBook/Scence/DialogShow/DialogPopUpShowListFoodChoose/section2/ItemFoodWaterSectionTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2218,9 +2248,25 @@
             filePath = "CinemaBook/Scence/StoreShoppingCart/Cart/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "btn_paymentfoodcombo(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4CCD3B2-D840-4225-B1E8-F2BC51D8E30B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/DialogShow/DialogPopUpShowListFoodChoose/section2/ItemFoodWaterSectionTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "btn_paymentfoodcombo(_:)"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

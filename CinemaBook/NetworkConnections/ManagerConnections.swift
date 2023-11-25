@@ -745,8 +745,8 @@ extension ManagerConnections: TargetType {
                 "total_price": foodcombobill.total_price,
                 "iduser": foodcombobill.iduser,
                 "idcinemas": foodcombobill.idcinemas,
-                "foodComboBills": foodcombobill.foodComboBills.toJSON()
-              
+                "foodComboBills": foodcombobill.foodComboBills.toJSON(),
+                "idvoucher": foodcombobill.idvoucher
             ]
         case .getListBillinAccount(let iduser,let status):
             return [

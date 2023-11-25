@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DIalogPopUpShowListViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="btn_show_dropdown" destination="Lxl-al-LbO" id="XxS-FP-pBM"/>
+                <outlet property="clander_date_order" destination="2CJ-DA-lvI" id="GQ9-or-OyG"/>
                 <outlet property="txt_dropdown_listcinema" destination="sIy-Nv-xNH" id="zDx-lw-T9B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -169,6 +170,11 @@
             <point key="canvasLocation" x="-16.030534351145036" y="-12.67605633802817"/>
         </view>
     </objects>
+    <designables>
+        <designable name="sIy-Nv-xNH">
+            <size key="intrinsicContentSize" width="59.333333333333336" height="18.666666666666668"/>
+        </designable>
+    </designables>
     <resources>
         <image name="see_more" width="18" height="18"/>
         <systemColor name="opaqueSeparatorColor">

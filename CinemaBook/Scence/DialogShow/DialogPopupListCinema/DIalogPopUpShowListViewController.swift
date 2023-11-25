@@ -12,9 +12,11 @@ import RxRelay
 import RxCocoa
 import ObjectMapper
 import iOSDropDown
+import FSCalendar
 
 class DIalogPopUpShowListViewController: UIViewController {
     
+    @IBOutlet weak var clander_date_order: FSCalendar!
     
     @IBOutlet weak var btn_show_dropdown: UIButton!
     
@@ -24,7 +26,7 @@ class DIalogPopUpShowListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      setup()
-        
+        clander_date_order.delegate = self
     }
 
    
@@ -42,6 +44,9 @@ class DIalogPopUpShowListViewController: UIViewController {
         txt_dropdown_listcinema.didSelect(completion: {
             [self] (selectedText,index,id) in
             txt_dropdown_listcinema.text = selectedText
+            viewModel?.idcinema.accept(id)
+            viewModel?.namecinema.accept(selectedText)
+            viewModel?.view?.lbl_name_cinema.text = "Rạp nhận: " + selectedText
         })
         
         btn_show_dropdown.rx.tap.asDriver().drive(onNext:{
@@ -51,6 +56,16 @@ class DIalogPopUpShowListViewController: UIViewController {
         )
     }
     
+}
+extension DIalogPopUpShowListViewController: FSCalendarDelegate {
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+         let formatter = DateFormatter()
+         formatter.dateFormat = "yyyy-MM-dd" // Format the date as per your requirement
+         let selectedDate = formatter.string(from: date)
+         print("Selected date: \(selectedDate)")
+        viewModel?.dateoreder.accept(selectedDate)
+         // You can perform further actions with the selected date here
+     }
 }
 extension DIalogPopUpShowListViewController {
     func getListCinema(){
