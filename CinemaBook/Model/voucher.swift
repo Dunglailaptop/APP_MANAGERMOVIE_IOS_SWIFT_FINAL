@@ -16,7 +16,7 @@ struct voucher:Mappable {
    var percent = 0
    var note = ""
   var  poster = ""
-    
+  var isCheck = DEACTIVE
     init(){}
     
     init?(map: Map) {

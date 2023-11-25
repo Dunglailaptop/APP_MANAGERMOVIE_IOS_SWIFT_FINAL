@@ -14,6 +14,7 @@
                 <outlet property="btn_check_1" destination="ESB-Wo-Vpp" id="LVy-au-kbL"/>
                 <outlet property="btn_check_2" destination="0S1-Vy-eyq" id="f3S-qm-0NF"/>
                 <outlet property="collectionview" destination="FLU-Lf-TO7" id="iYP-zC-0dR"/>
+                <outlet property="height_Table_voucher" destination="rdl-RE-dMs" id="XqJ-Xq-Adf"/>
                 <outlet property="height_combofoodadd" destination="W32-zW-x5G" id="i1z-Nb-SE1"/>
                 <outlet property="height_scroll" destination="gd2-iV-dM6" id="Uys-iw-wxP"/>
                 <outlet property="height_table" destination="bZQ-Yt-IgY" id="VUt-ZU-yuI"/>
@@ -26,6 +27,7 @@
                 <outlet property="lbl_name_cinema" destination="7Fz-oo-mto" id="plY-UI-hq6"/>
                 <outlet property="lbl_name_movie" destination="5JU-sm-z1T" id="mgh-I0-NMW"/>
                 <outlet property="lbl_name_room" destination="jKG-Gh-z9q" id="zPF-Rd-hGQ"/>
+                <outlet property="lbl_reduce" destination="DZu-lZ-o9M" id="fYW-UQ-wGe"/>
                 <outlet property="lbl_time" destination="379-sB-5iq" id="pLq-Xa-sFG"/>
                 <outlet property="lbl_total_amount_chair" destination="ReW-J7-ydM" id="5kc-cy-pCf"/>
                 <outlet property="lbl_total_amount_final" destination="bBb-Hj-jXu" id="3B0-Dz-Tlu"/>
@@ -34,7 +36,9 @@
                 <outlet property="lbl_total_chair_count" destination="Jtt-fn-MGk" id="ATF-bi-9dR"/>
                 <outlet property="lbl_total_combofood" destination="5m5-cZ-wV5" id="vRq-kO-SEe"/>
                 <outlet property="tableView" destination="E72-To-F2z" id="1cR-ns-LgU"/>
+                <outlet property="tableviewvoucher" destination="JsE-Aq-5Rf" id="9Y5-vK-uzh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_no_data_voucher" destination="wSM-Kx-Lhh" id="2in-Ty-oKs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -18,6 +18,8 @@ class TimeShowViewModel:BaseViewModel {
     
     public var dataListCinema: BehaviorRelay<[InterestMovie]> = BehaviorRelay(value: [])
     public var listTime:BehaviorRelay<[InterestMovie]> = BehaviorRelay(value: [])
+    public var listCinemaWithInterest: BehaviorRelay<[ModelinterestMovie]> = BehaviorRelay(value: [])
+    public var cinemaWithInterest: BehaviorRelay<ModelinterestMovie> = BehaviorRelay(value: ModelinterestMovie())
     public var heightforcell: BehaviorRelay<Int> = BehaviorRelay(value: 80)
     public var pagation: BehaviorRelay<(date:String,idmovie:Int)> = BehaviorRelay(value: (date: Utils().convertFormartDateyearMMdd(date: Date()) ,idmovie:1))
       

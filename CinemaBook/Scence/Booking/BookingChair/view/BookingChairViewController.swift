@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JonAlert
 
 class BookingChairViewController: BaseViewController {
 
@@ -111,7 +112,12 @@ class BookingChairViewController: BaseViewController {
     
     @IBAction func btn_makeToBookingProductCombo(_ sender: Any) {
         var datafilter = viewModel.dataArray.value.filter{$0.isSelected == ACTIVE}
-        viewModel.makeToBookingProductComboViewController(dataInfoMovie: viewModel.infoInterestMovie.value,datachairs: datafilter)
+        if datafilter.count > 0 {
+            viewModel.makeToBookingProductComboViewController(dataInfoMovie: viewModel.infoInterestMovie.value,datachairs: datafilter)
+        }else {
+            JonAlert.showError(message: "Vui lòng chọn ghế để thực hiện thanh toán")
+        }
+       
     }
     
 }

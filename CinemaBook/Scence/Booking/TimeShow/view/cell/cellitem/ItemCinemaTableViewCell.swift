@@ -38,7 +38,7 @@ class ItemCinemaTableViewCell: UITableViewCell, UICollectionViewDataSource {
      
     }
     
-    var data: InterestMovie? = nil {
+    var data: ModelinterestMovie? = nil {
         didSet {
             lbl_namecinema.text = data?.namecinema
         }
@@ -47,7 +47,7 @@ class ItemCinemaTableViewCell: UITableViewCell, UICollectionViewDataSource {
     var viewModel: TimeShowViewModel? = nil {
         didSet{
           
-            viewModel?.listTime.subscribe(onNext: {
+            viewModel?.listCinemaWithInterest.subscribe(onNext: {
                 [self] data in
                
                
@@ -69,18 +69,18 @@ class ItemCinemaTableViewCell: UITableViewCell, UICollectionViewDataSource {
 
 extension ItemCinemaTableViewCell: UICollectionViewDelegate {
 func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return (viewModel?.listTime.value.count)!
+    return (data?.listinterest.count)!
 }
 
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemTimeCollectionViewCell", for: indexPath) as! itemTimeCollectionViewCell
     cell.viewModel = self.viewModel
-    cell.idcinema = viewModel?.listTime.value[indexPath.item].idcinema as! Int
-    cell.idroom = viewModel?.listTime.value[indexPath.item].idroom as! Int
-    cell.idinterest = viewModel?.listTime.value[indexPath.item].idinterest as! Int
-    cell.lbl_time.text = String((viewModel?.listTime.value[indexPath.item].times)!)
-    cell.idmovie = viewModel?.listTime.value[indexPath.item].idmovie as! Int
-    dLog(viewModel?.listTime.value[indexPath.item].times)
+    cell.idcinema = data?.listinterest[indexPath.row].idcinema as! Int
+    cell.idroom = data?.listinterest[indexPath.row].idroom as! Int
+    cell.idinterest = data?.listinterest[indexPath.row].idinterest as! Int
+    cell.lbl_time.text = String((data?.listinterest[indexPath.row].times)!)
+    cell.idmovie = data?.listinterest[indexPath.row].idmovie as! Int
+    dLog(data?.listinterest[indexPath.row].times)
     
     return cell
 }

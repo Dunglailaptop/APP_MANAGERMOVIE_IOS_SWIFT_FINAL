@@ -17,8 +17,10 @@ class PaymentBillViewModel: BaseViewModel {
     var idmovie: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     var dataArray: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     var dataArrayCombo:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
+    var dataVoucher:BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
     var dataCombo:BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
     var databill: BehaviorRelay<Bill> = BehaviorRelay(value: Bill())
+    var databillhistoryVoucher: BehaviorRelay<Bill> = BehaviorRelay(value: Bill())
     var idbill: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     var paymentVNPAY: BehaviorRelay<(amount:Int,idorder:Int)> = BehaviorRelay(value: (amount:0,idorder:0))
     var title_header = BehaviorRelay<String>(value:  "")
@@ -91,4 +93,13 @@ extension PaymentBillViewModel {
                  .mapObject(type: APIResponse.self)
     }
     
+    func getListVoucher() -> Observable<APIResponse>
+    {
+        return appServiceProvider.rx.request(.getListVoucher)
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+        
+    }
 }

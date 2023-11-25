@@ -199,6 +199,7 @@ extension PaymentBillViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Account>().map(JSONObject: response.data) {
                     self.pointget = data.point
+                    self.getListVoucher()
                 }
             }
         })
@@ -235,11 +236,30 @@ extension PaymentBillViewController {
         })
     }
     
+    func getListVoucher() {
+        viewModel.getListVoucher().subscribe(onNext: {
+            [self] (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<voucher>().mapArray(JSONObject: response.data){
+                    viewModel.dataVoucher.accept(data)
+                    view_no_data_voucher.isHidden = viewModel.dataVoucher.value.count > 0 ? true:false
+                    height_Table_voucher.constant = CGFloat(viewModel.dataVoucher.value.count * 60)
+                    
+                    height_scroll.constant = height_scroll.constant - 150 + height_Table_voucher.constant
+                }
+            }else {
+            
+            }
+        })
+    }
+    
 }
+//combo
 extension PaymentBillViewController {
     func registertable() {
         let tablecell = UINib(nibName: "ItemComboFoodAddTableViewCell", bundle: .main)
         tableView.register(tablecell, forCellReuseIdentifier: "ItemComboFoodAddTableViewCell")
+        
         
     }
     func bindingtablecell() {
@@ -249,7 +269,78 @@ extension PaymentBillViewController {
         }
     }
 }
-
+//voucher
+extension PaymentBillViewController {
+    func registersVOUCHER() {
+        let tablecellvoucher = UINib(nibName: "ItemVoucherAddTableViewCell", bundle: .main)
+        tableviewvoucher.register(tablecellvoucher, forCellReuseIdentifier: "ItemVoucherAddTableViewCell")
+        tableviewvoucher.rx.modelSelected(voucher.self).subscribe(onNext: { [self]
+            element in
+            var datavoucher = self.viewModel.dataVoucher.value
+            var databill = self.viewModel.databill.value
+            if viewModel.databillhistoryVoucher.value.idbill == 0 {
+                viewModel.databillhistoryVoucher.accept(databill)
+            }
+            var datavoucherhis = viewModel.databillhistoryVoucher.value
+            datavoucher.enumerated().forEach{
+                (index,value) in
+                
+                if element.idvoucher == value.idvoucher {
+                    datavoucher[index].isCheck = value.isCheck == ACTIVE ? DEACTIVE:ACTIVE
+                    self.lbl_reduce.text = String(value.price == 0 ? String(value.percent) + "%": Utils.stringVietnameseFormatWithNumber(amount: value.price) )
+                    if value.price != 0 {
+                        var total_final = databill.totalamount - value.price
+                        var total_reduce = Utils.stringVietnameseFormatWithNumber(amount: total_final)
+                        self.lbl_total_bill.text = total_reduce
+                        databill.totalamount = total_final ?? 0
+                        databill.idvoucher = element.idvoucher
+                        self.lbl_total_amount_vat.text = total_reduce
+                        self.lbl_total_amount_final.text = total_reduce
+                    }else
+                    {
+                        var percent_100 =  value.percent
+                        var percent_reduce = (Double(percent_100) / 100.0) * Double(databill.totalamount)
+                        var total_final = databill.totalamount - Int(percent_reduce)
+                        var total_reduce_percent = Utils.stringVietnameseFormatWithNumber(amount:  total_final)
+                        self.lbl_total_bill.text = total_reduce_percent
+                        databill.totalamount = total_final ?? 0
+                        databill.idvoucher = element.idvoucher
+                        self.lbl_total_amount_vat.text = total_reduce_percent
+                        self.lbl_total_amount_final.text = total_reduce_percent
+                    }
+                    if value.isCheck == ACTIVE {
+                        var datatotalamount = Utils.stringVietnameseFormatWithNumber(amount: datavoucherhis.totalamount)
+                        self.lbl_total_bill.text = datatotalamount
+                        databill.totalamount = Int(datavoucherhis.totalamount) ?? 0
+                        databill.idvoucher = element.idvoucher
+                        self.lbl_total_amount_vat.text = datatotalamount
+                        self.lbl_total_amount_final.text = datatotalamount
+                        self.lbl_reduce.text = "0"
+                    }
+                 
+                }else {
+                    datavoucher[index].isCheck = DEACTIVE
+                
+                }
+                
+                
+                
+              
+            }
+            self.viewModel.dataVoucher.accept(datavoucher)
+            self.viewModel.databill.accept(databill)
+        })
+        tableviewvoucher.separatorStyle = .none
+    }
+    func tableviewcellVOUCHER() {
+        viewModel.dataVoucher.bind(to: tableviewvoucher.rx.items(cellIdentifier: "ItemVoucherAddTableViewCell",cellType: ItemVoucherAddTableViewCell.self)) {
+            (row,data,cell) in
+            cell.data = data
+            cell.selectionStyle = .none
+        }
+    }
+    
+}
 extension PaymentBillViewController {
     func register() {
         let collectioncell = UINib(nibName: "itemComboFoodCollectionViewCell", bundle: .main)

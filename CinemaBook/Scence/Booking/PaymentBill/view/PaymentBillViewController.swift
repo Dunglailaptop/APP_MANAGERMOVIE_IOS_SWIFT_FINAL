@@ -15,6 +15,10 @@ import UserNotifications
 
 class PaymentBillViewController: UIViewController {
     
+   
+    @IBOutlet weak var lbl_reduce: UILabel!
+    @IBOutlet weak var view_no_data_voucher: UIView!
+    @IBOutlet weak var tableviewvoucher: UITableView!
     var callPopViewController:() -> Void = {}
     @IBOutlet weak var image_check_2: UIImageView!
     @IBOutlet weak var image_check_1: UIImageView!
@@ -42,6 +46,7 @@ class PaymentBillViewController: UIViewController {
     @IBOutlet weak var height_combofoodadd:NSLayoutConstraint!
     @IBOutlet weak var collectionview: UICollectionView!
     @IBOutlet weak var height_scroll:NSLayoutConstraint!
+    @IBOutlet weak var height_Table_voucher: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     var viewModel = PaymentBillViewModel()
     var router = PaymentBillRouter()
@@ -59,6 +64,8 @@ class PaymentBillViewController: UIViewController {
         bindingCollectioncell()
         registertable()
         bindingtablecell()
+        registersVOUCHER()
+        tableviewcellVOUCHER()
         checkbtn()
 //        showNotification()
         NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("idbillcheckPaymentVNPAY"), object: nil)

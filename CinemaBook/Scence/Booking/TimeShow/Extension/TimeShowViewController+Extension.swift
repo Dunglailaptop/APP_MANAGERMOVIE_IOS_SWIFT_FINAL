@@ -16,14 +16,15 @@ extension TimeShowViewController {
  func getListInterestCinema() {
     viewModel.getListCinema().subscribe(onNext: { (response) in
                  if (response.code == RRHTTPStatusCode.ok.rawValue){
-                     if let movies = Mapper<InterestMovie>().mapArray(JSONObject: response.data)
+                     if let movies = Mapper<ModelinterestMovie>().mapArray(JSONObject: response.data)
                      {
-                        self.viewModel.dataListCinema.accept(movies)
-                        self.lbl_ALL_CINAME.text = String(self.viewModel.dataListCinema.value.count)
-                        self.lbl_Cinema_Foryou.text = String(self.viewModel.dataListCinema.value.count) 
+                       
+                         self.viewModel.listCinemaWithInterest.accept(movies)
+                        self.lbl_ALL_CINAME.text = String(self.viewModel.listCinemaWithInterest.value.count)
+                        self.lbl_Cinema_Foryou.text = String(self.viewModel.listCinemaWithInterest.value.count)
                         self.getListInterestMovie()
                        
-                             self.view_no_data.isHidden = self.viewModel.dataListCinema.value.count > 0 ? true:false
+                             self.view_no_data.isHidden = self.viewModel.listCinemaWithInterest.value.count > 0 ? true:false
                         
                         
                       dLog(response.data)
@@ -37,6 +38,18 @@ extension TimeShowViewController {
                    if (response.code == RRHTTPStatusCode.ok.rawValue){
                        if let movies = Mapper<InterestMovie>().mapArray(JSONObject: response.data)
                        {
+                           var onlyoneListcinema = self.viewModel.cinemaWithInterest.value
+                           var datalistcinema = self.viewModel.listCinemaWithInterest.value
+                           
+                           datalistcinema.enumerated().forEach{ (index,value) in
+                           var listinterest  =  movies.filter{ $0.idcinema == value.idcinema}
+                            
+                              
+                               datalistcinema[index].listinterest = listinterest
+                           
+                          
+                           }
+                           self.viewModel.listCinemaWithInterest.accept(datalistcinema)
                            self.viewModel.listTime.accept(movies)
 
                        }
@@ -58,7 +71,7 @@ extension TimeShowViewController{
         tableView.rx.setDelegate(self).disposed(by: rxbag)
     }
     func bindingtableviewcell() {
-        viewModel.dataListCinema.bind(to: tableView.rx.items(cellIdentifier: "ItemCinemaTableViewCell", cellType:  ItemCinemaTableViewCell.self)){ (row,data,cell) in
+        viewModel.listCinemaWithInterest.bind(to: tableView.rx.items(cellIdentifier: "ItemCinemaTableViewCell", cellType:  ItemCinemaTableViewCell.self)){ (row,data,cell) in
             cell.viewModel = self.viewModel
             cell.data = data
                   
