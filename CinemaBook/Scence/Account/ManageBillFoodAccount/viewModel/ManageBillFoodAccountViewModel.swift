@@ -15,7 +15,8 @@ class ManageBillFoodAccountViewModel {
     private var router: ManageBillFoodAccountRouter?
     
     public var dataArray: BehaviorRelay<[PaymentInfoBillFoodCombo]> = BehaviorRelay(value: [])
-    
+    public var dataArraySearch: BehaviorRelay<[PaymentInfoBillFoodCombo]> = BehaviorRelay(value: [])
+    public var statusbillfood: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     func bind(view: ManageBillFoodAccountViewController, router: ManageBillFoodAccountRouter){
         self.view = view
         self.router = router
@@ -32,7 +33,7 @@ class ManageBillFoodAccountViewModel {
 }
 extension ManageBillFoodAccountViewModel {
     func getListBillFoodCombo() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.getListBillFoodCombo(iduser: ManageCacheObject.getCurrentUserInfo().idusers))
+        return appServiceProvider.rx.request(.getListBillFoodCombo(iduser: ManageCacheObject.getCurrentUserInfo().idusers,statusfoodbill: statusbillfood.value))
                         .filterSuccessfulStatusCodes()
                         .mapJSON().asObservable()
                         .showAPIErrorToast()

@@ -13,8 +13,11 @@ import RxRelay
 import JonAlert
 import ObjectMapper
 
-class ManageBillFoodAccountViewController: UIViewController {
+class ManageBillFoodAccountViewController: BaseViewController {
 
+    @IBOutlet weak var txt_search: UITextField!
+    @IBOutlet weak var btn_successorder: UIButton!
+    @IBOutlet weak var btn_neworder: UIButton!
     @IBOutlet weak var tableview: UITableView!
     var viewModel = ManageBillFoodAccountViewModel()
     var router = ManageBillFoodAccountRouter()
@@ -23,10 +26,39 @@ class ManageBillFoodAccountViewController: UIViewController {
         viewModel.bind(view: self, router: router)
         regiter()
         bindingtable()
+        txt_search.rx.controlEvent(.editingChanged)
+            .withLatestFrom(txt_search.rx.text.orEmpty)
+            .subscribe(onNext: { [weak self] query in
+                guard let self = self else { return }
+                
+                let dataFirsts = self.viewModel.dataArraySearch.value
+                let cloneDataFilter = self.viewModel.dataArray.value
+                
+                if !query.isEmpty {
+                    let filteredDataArray = cloneDataFilter.filter { value in
+                        let str1 = query.uppercased().applyingTransform(.stripDiacritics, reverse: false) ?? ""
+                        
+                        // Convert value.id to String before using uppercased()
+                        if let stringValue = String(value.id).uppercased().applyingTransform(.stripDiacritics, reverse: false) {
+                            return stringValue.contains(str1)
+                        }
+                        
+                        return false // Handle if conversion fails or value.id is not convertible to String
+                    }
+                    self.viewModel.dataArray.accept(filteredDataArray)
+                } else {
+                    self.viewModel.dataArray.accept(dataFirsts)
+                }
+            })
+            .disposed(by: rxbag)
+
+
+        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.statusbillfood.accept(0)
         getListBillFoodCombo()
     }
 
@@ -34,7 +66,23 @@ class ManageBillFoodAccountViewController: UIViewController {
         viewModel.makePopViewController()
     }
     
-
+    @IBAction func btn_statusbillfood_neworder(_ sender: Any) {
+        btn_neworder.backgroundColor = .systemBlue
+        btn_neworder.setTitleColor(UIColor.white, for: .normal)
+        btn_successorder.backgroundColor = .white
+        btn_successorder.setTitleColor(UIColor.systemBlue, for: .normal)
+        viewModel.statusbillfood.accept(0)
+        getListBillFoodCombo()
+    }
+    
+    @IBAction func btn_statusbillfood_success(_ sender: Any) {
+        btn_successorder.backgroundColor = .systemBlue
+        btn_successorder.setTitleColor(UIColor.white, for: .normal)
+        btn_neworder.backgroundColor = .white
+        btn_neworder.setTitleColor(UIColor.systemBlue, for: .normal)
+        viewModel.statusbillfood.accept(1)
+        getListBillFoodCombo()
+    }
 }
 extension ManageBillFoodAccountViewController{
     func getListBillFoodCombo() {
@@ -43,6 +91,7 @@ extension ManageBillFoodAccountViewController{
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<PaymentInfoBillFoodCombo>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
+                    self.viewModel.dataArraySearch.accept(data)
                 }
             }
         })

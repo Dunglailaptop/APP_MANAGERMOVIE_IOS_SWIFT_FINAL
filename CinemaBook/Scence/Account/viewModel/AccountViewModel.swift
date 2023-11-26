@@ -30,5 +30,10 @@ class AccountViewModel{
     func makeToManageBillFoodListViewController() {
         router?.navigationToManageBillFoodAccountViewController()
     }
+    
+    func makeToForgotViewController() {
+        router?.navigaitionToForgotViewController()
+    }
+    
 }
 

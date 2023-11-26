@@ -48,7 +48,7 @@ enum ManagerConnections {
     case getPoint(iduser:Int)
     case postPaymentBillFoodCombo(foodcombobill:PaymentFoodCombo)
     case getListBillinAccount(iduser:Int,status:Int)
-    case getListBillFoodCombo(iduser:Int)
+    case getListBillFoodCombo(iduser:Int,statusfoodbill:Int)
     case getListAllBill(idcinema:Int,status:Int,datefrom:String,dateto:String)
     case getListAllBillFoodCombo(idcinema:Int,status:Int,datefrom:String,dateto:String)
     case updateSatus(idinterest:Int,status:Int)
@@ -87,6 +87,7 @@ enum ManagerConnections {
     case changepassword(newpassword:String,username:String)
     case saveCacheVNPAY(bill:Bill)
     case getDetailInfoCinema(idcinema:Int)
+    case getNoTiFaction(iduser:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -171,7 +172,7 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlPostPaymentFoodComboStore
         case .getListBillinAccount(let duser,let status):
             return APIEndPoint.Name.urlGetListBillAccount
-        case .getListBillFoodCombo(let iduser):
+        case .getListBillFoodCombo(let iduser,let statusfoodbill):
             return APIEndPoint.Name.urlGetListInfoBillFoodCombo
         case .getListAllBill(let idcinema,let status,let datefrom,let dateto):
             return APIEndPoint.Name.urlGetListBillAll
@@ -247,6 +248,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlSaveCacheBillVnapy
         case .getDetailInfoCinema(let idcinema):
             return APIEndPoint.Name.urlGetInfoDetialCinema
+        case .getNoTiFaction(let iduser):
+            return APIEndPoint.Name.urlNotiFaction
         }
     
     }
@@ -324,7 +327,7 @@ extension ManagerConnections: TargetType {
             return .post
         case .getListBillinAccount(_,_):
             return .get
-        case .getListBillFoodCombo(_):
+        case .getListBillFoodCombo(_,_):
             return .get
         case .getListAllBill(_,_,_,_):
             return .get
@@ -399,6 +402,8 @@ extension ManagerConnections: TargetType {
         case .saveCacheVNPAY(_):
             return .post
         case .getDetailInfoCinema(_):
+            return .get
+        case .getNoTiFaction(_):
             return .get
         }
 
@@ -499,7 +504,7 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getListBillinAccount(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .getListBillFoodCombo(_):
+        case .getListBillFoodCombo(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListAllBill(_,_,_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
@@ -574,6 +579,8 @@ extension ManagerConnections: TargetType {
         case .saveCacheVNPAY(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getDetailInfoCinema(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getNoTiFaction(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -760,8 +767,8 @@ extension ManagerConnections: TargetType {
                 "status":status,
                 "iduser": iduser
             ]
-        case .getListBillFoodCombo(let iduser):
-            return ["iduser":iduser]
+        case .getListBillFoodCombo(let iduser,let statusfoodbill):
+            return ["iduser":iduser,"statusfoodbill":statusfoodbill]
         case .getListAllBill(let idcinema,let status,let datefrom,let dateto):
             return [
                 "idcinema":idcinema,
@@ -988,6 +995,10 @@ extension ManagerConnections: TargetType {
             return [
                 "idcinema":idcinema
             ]
+        case .getNoTiFaction(let iduser):
+            return [
+                "iduser":iduser
+            ]
         }
        
     }
@@ -1073,7 +1084,7 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getListBillinAccount(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .getListBillFoodCombo(_):
+        case .getListBillFoodCombo(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListAllBill(_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
@@ -1148,6 +1159,8 @@ extension ManagerConnections: TargetType {
         case .saveCacheVNPAY(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getDetailInfoCinema(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getNoTiFaction(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }

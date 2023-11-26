@@ -13,12 +13,12 @@ import RxRelay
 
 class NotifcationMessageViewModel: BaseViewModel {
     
-    private(set) weak var view: ChatMessageViewController?
-    private var router: ChatMessageRouter?
+    private(set) weak var view: NotifcationMessageViewController?
+    private var router: NotifcationMessageRouter?
     
-    var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value:  [1,2,3,4])
-
-    func bind(view: ChatMessageViewController, router: ChatMessageRouter){
+    var dataArray: BehaviorRelay<[notifaction]> = BehaviorRelay(value:  [])
+    
+    func bind(view: NotifcationMessageViewController, router: NotifcationMessageRouter){
            self.view = view
            self.router = router
            self.router?.setSourceView(self.view)
@@ -27,4 +27,12 @@ class NotifcationMessageViewModel: BaseViewModel {
 
     
     
+}
+extension NotifcationMessageViewModel {
+    func getNotiCationMessage() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getNoTiFaction(iduser: 3))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .mapObject(type: APIResponse.self)
+    }
 }

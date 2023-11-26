@@ -41,5 +41,10 @@ class AccountRouter {
         sourceView?.navigationController?.pushViewController(view2, animated: true)
     }
     
+    func navigaitionToForgotViewController() {
+        let viewForgotPassword = ForgotPasswordViewController()
+        sourceView?.navigationController?.pushViewController(viewForgotPassword, animated: true)
+    }
+    
 }
 

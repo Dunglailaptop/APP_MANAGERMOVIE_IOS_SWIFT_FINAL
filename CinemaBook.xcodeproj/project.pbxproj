@@ -129,6 +129,9 @@
 		B0A9003F2B13824D00F9F613 /* ListCinemaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9003E2B13824D00F9F613 /* ListCinemaRouter.swift */; };
 		B0A900422B1384E100F9F613 /* ItemCinemasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A900402B1384E100F9F613 /* ItemCinemasTableViewCell.swift */; };
 		B0A900432B1384E100F9F613 /* ItemCinemasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A900412B1384E100F9F613 /* ItemCinemasTableViewCell.xib */; };
+		B0A9004F2B13B41300F9F613 /* Notifaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9004E2B13B41300F9F613 /* Notifaction.swift */; };
+		B0A900532B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A900512B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.swift */; };
+		B0A900542B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A900522B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.xib */; };
 		B0A9A2162AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A2142AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.swift */; };
 		B0A9A2172AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A2152AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.xib */; };
 		B0A9A21A2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A2182AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift */; };
@@ -701,6 +704,9 @@
 		B0A9003E2B13824D00F9F613 /* ListCinemaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCinemaRouter.swift; sourceTree = "<group>"; };
 		B0A900402B1384E100F9F613 /* ItemCinemasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCinemasTableViewCell.swift; sourceTree = "<group>"; };
 		B0A900412B1384E100F9F613 /* ItemCinemasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCinemasTableViewCell.xib; sourceTree = "<group>"; };
+		B0A9004E2B13B41300F9F613 /* Notifaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifaction.swift; sourceTree = "<group>"; };
+		B0A900512B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNoTiFactionTableViewCell.swift; sourceTree = "<group>"; };
+		B0A900522B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemNoTiFactionTableViewCell.xib; sourceTree = "<group>"; };
 		B0A9A2142AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDialogFoodCommboTableViewCell.swift; sourceTree = "<group>"; };
 		B0A9A2152AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDialogFoodCommboTableViewCell.xib; sourceTree = "<group>"; };
 		B0A9A2182AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDialogFoodComboWaterTableViewCell.swift; sourceTree = "<group>"; };
@@ -2064,6 +2070,7 @@
 		B0A8CF862AF8DB2E00596BBD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				B0A900502B13B4F500F9F613 /* cell */,
 				B0A8CF872AF8DB4400596BBD /* NotifcationMessageViewController.swift */,
 				B0A8CF882AF8DB4400596BBD /* NotifcationMessageViewController.xib */,
 			);
@@ -2158,6 +2165,15 @@
 			children = (
 				B0A900402B1384E100F9F613 /* ItemCinemasTableViewCell.swift */,
 				B0A900412B1384E100F9F613 /* ItemCinemasTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		B0A900502B13B4F500F9F613 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0A900512B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.swift */,
+				B0A900522B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -4745,6 +4761,7 @@
 				B0AF91712AD004C2000035DB /* Bill.swift */,
 				B0C8B6A92AE3A75E0022232E /* Nation.swift */,
 				B0B6CC092AEFA31000361CF7 /* Report.swift */,
+				B0A9004E2B13B41300F9F613 /* Notifaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5110,6 +5127,7 @@
 				B0A470E92AE79A380081C8AA /* DialogShowListChairEditViewController.xib in Resources */,
 				FE6BD17E2AC8595900177093 /* MangamentFoodItemViewController.xib in Resources */,
 				B0BD0A532AD2FF870099FB2C /* GoogleService-Info.plist in Resources */,
+				B0A900542B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.xib in Resources */,
 				FE54612D2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib in Resources */,
 				FE52546B2AC325EE003229A0 /* ManagementBillFoodComboViewController.xib in Resources */,
 				B0A900432B1384E100F9F613 /* ItemCinemasTableViewCell.xib in Resources */,
@@ -5293,6 +5311,7 @@
 				FE5C9E662AA427BB00FA235D /* SambagTheme.swift in Sources */,
 				B0A5A8952AF15A4200DB6FCA /* ManageReportRouter.swift in Sources */,
 				FE5DFF9D2A76A21500E2E345 /* CustomBarViewController.swift in Sources */,
+				B0A900532B13B50C00F9F613 /* ItemNoTiFactionTableViewCell.swift in Sources */,
 				FE5EA0EB2AAE19740039DEC3 /* NewFeedViewContrller+Extension.swift in Sources */,
 				FE59AE262AB3616D00D4E1F6 /* ManagementMovieViewController.swift in Sources */,
 				FE4BAAA32ACABF350010C0B9 /* PaymentBillViewController.swift in Sources */,
@@ -5448,6 +5467,7 @@
 				B0A900422B1384E100F9F613 /* ItemCinemasTableViewCell.swift in Sources */,
 				B0AF7A442AD3E7D9008AE1F2 /* ChatMessageViewModel.swift in Sources */,
 				FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */,
+				B0A9004F2B13B41300F9F613 /* Notifaction.swift in Sources */,
 				B0BEC1D22ADAECA900709883 /* PaymentFoodComboRouter.swift in Sources */,
 				B0AF7A412AD3E6AB008AE1F2 /* ItemChatTableViewCell.swift in Sources */,
 				FE59AE2B2AB366BA00D4E1F6 /* ManagementMovieViewModel.swift in Sources */,

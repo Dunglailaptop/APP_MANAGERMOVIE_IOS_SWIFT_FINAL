@@ -91,7 +91,7 @@ extension AccountViewController: UITableViewDelegate {
         }else {
             switch indexPath.row {
             case 0:
-                return 250
+                return 200
             case 1:
                 return 60
             default:

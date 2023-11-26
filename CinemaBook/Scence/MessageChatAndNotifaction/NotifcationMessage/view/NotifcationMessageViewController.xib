@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotifcationMessageViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="tableview" destination="YGS-A0-CXO" id="5Gj-xA-1qx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -66,12 +67,20 @@
                                 <constraint firstItem="7vc-t7-3Fw" firstAttribute="leading" secondItem="sAP-fR-c2n" secondAttribute="leading" constant="20" id="pny-7p-4Wk"/>
                             </constraints>
                         </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YGS-A0-CXO">
+                            <rect key="frame" x="0.0" y="60" width="393" height="699"/>
+                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="YGS-A0-CXO" secondAttribute="bottom" id="4me-3B-iLQ"/>
                         <constraint firstItem="sAP-fR-c2n" firstAttribute="top" secondItem="1Ww-BP-HPl" secondAttribute="top" id="9h9-gw-yzK"/>
                         <constraint firstItem="sAP-fR-c2n" firstAttribute="leading" secondItem="1Ww-BP-HPl" secondAttribute="leading" id="JXA-77-Sc1"/>
+                        <constraint firstItem="YGS-A0-CXO" firstAttribute="top" secondItem="sAP-fR-c2n" secondAttribute="bottom" id="JxB-Za-wKg"/>
                         <constraint firstAttribute="trailing" secondItem="sAP-fR-c2n" secondAttribute="trailing" id="SQm-Zq-x7K"/>
+                        <constraint firstItem="YGS-A0-CXO" firstAttribute="leading" secondItem="1Ww-BP-HPl" secondAttribute="leading" id="lSB-fg-Vfk"/>
+                        <constraint firstAttribute="trailing" secondItem="YGS-A0-CXO" secondAttribute="trailing" id="vxZ-Oe-Cxf"/>
                     </constraints>
                 </view>
             </subviews>
