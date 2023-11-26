@@ -93,6 +93,12 @@ PODS:
     - GoogleUtilities/Network (~> 7.11)
     - "GoogleUtilities/NSData+zlib (~> 7.11)"
     - nanopb (< 2.30910.0, >= 2.30908.0)
+  - GoogleMaps (8.3.0):
+    - GoogleMaps/Maps (= 8.3.0)
+  - GoogleMaps/Base (8.3.0)
+  - GoogleMaps/Maps (8.3.0):
+    - GoogleMaps/Base
+  - GooglePlaces (8.3.0)
   - GoogleUtilities/AppDelegateSwizzler (7.11.5):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -204,6 +210,8 @@ DEPENDENCIES:
   - Firebase/Storage
   - FSCalendar
   - FSPagerView
+  - GoogleMaps (= 8.3.0)
+  - GooglePlaces (= 8.3.0)
   - iOSDropDown
   - IQKeyboardManager
   - JGProgressHUD
@@ -258,6 +266,8 @@ SPEC REPOS:
     - FSCalendar
     - FSPagerView
     - GoogleAppMeasurement
+    - GoogleMaps
+    - GooglePlaces
     - GoogleUtilities
     - GTMSessionFetcher
     - InputBarAccessoryView
@@ -322,6 +332,8 @@ SPEC CHECKSUMS:
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   GoogleAppMeasurement: 079d7632810e9d9704a99932547ba1554acc4342
+  GoogleMaps: 54762190c9741867d03e4e4218672ab5a0a8096b
+  GooglePlaces: b922e192c50994436900ef14d19f84971950250b
   GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
   InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
@@ -366,6 +378,6 @@ SPEC CHECKSUMS:
   VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 46ce8e00f95add4913b8d9fb0b0856247e693ec4
+PODFILE CHECKSUM: 2c8edaaf8eae6cb5da5c71599d8a5c569c3b6472
 
 COCOAPODS: 1.13.0

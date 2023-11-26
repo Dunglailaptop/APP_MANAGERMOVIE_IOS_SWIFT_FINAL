@@ -1,5 +1,5 @@
 
- platform :ios, '12.0'
+ platform :ios, '14.0'
 
 target 'CinemaBook' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -54,7 +54,7 @@ pod 'SpreadsheetView'
  pod 'Charts'
 pod 'VerticalCardSwiper'
   pod 'OTPFieldView'
-
-
-
+# pod 'GooglePlaces', '5.1.0'
+  pod 'GooglePlaces', '8.3.0'
+  pod 'GoogleMaps' , '8.3.0'
 end

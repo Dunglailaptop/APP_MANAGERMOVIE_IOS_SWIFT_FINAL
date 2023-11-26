@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GooglePlaces
 
 protocol RestartApp {
     func restartApp()
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,RestartApp,UNUserNotificat
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        GMSPlacesClient.provideAPIKey("AIzaSyCKPMo2ytoB9Hxp687JTjDY5dv9r_HUouA")
         window = UIWindow(frame: UIScreen.main.bounds)
         navigationController.setViewControllers([SplachScreenViewController()], animated: true)
         window?.rootViewController = navigationController

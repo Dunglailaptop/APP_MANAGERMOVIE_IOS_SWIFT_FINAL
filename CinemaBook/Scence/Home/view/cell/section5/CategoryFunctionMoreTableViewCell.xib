@@ -97,10 +97,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yuu-kf-0uA">
+                                        <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="140"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="btn_makeToListInfoCinema:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9JZ-yK-x3Q"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="42G-Z4-ErX" firstAttribute="top" secondItem="mwm-3g-nCo" secondAttribute="top" constant="20" id="0ak-id-9SU"/>
+                                    <constraint firstItem="Yuu-kf-0uA" firstAttribute="leading" secondItem="mwm-3g-nCo" secondAttribute="leading" id="GE2-qF-uqs"/>
+                                    <constraint firstItem="Yuu-kf-0uA" firstAttribute="top" secondItem="mwm-3g-nCo" secondAttribute="top" id="SXK-f5-GWo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yuu-kf-0uA" secondAttribute="bottom" id="dSd-oO-2Mr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yuu-kf-0uA" secondAttribute="trailing" id="dcO-LK-nN4"/>
                                     <constraint firstItem="4MO-8f-OcD" firstAttribute="centerX" secondItem="mwm-3g-nCo" secondAttribute="centerX" id="pvH-b5-a6k"/>
                                     <constraint firstItem="4MO-8f-OcD" firstAttribute="top" secondItem="42G-Z4-ErX" secondAttribute="bottom" constant="10" id="rnV-cN-gla"/>
                                     <constraint firstItem="42G-Z4-ErX" firstAttribute="centerX" secondItem="mwm-3g-nCo" secondAttribute="centerX" id="ryZ-hL-QGC"/>

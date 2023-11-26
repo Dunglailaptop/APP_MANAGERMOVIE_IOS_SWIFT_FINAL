@@ -31,4 +31,9 @@ class CategoryFunctionMoreTableViewCell: UITableViewCell {
     @IBAction func btn_makeToStoreViewController(_ sender: Any) {
         viewModel?.makeToStoreViewController()
     }
+    
+    @IBAction func btn_makeToListInfoCinema(_ sender: Any) {
+        viewModel?.makeToListInfocinema()
+    }
+    
 }

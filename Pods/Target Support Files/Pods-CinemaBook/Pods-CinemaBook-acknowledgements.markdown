@@ -2761,6 +2761,14 @@ IF IBM IS APPRISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 Copyright 2022 Google
 
+## GoogleMaps
+
+Copyright 2023 Google
+
+## GooglePlaces
+
+Copyright 2023 Google
+
 ## GoogleUtilities
 
 

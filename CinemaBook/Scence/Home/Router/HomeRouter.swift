@@ -36,6 +36,11 @@ class HomeRouter {
         sourceView?.navigationController?.pushViewController(storeProduct, animated: true)
     }
     
+    func navigationToListInfoCinema() {
+        let viewinfocinemalist = ListCinemaViewController()
+        sourceView?.navigationController?.pushViewController(viewinfocinemalist, animated: true)
+    }
+    
 }
 
 

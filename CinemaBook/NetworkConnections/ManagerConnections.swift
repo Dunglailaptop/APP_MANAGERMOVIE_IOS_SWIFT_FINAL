@@ -86,6 +86,7 @@ enum ManagerConnections {
     case confirmfogotAccount(emails:String,enteredOTP:String,iduser:Int)
     case changepassword(newpassword:String,username:String)
     case saveCacheVNPAY(bill:Bill)
+    case getDetailInfoCinema(idcinema:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -244,6 +245,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlChangePassword
         case .saveCacheVNPAY(_):
             return APIEndPoint.Name.urlSaveCacheBillVnapy
+        case .getDetailInfoCinema(let idcinema):
+            return APIEndPoint.Name.urlGetInfoDetialCinema
         }
     
     }
@@ -395,6 +398,8 @@ extension ManagerConnections: TargetType {
             return .post
         case .saveCacheVNPAY(_):
             return .post
+        case .getDetailInfoCinema(_):
+            return .get
         }
 
         
@@ -568,6 +573,8 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .saveCacheVNPAY(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getDetailInfoCinema(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -977,6 +984,10 @@ extension ManagerConnections: TargetType {
                 "ticket": bill.tickets.toJSON(),
                 "combobill": bill.combobills.toJSON()
             ]
+        case .getDetailInfoCinema(let idcinema):
+            return [
+                "idcinema":idcinema
+            ]
         }
        
     }
@@ -1136,6 +1147,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .saveCacheVNPAY(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getDetailInfoCinema(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

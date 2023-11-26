@@ -29,6 +29,10 @@ class HomeViewModel: BaseViewModel {
         router?.navigationToStoreProductViewController()
     }
     
+    func makeToListInfocinema() {
+        router?.navigationToListInfoCinema()
+    }
+    
     func cleardata() {
         dataArrayMovie.accept([])
     }

@@ -50,6 +50,8 @@
 		B0A147862AEA389A00668821 /* ManagementDetailBillRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A147852AEA389A00668821 /* ManagementDetailBillRouter.swift */; };
 		B0A1AB102B1232EE0046A132 /* ItemVoucherFoodPaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1AB0E2B1232EE0046A132 /* ItemVoucherFoodPaymentTableViewCell.swift */; };
 		B0A1AB112B1232EE0046A132 /* ItemVoucherFoodPaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A1AB0F2B1232EE0046A132 /* ItemVoucherFoodPaymentTableViewCell.xib */; };
+		B0A1AB192B1258210046A132 /* ListInfoCinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A1AB172B1258210046A132 /* ListInfoCinemaViewController.swift */; };
+		B0A1AB1A2B1258210046A132 /* ListInfoCinemaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A1AB182B1258210046A132 /* ListInfoCinemaViewController.xib */; };
 		B0A3FCBD2AEE048100468D02 /* ManageReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A3FCBB2AEE048100468D02 /* ManageReportViewController.swift */; };
 		B0A3FCBE2AEE048100468D02 /* ManageReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A3FCBC2AEE048100468D02 /* ManageReportViewController.xib */; };
 		B0A40E3F2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */; };
@@ -121,6 +123,12 @@
 		B0A8CF962AF8DE6100596BBD /* VieoTraillerShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A8CF942AF8DE6100596BBD /* VieoTraillerShowViewController.xib */; };
 		B0A8CF9A2AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A8CF982AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.swift */; };
 		B0A8CF9B2AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A8CF992AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.xib */; };
+		B0A9003A2B1381B100F9F613 /* ListCinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A900382B1381B100F9F613 /* ListCinemaViewController.swift */; };
+		B0A9003B2B1381B100F9F613 /* ListCinemaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A900392B1381B100F9F613 /* ListCinemaViewController.xib */; };
+		B0A9003D2B13823D00F9F613 /* ListCinemaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9003C2B13823D00F9F613 /* ListCinemaViewModel.swift */; };
+		B0A9003F2B13824D00F9F613 /* ListCinemaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9003E2B13824D00F9F613 /* ListCinemaRouter.swift */; };
+		B0A900422B1384E100F9F613 /* ItemCinemasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A900402B1384E100F9F613 /* ItemCinemasTableViewCell.swift */; };
+		B0A900432B1384E100F9F613 /* ItemCinemasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A900412B1384E100F9F613 /* ItemCinemasTableViewCell.xib */; };
 		B0A9A2162AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A2142AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.swift */; };
 		B0A9A2172AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9A2152AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.xib */; };
 		B0A9A21A2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9A2182AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift */; };
@@ -177,6 +185,8 @@
 		B0ACA7A02AF33CCB007CC560 /* ReportpProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ACA79E2AF33CCB007CC560 /* ReportpProductTableViewCell.swift */; };
 		B0ACA7A12AF33CCB007CC560 /* ReportpProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */; };
 		B0AD43632AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */; };
+		B0AD81702B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD816F2B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift */; };
+		B0AD81722B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD81712B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift */; };
 		B0AF53DC2AF52D8A005F2A27 /* ReportFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF53DA2AF52D8A005F2A27 /* ReportFoodViewController.swift */; };
 		B0AF53DD2AF52D8A005F2A27 /* ReportFoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AF53DB2AF52D8A005F2A27 /* ReportFoodViewController.xib */; };
 		B0AF53DF2AF52D9D005F2A27 /* ReportFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF53DE2AF52D9D005F2A27 /* ReportFoodViewModel.swift */; };
@@ -612,6 +622,8 @@
 		B0A147852AEA389A00668821 /* ManagementDetailBillRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailBillRouter.swift; sourceTree = "<group>"; };
 		B0A1AB0E2B1232EE0046A132 /* ItemVoucherFoodPaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVoucherFoodPaymentTableViewCell.swift; sourceTree = "<group>"; };
 		B0A1AB0F2B1232EE0046A132 /* ItemVoucherFoodPaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemVoucherFoodPaymentTableViewCell.xib; sourceTree = "<group>"; };
+		B0A1AB172B1258210046A132 /* ListInfoCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInfoCinemaViewController.swift; sourceTree = "<group>"; };
+		B0A1AB182B1258210046A132 /* ListInfoCinemaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListInfoCinemaViewController.xib; sourceTree = "<group>"; };
 		B0A3FCBB2AEE048100468D02 /* ManageReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageReportViewController.swift; sourceTree = "<group>"; };
 		B0A3FCBC2AEE048100468D02 /* ManageReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageReportViewController.xib; sourceTree = "<group>"; };
 		B0A40E3D2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementDetailMovieViewController.swift; sourceTree = "<group>"; };
@@ -683,6 +695,12 @@
 		B0A8CF942AF8DE6100596BBD /* VieoTraillerShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VieoTraillerShowViewController.xib; sourceTree = "<group>"; };
 		B0A8CF982AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideotraillershowitemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0A8CF992AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideotraillershowitemCollectionViewCell.xib; sourceTree = "<group>"; };
+		B0A900382B1381B100F9F613 /* ListCinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCinemaViewController.swift; sourceTree = "<group>"; };
+		B0A900392B1381B100F9F613 /* ListCinemaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCinemaViewController.xib; sourceTree = "<group>"; };
+		B0A9003C2B13823D00F9F613 /* ListCinemaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCinemaViewModel.swift; sourceTree = "<group>"; };
+		B0A9003E2B13824D00F9F613 /* ListCinemaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCinemaRouter.swift; sourceTree = "<group>"; };
+		B0A900402B1384E100F9F613 /* ItemCinemasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCinemasTableViewCell.swift; sourceTree = "<group>"; };
+		B0A900412B1384E100F9F613 /* ItemCinemasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCinemasTableViewCell.xib; sourceTree = "<group>"; };
 		B0A9A2142AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDialogFoodCommboTableViewCell.swift; sourceTree = "<group>"; };
 		B0A9A2152AD83BCA00D68692 /* ItemDialogFoodCommboTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDialogFoodCommboTableViewCell.xib; sourceTree = "<group>"; };
 		B0A9A2182AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDialogFoodComboWaterTableViewCell.swift; sourceTree = "<group>"; };
@@ -739,6 +757,8 @@
 		B0ACA79E2AF33CCB007CC560 /* ReportpProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportpProductTableViewCell.swift; sourceTree = "<group>"; };
 		B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportpProductTableViewCell.xib; sourceTree = "<group>"; };
 		B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementDetailMovie+Extensions.swift"; sourceTree = "<group>"; };
+		B0AD816F2B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListinfoCinemaViewModel.swift; sourceTree = "<group>"; };
+		B0AD81712B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInfoCinemaRouter.swift; sourceTree = "<group>"; };
 		B0AF53DA2AF52D8A005F2A27 /* ReportFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFoodViewController.swift; sourceTree = "<group>"; };
 		B0AF53DB2AF52D8A005F2A27 /* ReportFoodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportFoodViewController.xib; sourceTree = "<group>"; };
 		B0AF53DE2AF52D9D005F2A27 /* ReportFoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFoodViewModel.swift; sourceTree = "<group>"; };
@@ -1500,6 +1520,41 @@
 			path = cellitemvoucher;
 			sourceTree = "<group>";
 		};
+		B0A1AB122B1257E30046A132 /* DetailInfoCinema */ = {
+			isa = PBXGroup;
+			children = (
+				B0A1AB162B1258050046A132 /* ViewModel */,
+				B0A1AB142B1257F30046A132 /* router */,
+				B0A1AB132B1257F00046A132 /* view */,
+			);
+			path = DetailInfoCinema;
+			sourceTree = "<group>";
+		};
+		B0A1AB132B1257F00046A132 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A1AB172B1258210046A132 /* ListInfoCinemaViewController.swift */,
+				B0A1AB182B1258210046A132 /* ListInfoCinemaViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0A1AB142B1257F30046A132 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				B0AD81712B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		B0A1AB162B1258050046A132 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0AD816F2B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		B0A3FCB72AEE043700468D02 /* ManageReport */ = {
 			isa = PBXGroup;
 			children = (
@@ -2058,6 +2113,51 @@
 				B0A8CF992AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.xib */,
 				B0A6A40B2AF92D5800FE695D /* itemCardCell.swift */,
 				B0A6A40C2AF92D5800FE695D /* itemCardCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		B0A900342B13816100F9F613 /* ListCinema */ = {
+			isa = PBXGroup;
+			children = (
+				B0A900372B13819000F9F613 /* Router */,
+				B0A900362B13818D00F9F613 /* viewModel */,
+				B0A900352B13818A00F9F613 /* view */,
+			);
+			path = ListCinema;
+			sourceTree = "<group>";
+		};
+		B0A900352B13818A00F9F613 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B0A900442B1384E400F9F613 /* cell */,
+				B0A900382B1381B100F9F613 /* ListCinemaViewController.swift */,
+				B0A900392B1381B100F9F613 /* ListCinemaViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B0A900362B13818D00F9F613 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0A9003C2B13823D00F9F613 /* ListCinemaViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0A900372B13819000F9F613 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0A9003E2B13824D00F9F613 /* ListCinemaRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B0A900442B1384E400F9F613 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0A900402B1384E100F9F613 /* ItemCinemasTableViewCell.swift */,
+				B0A900412B1384E100F9F613 /* ItemCinemasTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -4594,6 +4694,8 @@
 		FEAC96C52A5A561700B49C80 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
+				B0A900342B13816100F9F613 /* ListCinema */,
+				B0A1AB122B1257E30046A132 /* DetailInfoCinema */,
 				B0B26B912B0F8DDD003D867A /* ChangePassword */,
 				B0FB6AE22B0F3E9D004483E0 /* ForgotPassword */,
 				B007724D2AFE9A4F0083AAB8 /* Signin */,
@@ -4809,6 +4911,7 @@
 				FEAC96912A5A55CC00B49C80 /* Frameworks */,
 				FEAC96922A5A55CC00B49C80 /* Resources */,
 				9B821F6F5778EF7FBCDEB075 /* [CP] Embed Pods Frameworks */,
+				0A3912B260E4C3730D8AD67E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -4887,8 +4990,6 @@
 				Base,
 			);
 			mainGroup = FEAC968B2A5A55CC00B49C80;
-			packageReferences = (
-			);
 			productRefGroup = FEAC96952A5A55CC00B49C80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -5011,9 +5112,11 @@
 				B0BD0A532AD2FF870099FB2C /* GoogleService-Info.plist in Resources */,
 				FE54612D2AC0751C0015DB93 /* ManagementCategoryChairViewController.xib in Resources */,
 				FE52546B2AC325EE003229A0 /* ManagementBillFoodComboViewController.xib in Resources */,
+				B0A900432B1384E100F9F613 /* ItemCinemasTableViewCell.xib in Resources */,
 				B0A5E45F2AF4F31800B3C4D8 /* ItemMovieReportMovieTableViewCell.xib in Resources */,
 				B0A6F9ED2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.xib in Resources */,
 				B0A470EF2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib in Resources */,
+				B0A9003B2B1381B100F9F613 /* ListCinemaViewController.xib in Resources */,
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
 				FE5C9E852AA42BE300FA235D /* Roboto-BoldCondensed.ttf in Resources */,
 				B09CD1222AD64710008B8A17 /* CategoryFunctionMoreTableViewCell.xib in Resources */,
@@ -5035,6 +5138,7 @@
 				B0A8CF962AF8DE6100596BBD /* VieoTraillerShowViewController.xib in Resources */,
 				FE5C9E862AA42BE300FA235D /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				B09B6CD92AD7F8E000FF3E35 /* DialogPopUpShowListFoodChooseViewController.xib in Resources */,
+				B0A1AB1A2B1258210046A132 /* ListInfoCinemaViewController.xib in Resources */,
 				FE51DE862ABE98A700D5BE93 /* ItemInterestMovieListManagementCollectionViewCell.xib in Resources */,
 				FE7BA9892A5AFDE500344EFB /* SalesViewController.xib in Resources */,
 				FE5D08362AA236C2004FA3D9 /* AllVideoandMovieViewController.xib in Resources */,
@@ -5095,6 +5199,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0A3912B260E4C3730D8AD67E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CinemaBook/Pods-CinemaBook-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CinemaBook/Pods-CinemaBook-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CinemaBook/Pods-CinemaBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		532ED99FE92239298B51BF20 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -5230,6 +5351,7 @@
 				FE5C9E6B2AA427BB00FA235D /* SambagDatePickerViewController.swift in Sources */,
 				FE5A14AB2AC9999D005739E4 /* BookingProductComboViewController.swift in Sources */,
 				FE2172AB2A76A8C4000C0C17 /* TicketViewController.swift in Sources */,
+				B0A9003A2B1381B100F9F613 /* ListCinemaViewController.swift in Sources */,
 				B0A52B252AE0DF7400CACC45 /* UITextField+Extensions.swift in Sources */,
 				FE502C8B2A9B9A9800779055 /* itemchaircategorylistCollectionViewCell.swift in Sources */,
 				FED6A4572A7614FF000E1BCD /* EmployeeInfo.swift in Sources */,
@@ -5285,6 +5407,7 @@
 				FE5C1D2A2AA2E15300F9B3E5 /* videoShortRouter.swift in Sources */,
 				FE624F712AACB95900AA93FA /* HomeRouter.swift in Sources */,
 				B0A147842AEA387500668821 /* ManagementDetailBillViewModel.swift in Sources */,
+				B0A9003D2B13823D00F9F613 /* ListCinemaViewModel.swift in Sources */,
 				B038573D2ADC35DE00814F02 /* ManageBillAccountItemTableViewCell.swift in Sources */,
 				FE59AE292AB3668F00D4E1F6 /* ManagementMovieRouter.swift in Sources */,
 				FE5276EA2A8D07D900252843 /* BookingChairRouter.swift in Sources */,
@@ -5322,6 +5445,7 @@
 				FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */,
 				FE745FF92A7EB30D0091C0FA /* Movie.swift in Sources */,
 				FE4EB36F2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift in Sources */,
+				B0A900422B1384E100F9F613 /* ItemCinemasTableViewCell.swift in Sources */,
 				B0AF7A442AD3E7D9008AE1F2 /* ChatMessageViewModel.swift in Sources */,
 				FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */,
 				B0BEC1D22ADAECA900709883 /* PaymentFoodComboRouter.swift in Sources */,
@@ -5331,6 +5455,7 @@
 				FE50965F2A76558000F5A457 /* LoginRouter.swift in Sources */,
 				B038572D2ADC1B1B00814F02 /* PaymentFoodComboViewController + Extensions.swift in Sources */,
 				B0A6A4122AF93F8D00FE695D /* VideoTraillerShowViewModel.swift in Sources */,
+				B0A1AB192B1258210046A132 /* ListInfoCinemaViewController.swift in Sources */,
 				B0A9D7A82ADD84CD008AD03D /* ManagementBillticketRouter.swift in Sources */,
 				B0F9D3092AE6C48800CE70FC /* ManagementDetailRoomViewController.swift in Sources */,
 				FE4BAAA62ACACC6A0010C0B9 /* PaymentBillRouter.swift in Sources */,
@@ -5344,6 +5469,7 @@
 				B0AD43632AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift in Sources */,
 				B0806AED2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift in Sources */,
 				FEE5CA582A62F62D00299EA6 /* HomeViewModel.swift in Sources */,
+				B0AD81722B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift in Sources */,
 				B0AB37AE2ADD308200C2C102 /* ManageDetailBillFoodAccountViewController.swift in Sources */,
 				B0FB6AEB2B0F4267004483E0 /* ForgotPasswordViewModel.swift in Sources */,
 				FE4BAAAE2ACAD1E20010C0B9 /* itemComboFoodCollectionViewCell.swift in Sources */,
@@ -5387,6 +5513,7 @@
 				B0AB16112AFF1FAB005C41DE /* SigninRouter.swift in Sources */,
 				FE5DFFA12A76A53E00E2E345 /* CustomBarViewModel.swift in Sources */,
 				FE71C65B2AB7FA310029D84B /* DialogPopupListMovieViewController.swift in Sources */,
+				B0AD81702B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift in Sources */,
 				B0A9A2222AD8428900D68692 /* ItemFoodUnWaterSectionTableViewCell.swift in Sources */,
 				FE624F732AACCD3700AA93FA /* InterestMovie.swift in Sources */,
 				B0AF91722AD004C2000035DB /* Bill.swift in Sources */,
@@ -5439,6 +5566,7 @@
 				B0AF7A462AD3E7EA008AE1F2 /* ChatMessageRouter.swift in Sources */,
 				FE6BD17D2AC8595900177093 /* MangamentFoodItemViewController.swift in Sources */,
 				B0B4C3482B10E6DA001C58A1 /* ItemVoucherAddTableViewCell.swift in Sources */,
+				B0A9003F2B13824D00F9F613 /* ListCinemaRouter.swift in Sources */,
 				B0FB6AE82B0F3ED1004483E0 /* ForgotPasswordViewController.swift in Sources */,
 				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
