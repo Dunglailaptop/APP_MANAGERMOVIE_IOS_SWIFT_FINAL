@@ -23,6 +23,7 @@ var idcategory = 0
 var idnation = 0
 var namecategorymovie = ""
 var namenation = ""
+var type = 0
     init() {
         
     }
@@ -45,5 +46,24 @@ var namenation = ""
         idnation <- map["idnation"]
         namecategorymovie <- map["namecategorymovie"]
         namenation <- map["namenation"]
+        type <- map["type"]
+    }
+}
+struct videouser: Mappable {
+    var videofile = ""
+    var iduser = ManageCacheObject.getCurrentUserInfo().idusers ?? 0
+    var types = 0
+    
+    init() {}
+    
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        videofile <- map["videofile"]
+        iduser <- map["iduser"]
+        types <- map["types"]
     }
 }

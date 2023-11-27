@@ -12,6 +12,7 @@ import youtube_ios_player_helper
 
 class itemCardCell: CardCell {
 
+    @IBOutlet weak var view_load_videourl: UIView!
     @IBOutlet weak var video_player: YTPlayerView!
     override func awakeFromNib() {
         super.awakeFromNib()

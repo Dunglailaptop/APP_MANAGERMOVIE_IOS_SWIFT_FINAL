@@ -56,8 +56,8 @@ enum ManagerConnections {
     case getListMovieWithResetTime(breakTime:Int)
     case getListCategoryMovie
     case getListNation
-    case CreateMovie(movievalue: Movie)
-    case UpdateMovie(movievalue: Movie)
+    case CreateMovie(movievalue: Movie,videousers:videouser)
+    case UpdateMovie(movievalue: Movie,videousers:videouser)
     case UpdateStatusMovie(idmovie:Int,status:Int)
     case GetListCategoryChairInRoom(idroom:Int)
     case CreateCategoryChair(categoryinfo: CategoryChair)
@@ -188,9 +188,9 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlgetListNation
         case .getListCategoryMovie:
             return APIEndPoint.Name.urlgetListCategoryMovie
-        case .CreateMovie(_):
+        case .CreateMovie(_,_):
             return APIEndPoint.Name.urlCreateMovieNew
-        case .UpdateMovie(_):
+        case .UpdateMovie(_,_):
             return APIEndPoint.Name.urlUpdateMovie
         case  .UpdateStatusMovie(_,_):
             return APIEndPoint.Name.urlUpdateStatusMovie
@@ -343,9 +343,9 @@ extension ManagerConnections: TargetType {
             return .get
         case .getListCategoryMovie:
             return .get
-        case .CreateMovie(_):
+        case .CreateMovie(_,_):
             return .post
-        case .UpdateMovie(_):
+        case .UpdateMovie(_,_):
             return .post
         case .UpdateStatusMovie(_,_):
             return .post
@@ -520,9 +520,9 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getListNation:
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .CreateMovie(_):
+        case .CreateMovie(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
-        case .UpdateMovie(_):
+        case .UpdateMovie(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .UpdateStatusMovie(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
@@ -806,7 +806,7 @@ extension ManagerConnections: TargetType {
             return [
                 :
             ]
-        case .CreateMovie(let movievalue):
+        case .CreateMovie(let movievalue,let videousers):
           return  [
                 "namemovie": movievalue.namemovie,
                 "author": movievalue.author,
@@ -815,9 +815,13 @@ extension ManagerConnections: TargetType {
                 "idnation": movievalue.idnation,
                 "timeall": movievalue.timeall,
                 "describes": movievalue.describes,
-                "poster": movievalue.poster
+                "poster": movievalue.poster,
+                "videofile": videousers.videofile,
+                "iduser": videousers.iduser,
+                "types": videousers.types
+                
             ]
-        case .UpdateMovie(let movievalue):
+        case .UpdateMovie(let movievalue,let videousers):
             return [
                 "idmovie": movievalue.movieID,
                 "namemovie": movievalue.namemovie,
@@ -827,7 +831,10 @@ extension ManagerConnections: TargetType {
                 "idnation": movievalue.idnation,
                 "timeall": movievalue.timeall,
                 "describes": movievalue.describes,
-                "poster": movievalue.poster
+                "poster": movievalue.poster,
+                "videofile": videousers.videofile,
+                "iduser": videousers.iduser,
+                "types": videousers.types
             ]
         case .UpdateStatusMovie(let idmovie,let status):
             return [
@@ -1100,9 +1107,9 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getListCategoryMovie:
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .CreateMovie(_):
+        case .CreateMovie(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
-        case .UpdateMovie(_):
+        case .UpdateMovie(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .UpdateStatusMovie(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))

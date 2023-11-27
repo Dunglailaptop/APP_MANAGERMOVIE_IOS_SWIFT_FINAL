@@ -99,16 +99,22 @@ class Utils: NSObject {
     
     func setupvideo(url:String,type:Int,view:UIView!) {
       
-           let videoUrl = URL(string:url)
-                   let player = AVPlayer(url: videoUrl!)
-                   let playerplay = AVPlayerLayer(player: player)
-                playerplay.frame = view.bounds
-           playerplay.videoGravity = .resizeAspectFill
-                view.layer.addSublayer(playerplay)
+    let videoUrl = URL(string:url)
+    let player = AVPlayer(url: videoUrl!)
+    let playerplay = AVPlayerLayer(player: player)
+    var playerViewController = AVPlayerViewController()
+//                playerplay.frame = view.bounds
+        playerplay.videoGravity = .resizeAspectFill
+        
            if type == 0 {
+              
+                playerplay.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+                view.layer.addSublayer(playerplay)
                 player.pause()
            } else {
-               player.play()
+                playerplay.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height )
+                view.layer.addSublayer(playerplay)
+                player.play()
            }
                
        }

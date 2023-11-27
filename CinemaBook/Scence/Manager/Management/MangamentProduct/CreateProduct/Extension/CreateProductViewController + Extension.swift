@@ -171,6 +171,7 @@ extension CreateProductViewController: UIImagePickerControllerDelegate, UINaviga
           dLog(nameImage)
           
           medias_request.name = nameImage[0]
+         medias_request.type = 1
           medias.append(medias_request)
           viewModel.media_request.accept(medias)
           viewModel.uploadImage()

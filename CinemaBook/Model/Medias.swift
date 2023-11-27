@@ -12,6 +12,8 @@ import ObjectMapper
 struct Medias:Mappable {
     var name: String?
     var image: UIImage?
+    var type:Int?
+    var video_path: URL?
     
     init?(map: Map) {
         
@@ -24,6 +26,8 @@ struct Medias:Mappable {
     mutating func mapping(map: Map) {
         name <- map["name"]
         image <- map["file"]
+        type <- map["type"]
+        video_path <- map["video_path"]
     }
 
 }

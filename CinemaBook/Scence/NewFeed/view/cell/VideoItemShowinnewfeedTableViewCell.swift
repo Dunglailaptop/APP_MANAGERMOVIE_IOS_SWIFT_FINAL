@@ -33,8 +33,14 @@ class VideoItemShowinnewfeedTableViewCell: UITableViewCell {
     
     var data:Trailler? = nil {
         didSet {
-            playervideo.load(withVideoId: data!.videofile)
             lbl_namemovie.text = data?.titlevideo
+            if data?.types == 0 {
+                playervideo.load(withVideoId: data!.videofile)
+             
+            } else {
+                Utils().setupvideo(url: Utils.getFullMediaLink(string: data!.videofile), type: 0, view: playervideo)
+            }
+          
         }
     }
     

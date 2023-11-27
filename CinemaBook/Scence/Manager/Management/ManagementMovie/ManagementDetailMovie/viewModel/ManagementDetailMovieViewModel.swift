@@ -15,8 +15,10 @@ class ManagementDetailMovieViewModel: BaseViewModel{
     private var router: ManagemetDetailMovieRouter?
     public var dataArrayNation: BehaviorRelay<[Nation]> = BehaviorRelay(value: [])
     public var dataArrayMovie: BehaviorRelay<[CategoryMovie]> = BehaviorRelay(value: [])
+    public var dataVideouser: BehaviorRelay<videouser> = BehaviorRelay(value: videouser())
     public var pagigation:BehaviorRelay<(page:Int,limit:Int,status:Int)> = BehaviorRelay(value: (page:0,limit:20,status:1))
     public var valueMovie:BehaviorRelay<Movie> = BehaviorRelay(value: Movie())
+    public var urlvideo: BehaviorRelay<String> = BehaviorRelay(value: "")
     func bind(view: ManagementDetailMovieViewController, router: ManagemetDetailMovieRouter){
         self.view = view
         self.router = router
@@ -48,7 +50,7 @@ extension ManagementDetailMovieViewModel {
     }
     
     func createNewMovie() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.CreateMovie(movievalue: valueMovie.value))
+        return appServiceProvider.rx.request(.CreateMovie(movievalue: valueMovie.value, videousers: dataVideouser.value))
                         .filterSuccessfulStatusCodes()
                         .mapJSON().asObservable()
                         .showAPIErrorToast()
@@ -56,7 +58,7 @@ extension ManagementDetailMovieViewModel {
     }
     
     func updateMovie() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.UpdateMovie(movievalue: valueMovie.value))
+        return appServiceProvider.rx.request(.UpdateMovie(movievalue: valueMovie.value,videousers: dataVideouser.value))
                         .filterSuccessfulStatusCodes()
                         .mapJSON().asObservable()
                         .showAPIErrorToast()

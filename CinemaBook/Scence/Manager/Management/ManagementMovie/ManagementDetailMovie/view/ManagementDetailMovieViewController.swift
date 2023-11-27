@@ -14,12 +14,19 @@ import ObjectMapper
 import iOSDropDown
 import JonAlert
 import Photos
+import youtube_ios_player_helper
 
 class ManagementDetailMovieViewController: BaseViewController {
 
+    @IBOutlet weak var VIEW_SHOW_YT: YTPlayerView!
+//    @IBOutlet weak var view_youtube: UIView!
     @IBOutlet weak var txt_dropdown_nation: DropDown!
-    
+    var isPlaying = false
+       var player: AVPlayer?
+       var playerLayer: AVPlayerLayer?
    
+    @IBOutlet weak var view_show_video: UIView!
+    
     @IBOutlet weak var txt_time_show: UITextField!
     @IBOutlet weak var btn_dropdown_nation: UIButton!
     @IBOutlet weak var btn_dropdowncategorymovie: UIButton!
@@ -61,10 +68,15 @@ class ManagementDetailMovieViewController: BaseViewController {
     
     @IBOutlet weak var btn_tiitle_button: UIButton!
     @IBOutlet weak var lbl_tittlle_detial: UILabel!
+    //luu anh
     var imagecover = [UIImage]()
      var selectedAssets = [PHAsset]()
     var nameImage: [String] = []
-    
+    //luu video
+    var videocover = [URL]()
+    var nameVideo = [String]()
+    var typesave = false
+    ///
     var type_check = ""
     var idmovie = 0
     override func viewDidLoad() {
@@ -95,7 +107,10 @@ class ManagementDetailMovieViewController: BaseViewController {
         }
     }
 
-
+    @IBAction func btn_input_videourl(_ sender: Any) {
+        prensentDialogConfirm()
+    }
+    
     @IBAction func btn_showDatePicker(_ sender: Any) {
         showDateTimePicker(dateTimeData: "27/09/2023")
     }
@@ -111,9 +126,15 @@ class ManagementDetailMovieViewController: BaseViewController {
     }
     
     @IBAction func btn_showImage_Box(_ sender: Any) {
-        openPhotoLibrary()
+        openPhotoLibrary(status: 1)
     }
     
+    @IBAction func btn_show_video_phone(_ sender: Any) {
+        openPhotoLibrary(status: 2)
+    }
+    
+    @IBAction func btn_choose_api_youtube(_ sender: Any) {
+    }
     
     @IBAction func btn_createAndUpdate(_ sender: Any) {
         _ = isEmployeeInforValid.take(1).subscribe(onNext: {[self] (isValid) in
@@ -121,9 +142,9 @@ class ManagementDetailMovieViewController: BaseViewController {
             if isValid {
                 switch type_check {
                 case "CREATE":
-                    imagecover.count > 0 ? postUpdateWithAvatar():createNewMovie()
+                    (imagecover.count > 0) || videocover.count > 0 ? postUpdateWithAvatar():createNewMovie()
                 case "DETAIL":
-                    imagecover.count > 0 ? postUpdateWithAvatar():updatemovie()
+                    (imagecover.count > 0) || videocover.count > 0 ? postUpdateWithAvatar():updatemovie()
                 default:
                     return
                 }
@@ -131,4 +152,41 @@ class ManagementDetailMovieViewController: BaseViewController {
             }
         }).disposed(by: rxbag)
     }
+}
+extension ManagementDetailMovieViewController: callbackurl {
+    func callbackurlvideo(url: String) {
+        var urlvideo = url
+        var idvideoyoutube = urlvideo.components(separatedBy: "=")
+        view_show_video.isHidden = true
+        VIEW_SHOW_YT.isHidden = false
+        self.VIEW_SHOW_YT.load(withVideoId: idvideoyoutube[1])
+        var datamovie = viewModel.dataVideouser.value
+        datamovie.videofile = idvideoyoutube[1]
+        datamovie.types = 0
+        viewModel.dataVideouser.accept(datamovie)
+    }
+    func prensentDialogConfirm(){
+        let dialogConfirm = DialogshowInputURLVideoViewController()
+        dialogConfirm.view.backgroundColor = ColorUtils.blackTransparent()
+        dialogConfirm.viewModel = viewModel
+        dialogConfirm.delegate = self
+        
+        let nav = UINavigationController(rootViewController: dialogConfirm)
+        // 1
+        nav.modalPresentationStyle = .overCurrentContext
+
+        // 2
+        if #available(iOS 15.0, *) {
+             if let sheet = nav.sheetPresentationController {
+
+                 // 3
+                 sheet.detents = [.large()]
+
+             }
+        } else {
+         // Fallback on earlier versions
+        }
+        // 4
+        present(nav, animated: true, completion: nil)
+     }
 }

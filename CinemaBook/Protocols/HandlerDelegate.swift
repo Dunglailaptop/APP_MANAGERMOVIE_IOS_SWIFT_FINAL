@@ -71,7 +71,9 @@ protocol DialogUpdateListCategoryChair {
 protocol CalculatorMoneyDelegate {
     func callBackCalculatorMoney(amount:Int, position:Int)
 }
-
+protocol callbackurl {
+    func callbackurlvideo(url:String)
+}
 //protocol CallBackValueChooseDateinStore {
 //    func callbackCinemaValue(idcinema:idcinema)
 //}

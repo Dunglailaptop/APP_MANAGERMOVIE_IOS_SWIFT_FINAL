@@ -107,10 +107,17 @@ extension BaseViewModel{
         AF.upload(
             multipartFormData: { multipartFormData in
                 for i in 0..<dataImage.count {
-                    if let imageData = dataImage[i].image?.jpegData(compressionQuality: 0.5) {
-                        dLog(dataImage[i].name)
-                        multipartFormData.append(imageData, withName: "files", fileName: dataImage[i].name ?? "defaultFileName", mimeType: "file")
+                    if dataImage[i].type == 1 {
+                        if let imageData = dataImage[i].image?.jpegData(compressionQuality: 0.5) {
+                            dLog(dataImage[i].name)
+                            multipartFormData.append(imageData, withName: "files", fileName: dataImage[i].name ?? "defaultFileName", mimeType: "file")
+                        }
+                    } else if dataImage[i].type == 2 {
+                        if let videoData = dataImage[i].video_path {
+                            multipartFormData.append(videoData, withName: "files", fileName: dataImage[i].name ?? "defaultFileName", mimeType: "file")
+                        }
                     }
+                   
                 }
             },
             to: serverUrl,

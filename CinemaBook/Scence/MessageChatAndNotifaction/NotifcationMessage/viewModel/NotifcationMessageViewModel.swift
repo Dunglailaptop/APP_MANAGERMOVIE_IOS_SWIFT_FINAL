@@ -30,7 +30,7 @@ class NotifcationMessageViewModel: BaseViewModel {
 }
 extension NotifcationMessageViewModel {
     func getNotiCationMessage() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.getNoTiFaction(iduser: 3))
+        return appServiceProvider.rx.request(.getNoTiFaction(iduser: ManageCacheObject.getCurrentUserInfo().idusers))
             .filterSuccessfulStatusCodes()
             .mapJSON().asObservable()
             .mapObject(type: APIResponse.self)

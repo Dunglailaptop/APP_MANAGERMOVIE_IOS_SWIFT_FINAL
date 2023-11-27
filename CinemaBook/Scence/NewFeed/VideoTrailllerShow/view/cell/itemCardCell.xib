@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="370" height="660"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPk-x9-uO1">
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="660"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-Di-3YK">
                         <rect key="frame" x="0.0" y="660" width="370" height="40"/>
                         <subviews>
@@ -66,6 +70,10 @@
                 <constraint firstAttribute="trailing" secondItem="vnu-Di-3YK" secondAttribute="trailing" id="6Hd-6Z-W4T"/>
                 <constraint firstItem="IR3-EZ-XKd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="D6d-XX-Rgk"/>
                 <constraint firstAttribute="bottom" secondItem="vnu-Di-3YK" secondAttribute="bottom" id="Fa7-FD-fPu"/>
+                <constraint firstItem="vnu-Di-3YK" firstAttribute="top" secondItem="CPk-x9-uO1" secondAttribute="bottom" id="Gju-U4-Z8B"/>
+                <constraint firstAttribute="trailing" secondItem="CPk-x9-uO1" secondAttribute="trailing" id="OtQ-pG-hnE"/>
+                <constraint firstItem="CPk-x9-uO1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RbT-fh-MgR"/>
+                <constraint firstItem="CPk-x9-uO1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="V0s-oC-6cl"/>
                 <constraint firstItem="IR3-EZ-XKd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WPX-Le-nsE"/>
                 <constraint firstAttribute="trailing" secondItem="IR3-EZ-XKd" secondAttribute="trailing" id="Y5G-V3-KHp"/>
                 <constraint firstItem="vnu-Di-3YK" firstAttribute="top" secondItem="IR3-EZ-XKd" secondAttribute="bottom" id="iYv-Dp-H7x"/>
@@ -80,6 +88,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="video_player" destination="IR3-EZ-XKd" id="TzT-FE-Lna"/>
+                <outlet property="view_load_videourl" destination="CPk-x9-uO1" id="zd9-pj-Ldq"/>
             </connections>
             <point key="canvasLocation" x="39.694656488549619" y="-11.267605633802818"/>
         </collectionViewCell>
@@ -88,6 +97,9 @@
         <image name="like" width="512" height="512"/>
         <image name="save" width="512" height="512"/>
         <image name="thumbs-up" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

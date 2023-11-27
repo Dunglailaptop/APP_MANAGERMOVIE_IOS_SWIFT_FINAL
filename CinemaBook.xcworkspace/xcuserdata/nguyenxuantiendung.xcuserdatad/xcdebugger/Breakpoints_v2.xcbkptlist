@@ -2270,5 +2270,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6217468C-006B-43C5-BBC1-92C0A2D4EDE9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Manager/Management/ManagementMovie/ManagementDetailMovie/Extension/ManagementDetailMovie+Extensions.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "postUpdateWithAvatar()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6217468C-006B-43C5-BBC1-92C0A2D4EDE9 - c84569301d61ffeb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ManagementDetailMovieViewController.postUpdateWithAvatar() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementMovie/ManagementDetailMovie/Extension/ManagementDetailMovie+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+               <Location
+                  uuid = "6217468C-006B-43C5-BBC1-92C0A2D4EDE9 - c84569301d61fe25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ManagementDetailMovieViewController.postUpdateWithAvatar() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementMovie/ManagementDetailMovie/Extension/ManagementDetailMovie+Extensions.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

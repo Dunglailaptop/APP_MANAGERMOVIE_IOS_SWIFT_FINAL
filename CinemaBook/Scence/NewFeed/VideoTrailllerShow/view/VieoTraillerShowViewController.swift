@@ -57,8 +57,14 @@ extension VieoTraillerShowViewController: VerticalCardSwiperDatasource {
         }
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         if let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "itemCardCell", for: index) as? itemCardCell {
-          
-            cardCell.video_player.load(withVideoId: viewModel.dataArray.value[index].videofile)
+            if viewModel.dataArray.value[index].types == 0 {
+                cardCell.video_player.load(withVideoId: viewModel.dataArray.value[index].videofile)
+            }else {
+                cardCell.view_load_videourl.isHidden = true
+                Utils().setupvideo(url: Utils.getFullMediaLink(string: viewModel.dataArray.value[index].videofile), type: 1, view: cardCell.video_player)
+            }
+         
+         
             return cardCell
         }
         return CardCell()

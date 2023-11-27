@@ -11,6 +11,9 @@ import RxRelay
 import RxSwift
 import ObjectMapper
 import JonAlert
+import AVFoundation
+import AVKit
+import Photos
 
 extension ManagementDetailMovieViewController {
     
@@ -128,6 +131,7 @@ extension ManagementDetailMovieViewController {
         viewModel.getDetailMovie().subscribe(onNext: {
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
+                dLog(response.data)
                 if let data = Mapper<Movie>().map(JSONObject: response.data) {
                     self.viewModel.valueMovie.accept(data)
                     self.setupvalid()
@@ -146,6 +150,17 @@ extension ManagementDetailMovieViewController {
         txt_timeShow.text = String(viewModel.valueMovie.value.timeall)
         txt_dateShow.text = viewModel.valueMovie.value.yearbirthday
         txt_idmovie.text = String(viewModel.valueMovie.value.movieID)
+        dLog(viewModel.valueMovie.value.videofile)
+        if viewModel.valueMovie.value.type == 0 {
+            VIEW_SHOW_YT.isHidden = false
+            view_show_video.isHidden = true
+            self.VIEW_SHOW_YT.load(withVideoId: viewModel.valueMovie.value.videofile)
+        }else {
+            VIEW_SHOW_YT.isHidden = true
+            view_show_video.isHidden = false
+            Utils().setupvideo(url: Utils.getFullMediaLink(string: viewModel.valueMovie.value.videofile), type: 1, view: view_show_video)
+        }
+       
         image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: viewModel.valueMovie.value.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
     }
     
@@ -180,19 +195,38 @@ extension ManagementDetailMovieViewController {
     
     func postUpdateWithAvatar(){
         var medias = [Medias]()
-        var medias_request = Medias()
         var dataImage = viewModel.valueMovie.value
-        medias_request.image = imagecover[0]
-        dLog(nameImage)
+        var datavideo = viewModel.dataVideouser.value
+        if imagecover.count > 0 {
+            var medias_request = Medias()
+            medias_request.image = imagecover[0]
+            dLog(nameImage)
+            medias_request.name = nameImage[0]
+            medias_request.type = 1
+            medias.append(medias_request)
+            let connectImage = nameImage[0] + "/" + nameImage[0];
+            dataImage.poster = connectImage
+        }
+        if videocover.count > 0 {
+            var medias_request = Medias()
+            medias_request.video_path = videocover[0]
+            dLog(nameImage)
+            medias_request.name = nameVideo[0]
+            medias_request.type = 2
+            medias.append(medias_request)
+            let nameVideo = nameVideo[0] + "/" + nameVideo[0];
+              datavideo.videofile = nameVideo
+        }
+   
+      
+  
+      
+        viewModel.valueMovie.accept(dataImage)
+        viewModel.dataVideouser.accept(datavideo)
         
-        medias_request.name = nameImage[0]
-        medias.append(medias_request)
+        
         viewModel.media_request.accept(medias)
         viewModel.uploadImage()
-        let connectImage = nameImage[0] + "/" + nameImage[0];
-         dataImage.poster = connectImage
-        viewModel.valueMovie.accept(dataImage)
-     
      
         if  type_check == "CREATE" {
             createNewMovie()
@@ -421,31 +455,91 @@ extension ManagementDetailMovieViewController {
   
 }
 extension ManagementDetailMovieViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-     @objc func openPhotoLibrary() {
-           let imagePicker = UIImagePickerController()
-           imagePicker.sourceType = .photoLibrary
-           imagePicker.delegate = self
-           present(imagePicker, animated: true, completion: nil)
-       
-       }
-       
-      func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let selectedImage = info[.originalImage] as? UIImage {
-               // Lưu ảnh đã chọn vào biến imageView
-               image_poster.image = selectedImage
-               self.imagecover.append(selectedImage)
-            
-               // Lấy URL của ảnh đã chọn
-               if let imageUrl = info[.imageURL] as? URL {
-                   let imageName = imageUrl.lastPathComponent
-                   dLog("Tên ảnh: \(imageName)")
-                nameImage.append(imageName)
-               }
-           }
-           picker.dismiss(animated: true, completion: nil)
-       }
-       
-       func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-           picker.dismiss(animated: true, completion: nil)
-       }
+    @objc func openPhotoLibrary(status:Int) {
+        if status == 1 {
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.mediaTypes = ["public.image"] // Cho phép chọn cả ảnh và video
+            imagePicker.delegate = self
+            present(imagePicker, animated: true, completion: nil)
+        } else {
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.mediaTypes = ["public.movie"] // Cho phép chọn cả ảnh và video
+            imagePicker.delegate = self
+            present(imagePicker, animated: true, completion: nil)
+        }
+      
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let mediaType = info[.mediaType] as? String {
+            if mediaType == "public.image"  {
+                if let selectedImage = info[.originalImage] as? UIImage {
+                    // Xử lý ảnh đã chọn
+                    image_poster.image = selectedImage
+                    self.imagecover.append(selectedImage)
+                    
+                    // Lấy URL của ảnh đã chọn
+                    if let imageUrl = info[.imageURL] as? URL {
+                        let imageName = imageUrl.lastPathComponent
+                        dLog("Tên ảnh: \(imageName)")
+                        nameImage.append(imageName)
+                    }
+                }
+            } else if mediaType == "public.movie" {
+                if let videoURL = info[.mediaURL] as? URL {
+                    dLog(videoURL)
+                    let videoName = videoURL.lastPathComponent
+                         
+                    dLog("Tên video: \(videoName)")
+                    self.nameVideo.append(videoName)
+                    self.videocover.append(videoURL)
+                    playVideo(from: videoURL, in: self.view_show_video)
+                }
+            }
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func playVideo(from url: URL, in view: UIView) {
+          player = AVPlayer(url: url)
+          playerLayer = AVPlayerLayer(player: player)
+          playerLayer?.frame = view.bounds
+          playerLayer?.videoGravity = .resizeAspectFill
+          
+          if let playerLayer = playerLayer {
+              view.layer.addSublayer(playerLayer)
+          }
+              player?.play()
+              isPlaying = true
+      }
+    func setupCustomControls() {
+         // Create and add your custom controls here (buttons, sliders, etc.)
+         // Example: Create a custom play/pause button
+         let playPauseButton = UIButton(type: .custom)
+         playPauseButton.frame = CGRect(x: 20, y: 20, width: 100, height: 40)
+         playPauseButton.setTitle("Play", for: .normal)
+         playPauseButton.addTarget(self, action: #selector(playPauseButtonTapped), for: .touchUpInside)
+         view_show_video.addSubview(playPauseButton)
+         
+         // You can add other UI components and handle their actions
+     }
+     
+     @objc func playPauseButtonTapped() {
+         if let player = player {
+             if isPlaying {
+                 player.pause()
+                 isPlaying = false
+             } else {
+                 player.play()
+                 isPlaying = true
+             }
+         }
+     }
+
 }
