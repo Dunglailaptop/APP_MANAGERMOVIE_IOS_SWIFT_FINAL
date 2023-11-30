@@ -17,6 +17,12 @@ class PaymentFoodComboViewController: UIViewController {
     var viewModel = PaymentFoodComboViewModel()
     var router = PaymentFoodComboRouter()
    
+    @IBOutlet weak var lbl_category_reduce: UILabel!
+    
+    @IBOutlet weak var icon_check_1: UIImageView!
+    
+    @IBOutlet weak var icon_check_2: UIImageView!
+    
     @IBOutlet weak var lbl_name_cinema: UILabel!
     @IBOutlet weak var view_voucher: UIView!
     @IBOutlet weak var view_no_datat: UIView!
@@ -49,6 +55,16 @@ class PaymentFoodComboViewController: UIViewController {
          lbl_name_cinema.text = "Rạp nhận: " + namecinema
     }
     
+    @IBAction func btn_choose_order_point(_ sender: Any) {
+        icon_check_1.image = UIImage(named: "check")
+        icon_check_2.image = UIImage(named: "icon-check-disable")
+    }
+    
+    @IBAction func btn_choose_VNPAY(_ sender: Any) {
+        icon_check_1.image = UIImage(named: "icon-check-disable")
+        icon_check_2.image = UIImage(named: "check")
+    }
+    
     func getDataPaymentBillFoodCombo() {
         var data = viewModel.dataArrayFoodCombo.value
         var dataFoodCombobill = viewModel.dataArrayBillPayment.value
@@ -64,6 +80,9 @@ class PaymentFoodComboViewController: UIViewController {
             dataFoodCombobill.foodComboBills.append(dataonly)
         }
         viewModel.dataArrayBillPayment.accept(dataFoodCombobill)
+//        if viewModel.dataArrayBillPaymentHistory.value == nil {
+            viewModel.dataArrayBillPaymentHistory.accept(dataFoodCombobill)
+//        }
         dLog(viewModel.dataArrayBillPayment.value)
     }
     
@@ -112,13 +131,35 @@ extension PaymentFoodComboViewController {
            [self] (element) in
             var dataVoucher = viewModel.dataVoucher.value
             var dataAllbill = viewModel.dataArrayBillPayment.value
+        
+            var dataHistory = viewModel.dataArrayBillPaymentHistory.value
             dataVoucher.enumerated().forEach{
                 (index,value) in
                 if value.idvoucher == element.idvoucher {
                     dataVoucher[index].isCheck = value.isCheck == ACTIVE ? DEACTIVE:ACTIVE
                     if dataVoucher[index].isCheck == ACTIVE {
                         dataAllbill.idvoucher = element.idvoucher
+                        if element.price != 0 {
+                            lbl_total_vat.text = Utils.stringVietnameseFormatWithNumber(amount: dataHistory.total_price - element.price)
+                            lbl_total_final.text = Utils.stringVietnameseFormatWithNumber(amount:  dataHistory.total_price - element.price)
+                            dataAllbill.total_price = dataHistory.total_price - element.price
+                            lbl_category_reduce.text = Utils.stringVietnameseFormatWithNumber(amount: element.price)
+                        }
+                        if element.percent != 0 {
+                            var percent = element.percent // Retrieve the percentage value
+                            var percentageValue = (Double(percent) / 100) * Double(dataHistory.total_price) //
+                            var totalAfterPercentage = dataHistory.total_price - Int(percentageValue)
+                            dataAllbill.total_price = totalAfterPercentage
+                            lbl_total_vat.text = Utils.stringQuantityFormatWithNumber(amount: totalAfterPercentage)
+                            lbl_total_final.text = Utils.stringQuantityFormatWithNumber(amount: totalAfterPercentage)
+                            lbl_category_reduce.text =  String(element.percent) + "%"
+                        }
+                    }else {
+                        lbl_total_vat.text = Utils.stringQuantityFormatWithNumber(amount: dataHistory.total_price)
+                        lbl_total_final.text = Utils.stringQuantityFormatWithNumber(amount: dataHistory.total_price)
+                        lbl_category_reduce.text =  "0"
                     }
+                    
                  
                     
                 }else {

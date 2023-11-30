@@ -97,6 +97,7 @@ public struct APIEndPoint {
         static let urlSaveCacheBillVnapy = "/PaymentMomo/SaveCachePaymentBill"
         static let urlGetInfoDetialCinema = "/Cinema/getinfodetailcinema"
         static let urlNotiFaction = "/Notifaction/getNotifactionInUser"
+        static let urlUpdateInfoDetailcinema = "/Cinema/updateInfoCinema"
 }
     
 }

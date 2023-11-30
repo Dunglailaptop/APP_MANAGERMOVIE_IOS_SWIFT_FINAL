@@ -20,6 +20,7 @@ class PaymentFoodComboViewModel: BaseViewModel {
     public var dataArrayBillPayment: BehaviorRelay<PaymentFoodCombo> = BehaviorRelay(value: PaymentFoodCombo())
     public var dataArrayFoodCombo: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value : [])
     public var dataVoucher: BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
+    public var dataArrayBillPaymentHistory: BehaviorRelay<PaymentFoodCombo> = BehaviorRelay(value: PaymentFoodCombo())
     func bind(view: PaymentFoodComboViewController,router: PaymentFoodComboRouter) {
         self.view = view
         self.router = router

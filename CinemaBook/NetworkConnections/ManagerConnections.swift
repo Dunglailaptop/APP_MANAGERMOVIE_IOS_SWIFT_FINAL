@@ -88,6 +88,7 @@ enum ManagerConnections {
     case saveCacheVNPAY(bill:Bill)
     case getDetailInfoCinema(idcinema:Int)
     case getNoTiFaction(iduser:Int)
+    case getUpdateCinemaInfo(datacinema:Cinema)
 }
 
 extension ManagerConnections: TargetType {
@@ -250,6 +251,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlGetInfoDetialCinema
         case .getNoTiFaction(let iduser):
             return APIEndPoint.Name.urlNotiFaction
+        case .getUpdateCinemaInfo(let datacinema):
+            return APIEndPoint.Name.urlUpdateInfoDetailcinema
         }
     
     }
@@ -405,6 +408,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .getNoTiFaction(_):
             return .get
+        case .getUpdateCinemaInfo(_):
+            return .post
         }
 
         
@@ -582,6 +587,8 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getNoTiFaction(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getUpdateCinemaInfo(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -1006,6 +1013,15 @@ extension ManagerConnections: TargetType {
             return [
                 "iduser":iduser
             ]
+        case .getUpdateCinemaInfo(let datacinema):
+            return [
+                "idcinema": datacinema.idcinema,
+                "namecinema": datacinema.namecinema,
+                "address": datacinema.address,
+                "phone": datacinema.phone,
+                "picture": datacinema.picture,
+                "describes": datacinema.describes
+             ]
         }
        
     }
@@ -1169,6 +1185,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getNoTiFaction(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getUpdateCinemaInfo(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

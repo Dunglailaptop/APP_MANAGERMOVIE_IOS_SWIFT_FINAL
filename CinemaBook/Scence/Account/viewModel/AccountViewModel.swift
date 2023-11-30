@@ -34,6 +34,13 @@ class AccountViewModel{
     func makeToForgotViewController() {
         router?.navigaitionToForgotViewController()
     }
+    func makeToSettingBusiness() {
+        router?.navigationToSettingBusiness()
+    }
+    
+    func makeToForgotPassword() {
+        router?.navigationToForgotPassword()
+    }
     
 }
 

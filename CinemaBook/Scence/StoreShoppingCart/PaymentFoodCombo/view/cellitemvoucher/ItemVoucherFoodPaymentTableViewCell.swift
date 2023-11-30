@@ -29,6 +29,7 @@ class ItemVoucherFoodPaymentTableViewCell: UITableViewCell {
         didSet{
             lbl_name_voucher.text = data?.namevoucher
           var total_category =  data!.price > 0 ? String(data!.price): String(data!.percent) + "%"
+            poster_voucher.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
             lbl_reduce_voucher.text = "Loại giảm giá: " + total_category
             if data!.isCheck == ACTIVE {
                 icon_check.image = UIImage(named: "check")

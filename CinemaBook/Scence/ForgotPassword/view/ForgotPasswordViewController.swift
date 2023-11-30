@@ -24,7 +24,7 @@ class ForgotPasswordViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
         // Do any additional setup after loading the view.
        checkvalid()
-        
+        txt_username.text = ManageCacheObject.getCurrentUserInfo().username
     }
 
 

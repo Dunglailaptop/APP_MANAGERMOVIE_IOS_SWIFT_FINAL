@@ -25,6 +25,7 @@ struct Users: Mappable {
    var idcinema = 1
     var statuss = 0
     var keysearch = ""
+    var username = ""
     init() {
         
     }
@@ -45,6 +46,7 @@ struct Users: Mappable {
         gender <- map["gender"]
         address <- map["address"]
         statuss <- map["statuss"]
+        username <- map["username"]
     }
     
 }

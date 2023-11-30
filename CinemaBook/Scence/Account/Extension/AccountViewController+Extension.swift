@@ -33,7 +33,7 @@ extension AccountViewController {
                 case 0:
             
                         let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemAccountSettingMangerTableViewCell", for: indexPath) as! ItemAccountSettingMangerTableViewCell
-                        
+                    cell.viewModel = viewModel
                         cell.selectionStyle = .none
                         return cell
                   

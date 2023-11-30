@@ -49,6 +49,9 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="btn_makeToSettingBusiness:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zbw-3F-n1q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,15 +91,28 @@
                                             <constraint firstAttribute="height" constant="22" id="r9q-3V-6LZ"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DA9-e8-OCB">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="59.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="btn_makeToForgotPassword:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3KX-IO-Hm3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xE6-Rs-NbE" secondAttribute="trailing" constant="20" id="7PA-yE-n6V"/>
                                     <constraint firstItem="5Z0-3N-rbm" firstAttribute="leading" secondItem="L0d-Lz-Jlx" secondAttribute="leading" constant="20" id="9pg-o3-BXa"/>
+                                    <constraint firstAttribute="trailing" secondItem="DA9-e8-OCB" secondAttribute="trailing" id="KTN-cT-Scw"/>
                                     <constraint firstItem="xE6-Rs-NbE" firstAttribute="centerY" secondItem="L0d-Lz-Jlx" secondAttribute="centerY" id="QR0-my-OWR"/>
                                     <constraint firstItem="5Z0-3N-rbm" firstAttribute="centerY" secondItem="L0d-Lz-Jlx" secondAttribute="centerY" id="g8O-Qx-cdc"/>
                                     <constraint firstItem="kzP-JQ-PBz" firstAttribute="centerY" secondItem="L0d-Lz-Jlx" secondAttribute="centerY" id="gvz-IL-53f"/>
+                                    <constraint firstAttribute="bottom" secondItem="DA9-e8-OCB" secondAttribute="bottom" id="ioJ-Pt-HsI"/>
+                                    <constraint firstItem="DA9-e8-OCB" firstAttribute="leading" secondItem="L0d-Lz-Jlx" secondAttribute="leading" id="kFy-SB-KZq"/>
                                     <constraint firstItem="kzP-JQ-PBz" firstAttribute="leading" secondItem="5Z0-3N-rbm" secondAttribute="trailing" constant="20" id="pKE-LD-S2n"/>
+                                    <constraint firstItem="DA9-e8-OCB" firstAttribute="top" secondItem="L0d-Lz-Jlx" secondAttribute="top" id="z2M-L6-qgH"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -111,7 +127,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="86" y="-11"/>
+            <point key="canvasLocation" x="85.496183206106863" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -14,6 +14,9 @@
                 <outlet property="height_cell" destination="1KP-V5-FW5" id="kEl-x6-TzC"/>
                 <outlet property="height_scroll" destination="ghl-Pb-pwq" id="guB-m2-9dK"/>
                 <outlet property="height_voucher" destination="BgT-VC-sVE" id="3Nc-4M-I0L"/>
+                <outlet property="icon_check_1" destination="ska-IU-7k4" id="Jgj-Po-lQL"/>
+                <outlet property="icon_check_2" destination="dlc-wL-e4x" id="YgO-dl-vwT"/>
+                <outlet property="lbl_category_reduce" destination="ulQ-CC-6X4" id="rOv-Tc-Igb"/>
                 <outlet property="lbl_name_cinema" destination="ch0-do-rUE" id="wO0-JV-AuI"/>
                 <outlet property="lbl_total_final" destination="ysF-I4-HGS" id="DuX-Le-KZD"/>
                 <outlet property="lbl_total_vat" destination="8Se-uc-Eyi" id="uqq-DH-jGb"/>
@@ -262,28 +265,31 @@
                                                     <rect key="frame" x="0.0" y="50" width="393" height="150"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWL-y0-cE2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cost-point" translatesAutoresizingMaskIntoConstraints="NO" id="Wki-VJ-HZ3">
-                                                                    <rect key="frame" x="20" y="10" width="30" height="30"/>
+                                                                    <rect key="frame" x="20" y="22.666666666666629" width="30" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="3LX-sl-tki"/>
                                                                         <constraint firstAttribute="width" constant="30" id="I2q-R5-YzQ"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh toán bằng điểm tích lũy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfO-DV-rM1">
-                                                                    <rect key="frame" x="70" y="14.999999999999998" width="230" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="70" y="27.333333333333371" width="230" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu4-Dp-Y1k">
-                                                                    <rect key="frame" x="50" y="0.0" width="343" height="50"/>
+                                                                    <rect key="frame" x="50" y="0.0" width="343" height="75"/>
                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="btn_choose_order_point:" destination="-1" eventType="touchUpInside" id="uFn-Uo-eAj"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-check-disable" translatesAutoresizingMaskIntoConstraints="NO" id="ska-IU-7k4">
-                                                                    <rect key="frame" x="351" y="14" width="22" height="22"/>
+                                                                    <rect key="frame" x="351" y="26.666666666666629" width="22" height="22"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="22" id="f9P-Sb-yaU"/>
                                                                         <constraint firstAttribute="width" constant="22" id="sql-4g-iUb"/>
@@ -305,28 +311,31 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NG-Gx-Feh">
-                                                            <rect key="frame" x="0.0" y="50" width="393" height="50"/>
+                                                            <rect key="frame" x="0.0" y="75" width="393" height="75"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank" translatesAutoresizingMaskIntoConstraints="NO" id="54z-jj-Nom">
-                                                                    <rect key="frame" x="20" y="10" width="30" height="30"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vnpay" translatesAutoresizingMaskIntoConstraints="NO" id="54z-jj-Nom">
+                                                                    <rect key="frame" x="20" y="22.666666666666629" width="30" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="LHr-QJ-K6X"/>
                                                                         <constraint firstAttribute="height" constant="30" id="htp-a0-a7M"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATM (Nội địa)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-jY-Y9Y">
-                                                                    <rect key="frame" x="70" y="14.999999999999998" width="104" height="20.333333333333329"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THANH TOÁN VNPAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-jY-Y9Y">
+                                                                    <rect key="frame" x="70.000000000000014" y="27.333333333333371" width="165.33333333333337" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w8-Nl-bgw">
-                                                                    <rect key="frame" x="50" y="0.0" width="343" height="50"/>
+                                                                    <rect key="frame" x="50" y="0.0" width="343" height="75"/>
                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <state key="normal" title="Button"/>
+                                                                    <connections>
+                                                                        <action selector="btn_choose_VNPAY:" destination="-1" eventType="touchUpInside" id="XQG-zm-GPx"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-check-disable" translatesAutoresizingMaskIntoConstraints="NO" id="dlc-wL-e4x">
-                                                                    <rect key="frame" x="351" y="14" width="22" height="22"/>
+                                                                    <rect key="frame" x="351" y="26.666666666666629" width="22" height="22"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="22" id="fTb-Ld-2Rn"/>
                                                                         <constraint firstAttribute="width" constant="22" id="ydr-qQ-VzW"/>
@@ -345,49 +354,6 @@
                                                                 <constraint firstItem="0U9-jY-Y9Y" firstAttribute="leading" secondItem="54z-jj-Nom" secondAttribute="trailing" constant="20" id="pC0-JI-z2k"/>
                                                                 <constraint firstAttribute="trailing" secondItem="5w8-Nl-bgw" secondAttribute="trailing" id="xkF-Xy-y0t"/>
                                                                 <constraint firstItem="5w8-Nl-bgw" firstAttribute="top" secondItem="6NG-Gx-Feh" secondAttribute="top" id="yRK-gI-8tN"/>
-                                                            </constraints>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjF-Bb-jIz">
-                                                            <rect key="frame" x="0.0" y="100" width="393" height="50"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="momo-icon" translatesAutoresizingMaskIntoConstraints="NO" id="URG-G4-Rjn">
-                                                                    <rect key="frame" x="20" y="10" width="30" height="30"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="30" id="0aO-Yn-OUc"/>
-                                                                        <constraint firstAttribute="height" constant="30" id="GQU-rY-Oev"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh toán MOMO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb4-cz-22b">
-                                                                    <rect key="frame" x="69.999999999999986" y="14.999999999999998" width="144.66666666666663" height="20.333333333333329"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rO-mf-ZGJ">
-                                                                    <rect key="frame" x="50" y="0.0" width="343" height="50"/>
-                                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                </button>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-check-disable" translatesAutoresizingMaskIntoConstraints="NO" id="qtr-aC-bm3">
-                                                                    <rect key="frame" x="351" y="14" width="22" height="22"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="22" id="d2y-sQ-K5w"/>
-                                                                        <constraint firstAttribute="height" constant="22" id="naJ-uY-b6r"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                            </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstItem="URG-G4-Rjn" firstAttribute="leading" secondItem="tjF-Bb-jIz" secondAttribute="leading" constant="20" id="C45-Kc-Chq"/>
-                                                                <constraint firstItem="Mb4-cz-22b" firstAttribute="leading" secondItem="URG-G4-Rjn" secondAttribute="trailing" constant="20" id="Df0-q9-GSV"/>
-                                                                <constraint firstItem="URG-G4-Rjn" firstAttribute="centerY" secondItem="tjF-Bb-jIz" secondAttribute="centerY" id="MzC-FN-Bjd"/>
-                                                                <constraint firstItem="Mb4-cz-22b" firstAttribute="centerY" secondItem="tjF-Bb-jIz" secondAttribute="centerY" id="Orh-8N-eVM"/>
-                                                                <constraint firstItem="6rO-mf-ZGJ" firstAttribute="leading" secondItem="URG-G4-Rjn" secondAttribute="trailing" id="S4y-ap-VQP"/>
-                                                                <constraint firstItem="qtr-aC-bm3" firstAttribute="centerY" secondItem="tjF-Bb-jIz" secondAttribute="centerY" id="Sp6-sY-PGH"/>
-                                                                <constraint firstAttribute="bottom" secondItem="6rO-mf-ZGJ" secondAttribute="bottom" id="X4Q-zZ-Wl0"/>
-                                                                <constraint firstAttribute="trailing" secondItem="6rO-mf-ZGJ" secondAttribute="trailing" id="dEC-0x-nVf"/>
-                                                                <constraint firstAttribute="trailing" secondItem="qtr-aC-bm3" secondAttribute="trailing" constant="20" id="j7S-uN-B5W"/>
-                                                                <constraint firstItem="6rO-mf-ZGJ" firstAttribute="top" secondItem="tjF-Bb-jIz" secondAttribute="top" id="qjM-N5-3jz"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -522,13 +488,12 @@
         </view>
     </objects>
     <resources>
-        <image name="bank" width="512" height="512"/>
         <image name="cost-point" width="512" height="512"/>
         <image name="icon-back-blue" width="8.6666669845581055" height="17.333333969116211"/>
         <image name="icon-check-disable" width="20" height="20"/>
         <image name="img-no-data" width="220" height="170"/>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
-        <image name="momo-icon" width="1024" height="1024"/>
+        <image name="vnpay" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

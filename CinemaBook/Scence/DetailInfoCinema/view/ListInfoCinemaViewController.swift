@@ -40,44 +40,6 @@ class ListInfoCinemaViewController: UIViewController {
         viewModel.bind(view: self, router: router)
         GMSServices.provideAPIKey("AIzaSyAG3SSMXPUldPt4ogGe_lwZIFbqDF7KM6A")
         GMSPlacesClient.provideAPIKey("AIzaSyCKPMo2ytoB9Hxp687JTjDY5dv9r_HUouA")
-//        placesClient = GMSPlacesClient.shared()
-//
-//            // Khởi tạo bản đồ Google Maps
-//            let camera = GMSCameraPosition.camera(withLatitude: 37.7749, longitude: -122.4194, zoom: 12.0)
-//            let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-//            mapView.isMyLocationEnabled = true
-//            mapView.settings.myLocationButton = true
-//
-//            // Thêm bản đồ vào view hierarchy
-//            view = mapView
-//
-//            // Tạo điểm đánh dấu trên bản đồ
-//            let marker = GMSMarker()
-//            marker.position = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
-//            marker.title = "San Francisco"
-//            marker.snippet = "California, USA"
-//            marker.map = mapView
-//
-//            // Gọi hàm tìm kiếm vị trí
-//            searchPlaces()
-        
-        // Khởi tạo CLLocationManager
-//            locationManager.delegate = self
-//            locationManager.requestWhenInUseAuthorization()
-//            locationManager.startUpdatingLocation()
-//
-//            // Khởi tạo bản đồ Google Maps
-//            let camera = GMSCameraPosition.camera(withLatitude: 10.7765713, longitude: 106.7012093, zoom: 12.0)
-//            mapView2 = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-//            mapView2.isMyLocationEnabled = true
-//            mapView2.settings.myLocationButton = true
-//            view = mapView2
-      
-      
-//       moveCameraToLocation(latitude:  10.8305255, longitude:  106.6360984)
-        
-        
-
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
