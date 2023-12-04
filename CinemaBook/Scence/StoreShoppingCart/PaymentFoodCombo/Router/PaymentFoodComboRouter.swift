@@ -28,4 +28,11 @@ class PaymentFoodComboRouter: NSObject {
     func makePopToViewController() {
         sourceView?.navigationController?.popViewController(animated: true)
     }
+    func navigateToPolicyViewController(title_header:String, link_website:String,idbilll:Int){
+        let loadWebLinkViewController = LoadWebLinkRouter().viewController as! LoadWebLinkViewController
+        loadWebLinkViewController.idbill = idbilll
+        loadWebLinkViewController.title_header = title_header
+        loadWebLinkViewController.link = link_website
+        sourceView?.navigationController?.pushViewController(loadWebLinkViewController, animated: true)
+    }
 }

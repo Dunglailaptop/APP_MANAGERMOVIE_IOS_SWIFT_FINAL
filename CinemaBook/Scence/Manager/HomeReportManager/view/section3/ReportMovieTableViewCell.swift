@@ -40,7 +40,7 @@ class ReportMovieTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         btnArray = [btn_today, btn_yesterday, btn_this_weak, btn_this_month, btn_last_month, btn_three_month, btn_this_year, btn_last_year, btn_three_year, btn_all]
-               changeBgBtn(btn: btn_today)
+               changeBgBtn(btn: btn_all)
         for btn in self.btnArray{
             btn.rx.tap.asDriver().drive(onNext: { [weak self] in
                 self?.changeBgBtn(btn: btn)
@@ -65,7 +65,7 @@ class ReportMovieTableViewCell: UITableViewCell {
     
     var viewModel: HomeReportviewModel? = nil {
         didSet {
-           
+           getReportMovie()
         }
     }
     
@@ -149,12 +149,12 @@ extension ReportMovieTableViewCell {
         pieChartDataSet.selectionShift = 5
         pieChartDataSet.xValuePosition = .insideSlice
         pieChartDataSet.yValuePosition = .insideSlice
-        pieChartDataSet.valueTextColor = UIColor.BLACK_COLOR_ALPHA()
+        pieChartDataSet.valueTextColor = ColorUtils.blackTransparent()
         pieChartDataSet.valueLineWidth = 0.5
         pieChartDataSet.valueLinePart1OffsetPercentage = 0.8
         pieChartDataSet.valueLinePart2Length = 0.2
-        pieChartDataSet.drawValuesEnabled = false
-        pieChartDataSet.drawIconsEnabled = false
+        pieChartDataSet.drawValuesEnabled = true
+        pieChartDataSet.drawIconsEnabled = true
 
 
         let noZeroFormatter = NumberFormatter()

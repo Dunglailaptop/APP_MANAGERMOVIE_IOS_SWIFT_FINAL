@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BÁO CÁO TỔNG QUAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h95-gC-4pc">
-                                <rect key="frame" x="50" y="10.333333333333334" width="173" height="19.333333333333329"/>
+                                <rect key="frame" x="58" y="0.0" width="173" height="19.333333333333332"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,20 +59,28 @@
                                     <action selector="btn_makePopToReportTicketAll:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cdS-4B-aNW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1d-6m-rsX">
+                                <rect key="frame" x="58" y="19.333333333333336" width="11.333333333333329" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="L7D-9o-2Mn" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="0BY-tv-svK"/>
                             <constraint firstAttribute="trailing" secondItem="dUy-J6-uuB" secondAttribute="trailing" id="0ES-FO-elb"/>
+                            <constraint firstItem="h95-gC-4pc" firstAttribute="top" secondItem="Lkn-9n-o0g" secondAttribute="top" id="5uh-m4-X55"/>
                             <constraint firstItem="M1F-UX-Stm" firstAttribute="leading" secondItem="Lkn-9n-o0g" secondAttribute="leading" constant="20" id="BhO-qP-d8m"/>
                             <constraint firstAttribute="trailing" secondItem="L7D-9o-2Mn" secondAttribute="trailing" constant="20" id="Crf-7t-KEF"/>
                             <constraint firstItem="j1f-zh-32M" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="IOO-SM-uoE"/>
                             <constraint firstItem="M1F-UX-Stm" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="MOv-04-kwr"/>
-                            <constraint firstItem="h95-gC-4pc" firstAttribute="centerY" secondItem="Lkn-9n-o0g" secondAttribute="centerY" id="UbL-A8-wHT"/>
+                            <constraint firstItem="t1d-6m-rsX" firstAttribute="leading" secondItem="M1F-UX-Stm" secondAttribute="trailing" constant="8" id="Vl5-k0-Ttr"/>
                             <constraint firstItem="L7D-9o-2Mn" firstAttribute="leading" secondItem="j1f-zh-32M" secondAttribute="trailing" constant="4" id="dVn-76-v7v"/>
                             <constraint firstItem="dUy-J6-uuB" firstAttribute="top" secondItem="Lkn-9n-o0g" secondAttribute="top" id="geB-b6-qGT"/>
                             <constraint firstAttribute="bottom" secondItem="dUy-J6-uuB" secondAttribute="bottom" id="jqb-Nm-cLf"/>
-                            <constraint firstItem="h95-gC-4pc" firstAttribute="leading" secondItem="M1F-UX-Stm" secondAttribute="trailing" id="qIQ-gZ-bmi"/>
+                            <constraint firstItem="h95-gC-4pc" firstAttribute="leading" secondItem="M1F-UX-Stm" secondAttribute="trailing" constant="8" id="nIY-Lp-V8z"/>
+                            <constraint firstItem="t1d-6m-rsX" firstAttribute="top" secondItem="h95-gC-4pc" secondAttribute="bottom" id="pcL-M0-N0c"/>
                             <constraint firstAttribute="height" constant="40" id="rzC-H7-snP"/>
                         </constraints>
                     </view>
@@ -363,8 +371,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P46-oz-4Dt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="22.666666666666668"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán vé:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-1F-kcp">
-                                        <rect key="frame" x="47.000000000000007" y="4.3333333333333153" width="65.666666666666686" height="14.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán vé hoàn tất:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-1F-kcp">
+                                        <rect key="frame" x="47.000000000000007" y="4.3333333333333153" width="118.66666666666669" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -402,8 +410,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-Wp-vOo">
                                 <rect key="frame" x="0.0" y="23.666666666666686" width="320" height="23"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán vé chờ nhận:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpd-ct-CQe">
-                                        <rect key="frame" x="47.000000000000007" y="4.3333333333333153" width="123.66666666666669" height="14.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán vé không thanh toán:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpd-ct-CQe">
+                                        <rect key="frame" x="47.000000000000014" y="4.3333333333333153" width="174.33333333333337" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -441,8 +449,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nre-zh-QIx">
                                 <rect key="frame" x="0.0" y="47.666666666666686" width="320" height="22.666666666666671"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán vé:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18S-Vd-zot">
-                                        <rect key="frame" x="47.000000000000007" y="4.3333333333333153" width="65.666666666666686" height="14.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán món ăn:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18S-Vd-zot">
+                                        <rect key="frame" x="47.000000000000007" y="4.3333333333333153" width="95.666666666666686" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -480,8 +488,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qB9-Ji-LzQ">
                                 <rect key="frame" x="0.0" y="71.333333333333314" width="320" height="23"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán vé:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KL-gM-7jF">
-                                        <rect key="frame" x="47.000000000000007" y="4.3333333333333721" width="65.666666666666686" height="14.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán món không thanh toán:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KL-gM-7jF">
+                                        <rect key="frame" x="47.000000000000014" y="4.3333333333333721" width="186.33333333333337" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -519,8 +527,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJW-PL-N1N">
                                 <rect key="frame" x="0.0" y="95.333333333333314" width="320" height="22.666666666666671"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán vé:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G84-Io-xj5">
-                                        <rect key="frame" x="47.000000000000007" y="4.0000000000000009" width="65.666666666666686" height="14.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Bán món ăn kèm Bill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G84-Io-xj5">
+                                        <rect key="frame" x="47" y="4.0000000000000009" width="146" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -588,12 +596,18 @@
                 <outlet property="btn_three_year" destination="cEz-nV-58G" id="3Ot-2y-cfk"/>
                 <outlet property="btn_today" destination="fVV-1M-m9I" id="oav-SW-fGy"/>
                 <outlet property="btn_yesterday" destination="I0R-Pi-tkt" id="RKH-03-dch"/>
+                <outlet property="lbl_number_total" destination="t1d-6m-rsX" id="CJL-17-8O3"/>
                 <outlet property="lbl_total_bill" destination="6Z7-qo-fEg" id="ZYo-qo-NN2"/>
                 <outlet property="lbl_total_bill_wait" destination="fba-zi-jqm" id="zVO-44-VlD"/>
                 <outlet property="lbl_total_food" destination="gfc-dl-4Y8" id="F4u-6F-qD3"/>
                 <outlet property="lbl_total_food_wait" destination="ZZb-KS-zhB" id="9LK-4a-9e5"/>
                 <outlet property="lbl_total_foodwithbill" destination="USo-mk-1Yl" id="rV9-4H-8Ep"/>
                 <outlet property="view_bar_chart" destination="fvL-Rx-1jq" id="yVO-07-nLJ"/>
+                <outlet property="view_color_bill_food" destination="f5f-jf-7EY" id="fh6-9s-23M"/>
+                <outlet property="view_color_bill_food_notpay" destination="m86-6b-QPn" id="scE-IP-OD9"/>
+                <outlet property="view_color_bill_foods_with_bill" destination="xgt-E6-5Kh" id="cI2-gW-LAf"/>
+                <outlet property="view_color_bill_ticket" destination="l0N-wm-5QF" id="cmJ-PI-3DF"/>
+                <outlet property="view_color_bill_ticket_notpay" destination="rG3-ng-QU5" id="gL9-4U-rg2"/>
                 <outlet property="view_no_data" destination="eMg-Kj-NSO" id="D9h-Us-OLq"/>
             </connections>
             <point key="canvasLocation" x="-18.320610687022899" y="-12.67605633802817"/>

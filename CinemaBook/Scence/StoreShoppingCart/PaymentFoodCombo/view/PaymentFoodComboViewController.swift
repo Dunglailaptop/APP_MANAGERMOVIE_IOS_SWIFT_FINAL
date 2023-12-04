@@ -37,6 +37,7 @@ class PaymentFoodComboViewController: UIViewController {
     var idcinema = 0
     var dateorder = ""
     var namecinema = ""
+    var checkcategoryPay = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
@@ -47,6 +48,18 @@ class PaymentFoodComboViewController: UIViewController {
         bindingtablevoucher()
         setup()
         getDataPaymentBillFoodCombo()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("idbillcheckPaymentVNPAY"), object: nil)
+
+    }
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any] {
+                // Access the loginResponse dictionary here
+                if let reportType = userInfo["userInfo"] as? [String: Any] {
+                    let reportTypeValue = reportType["Report_type"] as? Int ?? 0
+                
+                    checkIdbill()
+                }
+            }
     }
  
     override func viewWillAppear(_ animated: Bool) {
@@ -56,11 +69,13 @@ class PaymentFoodComboViewController: UIViewController {
     }
     
     @IBAction func btn_choose_order_point(_ sender: Any) {
+        checkcategoryPay = 0
         icon_check_1.image = UIImage(named: "check")
         icon_check_2.image = UIImage(named: "icon-check-disable")
     }
     
     @IBAction func btn_choose_VNPAY(_ sender: Any) {
+        checkcategoryPay = 1
         icon_check_1.image = UIImage(named: "icon-check-disable")
         icon_check_2.image = UIImage(named: "check")
     }
@@ -96,7 +111,7 @@ class PaymentFoodComboViewController: UIViewController {
     }
     
     @IBAction func btn_paymentFoodCombo(_ sender: Any) {
-       paymentBillFoodCombo()
+        checkcategoryPay == 0 ?  paymentBillFoodCombo() : saveCacheBillFoodCombo()
         
     }
     

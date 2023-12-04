@@ -21,8 +21,8 @@ class TimeShowViewModel:BaseViewModel {
     public var listCinemaWithInterest: BehaviorRelay<[ModelinterestMovie]> = BehaviorRelay(value: [])
     public var cinemaWithInterest: BehaviorRelay<ModelinterestMovie> = BehaviorRelay(value: ModelinterestMovie())
     public var heightforcell: BehaviorRelay<Int> = BehaviorRelay(value: 80)
-    public var pagation: BehaviorRelay<(date:String,idmovie:Int)> = BehaviorRelay(value: (date: Utils().convertFormartDateyearMMdd(date: Date()) ,idmovie:1))
-      
+    public var pagation: BehaviorRelay<(date:String,idmovie:Int,idroom:Int)> = BehaviorRelay(value: (date: Utils().convertFormartDateyearMMdd(date: Date()) ,idmovie:1,idroom:0))
+    public var idcinema: BehaviorRelay<Int> = BehaviorRelay(value: 0)
       func bind(view: TimeShowViewController, router: TimeShowRouter)
       {
           self.view = view
@@ -39,7 +39,7 @@ class TimeShowViewModel:BaseViewModel {
 }
 extension TimeShowViewModel {
       func getInterestMovie() -> Observable<APIResponse> {
-        return appServiceProvider.rx.request(.getListInterestMovie(dateshow: pagation.value.date, idmovie: pagation.value.idmovie))
+          return appServiceProvider.rx.request(.getListInterestMovie(dateshow: pagation.value.date, idmovie: pagation.value.idmovie))
                  .filterSuccessfulStatusCodes()
                  .mapJSON().asObservable()
                  .showAPIErrorToast()
@@ -52,4 +52,18 @@ extension TimeShowViewModel {
                     .showAPIErrorToast()
                     .mapObject(type: APIResponse.self)
             }
+    func getInterestMovieRoom() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getlistinterestMovieRoom(date: pagation.value.date, idroom: pagation.value.idroom))
+               .filterSuccessfulStatusCodes()
+               .mapJSON().asObservable()
+               .showAPIErrorToast()
+               .mapObject(type: APIResponse.self)
+       }
+  func getListMovieRoom() -> Observable<APIResponse> {
+      return appServiceProvider.rx.request(.getlistinterestwithroom(date: pagation.value.date, idroom: pagation.value.idroom))
+                  .filterSuccessfulStatusCodes()
+                  .mapJSON().asObservable()
+                  .showAPIErrorToast()
+                  .mapObject(type: APIResponse.self)
+          }
 }

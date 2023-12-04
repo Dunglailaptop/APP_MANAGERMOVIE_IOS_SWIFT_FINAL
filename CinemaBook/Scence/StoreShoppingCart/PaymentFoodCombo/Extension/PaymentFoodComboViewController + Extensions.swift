@@ -28,6 +28,43 @@ extension PaymentFoodComboViewController {
         })
     }
     
+    func saveCacheBillFoodCombo() {
+        viewModel.saveCacheBillFoodCombo().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                self.createLinkVNPAY()
+            }else
+            {
+                JonAlert.showError(message: "Có lỗi xảy ra trong qúa trình kết nối")
+            }
+        })
+    }
+    
+    func createLinkVNPAY() {
+        viewModel.createLinkVNPAY().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue
+            {
+                if let data = Mapper<PaymentVNpay>().map(JSONObject: response.data) {
+                    self.viewModel.title_header.accept("THANH TOÁN HOÁ ĐƠN BÁN MÓN ĂN")
+                    self.viewModel.link_website.accept(data.urlpayment)
+                    self.viewModel.makePolicyViewController()
+                }
+            }
+        })
+    }
+    
+    func checkIdbill() {
+        viewModel.checkIdbillFoodCombo().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                JonAlert.showSuccess(message: response.message ?? "Có lỗi")
+            }else {
+                JonAlert.showError(message: response.message ?? "có lỗi")
+            }
+        })
+    }
+    
     func paymentBillFoodCombo() {
         viewModel.PaymentBillFoodCombo().subscribe(onNext: {
             (response) in

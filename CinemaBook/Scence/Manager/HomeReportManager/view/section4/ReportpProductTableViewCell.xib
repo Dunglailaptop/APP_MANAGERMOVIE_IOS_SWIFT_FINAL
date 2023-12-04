@@ -379,7 +379,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qx1-QY-zaR">
                         <rect key="frame" x="0.0" y="120" width="320" height="280"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-PH-nt3" customClass="BarChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-PH-nt3" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Kb-JO-gOk">
@@ -442,7 +442,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <connections>
-                <outlet property="bar_chart" destination="hHI-PH-nt3" id="bEn-ze-VYJ"/>
                 <outlet property="btn_all" destination="Kmv-Qx-jMr" id="NQR-Ed-8Pp"/>
                 <outlet property="btn_last_month" destination="chG-8F-n4y" id="Gm1-jC-wvs"/>
                 <outlet property="btn_last_year" destination="pL8-T1-uXD" id="Fji-qd-8R4"/>
@@ -454,6 +453,7 @@
                 <outlet property="btn_today" destination="Jun-kI-7rB" id="b75-6R-BAw"/>
                 <outlet property="btn_yesterday" destination="hZl-MT-j63" id="PkS-Wo-uBL"/>
                 <outlet property="lbl_total_billfood" destination="Go7-Ws-dcf" id="v7U-zi-MBX"/>
+                <outlet property="linechart" destination="hHI-PH-nt3" id="ekw-c7-zkN"/>
                 <outlet property="view_no_daata" destination="9Kb-JO-gOk" id="99U-7q-IDA"/>
             </connections>
             <point key="canvasLocation" x="56.488549618320612" y="-11.267605633802818"/>

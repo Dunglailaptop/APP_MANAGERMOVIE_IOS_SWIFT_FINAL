@@ -21,6 +21,7 @@ class TimeShowViewController: BaseViewController {
     var viewModel = TimeShowViewModel()
   var router = TimeShowRouter()
     var idmovie = 0
+    var idroom = 0
     var namemovie = ""
     var check = false
     @IBOutlet weak var tableView: UITableView!
@@ -50,9 +51,17 @@ class TimeShowViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var data = viewModel.pagation.value
-        data.idmovie = idmovie
-        viewModel.pagation.accept(data)
-         getListInterestCinema()
+        if idroom == 0 {
+            data.idmovie = idmovie
+            viewModel.pagation.accept(data)
+            getListInterestCinema()
+        } else {
+            data.idroom = idroom
+            viewModel.pagation.accept(data)
+            getListInterestRoom()
+        }
+       
+       
           
     }
 

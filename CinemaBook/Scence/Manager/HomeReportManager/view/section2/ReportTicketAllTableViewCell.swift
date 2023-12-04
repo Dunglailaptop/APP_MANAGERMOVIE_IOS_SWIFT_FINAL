@@ -43,10 +43,23 @@ class ReportTicketAllTableViewCell: UITableViewCell {
     @IBOutlet weak var lbl_total_foodwithbill: UILabel!
     @IBOutlet weak var lbl_total_food: UILabel!
     
+    
+    @IBOutlet weak var lbl_number_total: UILabel!
+    //color
+    
+    @IBOutlet weak var view_color_bill_ticket: UIView!
+    
+    @IBOutlet weak var view_color_bill_food: UIView!
+    @IBOutlet weak var view_color_bill_ticket_notpay: UIView!
+    
+    @IBOutlet weak var view_color_bill_foods_with_bill: UIView!
+    @IBOutlet weak var view_color_bill_food_notpay: UIView!
+    //end
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         btnArray = [btn_today, btn_yesterday, btn_this_weak, btn_this_month, btn_last_month, btn_three_month, btn_this_year, btn_last_year, btn_three_year, btn_all]
-               changeBgBtn(btn: btn_today)
+               changeBgBtn(btn: btn_all)
         for btn in self.btnArray{
             btn.rx.tap.asDriver().drive(onNext: { [weak self] in
                 self?.changeBgBtn(btn: btn)
@@ -90,6 +103,8 @@ extension ReportTicketAllTableViewCell {
                     self.lbl_total_bill_wait.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalbillwait)
                     self.lbl_total_foodwithbill.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalfoodwithbill)
                     self.lbl_total_food_wait.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalfoodwait)
+                    var total_data = data.totalbill + data.totalbillwait + data.totalfoodwithbill + data.totalfood + data.totalfoodwait
+                    self.lbl_number_total.text = Utils.stringVietnameseFormatWithNumber(amount: total_data)
                 }
             }
         })
@@ -211,21 +226,26 @@ extension ReportTicketAllTableViewCell: AxisValueFormatter {
 
 
 
-        let importDataSet = BarChartDataSet(entries: v1, label: "HD bán vé hoàn tất")
+        let importDataSet = BarChartDataSet(entries: v1, label: "HD bán vé")
         importDataSet.setColor(ColorUtils.blue_first())
 
-        let exportDataSet = BarChartDataSet(entries: v2, label: "HD bán Combo hoàn tất")
+        let exportDataSet = BarChartDataSet(entries: v2, label: "HD bán Combo")
         exportDataSet.setColor(ColorUtils.green_export())
 
-        let returnDataSet = BarChartDataSet(entries: v3, label: "HD món combo bán kèm")
+        let returnDataSet = BarChartDataSet(entries: v3, label: "HD món Combo bán kèm theo Bill")
         returnDataSet.setColor(ColorUtils.orange_now())
 
-        let value4 = BarChartDataSet(entries: v4, label: "HD bán vé chờ")
-        exportDataSet.setColor(ColorUtils.green_export())
+        let value4 = BarChartDataSet(entries: v4, label: "HD bán vé không thanh toán")
+        exportDataSet.setColor(ColorUtils.yellow())
 
-        let value5 = BarChartDataSet(entries: v5, label: "HD combo chờ")
-        returnDataSet.setColor(ColorUtils.blueButton())
-       
+        let value5 = BarChartDataSet(entries: v5, label: "HD Bán Combo không thanh toán")
+        returnDataSet.setColor(ColorUtils.yellow())
+       //color
+        view_color_bill_ticket.backgroundColor = ColorUtils.blue_first()
+        view_color_bill_ticket_notpay.backgroundColor = ColorUtils.dark_yellow()
+        view_color_bill_food.backgroundColor = ColorUtils.green_export()
+        view_color_bill_food_notpay.backgroundColor = ColorUtils.yellow()
+        view_color_bill_foods_with_bill.backgroundColor = ColorUtils.orange_now()
 
 
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:x_label)

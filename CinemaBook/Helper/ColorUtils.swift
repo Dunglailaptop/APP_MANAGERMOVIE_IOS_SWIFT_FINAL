@@ -30,6 +30,10 @@ class ColorUtils{
             alpha: CGFloat(1.0)
         )
     }
+  
+    static func color_chartline()->UIColor{
+        return hexStringToUIColor(hex: "#1C64F2")
+    }
     static func red_400()->UIColor{
         return hexStringToUIColor(hex: "#F2244A")
     }

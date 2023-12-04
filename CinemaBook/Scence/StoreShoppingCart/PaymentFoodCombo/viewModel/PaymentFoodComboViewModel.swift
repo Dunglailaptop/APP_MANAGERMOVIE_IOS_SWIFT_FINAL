@@ -21,6 +21,8 @@ class PaymentFoodComboViewModel: BaseViewModel {
     public var dataArrayFoodCombo: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value : [])
     public var dataVoucher: BehaviorRelay<[voucher]> = BehaviorRelay(value: [])
     public var dataArrayBillPaymentHistory: BehaviorRelay<PaymentFoodCombo> = BehaviorRelay(value: PaymentFoodCombo())
+    public var title_header: BehaviorRelay<String> = BehaviorRelay(value: "")
+    public var link_website: BehaviorRelay<String> = BehaviorRelay(value: "")
     func bind(view: PaymentFoodComboViewController,router: PaymentFoodComboRouter) {
         self.view = view
         self.router = router
@@ -30,7 +32,9 @@ class PaymentFoodComboViewModel: BaseViewModel {
     func maKeToViewController() {
         router?.makePopToViewController()
     }
-    
+    func makePolicyViewController(){
+        router?.navigateToPolicyViewController(title_header: title_header.value, link_website: link_website.value,idbilll: 0)
+    }
     
 }
 extension PaymentFoodComboViewModel {
@@ -48,4 +52,25 @@ extension PaymentFoodComboViewModel {
             .showAPIErrorToast()
             .mapObject(type: APIResponse.self)
     }
+    func saveCacheBillFoodCombo() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.saveCacheBillFood(datapaymentBillfood: dataArrayBillPayment.value))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
+    func createLinkVNPAY() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.createLinkVNPAYBILLFOODCOMBO(amount: dataArrayBillPayment.value.total_price, idorder: 0))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
+    func checkIdbillFoodCombo() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.chekcBillFood(idbill: dataArrayBillPayment.value.id))
+                        .filterSuccessfulStatusCodes()
+                        .mapJSON().asObservable()
+                        .showAPIErrorToast()
+                        .mapObject(type: APIResponse.self)
+                }
 }

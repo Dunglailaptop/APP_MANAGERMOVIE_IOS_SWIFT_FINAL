@@ -89,6 +89,12 @@ enum ManagerConnections {
     case getDetailInfoCinema(idcinema:Int)
     case getNoTiFaction(iduser:Int)
     case getUpdateCinemaInfo(datacinema:Cinema)
+    //billfood
+    case saveCacheBillFood(datapaymentBillfood: PaymentFoodCombo)
+    case createLinkVNPAYBILLFOODCOMBO(amount:Int,idorder:Int)
+    case chekcBillFood(idbill:Int)
+    case getlistinterestwithroom(date:String,idroom:Int)
+    case getlistinterestMovieRoom(date:String,idroom:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -253,6 +259,16 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlNotiFaction
         case .getUpdateCinemaInfo(let datacinema):
             return APIEndPoint.Name.urlUpdateInfoDetailcinema
+        case .saveCacheBillFood(_):
+            return APIEndPoint.Name.urlSaveCacheBillFood
+        case .createLinkVNPAYBILLFOODCOMBO(let amount,let idorder):
+            return APIEndPoint.Name.urlCreatelinkVnpayBillFood
+        case .chekcBillFood(let idbill):
+            return APIEndPoint.Name.urlcheckPaymetBillFood
+        case .getlistinterestwithroom(let date,let idroom):
+            return APIEndPoint.Name.urlgetListInterestWithRoom
+        case .getlistinterestMovieRoom(let date,let idroom):
+            return APIEndPoint.Name.urlgetinterestlistMovieWithRoom
         }
     
     }
@@ -410,6 +426,16 @@ extension ManagerConnections: TargetType {
             return .get
         case .getUpdateCinemaInfo(_):
             return .post
+        case .saveCacheBillFood(_):
+            return .post
+        case .createLinkVNPAYBILLFOODCOMBO(_,_):
+            return .post
+        case .chekcBillFood(_):
+            return .get
+        case .getlistinterestwithroom(_,_):
+            return .get
+        case .getlistinterestMovieRoom(_,_):
+            return .get
         }
 
         
@@ -589,6 +615,16 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getUpdateCinemaInfo(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .saveCacheBillFood(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .createLinkVNPAYBILLFOODCOMBO(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .chekcBillFood(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getlistinterestwithroom(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getlistinterestMovieRoom(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -634,7 +670,8 @@ extension ManagerConnections: TargetType {
             return [:]
         case .getListInterestMovie(let dateshow,let idmovie):
             return ["date" : dateshow,
-                    "Idmovie" : idmovie]
+                    "Idmovie" : idmovie
+            ]
         case .getListInterestCinema(let dateshow,let idmovie):
         return ["date" : dateshow,
                 "Idmovie" : idmovie]
@@ -1022,6 +1059,38 @@ extension ManagerConnections: TargetType {
                 "picture": datacinema.picture,
                 "describes": datacinema.describes
              ]
+        case .saveCacheBillFood(let datapaymentBillfood):
+            return [
+                "id": 0,
+                "idFoodcombo": datapaymentBillfood.idFoodcombo,
+                "idFoodlistcombo": 0,
+                "numbers": datapaymentBillfood.numbers,
+                "total_price": datapaymentBillfood.total_price,
+                "iduser": datapaymentBillfood.iduser,
+                "idcinemas": datapaymentBillfood.idcinemas,
+                "foodComboBills": datapaymentBillfood.foodComboBills.toJSON(),
+                "idvoucher": datapaymentBillfood.idvoucher
+            ]
+        case .createLinkVNPAYBILLFOODCOMBO(let amount,let idorder):
+            return [
+                "amount":amount,
+                "idorder":idorder,
+                "urlpayment":""
+            ]
+        case .chekcBillFood(let idbill):
+            return [
+                "idbill":idbill
+            ]
+        case .getlistinterestwithroom(let date,let idroom):
+            return [
+                "date":date,
+                "idroom":idroom
+            ]
+        case .getlistinterestMovieRoom(let date,let idroom):
+            return [
+                "date":date,
+                "idroom":idroom
+            ]
         }
        
     }
@@ -1187,6 +1256,16 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getUpdateCinemaInfo(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .saveCacheBillFood(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .createLinkVNPAYBILLFOODCOMBO(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .chekcBillFood(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getlistinterestwithroom(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getlistinterestMovieRoom(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

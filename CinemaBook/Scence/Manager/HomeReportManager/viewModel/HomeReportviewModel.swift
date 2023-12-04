@@ -14,7 +14,7 @@ class HomeReportviewModel: BaseViewModel{
     private(set) weak var view: HomeReportViewController?
     private var router: HomeReportRouter?
     
-    public var data: BehaviorRelay<(date_string:String,report_type:Int)> = BehaviorRelay(value: (date_string:Utils.getCurrentDateStringformatMysqlyymmdd(),report_type:1))
+    public var data: BehaviorRelay<(date_string:String,report_type:Int)> = BehaviorRelay(value: (date_string:Utils.getCurrentDateStringformatMysqlyymmdd(),report_type:8))
     
     public var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2,3])
     public var dataTicketReport: BehaviorRelay<ReportTotalAll> = BehaviorRelay(value: ReportTotalAll())

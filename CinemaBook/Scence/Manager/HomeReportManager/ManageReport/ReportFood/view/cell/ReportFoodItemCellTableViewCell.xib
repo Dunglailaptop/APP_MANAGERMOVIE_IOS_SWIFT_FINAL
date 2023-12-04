@@ -49,6 +49,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hm-SC-Quf">
+                        <rect key="frame" x="287" y="14.333333333333336" width="33" height="15.666666666666664"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="YaH-od-VpE" firstAttribute="leading" secondItem="1pN-xz-LbN" secondAttribute="trailing" constant="20" id="Dol-b3-7vZ"/>
@@ -57,6 +63,8 @@
                     <constraint firstItem="5OY-jq-sKq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="W6V-YV-5uc"/>
                     <constraint firstItem="1pN-xz-LbN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="aNg-BI-QDI"/>
                     <constraint firstItem="5OY-jq-sKq" firstAttribute="leading" secondItem="YaH-od-VpE" secondAttribute="trailing" constant="20" id="acF-1Q-6i2"/>
+                    <constraint firstItem="8Hm-SC-Quf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gez-kn-Ow9"/>
+                    <constraint firstAttribute="trailing" secondItem="8Hm-SC-Quf" secondAttribute="trailing" id="uO9-fV-u6G"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -64,12 +72,16 @@
                 <outlet property="image_food" destination="YaH-od-VpE" id="Nh6-Ki-do4"/>
                 <outlet property="lbl_name_food" destination="5OY-jq-sKq" id="BMw-hY-n3I"/>
                 <outlet property="lbl_number" destination="WSj-hc-tBS" id="4am-vc-Bc7"/>
+                <outlet property="lbl_time" destination="8Hm-SC-Quf" id="nlu-H8-QeJ"/>
             </connections>
             <point key="canvasLocation" x="131" y="-11"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="h1" width="144" height="180"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

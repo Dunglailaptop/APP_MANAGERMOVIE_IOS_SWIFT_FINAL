@@ -11,7 +11,7 @@ import BmoViewPager
 
 class ManagementBillViewController: UIViewController {
 
-    var title_name = ["VÉ CHỜ XEM","VÉ ĐÃ XEM","SP CHỜ NHẬN","SP HOÀN TẤT"]
+    var title_name = ["VÉ CHỜ XEM","VÉ ĐÃ XEM","SP CHỜ NHẬN","SP HOÀN TẤT","HOÁ ĐƠN PHÒNG"]
     
     @IBOutlet weak var bmoViewBar: BmoViewPagerNavigationBar!
     
@@ -47,17 +47,22 @@ extension ManagementBillViewController: BmoViewPagerDelegate, BmoViewPagerDataSo
             ListMovieShowNowRouters.status = 1
             return ListMovieShowNowRouters
         }else if(page == 1){
-          let ListMovieShowNowRouters = ManagementBillticketViewController()
-            ListMovieShowNowRouters.status = 0
-                      return ListMovieShowNowRouters
+                let ListMovieShowNowRouters = ManagementBillticketViewController()
+                ListMovieShowNowRouters.status = 0
+                return ListMovieShowNowRouters
         }else if (page == 2) {
+                let ListMovieShowNowRouters = ManagementBillFoodComboViewController()
+                ListMovieShowNowRouters.status = 0
+                return ListMovieShowNowRouters
+        }
+        else if (page == 3) {
             let ListMovieShowNowRouters = ManagementBillFoodComboViewController()
-            ListMovieShowNowRouters.status = 0
-                        return ListMovieShowNowRouters
-        }else {
-       let ListMovieShowNowRouters = ManagementBillFoodComboViewController()
             ListMovieShowNowRouters.status = 1
-                   return ListMovieShowNowRouters
+            return ListMovieShowNowRouters
+        }
+        else {
+            let ListMovieShowNowRouters = ManagementBillRoomViewController()
+            return ListMovieShowNowRouters
         }
     }
     

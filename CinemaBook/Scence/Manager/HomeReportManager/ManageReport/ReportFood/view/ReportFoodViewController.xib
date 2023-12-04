@@ -19,7 +19,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportFoodViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
-                <outlet property="bar_chart" destination="yCk-Uc-U6N" id="pmG-TW-bao"/>
                 <outlet property="btn_all" destination="3Oo-Ub-sJt" id="z8t-GT-syO"/>
                 <outlet property="btn_last_month" destination="vDj-JT-tO8" id="BAl-V8-zAQ"/>
                 <outlet property="btn_last_year" destination="Xcy-UQ-Ubq" id="PPh-m2-iJ7"/>
@@ -31,6 +30,7 @@
                 <outlet property="btn_today" destination="J1J-BF-poz" id="FSe-na-aEr"/>
                 <outlet property="btn_yesterday" destination="WEd-QL-Tia" id="qKO-jo-f21"/>
                 <outlet property="lbl_total_billfood" destination="nyP-ys-55w" id="lqx-7E-yJ7"/>
+                <outlet property="lineChart" destination="yCk-Uc-U6N" id="DJY-nh-Swb"/>
                 <outlet property="tableview" destination="I4a-qG-1EQ" id="W27-hf-bMm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view_no_daata" destination="qgt-eH-oD1" id="1fM-y4-AeW"/>
@@ -405,7 +405,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPX-fi-6Ux">
                             <rect key="frame" x="0.0" y="154" width="393" height="300"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCk-Uc-U6N" customClass="BarChartView" customModule="Charts">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCk-Uc-U6N" customClass="LineChartView" customModule="Charts">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgt-eH-oD1">

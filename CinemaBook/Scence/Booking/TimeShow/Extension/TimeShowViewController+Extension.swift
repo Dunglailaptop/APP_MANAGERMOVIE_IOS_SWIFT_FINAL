@@ -12,6 +12,55 @@ import RxSwift
 import ObjectMapper
 
 extension TimeShowViewController {
+    //call api
+    func getListInterestRoom() {
+        viewModel.getListMovieRoom().subscribe(onNext: { (response) in
+                    if (response.code == RRHTTPStatusCode.ok.rawValue){
+                        if let movies = Mapper<ModelinterestMovie>().mapArray(JSONObject: response.data)
+                        {
+                          
+                            self.viewModel.listCinemaWithInterest.accept(movies)
+                           self.lbl_ALL_CINAME.text = String(self.viewModel.listCinemaWithInterest.value.count)
+                           self.lbl_Cinema_Foryou.text = String(self.viewModel.listCinemaWithInterest.value.count)
+                            self.getListInterestMovieRoom()
+                          
+                                self.view_no_data.isHidden = self.viewModel.listCinemaWithInterest.value.count > 0 ? true:false
+                           
+                           
+                         dLog(movies)
+                        }
+                    }
+
+                    }).disposed(by: rxbag)
+     }
+       func getListInterestMovieRoom() {
+           viewModel.getInterestMovieRoom().subscribe(onNext: { (response) in
+                      if (response.code == RRHTTPStatusCode.ok.rawValue){
+                          if let movies = Mapper<InterestMovie>().mapArray(JSONObject: response.data)
+                          {
+                              dLog(movies)
+                              var onlyoneListcinema = self.viewModel.cinemaWithInterest.value
+                              var datalistcinema = self.viewModel.listCinemaWithInterest.value
+                              
+                              datalistcinema.enumerated().forEach{ (index,value) in
+                              var listinterest  =  movies.filter{ $0.idmovie == value.idcinema}
+                               
+                                 
+                                  datalistcinema[index].listinterest = listinterest
+                              
+                             
+                              }
+                              self.viewModel.listCinemaWithInterest.accept(datalistcinema)
+                              self.viewModel.listTime.accept(movies)
+
+                          }
+                      }
+
+                      }).disposed(by: rxbag)
+       }
+}
+
+extension TimeShowViewController {
  //call api
  func getListInterestCinema() {
     viewModel.getListCinema().subscribe(onNext: { (response) in

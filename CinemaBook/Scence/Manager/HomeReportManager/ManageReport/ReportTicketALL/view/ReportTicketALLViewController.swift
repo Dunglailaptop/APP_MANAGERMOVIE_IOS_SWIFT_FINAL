@@ -21,6 +21,7 @@ class ReportTicketALLViewController: UIViewController {
     
     var btnArray:[UIButton] = []
     
+    @IBOutlet weak var lbl_total_all: UILabel!
     @IBOutlet weak var view_no_data: UIView!
     @IBOutlet weak var view_bar_chart: BarChartView!
     @IBOutlet weak var btn_today: UIButton!
@@ -89,6 +90,8 @@ extension ReportTicketALLViewController {
                     self.lbl_total_food_with_bill.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalfoodwithbill)
                     self.lbl_total_food_wait.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalfoodwait)
                     self.lbl_total_food.text = Utils.stringQuantityFormatWithNumber(amount: data.totalfood)
+                    var total = data.totalbill + data.totalbillwait + data.totalfoodwait + data.totalfood + data.totalfoodwithbill
+                    self.lbl_total_all.text = Utils.stringVietnameseFormatWithNumber(amount: total)
                 }
             }
         })

@@ -32,7 +32,8 @@ class ReportFoodViewController: UIViewController {
     @IBOutlet weak var btn_this_weak: UIButton!
     @IBOutlet weak var btn_yesterday: UIButton!
     @IBOutlet weak var bar_chart: BarChartView!
-    
+    var lineChartItems = [ChartDataEntry]()
+    @IBOutlet weak var lineChart: LineChartView!
     var viewModel = ReportFoodViewModel()
     var router = ReportFoodRouter()
     override func viewDidLoad() {
@@ -113,7 +114,8 @@ extension ReportFoodViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<ReportFoodTotalAll>().map(JSONObject: response.data){
                     self.viewModel.datafoodReport.accept(data.reportMovieshows)
-                    self.setupBarChart(data: data.reportMovieshows, barChart: self.bar_chart)
+//                    self.setupBarChart(data: data.reportMovieshows, barChart: self.bar_chart)
+                    self.setupLineChart(revenues: data.reportMovieshows)
                     self.view_no_daata.isHidden = (self.viewModel.datafoodReport.value.count) > 0 ? true: false
                     self.lbl_total_billfood.text = Utils.stringVietnameseFormatWithNumber(amount: data.totalall)
                 }
@@ -121,21 +123,88 @@ extension ReportFoodViewController {
         })
     }
 }
-extension ReportFoodViewController {
-    func setupBarChart(data:[ReportFood],barChart:BarChartView){
-        ChartUtils.customBarChart2(
-            chartView: bar_chart,
-            barChartItems: data.enumerated().map{(i,value) in BarChartDataEntry(x: Double(i), y: Double(value.totals))},
-            xLabel: data.map{$0.namefood}
-        )
-        
-        bar_chart.isUserInteractionEnabled = true
-        // calculate the required height for the chart based on the number of labels and their rotated height
-        let labelHeight = barChart.xAxis.labelRotatedHeight // use the rotated label height
-        let labelRotationAngle = CGFloat(barChart.xAxis.labelRotationAngle) * .pi / 180 // convert the rotation angle to radians
-        let chartHeight = barChart.frame.origin.y + (CGFloat(barChart.xAxis.labelCount) * labelHeight * abs(cos(labelRotationAngle))) // use the rotated height and the cosine of the rotation angle
-        // resize the height of the chart view
-        barChart.frame.size.height = chartHeight
 
+extension ReportFoodViewController:AxisValueFormatter {
+//    func setupBarChart(data:[ReportFood],barChart:BarChartView){
+//        ChartUtils.customBarChart2(
+//            chartView: bar_chart,
+//            barChartItems: data.enumerated().map{(i,value) in BarChartDataEntry(x: Double(i), y: Double(value.totals))},
+//            xLabel: data.map{$0.namefood}
+//        )
+//
+//        bar_chart.isUserInteractionEnabled = true
+//        // calculate the required height for the chart based on the number of labels and their rotated height
+//        let labelHeight = barChart.xAxis.labelRotatedHeight // use the rotated label height
+//        let labelRotationAngle = CGFloat(barChart.xAxis.labelRotationAngle) * .pi / 180 // convert the rotation angle to radians
+//        let chartHeight = barChart.frame.origin.y + (CGFloat(barChart.xAxis.labelCount) * labelHeight * abs(cos(labelRotationAngle))) // use the rotated height and the cosine of the rotation angle
+//        // resize the height of the chart view
+//        barChart.frame.size.height = chartHeight
+//
+//    }
+    func setupLineChart(revenues:[ReportFood]) {
+        lineChart.noDataText = "Chưa có dữ liệu!"
+        lineChart.noDataFont = UIFont(name: "Helvetica", size: 10.0)!
+        lineChartItems.removeAll()
+        
+        let revenues = revenues
+        for i in 0..<revenues.count {
+            lineChartItems.append(ChartDataEntry(x: Double(i), y: Double(revenues[i].totals / 1000)))
+        }
+        //Line Chart
+        let lineChartDataSet = LineChartDataSet(entries: lineChartItems, label: "")
+        lineChartDataSet.setColor(ColorUtils.blue_color())
+        lineChartDataSet.setCircleColor(ColorUtils.blue_color())
+        lineChartDataSet.drawValuesEnabled = false
+        lineChartDataSet.circleRadius = 3
+        // Set the color for the filled area under the line
+        lineChartDataSet.fillColor = ColorUtils.color_chartline()
+        lineChartDataSet.drawFilledEnabled = true // Enable drawing the filled area under the line
+
+        // Optionally, if you want to customize the transparency of the filled area
+        lineChartDataSet.fillAlpha = 0.5 // Set the alpha (transparency) value as needed (0.0 - 1.0)
+
+        
+        lineChart.data = LineChartData(dataSet: lineChartDataSet)
+        lineChart.legend.enabled = false
+        lineChart.chartDescription.enabled = false
+        lineChart.backgroundColor = UIColor.white
+        lineChart.leftAxis.drawAxisLineEnabled = true
+        lineChart.leftAxis.drawGridLinesEnabled = true
+        lineChart.leftAxis.valueFormatter = self // Thêm phương thức
+        lineChart.rightAxis.enabled = false
+        lineChart.xAxis.drawAxisLineEnabled = false
+        lineChart.xAxis.drawGridLinesEnabled = true
+        lineChart.xAxis.labelPosition = .bottom
+        lineChart.xAxis.drawGridLinesEnabled = false
+        lineChart.leftAxis.axisMinimum = 0
+        lineChart.xAxis.axisMinimum = -1
+        lineChart.xAxis.axisMaximum = Double(lineChartItems.count)
+        lineChart.xAxis.labelCount = lineChartDataSet.count + 1
+        lineChart.xAxis.labelFont = NSUIFont(descriptor: UIFontDescriptor(name: "System", size: 9), size: 9)
+        lineChart.pinchZoomEnabled = false
+        lineChart.doubleTapToZoomEnabled = false
+        lineChart.xAxis.labelRotationAngle = -40
+        lineChart.xAxis.labelRotatedHeight = 60
+        lineChart.animate(xAxisDuration: 2.0, yAxisDuration: 3.0, easingOption: ChartEasingOption.easeInOutQuart)
+        
+        var x_label = [String]()
+        for i in 0 ..< revenues.count {
+            x_label.append(revenues[i].namefood)
+        }
+        lineChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: x_label)
     }
+    
+    
+    
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        dLog(value)
+        if(value >= 0 && value < 1000 ){
+            return String(format: "%@ K", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value))
+        }else if(value >= 1000 && value < 1000000 ){
+            return String(format: "%@ Tr", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value/1000))
+        }else if(value >= 1000000){
+            return String(format: "%@ Tỷ", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value/1000000))
+        }
+        return String(format: "%@", Utils.stringVietnameseMoneyFormatWithNumberDouble(amount: value))
+     }
 }

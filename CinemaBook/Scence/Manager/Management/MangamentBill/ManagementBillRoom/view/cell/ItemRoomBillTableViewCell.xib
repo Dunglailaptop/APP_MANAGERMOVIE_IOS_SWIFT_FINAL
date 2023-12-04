@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ItemRoomBillTableViewCell" customModule="CinemaBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llk-DL-N7T">
+                        <rect key="frame" x="10" y="5" width="300" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank" translatesAutoresizingMaskIntoConstraints="NO" id="4em-S8-rzl">
+                                <rect key="frame" x="10" y="10" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8r2-fP-q1d"/>
+                                    <constraint firstAttribute="width" constant="50" id="QC8-J6-2Un"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHÒNG 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vD-q8-YfL">
+                                <rect key="frame" x="62.999999999999993" y="19.666666666666668" width="74.333333333333314" height="21.000000000000004"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SL: 50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4u-Pq-gcV">
+                                <rect key="frame" x="223.33333333333334" y="18" width="56.666666666666657" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="4em-S8-rzl" firstAttribute="top" secondItem="Llk-DL-N7T" secondAttribute="top" constant="10" id="BAB-UX-aK2"/>
+                            <constraint firstItem="4vD-q8-YfL" firstAttribute="centerY" secondItem="Llk-DL-N7T" secondAttribute="centerY" id="LcK-9V-brn"/>
+                            <constraint firstAttribute="bottom" secondItem="4em-S8-rzl" secondAttribute="bottom" constant="10" id="OQ7-Wa-D3N"/>
+                            <constraint firstItem="4em-S8-rzl" firstAttribute="leading" secondItem="Llk-DL-N7T" secondAttribute="leading" constant="10" id="fgU-Mx-ACM"/>
+                            <constraint firstItem="4vD-q8-YfL" firstAttribute="leading" secondItem="4em-S8-rzl" secondAttribute="trailing" constant="3" id="i2Q-i2-O2d"/>
+                            <constraint firstAttribute="trailing" secondItem="q4u-Pq-gcV" secondAttribute="trailing" constant="20" id="pkD-P5-eSv"/>
+                            <constraint firstItem="q4u-Pq-gcV" firstAttribute="centerY" secondItem="Llk-DL-N7T" secondAttribute="centerY" id="rxx-nQ-43O"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6J-MK-bAM">
+                        <rect key="frame" x="317" y="0.0" width="3" height="70"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="S14-9h-y97"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="3" id="yjF-h1-0St"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                <constraints>
+                    <constraint firstItem="Llk-DL-N7T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="4Ls-d1-x6n"/>
+                    <constraint firstAttribute="bottom" secondItem="X6J-MK-bAM" secondAttribute="bottom" id="84C-fZ-Ce1"/>
+                    <constraint firstItem="X6J-MK-bAM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="I0Y-H6-cB2"/>
+                    <constraint firstAttribute="bottom" secondItem="Llk-DL-N7T" secondAttribute="bottom" constant="5" id="XCs-VO-Cyy"/>
+                    <constraint firstItem="Llk-DL-N7T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="rjF-IF-Hz5"/>
+                    <constraint firstAttribute="trailing" secondItem="X6J-MK-bAM" secondAttribute="trailing" id="w5S-0f-c4G"/>
+                    <constraint firstAttribute="trailing" secondItem="Llk-DL-N7T" secondAttribute="trailing" constant="10" id="ziT-hL-F3F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lbl_name_room" destination="4vD-q8-YfL" id="Cjw-8i-Mr2"/>
+                <outlet property="lbl_total_chairs" destination="q4u-Pq-gcV" id="BSY-Rx-MVM"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bank" width="512" height="512"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
