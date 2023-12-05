@@ -25,10 +25,11 @@ class TimeShowRouter {
            self.sourceView = view
        }
     
-    func navigationToBookingChairViewController(idcinema:Int,idroom:Int,idinterest:Int,idmovie:Int) {
+    func navigationToBookingChairViewController(idcinema:Int,idroom:Int,idinterest:Int,idmovie:Int,type:Int,namemovie:String) {
         let bookingchairview = BookingChairRouter().viewController as! BookingChairViewController
+        bookingchairview.namemovie = namemovie
         bookingchairview.idmovie = idmovie
-        bookingchairview.type = 0
+        bookingchairview.type = type
         bookingchairview.idcinema = idcinema
         bookingchairview.idroom = idroom
         bookingchairview.idinterest = idinterest
@@ -37,5 +38,12 @@ class TimeShowRouter {
     
     func makepopToViewController() {
         sourceView?.navigationController?.popViewController(animated: true)
+    }
+    func navigationToBookingChairViewControllerWithRoom(idroom:Int,namemovie:String) {
+        let viewBooking = BookingChairRouter().viewController as! BookingChairViewController
+        viewBooking.namemovie = namemovie
+        viewBooking.idroom = idroom
+        viewBooking.type = 0
+        sourceView?.navigationController?.pushViewController(viewBooking, animated: true)
     }
 }

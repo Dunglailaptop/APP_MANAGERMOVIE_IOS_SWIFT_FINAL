@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotifcationMessageViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="tableview" destination="YGS-A0-CXO" id="5Gj-xA-1qx"/>
+                <outlet property="txt_search" destination="Yos-Va-mw2" id="yba-lB-dVh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -2344,8 +2344,8 @@
             filePath = "CinemaBook/Scence/Booking/TimeShow/Extension/TimeShowViewController+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "getListInterestCinema()"
             landmarkType = "7">
             <Locations>

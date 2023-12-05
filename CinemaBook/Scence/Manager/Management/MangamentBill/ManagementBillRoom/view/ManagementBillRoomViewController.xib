@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagementBillRoomViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="tableview" destination="Yjo-3p-Fsz" id="f0w-cv-k5q"/>
+                <outlet property="txt_search" destination="xWZ-wx-q1O" id="spE-u4-0uQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

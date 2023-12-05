@@ -335,3 +335,20 @@ struct IdbillPaymentVNPAYRequest: Mappable {
         idbills <- map["idbills"]
     }
 }
+
+//bill info room
+struct billinfowithroom: Mappable {
+        var idbill = 0
+        var totalamount = 0
+        var chairess = [chair]()
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+         idbill <- map["idbill"]
+         totalamount <- map["totalamount"]
+         chairess  <- map["chairess"]
+    }
+}

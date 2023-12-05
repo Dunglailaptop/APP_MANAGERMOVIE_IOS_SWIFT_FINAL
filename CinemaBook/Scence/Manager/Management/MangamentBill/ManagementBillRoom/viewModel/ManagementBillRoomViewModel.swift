@@ -14,8 +14,7 @@ class ManagementBillRoomViewModel: BaseViewModel{
     private var router: ManagementBillRoomRouter?
     
     public var dataArray: BehaviorRelay<[Room]> = BehaviorRelay(value: [])
-  
-    
+    public var dataArraySearch: BehaviorRelay<[Room]> = BehaviorRelay(value: [])
     
     func bind(view: ManagementBillRoomViewController, router: ManagementBillRoomRouter){
         self.view = view

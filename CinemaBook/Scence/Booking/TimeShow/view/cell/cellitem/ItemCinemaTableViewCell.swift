@@ -80,6 +80,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     cell.idinterest = data?.listinterest[indexPath.row].idinterest as! Int
     cell.lbl_time.text = String((data?.listinterest[indexPath.row].times)!)
     cell.idmovie = data?.listinterest[indexPath.row].idmovie as! Int
+    cell.namemovie = data?.listinterest[indexPath.row].namecinema as! String
     dLog(data?.listinterest[indexPath.row].times)
     
     return cell

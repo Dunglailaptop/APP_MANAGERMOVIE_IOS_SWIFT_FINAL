@@ -19,46 +19,75 @@ enum CustomTabItem: String, CaseIterable {
 
 extension CustomTabItem {
     var viewController: UIViewController {
+        if ManageCacheObject.getCurrentUserInfo().idrole != 3 {
         switch self {
-        case .Home:
-            dLog(ManageCacheObject.getCurrentUserInfo().idrole)
-            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
-                let view = HomeReportViewController(nibName: "HomeReportViewController", bundle: Bundle.main)
+          
+            case .Home:
+                dLog(ManageCacheObject.getCurrentUserInfo().idrole)
+                if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                    let view = HomeReportViewController(nibName: "HomeReportViewController", bundle: Bundle.main)
+                    return view
+                }else  {
+                    let view = HomeViewController(nibName: "HomeViewController", bundle: Bundle.main)
+                    return view
+                }
+                
+            case .Ticket:
+                if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+                    let view = ManagementViewController(nibName: "ManagementViewController", bundle: Bundle.main)
+                    return view
+                }else {
+                    let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
+                    return view
+                }
+                
+            case .newFeed:
+                let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)
+                
                 return view
-            }else  {
-                let view = HomeViewController(nibName: "HomeViewController", bundle: Bundle.main)
-                return view
-            }
-            
-        case .Ticket:
-            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
-                let view = ManagementViewController(nibName: "ManagementViewController", bundle: Bundle.main)
-                return view
-            }else {
-                let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
-                return view
-            }
-           
-        case .newFeed:
-            let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)
-            
-            return view
-            
-            //           case .fee:
-            //               let view = FeeViewController(nibName: "FeeViewController", bundle: Bundle.main)
-            //
-            //               return view
-            
-        case .NotificationApp:
-           
+                
+                //           case .fee:
+                //               let view = FeeViewController(nibName: "FeeViewController", bundle: Bundle.main)
+                //
+                //               return view
+                
+            case .NotificationApp:
+                
                 let view = NotifcationMessageViewController(nibName: "NotifcationMessageViewController", bundle: Bundle.main)
                 
                 return view
-            
-        case .SettingAccount:
-            let view = AccountViewController(nibName: "AccountViewController", bundle: Bundle.main)
-            
-            return view
+                
+            case .SettingAccount:
+                let view = AccountViewController(nibName: "AccountViewController", bundle: Bundle.main)
+                
+                return view
+            }
+        }else {
+            switch self {
+              
+                case .Home:
+                        let view = HomeReportViewController(nibName: "HomeReportViewController", bundle: Bundle.main)
+                        return view
+                case .Ticket:
+                   
+                        let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
+                        return view
+                case .newFeed:
+                    let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)
+                    
+                    return view
+                
+                case .NotificationApp:
+                    
+                    let view = NotifcationMessageViewController(nibName: "NotifcationMessageViewController", bundle: Bundle.main)
+                    
+                    return view
+                    
+                case .SettingAccount:
+                    let view = AccountViewController(nibName: "AccountViewController", bundle: Bundle.main)
+                    
+                    return view
+                }
         }
     }
     

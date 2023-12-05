@@ -22,7 +22,7 @@ class  BookingChairViewModel: BaseViewModel
     public var listtable: BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2])
         public var ChairCategory: BehaviorRelay<[CategoryChair]> = BehaviorRelay(value: [])
     public var infoInterestMovie: BehaviorRelay<InfoInterestMovie> = BehaviorRelay(value: InfoInterestMovie())
-    
+    public var dataArrayBillListWithRoom: BehaviorRelay<[billinfowithroom]> = BehaviorRelay(value: [])
     func bind(view: BookingChairViewController, router: BookingChairRouter)
     {
         self.view = view
@@ -38,8 +38,20 @@ class  BookingChairViewModel: BaseViewModel
         router?.makeToBookingProductComboViewController(dataInfoMovieS:dataInfoMovie,dataChairs:datachairs)
     }
     
+    func makeToDetailBillViewController(idbill:Int) {
+        router?.makeToDetailBillViewController(idbill: idbill)
+    }
+    
 }
 extension BookingChairViewModel{
+    func getlistbillroom() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.getlistbillwithroom(idroom: pagition.value.idroom, idinterest: pagition.value.idinterest))
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
+    
     func getListchair() -> Observable<APIResponse> {
         return appServiceProvider.rx.request(.getListChair(idroom: pagition.value.idroom, Idcinema: pagition.value.idcinema, idinterest: pagition.value.idinterest))
                  .filterSuccessfulStatusCodes()

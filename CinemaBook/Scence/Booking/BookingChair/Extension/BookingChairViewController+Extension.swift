@@ -10,7 +10,63 @@ import UIKit
 import RxCocoa
 import RxSwift
 import ObjectMapper
+import JonAlert
 
+extension BookingChairViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    func resgiter() {
+        let cellviewitem = UINib(nibName: "ItemBillWithRoomCollectionViewCell", bundle: .main)
+        collection_view_listbill.register(cellviewitem, forCellWithReuseIdentifier: "ItemBillWithRoomCollectionViewCell")
+        collection_view_listbill.delegate = self
+        collection_view_listbill.dataSource = self
+//        collection_view_listbill.rx.modelSelected(billinfowithroom.self).subscribe(onNext: {
+//            element in
+//            self.viewModel.makeToDetailBillViewController(idbill: element.idbill)
+//        })
+        setupCollection()
+    }
+    
+    func setupCollection() {
+        let layout  = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 200, height: 80)
+        collection_view_listbill.collectionViewLayout = layout
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.dataArrayBillListWithRoom.value.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemBillWithRoomCollectionViewCell", for: indexPath) as!  ItemBillWithRoomCollectionViewCell
+        var data = viewModel.dataArrayBillListWithRoom.value[indexPath.row].chairess
+        var allchair = ""
+        cell.lbl_id_bill.text = "Mã BILL: " + String(viewModel.dataArrayBillListWithRoom.value[indexPath.row].idbill)
+        data.enumerated().forEach{ (index,value) in
+            allchair += value.rowChar
+        }
+        cell.lbl_numberchair.text = "Ghế: " + allchair
+        cell.lbl_totalamount.text = Utils.stringVietnameseFormatWithNumber(amount: viewModel.dataArrayBillListWithRoom.value[indexPath.row].totalamount)
+        cell.idbill = viewModel.dataArrayBillListWithRoom.value[indexPath.row].idbill
+        cell.viewModel = viewModel
+        return cell
+    }
+  
+    func getlistbillRoom() {
+        viewModel.getlistbillroom().subscribe(onNext: {
+            [self]   (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<billinfowithroom>().mapArray(JSONObject: response.data) {
+                    viewModel.dataArrayBillListWithRoom.accept(data)
+                    collection_view_listbill.reloadData()
+                    dLog(data)
+                }
+            }else {
+                
+            }
+        })
+    }
+}
 //CALL API
 extension BookingChairViewController {
     func getListchair() {
@@ -63,7 +119,7 @@ extension BookingChairViewController {
         lbl_info_interest.text = dataInfo.nameroom + "," + dateshow[0] + "," + starttimeconvert[1]
         lbl_name_cinema.text = dataInfo.namecinema
         lbl_namemovie.text = dataInfo.namemovie
-        
+        lbl_listbill_namemovie.text = namemovie
     }
     
 }

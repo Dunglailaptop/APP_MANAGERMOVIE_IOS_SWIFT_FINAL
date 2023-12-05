@@ -23,6 +23,7 @@ class TimeShowViewModel:BaseViewModel {
     public var heightforcell: BehaviorRelay<Int> = BehaviorRelay(value: 80)
     public var pagation: BehaviorRelay<(date:String,idmovie:Int,idroom:Int)> = BehaviorRelay(value: (date: Utils().convertFormartDateyearMMdd(date: Date()) ,idmovie:1,idroom:0))
     public var idcinema: BehaviorRelay<Int> = BehaviorRelay(value: 0)
+    public var namemovie:BehaviorRelay<String> = BehaviorRelay(value: "")
       func bind(view: TimeShowViewController, router: TimeShowRouter)
       {
           self.view = view
@@ -30,11 +31,14 @@ class TimeShowViewModel:BaseViewModel {
           self.router?.setSourceView(self.view!)
       }
     
-    func navigationToBookingChairViewController(idcinema:Int,idroom:Int,idinterest:Int,idmovie:Int) {
-        router?.navigationToBookingChairViewController(idcinema: idcinema, idroom: idroom, idinterest: idinterest,idmovie:idmovie)
+    func navigationToBookingChairViewController(idcinema:Int,idroom:Int,idinterest:Int,idmovie:Int,type:Int,namemovie:String) {
+        router?.navigationToBookingChairViewController(idcinema: idcinema, idroom: idroom, idinterest: idinterest,idmovie:idmovie,type: type, namemovie: namemovie)
     }
     func navigationPopToViewController() {
         router?.makepopToViewController()
+    }
+    func makeToBookingWithRoom(idroom:Int,namemovie:String) {
+        router?.navigationToBookingChairViewControllerWithRoom(idroom: idroom,namemovie: namemovie)
     }
 }
 extension TimeShowViewModel {

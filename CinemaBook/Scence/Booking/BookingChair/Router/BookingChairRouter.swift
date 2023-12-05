@@ -33,6 +33,11 @@ class BookingChairRouter {
         viewBookingProductCombo.dataChair = dataChairs
         sourceView?.navigationController?.pushViewController(viewBookingProductCombo, animated: true)
     }
+    func makeToDetailBillViewController(idbill:Int) {
+        let viewdetailbill = ManagementDetailBillRouter().viewController as! ManagementDetailBillViewController
+        viewdetailbill.bill = idbill
+        sourceView?.navigationController?.pushViewController(viewdetailbill, animated: true)
+    }
     
 }
 

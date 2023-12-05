@@ -13,8 +13,9 @@ import RxRelay
 import ObjectMapper
 import JonAlert
 
-class ManagementBillRoomViewController: UIViewController {
+class ManagementBillRoomViewController: BaseViewController {
 
+    @IBOutlet weak var txt_search: UITextField!
     @IBOutlet weak var tableview: UITableView!
     var viewModel = ManagementBillRoomViewModel()
     var router = ManagementBillRoomRouter()
@@ -23,6 +24,30 @@ class ManagementBillRoomViewController: UIViewController {
         viewModel.bind(view: self, router: router)
         resgiter()
         bindingtableview()
+ 
+        txt_search.rx.controlEvent(.editingChanged)
+                   .withLatestFrom(txt_search.rx.text)
+                   .subscribe(onNext:{ [self]  query in
+                       guard self != nil else { return }
+                
+                       let dataFirsts = viewModel.dataArraySearch.value
+                       let cloneDataFilter = viewModel.dataArray.value
+                       if !query!.isEmpty{
+                           var filteredDataArray = cloneDataFilter.filter({
+                               (value) -> Bool in
+                               let str1 = query!.uppercased().applyingTransform(.stripDiacritics, reverse: false)
+                               let str2 = value.nameroom.uppercased().applyingTransform(.stripDiacritics, reverse: false)
+                               return str2!.contains(str1!)
+                           })
+                           viewModel.dataArray.accept(filteredDataArray)
+                      
+                       }else{
+                           viewModel.dataArray.accept(dataFirsts)
+                          
+                          
+                       }
+                       
+                   }).disposed(by: rxbag)
         getlistRoom()
         // Do any additional setup after loading the view.
     }
@@ -37,6 +62,7 @@ extension ManagementBillRoomViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Room>().mapArray(JSONObject: response.data){
                     self.viewModel.dataArray.accept(data)
+                    self.viewModel.dataArraySearch.accept(data)
                 }else {
                     JonAlert.showError(message: "Có lỗi xảy ra")
                 }

@@ -20,6 +20,7 @@ extension TimeShowViewController {
                         {
                           
                             self.viewModel.listCinemaWithInterest.accept(movies)
+                            
                            self.lbl_ALL_CINAME.text = String(self.viewModel.listCinemaWithInterest.value.count)
                            self.lbl_Cinema_Foryou.text = String(self.viewModel.listCinemaWithInterest.value.count)
                             self.getListInterestMovieRoom()

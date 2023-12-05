@@ -103,6 +103,7 @@ public struct APIEndPoint {
         static let urlcheckPaymetBillFood = "/PaymentMomo/getidbillPaymentVnpayFood"
         static let urlgetListInterestWithRoom = "/interestMovie/getlistInterestWithRoom"
         static let urlgetinterestlistMovieWithRoom = "/interestMovie/getListInterestRoomMovie"
+        static let urlgetlistBillwithroom = "/Bill/getlistinterestwithroom"
 }
     
 }

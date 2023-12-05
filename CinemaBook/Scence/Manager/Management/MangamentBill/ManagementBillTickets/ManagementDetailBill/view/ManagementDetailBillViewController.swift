@@ -29,6 +29,7 @@ class ManagementDetailBillViewController: UIViewController {
     var viewModel = ManagementDetailBillViewModel()
     var router = ManagementDetailBillRouter()
     var infobill = BillInfoAccount()
+    var bill = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
@@ -40,8 +41,14 @@ class ManagementDetailBillViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.idbill.accept(infobill.idbill)
-        getDetailBill()
+        if bill == 0 {
+            viewModel.idbill.accept(infobill.idbill)
+            getDetailBill()
+        }else {
+            viewModel.idbill.accept(bill)
+            getDetailBill()
+        }
+  
     }
     
 

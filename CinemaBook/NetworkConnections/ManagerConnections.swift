@@ -87,7 +87,7 @@ enum ManagerConnections {
     case changepassword(newpassword:String,username:String)
     case saveCacheVNPAY(bill:Bill)
     case getDetailInfoCinema(idcinema:Int)
-    case getNoTiFaction(iduser:Int)
+    case getNoTiFaction(iduser:Int,type:Int)
     case getUpdateCinemaInfo(datacinema:Cinema)
     //billfood
     case saveCacheBillFood(datapaymentBillfood: PaymentFoodCombo)
@@ -95,6 +95,7 @@ enum ManagerConnections {
     case chekcBillFood(idbill:Int)
     case getlistinterestwithroom(date:String,idroom:Int)
     case getlistinterestMovieRoom(date:String,idroom:Int)
+    case getlistbillwithroom(idroom:Int,idinterest:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -255,7 +256,7 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlSaveCacheBillVnapy
         case .getDetailInfoCinema(let idcinema):
             return APIEndPoint.Name.urlGetInfoDetialCinema
-        case .getNoTiFaction(let iduser):
+        case .getNoTiFaction(let iduser,let type):
             return APIEndPoint.Name.urlNotiFaction
         case .getUpdateCinemaInfo(let datacinema):
             return APIEndPoint.Name.urlUpdateInfoDetailcinema
@@ -269,6 +270,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlgetListInterestWithRoom
         case .getlistinterestMovieRoom(let date,let idroom):
             return APIEndPoint.Name.urlgetinterestlistMovieWithRoom
+        case .getlistbillwithroom(let idroom,let idinterest):
+            return APIEndPoint.Name.urlgetlistBillwithroom
         }
     
     }
@@ -422,7 +425,7 @@ extension ManagerConnections: TargetType {
             return .post
         case .getDetailInfoCinema(_):
             return .get
-        case .getNoTiFaction(_):
+        case .getNoTiFaction(_,_):
             return .get
         case .getUpdateCinemaInfo(_):
             return .post
@@ -435,6 +438,8 @@ extension ManagerConnections: TargetType {
         case .getlistinterestwithroom(_,_):
             return .get
         case .getlistinterestMovieRoom(_,_):
+            return .get
+        case .getlistbillwithroom(_,_):
             return .get
         }
 
@@ -611,7 +616,7 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getDetailInfoCinema(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
-        case .getNoTiFaction(_):
+        case .getNoTiFaction(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getUpdateCinemaInfo(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
@@ -624,6 +629,8 @@ extension ManagerConnections: TargetType {
         case .getlistinterestwithroom(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getlistinterestMovieRoom(_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .getlistbillwithroom(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
@@ -1046,9 +1053,10 @@ extension ManagerConnections: TargetType {
             return [
                 "idcinema":idcinema
             ]
-        case .getNoTiFaction(let iduser):
+        case .getNoTiFaction(let iduser,let type):
             return [
-                "iduser":iduser
+                "iduser":iduser,
+                "type": type
             ]
         case .getUpdateCinemaInfo(let datacinema):
             return [
@@ -1090,6 +1098,11 @@ extension ManagerConnections: TargetType {
             return [
                 "date":date,
                 "idroom":idroom
+            ]
+        case .getlistbillwithroom(let idroom,let idinterest):
+            return [
+                "idroom": idroom,
+                "idinterest":idinterest
             ]
         }
        
@@ -1252,7 +1265,7 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getDetailInfoCinema(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
-        case .getNoTiFaction(_):
+        case .getNoTiFaction(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getUpdateCinemaInfo(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
@@ -1265,6 +1278,8 @@ extension ManagerConnections: TargetType {
         case .getlistinterestwithroom(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getlistinterestMovieRoom(_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .getlistbillwithroom(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
