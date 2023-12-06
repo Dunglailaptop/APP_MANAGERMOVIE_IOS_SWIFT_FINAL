@@ -16,12 +16,16 @@ class MangamentFoodItemViewController: BaseViewController {
     var router = MangamentFoodItemRouter()
     @IBOutlet weak var tableview: UITableView!
     
+    @IBOutlet weak var view_no_data: UIView!
+    @IBOutlet weak var collectionview_categoryfood: UICollectionView!
     @IBOutlet weak var txt_search: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router:  router)
         register()
         bindingtableviewcell()
+        resgitercollection()
+        bindingcollection()
         txt_search.rx.controlEvent(.editingChanged)
                    .withLatestFrom(txt_search.rx.text)
                    .subscribe(onNext:{ [self]  query in
@@ -51,7 +55,7 @@ class MangamentFoodItemViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getListFood()
+        getlistcategoryfood()
     }
    
     @IBAction func btn_MakeToCreateFoodViewController(_ sender: Any) {
@@ -59,13 +63,63 @@ class MangamentFoodItemViewController: BaseViewController {
     }
     
 }
+extension MangamentFoodItemViewController
+{
+    func resgitercollection() {
+        let cellcollection = UINib(nibName: "ItemCategoryFoodCollectionViewCell", bundle: .main)
+        collectionview_categoryfood.register(cellcollection, forCellWithReuseIdentifier: "ItemCategoryFoodCollectionViewCell")
+        collectionview_categoryfood.rx.modelSelected(CategoryFood.self).subscribe(onNext: {
+           element in
+            dLog(element)
+            var datacategoryfood = self.viewModel.datacategoryfood.value
+            datacategoryfood.enumerated().forEach{ (index,value) in
+                if value.idcategoryfood == element.idcategoryfood && element.selected == DEACTIVE  {
+                    datacategoryfood[index].selected = ACTIVE
+                    self.viewModel.idcategory.accept(element.idcategoryfood)
+                    
+                    } else {
+                    datacategoryfood[index].selected = DEACTIVE
+                }
+            }
+            self.getListFood()
+            self.viewModel.datacategoryfood.accept(datacategoryfood)
+        })
+        setupCollection()
+    }
+    func setupCollection() {
+        let layout  = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 100, height: 40)
+        collectionview_categoryfood.collectionViewLayout = layout
+    }
+    func bindingcollection() {
+        viewModel.datacategoryfood.bind(to: collectionview_categoryfood.rx.items(cellIdentifier: "ItemCategoryFoodCollectionViewCell",cellType: ItemCategoryFoodCollectionViewCell.self)) {
+            (row,data,cell) in
+            cell.data = data
+            
+        }
+    }
+}
+
 extension MangamentFoodItemViewController {
+    func getlistcategoryfood() {
+        viewModel.getListCategoryFood().subscribe(onNext: {
+            (response) in
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+                if let data = Mapper<CategoryFood>().mapArray(JSONObject: response.data){
+                    self.viewModel.datacategoryfood.accept(data)
+                    self.getListFood()
+                }
+            }
+        })
+    }
     func getListFood() {
         viewModel.getListFood().subscribe(onNext: {(response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Food>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
                     self.viewModel.dataArraySearch.accept(data)
+                    self.view_no_data.isHidden = self.viewModel.dataArray.value.count == 0 ? false:true
                 }
             }
         })

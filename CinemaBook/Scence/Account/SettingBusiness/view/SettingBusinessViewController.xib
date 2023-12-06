@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingBusinessViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
+                <outlet property="btn_update_access" destination="ihB-eD-9t3" id="sas-V0-D4H"/>
                 <outlet property="image_cinema" destination="gqp-8T-FQK" id="fZ9-0Z-dVU"/>
                 <outlet property="txt_address" destination="SC6-Hi-YlZ" id="Pfb-y2-BHA"/>
                 <outlet property="txt_description" destination="pDz-TB-T14" id="8B9-BQ-RmT"/>

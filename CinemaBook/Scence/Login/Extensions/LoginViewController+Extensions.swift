@@ -35,13 +35,17 @@ extension LoginViewController {
          (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue{
                     if let account = Mapper<Users>().map(JSONObject: response.data) {
-                      
-                                ManageCacheObject.saveCurrentUserInfo(account)
-                                 self.viewModel.makeToMenuViewController()
-                                self.viewModel.iduser.accept(account.idusers)
-                                self.getCinema()
-                        
-                                dLog(account)
+                        if account.statuss != 1 {
+                            ManageCacheObject.saveCurrentUserInfo(account)
+                             self.viewModel.makeToMenuViewController()
+                            self.viewModel.iduser.accept(account.idusers)
+                            self.getCinema()
+                    
+                            dLog(account)
+                        } else {
+                            JonAlert.showError(message: "Tài khoản đang bị khoá xin vui lòng liên hệ quản lý để được tư vấn mở khoá")
+                        }
+                               
                             }
             }else {
                 Toast.show(message: response.message ?? "Có lỗi xảy ra trong quá trình kết nối", controller: self)

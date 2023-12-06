@@ -28,7 +28,7 @@ extension AccountViewController {
         viewModel.dataArray.bind(to: tableView.rx.items) {
             [self] (table, index, data) -> UITableViewCell in
             let indexPath = IndexPath(row: index, section: 0)
-            if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+            if ManageCacheObject.getCurrentUserInfo().idrole == 2 || ManageCacheObject.getCurrentUserInfo().idrole == 3 {
                 switch index {
                 case 0:
             
@@ -80,7 +80,7 @@ extension AccountViewController {
 }
 extension AccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if ManageCacheObject.getCurrentUserInfo().idrole == 2 {
+        if ManageCacheObject.getCurrentUserInfo().idrole == 2 || ManageCacheObject.getCurrentUserInfo().idrole == 3 {
             switch indexPath.row {
             case 0:
                 return 100

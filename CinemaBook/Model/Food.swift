@@ -93,7 +93,7 @@ struct  Food: Mappable {
 struct CategoryFood: Mappable {
         var idcategoryfood = 0
         var namecategoryfood = ""
-    
+        var selected = DEACTIVE
     init?(map: Map) {
         
     }

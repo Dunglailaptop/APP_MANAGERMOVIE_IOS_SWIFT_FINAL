@@ -16,6 +16,7 @@ class AccountInfoViewController: BaseViewController {
 
     var type_dy = ""
     
+    @IBOutlet weak var view_role: UIView!
     @IBOutlet weak var txt_drop_down: DropDown!
     @IBOutlet weak var btn_dropdown: UIButton!
     @IBOutlet weak var lbl_title: UILabel!
@@ -98,6 +99,7 @@ class AccountInfoViewController: BaseViewController {
         super.viewWillAppear(animated)
        switch type_dy {
                         case "CREATE":
+                            view_role.isUserInteractionEnabled = false
                             var id = viewModel.dataArray.value
                             id.idusers = idUser
                             viewModel.dataArray.accept(id)
@@ -105,6 +107,7 @@ class AccountInfoViewController: BaseViewController {
                             lbl_btn_title.text = "TẠO NHÂN VIÊN"
                             return
                         case "UPDATE":
+                            view_role.isUserInteractionEnabled = false
                             var id = viewModel.dataArray.value
                             id.idusers = idUser
                             viewModel.dataArray.accept(id)
@@ -113,6 +116,7 @@ class AccountInfoViewController: BaseViewController {
                             getInfoAccount()
                             return
                         case "ACCOUNT":
+                           view_role.isUserInteractionEnabled = false
                             var id = viewModel.dataArray.value
                             id.idusers = ManageCacheObject.getCurrentUserInfo().idusers
                             viewModel.dataArray.accept(id)

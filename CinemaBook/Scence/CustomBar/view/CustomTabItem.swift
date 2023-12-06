@@ -66,11 +66,11 @@ extension CustomTabItem {
             switch self {
               
                 case .Home:
-                        let view = HomeReportViewController(nibName: "HomeReportViewController", bundle: Bundle.main)
+                        let view = EmployeeInfoViewController(nibName: "EmployeeInfoViewController", bundle: Bundle.main)
                         return view
                 case .Ticket:
                    
-                        let view = BookingTicketViewController(nibName: "BookingTicketViewController", bundle: Bundle.main)
+                        let view = EmployeeInfoViewController(nibName: "EmployeeInfoViewController", bundle: Bundle.main)
                         return view
                 case .newFeed:
                     let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)

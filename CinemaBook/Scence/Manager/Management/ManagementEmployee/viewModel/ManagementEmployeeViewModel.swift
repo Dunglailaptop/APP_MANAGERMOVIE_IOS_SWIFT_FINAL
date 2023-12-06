@@ -15,6 +15,7 @@ class ManagementEmployeeViewModel: BaseViewModel{
     private var router: ManagementEmployeeRouter?
     
     public var dataArray: BehaviorRelay<[Users]> = BehaviorRelay(value: [])
+    public var dataAccount:BehaviorRelay<Account> = BehaviorRelay(value: Account())
     
     public var pagation: BehaviorRelay<(iduser:Int,keysearch:String,idcinema:Int,status:Int)> = BehaviorRelay(value: (iduser:1,keysearch:"",idcinema:1,status:0))
     

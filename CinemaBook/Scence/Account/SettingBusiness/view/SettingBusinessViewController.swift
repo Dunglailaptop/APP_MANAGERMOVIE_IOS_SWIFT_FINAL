@@ -20,6 +20,7 @@ import Photos
 
 class SettingBusinessViewController: BaseViewController {
     
+    @IBOutlet weak var btn_update_access: UIButton!
     @IBOutlet weak var txt_namemovie: UITextField!
     @IBOutlet weak var txt_description: UITextView!
     @IBOutlet weak var txt_phone_number: UITextField!
@@ -42,6 +43,16 @@ class SettingBusinessViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
+        if ManageCacheObject.getCurrentUserInfo().idrole == 1 || ManageCacheObject.getCurrentUserInfo().idrole == 3 {
+            btn_update_access.isUserInteractionEnabled = false
+            btn_update_access.isEnabled = true
+            btn_update_access.isHidden = true
+        }else {
+            btn_update_access.isHidden = false
+            btn_update_access.isHidden = false
+            btn_update_access.isUserInteractionEnabled = true
+        }
+        
         GMSServices.provideAPIKey("AIzaSyAG3SSMXPUldPt4ogGe_lwZIFbqDF7KM6A")
         GMSPlacesClient.provideAPIKey("AIzaSyCKPMo2ytoB9Hxp687JTjDY5dv9r_HUouA")
         _ = txt_address.rx.text.map{(str) in

@@ -38,11 +38,12 @@ extension ManagementEmployeeViewController {
     func resetPaasword() {
            viewModel.resetPassword().subscribe(onNext: { (response) in
                if response.code == RRHTTPStatusCode.ok.rawValue {
-                 
-                                  
-                    JonAlert.show(message: "khôi phục mật khẩu TÀI KHOẢN THÀNH CÔNG")
+                   if let data = Mapper<Account>().map(JSONObject: response.data) {
+                       self.viewModel.dataAccount.accept(data)
+                       JonAlert.showSuccess(message: "Câp nhật thành công tài khoản:" + data.username)
+                   }
                 }else {
-                                  JonAlert.show(message: "CÓ LỖI XẢY RA")
+                    JonAlert.show(message: response.message ?? "CÓ LỖI XẢY RA")
                 }
                
                
@@ -80,6 +81,9 @@ extension ManagementEmployeeViewController {
                           self.presentModalDialogAccess(idemployee: data.idusers,status:0)
                       })
             cell.btn_resetpassword.rx.tap.asDriver().drive(onNext: { [self] in
+                var iduers = viewModel.pagation.value
+                iduers.iduser = data.idusers
+                viewModel.pagation.accept(iduers)
                 self.resetPaasword()
             })
             
