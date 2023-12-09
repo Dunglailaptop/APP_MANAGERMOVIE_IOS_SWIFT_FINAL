@@ -170,8 +170,13 @@
 		B0A9EFA02AD9757200B9EF1D /* ItemCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A9EF9E2AD9757200B9EF1D /* ItemCartTableViewCell.xib */; };
 		B0A9EFA22AD9805F00B9EF1D /* CartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9EFA12AD9805F00B9EF1D /* CartRouter.swift */; };
 		B0A9EFA42AD982B200B9EF1D /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A9EFA32AD982B200B9EF1D /* CartViewModel.swift */; };
+		B0AA89E42B24119000C4FEC6 /* DialogshowCheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA89E32B24119000C4FEC6 /* DialogshowCheckinViewModel.swift */; };
+		B0AA89E72B24127700C4FEC6 /* DialogshowCheckinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA89E62B24127700C4FEC6 /* DialogshowCheckinRouter.swift */; };
 		B0AAC2BE2B1F8411007B907D /* EmployeeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC2BC2B1F8411007B907D /* EmployeeInfoViewController.swift */; };
 		B0AAC2BF2B1F8411007B907D /* EmployeeInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AAC2BD2B1F8411007B907D /* EmployeeInfoViewController.xib */; };
+		B0AAED802B2382E2000051A0 /* DialogshowCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAED7E2B2382E2000051A0 /* DialogshowCheckinViewController.swift */; };
+		B0AAED812B2382E2000051A0 /* DialogshowCheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AAED7F2B2382E2000051A0 /* DialogshowCheckinViewController.xib */; };
+		B0AAED832B238A21000051A0 /* checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAED822B238A21000051A0 /* checkin.swift */; };
 		B0AAFFCF2ADE87C500E774AB /* ManagementInterestMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAFFCD2ADE87C500E774AB /* ManagementInterestMoviesViewController.swift */; };
 		B0AAFFD02ADE87C500E774AB /* ManagementInterestMoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0AAFFCE2ADE87C500E774AB /* ManagementInterestMoviesViewController.xib */; };
 		B0AAFFD22ADE8DB300E774AB /* ManagementInterestMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAFFD12ADE8DB300E774AB /* ManagementInterestMoviesViewModel.swift */; };
@@ -763,8 +768,13 @@
 		B0A9EF9E2AD9757200B9EF1D /* ItemCartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCartTableViewCell.xib; sourceTree = "<group>"; };
 		B0A9EFA12AD9805F00B9EF1D /* CartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRouter.swift; sourceTree = "<group>"; };
 		B0A9EFA32AD982B200B9EF1D /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		B0AA89E32B24119000C4FEC6 /* DialogshowCheckinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogshowCheckinViewModel.swift; sourceTree = "<group>"; };
+		B0AA89E62B24127700C4FEC6 /* DialogshowCheckinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogshowCheckinRouter.swift; sourceTree = "<group>"; };
 		B0AAC2BC2B1F8411007B907D /* EmployeeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeInfoViewController.swift; sourceTree = "<group>"; };
 		B0AAC2BD2B1F8411007B907D /* EmployeeInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeInfoViewController.xib; sourceTree = "<group>"; };
+		B0AAED7E2B2382E2000051A0 /* DialogshowCheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogshowCheckinViewController.swift; sourceTree = "<group>"; };
+		B0AAED7F2B2382E2000051A0 /* DialogshowCheckinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogshowCheckinViewController.xib; sourceTree = "<group>"; };
+		B0AAED822B238A21000051A0 /* checkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkin.swift; sourceTree = "<group>"; };
 		B0AAFFCD2ADE87C500E774AB /* ManagementInterestMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementInterestMoviesViewController.swift; sourceTree = "<group>"; };
 		B0AAFFCE2ADE87C500E774AB /* ManagementInterestMoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementInterestMoviesViewController.xib; sourceTree = "<group>"; };
 		B0AAFFD12ADE8DB300E774AB /* ManagementInterestMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementInterestMoviesViewModel.swift; sourceTree = "<group>"; };
@@ -2410,6 +2420,22 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		B0AA89E22B24117700C4FEC6 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0AA89E32B24119000C4FEC6 /* DialogshowCheckinViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0AA89E52B24125B00C4FEC6 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				B0AA89E62B24127700C4FEC6 /* DialogshowCheckinRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		B0AAC2B82B1F83BE007B907D /* EmployeeInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2441,6 +2467,17 @@
 				B0AAC2BD2B1F8411007B907D /* EmployeeInfoViewController.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		B0AAED7D2B2382C2000051A0 /* DialogshowCheckin */ = {
+			isa = PBXGroup;
+			children = (
+				B0AA89E52B24125B00C4FEC6 /* router */,
+				B0AA89E22B24117700C4FEC6 /* viewModel */,
+				B0AAED7E2B2382E2000051A0 /* DialogshowCheckinViewController.swift */,
+				B0AAED7F2B2382E2000051A0 /* DialogshowCheckinViewController.xib */,
+			);
+			path = DialogshowCheckin;
 			sourceTree = "<group>";
 		};
 		B0AAFFC92ADE876100E774AB /* ManagementInterestMovieNewEdit */ = {
@@ -4451,6 +4488,7 @@
 		FE69A8A22AA190220017D891 /* DialogShow */ = {
 			isa = PBXGroup;
 			children = (
+				B0AAED7D2B2382C2000051A0 /* DialogshowCheckin */,
 				B09B6CD52AD7F8B200FF3E35 /* DialogPopUpShowListFoodChoose */,
 				B0B2B9FE2AD6EE37003CE655 /* DialogPopupListCinema */,
 				B0A88C092AD5A18F00A5E38E /* DialogShowInfoMoneyPayment */,
@@ -4944,6 +4982,7 @@
 				B0C8B6A92AE3A75E0022232E /* Nation.swift */,
 				B0B6CC092AEFA31000361CF7 /* Report.swift */,
 				B0A9004E2B13B41300F9F613 /* Notifaction.swift */,
+				B0AAED822B238A21000051A0 /* checkin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5250,6 +5289,7 @@
 				FE5C1D212AA2DE8800F9B3E5 /* ItemVideoShortCollectionViewCell.xib in Resources */,
 				B0224BCE2ACF1A1E002D57CB /* DialogInputMoneyViewController.xib in Resources */,
 				B0BE0A552AE02481001BFE08 /* DialogAccessUpdatesatusInterestViewController.xib in Resources */,
+				B0AAED812B2382E2000051A0 /* DialogshowCheckinViewController.xib in Resources */,
 				FE5C9E872AA42BE300FA235D /* Roboto-Condensed.ttf in Resources */,
 				B0ACA7A12AF33CCB007CC560 /* ReportpProductTableViewCell.xib in Resources */,
 				B0A468CE2B14E5A000AAA1D5 /* DialogshowInputURLVideoViewController.xib in Resources */,
@@ -5693,6 +5733,7 @@
 				B0A5AEE62AEB97E9007320BE /* ManagementVoucherRouter.swift in Sources */,
 				FE5C9E652AA427BB00FA235D /* WheelViewController.swift in Sources */,
 				FE6A86062AC5E66A00810FFB /* CreateProductRouter.swift in Sources */,
+				B0AA89E42B24119000C4FEC6 /* DialogshowCheckinViewModel.swift in Sources */,
 				FE97D89E2A76C2B600D223C9 /* ViewExtension.swift in Sources */,
 				FE5EA0F62AAE218D0039DEC3 /* HomeReportViewController.swift in Sources */,
 				B0A7B26E2AD3FCB10035828C /* MessageViewController.swift in Sources */,
@@ -5740,6 +5781,7 @@
 				B0A5AEE42AEB97D7007320BE /* ManagementVoucherViewModel.swift in Sources */,
 				B0A5A8A32AF15F0900DB6FCA /* ReportTicketALLRouter.swift in Sources */,
 				FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */,
+				B0AAED832B238A21000051A0 /* checkin.swift in Sources */,
 				B0A3FCBD2AEE048100468D02 /* ManageReportViewController.swift in Sources */,
 				FEAB99272AC1EAD700F024D5 /* ManagementRoomCreateViewController+Extensions.swift in Sources */,
 				FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */,
@@ -5770,6 +5812,7 @@
 				FE50965D2A7654AA00F5A457 /* MenuViewModel.swift in Sources */,
 				FE6A85F52AC5D92000810FFB /* MangamentProductViewModel.swift in Sources */,
 				FE5276F32A8D115600252843 /* ItemChairCollectionViewCell.swift in Sources */,
+				B0AA89E72B24127700C4FEC6 /* DialogshowCheckinRouter.swift in Sources */,
 				FECD093C2A9F9EDB00D97711 /* ListMovieShowNowRouter.swift in Sources */,
 				FE5276EC2A8D08AB00252843 /* BookingChairViewModel.swift in Sources */,
 				B0224BD12ACF1A1E002D57CB /* DialogInputQuantityViewController.swift in Sources */,
@@ -5829,6 +5872,7 @@
 				FE74CE132A91C46F0069259C /* Users.swift in Sources */,
 				FE65338F2AAA21A400C0739B /* itemTraillerCollectionViewCell.swift in Sources */,
 				B0CCC2962AD7D14C0015880A /* DetailProductRouter.swift in Sources */,
+				B0AAED802B2382E2000051A0 /* DialogshowCheckinViewController.swift in Sources */,
 				FE585F8F2A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.swift in Sources */,
 				B0A6BF082B0118E20098E832 /* EnterOTPViewController + Extension.swift in Sources */,
 				FE52546A2AC325EE003229A0 /* ManagementBillFoodComboViewController.swift in Sources */,

@@ -77,6 +77,8 @@ extension PaymentFoodComboViewController {
 //                    ManageCacheObject.saveCartInfo(databilldelete)
                     self.viewModel.maKeToViewController()
                 }
+            } else {
+                JonAlert.showError(message: response.message ?? "Có lỗi xảy ra trong quá trình kết nối")
             }
         })
     }

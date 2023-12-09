@@ -19,6 +19,7 @@ extension NewFeedViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Trailler>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
+                    self.viewModel.dataArraySearch.accept(data)
                 }
             }else {
                 JonAlert.show(message: "Có lỗi trong quá trình kết nối")

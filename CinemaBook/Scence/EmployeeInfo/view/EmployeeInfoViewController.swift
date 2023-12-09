@@ -34,7 +34,7 @@ class EmployeeInfoViewController: UIViewController {
         lbl_username.text = ManageCacheObject.getCurrentUserInfo().fullname
         lbl_email.text = ManageCacheObject.getCurrentUserInfo().email
         lbl_datebirthday.text = ManageCacheObject.getCurrentUserInfo().birthday
-        lbl_gender.text = ManageCacheObject.getCurrentUserInfo().gender == 0 ? "Nữ":"Name"
+        lbl_gender.text = ManageCacheObject.getCurrentUserInfo().gender == 0 ? "Nam":"Nữ"
         lbl_fullname.text = ManageCacheObject.getCurrentUserInfo().fullname
         avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: ManageCacheObject.getCurrentUserInfo().avatar)), placeholder: UIImage(named: "image_defauft_medium"))
         txt_address.text = ManageCacheObject.getCurrentUserInfo().address

@@ -130,22 +130,26 @@ extension BaseViewController{
        self.navigationController?.pushViewController(viewController, animated: true)
         
    }
-    func logout(){
-        
-       var user = Users()
+    func logoutaction() {
+        var user = Users()
         user.idusers = 0
         user.idrole = 0
-       
+        
         ManageCacheObject.setConfig(Config())
         ManageCacheObject.saveCurrentUserInfo(user)
-                var viewControllers = navigationController?.viewControllers
-                viewControllers?.removeAll()
+        var viewControllers = navigationController?.viewControllers
+        viewControllers?.removeAll()
         
         //        navigationController?.setViewControllers(viewControllers!, animated: true)
         
         let loginViewController = LoginRouter().viewController as! LoginViewController
         navigationController?.pushViewController(loginViewController, animated: true)
-        
+    }
+    
+    func logout(){
+     
+         logoutaction()
+       
     }
 
     func restart()

@@ -17,7 +17,7 @@ class NewFeedViewModel: BaseViewModel
 //    private var router: MovieRouter?
     
     var dataArray: BehaviorRelay<[Trailler]> = BehaviorRelay(value: [])
-    
+    var dataArraySearch: BehaviorRelay<[Trailler]> = BehaviorRelay(value: [])
 //    func bind(view: MovieViewController, router: MovieRouter)
 //    {
 //        self.view = view

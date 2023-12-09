@@ -9,7 +9,7 @@ class AccountViewModel{
     private var router: AccountRouter?
     
     public var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [])
-    
+    public var datacheckin: BehaviorRelay<checkin> = BehaviorRelay(value: checkin())
     func bind(view: AccountViewController, router: AccountRouter){
         self.view = view
         self.router = router
@@ -44,3 +44,12 @@ class AccountViewModel{
     
 }
 
+extension AccountViewModel {
+    func checksession() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.checksession)
+            .filterSuccessfulStatusCodes()
+            .mapJSON().asObservable()
+            .showAPIErrorToast()
+            .mapObject(type: APIResponse.self)
+    }
+}

@@ -41,7 +41,11 @@ extension AccountViewController {
                 default:
                     let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
                     cell.btn_logout.rx.tap.asDriver().drive(onNext: { [weak self]  in
-                        self?.presentModalLogout()
+                        if ManageCacheObject.getCurrentUserInfo().idrole != 3 {
+                            self?.presentModalLogout()
+                        }else {
+                            self!.checksession()
+                        }
                     }).disposed(by: self.rxbag)
                     return cell
             }
@@ -57,7 +61,7 @@ extension AccountViewController {
                     case 1:
                         let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell
                         cell.btn_logout.rx.tap.asDriver().drive(onNext: { [weak self]  in
-                            self?.presentModalLogout()
+                                self?.presentModalLogout()
                         }).disposed(by: self.rxbag)
                         cell.selectionStyle = .none
                         return cell
@@ -109,7 +113,12 @@ extension AccountViewController: LogoutConfirm {
         } catch {
             dLog("Co loi xay rar")
         }
-        self.logout()
+      
+       
+            self.logout()
+      
+        
+      
         
     }
     
@@ -126,4 +135,61 @@ extension AccountViewController: LogoutConfirm {
               present(nav, animated: true, completion: nil)
 
           }
+}
+extension AccountViewController {
+    func checksession() {
+        viewModel.checksession().subscribe(onNext: {
+            (response) in
+            dLog(response.code)
+            if response.code == RRHTTPStatusCode.ok.rawValue {
+  
+                var dataacc = self.viewModels.datacheckin.value
+                dataacc.timestart = "2023-12-08T16:06:22.449Z"
+                dataacc.timeend = "2023-12-08T16:06:22.449Z"
+                dataacc.checksession = 1
+                dataacc.idusers = ManageCacheObject.getCurrentUserInfo().idusers
+                dataacc.idcinema = ManageCacheObject.getCurrentCinema().idcinema
+                self.viewModels.datacheckin.accept(dataacc)
+                self.presentModalDialogConfirmWorkingSessionViewController(lbl_tittle: response.message ?? "",checkins: self.viewModels.datacheckin.value)
+//                self.logoutaction()
+               
+            } else if response.code == 300 {
+                
+//                self.logoutaction()
+            }else if response.code == 500 {
+                dLog(response.message)
+                self.logoutaction()
+            }
+        })
+    }
+    
+    func presentModalDialogConfirmWorkingSessionViewController(lbl_tittle:String,checkins:checkin) {
+        let dialogConfirmWorkingSessionViewController = DialogshowCheckinViewController()
+
+        dialogConfirmWorkingSessionViewController.view.backgroundColor = ColorUtils.blackTransparent()
+        dialogConfirmWorkingSessionViewController.lbl_info.text = lbl_tittle
+        dialogConfirmWorkingSessionViewController.checkins = checkins
+        dialogConfirmWorkingSessionViewController.type = 2
+//        dialogConfirmWorkingSessionViewController.delegate = self
+            let nav = UINavigationController(rootViewController: dialogConfirmWorkingSessionViewController)
+            // 1
+            nav.modalPresentationStyle = .overCurrentContext
+
+            
+            // 2
+            if #available(iOS 15.0, *) {
+                if let sheet = nav.sheetPresentationController {
+                    
+                    // 3
+                    sheet.detents = [.large()]
+                    
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+            // 4
+           
+            present(nav, animated: true, completion: nil)
+
+        }
 }

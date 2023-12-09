@@ -23,7 +23,7 @@ class BaseViewModel {
     let disposeBag = DisposeBag()
     public var media_request: BehaviorRelay<[Medias]> = BehaviorRelay(value: [])
     public var image_request: BehaviorRelay<String> = BehaviorRelay(value: "")
- 
+    public var datacheckin: BehaviorRelay<checkin> = BehaviorRelay(value: checkin())
     
     let serverUrl = URL(string: "http://localhost:5062/Phim/UploadImage")!
     let headers: HTTPHeaders = [:]
@@ -37,6 +37,15 @@ class BaseViewModel {
         dLog(err)
     }
     
+}
+extension BaseViewModel {
+//    func checksession() -> Observable<APIResponse> {
+//        return appServiceProvider.rx.request(.checksession)
+//            .filterSuccessfulStatusCodes()
+//            .mapJSON().asObservable()
+//            .showAPIErrorToast()
+//            .mapObject(type: APIResponse.self)
+//    }
 }
 extension BaseViewModel{
 

@@ -13,21 +13,45 @@ import RxRelay
 import RxSwift
 
 
-class NewFeedViewController: UIViewController {
+class NewFeedViewController: BaseViewController {
 
     var viewModel = NewFeedViewModel()
     
+    @IBOutlet weak var txt_search: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-  let rxbag = DisposeBag()
+
     
 //    var title_name = ["Tất cả","Phim","Video short","Trailler"]
     override func viewDidLoad() {
         super.viewDidLoad()
         resgiter()
         bindingtableviewcell()
-         getListvideo()
-    
+   
+        txt_search.rx.controlEvent(.editingChanged)
+                   .withLatestFrom(txt_search.rx.text)
+                   .subscribe(onNext:{ [self]  query in
+                       guard self != nil else { return }
+                
+                       let dataFirsts = viewModel.dataArraySearch.value
+                       let cloneDataFilter = viewModel.dataArray.value
+                       if !query!.isEmpty{
+                           var filteredDataArray = cloneDataFilter.filter({
+                               (value) -> Bool in
+                               let str1 = query!.uppercased().applyingTransform(.stripDiacritics, reverse: false)
+                               let str2 = value.titlevideo.uppercased().applyingTransform(.stripDiacritics, reverse: false)
+                               return str2!.contains(str1!)
+                           })
+                           viewModel.dataArray.accept(filteredDataArray)
+                      
+                       }else{
+                           viewModel.dataArray.accept(dataFirsts)
+                          
+                          
+                       }
+                       
+                   }).disposed(by: rxbag)
+        getListvideo()
     }
   
 //    func setupBmo() {

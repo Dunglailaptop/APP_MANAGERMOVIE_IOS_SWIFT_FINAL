@@ -96,6 +96,8 @@ enum ManagerConnections {
     case getlistinterestwithroom(date:String,idroom:Int)
     case getlistinterestMovieRoom(date:String,idroom:Int)
     case getlistbillwithroom(idroom:Int,idinterest:Int)
+    case checksession
+    case checkin(checkins:checkin)
 }
 
 extension ManagerConnections: TargetType {
@@ -272,6 +274,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlgetinterestlistMovieWithRoom
         case .getlistbillwithroom(let idroom,let idinterest):
             return APIEndPoint.Name.urlgetlistBillwithroom
+        case .checksession:
+            return APIEndPoint.Name.urlchecksession
+        case .checkin(let checkins):
+            return APIEndPoint.Name.urlcheckin
         }
     
     }
@@ -441,6 +447,10 @@ extension ManagerConnections: TargetType {
             return .get
         case .getlistbillwithroom(_,_):
             return .get
+        case .checksession:
+            return .get
+        case .checkin(_):
+            return .post
         }
 
         
@@ -632,6 +642,10 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .getlistbillwithroom(_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .checksession:
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .checkin(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -1104,6 +1118,17 @@ extension ManagerConnections: TargetType {
                 "idroom": idroom,
                 "idinterest":idinterest
             ]
+        case .checksession:
+            return [:]
+        case .checkin(let checkins):
+            return [
+                "idcheckin": checkins.idcheckin,
+                "timestart": checkins.timestart,
+                "timeend": checkins.timeend,
+                "idusers": checkins.idusers,
+                "checksession": checkins.checksession,
+                "idcinema": checkins.idcinema
+            ]
         }
        
     }
@@ -1281,6 +1306,10 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .getlistbillwithroom(_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .checksession:
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .checkin(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 
