@@ -99,7 +99,7 @@ class AccountInfoViewController: BaseViewController {
         super.viewWillAppear(animated)
        switch type_dy {
                         case "CREATE":
-                            view_role.isUserInteractionEnabled = false
+//                            view_role.isUserInteractionEnabled = false
                             var id = viewModel.dataArray.value
                             id.idusers = idUser
                             viewModel.dataArray.accept(id)

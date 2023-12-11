@@ -69,8 +69,19 @@ class BookingChairViewController: BaseViewController {
         binđDataTableCollectionView()
         resgiter()
          NotificationCenter.default.addObserver(self, selector: #selector(self.onDidReceiveNotification(_:)), name: NSNotification.Name("NotificationCallApi"), object: nil)
-       
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleNotification(_:)), name: NSNotification.Name("POPTOVIEW2"), object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any] {
+             
+//            viewModel.makePopToViewController()
+            self.navigationController?.popViewController(animated: true)
+//            self.callPopViewController()
+//            let viewcell = BookingChairRouter().viewController
+//            self.navigationController?.pushViewController(viewcell, animated: true)
+            }
     }
 
     override func viewWillAppear(_ animated: Bool) {

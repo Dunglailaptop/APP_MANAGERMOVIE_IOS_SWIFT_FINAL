@@ -87,9 +87,12 @@ class PaymentBillViewController: UIViewController {
                     viewModel.idbill.accept(reportTypeValue)
                  
                        
-                        getIdbill()
-                       
-                   
+                    getIdbill()
+//                    viewModel.makePopToSuccessPayment()
+//                    self.callPopViewController()
+                    let notificationName = Notification.Name("POPTOVIEW")
+                    let loginResponse = ["userInfo": []]
+                    NotificationCenter.default.post(name: notificationName, object: nil, userInfo: loginResponse)
                 }
             }
     }

@@ -31,6 +31,7 @@ class BookingChairRouter {
         let viewBookingProductCombo = BookingProductComboRouter().viewController as! BookingProductComboViewController
         viewBookingProductCombo.dataInfoMovie = dataInfoMovieS
         viewBookingProductCombo.dataChair = dataChairs
+        viewBookingProductCombo.callPopViewController = makePopToViewController
         sourceView?.navigationController?.pushViewController(viewBookingProductCombo, animated: true)
     }
     func makeToDetailBillViewController(idbill:Int) {

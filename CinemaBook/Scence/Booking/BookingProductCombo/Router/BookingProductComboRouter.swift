@@ -26,7 +26,7 @@ class BookingProductComboRouter {
        }
     
     func makePopToViewController() {
-        sourceView?.navigationController?.popViewController(animated: true)
+        sourceView?.navigationController?.popViewController(animated: false)
     }
   
     func makeToPaymentViewController(dataChairs:[chair],infoInterestMovie:InfoInterestMovie,dataFoodCombo:[FoodCombo]) {

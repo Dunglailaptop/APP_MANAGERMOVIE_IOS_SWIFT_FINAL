@@ -216,6 +216,7 @@ extension ManagementDetailMovieViewController {
             medias.append(medias_request)
             let nameVideo = nameVideo[0] + "/" + nameVideo[0];
               datavideo.videofile = nameVideo
+              datavideo.types = 1
         }
    
       

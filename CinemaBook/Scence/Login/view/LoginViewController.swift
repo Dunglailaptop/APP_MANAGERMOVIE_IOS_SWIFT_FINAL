@@ -101,7 +101,7 @@ extension LoginViewController {
                 lbl_error_username.isHidden = false
 
             if name.count < 2{
-                lbl_error_username.text = "Độ dài tối thiểu 10 ký tự"
+                lbl_error_username.text = "Độ dài tối thiểu 2 ký tự"
                 return false
             }
 

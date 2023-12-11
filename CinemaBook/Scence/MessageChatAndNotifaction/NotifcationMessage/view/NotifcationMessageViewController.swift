@@ -15,11 +15,15 @@ import JonAlert
 
 class NotifcationMessageViewController: BaseViewController {
 
+    @IBOutlet weak var btn_checkin: UIButton!
+    @IBOutlet weak var btn_notif: UIButton!
+    @IBOutlet weak var view_option_notifactionandcheckin: UIView!
     @IBOutlet weak var txt_search: UITextField!
     @IBOutlet weak var tableview: UITableView!
     var viewModel = NotifcationMessageViewModel()
     var router = NotifcationMessageRouter()
     var type = 0
+    var view1 = SystemCheckinViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
@@ -58,9 +62,24 @@ class NotifcationMessageViewController: BaseViewController {
         getNotication()
     }
     
-
+    @IBAction func btn_show_notifacation(_ sender: Any) {
+        btn_notif.backgroundColor = .blue
+        btn_notif.titleLabel?.textColor = .white
+        btn_checkin.backgroundColor = .white
+        btn_checkin.titleLabel?.textColor = .blue
+        view1.remove()
+       
+    }
+    
   
-
+    @IBAction func btn_show_list_checkin(_ sender: Any) {
+        btn_notif.backgroundColor = .white
+        btn_notif.titleLabel?.textColor = .blue
+        btn_checkin.backgroundColor = .blue
+        btn_checkin.titleLabel?.textColor = .white
+        addTopCustomViewController(view1, addTopCustom: 60)
+    }
+    
 }
 extension NotifcationMessageViewController: UITableViewDelegate {
     func resgiter() {

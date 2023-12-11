@@ -70,7 +70,7 @@ extension CustomTabItem {
                         return view
                 case .Ticket:
                    
-                        let view = EmployeeInfoViewController(nibName: "EmployeeInfoViewController", bundle: Bundle.main)
+                        let view = ManagementCheckinEmployeeViewController(nibName: "ManagementCheckinEmployeeViewController", bundle: Bundle.main)
                         return view
                 case .newFeed:
                     let view = NewFeedViewController(nibName: "NewFeedViewController", bundle: Bundle.main)

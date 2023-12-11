@@ -42,9 +42,16 @@ extension AccountInfoViewController {
     
     func postUpdateAccount() {
         viewModel.postUpdateAccount().subscribe(onNext: { (response) in
+            dLog(response.data)
             if response.code == RRHTTPStatusCode.ok.rawValue {
-                JonAlert.show(message: "Cập nhật thông tin tài khoản thành công")
-                self.viewModel.makePopToViewController()
+                if let data = Mapper<Users>().map(JSONObject: response.data) {
+                    var clonedata = ManageCacheObject.getCurrentUserInfo()
+                    clonedata.avatar = data.avatar
+                    ManageCacheObject.saveCurrentUserInfo(clonedata)
+                    JonAlert.show(message: "Cập nhật thông tin tài khoản thành công")
+                    self.viewModel.makePopToViewController()
+                }
+           
             }else {
                 JonAlert.show(message: response.message ?? "Có lỗi trong quá trình kết nối xin vui lòng kiểm tra lại")
             }

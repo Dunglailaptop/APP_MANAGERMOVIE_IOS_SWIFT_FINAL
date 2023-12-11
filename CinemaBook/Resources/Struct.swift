@@ -106,6 +106,7 @@ public struct APIEndPoint {
         static let urlgetlistBillwithroom = "/Bill/getlistinterestwithroom"
         static let urlchecksession = "/checkin/checksession"
         static let urlcheckin = "/checkin/checkin"
+        static let urlgetListcheckin = "/checkin/getlistcheckin"
 }
     
 }

@@ -44,6 +44,7 @@ class PaymentBillRouter {
         loadWebLinkViewController.idbill = idbilll
         loadWebLinkViewController.title_header = title_header
         loadWebLinkViewController.link = link_website
+        loadWebLinkViewController.callPopViewController = makePopToViewControllerSuccessPayment
         sourceView?.navigationController?.pushViewController(loadWebLinkViewController, animated: true)
     }
   

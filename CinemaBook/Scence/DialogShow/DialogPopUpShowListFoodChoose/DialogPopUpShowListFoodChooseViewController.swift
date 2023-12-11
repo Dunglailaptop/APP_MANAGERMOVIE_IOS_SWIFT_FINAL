@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RxRelay
+import JonAlert
 
 class DialogPopUpShowListFoodChooseViewController: BaseViewController {
 
@@ -121,7 +122,8 @@ class DialogPopUpShowListFoodChooseViewController: BaseViewController {
         ManageCacheObject.saveCartInfo(dataDetailFoodCombo)
         nootifacationCart(foodcombo: dataDetailFoodCombo,food: dataFood!, foodwater: dataFoodWater!)
          dLog(dataDetailFoodCombo)
-       
+        JonAlert.showSuccess(message: "Đã thêm sản phẩm vào giỏ hàng thành công")
+        dismiss(animated: true)
 //        ManageCacheObject.saveCartInfo(dataDetailFoodCombo)
     }
     

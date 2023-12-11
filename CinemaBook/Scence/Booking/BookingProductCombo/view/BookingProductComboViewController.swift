@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class BookingProductComboViewController: UIViewController {
-
+    var callPopViewController:() -> Void = {}
     @IBOutlet weak var lbl_number_chair: UILabel!
     @IBOutlet weak var lbl_price_chair: UILabel!
     @IBOutlet weak var lbl_name_movie: UILabel!
@@ -28,7 +28,29 @@ class BookingProductComboViewController: UIViewController {
         register()
         bindingtablecell()
         lbl_info_interest.adjustsFontSizeToFitWidth = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("POPTOVIEW"), object: nil)
+
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any] {
+            dLog("vao day")
+//            maketoviewcontrollers()
+//            self.navigationController?.popViewController(animated: true)
+            viewModel.makePopToViewController()
+//            self.callPopViewController()
+//            let viewcell = BookingChairRouter().viewController
+//            self.navigationController?.pushViewController(viewcell, animated: true)
+//            let notificationName = Notification.Name("POPTOVIEW2")
+//            let loginResponse = ["userInfo": []]
+//            NotificationCenter.default.post(name: notificationName, object: nil, userInfo: loginResponse)
+            }
+    }
+    
+    func maketoviewcontrollers() {
+//        viewModel.makePopToViewController()
     }
 
     override func viewWillAppear(_ animated: Bool) {

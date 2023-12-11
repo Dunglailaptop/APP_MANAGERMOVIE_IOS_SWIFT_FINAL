@@ -17,6 +17,8 @@ class LoadWebLinkViewController: BaseViewController {
     @IBOutlet weak var lbl_title_header: UILabel!
     //  var webView: WKWebView!
     var idbill = 0
+    var callPopViewController:() -> Void = {}
+    var type = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +36,14 @@ class LoadWebLinkViewController: BaseViewController {
    
     
     @IBAction func actionBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+       if  type == "Paymentfood"
+        {
+           self.navigationController?.popViewController(animated: true)
+       }else {
+           self.callPopViewController()
+       }
+       
         let notificationName = Notification.Name("idbillcheckPaymentVNPAY")
         let loginResponse = ["userInfo": ["Report_type": idbill]]
         NotificationCenter.default.post(name: notificationName, object: nil, userInfo: loginResponse)

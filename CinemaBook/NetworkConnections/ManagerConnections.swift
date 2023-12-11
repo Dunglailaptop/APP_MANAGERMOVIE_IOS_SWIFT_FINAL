@@ -98,6 +98,7 @@ enum ManagerConnections {
     case getlistbillwithroom(idroom:Int,idinterest:Int)
     case checksession
     case checkin(checkins:checkin)
+    case getlistcheckin(idcinema:Int,iduser:Int,timestart:String,timeend:String,type:Int)
 }
 
 extension ManagerConnections: TargetType {
@@ -278,6 +279,8 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlchecksession
         case .checkin(let checkins):
             return APIEndPoint.Name.urlcheckin
+        case .getlistcheckin(let idcinema,let iduser,let timestart,let timeend,let type):
+            return APIEndPoint.Name.urlgetListcheckin
         }
     
     }
@@ -451,6 +454,8 @@ extension ManagerConnections: TargetType {
             return .get
         case .checkin(_):
             return .post
+        case .getlistcheckin(_,_,_,_,_):
+            return .get
         }
 
         
@@ -646,6 +651,8 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         case .checkin(_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .getlistcheckin(_,_,_,_,_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
         }
    
     }
@@ -913,7 +920,7 @@ extension ManagerConnections: TargetType {
         case .CreateCategoryChair(let categoryinfo):
             return [
                 "price": categoryinfo.price,
-                "namecategory": categoryinfo.namecategorychair,
+                "namecategory": categoryinfo.namecategory,
                 "colorchair": categoryinfo.colorchair,
                 "idroom": categoryinfo.idroom
             ]
@@ -970,7 +977,8 @@ extension ManagerConnections: TargetType {
                 "picture": food.picture,
                 "pricefood": food.pricefood,
                 "idcategoryfood": food.idcategoryfood,
-                "datecreate": "2023-09-27T15:46:39.033Z"
+                "datecreate": "2023-09-27T15:46:39.033Z",
+                "namecategoryfood": food.namecategoryfood
             ]
         case .getDetailfood(let idfood):
             return [
@@ -1128,6 +1136,14 @@ extension ManagerConnections: TargetType {
                 "idusers": checkins.idusers,
                 "checksession": checkins.checksession,
                 "idcinema": checkins.idcinema
+            ]
+        case .getlistcheckin(let idcinema,let  iduser,let timestart,let timeend,let type):
+            return [
+                "idcinema":idcinema,
+                    "iduser":iduser,
+                    "timestart":timestart,
+                    "timeend":timeend,
+                "type":type
             ]
         }
        
@@ -1310,6 +1326,8 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         case .checkin(_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .getlistcheckin(_,_,_,_,_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
         }
     }
 

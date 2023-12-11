@@ -28,6 +28,14 @@
 		B04F23B02AFCE67F00D83F47 /* LoadWebLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F23AB2AFCE67F00D83F47 /* LoadWebLinkViewController.swift */; };
 		B04F23B12AFCE67F00D83F47 /* LoadWebLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B04F23AC2AFCE67F00D83F47 /* LoadWebLinkViewController.xib */; };
 		B04F23B22AFCE67F00D83F47 /* LoadWebLinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */; };
+		B061D8D72B2449E700DD0564 /* SystemCheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061D8D52B2449E700DD0564 /* SystemCheckinViewController.swift */; };
+		B061D8D82B2449E700DD0564 /* SystemCheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B061D8D62B2449E700DD0564 /* SystemCheckinViewController.xib */; };
+		B061D8DC2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061D8DA2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.swift */; };
+		B061D8DD2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B061D8DB2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.xib */; };
+		B061D8DF2B244D3300DD0564 /* SystemCheckinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061D8DE2B244D3300DD0564 /* SystemCheckinRouter.swift */; };
+		B061D8E12B244D4400DD0564 /* SystemCheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061D8E02B244D4400DD0564 /* SystemCheckinViewModel.swift */; };
+		B061D8E52B2451D300DD0564 /* SystemitemCheckinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B061D8E32B2451D300DD0564 /* SystemitemCheckinTableViewCell.swift */; };
+		B061D8E62B2451D300DD0564 /* SystemitemCheckinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B061D8E42B2451D300DD0564 /* SystemitemCheckinTableViewCell.xib */; };
 		B0806AED2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0806AEB2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift */; };
 		B0806AEE2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0806AEC2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib */; };
 		B0989D5C2B1F05570003A117 /* ItemBillWithRoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0989D5A2B1F05570003A117 /* ItemBillWithRoomCollectionViewCell.swift */; };
@@ -626,6 +634,14 @@
 		B04F23AB2AFCE67F00D83F47 /* LoadWebLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadWebLinkViewController.swift; sourceTree = "<group>"; };
 		B04F23AC2AFCE67F00D83F47 /* LoadWebLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadWebLinkViewController.xib; sourceTree = "<group>"; };
 		B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadWebLinkRouter.swift; sourceTree = "<group>"; };
+		B061D8D52B2449E700DD0564 /* SystemCheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCheckinViewController.swift; sourceTree = "<group>"; };
+		B061D8D62B2449E700DD0564 /* SystemCheckinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemCheckinViewController.xib; sourceTree = "<group>"; };
+		B061D8DA2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementCheckinEmployeeViewController.swift; sourceTree = "<group>"; };
+		B061D8DB2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementCheckinEmployeeViewController.xib; sourceTree = "<group>"; };
+		B061D8DE2B244D3300DD0564 /* SystemCheckinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCheckinRouter.swift; sourceTree = "<group>"; };
+		B061D8E02B244D4400DD0564 /* SystemCheckinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemCheckinViewModel.swift; sourceTree = "<group>"; };
+		B061D8E32B2451D300DD0564 /* SystemitemCheckinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemitemCheckinTableViewCell.swift; sourceTree = "<group>"; };
+		B061D8E42B2451D300DD0564 /* SystemitemCheckinTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemitemCheckinTableViewCell.xib; sourceTree = "<group>"; };
 		B0806AEB2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAccountSettingMangerTableViewCell.swift; sourceTree = "<group>"; };
 		B0806AEC2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemAccountSettingMangerTableViewCell.xib; sourceTree = "<group>"; };
 		B0989D5A2B1F05570003A117 /* ItemBillWithRoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBillWithRoomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1365,6 +1381,60 @@
 				B04F23AE2AFCE67F00D83F47 /* LoadWebLinkRouter.swift */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		B061D8D12B2449B600DD0564 /* SystemCheckin */ = {
+			isa = PBXGroup;
+			children = (
+				B061D8D42B2449C600DD0564 /* viewModel */,
+				B061D8D32B2449C400DD0564 /* Router */,
+				B061D8D22B2449C100DD0564 /* view */,
+			);
+			path = SystemCheckin;
+			sourceTree = "<group>";
+		};
+		B061D8D22B2449C100DD0564 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B061D8E22B2451B000DD0564 /* cell */,
+				B061D8D52B2449E700DD0564 /* SystemCheckinViewController.swift */,
+				B061D8D62B2449E700DD0564 /* SystemCheckinViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B061D8D32B2449C400DD0564 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B061D8DE2B244D3300DD0564 /* SystemCheckinRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B061D8D42B2449C600DD0564 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B061D8E02B244D4400DD0564 /* SystemCheckinViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B061D8D92B244AF700DD0564 /* ManagementCheckinEmployee */ = {
+			isa = PBXGroup;
+			children = (
+				B061D8DA2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.swift */,
+				B061D8DB2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.xib */,
+			);
+			path = ManagementCheckinEmployee;
+			sourceTree = "<group>";
+		};
+		B061D8E22B2451B000DD0564 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B061D8E32B2451D300DD0564 /* SystemitemCheckinTableViewCell.swift */,
+				B061D8E42B2451D300DD0564 /* SystemitemCheckinTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		B0806AE82B076EEF0091B499 /* section2 */ = {
@@ -2439,6 +2509,7 @@
 		B0AAC2B82B1F83BE007B907D /* EmployeeInfo */ = {
 			isa = PBXGroup;
 			children = (
+				B061D8D92B244AF700DD0564 /* ManagementCheckinEmployee */,
 				B0AAC2BB2B1F83E1007B907D /* view */,
 				B0AAC2BA2B1F83DE007B907D /* viewModel */,
 				B0AAC2B92B1F83DA007B907D /* Router */,
@@ -4929,6 +5000,7 @@
 		FEAC96C52A5A561700B49C80 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
+				B061D8D12B2449B600DD0564 /* SystemCheckin */,
 				B0AAC2B82B1F83BE007B907D /* EmployeeInfo */,
 				B0A900342B13816100F9F613 /* ListCinema */,
 				B0A1AB122B1257E30046A132 /* DetailInfoCinema */,
@@ -5249,6 +5321,7 @@
 				B0A147812AEA35EF00668821 /* ManagementItemTicketTableViewCell.xib in Resources */,
 				B0A9A4612AD6617C005C16C1 /* ReportDetailTableViewCell.xib in Resources */,
 				FE5C9E8F2AA42BE300FA235D /* Roboto-Thin.ttf in Resources */,
+				B061D8DD2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.xib in Resources */,
 				FE5096572A76534800F5A457 /* SplachScreenViewController.xib in Resources */,
 				FEAC96A22A5A55CD00B49C80 /* LaunchScreen.storyboard in Resources */,
 				FECD09312A9F9CD400D97711 /* ListMovieShowNowViewController.xib in Resources */,
@@ -5362,6 +5435,7 @@
 				B0A900432B1384E100F9F613 /* ItemCinemasTableViewCell.xib in Resources */,
 				B0A5E45F2AF4F31800B3C4D8 /* ItemMovieReportMovieTableViewCell.xib in Resources */,
 				B0A6F9ED2AF287880057CE02 /* ItemMovieReportsCollectionViewCell.xib in Resources */,
+				B061D8D82B2449E700DD0564 /* SystemCheckinViewController.xib in Resources */,
 				B0A470EF2AE7B06A0081C8AA /* DialogManagementCategoryChairViewController.xib in Resources */,
 				B0A9003B2B1381B100F9F613 /* ListCinemaViewController.xib in Resources */,
 				FE5C9E812AA42BE300FA235D /* Roboto-Medium.ttf in Resources */,
@@ -5379,6 +5453,7 @@
 				B0A9D7AF2ADD8699008AD03D /* ManagementBillProductItemTableViewCell.xib in Resources */,
 				B0A88C0D2AD5A1C900A5E38E /* DialogShowInfoMoneyViewController.xib in Resources */,
 				B0A9A4652AD6619C005C16C1 /* ReportTicketAllTableViewCell.xib in Resources */,
+				B061D8E62B2451D300DD0564 /* SystemitemCheckinTableViewCell.xib in Resources */,
 				FE5D08312AA23691004FA3D9 /* TraillerViewController.xib in Resources */,
 				B0AF7A3A2AD3E2DC008AE1F2 /* ChatMessageViewController.xib in Resources */,
 				FE6A85FC2AC5D9F700810FFB /* ItemCollectionProductCategoryCollectionViewCell.xib in Resources */,
@@ -5583,6 +5658,7 @@
 				B0AF53E52AF530F5005F2A27 /* ReportFoodItemCellTableViewCell.swift in Sources */,
 				FE52523B2AAF79CC00296246 /* ManagementEmployeeViewController.swift in Sources */,
 				B0A1477B2AEA2E7000668821 /* ManagementDetailBillViewController.swift in Sources */,
+				B061D8D72B2449E700DD0564 /* SystemCheckinViewController.swift in Sources */,
 				B0A12B352AEBFE00000B6FC4 /* CreateVoucherRouter.swift in Sources */,
 				B0A9A21A2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.swift in Sources */,
 				FE6A85F72AC5D95000810FFB /* MangamentProductRouter.swift in Sources */,
@@ -5633,6 +5709,7 @@
 				FE5096612A76578C00F5A457 /* SplachScreenViewModel.swift in Sources */,
 				B0AC2D032ADE4F5500E4BB7E /* ManagementBillFoodComboViewModel.swift in Sources */,
 				FE491EE42AA0F87800BCA4D1 /* AccountViewController+Extension.swift in Sources */,
+				B061D8DC2B244B1600DD0564 /* ManagementCheckinEmployeeViewController.swift in Sources */,
 				FE5C9E372AA4231C00FA235D /* AccountInfoViewController+Extension.swift in Sources */,
 				FE5C9E632AA427BB00FA235D /* AlphaTransitioning.swift in Sources */,
 				B03857342ADC30FE00814F02 /* ManageBillAccountViewController.swift in Sources */,
@@ -5782,6 +5859,7 @@
 				B0A5A8A32AF15F0900DB6FCA /* ReportTicketALLRouter.swift in Sources */,
 				FE5C9E602AA427BB00FA235D /* SambagYearPickerViewController.swift in Sources */,
 				B0AAED832B238A21000051A0 /* checkin.swift in Sources */,
+				B061D8E52B2451D300DD0564 /* SystemitemCheckinTableViewCell.swift in Sources */,
 				B0A3FCBD2AEE048100468D02 /* ManageReportViewController.swift in Sources */,
 				FEAB99272AC1EAD700F024D5 /* ManagementRoomCreateViewController+Extensions.swift in Sources */,
 				FE5461232AC068D40015DB93 /* ManagementRoomViewController+Extensions.swift in Sources */,
@@ -5835,6 +5913,7 @@
 				FEAB99232AC1DEE800F024D5 /* MangementRoomCreateRouter.swift in Sources */,
 				FE5C6B892AA4D09000852DBE /* Medias.swift in Sources */,
 				B0A9A4682AD661B2005C16C1 /* ReportMovieTableViewCell.swift in Sources */,
+				B061D8DF2B244D3300DD0564 /* SystemCheckinRouter.swift in Sources */,
 				FE5C9E682AA427BB00FA235D /* SambagSelectionLimit.swift in Sources */,
 				FEFBFB742A9F93A800A85879 /* itemMovieTableViewCell.swift in Sources */,
 				B0AB37A22ADD271C00C2C102 /* ManageBillFoodAccountViewModel.swift in Sources */,
@@ -5843,6 +5922,7 @@
 				B0A569CA2AE9496400177360 /* DetailMovieInfoViewController.swift in Sources */,
 				FE5276E72A8D067300252843 /* BookingChairViewController.swift in Sources */,
 				B0A40E3F2AE2DC85008D07FC /* ManagementDetailMovieViewController.swift in Sources */,
+				B061D8E12B244D4400DD0564 /* SystemCheckinViewModel.swift in Sources */,
 				FE51B8922A9A5DA400A1495D /* headerTableViewCell.swift in Sources */,
 				B0A12B2F2AEBEF72000B6FC4 /* CaculatorInputMoneyViewController.swift in Sources */,
 				B0A6BF0B2B0118E20098E832 /* EnterOTPRouter.swift in Sources */,

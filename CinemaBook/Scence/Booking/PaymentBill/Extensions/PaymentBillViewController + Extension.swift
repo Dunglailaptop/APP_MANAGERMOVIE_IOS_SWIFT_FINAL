@@ -140,6 +140,7 @@ extension PaymentBillViewController {
         }
         billinfo.combobills = dataFoodCombo
         viewModel.databill.accept(billinfo)
+        viewModel.databillhistoryVoucher.accept(billinfo) // them vao 1 danh sach bill de luu
         viewModel.paymentVNPAY.accept(billVNPAY)
     }
     
@@ -211,11 +212,12 @@ extension PaymentBillViewController {
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
 
+              
+                    viewModel.makePopToSuccessPayment()
+                    self.callPopViewController()
+                
                 JonAlert.showSuccess(message: response.message ?? "có lỗi xảy ra")
-//                    viewModel.makePopToSuccessPayment()
-//                    self.callPopViewController()
-                  
-                self.navigationController?.popToViewController((self.navigationController?.viewControllers[4])!, animated: true)
+//                self.navigationController?.popToViewController((self.navigationController?.viewControllers[4])!, animated: true)
                 showNotification()
             }else {
                 JonAlert.showError(message: response.message ?? "Có lỗi xảy ra")
@@ -278,24 +280,25 @@ extension PaymentBillViewController {
             element in
             var datavoucher = self.viewModel.dataVoucher.value
             var databill = self.viewModel.databill.value
-            if viewModel.databillhistoryVoucher.value.idbill == 0 {
-                viewModel.databillhistoryVoucher.accept(databill)
-            }
+//            if viewModel.databillhistoryVoucher.value.idbill == 0 {
+//                viewModel.databillhistoryVoucher.accept(databill)
+//            }
             var datavoucherhis = viewModel.databillhistoryVoucher.value
             datavoucher.enumerated().forEach{
                 (index,value) in
                 
                 if element.idvoucher == value.idvoucher {
                     datavoucher[index].isCheck = value.isCheck == ACTIVE ? DEACTIVE:ACTIVE
-                    self.lbl_reduce.text = String(value.price == 0 ? String(value.percent) + "%": Utils.stringVietnameseFormatWithNumber(amount: value.price) )
-                    if value.price != 0 {
+//                    self.lbl_reduce.text = String(value.price == 0 ? String(value.percent) + "%": Utils.stringVietnameseFormatWithNumber(amount: value.price) )
+                    if value.price != 0 && databill.totalamount > value.price {
                         var total_final = databill.totalamount - value.price
                         var total_reduce = Utils.stringVietnameseFormatWithNumber(amount: total_final)
                         self.lbl_total_bill.text = total_reduce
                         databill.totalamount = total_final ?? 0
                         databill.idvoucher = element.idvoucher
-                        self.lbl_total_amount_vat.text = total_reduce
-                        self.lbl_total_amount_final.text = total_reduce
+                        self.lbl_total_amount_vat.text = total_reduce + "đ"
+                        self.lbl_total_amount_final.text = total_reduce + "đ"
+                        self.lbl_reduce.text = String(value.price == 0 ? String(value.percent) + "%": Utils.stringVietnameseFormatWithNumber(amount: value.price) )
                     }else
                     {
                         var percent_100 =  value.percent
@@ -305,10 +308,12 @@ extension PaymentBillViewController {
                         self.lbl_total_bill.text = total_reduce_percent
                         databill.totalamount = total_final ?? 0
                         databill.idvoucher = element.idvoucher
-                        self.lbl_total_amount_vat.text = total_reduce_percent
-                        self.lbl_total_amount_final.text = total_reduce_percent
+                        self.lbl_total_amount_vat.text = total_reduce_percent + "đ"
+                        self.lbl_total_amount_final.text = total_reduce_percent + "đ"
+                        self.lbl_reduce.text = String(value.price == 0 ? String(value.percent) + "%": Utils.stringVietnameseFormatWithNumber(amount: value.price) )
                     }
                     if value.isCheck == ACTIVE {
+                        dLog(datavoucherhis)
                         var datatotalamount = Utils.stringVietnameseFormatWithNumber(amount: datavoucherhis.totalamount)
                         self.lbl_total_bill.text = datatotalamount
                         databill.totalamount = Int(datavoucherhis.totalamount) ?? 0
@@ -317,10 +322,22 @@ extension PaymentBillViewController {
                         self.lbl_total_amount_final.text = datatotalamount
                         self.lbl_reduce.text = "0"
                     }
+                    if databill.totalamount < value.price {
+                        self.lbl_reduce.text = "0"
+                    }
+//                    if value.isCheck == ACTIVE {
+//                        var datatotalamount = Utils.stringVietnameseFormatWithNumber(amount: datavoucherhis.totalamount)
+//                        self.lbl_total_bill.text = datatotalamount
+//                        databill.totalamount = Int(datavoucherhis.totalamount) ?? 0
+//                        databill.idvoucher = element.idvoucher
+//                        self.lbl_total_amount_vat.text = datatotalamount
+//                        self.lbl_total_amount_final.text = datatotalamount
+//                        self.lbl_reduce.text = "0"
+//                    }
                  
                 }else {
                     datavoucher[index].isCheck = DEACTIVE
-                
+                     
                 }
                 
                 

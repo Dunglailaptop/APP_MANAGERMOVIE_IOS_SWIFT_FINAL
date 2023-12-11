@@ -33,6 +33,7 @@ class PaymentFoodComboRouter: NSObject {
         loadWebLinkViewController.idbill = idbilll
         loadWebLinkViewController.title_header = title_header
         loadWebLinkViewController.link = link_website
+        loadWebLinkViewController.type = "Paymentfood"
         sourceView?.navigationController?.pushViewController(loadWebLinkViewController, animated: true)
     }
 }

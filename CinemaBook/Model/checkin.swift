@@ -32,3 +32,30 @@ struct checkin: Mappable {
          idcinema <- map["idcinema"]
     }
 }
+struct Datacheckin: Mappable {
+    var  idusers = 0
+    var   avatar = ""
+    var nameusers = ""
+    var idcheckin = 0
+    var timestart = ""
+    var timeend = ""
+    var checksession = 0
+    var idcinema = 0
+    
+    init?(map: Map) {
+        
+    }
+    
+    init(){}
+    
+    mutating func mapping(map: Map) {
+        idusers <- map["idusers"]
+        avatar <- map["avatar"]
+        nameusers <- map["nameusers"]
+        idcheckin <- map["idcheckin"]
+        timestart <- map["timestart"]
+        timeend <- map["timeend"]
+        checksession <- map["checksession"]
+        idcinema <- map["idcinema"]
+    }
+}

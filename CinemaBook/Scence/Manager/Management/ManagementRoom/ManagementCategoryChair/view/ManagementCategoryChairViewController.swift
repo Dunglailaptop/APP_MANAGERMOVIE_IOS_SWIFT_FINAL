@@ -176,6 +176,12 @@ extension ManagementCategoryChairViewController: DialogCreateCategoryChair {
     func callbackcreateCategoryChair(categorychairinfo: CategoryChair,type:String) {
         switch type {
         case "CREATE":
+//            viewModel?.dataCategoryChair.accept(categorychairinfo)
+            var datacategorychair = viewModel?.dataCategoryChair.value
+            datacategorychair?.namecategory = categorychairinfo.namecategory
+            datacategorychair?.colorchair = categorychairinfo.colorchair
+            datacategorychair?.price = categorychairinfo.price
+            datacategorychair?.idroom = categorychairinfo.idroom
             viewModel?.dataCategoryChair.accept(categorychairinfo)
             dLog(categorychairinfo)
             createCategoryChair()
