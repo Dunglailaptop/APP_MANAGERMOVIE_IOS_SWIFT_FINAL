@@ -135,6 +135,7 @@ extension OrderProductViewController {
             (response) in
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<FoodCombo>().mapArray(JSONObject: response.data) {
+                    dLog(data)
                     self.viewModel.dataArraySearch.accept(data)
                     self.viewModel.dataArray.accept(data)
                 }

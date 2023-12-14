@@ -43,10 +43,12 @@ extension AccountInfoViewController {
     func postUpdateAccount() {
         viewModel.postUpdateAccount().subscribe(onNext: { (response) in
             dLog(response.data)
+            dLog(response.code)
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<Users>().map(JSONObject: response.data) {
                     var clonedata = ManageCacheObject.getCurrentUserInfo()
                     clonedata.avatar = data.avatar
+                    clonedata.fullname = data.fullname
                     ManageCacheObject.saveCurrentUserInfo(clonedata)
                     JonAlert.show(message: "Cập nhật thông tin tài khoản thành công")
                     self.viewModel.makePopToViewController()

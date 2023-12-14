@@ -109,7 +109,7 @@ struct PaymentFoodCombo: Mappable {
         var idcinemas = 0
         var foodComboBills = [FoodComboList]()
         var idvoucher = 0
-    
+       var listfood = [listfoodaddbill]()
     init() {
         
     }
@@ -129,6 +129,7 @@ struct PaymentFoodCombo: Mappable {
         iduser <- map["iduser"]
         idcinemas <- map["idcinemas"]
         idvoucher <- map["idvoucher"]
+        listfood <- map["listfood"]
     }
 }
 struct PaymentInfoBillFoodCombo: Mappable {
@@ -138,6 +139,7 @@ struct PaymentInfoBillFoodCombo: Mappable {
         var time = ""
         var status = 0
         var listfoodcombo = [FoodCombo]()
+        var listfood = [listfoodaddbill]()
     init() {
         
     }
@@ -153,6 +155,7 @@ struct PaymentInfoBillFoodCombo: Mappable {
         listfoodcombo <- map["listfoodcombo"]
         id <- map["id"]
         status <- map["status"]
+        listfood <- map["listfood"]
     }
 }
 
@@ -161,7 +164,7 @@ struct FoodComboList: Mappable {
     var id = 0
     var idfoodcombo = 0
     var idfoodcombobill = 0
-
+    var numberbuyincombo = 0
     init() {
         
     }
@@ -174,6 +177,7 @@ struct FoodComboList: Mappable {
         id <- map["id"]
         idfoodcombo <- map["idfoodcombo"]
         idfoodcombobill <- map["idfoodcombobill"]
+        numberbuyincombo <- map["numberbuyincombo"]
     }
 }
 struct BillInfoAccount: Mappable {
@@ -351,4 +355,25 @@ struct billinfowithroom: Mappable {
          totalamount <- map["totalamount"]
          chairess  <- map["chairess"]
     }
+}
+struct listfoodaddbill: Mappable {
+        var idfood = 0
+        var numberfood = 0
+         var namefood = ""
+        var picture = ""
+       var idcombo = 0
+    init(){}
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        idfood <- map["idfood"]
+        numberfood <- map["numberfood"]
+        namefood <- map["namefood"]
+        picture <- map["picture"]
+        idcombo <- map["idcombo"]
+    }
+    
+   
 }

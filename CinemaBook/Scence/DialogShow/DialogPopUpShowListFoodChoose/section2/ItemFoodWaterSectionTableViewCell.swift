@@ -38,12 +38,27 @@ class ItemFoodWaterSectionTableViewCell: UITableViewCell {
     
 }
 extension ItemFoodWaterSectionTableViewCell: UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+ 
 
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var data = self.viewModel?.dataArrayFoodWater.value
+        data?.enumerated().forEach{
+            (index,value) in
+            if value.idfood == viewModel?.dataArrayFoodWater.value[indexPath.row].idfood && value.isSelected == DEACTIVE {
+                data![index].isSelected = ACTIVE
+                data![index].quantityRealTime = 1
+            }else if viewModel!.dataArrayFoodWater.value.filter{$0.isSelected == ACTIVE}.count > 0  {
+                data![index].isSelected = DEACTIVE
+                data![index].quantityRealTime = 0
+            }
+             
+            
+            
+        }
+        self.viewModel?.dataArrayFoodWater.accept(data!)
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.dataArrayFoodWater.value.count ?? 0
@@ -51,32 +66,36 @@ extension ItemFoodWaterSectionTableViewCell: UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDialogFoodComboWaterTableViewCell", for: indexPath) as! ItemDialogFoodComboWaterTableViewCell
         cell.lbl_name_food.text = viewModel?.dataArrayFoodWater.value[indexPath.row].namefood
-        cell.lbl_number.text = String(viewModel!.dataArrayFoodWater.value[indexPath.row].quantityRealTime)
+//        cell.lbl_number.text = String(viewModel!.dataArrayFoodWater.value[indexPath.row].quantityRealTime)
         var data = viewModel?.dataArrayFoodWater.value
         cell.image_view.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayFoodWater.value[indexPath.row].picture)!)), placeholder:  UIImage(named: "image_defauft_medium"))
-        cell.btn_inscreament.rx.tap.asDriver().drive(onNext: {
-            data?.enumerated().forEach{
-                (index,value) in
-                if self.viewModel?.dataArrayFoodWater.value[indexPath.row].idfood == value.idfood {
-                   
-                    data![index].quantityRealTime += 1
-                    cell.lbl_number.text = String( data![index].quantityRealTime)
-                }
-                
-            }
-          
-        })
-        cell.btn_descreament.rx.tap.asDriver().drive(onNext: {
-            data?.enumerated().forEach{
-                (index,value) in
-                if self.viewModel?.dataArrayFoodWater.value[indexPath.row].idfood == value.idfood && data![index].quantityRealTime > 1 {
-                    data![index].quantityRealTime -= 1
-                    cell.lbl_number.text = String( data![index].quantityRealTime)
-                }
-            }
-          
-        })
-        self.viewModel?.dataArrayFoodWater.accept(data!)
+        cell.image_check.image = UIImage(named: self.viewModel?.dataArrayFoodWater.value[indexPath.row].isSelected == DEACTIVE ? "icon-check-enable":"check")
+//        cell.btn_inscreament.rx.tap.asDriver().drive(onNext: {
+//            data?.enumerated().forEach{
+//                (index,value) in
+//                if self.viewModel?.dataArrayFoodWater.value[indexPath.row].idfood == value.idfood {
+//
+//                    data![index].quantityRealTime += 1
+//                    cell.lbl_number.text = String( data![index].quantityRealTime)
+//                    self.viewModel?.dataArrayFoodWater.accept(data!)
+//                }
+//
+//            }
+//
+//        })
+//        cell.btn_descreament.rx.tap.asDriver().drive(onNext: {
+//            data?.enumerated().forEach{
+//                (index,value) in
+//                if self.viewModel?.dataArrayFoodWater.value[indexPath.row].idfood == value.idfood && data![index].quantityRealTime > 1 {
+//                    data![index].quantityRealTime -= 1
+//                    cell.lbl_number.text = String( data![index].quantityRealTime)
+//                    self.viewModel?.dataArrayFoodWater.accept(data!)
+//                }
+//            }
+//
+//        })
+////        self.viewModel?.dataArrayFoodWater.accept(data!)
+//        dLog(self.viewModel?.dataArrayFoodWater.value)
         cell.selectionStyle = .none
         return cell
     }

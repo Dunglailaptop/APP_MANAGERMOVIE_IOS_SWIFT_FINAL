@@ -16,6 +16,7 @@ class ManageDetailBillFoodAccountViewModel {
     private var router: ManageDetailBillFoodAccountRouter?
     
     public var dataArray: BehaviorRelay<[FoodCombo]> = BehaviorRelay(value: [])
+    public var datafood: BehaviorRelay<[listfoodaddbill]> = BehaviorRelay(value: [])
     
     func bind(view: ManageDetailBillFoodAccountViewController, router: ManageDetailBillFoodAccountRouter){
         self.view = view

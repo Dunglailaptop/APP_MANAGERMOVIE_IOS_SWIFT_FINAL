@@ -52,8 +52,10 @@ extension ItemFoodUnWaterSectionTableViewCell: UITableViewDelegate,UITableViewDa
             (index,value) in
             if value.idfood == viewModel?.dataArrayfood.value[indexPath.row].idfood && value.isSelected == DEACTIVE {
                 data![index].isSelected = ACTIVE
+                data![index].quantityRealTime = 1
             }else if viewModel!.dataArrayfood.value.filter{$0.isSelected == ACTIVE}.count > 0  {
                 data![index].isSelected = DEACTIVE
+                data![index].quantityRealTime = 0
             }
              
             

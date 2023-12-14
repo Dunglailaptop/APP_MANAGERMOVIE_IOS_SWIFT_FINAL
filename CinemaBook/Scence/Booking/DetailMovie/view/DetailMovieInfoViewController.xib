@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailMovieInfoViewController" customModule="CinemaBook" customModuleProvider="target">
             <connections>
                 <outlet property="bannerVoucher" destination="RkS-kh-fxc" id="7Hc-eh-noM"/>
+                <outlet property="btn_order_ticket" destination="yiM-Se-AXz" id="qUL-Yg-VI9"/>
                 <outlet property="image_poster" destination="EaH-jY-rg6" id="1gD-ed-7n4"/>
                 <outlet property="lbl_author" destination="Ujz-hB-0E3" id="TDI-J8-QiX"/>
                 <outlet property="lbl_categorymovie" destination="7hH-XE-9Ch" id="lXI-d5-gFq"/>
@@ -27,6 +28,7 @@
                 <outlet property="txt_description" destination="mjR-Iy-vKp" id="24n-f7-6zT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view_image" destination="e5d-EK-2ex" id="QhA-6r-Gnq"/>
+                <outlet property="view_new_coming" destination="Jx4-j8-ysD" id="mbT-l8-jBC"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -458,14 +460,37 @@
                                         <action selector="btn_maketoBookingChairViewController:" destination="-1" eventType="touchUpInside" id="pzo-lP-Ik3"/>
                                     </connections>
                                 </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-j8-ysD">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW COMING SOON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ma-yU-y5z">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemGray2Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="4ma-yU-y5z" secondAttribute="bottom" id="AFi-sT-uyl"/>
+                                        <constraint firstItem="4ma-yU-y5z" firstAttribute="leading" secondItem="Jx4-j8-ysD" secondAttribute="leading" id="Jsy-Uo-aP5"/>
+                                        <constraint firstAttribute="trailing" secondItem="4ma-yU-y5z" secondAttribute="trailing" id="cvv-oI-75v"/>
+                                        <constraint firstItem="4ma-yU-y5z" firstAttribute="top" secondItem="Jx4-j8-ysD" secondAttribute="top" id="wBV-qm-0IP"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Cg5-Qr-JMT"/>
                                 <constraint firstAttribute="trailing" secondItem="yiM-Se-AXz" secondAttribute="trailing" constant="20" id="DMA-ck-SXy"/>
                                 <constraint firstItem="yiM-Se-AXz" firstAttribute="leading" secondItem="M9t-fV-iRh" secondAttribute="leading" constant="20" id="E2j-xl-NCx"/>
+                                <constraint firstAttribute="trailing" secondItem="Jx4-j8-ysD" secondAttribute="trailing" id="Lqk-ef-JrZ"/>
                                 <constraint firstAttribute="bottom" secondItem="yiM-Se-AXz" secondAttribute="bottom" constant="5" id="QN3-fA-4iO"/>
+                                <constraint firstItem="Jx4-j8-ysD" firstAttribute="top" secondItem="M9t-fV-iRh" secondAttribute="top" id="Vaz-oi-GMl"/>
                                 <constraint firstItem="yiM-Se-AXz" firstAttribute="top" secondItem="M9t-fV-iRh" secondAttribute="top" constant="5" id="r69-hn-Mtz"/>
+                                <constraint firstItem="Jx4-j8-ysD" firstAttribute="leading" secondItem="M9t-fV-iRh" secondAttribute="leading" id="sc5-Wp-UFZ"/>
+                                <constraint firstAttribute="bottom" secondItem="Jx4-j8-ysD" secondAttribute="bottom" id="yil-jO-7Sq"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -509,6 +534,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

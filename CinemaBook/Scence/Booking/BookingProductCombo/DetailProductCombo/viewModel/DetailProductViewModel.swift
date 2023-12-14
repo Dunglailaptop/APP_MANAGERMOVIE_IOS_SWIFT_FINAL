@@ -13,9 +13,10 @@ import RxCocoa
 class DetailProductViewModel: BaseViewModel {
     private(set) weak var view: DetailProductComboViewController?
     private var router: DetailProductRouter?
-    public var DetaillistFoodCombo:BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1])
+    public var DetaillistFoodCombo:BehaviorRelay<[Int]> = BehaviorRelay(value: [0,1,2])
  
-    
+    //data food in combo
+    public var dataArrayFoodincombo: BehaviorRelay<[Food]> = BehaviorRelay(value: [])
     //data food
     public var dataArrayfood: BehaviorRelay<[Food]> = BehaviorRelay(value: [])
     public var dataArrayFoodWater: BehaviorRelay<[Food]> = BehaviorRelay(value: [])

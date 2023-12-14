@@ -49,7 +49,7 @@ class ItemCartTableViewCell: UITableViewCell {
 
             data?.foods.enumerated().forEach { (index,value) in
                 dLog(value.quantityRealTime)
-                textsl = 1
+                textsl = value.quantityRealTime
                 textlistfood += "+\(textsl)x\(value.namefood)\n"
             }
 

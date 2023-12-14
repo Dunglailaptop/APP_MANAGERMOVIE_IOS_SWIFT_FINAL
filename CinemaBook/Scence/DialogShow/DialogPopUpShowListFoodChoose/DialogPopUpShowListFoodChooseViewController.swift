@@ -108,7 +108,7 @@ class DialogPopUpShowListFoodChooseViewController: BaseViewController {
     @IBAction func btn_addCart(_ sender: Any) {
         guard var dataDetailFoodCombo = viewModel?.dataDetailFoodCombo.value  else { return  }
         var dataFood = viewModel?.dataArrayfood.value.filter{ $0.isSelected == ACTIVE}
-        var dataFoodWater = viewModel?.dataArrayFoodWater.value.filter{ $0.quantityRealTime > 0 }
+        var dataFoodWater = viewModel?.dataArrayFoodWater.value.filter{ $0.isSelected == ACTIVE }
         dLog(dataFoodWater)
         viewModel?.dataAllFood.accept([])
         var dataAll = self.viewModel?.dataAllFood.value
@@ -124,6 +124,7 @@ class DialogPopUpShowListFoodChooseViewController: BaseViewController {
          dLog(dataDetailFoodCombo)
         JonAlert.showSuccess(message: "Đã thêm sản phẩm vào giỏ hàng thành công")
         dismiss(animated: true)
+        dLog(ManageCacheObject.getCartInfo())
 //        ManageCacheObject.saveCartInfo(dataDetailFoodCombo)
     }
     
@@ -140,6 +141,8 @@ extension DialogPopUpShowListFoodChooseViewController: UITableViewDelegate {
         TableView.register(listFoodCombo, forCellReuseIdentifier: "ItemFoodWaterSectionTableViewCell")
         let listFoodComboWater = UINib(nibName: "ItemFoodUnWaterSectionTableViewCell", bundle: .main)
         TableView.register(listFoodComboWater, forCellReuseIdentifier: "ItemFoodUnWaterSectionTableViewCell")
+        let itemFoodincombo = UINib(nibName: "ItemFoodWithInComboTableViewCell", bundle: .main)
+        TableView.register(itemFoodincombo, forCellReuseIdentifier: "ItemFoodWithInComboTableViewCell")
         TableView.rx.setDelegate(self)
         TableView.separatorStyle = .none
 
@@ -150,9 +153,9 @@ extension DialogPopUpShowListFoodChooseViewController: UITableViewDelegate {
             let indexPath = IndexPath(row: index, section: 0)
             switch index {
             case 0:
-                let cell = self.TableView.dequeueReusableCell(withIdentifier: "ItemFoodUnWaterSectionTableViewCell", for: indexPath) as! ItemFoodUnWaterSectionTableViewCell
+                let cell = self.TableView.dequeueReusableCell(withIdentifier: "ItemFoodWithInComboTableViewCell", for: indexPath) as! ItemFoodWithInComboTableViewCell
                 cell.viewModel = self.viewModel
-                           cell.selectionStyle = .none
+                cell.selectionStyle = .none
                  
                  return cell
             case 1:
@@ -178,7 +181,7 @@ extension DialogPopUpShowListFoodChooseViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 300
+            return 80
         case 1:
             return 300
         default:

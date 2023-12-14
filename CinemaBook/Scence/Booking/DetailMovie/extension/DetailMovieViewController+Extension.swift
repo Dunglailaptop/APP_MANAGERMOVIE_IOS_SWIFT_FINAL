@@ -38,6 +38,7 @@ extension DetailMovieInfoViewController {
         var date_show = datas.yearbirthday.components(separatedBy: "T")
         self.lbl_date_show.text = date_show[0]
         self.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: datas.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
+        view_new_coming.isHidden = datas.statusshow == 0 ? false:true
     }
     
     func getListVoucher() {

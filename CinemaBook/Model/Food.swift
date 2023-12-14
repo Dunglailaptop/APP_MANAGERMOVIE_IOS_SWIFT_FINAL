@@ -19,6 +19,7 @@ struct FoodCombo: Mappable {
             var isSelected = DEACTIVE
             var quantity = 0
     var quantityRealtime = 0
+    var  numberbuyincombo = 0 //tien info bill
     init() {
         
     }
@@ -35,6 +36,8 @@ struct FoodCombo: Mappable {
              picture <- map["picture"]
         foods <- map["foods"]
         quantityRealtime <- map["quantityRealtime"]
+        
+        numberbuyincombo <- map["numberbuyincombo"] //sl info bill
 //        quantity <- map["quantity"]
     }
 }
@@ -88,6 +91,7 @@ struct  Food: Mappable {
             idcategoryfood <- map ["idcategoryfood"]
             datecreate <- map ["datecreate"]
         namecategoryfood <- map["namecategoryfood"]
+        quantityRealTime <- map["quantityRealTime"]
     }
 }
 struct CategoryFood: Mappable {

@@ -32,6 +32,8 @@ class ManageDetailBillFoodAccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.dataArray.accept(foodcombo.listfoodcombo)
+        viewModel.datafood.accept(foodcombo.listfood)
+        tableView.reloadData()
         setup()
 //        getListBillFoodCombo()
     }
@@ -52,7 +54,7 @@ extension ManageDetailBillFoodAccountViewController {
 
 extension ManageDetailBillFoodAccountViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
     
     func register() {
@@ -65,6 +67,7 @@ extension ManageDetailBillFoodAccountViewController: UITableViewDelegate {
     func bindingtable() {
         viewModel.dataArray.bind(to: tableView.rx.items(cellIdentifier: "ManageDetailBillFoodComboItemTableViewCell", cellType: ManageDetailBillFoodComboItemTableViewCell.self)) {(row,data,cell) in
             cell.data = data
+            cell.viewModel = self.viewModel
             cell.selectionStyle = .none
         }
     }

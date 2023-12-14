@@ -24,10 +24,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5N-RG-ZMF">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PORNCORN-TEST" translatesAutoresizingMaskIntoConstraints="NO" id="9i2-hG-2j9">
-                                <rect key="frame" x="10" y="10" width="130" height="130"/>
+                                <rect key="frame" x="10" y="10" width="130" height="80"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,7 +40,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dl3-Vj-PbX">
-                        <rect key="frame" x="150" y="0.0" width="170" height="150"/>
+                        <rect key="frame" x="150" y="0.0" width="170" height="100"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên món combo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9b-JR-U56">
                                 <rect key="frame" x="7.9999999999999929" y="8" width="122.33333333333331" height="20"/>
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="+ 1 BAP NHO / 1 LY NUOC" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tod-gL-atI">
-                                <rect key="frame" x="8" y="45" width="162" height="105"/>
+                                <rect key="frame" x="8" y="45" width="162" height="55"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -61,6 +61,12 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-EG-DnH">
+                                <rect key="frame" x="81.666666666666657" y="28" width="17.666666666666671" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -69,7 +75,9 @@
                             <constraint firstItem="K9b-JR-U56" firstAttribute="top" secondItem="dl3-Vj-PbX" secondAttribute="top" constant="8" id="7Zz-PC-Ui4"/>
                             <constraint firstItem="K9b-JR-U56" firstAttribute="leading" secondItem="dl3-Vj-PbX" secondAttribute="leading" constant="8" id="DCM-ke-lfz"/>
                             <constraint firstAttribute="trailing" secondItem="Tod-gL-atI" secondAttribute="trailing" id="I1V-W1-ggS"/>
+                            <constraint firstItem="aaJ-EG-DnH" firstAttribute="leading" secondItem="0rk-2i-NuK" secondAttribute="trailing" id="Ker-F6-icb"/>
                             <constraint firstItem="0rk-2i-NuK" firstAttribute="top" secondItem="K9b-JR-U56" secondAttribute="bottom" id="O8I-WU-bnu"/>
+                            <constraint firstItem="aaJ-EG-DnH" firstAttribute="top" secondItem="K9b-JR-U56" secondAttribute="bottom" id="RIP-lw-f6c"/>
                             <constraint firstItem="0rk-2i-NuK" firstAttribute="leading" secondItem="dl3-Vj-PbX" secondAttribute="leading" constant="8" id="RbP-ou-IiN"/>
                             <constraint firstAttribute="bottom" secondItem="Tod-gL-atI" secondAttribute="bottom" id="wgR-EN-SaF"/>
                         </constraints>
@@ -81,24 +89,53 @@
                             <constraint firstAttribute="height" constant="1" id="DAf-88-I9U"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neh-R8-uor">
+                        <rect key="frame" x="0.0" y="100" width="320" height="42"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="F13-8H-Iy5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R1t-w9-AC5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F13-8H-Iy5" firstAttribute="top" secondItem="neh-R8-uor" secondAttribute="top" id="0iV-8B-WNJ"/>
+                            <constraint firstItem="F13-8H-Iy5" firstAttribute="leading" secondItem="neh-R8-uor" secondAttribute="leading" id="D2P-7L-HLq"/>
+                            <constraint firstAttribute="trailing" secondItem="F13-8H-Iy5" secondAttribute="trailing" id="aDu-s9-ywy"/>
+                            <constraint firstAttribute="bottom" secondItem="F13-8H-Iy5" secondAttribute="bottom" id="mDk-pt-MMc"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="dl3-Vj-PbX" firstAttribute="leading" secondItem="z5N-RG-ZMF" secondAttribute="trailing" id="30l-jD-sJ6"/>
+                    <constraint firstItem="neh-R8-uor" firstAttribute="top" secondItem="z5N-RG-ZMF" secondAttribute="bottom" id="3Us-4r-oBk"/>
+                    <constraint firstAttribute="bottom" secondItem="neh-R8-uor" secondAttribute="bottom" constant="8" id="7AL-a6-pNf"/>
                     <constraint firstItem="dl3-Vj-PbX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7ei-rJ-3mp"/>
-                    <constraint firstAttribute="bottom" secondItem="z5N-RG-ZMF" secondAttribute="bottom" id="EDU-94-XZC"/>
+                    <constraint firstAttribute="bottom" secondItem="z5N-RG-ZMF" secondAttribute="bottom" constant="50" id="EDU-94-XZC"/>
                     <constraint firstAttribute="trailing" secondItem="fJZ-ng-3L1" secondAttribute="trailing" id="Gxj-xQ-jIa"/>
+                    <constraint firstItem="neh-R8-uor" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ShL-6E-lPm"/>
+                    <constraint firstAttribute="trailing" secondItem="neh-R8-uor" secondAttribute="trailing" id="WFp-2f-GP7"/>
                     <constraint firstAttribute="bottom" secondItem="fJZ-ng-3L1" secondAttribute="bottom" id="a0M-8U-UjX"/>
                     <constraint firstItem="fJZ-ng-3L1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cWb-MO-quC"/>
-                    <constraint firstAttribute="bottom" secondItem="dl3-Vj-PbX" secondAttribute="bottom" id="dMa-nq-Fmg"/>
+                    <constraint firstAttribute="bottom" secondItem="dl3-Vj-PbX" secondAttribute="bottom" constant="50" id="dMa-nq-Fmg"/>
                     <constraint firstItem="z5N-RG-ZMF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hRi-dw-W7c"/>
                     <constraint firstAttribute="trailing" secondItem="dl3-Vj-PbX" secondAttribute="trailing" id="lFz-FZ-XIp"/>
                     <constraint firstItem="z5N-RG-ZMF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rCw-Jy-VN5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <connections>
+                <outlet property="collection_view" destination="F13-8H-Iy5" id="5jW-Dh-akZ"/>
                 <outlet property="image_foodcombo" destination="9i2-hG-2j9" id="3aA-xX-x73"/>
                 <outlet property="lbl_name_foodcombo" destination="K9b-JR-U56" id="did-RZ-Ay2"/>
+                <outlet property="lbl_number_combo" destination="aaJ-EG-DnH" id="Jbu-gG-7Zp"/>
                 <outlet property="lbl_price_foodcombo" destination="0rk-2i-NuK" id="SVg-l7-cgV"/>
                 <outlet property="txt_tittle" destination="Tod-gL-atI" id="r7M-Ce-T8c"/>
             </connections>

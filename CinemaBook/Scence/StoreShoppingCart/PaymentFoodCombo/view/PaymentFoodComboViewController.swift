@@ -81,6 +81,7 @@ class PaymentFoodComboViewController: UIViewController {
     }
     
     func getDataPaymentBillFoodCombo() {
+        dLog(viewModel.dataArrayFoodCombo.value)
         var data = viewModel.dataArrayFoodCombo.value
         var dataFoodCombobill = viewModel.dataArrayBillPayment.value
         dataFoodCombobill.total_price = data.map{ $0.quantityRealtime * $0.priceCombo}.reduce(0,+)
@@ -92,7 +93,16 @@ class PaymentFoodComboViewController: UIViewController {
             (index,value) in
             var dataonly = FoodComboList()
             dataonly.idfoodcombo = value.idcombo
+            dataonly.numberbuyincombo = value.quantityRealtime
             dataFoodCombobill.foodComboBills.append(dataonly)
+            value.foods.enumerated().forEach{
+                (index,value) in
+                var datafood = listfoodaddbill()
+                datafood.idfood = value.idfood
+                datafood.idcombo = value.idcombo
+                datafood.numberfood = value.quantityRealTime
+                dataFoodCombobill.listfood.append(datafood)
+            }
         }
         viewModel.dataArrayBillPayment.accept(dataFoodCombobill)
 //        if viewModel.dataArrayBillPaymentHistory.value == nil {

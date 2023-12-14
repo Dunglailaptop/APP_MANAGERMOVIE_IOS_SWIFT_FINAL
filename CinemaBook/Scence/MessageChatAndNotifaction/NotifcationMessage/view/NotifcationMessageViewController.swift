@@ -14,7 +14,7 @@ import ObjectMapper
 import JonAlert
 
 class NotifcationMessageViewController: BaseViewController {
-
+    @IBOutlet weak var height_viewoption: NSLayoutConstraint!
     @IBOutlet weak var btn_checkin: UIButton!
     @IBOutlet weak var btn_notif: UIButton!
     @IBOutlet weak var view_option_notifactionandcheckin: UIView!
@@ -58,6 +58,8 @@ class NotifcationMessageViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         type = ManageCacheObject.getCurrentUserInfo().idrole == 2 ? 2:1
+        view_option_notifactionandcheckin.isHidden = ManageCacheObject.getCurrentUserInfo().idrole == 1 ? true:false
+        height_viewoption.constant = ManageCacheObject.getCurrentUserInfo().idrole == 1 ? 0:50
         viewModel.type.accept(type)
         getNotication()
     }

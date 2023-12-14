@@ -10,10 +10,9 @@ import UIKit
 
 class ItemDialogFoodComboWaterTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var image_check: UIImageView!
+   
     @IBOutlet weak var image_view: UIImageView!
-    @IBOutlet weak var btn_descreament: UIButton!
-    @IBOutlet weak var btn_inscreament: UIButton!
-    @IBOutlet weak var lbl_number: UILabel!
     @IBOutlet weak var lbl_name_food: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

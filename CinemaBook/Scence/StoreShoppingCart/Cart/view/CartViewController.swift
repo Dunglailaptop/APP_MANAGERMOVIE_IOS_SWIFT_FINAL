@@ -36,30 +36,97 @@ class CartViewController: UIViewController {
         super.viewWillAppear(animated)
         lbl_name_cinema.text = namecinema
       
+//        var countnumber = 0
+//        var combinedCartItems = [Int: FoodCombo]()
+//        var food = [Int: Food]()
+////        dLog(Ma)
+//        for foodCombo in ManageCacheObject.getCartInfo() {
+//            for itemlist in foodCombo.foods{
+//                if let existingCartItem = combinedCartItems[foodCombo.idcombo], let datafood = food[itemlist.idfood] {
+//
+//                    // Nếu đã tồn tại phần tử với cùng idcombo
+//                    combinedCartItems[foodCombo.idcombo]!.quantityRealtime += foodCombo.quantityRealtime  // Cập nhật số lượng
+//                    dLog(combinedCartItems[foodCombo.idcombo]?.foods)
+//                    for itemlist in combinedCartItems[foodCombo.idcombo]!.foods {
+//                        if let datafood = food[itemlist.idfood] {
+//                            food[itemlist.idfood]?.quantityRealTime += 1
+//                        } else {
+//                            food[itemlist.idfood] = itemlist
+//                        }
+//                    }
+//                    combinedCartItems[foodCombo.idcombo]?.foods = Array(food.values)
+//                } else {
+//                    // Nếu chưa tồn tại phần tử với idcombo này, thêm vào Dictionary
+//                    combinedCartItems[foodCombo.idcombo] = foodCombo
+//                    dLog(combinedCartItems[foodCombo.idcombo]?.foods)
+//                    for itemlist in combinedCartItems[foodCombo.idcombo]!.foods {
+//                        if let datafood = food[itemlist.idfood] {
+//                            food[itemlist.idfood]?.quantityRealTime += 1
+//                        } else {
+//                            dLog(itemlist)
+//                            food[itemlist.idfood] = itemlist
+//                        }
+//                    }
+//                    combinedCartItems[foodCombo.idcombo]?.foods = Array(food.values)
+//
+//                }
+//            }
+////            combinedCartItems[foodCombo.idcombo]?.foods = Array(food.values)
+//        }
+//        dLog(food)
+//        // Kết quả sẽ là combinedCartItems, đây là mảng gồm các phần tử đã được gộp lại
+//        var combinedArray = Array(combinedCartItems.values)
+//        viewModel.dataArrayFoodCombo.accept(combinedArray)
+//        combinedArray.enumerated().forEach{ (index,value) in
+//            countnumber += value.quantityRealtime
+//        }
         var countnumber = 0
         var combinedCartItems = [Int: FoodCombo]()
+        var food = [Int: Food]()
 
         for foodCombo in ManageCacheObject.getCartInfo() {
             if let existingCartItem = combinedCartItems[foodCombo.idcombo] {
-                // Nếu đã tồn tại phần tử với cùng idcombo
+                // Nếu idcombo đã tồn tại
                 combinedCartItems[foodCombo.idcombo]!.quantityRealtime += foodCombo.quantityRealtime  // Cập nhật số lượng
+                for itemlist in foodCombo.foods {
+                    if let datafood = food[itemlist.idfood] {
+                        food[itemlist.idfood]?.quantityRealTime += 1 // Cộng số lượng
+                        combinedCartItems[foodCombo.idcombo]?.foods = Array(food.values)
+                    } else {
+                        food[itemlist.idfood] = itemlist // Tạo mới idfood
+                        combinedCartItems[foodCombo.idcombo]?.foods = Array(food.values)
+                    }
+                }
+            
             } else {
-                // Nếu chưa tồn tại phần tử với idcombo này, thêm vào Dictionary
+                // Nếu idcombo chưa tồn tại
                 combinedCartItems[foodCombo.idcombo] = foodCombo
+                food = [:]
+                for itemlist in foodCombo.foods {
+                    if let datafood = food[itemlist.idfood] {
+                        food[itemlist.idfood]?.quantityRealTime += 1 // Cộng số lượng
+                        combinedCartItems[foodCombo.idcombo]?.foods = Array(food.values)
+                    } else {
+                        food[itemlist.idfood] = itemlist // Tạo mới idfood
+                        combinedCartItems[foodCombo.idcombo]?.foods = Array(food.values)
+                    }
+                }
+               
             }
         }
 
-        // Kết quả sẽ là combinedCartItems, đây là mảng gồm các phần tử đã được gộp lại
         var combinedArray = Array(combinedCartItems.values)
         viewModel.dataArrayFoodCombo.accept(combinedArray)
-        combinedArray.enumerated().forEach{ (index,value) in
+
+        combinedArray.enumerated().forEach{ (index, value) in
             countnumber += value.quantityRealtime
         }
+
         lbl_number.text = String(countnumber)
-        lbl_total_number.text = Utils.stringVietnameseFormatWithNumber(amount: viewModel.dataArrayFoodCombo.value.map{$0.priceCombo * $0.quantityRealtime}.reduce(0, +))
+        lbl_total_number.text = Utils.stringVietnameseFormatWithNumber(amount: viewModel.dataArrayFoodCombo.value.map{$0.priceCombo * countnumber}.reduce(0, +))
       
-
-
+        dLog(ManageCacheObject.getCartInfo())
+        tableView.reloadData()
     }
 
     @IBAction func btn_paymentfoodcombo(_ sender: Any) {

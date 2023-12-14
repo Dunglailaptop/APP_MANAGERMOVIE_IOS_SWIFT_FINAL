@@ -17,7 +17,7 @@ public struct APIEndPoint {
     enum Environment:String {
         
         case develop = "http://localhost:5062"
-      
+        case production = "http://serverApp.servercinemaappbooking.pro.vn"
         
     }
     

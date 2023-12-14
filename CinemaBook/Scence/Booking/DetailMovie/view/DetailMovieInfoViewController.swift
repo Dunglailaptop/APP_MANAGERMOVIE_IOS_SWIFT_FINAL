@@ -13,6 +13,8 @@ class DetailMovieInfoViewController: BaseViewController {
 
     @IBOutlet weak var lbl_author: UILabel!
     
+    @IBOutlet weak var view_new_coming: UIView!
+    @IBOutlet weak var btn_order_ticket: UIButton!
     @IBOutlet weak var lbl_categorymovie: UILabel!
     @IBOutlet weak var lbl_nation: UILabel!
     @IBOutlet weak var txt_description: UITextView!

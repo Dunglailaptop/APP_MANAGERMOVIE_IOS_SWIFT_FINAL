@@ -51,6 +51,8 @@ class DetailProductComboViewController: UIViewController {
         lbl_price_food.text = Utils.stringVietnameseFormatWithNumber(amount: foodcombo.priceCombo)
         image_food.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: foodcombo.picture)), placeholder: UIImage(named: "image_defauft_medium"))
         viewModel.dataDetailFoodCombo.accept(foodcombo)
+        dLog(foodcombo.foods)
+        viewModel.dataArrayFoodincombo.accept(foodcombo.foods)
         lbl_number_cart.text = String(ManageCacheObject.getCartInfo().reduce(0) { $0 + $1.quantityRealtime })
         dLog(ManageCacheObject.getCartInfo())
     }
