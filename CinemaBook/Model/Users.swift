@@ -26,6 +26,7 @@ struct Users: Mappable {
     var statuss = 0
     var keysearch = ""
     var username = ""
+    var point = 0 //diem
     init() {
         
     }
@@ -47,6 +48,7 @@ struct Users: Mappable {
         address <- map["address"]
         statuss <- map["statuss"]
         username <- map["username"]
+        point <- map["point"]
     }
     
 }

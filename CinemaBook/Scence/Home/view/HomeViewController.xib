@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="avatar" destination="hcb-62-GwD" id="6l6-Ra-J5J"/>
                 <outlet property="lbl_name_account" destination="6ly-WZ-Dbr" id="0ug-qd-Dak"/>
+                <outlet property="lbl_point_account" destination="sBM-KF-S0E" id="SWZ-Es-hvx"/>
                 <outlet property="tableView" destination="vVx-X6-bnx" id="iUk-Fg-iLI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view_detail" destination="620-D7-xZg" id="VRS-xL-cNs"/>
@@ -52,31 +53,47 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tickets" translatesAutoresizingMaskIntoConstraints="NO" id="AS3-bT-AeP">
-                                    <rect key="frame" x="364" y="15" width="30" height="30"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="30" id="PrK-3C-kHa"/>
-                                        <constraint firstAttribute="height" constant="30" id="f5B-3u-R8U"/>
-                                    </constraints>
-                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xin chào, Nguyễn Xuân Tiến Dũng" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ly-WZ-Dbr">
                                     <rect key="frame" x="78" y="23" width="182" height="14.5"/>
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3A-Cz-VYj">
+                                    <rect key="frame" x="294" y="15" width="100" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBM-KF-S0E">
+                                            <rect key="frame" x="45" y="5.5" width="10" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" systemColor="systemYellowColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    <constraints>
+                                        <constraint firstItem="sBM-KF-S0E" firstAttribute="centerX" secondItem="L3A-Cz-VYj" secondAttribute="centerX" id="TXU-tP-Byx"/>
+                                        <constraint firstAttribute="width" constant="100" id="Vjs-gf-XJo"/>
+                                        <constraint firstItem="sBM-KF-S0E" firstAttribute="centerY" secondItem="L3A-Cz-VYj" secondAttribute="centerY" id="f16-Po-ER5"/>
+                                        <constraint firstAttribute="height" constant="30" id="pXr-eb-NrV"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="hcb-62-GwD" firstAttribute="leading" secondItem="620-D7-xZg" secondAttribute="leading" constant="20" id="141-e6-Guv"/>
-                                <constraint firstAttribute="trailing" secondItem="AS3-bT-AeP" secondAttribute="trailing" constant="20" id="4q6-kJ-Mf4"/>
+                                <constraint firstItem="L3A-Cz-VYj" firstAttribute="centerY" secondItem="620-D7-xZg" secondAttribute="centerY" id="8g3-IP-9Uq"/>
                                 <constraint firstAttribute="height" constant="60" id="Im8-fS-zC2"/>
                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="SAN-yl-TbZ"/>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ZPC-rR-fXV"/>
                                 <constraint firstItem="6ly-WZ-Dbr" firstAttribute="centerY" secondItem="620-D7-xZg" secondAttribute="centerY" id="bdq-Qa-7VK"/>
                                 <constraint firstItem="hcb-62-GwD" firstAttribute="centerY" secondItem="620-D7-xZg" secondAttribute="centerY" id="cdA-5A-VnX"/>
-                                <constraint firstItem="AS3-bT-AeP" firstAttribute="centerY" secondItem="620-D7-xZg" secondAttribute="centerY" id="eU0-0T-jBc"/>
                                 <constraint firstItem="6ly-WZ-Dbr" firstAttribute="leading" secondItem="hcb-62-GwD" secondAttribute="trailing" constant="8" id="gjM-us-ZQB"/>
+                                <constraint firstAttribute="trailing" secondItem="L3A-Cz-VYj" secondAttribute="trailing" constant="20" id="zf4-ui-CQQ"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -126,9 +143,14 @@
     </objects>
     <resources>
         <image name="avatar-admin" width="672" height="1536"/>
-        <image name="tickets" width="512" height="512"/>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

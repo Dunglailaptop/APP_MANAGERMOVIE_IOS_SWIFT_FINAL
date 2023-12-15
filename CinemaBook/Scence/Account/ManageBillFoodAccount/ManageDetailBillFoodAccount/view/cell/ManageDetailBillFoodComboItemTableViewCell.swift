@@ -44,6 +44,8 @@ class ManageDetailBillFoodComboItemTableViewCell: UITableViewCell {
     }
     var viewModel: ManageDetailBillFoodAccountViewModel? = nil {
         didSet {
+      
+           
             collection_view.reloadData()
         }
     }
@@ -51,13 +53,13 @@ class ManageDetailBillFoodComboItemTableViewCell: UITableViewCell {
 }
 extension ManageDetailBillFoodComboItemTableViewCell: UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (viewModel?.datafood.value.count)!
+        return (data?.listfoods.count)!
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemFoodinlistCollectionViewCell", for: indexPath) as! ItemFoodinlistCollectionViewCell
-        cell.lbl_namefood.text = viewModel?.datafood.value[indexPath.row].namefood
-        cell.lbl_number.text = "x" + String(viewModel!.datafood.value[indexPath.row].numberfood)
-        cell.image_food.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.datafood.value[indexPath.row].picture)!)), placeholder: UIImage(named: "image_defauft_medium"))
+        cell.lbl_namefood.text = data?.listfoods[indexPath.row].namefood
+        cell.lbl_number.text = "x" + String(data!.listfoods[indexPath.row].numberfood)
+        cell.image_food.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (data?.listfoods[indexPath.row].picture)!)), placeholder: UIImage(named: "image_defauft_medium"))
         return cell
     }
     func setupCollection() {

@@ -127,7 +127,7 @@ extension ManagementInterestMoviesViewController: FSCalendarDelegate {
         dLog(to_date_in +  "-" + from_date_in)
     
         if from_date_in < to_date_in {
-            JonAlert.showSuccess(message: "Ngày chọn đã chiếu")
+            Toast.show(message:  "Ngày chọn đã chiếu", controller: self)
             view_success.isHidden = false
             height_view_success.constant = 40
             checkmovie = 1

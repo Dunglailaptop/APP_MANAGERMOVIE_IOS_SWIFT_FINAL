@@ -30,8 +30,8 @@
             filePath = "CinemaBook/Scence/Home/view/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "testSocket()"
             landmarkType = "7">
             <Locations>
@@ -2405,8 +2405,8 @@
             filePath = "CinemaBook/Scence/StoreShoppingCart/PaymentFoodCombo/view/PaymentFoodComboViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "resgistervoucher()"
             landmarkType = "7">
          </BreakpointContent>

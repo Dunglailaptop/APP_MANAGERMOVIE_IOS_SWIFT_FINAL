@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var lbl_name_account: UILabel!
     
+    @IBOutlet weak var lbl_point_account: UILabel!
     @IBOutlet weak var lbl_price_point: UILabel!
     @IBOutlet weak var lbl_movie_coming: UILabel!
   
@@ -43,10 +44,28 @@ class HomeViewController: UIViewController {
        
     
 //       testSocket()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("CALLGETLISTSTATUS"), object: nil)
+        
     }
+    
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any] {
+                // Access the loginResponse dictionary here
+                if let reportType = userInfo["userInfo"] as? [String: Any] {
+                    let reportTypeValue = reportType["Report_type"] as? Int ?? 0
+                    var data = viewModel.pagigation.value
+                    data.status = reportTypeValue
+                    viewModel.pagigation.accept(data)
+                    self.getListMovieShowBanner()
+                   
+                }
+            }
+    }
+
+    
     func setupinfo() {
         lbl_name_account.text = "Xin chào," + ManageCacheObject.getCurrentUserInfo().fullname
-//        lbl_price_point.text = Utils.stringVietnameseFormatWithNumber(amount: ManageCacheObject.getCurrentUser().point)
+        lbl_point_account.text = Utils.stringVietnameseFormatWithNumber(amount: ManageCacheObject.getCurrentUserInfo().point)
         avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: ManageCacheObject.getCurrentUserInfo().avatar)), placeholder: UIImage(named: "image_defauft_medium"))
 //        lbl_price_point.text =
     }

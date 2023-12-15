@@ -54,7 +54,7 @@ class ItemCartTableViewCell: UITableViewCell {
             }
 
             txt_view_list_food.text = textlistfood
-            height_textview.constant = CGFloat((data?.foods.count)! * 20)
+            height_textview.constant = CGFloat((data?.foods.count)! * 25)
             
         }
     }

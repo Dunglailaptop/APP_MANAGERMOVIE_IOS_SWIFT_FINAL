@@ -20,6 +20,9 @@ struct FoodCombo: Mappable {
             var quantity = 0
     var quantityRealtime = 0
     var  numberbuyincombo = 0 //tien info bill
+    
+    var listfoods = [listfoodaddbill]()
+    
     init() {
         
     }
@@ -39,6 +42,7 @@ struct FoodCombo: Mappable {
         
         numberbuyincombo <- map["numberbuyincombo"] //sl info bill
 //        quantity <- map["quantity"]
+        listfoods <- map["listfoods"]
     }
 }
 

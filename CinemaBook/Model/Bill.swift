@@ -138,6 +138,7 @@ struct PaymentInfoBillFoodCombo: Mappable {
         var quantity = 0
         var time = ""
         var status = 0
+        var namecinema = ""
         var listfoodcombo = [FoodCombo]()
         var listfood = [listfoodaddbill]()
     init() {
@@ -156,6 +157,7 @@ struct PaymentInfoBillFoodCombo: Mappable {
         id <- map["id"]
         status <- map["status"]
         listfood <- map["listfood"]
+        namecinema <- map["namecinema"]
     }
 }
 

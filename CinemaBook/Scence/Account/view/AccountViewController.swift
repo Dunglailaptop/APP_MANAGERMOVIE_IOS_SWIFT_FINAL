@@ -15,6 +15,8 @@ import Kingfisher
 
 class AccountViewController: BaseViewController {
     
+    @IBOutlet weak var lbl_username_account: UILabel!
+    @IBOutlet weak var lbl_point_account: UILabel!
     @IBOutlet weak var avatar: UIImageView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -37,6 +39,11 @@ class AccountViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        lbl_point_account.text = Utils.stringQuantityFormatWithNumber(amount: ManageCacheObject.getCurrentUserInfo().point)
+        lbl_username_account.text = ManageCacheObject.getCurrentUserInfo().username
+    }
 
 
     @IBAction func btn_actionlogout(_ sender: Any) {

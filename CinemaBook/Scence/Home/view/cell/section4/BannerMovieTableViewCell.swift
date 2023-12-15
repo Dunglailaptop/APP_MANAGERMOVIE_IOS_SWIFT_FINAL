@@ -14,6 +14,11 @@ import RxSwift
 class BannerMovieTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var lbl_tittle_movie_comingsoon: UILabel!
+    
+    @IBOutlet weak var lbl_tittle_movienow: UILabel!
+    @IBOutlet weak var view_newcomingsoon: UIView!
+    @IBOutlet weak var view_movieticket: UIView!
     
     private(set) var disposeBag = DisposeBag()
   
@@ -50,9 +55,27 @@ class BannerMovieTableViewCell: UITableViewCell {
         }
     }
     
-
+    @IBAction func btn_choose_movie_new(_ sender: Any) {
+        lbl_tittle_movienow.textColor = .white
+        view_movieticket.backgroundColor = .white
+        lbl_tittle_movie_comingsoon.textColor = .black
+        view_newcomingsoon.backgroundColor = .clear
+        postnotifaction(status: 1)
+    }
     
+    @IBAction func btn_choose_movie_newcoming(_ sender: Any) {
+        lbl_tittle_movienow.textColor = .black
+        view_movieticket.backgroundColor = .clear
+        lbl_tittle_movie_comingsoon.textColor = .white
+        view_newcomingsoon.backgroundColor = .white
+        postnotifaction(status: 0)
+    }
     
+    func postnotifaction(status:Int) {
+        let notificationName = Notification.Name("CALLGETLISTSTATUS")
+        let loginResponse = ["userInfo": ["Report_type": status]]
+        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: loginResponse)
+    }
 }
 extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate {
         func register() {

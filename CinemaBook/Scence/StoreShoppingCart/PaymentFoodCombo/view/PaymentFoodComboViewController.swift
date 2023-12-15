@@ -90,17 +90,18 @@ class PaymentFoodComboViewController: UIViewController {
         dataFoodCombobill.idcinemas = idcinema
 //        dataFoodCombobill.idcinemas = ManageCacheObject.getCurrentCinema().idcinema
         data.enumerated().forEach{
-            (index,value) in
+            (index,value1) in
             var dataonly = FoodComboList()
-            dataonly.idfoodcombo = value.idcombo
-            dataonly.numberbuyincombo = value.quantityRealtime
+            dataonly.idfoodcombo = value1.idcombo
+            dataonly.numberbuyincombo = value1.quantityRealtime
             dataFoodCombobill.foodComboBills.append(dataonly)
-            value.foods.enumerated().forEach{
-                (index,value) in
+            dLog(value1.idcombo)
+            value1.foods.enumerated().forEach{
+                (index,value2) in
                 var datafood = listfoodaddbill()
-                datafood.idfood = value.idfood
-                datafood.idcombo = value.idcombo
-                datafood.numberfood = value.quantityRealTime
+                datafood.idfood = value2.idfood
+                datafood.idcombo = value1.idcombo
+                datafood.numberfood = value2.quantityRealTime
                 dataFoodCombobill.listfood.append(datafood)
             }
         }
