@@ -28,7 +28,7 @@ class Utils: NSObject {
     }
     static func getFullMediaLink(string:String) -> String {
         dLog(("http://localhost:5062/Uploads/Movie/" + string).encodeUrl()!)
-        return ("http://localhost:5062/Uploads/Movie/" + string).encodeUrl()!
+        return (urlinkimageproduction + string).encodeUrl()!
     }
     static func getCurrentDateString() -> String{
            let date = Date()

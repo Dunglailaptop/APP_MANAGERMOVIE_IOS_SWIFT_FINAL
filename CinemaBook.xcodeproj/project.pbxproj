@@ -216,6 +216,8 @@
 		B0AC2D0C2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AC2D0B2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift */; };
 		B0ACA7A02AF33CCB007CC560 /* ReportpProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ACA79E2AF33CCB007CC560 /* ReportpProductTableViewCell.swift */; };
 		B0ACA7A12AF33CCB007CC560 /* ReportpProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */; };
+		B0ACB5692B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ACB5672B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.swift */; };
+		B0ACB56A2B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ACB5682B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.xib */; };
 		B0AD43632AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */; };
 		B0AD81702B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD816F2B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift */; };
 		B0AD81722B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AD81712B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift */; };
@@ -828,6 +830,8 @@
 		B0AC2D0B2ADE5ED600E4BB7E /* ManagementBillFoodComboViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementBillFoodComboViewController + Extensions.swift"; sourceTree = "<group>"; };
 		B0ACA79E2AF33CCB007CC560 /* ReportpProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportpProductTableViewCell.swift; sourceTree = "<group>"; };
 		B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportpProductTableViewCell.xib; sourceTree = "<group>"; };
+		B0ACB5672B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRoomChooseCollectionViewCell.swift; sourceTree = "<group>"; };
+		B0ACB5682B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemRoomChooseCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0AD43622AE42E8100023E01 /* ManagementDetailMovie+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagementDetailMovie+Extensions.swift"; sourceTree = "<group>"; };
 		B0AD816F2B12F1BD00FC4E39 /* ListinfoCinemaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListinfoCinemaViewModel.swift; sourceTree = "<group>"; };
 		B0AD81712B12F1CB00FC4E39 /* ListInfoCinemaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInfoCinemaRouter.swift; sourceTree = "<group>"; };
@@ -2598,6 +2602,7 @@
 		B0AAFFCA2ADE878700E774AB /* view */ = {
 			isa = PBXGroup;
 			children = (
+				B0ACB5662B30A97B009F7BE2 /* cellcollection */,
 				B0AAFFD52ADE90B100E774AB /* cell */,
 				B0AAFFCD2ADE87C500E774AB /* ManagementInterestMoviesViewController.swift */,
 				B0AAFFCE2ADE87C500E774AB /* ManagementInterestMoviesViewController.xib */,
@@ -2762,6 +2767,15 @@
 				B0ACA79F2AF33CCB007CC560 /* ReportpProductTableViewCell.xib */,
 			);
 			path = section4;
+			sourceTree = "<group>";
+		};
+		B0ACB5662B30A97B009F7BE2 /* cellcollection */ = {
+			isa = PBXGroup;
+			children = (
+				B0ACB5672B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.swift */,
+				B0ACB5682B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.xib */,
+			);
+			path = cellcollection;
 			sourceTree = "<group>";
 		};
 		B0AD43612AE42E6400023E01 /* Extension */ = {
@@ -5394,6 +5408,7 @@
 				B0F9D3052AE6BDB600CE70FC /* ItemRoomTableViewCell.xib in Resources */,
 				B0AC2D0A2ADE4FEF00E4BB7E /* ManagementBillFoodComboItemTableViewCell.xib in Resources */,
 				B0A5AEE22AEB97C2007320BE /* ManagementVoucherViewController.xib in Resources */,
+				B0ACB56A2B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.xib in Resources */,
 				B0BEC1CC2ADADE0C00709883 /* PaymentFoodComboViewController.xib in Resources */,
 				FE59CF412AA3994300A6ADAA /* AccountInfoViewController.xib in Resources */,
 				B0A5A89F2AF15C3600DB6FCA /* ReportTicketALLViewController.xib in Resources */,
@@ -5821,6 +5836,7 @@
 				FE50964F2A764FDA00F5A457 /* SceneDelegate.swift in Sources */,
 				FE745FF92A7EB30D0091C0FA /* Movie.swift in Sources */,
 				FE4EB36F2AC719EC00BB2D79 /* ItemFoodTableViewCell.swift in Sources */,
+				B0ACB5692B30A9A5009F7BE2 /* ItemRoomChooseCollectionViewCell.swift in Sources */,
 				B0A900422B1384E100F9F613 /* ItemCinemasTableViewCell.swift in Sources */,
 				B0AF7A442AD3E7D9008AE1F2 /* ChatMessageViewModel.swift in Sources */,
 				FEFBFB702A9F75BA00A85879 /* itemTimeCollectionViewCell.swift in Sources */,

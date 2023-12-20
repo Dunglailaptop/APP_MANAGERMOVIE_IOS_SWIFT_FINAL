@@ -64,6 +64,7 @@ extension TimeShowViewModel {
                .mapObject(type: APIResponse.self)
        }
   func getListMovieRoom() -> Observable<APIResponse> {
+      dLog(pagation.value.date)
       return appServiceProvider.rx.request(.getlistinterestwithroom(date: pagation.value.date, idroom: pagation.value.idroom))
                   .filterSuccessfulStatusCodes()
                   .mapJSON().asObservable()

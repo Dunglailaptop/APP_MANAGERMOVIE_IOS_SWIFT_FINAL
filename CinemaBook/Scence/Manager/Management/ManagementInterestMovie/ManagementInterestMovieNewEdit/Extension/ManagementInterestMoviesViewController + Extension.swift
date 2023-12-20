@@ -346,8 +346,8 @@ extension ManagementInterestMoviesViewController {
                if response.code == RRHTTPStatusCode.ok.rawValue {
                    if let data = Mapper<Room>().mapArray(JSONObject: response.data) {
                        self.viewModel.dataArrayRoom.accept(data)
-                       self.dropdown.optionArray = data.map({$0.nameroom})
-                       self.dropdown.optionIds = data.map({$0.idroom})
+//                       self.dropdown.optionArray = data.map({$0.nameroom})
+//                       self.dropdown.optionIds = data.map({$0.idroom})
                        self.getListMovie()
                    }
                }

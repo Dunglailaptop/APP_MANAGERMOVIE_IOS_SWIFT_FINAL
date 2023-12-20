@@ -43,7 +43,7 @@ extension BookingChairViewController: UICollectionViewDelegate,UICollectionViewD
         var allchair = ""
         cell.lbl_id_bill.text = "Mã BILL: " + String(viewModel.dataArrayBillListWithRoom.value[indexPath.row].idbill)
         data.enumerated().forEach{ (index,value) in
-            allchair += value.rowChar
+            allchair += "," + value.rowChar
         }
         cell.lbl_numberchair.text = "Ghế: " + allchair
         cell.lbl_totalamount.text = Utils.stringVietnameseFormatWithNumber(amount: viewModel.dataArrayBillListWithRoom.value[indexPath.row].totalamount)

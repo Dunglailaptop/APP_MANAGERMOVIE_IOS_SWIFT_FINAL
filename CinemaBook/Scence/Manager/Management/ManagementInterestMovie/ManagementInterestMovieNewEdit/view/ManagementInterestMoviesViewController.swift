@@ -17,6 +17,7 @@ import JonAlert
 
 class ManagementInterestMoviesViewController: BaseViewController {
 
+    @IBOutlet weak var collection_view_room: UICollectionView!
     @IBOutlet weak var view_choose_resettime: UIView!
     @IBOutlet weak var view_auto_interest: UIView!
     @IBOutlet weak var height_view_success: NSLayoutConstraint!
@@ -25,8 +26,8 @@ class ManagementInterestMoviesViewController: BaseViewController {
     @IBOutlet weak var view_no_data: UIView!
     @IBOutlet weak var lbl_number: UILabel!
     @IBOutlet weak var lbl_datetime: UILabel!
-    @IBOutlet weak var btn_dropdown: UIButton!
-    @IBOutlet weak var dropdown: DropDown!
+//    @IBOutlet weak var btn_dropdown: UIButton!
+//    @IBOutlet weak var dropdown: DropDown!
     var datatime = ["1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"]
     var viewModel = ManagementInterestMoviesViewModel()
     var router = ManagementInterestMoviesRouter()
@@ -43,7 +44,8 @@ class ManagementInterestMoviesViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
         register()
        bindingtable()
-        
+        registercollectionroom()
+        bindingcollection()
       
         // Do any additional setup after loading the view.
     }
@@ -65,24 +67,24 @@ class ManagementInterestMoviesViewController: BaseViewController {
     func setup() {
         
         
-        dropdown.hideOptionsWhenSelect = true
-        btn_dropdown.rx.tap.subscribe(onNext: { [weak self] in
-            self!.dropdown.showList()
-           
-        }).disposed(by: rxbag)
-        
-        dropdown.didSelect{ [self](selectedText , index ,id) in
-            var cloneEmployeeInfor = viewModel.pagationDataArray.value
-            var allvalue = viewModel.allvalue.value
-            cloneEmployeeInfor.RoomLists.idroom = id
-            cloneEmployeeInfor.Rooms.nameroom = selectedText
-            allvalue.idroom = id
-            dLog(selectedText)
-            viewModel.pagationDataArray.accept(cloneEmployeeInfor)
-            viewModel.allvalue.accept(allvalue)
-            checkroom = true
-            self.getListInterest()
-        }
+//        dropdown.hideOptionsWhenSelect = true
+//        btn_dropdown.rx.tap.subscribe(onNext: { [weak self] in
+//            self!.dropdown.showList()
+//           
+//        }).disposed(by: rxbag)
+//        
+//        dropdown.didSelect{ [self](selectedText , index ,id) in
+//            var cloneEmployeeInfor = viewModel.pagationDataArray.value
+//            var allvalue = viewModel.allvalue.value
+//            cloneEmployeeInfor.RoomLists.idroom = id
+//            cloneEmployeeInfor.Rooms.nameroom = selectedText
+//            allvalue.idroom = id
+//            dLog(selectedText)
+//            viewModel.pagationDataArray.accept(cloneEmployeeInfor)
+//            viewModel.allvalue.accept(allvalue)
+//            checkroom = true
+//            self.getListInterest()
+//        }
         
     }
 
@@ -160,4 +162,49 @@ extension ManagementInterestMoviesViewController: FSCalendarDelegate {
     
    
     
+}
+
+//collection view list room
+extension ManagementInterestMoviesViewController {
+    func registercollectionroom() {
+        let viewcell = UINib(nibName: "ItemRoomChooseCollectionViewCell", bundle: .main)
+        collection_view_room.register(viewcell, forCellWithReuseIdentifier: "ItemRoomChooseCollectionViewCell")
+        setupCollection()
+        collection_view_room.rx.modelSelected(Room.self).subscribe(onNext: { [self]
+            element in
+            dLog(element)
+            var datarooom = viewModel.dataArrayRoom.value
+            datarooom.enumerated().forEach{(index,value) in
+                if value.idroom == element.idroom {
+                    datarooom[index].isSelected = element.isSelected == ACTIVE ? DEACTIVE:ACTIVE
+                  
+                }else {
+                    datarooom[index].isSelected = DEACTIVE
+                }
+            }
+            var cloneEmployeeInfor = viewModel.pagationDataArray.value
+            var allvalue = viewModel.allvalue.value
+            cloneEmployeeInfor.RoomLists.idroom = element.idroom
+            cloneEmployeeInfor.Rooms.nameroom = element.nameroom
+            allvalue.idroom = element.idroom
+            viewModel.pagationDataArray.accept(cloneEmployeeInfor)
+            viewModel.allvalue.accept(allvalue)
+            viewModel.dataArrayRoom.accept(datarooom)
+            checkroom = true
+            self.getListInterest()
+        })
+    }
+    func setupCollection() {
+        let layout  = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 150, height: 25)
+        collection_view_room.collectionViewLayout = layout
+    }
+    
+    func bindingcollection() {
+        viewModel.dataArrayRoom.bind(to: collection_view_room.rx.items(cellIdentifier: "ItemRoomChooseCollectionViewCell", cellType: ItemRoomChooseCollectionViewCell.self)) {
+            (row,data,cell) in
+            cell.data = data
+        }
+    }
 }

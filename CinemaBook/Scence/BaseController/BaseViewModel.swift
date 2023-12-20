@@ -25,7 +25,7 @@ class BaseViewModel {
     public var image_request: BehaviorRelay<String> = BehaviorRelay(value: "")
     public var datacheckin: BehaviorRelay<checkin> = BehaviorRelay(value: checkin())
     
-    let serverUrl = URL(string: "http://localhost:5062/Phim/UploadImage")!
+    let serverUrl = URL(string: "http://14.225.254.31/Phim/UploadImage")!
     let headers: HTTPHeaders = [:]
 
     

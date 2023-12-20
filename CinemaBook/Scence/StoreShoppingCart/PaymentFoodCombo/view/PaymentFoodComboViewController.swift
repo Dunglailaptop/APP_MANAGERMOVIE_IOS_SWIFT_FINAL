@@ -122,7 +122,8 @@ class PaymentFoodComboViewController: UIViewController {
     }
     
     @IBAction func btn_paymentFoodCombo(_ sender: Any) {
-        checkcategoryPay == 0 ?  paymentBillFoodCombo() : saveCacheBillFoodCombo()
+        var data = viewModel.dataArrayBillPayment.value
+        checkcategoryPay == 0 ?  presentPopupPayment(total: data.total_price): saveCacheBillFoodCombo()
         
     }
     
@@ -204,4 +205,37 @@ extension PaymentFoodComboViewController {
         }
     }
     
+}
+extension PaymentFoodComboViewController: DialogPayment {
+    func callbackPayment() {
+        paymentBillFoodCombo()
+        dismiss(animated: true)
+    }
+    
+    func presentPopupPayment(total:Int) {
+       
+        let DialogShowInfoMoneyViewControllers = DialogShowInfoMoneyViewController()
+        
+        DialogShowInfoMoneyViewControllers.view.backgroundColor = ColorUtils.blackTransparent()
+        DialogShowInfoMoneyViewControllers.Delegate = self
+        DialogShowInfoMoneyViewControllers.totalbill = total
+        DialogShowInfoMoneyViewControllers.point = ManageCacheObject.getCurrentUserInfo().point
+        let nav = UINavigationController(rootViewController: DialogShowInfoMoneyViewControllers)
+        // 1
+        nav.modalPresentationStyle = .overCurrentContext
+
+        // 2
+        if #available(iOS 15.0, *) {
+            if let sheet = nav.sheetPresentationController {
+                
+                // 3
+                sheet.detents = [.large()]
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+        // 4
+
+        present(nav, animated: true, completion: nil)
+    }
 }

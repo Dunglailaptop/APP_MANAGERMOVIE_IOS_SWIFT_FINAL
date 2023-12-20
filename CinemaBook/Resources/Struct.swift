@@ -9,7 +9,7 @@
 import Foundation
 
 public struct APIEndPoint {
-    static let endUrlPoint = Environment.develop.rawValue
+    static let endUrlPoint = Environment.production.rawValue
     static let version = "v2"
     static let version_v1 = "v1"
     static let versions = "v3"
@@ -17,7 +17,7 @@ public struct APIEndPoint {
     enum Environment:String {
         
         case develop = "http://localhost:5062"
-        case production = "http://serverApp.servercinemaappbooking.pro.vn"
+        case production = "http://14.225.254.31"
         
     }
     

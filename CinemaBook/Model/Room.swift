@@ -19,6 +19,7 @@ struct Room: Mappable {
     var dayStart = ""
     var dayEnd = ""
     var idcinema = 0
+    var isSelected = DEACTIVE
     init() {
         
     }

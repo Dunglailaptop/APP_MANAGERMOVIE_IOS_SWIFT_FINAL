@@ -24,7 +24,7 @@ extension TimeShowViewController {
                            self.lbl_ALL_CINAME.text = String(self.viewModel.listCinemaWithInterest.value.count)
                            self.lbl_Cinema_Foryou.text = String(self.viewModel.listCinemaWithInterest.value.count)
                             self.getListInterestMovieRoom()
-                          
+//                            self.view_no_data.isHidden = true
                                 self.view_no_data.isHidden = self.viewModel.listCinemaWithInterest.value.count > 0 ? true:false
                            
                            

@@ -342,6 +342,21 @@
                   endingLineNumber = "88"
                   offsetFromSymbolStart = "116">
                </Location>
+               <Location
+                  uuid = "9C5A47FC-6476-4042-A65A-B5E0AEFDF400 - fe5830e1690ae820"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "132">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -530,6 +545,21 @@
                   startingLineNumber = "96"
                   endingLineNumber = "96"
                   offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "115CFEF1-3F1A-4D44-A7B5-2C0C44C66095 - 1f93f637a1e25a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in CinemaBook.FireBaseManager.checkExists(email: Swift.String, password: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "204">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -736,6 +766,21 @@
                   endingLineNumber = "159"
                   offsetFromSymbolStart = "336">
                </Location>
+               <Location
+                  uuid = "1E8D3D70-0CB0-424A-81B2-7E6708C87D42 - 8768bcc87de25ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "372">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -814,6 +859,21 @@
                   startingLineNumber = "161"
                   endingLineNumber = "161"
                   offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  uuid = "A38A7605-C24E-4AD1-B4CA-68E3EA9B381E - 8768bcc87de25926"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.String, Swift.Error&gt;) -&gt; () in CinemaBook.FireBaseManager.uploadImageWithUser(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "748">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -909,6 +969,21 @@
                   startingLineNumber = "144"
                   endingLineNumber = "144"
                   offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "6029B0BB-1CB0-4E7E-8F40-43A9B6ECE8DB - a2a8ebd8e0ca0f26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FireBaseManager.insertUsers(safeEmail: Swift.String, imageView: __C.UIImage) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Helper/FireBaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "356">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1341,8 +1416,8 @@
             filePath = "CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/view/ManagementInterestMoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "calendar(_:didSelect:at:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1503,6 +1578,21 @@
                   endingLineNumber = "406"
                   offsetFromSymbolStart = "252">
                </Location>
+               <Location
+                  uuid = "52A98AB5-176D-47B9-B26D-74CDBE03E094 - bbe359743554a258"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.CreateInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "406"
+                  endingLineNumber = "406"
+                  offsetFromSymbolStart = "280">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1582,6 +1672,21 @@
                   endingLineNumber = "501"
                   offsetFromSymbolStart = "428">
                </Location>
+               <Location
+                  uuid = "E0EEE030-A004-4467-8A51-767A6350F967 - 8bdc532a8e17410b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ManagementInterestMoviesViewController.callbackDialogListRoom(idroom: Swift.Int, date: Swift.String) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "501"
+                  endingLineNumber = "501"
+                  offsetFromSymbolStart = "444">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1644,6 +1749,21 @@
                   startingLineNumber = "427"
                   endingLineNumber = "427"
                   offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "A4F0DDF0-75C5-4E3F-94D2-6C50ECCC2FCF - 498e28f42aad743e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.ManagementInterestMoviesViewController.getListAutoInterest() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "427"
+                  endingLineNumber = "427"
+                  offsetFromSymbolStart = "156">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1800,6 +1920,21 @@
                   startingLineNumber = "268"
                   endingLineNumber = "268"
                   offsetFromSymbolStart = "8964">
+               </Location>
+               <Location
+                  uuid = "584929B1-CAF4-475F-A8B4-98F7BC9650F5 - 1fab02f31ca1df24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ManagementInterestMoviesViewController.tableView(_: __C.UITableView, trailingSwipeActionsConfigurationForRowAt: Foundation.IndexPath) -&gt; Swift.Optional&lt;__C.UISwipeActionsConfiguration&gt;"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Manager/Management/ManagementInterestMovie/ManagementInterestMovieNewEdit/Extension/ManagementInterestMoviesViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268"
+                  offsetFromSymbolStart = "9056">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2249,6 +2384,21 @@
                   endingLineNumber = "169"
                   offsetFromSymbolStart = "1124">
                </Location>
+               <Location
+                  uuid = "7CB1D773-F346-4BA6-A4C1-BCF9520D75C9 - 5e2dbe559f6b798a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.PaymentBillViewController.PaymentBill() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "1192">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2405,8 +2555,8 @@
             filePath = "CinemaBook/Scence/StoreShoppingCart/PaymentFoodCombo/view/PaymentFoodComboViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "resgistervoucher()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2469,8 +2619,8 @@
             filePath = "CinemaBook/Scence/Booking/TimeShow/view/TimeShowViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2947,6 +3097,21 @@
                   endingLineNumber = "80"
                   offsetFromSymbolStart = "340">
                </Location>
+               <Location
+                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd1bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.handleNotification(Foundation.Notification) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "392">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -3056,6 +3221,21 @@
                   startingLineNumber = "217"
                   endingLineNumber = "217"
                   offsetFromSymbolStart = "312">
+               </Location>
+               <Location
+                  uuid = "ECEB36F7-375D-4A56-A99F-BDEF26E5F189 - 2e8ce7dd6a1b0227"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.PaymentBillViewController.getIdbill() -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController%20+%20Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "356">
                </Location>
             </Locations>
          </BreakpointContent>

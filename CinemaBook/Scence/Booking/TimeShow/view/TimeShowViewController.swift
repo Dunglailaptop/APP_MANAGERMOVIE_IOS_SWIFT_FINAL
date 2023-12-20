@@ -24,6 +24,7 @@ class TimeShowViewController: BaseViewController {
     var idroom = 0
     var namemovie = ""
     var check = false
+    var checkbillroom = false
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +56,12 @@ class TimeShowViewController: BaseViewController {
             data.idmovie = idmovie
             viewModel.pagation.accept(data)
             getListInterestCinema()
+            checkbillroom = true
         } else {
             data.idroom = idroom
             viewModel.pagation.accept(data)
             getListInterestRoom()
+            checkbillroom = false
         }
        
        
@@ -88,16 +91,21 @@ extension TimeShowViewController: FSCalendarDelegate {
           var datechoose = chosenDate[0] + chosenDate[1] + chosenDate[2]
         var datenow = currentDate[2] + currentDate[1] + currentDate[0]
           dLog(datechoose + "-" + datenow)
-          
+        if checkbillroom{
           if datechoose < datenow {
               JonAlert.showSuccess(message: "Ngày hiện tại không tồn tại suất chiếu")
               view_no_data.isHidden = false
            
           }else {
-             
-             
+          
+                
               getListInterestCinema()
           }
+        }else {
+            getListInterestRoom()
+           
+        }
+       
         
     }
     func convertToVietnameseDayName(_ englishDayName: String) -> String {
