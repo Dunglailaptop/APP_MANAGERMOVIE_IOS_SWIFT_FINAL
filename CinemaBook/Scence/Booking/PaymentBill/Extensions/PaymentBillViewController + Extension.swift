@@ -129,7 +129,7 @@ extension PaymentBillViewController {
         billinfo.totalamount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
         billVNPAY.amount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
         paymentvnpay.amount = dataChair.map{$0.price}.reduce(0,+) + dataFoodCombo.map{$0.priceCombo * $0.quantity}.reduce(0,+)
-        billinfo.idmovie = infoInterestMovie.idcinema
+        billinfo.idmovie = infoInterestMovie.idmovie
         billinfo.idcinema = infoInterestMovie.idcinema
         billinfo.idinterest = infoInterestMovie.idinterest
         dataChair.enumerated().forEach{ (index,value) in
