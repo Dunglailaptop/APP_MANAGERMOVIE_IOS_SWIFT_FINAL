@@ -9,6 +9,22 @@
 import UIKit
 import ObjectMapper
 
+struct testsocket: Mappable {
+  
+    var target = ""
+    var arguments: [[Int]] = [[]]
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+      
+        target <- map["target"]
+        arguments <- map["arguments"]
+    }
+}
+
 struct Bill: Mappable{
      
         var idbill = 0

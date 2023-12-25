@@ -8,8 +8,16 @@
 
 import UIKit
 import JonAlert
+import SocketIO
+import Starscream
+import SwiftSignalRClient
+import ObjectMapper
 
-class BookingChairViewController: BaseViewController {
+class BookingChairViewController: BaseViewController, WebSocketDelegate {
+ 
+    
+   
+    
 
     @IBOutlet weak var view_collection_lblandlistbill: UIView!
     var viewModel = BookingChairViewModel()
@@ -86,6 +94,7 @@ class BookingChairViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        testSocket()
             var data = viewModel.pagition.value
             data.idroom = idroom
             data.idinterest = idinterest
@@ -148,10 +157,115 @@ class BookingChairViewController: BaseViewController {
        
     }
     
+    var socket: WebSocket!
+      var isConnected = false
+      let server = WebSocketServer()
+    
+    func testSocket() {
+        var request = URLRequest(url: URL(string: "ws://localhost:5062/kitchen")!) //https://localhost:8080
+              request.timeoutInterval = 5
+              socket = WebSocket(request: request)
+              socket.delegate = self
+              socket.connect()
+
+    }
+    // MARK: - WebSocketDelegate
+      func didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) {
+          dLog(event)
+          switch event {
+          case .connected(let headers):
+              isConnected = true
+              dLog("websocket is connected: \(headers)")
+              let specialChar: Character = "\u{001E}"
+              let initialJSONMessage = "{\"protocol\":\"json\",\"version\":1}" + String(specialChar)
+              socket.write(string: initialJSONMessage)
+          case .disconnected(let reason, let code):
+              isConnected = false
+              dLog("websocket is disconnected: \(reason) with code: \(code)")
+          case .text(let string):
+              dLog("Received text: \(string)")
+              if  let data = Mapper<testsocket>().map(JSONString: string.replacingOccurrences(of: "\u{001E}", with: "")) {
+                  var datachair = viewModel.dataArray.value
+                  if data.arguments.count > 0 && data.target == "HOADONMOI" {
+                    
+                      datachair.enumerated().forEach{(index1,value1) in
+                          data.arguments[0].enumerated().forEach{(index,value) in
+                              dLog(value)
+                              if value == value1.idchair {
+                                  datachair[index1].isSelected = BILL
+                              }
+                          }
+                      }
+                      viewModel.dataArray.accept(datachair)
+                      let notificationName = Notification.Name("reloaddatachair")
+                      dLog(viewModel.dataArray.value)
+                      let loginResponse = ["userInfo": ["Report_type": viewModel.dataArray.value
+                                                       ]]
+                      NotificationCenter.default.post(name: notificationName, object: nil, userInfo: loginResponse)
+//                      getListchair()
+//                      tableView.reloadData()
+                      dLog(data)
+                  }
+                  
+              }
+             
+          case .binary(let data):
+              dLog("Received data: \(data.count)")
+          case .ping(_):
+              break
+          case .pong(_):
+              break
+          case .viabilityChanged(_):
+              break
+          case .reconnectSuggested(_):
+              break
+          case .cancelled:
+              isConnected = false
+          case .error(let error):
+              isConnected = false
+              handleError(error)
+          case .peerClosed:
+              break
+          }
+      }
+      
+      func handleError(_ error: Error?) {
+          if let e = error as? WSError {
+              dLog("websocket encountered an error: \(e.message)")
+          } else if let e = error {
+              dLog("websocket encountered an error: \(e.localizedDescription)")
+          } else {
+              dLog("websocket encountered an error")
+          }
+      }
+      
+      // MARK: Write Text Action
+      
+      @IBAction func writeText(_ sender: UIBarButtonItem) {
+          let specialChar: Character = "\u{001E}"
+          let initialJSONMessage = "{\"protocol\":\"json\",\"version\":1}" + String(specialChar)
+          socket.write(string: initialJSONMessage)
+      }
+      
+      // MARK: Disconnect Action
+      
+      @IBAction func disconnect(_ sender: UIBarButtonItem) {
+          if isConnected {
+              dLog("connect")
+              sender.title = "Connect"
+              socket.disconnect()
+          } else {
+              dLog("disconnect")
+              sender.title = "Disconnect"
+              socket.connect()
+          }
+      }
+   
+    
 }
 extension BookingChairViewController: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return view_collection
     }
-
+    
 }

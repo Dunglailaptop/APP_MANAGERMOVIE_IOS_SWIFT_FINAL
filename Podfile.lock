@@ -196,6 +196,7 @@ PODS:
   - SquareFlowLayout (0.0.1)
   - Starscream (4.0.6)
   - SwiftAlgorithms (1.0.0)
+  - SwiftSignalRClient (1.1.0)
   - TagListView (1.4.1)
   - VerticalCardSwiper (2.3.1)
   - youtube-ios-player-helper (1.0.4)
@@ -241,6 +242,7 @@ DEPENDENCIES:
   - SocketRocket
   - SpreadsheetView
   - SquareFlowLayout
+  - SwiftSignalRClient
   - TagListView
   - VerticalCardSwiper
   - youtube-ios-player-helper
@@ -308,6 +310,7 @@ SPEC REPOS:
     - SquareFlowLayout
     - Starscream
     - SwiftAlgorithms
+    - SwiftSignalRClient
     - TagListView
     - VerticalCardSwiper
     - youtube-ios-player-helper
@@ -374,10 +377,11 @@ SPEC CHECKSUMS:
   SquareFlowLayout: cde3486d3086fb7f95b303d9b90bb86aa9dd98b5
   Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
+  SwiftSignalRClient: 2fa651ea18d47c5aaa135f0c8cf959239c845999
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
   VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
   youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 2c8edaaf8eae6cb5da5c71599d8a5c569c3b6472
+PODFILE CHECKSUM: 2e0eb89f76d8a4c530eca933d39e9f846f3a1bfc
 
 COCOAPODS: 1.13.0

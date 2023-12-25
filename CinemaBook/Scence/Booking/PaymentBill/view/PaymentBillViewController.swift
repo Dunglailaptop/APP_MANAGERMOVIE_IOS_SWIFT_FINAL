@@ -12,6 +12,7 @@ import RxCocoa
 import ObjectMapper
 import JonAlert
 import UserNotifications
+import SocketIO
 
 class PaymentBillViewController: UIViewController {
     
@@ -77,7 +78,7 @@ class PaymentBillViewController: UIViewController {
         getListCombo()
         getPoint()
         setup()
-       
+//        testSocket()
     }
     @objc func handleNotification(_ notification: Notification) {
         if let userInfo = notification.userInfo as? [String: Any] {
@@ -105,6 +106,41 @@ class PaymentBillViewController: UIViewController {
    
         typeCheck == 1 ?  saveCacheBILLVNPAY(): presentPopupPayment()
     }
-    
+    //socket
+//    func testSocket() {
+//        // Create a Socket.IO client instance
+//        let manager = SocketManager(socketURL: URL(string: "ws://localhost:5062/kitchen?access_token={{token}}")!, config: [.log(true), .compress])
+//        let socket = manager.defaultSocket
+//
+//        // Define event handler for receiving messages from the server
+//        socket.on("HOADONMOI") { (data, ack) in
+//            if let response = data[0] as? String {
+//                dLog("Received message from server: \(response)")
+//            }
+//        }
+//
+//        // Define event handler for successful connection
+//        socket.on(clientEvent: .connect) { (data, ack) in
+//            dLog("Socket connected")
+//
+//            // Create the initial JSON message with the special character ""
+//            let specialChar: Character = "\u{001E}"
+//            let initialJSONMessage = "{\"protocol\":\"json\",\"version\":1}" + String(specialChar)
+//
+//            // Send the JSON string to the server after successful connection
+//            socket.emit("initMessage", initialJSONMessage)
+//        }
+//
+//        // Define event handler for socket errors
+//        socket.on(clientEvent: .error) { (data, ack) in
+//            dLog("Socket error: \(data)")
+//        }
+//
+//        // Connect to the server
+//        socket.connect()
+//    }
+
+
+
 }
 

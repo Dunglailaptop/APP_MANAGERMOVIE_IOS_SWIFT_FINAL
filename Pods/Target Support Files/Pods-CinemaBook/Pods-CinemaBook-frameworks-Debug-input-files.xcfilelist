@@ -52,6 +52,7 @@ ${BUILT_PRODUCTS_DIR}/SpreadsheetView/SpreadsheetView.framework
 ${BUILT_PRODUCTS_DIR}/SquareFlowLayout/SquareFlowLayout.framework
 ${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework
 ${BUILT_PRODUCTS_DIR}/SwiftAlgorithms/Algorithms.framework
+${BUILT_PRODUCTS_DIR}/SwiftSignalRClient/SwiftSignalRClient.framework
 ${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework
 ${BUILT_PRODUCTS_DIR}/VerticalCardSwiper/VerticalCardSwiper.framework
 ${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework

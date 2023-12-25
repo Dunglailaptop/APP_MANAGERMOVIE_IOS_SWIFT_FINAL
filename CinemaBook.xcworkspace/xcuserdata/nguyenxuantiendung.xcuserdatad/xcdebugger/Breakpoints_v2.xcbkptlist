@@ -3062,13 +3062,13 @@
             filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "handleNotification(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd15c"
+                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd19e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -3078,12 +3078,12 @@
                   urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "340">
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "392">
                </Location>
                <Location
-                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd1bd"
+                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd1ff"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -3093,12 +3093,12 @@
                   urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "340">
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "392">
                </Location>
                <Location
-                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd1bd"
+                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd039"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -3108,8 +3108,53 @@
                   urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd01a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.handleNotification(Foundation.Notification) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd0a4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.handleNotification(Foundation.Notification) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "D780FC4C-9681-4E6A-BB00-CE01364321DD - a8a28f6a63dcd085"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.handleNotification(Foundation.Notification) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
                   offsetFromSymbolStart = "392">
                </Location>
             </Locations>
@@ -3398,6 +3443,389 @@
             endingLineNumber = "60"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0D2C12D-786A-49A9-A19D-DDCF3D8B0DFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/PaymentBill/view/PaymentBillViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "PaymentBillViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD3FFE3B-8C9B-4FB3-9CE5-E168884C8766"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/PaymentBill/view/PaymentBillViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "PaymentBillViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9A651A5-038A-4E2B-A8EA-8D72A59FE7E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/SocketIOManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11AB35F3-3141-48AE-A94C-1286BC7DD5AA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/SocketIOManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2358B349-84B2-4A23-A393-C53D808921EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/SocketIOManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43C09B4A-8669-4B05-A1A8-6FA03780AF20"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/SocketIOManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEF42F60-E2A3-45AB-A68E-614D3C38D1F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/SocketIOManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "establishConnection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECB6507C-D69F-4295-8BCA-2D1C34B508FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Helper/SocketIOManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "establishConnection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5298323-311B-477D-B2FE-AA85DCC23DF8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "writeText(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D7E6AAC-C215-4CE7-9E95-530E35F7A712"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "didReceive(event:client:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9D7E6AAC-C215-4CE7-9E95-530E35F7A712 - 20ae164d868ee04d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "180"
+                  endingLineNumber = "180"
+                  offsetFromSymbolStart = "1272">
+               </Location>
+               <Location
+                  uuid = "9D7E6AAC-C215-4CE7-9E95-530E35F7A712 - 20ae164d868ee04d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "180"
+                  endingLineNumber = "180"
+                  offsetFromSymbolStart = "1360">
+               </Location>
+               <Location
+                  uuid = "9D7E6AAC-C215-4CE7-9E95-530E35F7A712 - 20ae164d868ee0ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20EB8141-B3DF-46D3-8C9F-417378AB2B43"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "didReceive(event:client:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "20EB8141-B3DF-46D3-8C9F-417378AB2B43 - 20ae164d868ee373"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "2216">
+               </Location>
+               <Location
+                  uuid = "20EB8141-B3DF-46D3-8C9F-417378AB2B43 - 20ae164d868ee373"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.BookingChairViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "2220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CCC61CE-B1EC-474F-BB46-D22828E4CD38"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/cell/ListChairBookiingTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "handleNotification(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0CCC61CE-B1EC-474F-BB46-D22828E4CD38 - 47a763fb38a9be48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ListChairBookiingTableViewCell.handleNotification(Foundation.Notification) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/cell/ListChairBookiingTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1480">
+               </Location>
+               <Location
+                  uuid = "0CCC61CE-B1EC-474F-BB46-D22828E4CD38 - 47a763fb38a9be48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.ListChairBookiingTableViewCell.handleNotification(Foundation.Notification) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/cell/ListChairBookiingTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E8D0578-AA75-4EE6-8D51-3EB1AA59E078"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "didReceive(event:client:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A2E0F2F-59C4-4A52-90AE-EDAACB9CD53E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "didReceive(event:client:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "944FBC50-9EE1-49BA-9E1F-5B220BDE77EF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "didReceive(event:client:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "944FBC50-9EE1-49BA-9E1F-5B220BDE77EF - e2125b7f14bbae24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, Swift.Int) -&gt; () in closure #1 (Swift.Int, CinemaBook.chair) -&gt; () in CinemaBook.BookingChairViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "944FBC50-9EE1-49BA-9E1F-5B220BDE77EF - e2125b7f14bbae24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, Swift.Int) -&gt; () in closure #1 (Swift.Int, CinemaBook.chair) -&gt; () in CinemaBook.BookingChairViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -57,4 +57,5 @@ pod 'VerticalCardSwiper'
 # pod 'GooglePlaces', '5.1.0'
   pod 'GooglePlaces', '8.3.0'
   pod 'GoogleMaps' , '8.3.0'
+  pod 'SwiftSignalRClient'
 end

@@ -17,7 +17,18 @@ class ListChairBookiingTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("reloaddatachair"), object: nil)
         // Initialization code
+    }
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any] {
+                // Access the loginResponse dictionary here
+                if let reportType = userInfo["userInfo"] as? [String: Any] {
+                    let reportTypeValue = reportType["Report_type"] as? [chair]
+//                    viewModel?.dataArray.accept(reportTypeValue!)
+                    viewCollection.reloadData()
+                }
+            }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
