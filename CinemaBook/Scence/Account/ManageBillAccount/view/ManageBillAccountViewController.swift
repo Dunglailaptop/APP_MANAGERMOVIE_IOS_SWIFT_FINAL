@@ -38,8 +38,11 @@ class ManageBillAccountViewController: BaseViewController {
                            var filteredDataArray = cloneDataFilter.filter({
                                (value) -> Bool in
                                let str1 = query!.uppercased().applyingTransform(.stripDiacritics, reverse: false)
-                               let str2 = value.namemovie.uppercased().applyingTransform(.stripDiacritics, reverse: false)
-                               return str2!.contains(str1!)
+                              
+                                   if let str2 = String(value.idbill).uppercased().applyingTransform(.stripDiacritics, reverse: false){
+                                       return str2.contains(str1!)
+                                              }
+                               return false
                            })
                            viewModel.dataArray.accept(filteredDataArray)
                           

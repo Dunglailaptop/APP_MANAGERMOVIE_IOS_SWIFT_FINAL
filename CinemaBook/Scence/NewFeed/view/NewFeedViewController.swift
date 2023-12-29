@@ -19,7 +19,7 @@ class NewFeedViewController: BaseViewController {
     
     @IBOutlet weak var txt_search: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
+    let refreshControl = UIRefreshControl()
 
     
 //    var title_name = ["Tất cả","Phim","Video short","Trailler"]

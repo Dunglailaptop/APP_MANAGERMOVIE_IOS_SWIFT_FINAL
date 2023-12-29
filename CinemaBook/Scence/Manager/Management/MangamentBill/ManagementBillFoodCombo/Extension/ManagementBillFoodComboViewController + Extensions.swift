@@ -20,6 +20,7 @@ extension ManagementBillFoodComboViewController {
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<PaymentInfoBillFoodCombo>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
+                    self.viewModel.dataArraySearch.accept(data)
                     dLog(data)
                     self.view_nodata.isHidden = self.viewModel.dataArray.value.count > 0 ? true : false
                 }

@@ -16,7 +16,10 @@ class VideoTraillerShowViewModel: BaseViewModel
     private var router: VideoTraillerShowRouter?
     
     var dataArray: BehaviorRelay<[Trailler]> = BehaviorRelay(value: [])
-    
+    var datacommentgetArray: BehaviorRelay<Comments> = BehaviorRelay(value: Comments())
+    var datacomment: BehaviorRelay<[Comments]> = BehaviorRelay(value: [])
+    var datacreatemessage:BehaviorRelay<MessageComments> = BehaviorRelay(value: MessageComments())
+    var datalikeandcomments: BehaviorRelay<likeandheart> = BehaviorRelay(value: likeandheart())
     func bind(view: VieoTraillerShowViewController, router: VideoTraillerShowRouter)
     {
         self.view = view
@@ -30,6 +33,13 @@ class VideoTraillerShowViewModel: BaseViewModel
 extension VideoTraillerShowViewModel {
     func getListTraillerShowBanner() -> Observable<APIResponse> {
     return appServiceProvider.rx.request(.getListTrailler)
+               .filterSuccessfulStatusCodes()
+               .mapJSON().asObservable()
+               .showAPIErrorToast()
+               .mapObject(type: APIResponse.self)
+       }
+    func postlikeandcomments() -> Observable<APIResponse> {
+        return appServiceProvider.rx.request(.likeandcomment(likeandhearts: datalikeandcomments.value))
                .filterSuccessfulStatusCodes()
                .mapJSON().asObservable()
                .showAPIErrorToast()

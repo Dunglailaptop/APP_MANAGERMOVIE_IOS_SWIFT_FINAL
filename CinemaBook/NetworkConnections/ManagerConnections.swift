@@ -99,6 +99,8 @@ enum ManagerConnections {
     case checksession
     case checkin(checkins:checkin)
     case getlistcheckin(idcinema:Int,iduser:Int,timestart:String,timeend:String,type:Int)
+    case postmessage(comment: MessageComments)
+    case likeandcomment(likeandhearts: likeandheart)
 }
 
 extension ManagerConnections: TargetType {
@@ -281,6 +283,10 @@ extension ManagerConnections: TargetType {
             return APIEndPoint.Name.urlcheckin
         case .getlistcheckin(let idcinema,let iduser,let timestart,let timeend,let type):
             return APIEndPoint.Name.urlgetListcheckin
+        case .postmessage(let comment):
+            return APIEndPoint.Name.urlpostmessage
+        case .likeandcomment(let likeandhearts):
+            return APIEndPoint.Name.urllikeandcomment
         }
     
     }
@@ -456,6 +462,10 @@ extension ManagerConnections: TargetType {
             return .post
         case .getlistcheckin(_,_,_,_,_):
             return .get
+        case .postmessage(_):
+            return .post
+        case .likeandcomment(_):
+            return .post
         }
 
         
@@ -653,6 +663,10 @@ extension ManagerConnections: TargetType {
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         case .getlistcheckin(_,_,_,_,_):
             return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.GET)
+        case .postmessage(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
+        case .likeandcomment(_):
+            return headerJava(ProjectId: Constans.PROJECT_IDS.PROJECT_OAUTH, Method: Constans.METHOD_TYPE.POST)
         }
    
     }
@@ -1146,6 +1160,23 @@ extension ManagerConnections: TargetType {
                     "timeend":timeend,
                 "type":type
             ]
+        case .postmessage(let comment):
+            return [
+                "idcomment": comment.idcomment,
+                "iduser": comment.iduser,
+                "idvideo": comment.idvideo,
+                "message": comment.message,
+                "heart": comment.heart,
+                "likes": comment.likes
+            ]
+        case .likeandcomment(let likeandhearts):
+            return [
+                "idliekandcomment": likeandhearts.idliekandcomment,
+                "likes": likeandhearts.likes,
+                "comments": likeandhearts.comments,
+                "idvideo": likeandhearts.idvideo,
+                "Idusers": likeandhearts.Idusers
+            ]
         }
        
     }
@@ -1329,6 +1360,10 @@ extension ManagerConnections: TargetType {
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         case .getlistcheckin(_,_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: self.encoding(.get))
+        case .postmessage(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
+        case .likeandcomment(_):
+            return .requestParameters(parameters: parameters!, encoding: self.encoding(.post))
         }
     }
 

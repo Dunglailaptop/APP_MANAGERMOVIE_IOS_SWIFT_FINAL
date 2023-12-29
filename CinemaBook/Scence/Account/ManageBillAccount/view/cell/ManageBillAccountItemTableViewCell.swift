@@ -10,6 +10,7 @@ import UIKit
 
 class ManageBillAccountItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lbl_idbill: UILabel!
     @IBOutlet weak var lbl_price: UILabel!
     @IBOutlet weak var lbl_time_interest: UILabel!
     @IBOutlet weak var lbl_date_interest: UILabel!
@@ -29,6 +30,7 @@ class ManageBillAccountItemTableViewCell: UITableViewCell {
     
     var data: BillInfoAccount? = nil {
         didSet {
+            lbl_idbill.text = "Mã hoá đơn:" + String(data!.idbill)
             lbl_price.text = Utils.stringVietnameseFormatWithNumber(amount: data!.totalamount)
             lbl_name_movie.text = data?.namemovie
             var timeshow = data?.starttime.components(separatedBy: "T")

@@ -158,7 +158,7 @@ extension ManagementDetailMovieViewController {
         }else {
             VIEW_SHOW_YT.isHidden = true
             view_show_video.isHidden = false
-            Utils().setupvideo(url: Utils.getFullMediaLink(string: viewModel.valueMovie.value.videofile), type: 1, view: view_show_video)
+            Utils().setupvideo(url: Utils.getFullMediaLink(string: viewModel.valueMovie.value.videofile), type: 1, view: view_show_video,heights: 0)
         }
        
         image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: viewModel.valueMovie.value.poster)), placeholder:  UIImage(named: "image_defauft_medium"))

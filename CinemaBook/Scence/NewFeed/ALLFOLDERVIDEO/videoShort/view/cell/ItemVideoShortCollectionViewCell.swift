@@ -17,7 +17,7 @@ class ItemVideoShortCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        Utils().setupvideo(url: "http://localhost:5062/Uploads/Movie/videotest.mp4/videotest.mp4", type: 0,view: playview)
+        Utils().setupvideo(url: "http://localhost:5062/Uploads/Movie/videotest.mp4/videotest.mp4", type: 0,view: playview, heights: 0)
     }
     
    

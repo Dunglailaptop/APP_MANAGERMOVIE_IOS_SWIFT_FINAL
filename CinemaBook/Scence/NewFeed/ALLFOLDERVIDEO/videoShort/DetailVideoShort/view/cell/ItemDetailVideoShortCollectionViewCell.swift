@@ -17,7 +17,7 @@ class ItemDetailVideoShortCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
 //        setupvideo()
 //        // Initialization code
-         Utils().setupvideo(url: "http://localhost:5062/Uploads/Movie/videotest.mp4/videotest.mp4", type: 1,view: view_player)
+        Utils().setupvideo(url: "http://localhost:5062/Uploads/Movie/videotest.mp4/videotest.mp4", type: 1,view: view_player, heights: 0)
     }
 //    func setupvideo() {
 //        let videoUrl = URL(string: "http://localhost:5062/Uploads/Movie/videotest.mp4/videotest.mp4")!

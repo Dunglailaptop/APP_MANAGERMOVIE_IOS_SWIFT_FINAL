@@ -16,6 +16,7 @@ class ManagementBillFoodComboViewModel: BaseViewModel {
     private var router: ManagementBillFoodComboRouter?
     
     public var dataArray: BehaviorRelay<[PaymentInfoBillFoodCombo]> = BehaviorRelay(value: [])
+    public var dataArraySearch: BehaviorRelay<[PaymentInfoBillFoodCombo]> = BehaviorRelay(value: [])
     public var allvalue: BehaviorRelay<(datefrom:String,dateto:String,status:Int)> = BehaviorRelay(value: (datefrom: Utils.getCurrentDateStringformatMysqlyymmdd(),dateto: Utils.getCurrentDateStringformatMysqlyymmdd(),status:0))
     func bind(view: ManagementBillFoodComboViewController, router: ManagementBillFoodComboRouter){
         self.view = view

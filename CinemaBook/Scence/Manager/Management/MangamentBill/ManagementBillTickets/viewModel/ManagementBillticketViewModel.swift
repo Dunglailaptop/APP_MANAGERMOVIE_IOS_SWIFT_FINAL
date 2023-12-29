@@ -16,6 +16,7 @@ class ManagementBillticketViewModel: BaseViewModel {
     private var router: ManagementBillticketRouter?
     
     public var dataArray: BehaviorRelay<[BillInfoAccount]> = BehaviorRelay(value: [])
+    public var dataArraySearch: BehaviorRelay<[BillInfoAccount]> = BehaviorRelay(value: [])
     public var allvalue: BehaviorRelay<(dateFrom:String,dateTo:String,status:Int)> = BehaviorRelay(value: (dateFrom:Utils.getCurrentDateStringformatMysqlyymmdd(),dateTo:Utils.getCurrentDateStringformatMysqlyymmdd(),status:0))
     func bind(view: ManagementBillticketViewController, router: ManagementBillticketRouter){
         self.view = view

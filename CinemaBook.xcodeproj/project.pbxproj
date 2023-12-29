@@ -254,6 +254,10 @@
 		B0B7B8FD2B1DCAB700EB4CD8 /* ManagementBillRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B7B8FB2B1DCAB700EB4CD8 /* ManagementBillRoomViewController.xib */; };
 		B0B7B8FF2B1DD2FA00EB4CD8 /* ManagementBillRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B7B8FE2B1DD2FA00EB4CD8 /* ManagementBillRoomViewModel.swift */; };
 		B0B7B9012B1DD30900EB4CD8 /* ManagementBillRoomRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B7B9002B1DD30900EB4CD8 /* ManagementBillRoomRouter.swift */; };
+		B0BB11192B3C6C2A00344952 /* DialogShowCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB11172B3C6C2A00344952 /* DialogShowCommentViewController.swift */; };
+		B0BB111A2B3C6C2A00344952 /* DialogShowCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BB11182B3C6C2A00344952 /* DialogShowCommentViewController.xib */; };
+		B0BB11222B3C76DD00344952 /* itemMesschatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BB11202B3C76DD00344952 /* itemMesschatTableViewCell.swift */; };
+		B0BB11232B3C76DD00344952 /* itemMesschatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BB11212B3C76DD00344952 /* itemMesschatTableViewCell.xib */; };
 		B0BD0A512AD2F1720099FB2C /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD0A502AD2F1720099FB2C /* SocketIOManager.swift */; };
 		B0BD0A532AD2FF870099FB2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0BD0A522AD2FF870099FB2C /* GoogleService-Info.plist */; };
 		B0BE0A542AE02481001BFE08 /* DialogAccessUpdatesatusInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE0A522AE02481001BFE08 /* DialogAccessUpdatesatusInterestViewController.swift */; };
@@ -277,6 +281,9 @@
 		B0E5EDF72B185F4A0027ED5E /* SettingBusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E5EDF52B185F4A0027ED5E /* SettingBusinessViewController.xib */; };
 		B0E5EDF92B18696F0027ED5E /* SettingBusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5EDF82B18696F0027ED5E /* SettingBusinessViewModel.swift */; };
 		B0E5EDFB2B18697D0027ED5E /* SettingBusinessRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5EDFA2B18697D0027ED5E /* SettingBusinessRouter.swift */; };
+		B0E8DD8B2B3DD5130067CA2C /* DialogShowCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8DD8A2B3DD5130067CA2C /* DialogShowCommentViewModel.swift */; };
+		B0E8DD8D2B3DD5640067CA2C /* DialogShowCommentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8DD8C2B3DD5640067CA2C /* DialogShowCommentRouter.swift */; };
+		B0E8DD8F2B3DE3A60067CA2C /* SocketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8DD8E2B3DE3A60067CA2C /* SocketModel.swift */; };
 		B0EBEEA72AD4372100521CF1 /* StorageBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBEEA62AD4372100521CF1 /* StorageBaseManager.swift */; };
 		B0F9D3042AE6BDB600CE70FC /* ItemRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F9D3022AE6BDB600CE70FC /* ItemRoomTableViewCell.swift */; };
 		B0F9D3052AE6BDB600CE70FC /* ItemRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F9D3032AE6BDB600CE70FC /* ItemRoomTableViewCell.xib */; };
@@ -868,6 +875,10 @@
 		B0B7B8FB2B1DCAB700EB4CD8 /* ManagementBillRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManagementBillRoomViewController.xib; sourceTree = "<group>"; };
 		B0B7B8FE2B1DD2FA00EB4CD8 /* ManagementBillRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementBillRoomViewModel.swift; sourceTree = "<group>"; };
 		B0B7B9002B1DD30900EB4CD8 /* ManagementBillRoomRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementBillRoomRouter.swift; sourceTree = "<group>"; };
+		B0BB11172B3C6C2A00344952 /* DialogShowCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogShowCommentViewController.swift; sourceTree = "<group>"; };
+		B0BB11182B3C6C2A00344952 /* DialogShowCommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DialogShowCommentViewController.xib; sourceTree = "<group>"; };
+		B0BB11202B3C76DD00344952 /* itemMesschatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemMesschatTableViewCell.swift; sourceTree = "<group>"; };
+		B0BB11212B3C76DD00344952 /* itemMesschatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itemMesschatTableViewCell.xib; sourceTree = "<group>"; };
 		B0BD0A502AD2F1720099FB2C /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		B0BD0A522AD2FF870099FB2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0BE0A522AE02481001BFE08 /* DialogAccessUpdatesatusInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogAccessUpdatesatusInterestViewController.swift; sourceTree = "<group>"; };
@@ -891,6 +902,9 @@
 		B0E5EDF52B185F4A0027ED5E /* SettingBusinessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingBusinessViewController.xib; sourceTree = "<group>"; };
 		B0E5EDF82B18696F0027ED5E /* SettingBusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBusinessViewModel.swift; sourceTree = "<group>"; };
 		B0E5EDFA2B18697D0027ED5E /* SettingBusinessRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBusinessRouter.swift; sourceTree = "<group>"; };
+		B0E8DD8A2B3DD5130067CA2C /* DialogShowCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogShowCommentViewModel.swift; sourceTree = "<group>"; };
+		B0E8DD8C2B3DD5640067CA2C /* DialogShowCommentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogShowCommentRouter.swift; sourceTree = "<group>"; };
+		B0E8DD8E2B3DE3A60067CA2C /* SocketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketModel.swift; sourceTree = "<group>"; };
 		B0EBEEA62AD4372100521CF1 /* StorageBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageBaseManager.swift; sourceTree = "<group>"; };
 		B0F9D3022AE6BDB600CE70FC /* ItemRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRoomTableViewCell.swift; sourceTree = "<group>"; };
 		B0F9D3032AE6BDB600CE70FC /* ItemRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemRoomTableViewCell.xib; sourceTree = "<group>"; };
@@ -2267,6 +2281,7 @@
 		B0A8CF912AF8DE4000596BBD /* VideoTrailllerShow */ = {
 			isa = PBXGroup;
 			children = (
+				B0BB11162B3C6C0100344952 /* DiaglogShowComment */,
 				B0A6A4102AF93F7200FE695D /* Router */,
 				B0A6A40F2AF93F6B00FE695D /* viewModel */,
 				B0A8CF922AF8DE4C00596BBD /* view */,
@@ -3020,6 +3035,43 @@
 				B0A4E37A2B1E0E4B00C5A53F /* ItemRoomBillTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		B0BB11162B3C6C0100344952 /* DiaglogShowComment */ = {
+			isa = PBXGroup;
+			children = (
+				B0BB11252B3C78FF00344952 /* Router */,
+				B0BB11242B3C78FD00344952 /* viewModel */,
+				B0BB111B2B3C6D1300344952 /* cell */,
+				B0BB11172B3C6C2A00344952 /* DialogShowCommentViewController.swift */,
+				B0BB11182B3C6C2A00344952 /* DialogShowCommentViewController.xib */,
+			);
+			path = DiaglogShowComment;
+			sourceTree = "<group>";
+		};
+		B0BB111B2B3C6D1300344952 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0BB11202B3C76DD00344952 /* itemMesschatTableViewCell.swift */,
+				B0BB11212B3C76DD00344952 /* itemMesschatTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		B0BB11242B3C78FD00344952 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B0E8DD8A2B3DD5130067CA2C /* DialogShowCommentViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		B0BB11252B3C78FF00344952 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B0E8DD8C2B3DD5640067CA2C /* DialogShowCommentRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		B0BE0A512AE0244C001BFE08 /* DialogAccess */ = {
@@ -5111,6 +5163,7 @@
 				B0B6CC092AEFA31000361CF7 /* Report.swift */,
 				B0A9004E2B13B41300F9F613 /* Notifaction.swift */,
 				B0AAED822B238A21000051A0 /* checkin.swift */,
+				B0E8DD8E2B3DE3A60067CA2C /* SocketModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5478,6 +5531,7 @@
 				B0CFEEDB2AE5746000F6547F /* DialogChooseCategoryMovieViewController.xib in Resources */,
 				B0989D5D2B1F05570003A117 /* ItemBillWithRoomCollectionViewCell.xib in Resources */,
 				FE5C9E842AA42BE300FA235D /* Roboto-MediumItalic.ttf in Resources */,
+				B0BB11232B3C76DD00344952 /* itemMesschatTableViewCell.xib in Resources */,
 				FEFBFB712A9F75BA00A85879 /* itemTimeCollectionViewCell.xib in Resources */,
 				FE5C9E822AA42BE300FA235D /* Roboto-Light.ttf in Resources */,
 				FE5C9E8A2AA42BE300FA235D /* Roboto-LightItalic.ttf in Resources */,
@@ -5503,6 +5557,7 @@
 				B0806AEE2B076F320091B499 /* ItemAccountSettingMangerTableViewCell.xib in Resources */,
 				FE585F902A9AFDF000775B27 /* ItemChairCategoryCollectionViewCell.xib in Resources */,
 				B0A9A21B2AD83CD600D68692 /* ItemDialogFoodComboWaterTableViewCell.xib in Resources */,
+				B0BB111A2B3C6C2A00344952 /* DialogShowCommentViewController.xib in Resources */,
 				FE6533842AAA16AA00C0739B /* BannerMovieTableViewCell.xib in Resources */,
 				B0A470E32AE7748C0081C8AA /* ManagementDetailRoomItemCollectionViewCell.xib in Resources */,
 				FE4BAAA42ACABF350010C0B9 /* PaymentBillViewController.xib in Resources */,
@@ -5650,6 +5705,7 @@
 				FE51DE852ABE98A700D5BE93 /* ItemInterestMovieListManagementCollectionViewCell.swift in Sources */,
 				FE6A8D832A642CDF00BEC7BE /* FlimsCollectionViewCell.swift in Sources */,
 				FE6A86032AC5E03F00810FFB /* CreateProductViewController.swift in Sources */,
+				B0E8DD8F2B3DE3A60067CA2C /* SocketModel.swift in Sources */,
 				B0AF53DF2AF52D9D005F2A27 /* ReportFoodViewModel.swift in Sources */,
 				B0E5EDF92B18696F0027ED5E /* SettingBusinessViewModel.swift in Sources */,
 				B04458CD2AEAB08B0041EA50 /* ManagementDetailViewController + Extensions.swift in Sources */,
@@ -5682,11 +5738,13 @@
 				FE59AE262AB3616D00D4E1F6 /* ManagementMovieViewController.swift in Sources */,
 				FE4BAAA32ACABF350010C0B9 /* PaymentBillViewController.swift in Sources */,
 				FE53784B2AB49B9800B5141D /* ManagementMovieViewController+Extensions.swift in Sources */,
+				B0BB11222B3C76DD00344952 /* itemMesschatTableViewCell.swift in Sources */,
 				FE6BD1822AC859A000177093 /* MangamentFoodItemViewModel.swift in Sources */,
 				B0AB37A62ADD299D00C2C102 /* ManageBillFoodAccountItemTableViewCell.swift in Sources */,
 				B0AB160F2AFF1F82005C41DE /* SigninViewModel.swift in Sources */,
 				FE5A14AE2AC99CD1005739E4 /* BookingProductComboRouter.swift in Sources */,
 				FEAC969A2A5A55CC00B49C80 /* ViewController.swift in Sources */,
+				B0E8DD8D2B3DD5640067CA2C /* DialogShowCommentRouter.swift in Sources */,
 				FE0F290B2A5AF4DC008C62CD /* MenuViewController.swift in Sources */,
 				B0A8CF9A2AF8DE9A00596BBD /* VideotraillershowitemCollectionViewCell.swift in Sources */,
 				B0A9EFA22AD9805F00B9EF1D /* CartRouter.swift in Sources */,
@@ -5813,6 +5871,7 @@
 				B0A5E4552AF4ED7B00B3C4D8 /* ReportMovieViewModel.swift in Sources */,
 				FE4EE4602A9CF8A2008E7F1D /* TimeShowViewController+Extension.swift in Sources */,
 				FE639D5A2A9641DE003F618F /* videoRouter.swift in Sources */,
+				B0BB11192B3C6C2A00344952 /* DialogShowCommentViewController.swift in Sources */,
 				FE5C1D272AA2E11600F9B3E5 /* videoShortViewModel.swift in Sources */,
 				FE33F38D2A6CC76B00A396A1 /* Observable+ObjectMapper.swift in Sources */,
 				FE97D8A22A76C7AD00D223C9 /* ExUIViewController(1).swift in Sources */,
@@ -5972,6 +6031,7 @@
 				B0B4C3482B10E6DA001C58A1 /* ItemVoucherAddTableViewCell.swift in Sources */,
 				B0A9003F2B13824D00F9F613 /* ListCinemaRouter.swift in Sources */,
 				B0FB6AE82B0F3ED1004483E0 /* ForgotPasswordViewController.swift in Sources */,
+				B0E8DD8B2B3DD5130067CA2C /* DialogShowCommentViewModel.swift in Sources */,
 				FECD093E2A9F9FA400D97711 /* ListMovieShowNowViewModel.swift in Sources */,
 				FECD09302A9F9CD400D97711 /* ListMovieShowNowViewController.swift in Sources */,
 				FEAB99232AC1DEE800F024D5 /* MangementRoomCreateRouter.swift in Sources */,

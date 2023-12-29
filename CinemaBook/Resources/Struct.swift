@@ -107,6 +107,8 @@ public struct APIEndPoint {
         static let urlchecksession = "/checkin/checksession"
         static let urlcheckin = "/checkin/checkin"
         static let urlgetListcheckin = "/checkin/getlistcheckin"
+        static let urlpostmessage = "/CommentVideo/postCommentVideoController"
+        static let urllikeandcomment = "/CommentVideo/liekandcomment"
 }
     
 }

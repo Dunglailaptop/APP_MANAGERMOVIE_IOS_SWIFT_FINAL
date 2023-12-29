@@ -26,3 +26,5 @@ var REPORT_TYPE_ALL_YEAR = 8 // lấy tất cả thời gian
 //url image
 var urlinkimagedeveloper = "http://localhost:5062/Uploads/Movie/"
 var urlinkimageproduction = "http://14.225.254.31/Uploads/Movie/"
+var urlinksocketdeveloper = "ws://localhost:5062/kitchen"
+var urlinksocketproduction = "ws://14.225.254.31/kitchen"

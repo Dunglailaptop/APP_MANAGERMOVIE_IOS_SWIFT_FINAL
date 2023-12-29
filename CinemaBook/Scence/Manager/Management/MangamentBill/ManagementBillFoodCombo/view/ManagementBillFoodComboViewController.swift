@@ -13,6 +13,7 @@ import RxSwift
 
 class ManagementBillFoodComboViewController: BaseViewController {
 
+    @IBOutlet weak var txt_search: UITextField!
     @IBOutlet weak var view_nodata: UIView!
     @IBOutlet weak var lbl_date_from: UILabel!
     
@@ -28,6 +29,31 @@ class ManagementBillFoodComboViewController: BaseViewController {
         viewModel.bind(view: self, router: router)
        register()
         bindingtable()
+        txt_search.rx.controlEvent(.editingChanged)
+            .withLatestFrom(txt_search.rx.text.orEmpty)
+            .subscribe(onNext: { [weak self] query in
+                guard let self = self else { return }
+                
+                let dataFirsts = self.viewModel.dataArraySearch.value
+                let cloneDataFilter = self.viewModel.dataArray.value
+                
+                if !query.isEmpty {
+                    let filteredDataArray = cloneDataFilter.filter { value in
+                        let str1 = query.uppercased().applyingTransform(.stripDiacritics, reverse: false) ?? ""
+                        
+                        // Convert value.id to String before using uppercased()
+                        if let stringValue = String(value.id).uppercased().applyingTransform(.stripDiacritics, reverse: false) {
+                            return stringValue.contains(str1)
+                        }
+                        
+                        return false // Handle if conversion fails or value.id is not convertible to String
+                    }
+                    self.viewModel.dataArray.accept(filteredDataArray)
+                } else {
+                    self.viewModel.dataArray.accept(dataFirsts)
+                }
+            })
+            .disposed(by: rxbag)
     }
 
     override func viewWillAppear(_ animated: Bool) {

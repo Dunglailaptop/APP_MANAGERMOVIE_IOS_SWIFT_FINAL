@@ -42,7 +42,17 @@ extension NewFeedViewController {
             self.navigationController?.pushViewController(viewcell, animated: true)
         })
         tableView.rx.setDelegate(self)
+        refreshControl.attributedTitle = NSAttributedString(string: "Cập nhật dữ liệu mới")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl) // not required when using
     }
+    @objc func refresh(_ sender: AnyObject) {
+          // Code to refresh table view
+        viewModel.clearData()
+        getListvideo()
+           refreshControl.endRefreshing()
+       }
+    
     func bindingtableviewcell() {
         viewModel.dataArray.bind(to: tableView.rx.items(cellIdentifier: "VideoItemShowinnewfeedTableViewCell", cellType: VideoItemShowinnewfeedTableViewCell.self)) {  (row,data,cell) in
             cell.viewModel = self.viewModel

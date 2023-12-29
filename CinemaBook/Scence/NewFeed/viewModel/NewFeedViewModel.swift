@@ -24,7 +24,10 @@ class NewFeedViewModel: BaseViewModel
 //        self.router =  router
 //        self.router?.setSourceView(self.view!)
 //    }
-    
+    func clearData() {
+        dataArray.accept([])
+        dataArraySearch.accept([])
+    }
  
    
 }

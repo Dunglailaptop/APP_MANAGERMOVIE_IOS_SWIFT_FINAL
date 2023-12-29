@@ -97,22 +97,23 @@ class Utils: NSObject {
               return String(format: "%02d-%02d-%d", year, month, day)
           }
     
-    func setupvideo(url:String,type:Int,view:UIView!) {
+    func setupvideo(url:String,type:Int,view:UIView!,heights:Int) {
       
     let videoUrl = URL(string:url)
     let player = AVPlayer(url: videoUrl!)
     let playerplay = AVPlayerLayer(player: player)
     var playerViewController = AVPlayerViewController()
+//        playerViewController.player = player
 //                playerplay.frame = view.bounds
         playerplay.videoGravity = .resizeAspectFill
-        
+//        playerplay.accessibilityDirectTouchOptions. = true
            if type == 0 {
               
                 playerplay.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
                 view.layer.addSublayer(playerplay)
                 player.pause()
            } else {
-                playerplay.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height )
+               playerplay.frame = CGRect(x: 0, y: 0, width: Int(view.frame.width) + heights, height: Int(view.frame.height) + heights )
                 view.layer.addSublayer(playerplay)
                 player.play()
            }

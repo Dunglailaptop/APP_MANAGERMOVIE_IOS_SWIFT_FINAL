@@ -38,7 +38,7 @@ class VideoItemShowinnewfeedTableViewCell: UITableViewCell {
                 playervideo.load(withVideoId: data!.videofile)
              
             } else {
-                Utils().setupvideo(url: Utils.getFullMediaLink(string: data!.videofile), type: 0, view: playervideo)
+                Utils().setupvideo(url: Utils.getFullMediaLink(string: data!.videofile), type: 0, view: playervideo,heights: 0)
             }
           
         }
