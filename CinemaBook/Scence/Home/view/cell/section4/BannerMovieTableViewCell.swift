@@ -78,10 +78,21 @@ class BannerMovieTableViewCell: UITableViewCell {
     }
 }
 extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        dLog(viewModel?.dataArrayMovie.value[indexPath.row].movieID)
+        var idmovies = (viewModel?.dataArrayMovie.value[indexPath.row].movieID)!
+        self.viewModel?.maketoDetailViewContrller(idmovie: idmovies)
+    }
+
+    
         func register() {
             let viewcollectioncell = UINib(nibName: "FlimsCollectionViewCell", bundle: .main)
             collection_view.register(viewcollectioncell, forCellWithReuseIdentifier: "FlimsCollectionViewCell")
-            
+            collection_view.delegate = self
+//            collection_view.rx.modelSelected(Movie.self).subscribe(onNext: {
+//                element in
+//                dLog(element)
+//            })
             setupcollection()
         }
         
@@ -106,7 +117,7 @@ extension BannerMovieTableViewCell:UICollectionViewDataSource,UICollectionViewDe
            dLog(indexPath.item)
       lbl_name_movie.text = viewModel?.dataArrayMovie.value[indexPath.item].namemovie
         cell.image_poster.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: (viewModel?.dataArrayMovie.value[indexPath.row].poster)!)), placeholder:  UIImage(named: "image_defauft_medium"))
-         
+           cell.viewModel = viewModel
           // Configure the cell
 
           return cell

@@ -14,6 +14,9 @@ import ObjectMapper
 
 class ManageDetailBillFoodAccountViewController: UIViewController {
 
+    @IBOutlet weak var lbl_dateorder: UILabel!
+    @IBOutlet weak var lbl_voucher: UILabel!
+    @IBOutlet weak var image_voucher: UIImageView!
     @IBOutlet weak var lbl_cinema: UILabel!
     @IBOutlet weak var lbl_datetime: UILabel!
     @IBOutlet weak var lbl_status_bill: UILabel!
@@ -41,6 +44,7 @@ class ManageDetailBillFoodAccountViewController: UIViewController {
             foodcombo.listfoodcombo[index].listfoods.append(contentsOf: datalistfood)
         }
         viewModel.dataArray.accept(foodcombo.listfoodcombo)
+        dLog(foodcombo.listfoodcombo)
         tableView.reloadData()
         setup()
 //        getListBillFoodCombo()
@@ -53,7 +57,11 @@ class ManageDetailBillFoodAccountViewController: UIViewController {
         lbl_datetime.text = foodcombo.time
         lbl_status_bill.text = foodcombo.status == 0 ? "Chưa nhận":"Đã nhận"
         lbl_status_bill.textColor = foodcombo.status == 0 ? .red : .green
+        lbl_voucher.text = foodcombo.namevoucher
+        image_voucher.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: foodcombo.poster)), placeholder: UIImage(named: "image_defauft_medium"))
         lbl_id_billfoodcombo.text = String(foodcombo.id)
+        var dateget = foodcombo.dateget.components(separatedBy: "T")
+        lbl_dateorder.text = String(dateget[0])
     }
     
     @IBAction func btn_makePopToViewController(_ sender: Any) {

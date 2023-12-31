@@ -11,8 +11,12 @@ import RxCocoa
 import RxSwift
 import RxRelay
 
-class ManagementDetailBillViewController: UIViewController {
+class ManagementDetailBillViewController: BaseViewController {
 
+    
+    @IBOutlet weak var view_total: UIView!
+    @IBOutlet weak var lbl_voucher: UILabel!
+    @IBOutlet weak var image_voucher: UIImageView!
     @IBOutlet weak var view_no_data_combolist: UIView!
     @IBOutlet weak var view_no_data_listchair: UIView!
     @IBOutlet weak var tableview2: UITableView!
@@ -37,8 +41,19 @@ class ManagementDetailBillViewController: UIViewController {
         bindingtableview()
         resgister2()
         bindingtableview2()
+//        view_total.roundCorners([.topLeft,.topRight], radius: 10)
+        setupShadowForView()
        
     }
+    func setupShadowForView() {
+        if #available(iOS 13.0, *) {
+            view_total.addShadowView(shadowOffset: .zero, shadowOpacity: 0.7, shadowRadius: 10, color: .black)
+        } else {
+            // Fallback on earlier versions
+        }
+        view_total.roundCorners(corners: [.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 20)
+     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if bill == 0 {

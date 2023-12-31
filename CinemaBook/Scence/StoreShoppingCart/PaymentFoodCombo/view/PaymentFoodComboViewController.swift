@@ -88,6 +88,7 @@ class PaymentFoodComboViewController: UIViewController {
         dataFoodCombobill.numbers = data.map{ $0.quantityRealtime}.reduce(0, +)
         dataFoodCombobill.iduser = ManageCacheObject.getCurrentUserInfo().idusers
         dataFoodCombobill.idcinemas = idcinema
+        dataFoodCombobill.dateget = dateorder
 //        dataFoodCombobill.idcinemas = ManageCacheObject.getCurrentCinema().idcinema
         data.enumerated().forEach{
             (index,value1) in

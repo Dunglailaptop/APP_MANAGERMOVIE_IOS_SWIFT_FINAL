@@ -35,8 +35,8 @@ class ManageBillAccountItemTableViewCell: UITableViewCell {
             lbl_name_movie.text = data?.namemovie
             var timeshow = data?.starttime.components(separatedBy: "T")
             image_avatar.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: data!.poster)), placeholder:  UIImage(named: "image_defauft_medium"))
-            lbl_date_interest.text = timeshow![0]
-            lbl_time_interest.text = timeshow![1]
+            lbl_date_interest.text = "Ngày xem: " + timeshow![0]
+            lbl_time_interest.text = "Khung giờ: " + timeshow![1]
             
         }
     }

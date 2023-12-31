@@ -32,6 +32,7 @@ class FlimsCollectionViewCell: UICollectionViewCell {
     
     
     @IBAction func btn_makeToDetailViewController(_ sender: Any) {
+        dLog("vao day")
         self.viewModel?.maketoDetailViewContrller(idmovie: data!.movieID)
     }
     

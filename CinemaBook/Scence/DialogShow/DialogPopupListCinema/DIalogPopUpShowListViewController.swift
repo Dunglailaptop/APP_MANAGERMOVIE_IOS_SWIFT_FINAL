@@ -64,6 +64,7 @@ extension DIalogPopUpShowListViewController: FSCalendarDelegate {
          let selectedDate = formatter.string(from: date)
          print("Selected date: \(selectedDate)")
         viewModel?.dateoreder.accept(selectedDate)
+        viewModel?.view?.lbl_date_order.text = "Ngày nhận: " + selectedDate
          // You can perform further actions with the selected date here
      }
 }

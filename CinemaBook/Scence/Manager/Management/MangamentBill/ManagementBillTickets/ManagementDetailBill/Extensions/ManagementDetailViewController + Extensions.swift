@@ -53,6 +53,8 @@ extension ManagementDetailBillViewController {
         var totalprices = viewModel.dataInfoBill.value.detailTickets.map{$0.price}.reduce(0,+) + viewModel.dataInfoBill.value.detailFoodcombos.map{$0.totalprice}.reduce(0,+)
         lbl_total_bill.text = Utils.stringVietnameseFormatWithNumber(amount:  totalprices)
         lbl_number_ticket_total.text = String(viewModel.dataInfoBill.value.quantityticket)
+        lbl_voucher.text = String(viewModel.dataInfoBill.value.namevoucher)
+        image_voucher.kf.setImage(with: URL(string: Utils.getFullMediaLink(string: viewModel.dataInfoBill.value.poster)), placeholder: UIImage(named: "image_defauft_medium"))
         
     }
     

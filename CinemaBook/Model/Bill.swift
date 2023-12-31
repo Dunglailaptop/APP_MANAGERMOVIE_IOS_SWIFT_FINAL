@@ -111,6 +111,7 @@ struct PaymentFoodCombo: Mappable {
         var foodComboBills = [FoodComboList]()
         var idvoucher = 0
        var listfood = [listfoodaddbill]()
+    var dateget = ""
     init() {
         
     }
@@ -131,6 +132,7 @@ struct PaymentFoodCombo: Mappable {
         idcinemas <- map["idcinemas"]
         idvoucher <- map["idvoucher"]
         listfood <- map["listfood"]
+        dateget <- map["dateget"]
     }
 }
 struct PaymentInfoBillFoodCombo: Mappable {
@@ -140,8 +142,13 @@ struct PaymentInfoBillFoodCombo: Mappable {
         var time = ""
         var status = 0
         var namecinema = ""
+        var price = 0
+        var percent = 0
+        var namevoucher = ""
+        var poster = ""
         var listfoodcombo = [FoodCombo]()
         var listfood = [listfoodaddbill]()
+    var dateget = ""
     init() {
         
     }
@@ -159,6 +166,11 @@ struct PaymentInfoBillFoodCombo: Mappable {
         status <- map["status"]
         listfood <- map["listfood"]
         namecinema <- map["namecinema"]
+         price  <- map["price"]
+         percent <- map["percent"]
+         namevoucher <- map["namevoucher"]
+         poster <- map["poster"]
+        dateget <- map["dateget"]
     }
 }
 
@@ -231,6 +243,10 @@ struct detailBill: Mappable {
         var detailFoodcombos = [DetailFoodComboBill]()
 var total_price = 0
 var quantityticket = 0
+        var namevoucher = ""
+        var poster = ""
+        var price = 0
+        var percent = 0
     
     init() {}
     init?(map: Map) {
@@ -252,6 +268,10 @@ var quantityticket = 0
          detailFoodcombos <- map["detailFoodcombos"]
          total_price <- map["total_price"]
          quantityticket  <- map["quantityticket"]
+         namevoucher <- map["namevoucher"]
+         poster  <- map["poster"]
+         price  <- map["price"]
+         percent  <- map["percent"]
     }
 }
 struct DetailTicket: Mappable {

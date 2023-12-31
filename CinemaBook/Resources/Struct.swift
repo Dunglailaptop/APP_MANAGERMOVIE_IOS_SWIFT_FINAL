@@ -9,7 +9,7 @@
 import Foundation
 
 public struct APIEndPoint {
-    static let endUrlPoint = Environment.develop.rawValue
+    static let endUrlPoint = Environment.production.rawValue
     static let version = "v2"
     static let version_v1 = "v1"
     static let versions = "v3"

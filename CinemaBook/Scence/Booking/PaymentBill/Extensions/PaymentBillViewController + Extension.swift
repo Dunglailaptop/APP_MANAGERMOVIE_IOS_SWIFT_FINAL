@@ -210,15 +210,18 @@ extension PaymentBillViewController {
     func getIdbill() {
         viewModel.getIdbillPaymentVNPAY().subscribe(onNext: { [self]
             (response) in
+            dLog(response.data)
             if response.code == RRHTTPStatusCode.ok.rawValue {
-
-              
+                if let data = Mapper<IdbillPaymentVNPAYRequest>().map(JSONObject: response.data) {
                     viewModel.makePopToSuccessPayment()
                     self.callPopViewController()
                 
                 JonAlert.showSuccess(message: response.message ?? "có lỗi xảy ra")
 //                self.navigationController?.popToViewController((self.navigationController?.viewControllers[4])!, animated: true)
-                showNotification()
+                    showNotification(ID: data.idbills)
+                }
+              
+                  
             }else {
                 JonAlert.showError(message: response.message ?? "Có lỗi xảy ra")
             }
@@ -409,18 +412,18 @@ extension PaymentBillViewController {
 }
 //notifiacation
 extension PaymentBillViewController {
-    func showNotification() {
+    func showNotification(ID:Int) {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.getNotificationSettings { settings in
             switch settings.authorizationStatus {
             case .authorized:
-                self.dispatchNotification()
+                self.dispatchNotification(Id: ID)
             case .denied:
                 dLog("Notifications denied by user")
             case .notDetermined:
                 notificationCenter.requestAuthorization(options: [.alert, .sound]) { didAllow, error in
                     if didAllow {
-                        self.dispatchNotification()
+                        self.dispatchNotification(Id: ID)
                     } else {
                         if let error = error {
                             dLog("Error requesting authorization for notifications: \(error.localizedDescription)")
@@ -433,10 +436,10 @@ extension PaymentBillViewController {
         }
     }
 
-    func dispatchNotification() {
+    func dispatchNotification(Id:Int) {
         let identifier = "my_app_show"
         let title = "Thanh toán thành công"
-        let body = "Xin vui lòng kiểm tra đơn hàng của bạn"
+        let body = "Xin vui lòng kiểm tra đơn hàng của bạn la: " + String(Id)
         
         let notificationCenter = UNUserNotificationCenter.current()
         

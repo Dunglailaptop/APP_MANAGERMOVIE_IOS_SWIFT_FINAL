@@ -2412,8 +2412,8 @@
             filePath = "CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "registersVOUCHER()"
             landmarkType = "7">
             <Locations>
@@ -2475,8 +2475,8 @@
             filePath = "CinemaBook/Scence/StoreShoppingCart/Cart/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "btn_paymentfoodcombo(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2555,8 +2555,8 @@
             filePath = "CinemaBook/Scence/StoreShoppingCart/PaymentFoodCombo/view/PaymentFoodComboViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "resgistervoucher()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3186,103 +3186,10 @@
             filePath = "CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "getIdbill()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ECEB36F7-375D-4A56-A99F-BDEF26E5F189"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController + Extension.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "getIdbill()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "ECEB36F7-375D-4A56-A99F-BDEF26E5F189 - 2e8ce7dd6a1b0dd8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.PaymentBillViewController.getIdbill() -&gt; ()"
-                  moduleName = "CinemaBook"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController%20+%20Extension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "216"
-                  endingLineNumber = "216"
-                  offsetFromSymbolStart = "436">
-               </Location>
-               <Location
-                  uuid = "ECEB36F7-375D-4A56-A99F-BDEF26E5F189 - 2e8ce7dd6a1b0dd8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.PaymentBillViewController.getIdbill() -&gt; ()"
-                  moduleName = "CinemaBook"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController%20+%20Extension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "216"
-                  endingLineNumber = "216"
-                  offsetFromSymbolStart = "504">
-               </Location>
-               <Location
-                  uuid = "ECEB36F7-375D-4A56-A99F-BDEF26E5F189 - 2e8ce7dd6a1b0dd8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.PaymentBillViewController.getIdbill() -&gt; ()"
-                  moduleName = "CinemaBook"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController%20+%20Extension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "216"
-                  endingLineNumber = "216"
-                  offsetFromSymbolStart = "312">
-               </Location>
-               <Location
-                  uuid = "ECEB36F7-375D-4A56-A99F-BDEF26E5F189 - 2e8ce7dd6a1b0227"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.PaymentBillViewController.getIdbill() -&gt; ()"
-                  moduleName = "CinemaBook"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController%20+%20Extension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "217"
-                  endingLineNumber = "217"
-                  offsetFromSymbolStart = "312">
-               </Location>
-               <Location
-                  uuid = "ECEB36F7-375D-4A56-A99F-BDEF26E5F189 - 2e8ce7dd6a1b0227"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CinemaBook.APIResponse) -&gt; () in CinemaBook.PaymentBillViewController.getIdbill() -&gt; ()"
-                  moduleName = "CinemaBook"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController%20+%20Extension.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "217"
-                  endingLineNumber = "217"
-                  offsetFromSymbolStart = "356">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3295,8 +3202,8 @@
             filePath = "CinemaBook/Scence/Booking/PaymentBill/Extensions/PaymentBillViewController + Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "registersVOUCHER()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3417,16 +3324,48 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "37B7A7C6-1D3C-4358-B768-9470DEDFA22C"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Home/view/cell/section4/cellsection/FlimsCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "btn_makeToDetailViewController(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "37B7A7C6-1D3C-4358-B768-9470DEDFA22C - 9cdc67a35ffdd880"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FlimsCollectionViewCell.btn_makeToDetailViewController(Any) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Home/view/cell/section4/cellsection/FlimsCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "37B7A7C6-1D3C-4358-B768-9470DEDFA22C - 9cdc67a35ffdd880"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.FlimsCollectionViewCell.btn_makeToDetailViewController(Any) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/Home/view/cell/section4/cellsection/FlimsCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3439,8 +3378,8 @@
             filePath = "CinemaBook/Scence/StoreShoppingCart/Cart/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4089,6 +4028,21 @@
                   endingLineNumber = "151"
                   offsetFromSymbolStart = "4232">
                </Location>
+               <Location
+                  uuid = "7C9D7EE4-750D-4BDC-9CAD-5B1053D47F3A - f1b35ed865cc2e92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.DialogShowCommentViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/NewFeed/VideoTrailllerShow/DiaglogShowComment/DialogShowCommentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "4248">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4196,6 +4150,21 @@
                   startingLineNumber = "151"
                   endingLineNumber = "151"
                   offsetFromSymbolStart = "4232">
+               </Location>
+               <Location
+                  uuid = "C5FBE63C-9CD8-45DD-856C-C8A78B835150 - f1b35ed865cc2e92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.DialogShowCommentViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/NewFeed/VideoTrailllerShow/DiaglogShowComment/DialogShowCommentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "4248">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4320,7 +4289,38 @@
                   endingLineNumber = "130"
                   offsetFromSymbolStart = "3588">
                </Location>
+               <Location
+                  uuid = "14953C4A-4F4A-4892-AD70-2BE3FDB5DA58 - f1b35ed865cc2bb8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CinemaBook.DialogShowCommentViewController.didReceive(event: Starscream.WebSocketEvent, client: Starscream.WebSocketClient) -&gt; ()"
+                  moduleName = "CinemaBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyenxuantiendung/Documents/app-cinema/CinemaBook/Scence/NewFeed/VideoTrailllerShow/DiaglogShowComment/DialogShowCommentViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "3588">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C343458-3DB5-4D45-94BC-E2C770310200"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Home/view/cell/section4/cellsection/FlimsCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "btn_makeToDetailViewController(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

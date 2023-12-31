@@ -14,6 +14,7 @@ import JonAlert
 
 class CartViewController: UIViewController {
 
+    @IBOutlet weak var lbl_dateget: UILabel!
     @IBOutlet weak var lbl_name_cinema: UILabel!
     @IBOutlet weak var lbl_total_number: UILabel!
     @IBOutlet weak var lbl_number: UILabel!
@@ -34,8 +35,8 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        lbl_name_cinema.text = namecinema
-      
+        lbl_name_cinema.text = "Rạp nhận:" + namecinema
+        lbl_dateget.text = "Ngày nhận:" + dateorder
 //        var countnumber = 0
 //        var combinedCartItems = [Int: FoodCombo]()
 //        var food = [Int: Food]()
@@ -137,6 +138,7 @@ class CartViewController: UIViewController {
             cell.idcinema = idcinema
             cell.data = datas
             cell.namecinema = namecinema
+            cell.dateorder = dateorder
             self.navigationController?.pushViewController(cell, animated: true)
         }else {
             JonAlert.showError(message: "Vui lòng chọn rạp chiếu phim hệ thống sẽ ghi nhận rạp mà bạn nhận hàng")

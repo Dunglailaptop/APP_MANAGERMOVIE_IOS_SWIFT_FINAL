@@ -496,6 +496,8 @@ extension ManagementDetailMovieViewController: UIImagePickerControllerDelegate, 
                     dLog("Tên video: \(videoName)")
                     self.nameVideo.append(videoName)
                     self.videocover.append(videoURL)
+                    VIEW_SHOW_YT.isHidden = true
+                    view_show_video.isHidden = false
                     playVideo(from: videoURL, in: self.view_show_video)
                 }
             }

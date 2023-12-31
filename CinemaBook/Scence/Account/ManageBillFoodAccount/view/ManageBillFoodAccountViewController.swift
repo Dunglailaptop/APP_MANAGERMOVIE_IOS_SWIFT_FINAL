@@ -88,10 +88,12 @@ extension ManageBillFoodAccountViewController{
     func getListBillFoodCombo() {
         viewModel.getListBillFoodCombo().subscribe(onNext: {
             (response) in
+            dLog(response.data)
             if response.code == RRHTTPStatusCode.ok.rawValue {
                 if let data = Mapper<PaymentInfoBillFoodCombo>().mapArray(JSONObject: response.data) {
                     self.viewModel.dataArray.accept(data)
                     self.viewModel.dataArraySearch.accept(data)
+                    dLog(self.viewModel.dataArray.value)
                 }
             }
         })

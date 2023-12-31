@@ -434,6 +434,14 @@ extension UIView{
         ]
     }
     
+    func addShadowView(shadowOffset: CGSize, shadowOpacity:Float, shadowRadius:Int, color:UIColor){
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowRadius = CGFloat(shadowRadius)
+        self.layer.masksToBounds = false
+    }
+    
 }
 extension UIView {
     /// Remove allSubView in view
@@ -443,6 +451,8 @@ extension UIView {
 
 }
 extension UIViewController {
+    
+    
     func addTopCustomViewController(_ child: UIViewController,addTopCustom: Int) {
          addChild(child)
          // Add Child View as Subview

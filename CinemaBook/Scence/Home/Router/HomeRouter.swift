@@ -26,7 +26,7 @@ class HomeRouter {
     }
     
     func navigationToDetailViewController(idmovie:Int) {
-        let DetailViewController = DetailMovieRouter().viewController as! DetailMovieViewController
+        let DetailViewController = DetailMovieRouter().viewController as! DetailMovieInfoViewController
         DetailViewController.idmovie = idmovie
         sourceView?.navigationController?.pushViewController(DetailViewController, animated: true)
     }
