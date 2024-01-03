@@ -162,7 +162,7 @@ class BookingChairViewController: BaseViewController, WebSocketDelegate {
       let server = WebSocketServer()
     
     func testSocket() {
-        var request = URLRequest(url: URL(string: urlinksocketproduction)!) //https://localhost:8080
+        var request = URLRequest(url: URL(string: urlinksocketdeveloper)!) //https://localhost:8080
               request.timeoutInterval = 5
               socket = WebSocket(request: request)
               socket.delegate = self
@@ -189,7 +189,7 @@ class BookingChairViewController: BaseViewController, WebSocketDelegate {
                   if data.arguments.count > 0 && data.target == "HOADONMOI" {
                     
                       datachair.enumerated().forEach{(index1,value1) in
-                          data.arguments[0].enumerated().forEach{(index,value) in
+                          data.arguments[0].tickets.enumerated().forEach{(index,value) in
                               dLog(value)
                               if value == value1.idchair {
                                   datachair[index1].isSelected = BILL
@@ -205,6 +205,7 @@ class BookingChairViewController: BaseViewController, WebSocketDelegate {
 //                      getListchair()
 //                      tableView.reloadData()
                       dLog(data)
+                      showNotification(ID: data.arguments[0].idbill)
                   }
                   
               }

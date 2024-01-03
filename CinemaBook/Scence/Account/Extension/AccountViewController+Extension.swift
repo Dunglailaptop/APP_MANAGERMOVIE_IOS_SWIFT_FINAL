@@ -57,6 +57,8 @@ extension AccountViewController {
                     case 0:
                         let cell = self.tableView.dequeueReusableCell(withIdentifier: "SettingforAccountCustomerTableViewCell", for: indexPath) as! SettingforAccountCustomerTableViewCell
                         cell.viewModel = self.viewModel
+                        cell.view_bill_product.setBadge(value: String(viewModel.datanumber.value.numberbillfood))
+                        cell.view_bill_tickets.setBadge(value: String(viewModel.datanumber.value.numberbill))
                         return cell
                     case 1:
                         let cell = self.tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as! LogoutTableViewCell

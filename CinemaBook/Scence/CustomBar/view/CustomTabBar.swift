@@ -60,11 +60,27 @@ final class CustomTabBar: UIStackView {
     }
     
     private func setCurrentTab(){
+//        NotificationApp.badgeValue = "0"
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name ("MESSAGENOTIFACTION"), object: nil)
             self.selectItem(index: self.Home.index)
-       
-        
+           
     }
-    
+    @objc func handleNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo as? [String: Any] {
+                // Access the loginResponse dictionary here
+                if let reportType = userInfo["userInfo"] as? [String: Any] {
+                    let reportTypeValue = reportType["Report_type"] as? numberNotifaction
+                    dLog("vao day")
+                    if ManageCacheObject.getCurrentUserInfo().idrole == 1 {
+                        SettingAccount.badgeValue = String(reportTypeValue!.numberbill)
+                        NotificationApp.badgeValue = String(reportTypeValue!.numbernottifacation)
+                    } else {
+                        NotificationApp.badgeValue = String(reportTypeValue!.numbernottifacation)
+                    }
+             
+                }
+            }
+    }
     
 
     private func setupProperties() {

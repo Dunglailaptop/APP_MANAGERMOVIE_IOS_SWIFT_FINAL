@@ -17,6 +17,7 @@ class PaymentFoodComboViewController: UIViewController {
     var viewModel = PaymentFoodComboViewModel()
     var router = PaymentFoodComboRouter()
    
+    @IBOutlet weak var lbl_dateget: UILabel!
     @IBOutlet weak var lbl_category_reduce: UILabel!
     
     @IBOutlet weak var icon_check_1: UIImageView!
@@ -41,6 +42,7 @@ class PaymentFoodComboViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.bind(view: self, router: router)
+        dLog(data)
         viewModel.dataArrayFoodCombo.accept(data)
         resgiter()
         bindingtable()
@@ -66,6 +68,7 @@ class PaymentFoodComboViewController: UIViewController {
         super.viewWillAppear(animated)
          getListVoucher()
          lbl_name_cinema.text = "Rạp nhận: " + namecinema
+        lbl_dateget.text = "Ngày nhận: " + dateorder
     }
     
     @IBAction func btn_choose_order_point(_ sender: Any) {
@@ -111,6 +114,14 @@ class PaymentFoodComboViewController: UIViewController {
             viewModel.dataArrayBillPaymentHistory.accept(dataFoodCombobill)
 //        }
         dLog(viewModel.dataArrayBillPayment.value)
+        
+    }
+    func setupnumber() {
+        var datafoodcombo = viewModel.dataArrayBillPayment.value
+//        datafoodcombo.foodComboBills.enumerated().forEach{
+//            (index,value) in
+//            
+//        }
     }
     
     func setup() {

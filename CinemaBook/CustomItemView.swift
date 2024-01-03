@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class CustomItemView: UIView {
-    
+    private let badgeLabel = UILabel()
     private let nameLabel = UILabel()
     private let iconImageView = UIImageView()
     private let underlineView = UIView()
@@ -21,6 +21,13 @@ final class CustomItemView: UIView {
             animateItems()
         }
     }
+    // Cập nhật giá trị của badge
+        var badgeValue: String = "" {
+            didSet {
+                badgeLabel.text = badgeValue
+                badgeLabel.isHidden = badgeValue.isEmpty // Ẩn badge nếu badgeValue rỗng
+            }
+        }
     
     private let item: CustomTabItem
     
@@ -45,6 +52,8 @@ final class CustomItemView: UIView {
         let subviews = [nameLabel, iconImageView, underlineView]
         subviews.forEach { subview in
             containerView.addSubview(subview)
+            containerView.addSubview(badgeLabel)
+            
         }
 
     }
@@ -73,6 +82,13 @@ final class CustomItemView: UIView {
             $0.centerX.equalToSuperview()
             $0.centerY.equalTo(nameLabel.snp.centerY)
         }
+        // Cấu hình vị trí và kích thước của badgeLabel
+               badgeLabel.snp.makeConstraints {
+                   $0.top.equalToSuperview().offset(0) // Dịch chuyển badgeLabel từ top
+                              $0.trailing.equalToSuperview().offset(-20) // Dịch chuyển badgeLabel từ right
+                              $0.width.height.equalTo(20) // Kích thước của badge
+               }
+
     }
     
     private func setupProperties() {
@@ -84,6 +100,16 @@ final class CustomItemView: UIView {
         underlineView.backgroundColor = .white
 
         iconImageView.image = isSelected ? item.selectedIcon : item.icon
+        
+        // Thiết lập các thuộc tính cho badgeLabel
+                badgeLabel.backgroundColor = UIColor.red // Màu nền của badge
+                badgeLabel.textColor = UIColor.white // Màu chữ của badge
+                badgeLabel.textAlignment = .center
+                badgeLabel.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
+                badgeLabel.layer.cornerRadius = 10 // Bo tròn viền của badge (nếu cần)
+                badgeLabel.layer.masksToBounds = true // Để bo tròn viền của badge
+                badgeLabel.text = "10" // Đặt giá trị mặc định cho badge
+                badgeLabel.isHidden = true // Ẩn badge khi không cần thiết
     }
     
     private func animateItems() {

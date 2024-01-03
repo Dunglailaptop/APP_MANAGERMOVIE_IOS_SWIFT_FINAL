@@ -218,7 +218,7 @@ extension PaymentBillViewController {
                 
                 JonAlert.showSuccess(message: response.message ?? "có lỗi xảy ra")
 //                self.navigationController?.popToViewController((self.navigationController?.viewControllers[4])!, animated: true)
-                    showNotification(ID: data.idbills)
+//                    showNotification(ID: data.idbills)
                 }
               
                   

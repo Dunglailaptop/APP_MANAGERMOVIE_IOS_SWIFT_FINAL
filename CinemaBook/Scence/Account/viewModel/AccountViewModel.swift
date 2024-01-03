@@ -10,6 +10,7 @@ class AccountViewModel{
     
     public var dataArray: BehaviorRelay<[Int]> = BehaviorRelay(value: [])
     public var datacheckin: BehaviorRelay<checkin> = BehaviorRelay(value: checkin())
+    public var datanumber: BehaviorRelay<(numberbill:Int,numberbillfood:Int)> = BehaviorRelay(value: (numberbill:0,numberbillfood:0))
     func bind(view: AccountViewController, router: AccountRouter){
         self.view = view
         self.router = router

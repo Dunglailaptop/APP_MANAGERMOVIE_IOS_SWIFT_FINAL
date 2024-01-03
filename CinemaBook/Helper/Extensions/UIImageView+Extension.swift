@@ -8,11 +8,24 @@
 //
 //
 //
-//import UIKit
-//import Kingfisher
-//
-//extension UIImageView {
-//
+import UIKit
+import Kingfisher
+
+extension UIImageView {
+    func setBadge(value: String) {
+           // Create and position badge view
+        let badgeLabel = UILabel(frame: CGRect(x: self.frame.size.width - 30, y: self.frame.size.height - 30, width: 20, height: 20))
+           badgeLabel.textAlignment = .center
+           badgeLabel.textColor = .white
+           badgeLabel.backgroundColor = .red
+           badgeLabel.layer.cornerRadius = badgeLabel.bounds.size.height / 2
+           badgeLabel.clipsToBounds = true
+           badgeLabel.font = UIFont.systemFont(ofSize: 10)
+           badgeLabel.text = value
+           
+           // Add badge view as a subview
+           self.addSubview(badgeLabel)
+       }
 //    func setKingfisherImageView(image: String?, placeholder: String = "") {
 //        var path = ""
 //        if let url = image {
@@ -34,4 +47,4 @@
 //                .cacheOriginalImage
 //            ])
 //    }
-//}
+}

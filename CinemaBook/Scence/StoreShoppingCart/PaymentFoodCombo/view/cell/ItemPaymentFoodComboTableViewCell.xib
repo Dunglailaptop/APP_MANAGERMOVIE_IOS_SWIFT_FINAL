@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,6 +57,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tm9-4k-5ji">
+                                <rect key="frame" x="8" y="119" width="23" height="23"/>
+                                <color key="backgroundColor" name="outgoingMessageBackground"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -64,8 +72,10 @@
                             <constraint firstItem="aem-8g-og9" firstAttribute="leading" secondItem="tZO-kP-wAl" secondAttribute="leading" constant="8" id="K2K-Mx-0V5"/>
                             <constraint firstItem="mfK-2F-sOD" firstAttribute="top" secondItem="Mue-DE-Sdj" secondAttribute="bottom" id="QU4-rg-0Nc"/>
                             <constraint firstItem="aem-8g-og9" firstAttribute="top" secondItem="tZO-kP-wAl" secondAttribute="top" constant="8" id="T85-sI-Mgm"/>
+                            <constraint firstAttribute="bottom" secondItem="tm9-4k-5ji" secondAttribute="bottom" constant="8" id="gpv-Q1-6ZJ"/>
                             <constraint firstAttribute="bottom" secondItem="mfK-2F-sOD" secondAttribute="bottom" constant="5" id="hHL-uF-UbZ"/>
                             <constraint firstItem="mfK-2F-sOD" firstAttribute="leading" secondItem="tZO-kP-wAl" secondAttribute="leading" constant="8" id="hu9-gD-3mH"/>
+                            <constraint firstItem="tm9-4k-5ji" firstAttribute="leading" secondItem="tZO-kP-wAl" secondAttribute="leading" constant="8" id="kgi-OW-EtQ"/>
                             <constraint firstAttribute="trailing" secondItem="mfK-2F-sOD" secondAttribute="trailing" constant="5" id="v3D-Ex-bvU"/>
                         </constraints>
                     </view>
@@ -84,6 +94,7 @@
             <connections>
                 <outlet property="image_food" destination="SfG-xO-mYQ" id="ep8-iD-Z8E"/>
                 <outlet property="lbl_name_food" destination="aem-8g-og9" id="NJ5-cM-zMx"/>
+                <outlet property="lbl_number_combo" destination="tm9-4k-5ji" id="CQb-ID-UUw"/>
                 <outlet property="lbl_total_money" destination="Mue-DE-Sdj" id="GHf-68-NG8"/>
                 <outlet property="txt_text_list" destination="mfK-2F-sOD" id="AeU-yb-MXu"/>
             </connections>
@@ -92,14 +103,17 @@
     </objects>
     <resources>
         <image name="PORNCORN-TEST" width="546" height="546"/>
+        <namedColor name="outgoingMessageBackground">
+            <color red="0.20399998128414154" green="0.77999997138977051" blue="0.34899997711181641" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -118,7 +118,7 @@ extension DialogShowCommentViewController:WebSocketDelegate{
     
     
     func testSocket() {
-        var request = URLRequest(url: URL(string: urlinksocketproduction)!) //https://localhost:8080
+        var request = URLRequest(url: URL(string: urlinksocketdeveloper)!) //https://localhost:8080
               request.timeoutInterval = 5
               socket = WebSocket(request: request)
               socket.delegate = self
