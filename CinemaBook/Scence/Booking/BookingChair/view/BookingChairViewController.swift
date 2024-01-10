@@ -205,7 +205,9 @@ class BookingChairViewController: BaseViewController, WebSocketDelegate {
 //                      getListchair()
 //                      tableView.reloadData()
                       dLog(data)
-                      showNotification(ID: data.arguments[0].idbill)
+                      if data.arguments[0].Idusers == ManageCacheObject.getCurrentUserInfo().idusers {
+                          showNotification(ID: data.arguments[0].idbill)
+                      }
                   }
                   
               }

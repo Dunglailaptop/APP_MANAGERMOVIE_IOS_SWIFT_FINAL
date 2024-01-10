@@ -3522,8 +3522,8 @@
             filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
             landmarkName = "writeText(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3723,7 +3723,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "944FBC50-9EE1-49BA-9E1F-5B220BDE77EF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
@@ -4575,6 +4575,38 @@
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "handleNotification(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77730C2E-0572-4D0A-838E-E1F4292636D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "didReceive(event:client:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EB42105-EE3E-4B8D-94AB-FC8A08E18AEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CinemaBook/Scence/Booking/BookingChair/view/BookingChairViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "didReceive(event:client:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

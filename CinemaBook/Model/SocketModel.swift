@@ -42,12 +42,14 @@ struct socketNotifcation: Mappable {
 struct socketBill: Mappable {
     var idbill = 0
     var tickets = [Int]()
+    var Idusers = 0
     init?(map: Map) {
         
     }
     mutating func mapping(map: Map) {
         idbill <- map["idbill"]
         tickets <- map["tickets"]
+        Idusers <- map["idusers"]
     }
 }
 struct testsocket: Mappable {
